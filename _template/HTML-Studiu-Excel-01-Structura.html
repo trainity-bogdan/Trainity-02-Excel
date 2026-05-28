@@ -514,7 +514,7 @@ body.has-continue .stage-toast { bottom: 88px; }
   margin-bottom: 24px;
 }
 .stage-number {
-  font-size: 96px;
+  font-size: clamp(56px, 9vw, 96px);
   font-weight: 900;
   line-height: 0.85;
   color: var(--y);
@@ -1183,6 +1183,8 @@ body.has-continue .scroll-top { bottom: 88px; }
   body { font-size: 17px; line-height: 1.7; }
   .cover-subtitle { font-size: 24px; }
   .cover-miza { font-size: 18px; }
+  .cover-meta-row { grid-template-columns: 150px 1fr; gap: 12px; }
+  .exec-hero { padding: 40px 32px; }
   .exec-hero p { font-size: 17px; }
   .stage-hook { font-size: 19px; }
   .step-title { font-size: 19px; }
@@ -1197,6 +1199,8 @@ body.has-continue .scroll-top { bottom: 88px; }
   .verify-sub { font-size: 16px; }
   .final-text { font-size: 16px; line-height: 1.6; }
   .final-label { font-size: 11px; }
+  .payoff-section { padding: 56px 32px; }
+  .payoff-line { font-size: 20px; }
   .payoff-section p { font-size: 17px; }
   .anomaly-title { font-size: 14px; }
   .copy-btn { font-size: 12px; padding: 13px 24px; }
@@ -1209,8 +1213,13 @@ body.has-continue .scroll-top { bottom: 88px; }
   .final-card { padding: 22px 20px; }
 }
 @media (max-width: 1024px) {
-  body { padding-top: 52px; }
-  .mobile-topbar { display: flex; }
+  /* SAFE-AREA: respectă notch/home indicator pe iPhone modern */
+  body { padding-top: calc(52px + env(safe-area-inset-top)); }
+  .mobile-topbar {
+    display: flex;
+    padding-top: env(safe-area-inset-top);
+    height: calc(52px + env(safe-area-inset-top));
+  }
   .mobile-nav-toggle { display: inline-flex; }
   .app-grid {
     grid-template-columns: 1fr;
@@ -1219,24 +1228,26 @@ body.has-continue .scroll-top { bottom: 88px; }
   }
   .side-nav {
     position: fixed;
-    top: 52px; right: -280px;
+    top: calc(52px + env(safe-area-inset-top));
+    right: -280px;
     width: 280px;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 52px - env(safe-area-inset-top));
     z-index: 180;
     transition: right .3s;
     border-radius: 0;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .side-nav.open { right: 0; }
-  .mobile-nav-overlay { top: 52px; }
+  .mobile-nav-overlay { top: calc(52px + env(safe-area-inset-top)); }
   .main-content { padding: 16px 0 64px; }
-  .scroll-top { bottom: 16px; right: 16px; }
-  .top-progress { top: 52px; }
-  /* CONTINUE BUTTON MOBILE: sticky JOS, full-width bar */
+  .scroll-top { bottom: calc(16px + env(safe-area-inset-bottom)); right: 16px; }
+  .top-progress { top: calc(52px + env(safe-area-inset-top)); }
+  /* CONTINUE BUTTON MOBILE: sticky JOS, full-width bar, respectă safe-area */
   .continue-btn {
     bottom: 0; right: 0; left: 0;
     width: 100%;
     justify-content: center;
-    padding: 16px 20px;
+    padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
     border: none;
     border-top: 2px solid var(--k);
     box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08);
@@ -1246,11 +1257,10 @@ body.has-continue .scroll-top { bottom: 88px; }
   .continue-btn:hover { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); }
   .continue-btn:active { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); background: #FFC700; }
   /* Body padding-bottom cand butonul e vizibil pe mobile */
-  body.has-continue { padding-bottom: 64px; }
+  body.has-continue { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
   /* Scroll-top urca deasupra barii Continuă pe mobile */
-  body.has-continue .scroll-top { bottom: 76px; }
+  body.has-continue .scroll-top { bottom: calc(76px + env(safe-area-inset-bottom)); }
   /* Touch targets larger pe tableta + mobile */
-  .mobile-topbar { min-height: 52px; }
   .mobile-topbar-title { font-size: 14px; }
   .mobile-topbar-progress { font-size: 13px; }
 }
@@ -1267,7 +1277,6 @@ body.has-continue .scroll-top { bottom: 88px; }
   .exec-hero { padding: 32px 24px; }
   .exec-hero p { font-size: 16px; line-height: 1.7; }
   .stage-header { grid-template-columns: 1fr; gap: 12px; }
-  .stage-number { font-size: 64px; }
   .stage-hook { font-size: 17px; line-height: 1.55; }
   .step { padding: 20px 18px; }
   .step-head { grid-template-columns: 1fr 26px; }
@@ -1281,8 +1290,10 @@ body.has-continue .scroll-top { bottom: 88px; }
   .anomaly-title { font-size: 14px; }
   .anomaly-desc { font-size: 15px; line-height: 1.6; }
   .inv-item { grid-template-columns: 1fr; gap: 10px; padding: 18px 20px; }
+  .inv-item-status { justify-self: start; width: max-content; min-width: 100px; }
   .inv-item-desc { font-size: 15px; line-height: 1.6; }
-  .prompt-text { font-size: 15px; line-height: 1.75; }
+  .prompt-box { padding: 22px 20px 20px; }
+  .prompt-text { font-size: 15px; line-height: 1.75; word-break: break-word; overflow-wrap: anywhere; }
   .prompt-label { font-size: 11px; }
   .copy-btn { font-size: 12px; padding: 13px 22px; width: 100%; }
   .verify-title { font-size: 16px; }
@@ -1295,7 +1306,47 @@ body.has-continue .scroll-top { bottom: 88px; }
   .ba-pair { grid-template-columns: 1fr; gap: 8px; }
   .ba-arrow { display: none; }
   .payoff-section { padding: 48px 24px; }
+  .payoff-line { font-size: 18px; }
   .payoff-section p { font-size: 16px; line-height: 1.7; }
+  .completion-badge { padding: 22px 20px; }
+  .completion-title { font-size: 19px; }
+}
+
+/* H2 + M1: TELEFOANE FOARTE MICI (≤380px) — iPhone SE 1/2, Android budget */
+@media (max-width: 380px) {
+  .app-grid { padding: 0 14px; }
+  .cover { padding: 24px 0 20px; }
+  .cover-title { letter-spacing: -0.8px; }
+  .exec-hero { padding: 28px 18px; }
+  .payoff-section { padding: 40px 18px; }
+  .step { padding: 18px 16px; }
+  .stage-header { gap: 8px; }
+  .prompt-box { padding: 18px 16px; }
+  .continue-btn {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    padding: 16px 12px calc(16px + env(safe-area-inset-bottom));
+    gap: 6px;
+  }
+  .continue-btn-counter { font-size: 10px; padding: 2px 5px; }
+  .mobile-topbar { padding-left: 12px; padding-right: 12px; }
+}
+
+/* M2: LANDSCAPE PHONE — condensare drawer pentru iPhone landscape */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 1024px) {
+  .side-nav { font-size: 11px; }
+  .nav-brand { padding: 8px 14px 6px; }
+  .nav-brand-title { font-size: 13px; }
+  .nav-progress { padding: 8px 14px; }
+  .nav-progress-num { font-size: 19px; }
+  .nav-section-label { padding: 8px 14px 4px; }
+  .nav-item { padding: 5px 6px; gap: 8px; }
+  .nav-item-name { font-size: 11px; }
+  .nav-item-meta { font-size: 9px; }
+  .nav-finals { padding: 0 14px 4px; }
+  .nav-final-dot { height: 28px; font-size: 11px; }
+  .nav-controls { padding: 8px 14px 10px; gap: 4px; }
+  .nav-ctrl-btn { padding: 7px 10px; min-height: 28px; font-size: 10px; }
 }
 </style>
 </head>
@@ -1306,9 +1357,9 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="mobile-topbar" role="banner">
   <div class="mobile-topbar-title">C01 · Structura Tabelelor</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
-  <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
+  <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu" aria-expanded="false" aria-controls="sideNav"></button>
 </div>
-<div class="mobile-nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
+<div class="mobile-nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
 
 <div class="book-app">
   <div class="app-grid">
@@ -1373,7 +1424,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
     <h3 class="step-title">Deschide exportul ERP brut</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Dublu-click pe Date_MASTER-C01.xlsx, foaia Vanzari. Un volum aparent de rânduri care arată ca un tabel curat. Citește mai întâi foaia _REALITATE.</p>
@@ -1384,7 +1435,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(2)">
     <div class="step-marker">PAS 02</div>
     <h3 class="step-title">Privește structura, nu conținutul</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Antet de raport pe primele rânduri. Subtotaluri inserate între categorii. Blank-uri false. Un TOTAL GENERAL la final. Ochiul vede tabel. Structura nu e tabel.</p>
@@ -1395,7 +1446,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(3)">
     <div class="step-marker">PAS 03</div>
     <h3 class="step-title">Fixează suma de referință</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Selectează coloana valoare_neta. Citește SUM din status bar. Notează martorul. Dacă se schimbă după transformare, ceva s-a pierdut.</p>
@@ -1420,7 +1471,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(4)">
     <div class="step-marker">PAS 04</div>
     <h3 class="step-title">Activează Copilot pe foaia Date</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Deschide Copilot în panoul lateral Excel, pe foaia Date. Nu ceri nicio modificare. Doar investighezi.</p>
@@ -1431,7 +1482,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(5)">
     <div class="step-marker">PAS 05</div>
     <h3 class="step-title">Rulează Promptul 1 de investigație</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Lipești promptul de mai jos. AI analizează structura și raportează pe categorii, fără să atingă o singură celulă.</p>
@@ -1446,7 +1497,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(6)">
     <div class="step-marker">PAS 06</div>
     <h3 class="step-title">Citește raportul de structură</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">AI întoarce harta structurală: ce e antet, ce e subtotal, ce e gol fals, unde începe tabelul real. Acum știi, nu bănuiești.</p>
@@ -1515,7 +1566,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
     <h3 class="step-title">Încarcă exportul în Power Query</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Date > Obține date > Din tabel/interval. Exportul intră ca sursă în editorul Power Query. Sursa brută rămâne intactă pentru trasabilitate.</p>
@@ -1526,7 +1577,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
     <h3 class="step-title">Rulează Promptul 2 de reconstrucție</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Lipești promptul pentru pașii M: skip rândurile parazite, promovează antet, filtrează SUBTOTAL/TOTAL, elimină rânduri goale, păstrează coloanele reale.</p>
@@ -1541,7 +1592,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
     <h3 class="step-title">Aplică și încarcă tabelul curat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Power Query execută pașii. Ambalajul dispare. Coloanele reale rămân. Închide și încarcă ca tabel Excel curat pe foaie nouă.</p>
@@ -1608,7 +1659,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
     <h3 class="step-title">Recalculează suma pe tabelul curat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">SUM pe valoare_neta în tabelul curat. Compară cu martorul fixat în Etapa 1. Sumele trebuie să fie identice.</p>
@@ -1619,7 +1670,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(11)">
     <div class="step-marker">PAS 11</div>
     <h3 class="step-title">Confruntă SUM cu AGGREGATE</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">AGGREGATE(9;...) pe aceeași coloană. Pe datele murdare SUM prindea și subtotalurile. Acum SUM = AGGREGATE. Aceeași poveste numerică.</p>
@@ -1630,7 +1681,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
     <h3 class="step-title">Verifică integritatea referențială</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Fiecare cod client din tabel există în nomenclatorul CLIENTI. Zero referințe lipsă. Tabelul este coerent.</p>
@@ -1655,7 +1706,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
     <h3 class="step-title">Leagă fluxul la sursă ca mecanism</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Fluxul Power Query rămâne conectat la sursă. La un export nou cu aceeași structură, un singur Refresh reconstruiește totul.</p>
@@ -1666,7 +1717,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
     <h3 class="step-title">Testează un refresh simulat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Înlocuiește sursa cu un export nou de structură identică. Date > Reîmprospătează tot. Rezultatul se reconstruiește identic, zero clic manual.</p>
@@ -1677,7 +1728,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(15)">
     <div class="step-marker">PAS 15</div>
     <h3 class="step-title">Documentează regula anti-recurență</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Notează în fișier structura ERP cunoscută și pașii fixați. O abatere de structură oprește fluxul vizibil, nu silențios.</p>
@@ -1702,7 +1753,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(16)">
     <div class="step-marker">PAS 16</div>
     <h3 class="step-title">Verifică sistemul cap-coadă</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Rândurile brute devin tranzacții reale. Coloanele rămân stabile. Suma este conservată. Tabel curat, refreshabil.</p>
@@ -1713,7 +1764,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(17)">
     <div class="step-marker">PAS 17</div>
     <h3 class="step-title">Confirmă baza BI-ready</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Tabelul curat poate intra direct în calcul, analiză, dashboard, fără să amplifice haos. Structura nu mai minte.</p>
@@ -1724,7 +1775,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   <div class="step-head" onclick="toggleStep(18)">
     <div class="step-marker">PAS 18</div>
     <h3 class="step-title">Predă către C02</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
   </div>
   <div class="step-body">
     <p class="step-action">Baza stabilă e pregătită pentru C02 Controlul datelor: separarea valid tehnic de corect operațional.</p>
@@ -2200,22 +2251,52 @@ function continueToCurrentStep() {
   setTimeout(() => scrollToStep(n), 50);
 }
 
-// Mobile nav
+// Mobile nav — A11y: aria-expanded, aria-hidden, Escape to close, focus first item on open
 function toggleMobileNav() {
   const nav = document.getElementById("sideNav");
   const overlay = document.getElementById("navOverlay");
+  const btn = document.getElementById("mobileToggleBtn");
   if (nav.classList.contains("open")) {
     nav.classList.remove("open");
     overlay.classList.remove("show");
+    btn && btn.setAttribute("aria-expanded", "false");
+    btn && btn.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    btn && btn.focus();
   } else {
     nav.classList.add("open");
     overlay.classList.add("show");
+    btn && btn.setAttribute("aria-expanded", "true");
+    btn && btn.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    const firstItem = nav.querySelector(".nav-item, .nav-ctrl-btn, a, button");
+    if (firstItem) setTimeout(() => firstItem.focus(), 320);
   }
 }
 function closeMobileNav() {
-  document.getElementById("sideNav").classList.remove("open");
-  document.getElementById("navOverlay").classList.remove("show");
+  const nav = document.getElementById("sideNav");
+  const overlay = document.getElementById("navOverlay");
+  const btn = document.getElementById("mobileToggleBtn");
+  nav.classList.remove("open");
+  overlay.classList.remove("show");
+  btn && btn.setAttribute("aria-expanded", "false");
+  btn && btn.classList.remove("is-open");
+  overlay.setAttribute("aria-hidden", "true");
 }
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    const nav = document.getElementById("sideNav");
+    if (nav && nav.classList.contains("open")) closeMobileNav();
+  }
+});
+// step-check keyboard support (Space/Enter)
+document.addEventListener("keydown", function(e) {
+  const t = e.target;
+  if (t && t.classList && t.classList.contains("step-check") && (e.key === " " || e.key === "Enter")) {
+    e.preventDefault();
+    t.click();
+  }
+});
 
 // INIT
 loadState();
