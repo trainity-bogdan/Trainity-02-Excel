@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Files temporare
+*.tmp
+*.bak
+~$*
+
+# Logs
+*.log
+
+# Arhive temporare (NU shipping)
+OUT-V*.zip
+*-test.zip
+
+# Local notes (nu pentru repo)
+NOTES.md
+TODO.txt
