@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+
+# Trainity Pack 02 Excel · preview live privat
+# NU se indexează de search engines. Conținut educational
+# pre-lansare, accesibil doar direct via URL cunoscut.
