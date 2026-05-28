@@ -1,0 +1,533 @@
+══════════════════════════════════════════════════════════════════════════════
+CREATIV-Excel-02-Control.txt
+══════════════════════════════════════════════════════════════════════════════
+Sistemul 02 · Excel · Construcția 02 · Controlul Datelor
+Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
+ale construcției C02.
+
+Versiune: V12
+Status: PRODUCȚIE
+══════════════════════════════════════════════════════════════════════════════
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ INSTRUCȚIUNI GENERALE                                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CE FACE NANO BANANA / GEMINI IMAGEN 3
+Este motorul Google de generare imagini foto-realistice. Generează imagini
+de până la ~2048x2048 px (sau 1920x1280 pentru aspect 3:2). Funcționează
+cel mai bine cu prompturi în engleză, lungi, detaliate, cu instrucțiuni
+foto-tehnice specifice (lens, aperture, lighting, composition).
+
+CUM SE FOLOSEȘTE
+1. Accesezi Gemini (gemini.google.com) sau aplicația Banana 2.
+2. Selectezi modul "Generate image" sau "Imagine".
+3. Copiezi promptul întreg din acest fișier (de la "Cinematic editorial..."
+   până la "no cartoon style.").
+4. Aștepți generarea (10-30 secunde).
+5. Dacă tool-ul oferă 4 variante, alegi cea care respectă cel mai bine
+   compoziția cerută.
+6. Salvezi imaginea la rezoluția maximă oferită.
+
+REGULI ESENȚIALE LA GENERARE
+- NU modifica prompturile (au fost calibrate cu zeci de iterații).
+- DA, generezi mai multe variante dacă prima nu este perfectă.
+- Păstrează paleta Trainity strictă: negru + alb + galben #FFD400.
+- Verifică compoziția înainte să salvezi: subiectul cheie trebuie să fie
+  în zona indicată (vezi notele de compoziție per prompt).
+
+DUPĂ GENERARE
+- Salvează imaginile cu numele exact indicat în capul fiecărui prompt.
+- Pune-le în folderul `assets/` alături de fișierele HTML.
+- Dacă livrezi fișier standalone (cu imagini incorporate base64), trimite
+  imaginile la Claude pentru integrare automată.
+
+VERIFICARE CONFORM (checklist universal aplicabil la fiecare creativ)
+Înainte să accepți o imagine ca finală, răspunde DA la următoarele 8:
+1. Subiectul cheie este în poziția cerută (centru-dreapta sau alta zonă
+   specifică per prompt)?
+2. Lighting-ul este DOAR auriu/galben warm (zero alte culori)?
+3. Fundalul este în shadow profund (negru complet pe partea unde stă
+   textul)?
+4. Aspect ratio este orizontal (3:2 sau 16:9, NU pătrat sau vertical)?
+5. NU există oameni, fețe, mâini în imagine (decât dacă explicit cerut)?
+6. NU există text gibberish (litere aleatoare sub formă de "text fake")?
+7. NU există logo-uri vizibile sau brand text recognoscibil?
+8. Imaginea simte că aparține SERIEI Trainity (continuitate cu celelalte
+   imagini deja generate pentru C02)?
+
+Dacă pierzi un singur DA: regenerezi cu prompt-ul identic. Modelul produce
+variante diferite la fiecare rulare; alegi cea care trece checklist-ul.
+
+CONTINUITATE C01 → C02
+Seria C02 trebuie să simtă din aceeași lume vizuală ca C01 (suprafață
+dark wood, paletă, mood), DAR temă semantică diferită:
+- C01 = STRUCTURĂ FALSĂ (ambalaj ERP)
+- C02 = CONTROL ASUPRA ANOMALIILOR (marcare, nu eliminare)
+Schimbarea semantică: în C01 obiectul-erou este HÂRTIA SFÂȘIATĂ. În C02
+obiectul-erou este ȘTAMPILA DE CONTROL care marchează anomalia.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 1 · COVER PAGE CU HOOK VIDEO YOUTUBE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA THUMBNAIL pentru video-ul YouTube al construcției C02.
+Trebuie să atragă click-ul într-o oceană de thumbnail-uri concurente.
+NU este o imagine cinematică subtilă. Este HOOK BRUTAL.
+
+NUME FISIER SALVAT: `cover-yt-excel-02-control.jpg`
+DIMENSIUNE THUMBNAIL YT: 1280×720 px (16:9 orizontal)
+LOC IN PRODUCȚIE: Thumbnail YouTube + cover pentru landing pages.
+
+
+COMPOZIȚIE CERUTĂ
+- Element principal CENTRU sau stânga-centru: tabel printat cu rânduri
+  vizibile, cifre lizibile, pe suprafață întunecată.
+- Element shock: două ȘTAMPILE DE CAUCIUC suprapuse peste rânduri, una
+  galbenă "DE VERIFICAT" și una roșie "EXCLUS", aplicate parțial peste
+  date — vizibilă cerneala neuniformă.
+- Zona dreapta: lăsată mai liberă, în shadow, pentru OVERLAY TEXT mare în
+  post-producție ("DATELE MINT." sau alt hook scris în YouTube Studio).
+- Iluminare dramatică de sus, lumină albă clinică + un rim galben warm.
+- NU este aceeași paletă moale ca slide-urile executive — este THUMBNAIL,
+  trebuie să sară la ochi.
+
+
+PROMPT (copy-paste integral în Banana 2 / Gemini Imagen)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+thumbnail style, high impact composition.
+
+Subject: A printed business table page laid flat on a dark wood surface,
+photographed at slight three-quarter angle. The page is visibly stamped
+across its center area with TWO overlapping rubber ink stamps: one in
+bold yellow ink reading "FLAG FOR REVIEW" in distressed industrial
+typography, and one in deep red ink reading "EXCLUDED" partially overlapping
+the first, the inks slightly bleeding into paper fibers. Some table rows
+are clearly visible underneath, with numeric data partially readable.
+
+Composition: The stamped area occupies the center and slightly left of
+frame. The right 35% of frame is in deeper shadow — empty space reserved
+for overlay text in post.
+
+Lighting: Dramatic top-down clinical white light source from upper left,
+with a warm amber rim light from upper right creating contrast. The
+stamps catch the warm light, the shadow side falls off into black void.
+The paper has visible texture, slight crinkles, no perfectly flat surface.
+
+Style: Editorial business photography, slightly desaturated except for
+the yellow stamp glow and red stamp pop. Background dark wood grain
+visible at edges only. Cinematic depth of field — stamps razor sharp,
+background slightly out of focus.
+
+Mood: Tension between two judgments — flagged vs excluded — both visible
+on the same evidence. The viewer feels the moment of decision.
+
+Aspect ratio: 16:9 horizontal, 1280×720 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text outside the
+two stamp words. NO visible brand logos. NO infographic icons. NO cartoon
+style. Pure photographic realism.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 2 · INFOGRAFIC ÎNȚELEGERE CONSTRUCȚIE ÎN 10 SECUNDE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Acesta este vizual de "explainer la prima privire" — o imagine care
+comunică tema C02 (controlul datelor anomale) într-o secundă, fără text.
+Este folosit ca cover secundar și ca imagine social media (LinkedIn,
+Instagram landscape).
+
+NUME FISIER SALVAT: `infografic-excel-02-control.jpg`
+DIMENSIUNE: 1920×1080 px (16:9 orizontal).
+
+
+COMPOZIȚIE CERUTĂ
+- Compoziție split: stânga = tabel haotic cu anomalii vizibile (cifre
+  alături inegale, celule goale, date evident inconsistente).
+- Dreapta = același tabel dar ORGANIZAT pe 3 zone clare, separate prin
+  benzi de culoare subtile (verde-pastel / galben-pastel / roșu-pastel),
+  cu marcaje vizuale dar fără ștergere.
+- Între cele două jumătăți: o linie verticală de "filtru" — un ham subțire
+  de cerneală galbenă care curge de sus în jos, ca o axă de transformare.
+- Sus: titlu implicit prin compoziție, nu prin text.
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+diptych composition style.
+
+Subject: A horizontal diptych composition. Left half: a printed business
+spreadsheet page in slight disarray — some rows misaligned, two cells
+visibly empty (showing through to wood underneath), one date entry circled
+in red ink. Right half: the same spreadsheet visible but now with three
+horizontal color bands subtly tinting groups of rows — a soft green tint
+on the top group, a soft amber-yellow tint on the middle group, a soft
+red tint on the bottom group. The same circled cells from the left side
+are visible on the right but now framed by the red band.
+
+Between the two halves: a vertical thin stream of golden yellow ink
+flowing downward from upper edge to lower edge, like a controlled filter
+axis. The ink is liquid, glossy, catching the light.
+
+Lighting: Soft top-down warm amber lighting, photographer's softbox style.
+Both halves equally lit. Background dark wood surface visible at edges
+of both pages.
+
+Composition: Each half occupies 45% of frame width, with the central
+golden axis 10%. The pages are flat on the surface, viewed from slight
+top-down angle (15 degrees off vertical).
+
+Style: Editorial business photography, slightly desaturated except for
+the golden axis flow and the three color bands. Cinematic depth of field —
+both pages razor sharp, background dark wood softly out of focus.
+
+Mood: Transformation. The left feels chaotic. The right feels controlled.
+The viewer instantly understands: data was marked, not deleted.
+
+Aspect ratio: 16:9 horizontal, 1920×1080 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text — keep table
+content abstract, numeric blur where details would distract. NO visible
+brand logos. NO infographic-style flat icons, NO charts or graphs drawn
+over. Pure photographic realism.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceste șase imagini apar în EXECUTIVE SHOW la finalul HTML-VIDEO al C02.
+Fiecare imagine este slide-ul de încheiere apoteotică al unei etape.
+Toate șase trebuie să simtă din ACEEAȘI serie cinematică — aceeași suprafață
+dark wood, aceeași paletă, același mood, aceleași reguli de compoziție.
+
+LOC ÎN PRODUCȚIE: HTML-VIDEO la secțiunea "Executive Show" (ultimele 7
+ecrane: 6 imagini + 1 closing apoteotic fără imagine).
+
+REGULA DE COMPOZIȚIE COMUNĂ (toate 6 imagini)
+- Subiect cheie în DREAPTA-CENTRU sau CENTRU al frame-ului.
+- STÂNGA 40% în shadow gradient profund (acolo stă textul slide-ului).
+- Aspect ratio 3:2 orizontal: 2400×1600 px sau 1920×1280 px.
+- Paletă: dark wood/metal + alb hârtie + galben warm #FFD400.
+- Iluminare: o singură sursă principală amber din dreapta-sus.
+
+REGULA DE CONTINUITATE
+Promptul fiecărei etape include explicit fraza:
+"Maintain strict visual continuity with the previous scenes in the C02
+series (stamped invoices, ink trails, validation markers) — same surface,
+same lighting, same paper, same mood."
+
+Această frază este OBLIGATORIE în fiecare prompt — fără ea, modelul varează
+suprafața și lighting-ul și seria pare colaj, nu aparține.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 01 · REALITATE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Tabelul pare curat. Pe suprafață nimic nu sare în ochi.
+Dar mâna care urmează să-l verifice se pregătește.
+
+NUME FISIER SALVAT: `exec-stage-1.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A pristine printed business invoice register on a dark wood
+surface. The page lies perfectly flat, rows neatly aligned, columns clean.
+Nothing appears wrong at first glance. To the right of the page, sitting
+unused on the wood: a vintage brass-and-rubber ink stamp (handle up,
+rubber face down), still capped, waiting. Beside the stamp, a small
+ink pad sealed shut. No marks have been made yet on the paper.
+
+Lighting: Single warm amber light source from upper right, soft falloff.
+Left 40% of frame in deep shadow gradient, almost black. The paper catches
+the amber light on its right edge.
+
+Composition: Page occupies center-right. Stamp and ink pad on far right
+edge. Left third reserved for slide text, in shadow.
+
+Style: Editorial business photography, slightly desaturated except for
+the warm amber glow on paper and brass stamp. Cinematic depth of field —
+page and stamp razor sharp, background dark wood softly out of focus.
+
+Mood: Calm before investigation. The viewer feels: "this looks fine, but
+something is about to happen."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text. NO visible
+brand logos. NO infographic icons. NO cartoon style. Pure photographic
+realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 02 · INVESTIGAȚIE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: O lupă revelează ceea ce ochiul liber rata.
+
+NUME FISIER SALVAT: `exec-stage-2.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A vintage brass magnifying glass hovering low above a printed
+business invoice register on a dark wood surface. Through the lens,
+visible MAGNIFIED: a single row glowing slightly warmer, with a future
+date partially readable. Around the lens, the rest of the page is in
+slight shadow, slightly out of focus. Beside the lens on the wood:
+a small notebook open with handwritten tally marks in pencil.
+
+Lighting: Single warm amber light source from upper right, the lens
+catching and refracting the light slightly, creating a soft warm aura
+inside the magnified circle.
+
+Composition: Magnifying glass center-right, hovering 5cm above page.
+Notebook lower right. Left third in shadow gradient for slide text.
+
+Style: Editorial business photography, slightly desaturated except for
+the amber glow inside the lens. Cinematic depth of field — lens area
+razor sharp, paper outside lens slightly out of focus.
+
+Mood: Forensic curiosity. The viewer feels: "the AI is reading what we
+could not see."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text — keep the
+magnified row content as suggestive blur. NO visible brand logos. NO
+infographic icons. NO cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 03 · TRANSFORMARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Ștampila de control aplicată ferm. Marcaj, nu ștergere.
+
+NUME FISIER SALVAT: `exec-stage-3.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A printed business invoice register on a dark wood surface.
+Mid-action: a brass-and-rubber ink stamp has just been lifted from the
+page, leaving behind a freshly-pressed YELLOW INK MARK reading
+"DE VERIFICAT" across one row in distressed industrial typography. The
+ink is wet, glossy, slightly bleeding into paper fibers. Three rows below,
+another row has a deep RED INK MARK reading "EXCLUS" already dried.
+The stamp itself is suspended in motion above the page, brass handle
+catching the amber light.
+
+Lighting: Single warm amber light source from upper right. The wet yellow
+ink reflects the warm light brightly. The dried red ink absorbs it,
+deeper and matte.
+
+Composition: Page center-right. Stamp suspended mid-air above center.
+Wet yellow mark on upper row, dry red mark on lower row. Left third in
+shadow gradient for slide text.
+
+Style: Editorial business photography, slightly desaturated except for
+the yellow ink glow and red mark pop. Cinematic depth of field — stamp
+and ink marks razor sharp, page edges softer.
+
+Mood: Decisive action. The viewer feels: "the system marks. It does not
+delete."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text outside the
+two stamp words. NO visible brand logos. NO infographic icons. NO cartoon
+style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 04 · VERIFICARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Trei coloane de control, fiecare cu propriul total. Suma
+generală neclintită.
+
+NUME FISIER SALVAT: `exec-stage-4.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A printed business invoice register on a dark wood surface,
+viewed top-down at slight angle. On top of the register, three small
+hand-written paper tickets are placed in a neat row across the upper
+margin, each one bearing a single hand-printed label and a hand-written
+number underneath: "VALID 1964", "DE VERIFICAT 15", "EXCLUS 31". To the
+side: a vintage pencil and a small abacus or counter device. The actual
+register rows underneath show the corresponding color-banded marks (yellow
+ink, red ink, neutral) for some visible rows.
+
+Lighting: Single warm amber light source from upper right, soft. The
+hand-written tickets catch the warm light cleanly.
+
+Composition: Page center, tickets row across upper third, pencil and
+counter on right. Left third in shadow gradient for slide text.
+
+Style: Editorial business photography, slightly desaturated except for
+the amber tone on the tickets and ink marks. Cinematic depth of field —
+tickets razor sharp, register slightly softer.
+
+Mood: Audit calm. The viewer feels: "everything counted, nothing lost."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text — keep
+visible numbers limited to the three tally tickets. NO visible brand
+logos. NO infographic icons. NO cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 05 · STABILIZARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Ștampila standardizată. Reguli de control reaplicabile.
+Refresh = aceeași judecată.
+
+NUME FISIER SALVAT: `exec-stage-5.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A wooden craft tray on a dark wood surface containing a SET of
+brass-and-rubber stamps neatly arranged in a row: six identical-looking
+stamps, each with a different rubber face label (the labels not directly
+readable from this angle, but visible as distinct). Beside the tray, a
+small framed metal plate with a single word visibly engraved: "STANDARD".
+A circular refresh-arrow icon is subtly etched into one of the stamp
+handles. The arrangement feels archival, intentional, ready to be reused.
+
+Lighting: Single warm amber light source from upper right. The brass
+catches the warm light, the wooden tray glows softly. Metal plate has
+a subtle specular highlight.
+
+Composition: Tray center-right with stamps in row. Metal plate front
+right. Left third in shadow gradient for slide text.
+
+Style: Editorial business photography, slightly desaturated except for
+the amber glow on brass. Cinematic depth of field — stamps razor sharp,
+tray edges softer.
+
+Mood: Operational maturity. The viewer feels: "the rules now live in
+a system. The same judgment, again and again."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text — the
+"STANDARD" engraved word is the only readable text allowed. NO visible
+brand logos. NO infographic icons. NO cartoon style. Pure photographic
+realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 06 · CONFIRMARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Predarea. Bază controlată. Următoarea construcție o va audita
+forensic.
+
+NUME FISIER SALVAT: `exec-stage-6.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A closed manila folder on a dark wood surface, label visible
+on the front edge reading "CONTROLAT". Beside the folder, a printed
+register page peeking out slightly with the corner stamped clean yellow
+ink "VALIDAT". In the upper right of frame, just entering the shot from
+the right edge: the edge of another empty manila folder still open, waiting
+to receive the next layer (subtle handoff motif). Between the two folders:
+a thin trail of amber ink connecting them like a baton pass.
+
+Lighting: Single warm amber light source from upper right, soft. The
+closed folder is fully lit, the entering folder partially in light.
+
+Composition: Closed folder center-left. Entering folder right edge.
+Amber ink trail between them. Left third in shadow gradient for slide
+text.
+
+Style: Editorial business photography, slightly desaturated except for
+the amber ink trail and yellow stamp. Cinematic depth of field — closed
+folder razor sharp, entering folder slightly softer.
+
+Mood: Handover ritual. The viewer feels: "this base is sealed. The next
+construction inherits clean control."
+
+Maintain strict visual continuity with the previous scenes in the C02
+series — same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text outside the
+two visible labels. NO visible brand logos. NO infographic icons. NO
+cartoon style. Pure photographic realism.
+
+
+══════════════════════════════════════════════════════════════════════════════
+INVENTAR FINAL CREATIVE C02
+══════════════════════════════════════════════════════════════════════════════
+
+Fișiere de generat:
+  ☐ cover-yt-excel-02-control.jpg          (1280×720, 16:9)
+  ☐ infografic-excel-02-control.jpg        (1920×1080, 16:9)
+  ☐ exec-stage-1.jpg                       (2400×1600, 3:2)
+  ☐ exec-stage-2.jpg                       (2400×1600, 3:2)
+  ☐ exec-stage-3.jpg                       (2400×1600, 3:2)
+  ☐ exec-stage-4.jpg                       (2400×1600, 3:2)
+  ☐ exec-stage-5.jpg                       (2400×1600, 3:2)
+  ☐ exec-stage-6.jpg                       (2400×1600, 3:2)
+
+Total: 8 imagini de generat în Banana 2 / Gemini Imagen.
+
+După generare, le trimiți la Claude pentru integrare base64 inline în
+HTML-Video.
+
+══════════════════════════════════════════════════════════════════════════════
+END CREATIV-Excel-02-Control.txt
+══════════════════════════════════════════════════════════════════════════════

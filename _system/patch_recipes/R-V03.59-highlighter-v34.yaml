@@ -1,0 +1,33 @@
+regula: R-V03.59
+nume: Highlighter V34 persistent (capture phase, no button, no ESC)
+introdus_in: V31
+finalizat_in: V34
+status: ACTIVĂ
+descriere: 'HTML-Video are funcționalitate highlighter:
+
+  - Selecție text → marcaj galben persistent (#FFD400 pe negru)
+
+  - Click pe marcaj = toggle off prin CAPTURE PHASE (NU oprește advance slide)
+
+  - Persistență localStorage per construcție
+
+  - ELIMINATE: buton Reset, ESC keybind'
+target_files:
+- c*/HTML-Video-Excel-*.html
+- c*/HTML-Editor-Video-Excel-*.html
+target_canonic: false
+operatii:
+- tip: regex_replace
+  pattern: <button[^>]*class=["']?hl-reset["']?[^>]*>[^<]*</button>
+  replacement: ''
+- tip: regex_replace
+  pattern: \.hl-reset\s*\{[^}]*\}
+  replacement: ''
+- tip: regex_replace
+  pattern: if\s*\(\s*e\.keyCode\s*===?\s*27[^}]*\}
+  replacement: ''
+detector:
+  scope: video+editor_video
+  note: Verifica prezenta onClickCapture, true + absenta hl-reset si ESC
+  audit_sync_detector: _r0359
+mesaj_commit: 'R-V03.59: highlighter V34 cleanup - editat C01-C05'

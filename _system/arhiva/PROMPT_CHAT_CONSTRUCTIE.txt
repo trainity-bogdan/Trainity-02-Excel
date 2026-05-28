@@ -1,0 +1,221 @@
+PROMPT IMPERATIV - CHAT CONSTRUCTIE NN TRAINITY (V24)
+
+CITESTE ACEST FISIER PRIMUL, INAINTE DE ORICE ALTCEVA. Acest fisier
+contine instructiuni IMPERATIVE pentru a:
+1. Respecta regula veche "SPEC inghetat inainte de generare"
+   (R-V03.55, recodificata V22 dupa esuarea V21 la C05)
+2. Evita esuarea cu "context window exceeded" (R-V03.52 + R-V03.54)
+
+================================================================================
+REGULA 0 - SPEC INGHETAT BLOCANT (R-V03.55, CRITICA, BLOCANT)
+================================================================================
+
+INAINTE de orice citire pilot, INAINTE de orice generare, FA ACEST PAS:
+
+**Executa scriptul de verificare HARD:**
+
+```bash
+python3 generatoare/pre_generation_check.py NN
+```
+
+unde NN = numarul constructiei ceruta (ex: 05).
+
+**STEP 1 - VERSION CHECK OBLIGATORIU (BLOCANT) [V27]:**
+
+Prima linie a output-ului scriptului TREBUIE sa fie:
+
+```
+[pre_generation_check V27.X - schema REAL]
+```
+
+unde V27.X este versiunea curenta (V27.1 sau mai mare).
+
+**Daca vezi:**
+- `[pre_generation_check V27.X - schema REAL]` -> OK, treci la STEP 2
+- `[pre_generation_check V26.X - schema INVENTED]` sau orice versiune
+  mai mica -> **OPRESTE-TE IMEDIAT** si raspunde ARHITECT:
+  
+  > "Scriptul pre_generation_check.py atasat in OUT-V{NN}.zip este
+  > versiunea VECHE buggy (cauta campuri inventate cover_label,
+  > cover_title, localStorage_keys care nu exista in IDENTITATE-TEHNICA.md
+  > real). Te rog ataseaza OUT-V38.zip sau mai nou, care contine 
+  > scriptul reparat cu schema reala (nume_hero_caps_rand1,
+  > localStorage_studiu, localStorage_video)."
+  
+- Lipsa prima linie cu `[pre_generation_check ...]` -> scriptul e
+  VECHE, fara self-check. Cere reatașare arhivei.
+
+**NU PROCEDA LA GENERARE DACA SCRIPT VERSION != V27.X.** Versiunea
+veche buggy genereaza fals pozitiv la L142.
+
+**STEP 2 - INTERPRETARE EXIT CODE:**
+
+- Exit 0 -> SPEC C{NN} INGHETAT + IDENTITATE POPULATA + FENOMENE ALINIAT.
+  Treci la REGULA 1 si urmatoarele.
+- Exit 1 -> Unul din cele 3 check-uri FAIL. **OPRESTE-TE IMEDIAT.**
+  Scriptul a afisat deja mesajul complet pentru ARHITECT. NU adauga
+  nimic peste mesajul scriptului. Asteapta decizia ARHITECT.
+- Exit 2 -> Eroare SISTEM_TRAINITY.md lipsa/corupta. Raporteaza si
+  cere ajutorul ARHITECT.
+
+**NU PROCEDA LA GENERARE DACA EXIT CODE != 0.** Improvizarea SPEC in
+chat CONSTRUCTIE genereaza inconsistente pedagogice intre constructii
+si strica unitatea sistemului Trainity.
+
+Exceptie: daca Bogdan scrie EXPLICIT "definim SPEC C{NN} acum in acest
+chat", treci la modul SPEC FREEZING (intrebari structurate de inghetare
+una cate una in format grila R-V03.56), apoi la generare dupa ce SPEC
+e complet inghetat in SISTEM_TRAINITY.md.
+
+**FORMAT OBLIGATORIU SPEC FREEZING (R-V03.56):**
+
+Pentru fiecare element (INTRIGA, MIZA, MANTRA, MOTTO, 18 step-titles,
+2 prompturi, 8 final-labels), motorul foloseste **format grila cu
+3 variante creative**:
+
+```
+Intrebarea N din 9: [ELEMENT]
+
+[Scurta explicatie ce rol are elementul]
+
+La C04 [ELEMENT] era: "[exemplu inghetat]"
+
+Pentru C{NN} ({nume_constructie}), iata 3 propuneri creative:
+
+A. "[varianta 1]"
+   [scurta nota pedagogica]
+
+B. "[varianta 2]"
+   [scurta nota concreta]
+
+C. "[varianta 3]"
+   [scurta nota poetica]
+
+Alege A, B sau C. Daca niciuna nu te convinge, scrie "alte 3".
+```
+
+Cele 3 variante TREBUIE sa fie:
+- Creative reale, NU placeholders
+- Brand Trainity (zero em-dash, vocabular permis)
+- Diferite ca abordare (pedagogic / concret / poetic)
+
+ARHITECT poate:
+- Alege A, B sau C direct
+- Scrie "alte 3" -> motor genereaza 3 noi variante
+- Combina: "A dar finalul din B" -> motor reformuleaza
+- Edita: "B dar inlocuieste X cu Y" -> motor accepta
+
+Motorul NU intreaba "care e INTRIGA TA?" - asta inverseaza rolurile.
+Motorul propune, ARHITECT alege. R-V03.56 obligatoriu.
+
+================================================================================
+REGULA 1 - STRATEGIE MINIMALA DE CONTEXT (CRITICA)
+================================================================================
+
+In chat CONSTRUCTIE NN, NU citesti niciodata pilot_C01_V12/HTML-Video-*.html
+sau pilot_C01_V12/HTML-Editor-Video-*.html in context complet la inceput.
+Aceste fisiere au ~800KB fiecare cu base64 embed - vor satura contextul
+inainte sa apuci sa generezi.
+
+In locul lecturii complete pilot Video, foloseste aceasta strategie:
+
+1. Citeste pilot_C01_V12/HTML-Studiu-Excel-01-Structura.html (~80KB) -
+   matrita Studiu
+2. Citeste pilot_C01_V12/HTML-Editor-Studiu-Excel-01-Structura.html (~90KB) -
+   matrita Editor-Studiu
+3. **NU CITESTI pilot Video integral.** Foloseste o extragere selectiva:
+   - Doar STRUCTURA JS STAGES (primele ~100 linii cu obiectul JS)
+   - Doar CSS-ul de baza (primele ~200 linii cu .stage, .video-card, etc)
+   - Imaginile base64 le PRELUI DIRECT prin head/tail BASH la nevoie,
+     fara sa le aduci in context
+4. Citeste DATA-INSTRUCTIUNI.md sectiunea pentru C{NN} curenta
+5. Citeste referinte/Date_MASTER-initial.xlsx (~165KB, esential)
+6. Citeste SCHEMA-MASTER.md, IDENTITATE-TEHNICA, brand-relevante
+
+Aceasta lectura selectiva foloseste ~500KB context in loc de ~2.5MB,
+lasand suficient spatiu pentru generarea celor 6 livrabile.
+
+================================================================================
+REGULA 2 - LIVRARE INCREMENTALA CATE UN FISIER PER MESAJ (R-V03.52)
+================================================================================
+
+Livrezi CATE UN LIVRABIL PER MESAJ, NU atomic toate 6. Ordinea OBLIGATORIE
+de la mic la mare:
+
+Mesaj 1: Date_MASTER-C{NN}.xlsx (~170KB)
+Mesaj 2: Creativ-Excel-{NN}-{slug}.txt (~25KB)
+Mesaj 3: HTML-Studiu-Excel-{NN}-{slug}.html (~80KB)
+Mesaj 4: HTML-Editor-Studiu-Excel-{NN}-{slug}.html (~90KB)
+Mesaj 5: HTML-Video-Excel-{NN}-{slug}.html (~800KB)
+Mesaj 6: HTML-Editor-Video-Excel-{NN}-{slug}.html (~800KB)
+Mesaj 7: Ruleaza gate_v20.py + verdict + offer checkout constructie
+
+Dupa fiecare livrare, mesaj de confirmare SCURT (max 2 randuri):
+"Livrat: {nume_fisier}. Continui cu {N+1}/6 ({nume_urmator})."
+
+Procedeaza AUTOMAT catre urmatorul, fara sa astepti comanda.
+
+DUPA mesajul 5 (HTML-Video), foloseste bash sa COPII direct fisierul
+HTML-Video pilot peste, apoi sa-l modifici punctual cu str_replace pentru
+identitatea constructiei curente. NU il regenera de la zero - copy+modify
+e singura strategie care nu satureaza contextul.
+
+================================================================================
+REGULA 3 - PRESERVARE CONTEXT INTRE LIVRABILE
+================================================================================
+
+Dupa fiecare mesaj de livrare, NU re-cita documentele canonice (brain,
+SISTEM, WORKFLOW). Le-ai citit la inceput, le tii in context. Daca ai
+indoieli punctuale, foloseste grep targeted, NU view integral.
+
+NU genera mesaje lungi de explicatii intre livrabile. Confirmarea scurta
++ procedare automata. Bogdan poate cere clarificari la final.
+
+================================================================================
+REGULA 4 - RECOVERY LA ESEC
+================================================================================
+
+Daca primesti "Claude's response could not be fully generated" la unul
+dintre livrabile:
+1. Retry automat o singura data acel mesaj
+2. Daca al doilea fail, OPRESTE-TE si raporteaza:
+   "Livrabil X esuat. Livrate pana acum: [lista]. Cere comanda
+    'continua de la X' pentru regenerare manuala targeted."
+
+Daca primesti "Prompt is too long: context window exceeded":
+1. NU mai poti continua in chatul curent
+2. Raporteaza imediat: "Context window saturat la livrabil X. Livrate
+   anterior: [lista de fisiere prezente in /mnt/user-data/outputs].
+   Reia in chat nou cu OUT-V21.zip + comanda 'continua C{NN} de la
+   livrabil X'."
+
+================================================================================
+COMENZI ACCEPTATE (case-insensitive, R-V03.51)
+================================================================================
+
+- "Genereaza CONSTRUCTIA NN" / "genereaza c{NN}" / orice varianta
+- "continua C{NN} de la livrabil X" - reia generare partiala
+- "asteapta" / "stop" - opreste livrare incrementala temporar
+- "continua" - reia livrare incrementala
+- "checkout constructie" - dupa gate PASS, produce arhiva finala cu:
+   * cele 6 livrabile canonice (HTML × 4 + Excel + Creativ.txt)
+   * folder `assets/` cu 12 imagini (R-V03.58 V30+) - copiate din
+     `referinte/assets_canonice/` (asset perpetuu Trainity)
+   * document `FILM-Excel-{NN}-{slug}.docx` (R-V03.58 V30+) - script
+     video procedural cinematic ~150 paragrafe, structurat:
+     IDENTITATE CINEMATICA (HOOK/MIZA/MANTRA/WOW/MOTTO) → DESCHIDERE
+     → ROLURI (AI/PQ/Operator) → SCENA REALA → 6 ETAPE cinematic
+     (HOOK→DEMO→CONTROL→REVEAL) → VERIFY → FINAL → tranzitie C{NN+1}
+
+================================================================================
+SUMAR EXECUTIV (citeste in 30 secunde inainte sa pornesti)
+================================================================================
+
+1. NU citi pilot Video integral la inceput
+2. Livreaza UN fisier per mesaj, NU atomic
+3. Confirmari scurte intre livrabile
+4. Pentru HTML-Video/Editor-Video: COPY+MODIFY pilot, NU regenereaza
+5. La esec, raporteaza precis ce ai livrat si cere recovery targeted
+
+Aceste reguli sunt OBLIGATORII si BLOCANTE. Daca le ignori, chat-ul va
+esua cu context window exceeded.

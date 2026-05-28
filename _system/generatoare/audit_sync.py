@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+"""
+audit_sync.py - V39 (structura versiune unica per constructie)
+
+Audit empiric de sincronizare. Structura noua:
+  cNN/                  o singura versiune (fara canonic/editat)
+    HTML-* x4
+    Date_MASTER-CNN.xlsx
+    Creativ + FILM
+    assets/             cele 12 imagini exec-stage
+
+Usage:
+    python3 _system/generatoare/audit_sync.py
+    python3 _system/generatoare/audit_sync.py --json
+"""
+
+import sys, re, os, glob, json
+
+DETECTORS = {}
+
+def detector(rule_code, name, scope):
+    def deco(fn):
+        DETECTORS[rule_code] = {'name': name, 'scope': scope, 'fn': fn}
+        return fn
+    return deco
+
+def _get_nn(folder):
+    m = re.search(r'/?c(\d+)/?$', folder)
+    return m.group(1).zfill(2) if m else None
+
+@detector('R-V03.60', 'cover-meta fara INPUT/OUTPUT', 'studiu')
+def _r0360(c):
+    return 0 == len(re.findall(r'cover-meta-key">(?:INPUT|OUTPUT)<', c))
+
+@detector('R-V03.61', '.nav-controls fara margin-top:auto', 'studiu')
+def _r0361(c):
+    m = re.search(r'\.nav-controls\s*\{[^}]+\}', c)
+    return m and 'margin-top: auto' not in m.group(0) and 'margin-top:auto' not in m.group(0)
+
+@detector('R-V03.59', 'Highlighter V34 capture+no-button+no-ESC', 'video')
+def _r0359(c):
+    return ('onClickCapture, true' in c
+            and 'class="hl-reset"' not in c
+            and '.hl-reset' not in c
+            and "keyCode === 27" not in c
+            and "key === 'Escape'" not in c)
+
+@detector('V32-fix', 'Zero referinte Date-Output/Date-Input', 'all_html')
+def _v32(c):
+    return 0 == len(re.findall(r'Date-Output-Excel|Date-Input-Excel', c))
+
+@detector('R-V03.33', 'Imagini base64 inline in Video', 'video')
+def _r0333(c):
+    return c.count('data:image/') >= 5
+
+@detector('R-V03.47', 'Cele 6 livrabile canonice', 'folder')
+def _r0347(folder):
+    nn = _get_nn(folder)
+    if not nn: return False
+    patterns = [
+        f'HTML-Studiu-Excel-{nn}-*.html',
+        f'HTML-Editor-Studiu-Excel-{nn}-*.html',
+        f'HTML-Video-Excel-{nn}-*.html',
+        f'HTML-Editor-Video-Excel-{nn}-*.html',
+        f'Date_MASTER-C{nn}.xlsx',
+        f'Creativ-Excel-{nn}-*.txt',
+    ]
+    return all(glob.glob(os.path.join(folder, p)) for p in patterns)
+
+@detector('R-V03.58', 'FILM.docx prezent', 'folder')
+def _r0358(folder):
+    nn = _get_nn(folder)
+    if not nn: return False
+    return bool(glob.glob(os.path.join(folder, f'FILM-Excel-{nn}-*.docx')))
+
+@detector('R-V39.assets', 'Folder assets/ cu 12 imagini exec-stage', 'folder')
+def _rassets(folder):
+    assets = os.path.join(folder, 'assets')
+    if not os.path.isdir(assets): return False
+    jpgs = glob.glob(os.path.join(assets, 'exec-stage-*.jpg'))
+    pngs = glob.glob(os.path.join(assets, 'exec-stage-*.png'))
+    return len(jpgs) == 6 and len(pngs) == 6
+
+
+def audit(root='.', json_out=False):
+    zones = {}
+    for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
+        nn = os.path.basename(c_folder).upper()
+        zones[nn] = c_folder
+
+    def _read(f):
+        with open(f, encoding='utf-8') as fh:
+            return fh.read()
+
+    results = {}
+    err_count = 0
+    for zname, folder in zones.items():
+        results[zname] = {}
+        sts = glob.glob(os.path.join(folder, 'HTML-Studiu-Excel-*.html'))
+        est = glob.glob(os.path.join(folder, 'HTML-Editor-Studiu-Excel-*.html'))
+        vid = glob.glob(os.path.join(folder, 'HTML-Video-Excel-*.html'))
+        evi = glob.glob(os.path.join(folder, 'HTML-Editor-Video-Excel-*.html'))
+        for rc, det in DETECTORS.items():
+            scope = det['scope']
+            r = None
+            try:
+                if scope == 'folder':
+                    r = det['fn'](folder)
+                elif scope == 'studiu':
+                    files = sts + est
+                    if files: r = all(det['fn'](_read(f)) for f in files)
+                elif scope == 'video':
+                    files = vid + evi
+                    if files: r = all(det['fn'](_read(f)) for f in files)
+                elif scope == 'all_html':
+                    files = sts + est + vid + evi
+                    if files: r = all(det['fn'](_read(f)) for f in files)
+            except Exception as e:
+                r = 'ERR'
+                err_count += 1
+                print(f"[WARN] {zname} {rc}: {type(e).__name__}: {e}", file=sys.stderr)
+            if r is not None: results[zname][rc] = r
+
+    if json_out:
+        print(json.dumps(results, indent=2))
+        return 0
+
+    drift = 0
+    errs = 0
+    print(f"\n{'Zona':<8}", end='')
+    for rc in DETECTORS.keys():
+        print(f"{rc[-10:]:>12}", end='')
+    print()
+    print("-" * (8 + 12 * len(DETECTORS)))
+    for zname, zres in results.items():
+        print(f"{zname:<8}", end='')
+        for rc in DETECTORS.keys():
+            if rc in zres:
+                v = zres[rc]
+                if v is True:
+                    sym = 'OK'
+                elif v is False:
+                    sym = 'XX'
+                    drift += 1
+                else:
+                    sym = 'ERR'
+                    errs += 1
+            else:
+                sym = '-'
+            print(f"{sym:>12}", end='')
+        print()
+    print()
+    total_cells = len(DETECTORS) * len(results)
+    real_evals = sum(1 for z in results.values() for v in z.values() if v is True or v is False)
+    if drift == 0 and errs == 0:
+        print(f"ZERO DRIFT - {real_evals}/{total_cells} verificari rulate, toate PASS")
+    elif drift == 0 and errs > 0:
+        print(f"ZERO DRIFT confirmat pe {real_evals}/{total_cells} verificari, dar {errs} detectoare au ERR (vezi WARN stderr)")
+    else:
+        print(f"DRIFT: {drift} celule cu probleme + {errs} ERR")
+    return 0 if (drift == 0 and errs == 0) else 1
+
+
+if __name__ == '__main__':
+    sys.exit(audit('.', '--json' in sys.argv))

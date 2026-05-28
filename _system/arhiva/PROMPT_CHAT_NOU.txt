@@ -1,0 +1,385 @@
+PROMPT DE PORNIRE - CHAT NOU TRAINITY (V24)
+(plasa de siguranta in arhiva ZIP; comanda directa e CHECKIN BRAIN sau CHECKIN CONSTRUCTIE NN)
+
+================================================================================
+CRITICAL V20 - DESCHIDERE CHAT CONSTRUCTIE NN
+================================================================================
+
+Daca acest chat este pentru o constructie (Bogdan a dat sau va da comanda
+"Genereaza CONSTRUCTIA NN"):
+
+**CITESTE IMEDIAT PROMPT_CHAT_CONSTRUCTIE.txt** din radacina arhivei.
+Acel fisier are reguli IMPERATIVE pentru a evita esuarea cu "context
+window exceeded" (eroare frecventa in V19, fixata in V20).
+
+Cele 5 reguli scurte:
+1. NU citi pilot HTML-Video integral (~800KB) la inceput
+2. Livreaza UN fisier per mesaj, NU atomic toate 6
+3. Confirmari scurte intre livrabile (max 2 randuri)
+4. HTML-Video/Editor-Video: COPY+MODIFY pilot, NU regenereaza
+5. La esec, raporteaza precis si cere recovery targeted
+
+================================================================================
+
+---
+
+Sunt Bogdan Tarla, fondator Trainity. Continuam reconstructia Trainity.
+
+CITESTE PRIMA DATA: WORKFLOW-CAP-COADA.md la radacina arhivei. Este
+documentul principal al sistemului. Explica arhitectura BRAIN ↔
+CONSTRUCTIE, comenzile, cele 7 livrabile per constructie, si regula
+absoluta R-V03.45 (gate v16 obligatoriu inainte de present_files in
+chat CONSTRUCTIE).
+
+Am atasat arhiva ZIP. ATENTIE R-V03.35: ACEEASI arhiva
+`OUT-V16.zip` (sau cea mai recenta OUT-VNN.zip produsa intr-un
+chat BRAIN) se foloseste atat pentru BRAIN cat si pentru CONSTRUCTIE.
+Chat-urile CONSTRUCTIE NU primesc o arhiva diferita - primesc aceeasi
+arhiva BRAIN, care contine TOT (WORKFLOW + brain + SISTEM + PROMPT +
+KIT V16 + pilot + referinte + generatoare + creative_banana2 +
+livrabile T1 actuale).
+
+NOU V16 (25 mai 2026):
+- WORKFLOW-CAP-COADA.md ca document principal nou
+- R-V03.44: prompt-text clone check (toleranta zero pe prompturi
+  catre AI)
+- R-V03.45: gate v16 BLOCANT si OBLIGATORIU inainte de present_files.
+  Implementare: generatoare/gate_v20.py. Verifica 5 CLASE de erori
+  (no-clone generic, identity, brand, cross-contamination, voce),
+  NU cazuri specifice. La descoperirea unei zone noi vulnerabile, se
+  adauga in lista TEXTUAL_ZONES din gate_v20.py, nu regula separata.
+- gate_cross_contamination.py V15 DEPRECATED, sters din arhiva.
+  Folosit doar gate_v20.py de aici inainte.
+
+NOU V15 (deja inghetat):
+- R-V03.38: creative_banana2/ ca asset perpetuu in brain (Creativ
+  per constructie testat functional, NU se regenereaza daca exista)
+- R-V03.40: IDENTITATE_TEHNICA per constructie obligatorie in
+  referinte/IDENTITATE-TEHNICA.md (sursa unica de adevar pentru
+  generator)
+- R-V03.42: COVER-CHECKLIST.md cu 20 puncte atomice
+- R-V03.43: meta-val toate CAPS
+
+R-V03.36 COMENZI SEPARATE PER CONTEXT:
+- in BRAIN: `checkout brain` -> OUT-V(NN+1).zip (UN SINGUR fisier)
+- in CONSTRUCTIE: `checkout constructie` -> dual:
+  * OUT-CC-VNN-YYYYMMDD_HHMMSS.zip
+  * TOATE livrabilele constructiei NN ca fisiere individuale la outputs
+- Comanda gresita pe context gresit -> refuz cu redirectionare clara
+
+Comenzi de pornire (aleg una):
+
+1. CHECKIN BRAIN - chat de SISTEM / ARHITECTURA / CONSOLIDARE.
+   Citesti INTEGRAL brain.md + SISTEM_TRAINITY.md din arhiva, intri
+   in context maxim, imi confirmi pe scurt stadiul.
+   INTERZIS sa generezi constructii in acest tip de chat.
+   Exceptie: livrabile pilot ad-hoc la cerere explicita (overlay-uri,
+   bug-fix, modificari de UX universale).
+
+2. CHECKIN CONSTRUCTIE NN - chat de PRODUCTIE PURA pentru constructia NN.
+   Citesti brain.md + SISTEM, apoi RULEZI MOTORUL DIRECT pe SPEC INGHETAT.
+   - daca SPEC INGHETAT: ZERO re-intrebari, ZERO confirmare parametri
+     tehnici (R-V03.6 STRICT, lectie 84). NU enumera parametrii seed
+     in preambul + NU astepta comanda Genereaza. Treci DIRECT la productie
+     cu 8 livrabile canonice (R-V03.15):
+     1. INPUT-Excel-NN-Nume.xlsx
+     2. OUTPUT-Excel-NN-Nume.xlsx
+     3. HTML-STUDY-Excel-NN-Nume.html
+     4. HTML-EDIT-STUDY-Excel-NN-Nume.html
+     5. HTML-VIDEO-Excel-NN-Nume.html
+     6. HTML-EDIT-VIDEO-Excel-NN-Nume.html
+     7. FILM-Excel-NN-Nume.docx
+     8. PPT-Excel-NN-Nume.pptx
+   - daca SPEC NEGENERAT: motorul de inghetare (Rol + Emotie + Pozitie
+     + Top 3, un bloc per grila), apoi propui Top 10 fenomene
+   - PDF NU se genereaza la `Genereaza CONSTRUCTIA NN`. Comanda separata:
+     `Genereaza PDF din STUDY` + HTML atasat (R-V03.15).
+   - rulezi CELE 3 GATE-URI BLOCANTE pe cele 8 livrabile canonice:
+     * Gate 1 paritate functionala HTML (Playwright multi-viewport)
+     * Gate 2 INVERSAT V03 - ZERO cifre business in HTML-STUDY +
+       HTML-EDIT-STUDY + HTML-VIDEO + HTML-EDIT-VIDEO + FILM + PPT
+     * Gate 3 coerenta brand FILM+PPT + voce per livrabil + editor
+       functional
+   - LIVRARE = TOATE 8 ODATA, un singur present_files la final
+   - alternativa: `scurt checkout` returneaza SPEC inghetat + lectii ca text
+   INTERZIS sa modifici sistemul, sa discuti arhitectura.
+
+REGULI ETERNE V14:
+- R-V03.37 ARHIVA BRAIN = MINIMUM NECESAR, FARA LIVRABILE C02-C20.
+  Arhiva BRAIN contine doar: brain.md, SISTEM, PROMPT, KIT, pilot_C01_V12/,
+  referinte/, generatoare/, livrabile_C01/ (matrita didactica unica).
+  livrabile_C02/...C20/ NU se importa NICIODATA in brain. Brain ramane
+  lightweight perpetuu (~4-5 MB). Livrabilele C02-C20 traiesc EXCLUSIV
+  in arhivele lor proprii OUT-CC-VNN-YYYYMMDD_HHMMSS.zip.
+- R-V03.36 COMENZI SEPARATE PE CONTEXT (CHECKOUT BRAIN vs CHECKOUT
+  CONSTRUCTIE):
+  * `checkout brain` (DOAR in chat BRAIN): output UN SINGUR fisier =
+    `OUT-VNN.zip`. Livrabilele C01-C20 sunt referinta arhivata in
+    ZIP, NU re-livrate individual la outputs.
+  * `checkout constructie` (DOAR in chat CONSTRUCTIE NN): output DUAL =
+    `OUT-CC-VNN-YYYYMMDD_HHMMSS.zip` (componenta pentru merge in
+    BRAIN) + TOATE livrabilele constructiei NN ca fisiere individuale
+    la outputs (Excel-uri, HTML-uri, Creativ.txt, imagini din assets/).
+  * Comanda gresita pe context gresit -> refuz + redirectionare clara
+    (ex: in CONSTRUCTIE primesc `checkout brain` -> "Aici e chat
+    CONSTRUCTIE NN. Comanda corecta este `checkout constructie`.").
+- L98 AI IMAGERY CU CONSTRANGERE: cand un creativ Banana 2 are interzis
+  un tip de obiect (cifre business, branduri, fete), NU se mascheaza
+  obiectul cu blur/glow/fade - se SCHIMBA obiectul cu altul din
+  categorie cognitiva diferita care comunica aceeasi semantica
+  (ex: cifre -> bar graphs verticali luminosi).
+
+REGULI ETERNE V13:
+- R-V03.35 CHECKOUT BRAIN = COMANDA EXPLICITA O SINGURA DATA LA FINAL.
+  NU se produc arhive ZIP automat in timpul sesiunii. NU se ofera arhive
+  spontane "in caz ca". `checkout brain` se executa O SINGURA DATA la
+  comanda explicita finala a Arhitectului. Pana atunci, livrabilele
+  individuale circula prin `present_files` cand sunt cerute, dar arhiva
+  ZIP completa se construieste o singura data, la final.
+- R-V03.35 EXTINS CHECKIN UNIFICAT BRAIN + CONSTRUCTIE:
+  Aceeasi arhiva OUT-VNN.zip (BRAIN) se ataseaza atat la pornirea
+  chat-urilor BRAIN cat si CONSTRUCTIE NN. Continut COMPLET in ambele
+  cazuri (brain + kit + pilot + referinte + generatoare + livrabile T1).
+  Chat-urile CONSTRUCTIE produc la final `OUT-CC-VNN-YYYYMMDD_HHMMSS.zip`
+  cu TOT continutul BRAIN sursa + livrabilele constructiei NN proprii.
+
+REGULI ETERNE V12:
+- SCHEMA CANONICA V12 = 6 LIVRABILE (Autonom ELIMINAT prin R-V03.33,
+  imaginile embedded base64 in HTML-Video unic):
+  Date-Input.xlsx / Date-Output.xlsx /
+  HTML-Studiu.html / HTML-Editor-Studiu.html /
+  HTML-Video.html (base64 inline) / HTML-Editor-Video.html (base64 inline) /
+  Creativ.txt (prompturi Banana 2)
+- R-V03.34 HTML-STUDIU RESPONSIVE 3 BREAKPOINTS CALIBRATE:
+  HTML-Studiu = SINGURUL livrabil care ajunge la cursant pe device.
+  Schema obligatorie:
+  * Desktop >=1025px: body 16px, layout 2 coloane
+  * Tableta + laptop mic 641-1024px: body 17px, layout 1 coloana,
+    texte descriptive +1-2px (step-action 17px, anomaly-desc 15px,
+    prompt-text 16px, final-text 16px, cover-subtitle 24px), touch
+    targets generoase (padding 22px pe cards/steps)
+  * Mobile <=640px: body 17px (NU mai mic), step-title 18px,
+    butoane copy/check full-width 100%, app-grid padding redus la 18px
+  HTML-Editor-Studiu mosteneste identic. HTML-Video + HTML-Editor-Video
+  raman desktop-only (R-V03.1 neschimbat).
+- R-V03.33 IMAGINI BASE64 INLINE in HTML-Video + HTML-Editor-Video:
+  cele 6 imagini Banana 2 ale Executive Show se imbedd ca base64 in
+  url("data:image/jpeg;base64,..."). NU se folosesc path-uri relative
+  `assets/`. Folderul assets/ NU se livreaza ca artefact separat.
+  Cost: +700KB per fisier (acceptabil pentru circulatie auto-suficienta).
+- R-V03.32 EDITOR V2.3 - LISTA EDITABLE_SELECTORS COMPLETA OBLIGATORIU:
+  in HTML-Editor-Studiu lista include `.prompt-label` + `.prompt-text`;
+  in HTML-Editor-Video lista include `.prompt-label` + `.prompt-body` +
+  `.prompt-meta`. Omisiunea = feature-regress (operatorul nu poate edita
+  prompturile Copilot). Propagare obligatorie in matrita C02-C20.
+
+REGULI ETERNE V11:
+- SCHEMA CANONICA V11 = 7 LIVRABILE (REVIZUITA in V12 la 6 prin R-V03.33,
+  Autonom eliminat - PPT ELIMINAT prin R-V03.19 ramane valid):
+  Date-Input.xlsx / Date-Output.xlsx /
+  HTML-Studiu.html / HTML-Editor-Studiu.html /
+  HTML-Video.html / HTML-Editor-Video.html /
+  Creativ.txt (prompturi Banana 2)
+- CONVENTIE DENUMIRE FISIERE IN ROMANA (R-V03.29):
+  Date-Input / Date-Output / HTML-Studiu / HTML-Video /
+  HTML-Editor-Studiu / HTML-Editor-Video / HTML-Video-Autonom / Creativ
+- HTML-Video V11.7.10 are EXECUTIVE SHOW imbedded la final (R-V03.20):
+  slide tranzitie CONCLUZII + 6 slide-uri cinematic etape (Ken Burns 9s
+  pe imagini fundal Banana 2) + closing apoteotic
+- HTML-Video HERO ca slide coperta cu body.hero-mode (R-V03.28)
+- EDITOR PAGINA VIE V2.3 (R-V03.30) overlay JS pe Studiu si Video
+- CHECKOUT BRAIN PASTREAZA FORMAT CANONIC: brain.md + SISTEM + PROMPT +
+  generatoare/ + referinte/ + livrabile_C01..C20/ (R-V03.31)
+- INTERZIS kit-uri noi cu scripturi inexistente fizic. build_c01_v5.py
+  ramane generatorul real prin COPY-MODIFY R-V02.6.
+
+REGULI ETERNE V10:
+- Raspunsuri scurte, confirmare apoi executie
+- ZERO em-dash/en-dash (semnal AI)
+- ZERO cifre business hardcodate in SISTEM/brain (R-V02.1)
+- ZERO cifre business in toate HTML (STUDY+EDIT-STUDY+VIDEO+EDIT-VIDEO) +
+  FILM + PPT - box-urile decorative DISPAR COMPLET (R-V02.15 strict)
+- Cifrele traiesc EXCLUSIV in INPUT.xlsx + OUTPUT.xlsx
+- Conservare suma SEMANTICA cand exista deduplicare (R-V02.14)
+- DIACRITICE ROMANESTI cu virgula, NU sedila (R-V02.2)
+- SCHEMA CANONICA = 8 LIVRABILE AUTOMAT (R-V03.5 + R-V03.15):
+  INPUT.xlsx / OUTPUT.xlsx /
+  HTML-STUDY.html / HTML-EDIT-STUDY.html /
+  HTML-VIDEO.html / HTML-EDIT-VIDEO.html /
+  FILM.docx / PPT.pptx
+- PDF = TIER 2 DERIVED OPT-IN cu atasament obligatoriu (R-V03.15):
+  `Genereaza PDF din STUDY` + HTML atasat -> PDF-Excel-NN-Nume.pdf
+  cloud-generated (Playwright + skill pdf)
+- PARAMETRII SEED = AUTONOM CONSTRUCTOR (R-V03.6 + lectie 84):
+  NU enumera parametrii seed inainte de productie. NU astepta comanda
+  Genereaza ca forma de aprobare implicita. Treci DIRECT la productie.
+  Parametrii pot aparea in checkout-ul final (transparenta), NU in preambul.
+- VOCE NARATIVA per livrabil (R-V03.4):
+  * HTML-STUDY + HTML-EDIT-STUDY = persoana a 2-a singular
+  * HTML-VIDEO + HTML-EDIT-VIDEO = persoana a 3-a plural
+- HTML-VIDEO + HTML-EDIT-VIDEO = DESKTOP-ONLY (filmare interna)
+- HTML-VIDEO + HTML-EDIT-VIDEO: NICIODATA `font-feature-settings: "ss01",
+  "ss02"` (R-V03.18 - cauza litere mici fake la text uppercase)
+- HTML-STUDY + HTML-EDIT-STUDY = RESPONSIVE complet (320-1440px),
+  touch targets >=36px, mobile topbar sticky 52px, side-nav desktop
+  condensat ~10% pe verticala + rezerva 70px (STUDY) / 140px (EDIT-STUDY)
+  pentru butonul Continua dedesubt (R-V03.9 EXTINS V09.1)
+- HTML-STUDY = progressive disclosure pe pasi (a1): pasii apar pe rand
+  dupa bifare, pasii bifati raman ca trofee
+- HTML-STUDY + HTML-EDIT-STUDY = BUTON CONTINUA (R-V03.14 EXTINS):
+  - Mobile sticky JOS full-width
+  - Desktop sticky DREAPTA-JOS cu `right: var(--gutter)` + `width:
+    var(--nav-w)` + box-shadow `-5px 5px 0 0` (iese spre stanga,
+    aliniere perfecta cu side-nav R)
+  - Pe desktop, scroll-top urca la `bottom: 88px` cand body.has-continue
+  - Suprimat in body.tr-on
+- HTML-STUDY + HTML-EDIT-STUDY = NAV-ITEM STARI (R-V03.16):
+  - LOCKED: etapa neatinsa, opacity 0.4, cursor not-allowed, click NO-OP
+  - ACTIVE (default): etapa atinsa dar incompleta, hover normal
+  - COMPLETE: toti pasii done, cifra fundal VERDE + text alb + bifa ::after
+  - .nav-final-dot.locked / .complete cu acelasi pattern (8 verificari)
+  - navigateStage + navigateFinal cu gard locked
+  - Exceptie: in body.tr-on regulile locked sunt anulate
+- PALETA SEMANTICA CROSS-ELEMENT (R-V03.16 EXTINS V09.6):
+  - DONE/COMPLETE = VERDE (--green: #1F7A1F + --green-light: #E8F5E8 +
+    --green-bright: #5FBE5F text pe negru) pe step.done, nav-item.complete,
+    nav-final-dot.complete, final-card.done
+  - ACTIVE/CURRENT = galben (--y: #FFD400) pe step.current, nav-item.active
+  - LOCKED = gri-mut opacity 0.4
+  - CLICK-ACTION = galben pe chevron pill, buton Continua, hero CTA, copy-btn
+- HTML-EDIT-STUDY = override progressive disclosure in modul edit
+  (body.tr-on forteaza toate stage/step/final/next/payoff vizibile)
+- HTML-EDIT-STUDY = bara editor cu 8 butoane: toggle, undo, redo,
+  restore, save, export HTML, clear, hide. **Butonul `Exporta PDF`
+  ABSENT** (R-V03.15)
+- @media print + @page SCOASE COMPLET din HTML-STUDY + HTML-EDIT-STUDY
+  (R-V03.15)
+- Step done in HTML-STUDY + HTML-EDIT-STUDY (R-V03.16 EXTINS V09.6 +
+  R-V03.17):
+  - Fundal verde-pal + border verde
+  - .step-marker (caseta PAS NN) verde + text alb
+  - .step-check (bifa rotunda) verde + bifa alba
+  - .step-title line-through verde
+  - CHEVRON PILL galben (--y) cu padding + border-radius 3px dupa titlu
+    (R-V03.17): indicator click-action distinct de stare done
+  - Rotire 180° in .step.done.expanded
+  - Hover: pill #FFC700 (mai inchis)
+- Final-card.done in HTML-STUDY + HTML-EDIT-STUDY (R-V03.16 EXTINS V09.5):
+  - Fundal verde-pal + border verde + .final-num verde + bifa
+  - Butonul "VERIFICA" devine "✓ VERIFICAT" verde via CSS ::before
+- Storage keys per livrabil (R-V02.5 + R-V03.5):
+  trainity_cNN_study_v1 / trainity_cNN_study_edits_v1 /
+  trainity_cNN_study_deleted_v1 /
+  trainity_cNN_video_v1 / trainity_cNN_video_edits_v1 /
+  trainity_cNN_video_deleted_v1
+- HTML-VIDEO conform matritei R-V03.1 (pilot validat C01) + lectia 63
+  (fix bug currentPromptText) + R-V03.8 (Validează apare sincron) +
+  R-V03.11 (Hero buton inline) + R-V03.12 (puls discret) + R-V03.18
+  (font-feature-settings ABSENT)
+- RAPORT VERIFICARE FINAL = format canonic unitar R-V03.10
+- HTML-EDIT-VIDEO + HTML-EDIT-STUDY conform R-V03.3 (editor universal)
+- NU inventa in tacere
+- Bogdan = ARHITECT, Claude = CONSTRUCTOR TEHNIC
+- G-06 FILTRUL SIGUR/CONFLICT automat pentru feedback extern
+- Cele 3 gate-uri toate blocante
+- CSS overflow gotcha: NICIODATA `overflow-x: hidden` pe `<html>` -
+  invalideaza sticky. Foloseste `overflow-x: clip` pe body.
+- ALINIERE PRECISA cere VARIABILE COMUNE, NU HARDCOD (lectie 85):
+  cand doua elemente trebuie aliniate fizic (ex. continue-btn dreapta
+  cu side-nav dreapta), folosesc aceleasi variabile CSS (--gutter, --nav-w)
+  nu valori "aproximative".
+
+PARALEL: pot rula simultan mai multe CHECKIN CONSTRUCTIE NN. Cand vad
+probleme, le raportez in CHECKIN BRAIN. Tu consolidezi acolo si dai
+checkout brain.
+
+ARHIVELE (R-V02.0 V07 EXTINS):
+- in BRAIN -> `checkout brain` produce `OUT-V(NN+1).zip` (V01-V10+)
+- in CONSTRUCTIE -> `checkout brain` produce
+  `OUT-CC-VNN-YYYYMMDD_HHMMSS.zip` (FROM_VNN = versiunea sursa,
+  CMM = constructia, TIMESTAMP = identificator unic)
+
+MERGE BRAIN (R-V03.13): chat-urile CONSTRUCTIE pe SPEC inghetat produc
+independent. Aduci arhiva in BRAIN DOAR daca:
+- apare lectie noua / decizie arhitecturala in productie
+- vrei consolidare OUT-VNN+1 cu toate livrabilele T1
+- aparea discrepante intre chat-uri raportate prin RAPORT canonic R-V03.10
+In rest: arhivele raman locale, merge final la inchiderea treptei.
+
+STADIU V14: T1 STRUCTURA - C01 LIVRAT COMPLET V12 + **C02 LIVRAT
+COMPLET V14** (CONTROLUL DATELOR, 7 livrabile canonice prin
+COPY-MODIFY pe pilot_C01_V12, R-V02.15 respectat, distributie 2009
+randuri Excel = 1985 VALID + 8 DE VERIFICAT + 16 EXCLUS, conservare
+suma fizica delta 0). C03 + C04 SPEC INGHETAT, livrabile vechi
+INVALIDATE prin R-V02.15.
+
+NOUTATI V14 fata de V13:
+- R-V03.37 ARHIVA BRAIN LIGHTWEIGHT (fara livrabile C02-C20)
+- R-V03.36 COMENZI SEPARATE PE CONTEXT (checkout brain vs checkout
+  constructie)
+- L98 AI imagery cu constrangere: schimba obiectul (bar graphs) in loc
+  de a masca obiectul existent (cifre cu blur)
+- L100 ARHIVA BRAIN nu importa livrabile constructiilor (justificare
+  R-V03.37)
+- C02 LIVRAT COMPLET V14 (livrabilele traiesc in arhiva proprie
+  OUT-02-V13-20260525_120129.zip, NU in brain)
+- 3 lectii noi inghetate (98, 99, 100)
+
+STADIU V13: T1 STRUCTURA - C01 LIVRAT COMPLET (neschimbat de la V12 ca
+livrabile). Renumerotare V13 reflecta consolidarea R-V03.35
+(comportament checkout).
+C02 + C03 + C04 SPEC INGHETAT, livrabile vechi INVALIDATE prin R-V02.15.
+
+NOUTATI V13 fata de V12:
+- R-V03.35 CHECKOUT EXPLICIT O SINGURA DATA + CHECKIN UNIFICAT
+- 1 lectie noua inghetata (97)
+- NICIO modificare in livrabilele C01 V12 (raman identice)
+
+STADIU V12: T1 STRUCTURA - C01 LIVRAT COMPLET V12 (6 livrabile canonice
+V12 + fix editor V2.3 per R-V03.32 + imagini base64 inline per R-V03.33 +
+HTML-Studiu responsive 3 breakpoints per R-V03.34).
+C02 + C03 + C04 SPEC INGHETAT, livrabile vechi INVALIDATE prin R-V02.15.
+
+Pilot C01 V12 cu:
+- 2 livrabile NESCHIMBATE V11: Date-Input, Date-Output, Creativ.txt
+- 4 livrabile FIX V12:
+  * HTML-Studiu (responsive 3 breakpoints + typography scalata)
+  * HTML-Editor-Studiu (idem responsive + `.prompt-label`+`.prompt-text`
+    in EDITABLE_SELECTORS)
+  * HTML-Video (imagini exec-stage base64 inline, ~795KB)
+  * HTML-Editor-Video (idem + `.prompt-label` in EDITABLE_SELECTORS,
+    ~805KB)
+- ELIMINATE V12: HTML-Video-Autonom + folderul assets/
+
+NOUTATI V12 fata de V11:
+- R-V03.32 EDITOR V2.3 LISTA EDITABLE COMPLETA (prompt AI obligatoriu)
+- R-V03.33 IMAGINI BASE64 INLINE (Autonom eliminat, schema 7 -> 6)
+- R-V03.34 HTML-STUDIU RESPONSIVE 3 BREAKPOINTS + TYPOGRAPHY SCALATA
+- 3 lectii noi inghetate (93, 94, 95)
+
+STADIU V11: T1 STRUCTURA - C01 LIVRAT COMPLET V11
+
+Pilot C01 V09.6 cu:
+- HTML-STUDY + HTML-EDIT-STUDY = R-V02.15 strict + R-V03.14 EXTINS
+  (Continua aliniat) + R-V03.16 (nav-item stari + paleta verde
+  cross-element) + R-V03.17 (chevron pill)
+- HTML-VIDEO + HTML-EDIT-VIDEO = R-V03.18 (font-feature-settings ABSENT)
+- FILM + PPT = REGENERATE V09 conforme R-V02.15
+
+NOUTATI V10 fata de V09:
+- R-V03.9 EXTINS V09.1 (condensare side-nav + rezerva continue-btn)
+- R-V03.14 EXTINS V09.4 (aliniere precisa cu --gutter + shadow stanga)
+- R-V03.16 NAV-ITEM STARI (LOCKED/ACTIVE/COMPLETE) + paleta VERDE extinsa
+- R-V03.17 CHEVRON PILL pe step done
+- R-V03.18 INTERZIS font-feature-settings ss01/ss02
+- Variabila noua --green-bright: #5FBE5F
+- 4 lectii numerotate (84-87)
+
+PASUL URMATOR: regenerare C02 + C03 + C04 in 3 chat-uri paralele
+CHECKIN CONSTRUCTIE 02/03/04, cu produs FINAL 8 livrabile canonice
+per constructie conform R-V03.15. ZERO intrebari parametri tehnici
+(R-V03.6 STRICT - vezi lectie 84: NU enumera in preambul, NU astepta
+comanda Genereaza ca aprobare implicita).
+
+PORNESTE: citeste brain.md si SISTEM_TRAINITY.md din arhiva, apoi
+confirma contextul.

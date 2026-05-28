@@ -1,0 +1,626 @@
+══════════════════════════════════════════════════════════════════════════════
+CREATIV-Excel-04-Normalizare.txt
+══════════════════════════════════════════════════════════════════════════════
+Sistemul 02 · Excel · Construcția 04 · Normalizarea Datelor
+Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
+ale construcției C04.
+
+Versiune: V27
+Status: PRODUCȚIE
+══════════════════════════════════════════════════════════════════════════════
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ INSTRUCȚIUNI GENERALE                                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CE FACE NANO BANANA / GEMINI IMAGEN 3
+Este motorul Google de generare imagini foto-realistice. Generează imagini
+de până la ~2048x2048 px (sau 1920x1280 pentru aspect 3:2). Funcționează
+cel mai bine cu prompturi în engleză, lungi, detaliate, cu instrucțiuni
+foto-tehnice specifice (lens, aperture, lighting, composition).
+
+CUM SE FOLOSEȘTE
+1. Accesezi Gemini (gemini.google.com) sau aplicația Banana 2.
+2. Selectezi modul "Generate image" sau "Imagine".
+3. Copiezi promptul întreg din acest fișier (de la "Cinematic editorial..."
+   până la "no cartoon style.").
+4. Aștepți generarea (10-30 secunde).
+5. Dacă tool-ul oferă 4 variante, alegi cea care respectă cel mai bine
+   compoziția cerută.
+6. Salvezi imaginea la rezoluția maximă oferită.
+
+REGULI ESENȚIALE LA GENERARE
+- NU modifica prompturile (au fost calibrate cu zeci de iterații).
+- DA, generezi mai multe variante dacă prima nu este perfectă.
+- Păstrează paleta Trainity strictă: negru + alb + galben #FFD400.
+- Verifică compoziția înainte să salvezi: subiectul cheie trebuie să fie
+  în zona indicată (vezi notele de compoziție per prompt).
+
+DUPĂ GENERARE
+- Salvează imaginile cu numele exact indicat în capul fiecărui prompt.
+- Pune-le în folderul `assets/` alături de fișierele HTML.
+- Dacă livrezi fișier standalone (cu imagini incorporate base64), trimite
+  imaginile la Claude pentru integrare automată.
+
+VERIFICARE CONFORM (checklist universal aplicabil la fiecare creativ)
+Înainte să accepți o imagine ca finală, răspunde DA la următoarele 8:
+1. Subiectul cheie este în poziția cerută (centru-dreapta sau altă zonă
+   specifică per prompt)?
+2. Lighting-ul este DOAR auriu/galben warm (zero alte culori)?
+3. Fundalul este în shadow profund (negru complet pe partea unde stă
+   textul)?
+4. Aspect ratio este orizontal (3:2 sau 16:9, NU pătrat sau vertical)?
+5. NU există oameni, fețe, mâini în imagine (decât dacă explicit cerut)?
+6. NU există text gibberish (litere aleatoare sub formă de "text fake")?
+7. NU există logo-uri vizibile sau brand text recognoscibil?
+8. Imaginea simte că aparține SERIEI Trainity (continuitate cu celelalte
+   imagini deja generate pentru C04)?
+
+Dacă pierzi un singur DA: regenerezi cu prompt-ul identic. Modelul produce
+variante diferite la fiecare rulare; alegi cea care trece checklist-ul.
+
+CONTINUITATE C01 → C02 → C03 → C04
+Seria C04 trebuie să simtă din aceeași lume vizuală ca C01-C03 (suprafață
+dark wood, paletă, mood), DAR temă semantică distinctă:
+- C01 = STRUCTURĂ FALSĂ (ambalaj ERP)
+- C02 = CONTROL ASUPRA ANOMALIILOR (marcare, nu eliminare)
+- C03 = AUDIT FORENSIC (lupa care vede contaminarea invizibilă)
+- C04 = NORMALIZARE REFRESHABILĂ (butonul refresh + cei 10 pași PQ)
+
+C04 închide TREAPTA 1. Vocabular vizual de APEX: nu mai e investigație
+ad-hoc, nu mai e marcare manuală. Este MAȘINA, fluxul construit o
+singură dată care pornește la apăsarea unui buton și produce identic
+de fiecare dată. Obiectul-erou este BUTONUL ROȘU DE REFRESH și seria
+celor 10 trepte (Applied Steps) afișate ca o coloană vertebrală.
+
+Tonul rămâne cinematic editorial, dar adaugă o componentă INGINEREASCĂ:
+mecanism precis, repetabilitate idempotentă, satisfacția momentului
+"export nou. apesi refresh. și gata."
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 1 · COVER PAGE CU HOOK VIDEO YOUTUBE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA THUMBNAIL pentru video-ul YouTube al construcției C04.
+Trebuie să atragă click-ul într-o oceană de thumbnail-uri concurente.
+NU este o imagine cinematică subtilă. Este HOOK BRUTAL.
+
+NUME FISIER SALVAT: `cover-yt-excel-04-normalizare.jpg`
+DIMENSIUNE THUMBNAIL YT: 1280×720 px (16:9 orizontal)
+LOC ÎN PRODUCȚIE: Thumbnail YouTube + cover pentru landing pages.
+
+
+COMPOZIȚIE CERUTĂ
+- Element principal CENTRU sau stânga-centru: o mână tehnologică sau un
+  buton fizic mare ROȘU (#C00000) cu inscripția "REFRESH" pe el, apăsat
+  ferm, cu efect de "click" capturat, un val concentric de lumină aurie
+  porneste din butonul apăsat.
+- În spatele butonului, vizibil în profunzime: o coloană verticală de
+  trepte (steps), sugestie de Power Query Applied Steps, fiecare treaptă
+  marcată cu un bullet aurit.
+- Zona dreapta: lăsată în shadow, pentru OVERLAY TEXT mare în post-producție
+  ("CONSTRUIM O SINGURĂ DATĂ" sau "APEȘI REFRESH").
+- Iluminare dramatică, contrast înalt, buton roșu pops, restul amber/dark.
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+thumbnail style, high impact composition.
+
+Subject: A large vintage industrial pushbutton with a glossy deep red
+cap (signal red, #C00000), depressed mid-press, captured at the exact
+moment of activation. The button is positioned center-left of frame on
+a dark wood or brushed dark metal surface. A concentric pulse of warm
+amber light (#FFD400) emanates outward from the button base, visible
+as a bright golden ring with volumetric haze. Behind the button, slightly
+out of focus in the background depth, a vertical stack of small precise
+mechanical markers or stepped indicators, like a staircase of glowing
+amber bullets, suggestion of an applied-steps engineering panel.
+
+Lighting: Two-zone dramatic lighting. The red button catches a hot
+specular highlight from upper-right warm amber source (#FFD400). The
+emanating pulse around the button glows with its own amber light. Right
+40% of frame in deep shadow gradient toward pure black. High contrast
+scene, deep blacks dominate corners.
+
+Composition: Red button positioned LEFT-CENTER of frame occupying about
+40% of image. RIGHT 40% reserved as deep shadow zone for post-production
+text overlay. The pulse ring is the energy emission focal point. Vertical
+stack of glowing steps fades into depth on the left-rear.
+
+Background: Matte black dark wood or brushed dark metal surface, completely
+shadowed. No competing elements beyond the suggestion of step indicators.
+
+Color palette: Predominantly monochrome dark scene (near-black, deep
+shadows). Two accent colors: SIGNAL RED (#C00000) on the button cap only,
+WARM AMBER YELLOW (#FFD400) on the emanating pulse and step indicators.
+Strictly no other colors.
+
+Mood: Mechanical activation, satisfying click moment, engineering precision.
+The viewer must feel: "I press this and it all happens by itself."
+
+Style references: Editorial cover photography from Wired magazine
+engineering features, product photography of premium industrial controls,
+high-contrast magazine cover composition. Hook-driven, designed to STOP
+the scroll on YouTube.
+
+Technical: Shot on medium format camera, 50mm lens equivalent, f/5.6
+aperture, sharp focus on the button surface and pulse ring, slight
+depth-of-field falloff toward the step indicators in background.
+
+Aspect ratio: 16:9 horizontal, 1280 by 720 pixels.
+
+Negative prompt: no people, no faces, no hands holding the button (the
+button is being pressed by an unseen force), no logos, no readable brand
+text, no other colors except amber yellow and signal red accents, no
+cluttered background, no fantasy or sci-fi elements, no cartoon style,
+no neon, no chromatic aberration.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 2 · INFOGRAFIC ÎNȚELEGERE CONSTRUCȚIE ÎN 10 SECUNDE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA RESUMAT care apare în landing page-uri, în pitch
+deck-uri, în postări LinkedIn. Audiența trebuie să înțeleagă din priviri:
+"Ah, C04 transformă curățarea manuală repetată într-un flux Power Query
+refreshabil, construit o singură dată, apăsat refresh, livrat ca tabel
+denumit."
+
+NUME FISIER SALVAT: `infografic-excel-04-normalizare.jpg`
+DIMENSIUNE: 1920×1080 px (16:9 orizontal)
+LOC ÎN PRODUCȚIE: Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
+
+
+COMPOZIȚIE CERUTĂ
+- Stânga (35% lățime): EXPORT BRUT, o pagină printată ERP cu structură
+  haotică (subtotaluri, blank-uri, diacritice mixate). Iluminată difuz,
+  rece, gri.
+- Centru (30% lățime): MAȘINA, o coloană verticală de 10 trepte iluminate
+  amber, fiecare cu un mic indicator (Applied Step). Un fascicul de lumină
+  aurie pornește de sus și coboară treaptă cu treaptă, sugerând fluxul.
+- Dreapta (35% lățime): TABEL DENUMIT, o pagină printată curată, perfect
+  aliniată, cu un mic marcaj "Vanzari_Normalizat" pe colț. Iluminată warm
+  amber, stabilă.
+- ZERO TEXT pe imagine, infograficul este DOAR VIZUAL.
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+storytelling triptych composition.
+
+Subject: A three-zone visual narrative composition on a single dark
+surface, photographed from a slight overhead angle (45-degree top-down).
+
+LEFT ZONE (occupying about 35% of image width): A printed business report
+page containing structural chaos, visible header row at top, several
+disorganized rows of data with subtle inconsistencies (mixed character
+sets visible as faint accent marks present/absent on similar text), one
+or two gray subtotal divider rows, a blank row creating a visual gap.
+The page looks like a fresh raw export, untouched. Lit by cool diffuse
+neutral light, slightly desaturated, almost clinical.
+
+CENTER ZONE (occupying about 30% of image width): The machine. A vertical
+stack of ten small precise glowing amber step indicators arranged like
+a staircase, each step a clean horizontal bar with a soft warm halo,
+all aligned on a central vertical axis. A thin volumetric beam of warm
+amber light (#FFD400) descends from above, touching each step in sequence.
+The beam suggests motion, idempotent repetition, engineering precision.
+
+RIGHT ZONE (occupying about 35% of image width): A second printed business
+report page, visibly clean and structured, single header row, clean
+uninterrupted data columns, no dividers, no gaps. On the top-right corner
+of this page, a subtle embossed tab marker reading "TABLE" or showing
+a small bracket icon, suggestion of an Excel named table. Lit by warm
+amber light from above-right, the paper catching a golden glow on its
+edge.
+
+Lighting: Three-zone lighting story. LEFT side: cool diffuse neutral
+light, clinical. CENTER: dominant warm amber descending beam (#FFD400)
+illuminating each of the ten steps. RIGHT: warm amber accent light
+embracing the clean page from above-right.
+
+Composition: All three zones on a single continuous dark surface, no
+visible borders or framing between them. The staircase of ten amber
+steps in the center is the bridge between chaos (left) and order (right).
+
+Background: Matte black dark wood or brushed dark surface, identical
+texture across the entire composition.
+
+Color palette: Monochromatic dark scene, with the LEFT zone slightly
+cooler (very subtle blue-gray tint), CENTER and RIGHT warmed by amber
+yellow (#FFD400). White paper, black printed text. Strictly no other
+colors.
+
+Mood: Mechanical transformation, engineering automation, repeatable
+precision. Conveys: "raw input / ten-step machine / clean named output"
+without any text.
+
+Style references: Editorial photography from Wired engineering features,
+product photography for premium tools, technical diagrams reimagined as
+cinematic still life. Maintain visual continuity with the rest of the
+C01-C03 series.
+
+Technical: Shot on medium format camera, 35mm lens equivalent for wider
+field, f/8 aperture for sharper depth across all three zones, top-down
+slight angle.
+
+Aspect ratio: 16:9 horizontal, 1920 by 1080 pixels.
+
+Negative prompt: no people, no faces, no hands, no text overlays, no
+arrows drawn as graphic elements (the light beam IS the arrow), no logos,
+no readable brand text, no other colors except subtle cool gray and warm
+amber, no cluttered background, no fantasy or sci-fi elements, no cartoon
+style, no infographic-style flat icons.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceste șase imagini apar în EXECUTIVE SHOW la finalul HTML-VIDEO al C04.
+Fiecare imagine este slide-ul de încheiere apoteotică al unei etape.
+Toate șase trebuie să simtă din ACEEAȘI serie cinematică, aceeași
+suprafață dark wood, aceeași paletă, același mood, aceleași reguli de
+compoziție.
+
+LOC ÎN PRODUCȚIE: HTML-VIDEO la secțiunea "Executive Show" (ultimele 7
+ecrane: 6 imagini + 1 closing apoteotic fără imagine).
+
+REGULA DE COMPOZIȚIE COMUNĂ (toate 6 imagini)
+- Subiect cheie în DREAPTA-CENTRU sau CENTRU al frame-ului.
+- STÂNGA 40% în shadow gradient profund (acolo stă textul slide-ului).
+- Aspect ratio 3:2 orizontal: 2400×1600 px sau 1920×1280 px.
+- Paletă: dark wood/metal + alb hârtie + galben warm #FFD400 (+ accent
+  signal red #C00000 doar pe butonul refresh, etapa 03).
+- Iluminare: o singură sursă principală amber din dreapta-sus.
+
+REGULA DE CONTINUITATE
+Promptul fiecărei etape include explicit fraza:
+"Maintain strict visual continuity with the previous scenes in the C01-C04
+series (torn ERP report, magnifying glass investigation, ink stamp marking,
+forensic audit), same dark wood surface, same warm amber lighting, same
+paper texture, same mood register."
+
+Această frază este OBLIGATORIE în fiecare prompt, fără ea, modelul
+variază suprafața și lighting-ul și seria pare colaj.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 01 · REALITATE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Exportul brut tocmai a ieșit din ERP. Pagini multiple,
+suprapuse, cu antet, subtotale, blank-uri, diacritice mixate. Tăcere
+înainte de pornirea mașinii.
+
+NUME FISIER SALVAT: `exec-stage-1.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A messy stack of three printed business invoice pages on a dark
+wood surface, slightly fanned, the topmost page showing visible structural
+contamination, a header row at top, several data rows, then a "SUBTOTAL"
+divider row in gray, a blank empty row creating a visual gap, then more
+data, and at the bottom a "TOTAL GENERAL" row in bold. Some text rows
+show subtle inconsistency (one row spelled with diacritic accents, another
+without, barely perceptible). The pages have just been printed and
+landed on the surface, no human touch yet. No tools visible.
+
+Lighting: Single warm amber light source from upper right, soft falloff.
+Left 40% of frame in deep shadow gradient, almost black. The top page
+catches the amber light on its right edge.
+
+Composition: Stack of pages occupies center-right of frame. Left third
+reserved for slide text, in shadow.
+
+Style: Editorial business photography, slightly desaturated except for
+the warm amber glow on paper. Cinematic depth of field, top page razor
+sharp, pages beneath softly out of focus.
+
+Mood: Raw arrival. The viewer feels: "this is what came out of the
+system. Now we have to do something with it, every single time."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text. NO visible
+brand logos. NO infographic icons. NO cartoon style. Pure photographic
+realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 02 · INVESTIGAȚIE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Privirea peste hârtia brută. Constatare lentă: "Am mai
+făcut asta de zece ori. De ce o fac din nou?" Întrebarea care
+deschide construcția.
+
+NUME FISIER SALVAT: `exec-stage-2.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: The same printed business invoice page from the previous scene,
+laid flat on the dark wood surface. Beside it on the left, a worn notebook
+open to a tally page showing handwritten ticks and crossed-out items ,
+suggestion of repeated cleaning sessions logged manually. Above the page,
+a single small wall-mounted clock visible at the upper edge of the frame
+in shadow, hands at different positions captured in slight motion blur
+(suggestion of time passing repeatedly on the same task). No magnifying
+glass this time, the focus is on the realization, not the inspection.
+
+Lighting: Single warm amber light source from upper right, soft falloff.
+Left 40% of frame in deep shadow gradient. The notebook lit slightly,
+the clock barely visible in shadow.
+
+Composition: Invoice page center-right. Notebook center-left, slightly
+behind. Clock upper-edge, shadowed.
+
+Style: Editorial business photography. Cinematic depth of field, page
+and notebook sharp, clock and background out of focus.
+
+Mood: Quiet realization. The viewer feels: "this is repetitive work I've
+done before. Something has to change."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, notebook
+tally marks should be suggestive vertical pencil strokes. NO visible
+brand logos. NO cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 03 · TRANSFORMARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Apăsarea butonului ROȘU REFRESH. Mașina pornește. Toate cele
+zece trepte se aprind în secvență, una după alta.
+
+NUME FISIER SALVAT: `exec-stage-3.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A large vintage industrial pushbutton with a glossy deep red
+cap (signal red, #C00000) on a dark wood surface, captured at the exact
+moment of being depressed, the button cap is pushed down about halfway,
+with a concentric ring of warm amber light (#FFD400) emanating outward
+from its base. Above and behind the button, a vertical stack of ten
+small precise glowing amber step indicators arranged like a staircase,
+each step a clean horizontal bar, the bottom three steps already
+illuminated bright, the upper steps glowing progressively dimmer in
+sequence, suggesting cascading activation. The button is being pressed
+by an unseen force, no hand visible.
+
+Lighting: Single warm amber light source from upper right plus the
+emanating pulse from the button base. The red button catches a hot
+specular highlight. Left 40% of frame in deep shadow gradient.
+
+Composition: Red button center-right of frame. Vertical step staircase
+behind and slightly left of button, fading into depth. Left third in
+shadow for slide text.
+
+Style: Editorial business photography meets engineering product
+photography. Razor sharp focus on button and pulse ring, slight
+depth-of-field falloff on the staircase.
+
+Mood: Mechanical satisfaction, ignition, the click that starts the
+flow. The viewer feels: "one press. Everything runs."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces (the button is being pressed
+by an unseen force). NO gibberish text. NO visible brand logos. NO
+cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 04 · VERIFICARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Cele zece trepte sunt acum toate aprinse. Mașina a parcurs
+flux idempotent. Pagina nouă, curată, apare alături de panoul Applied
+Steps.
+
+NUME FISIER SALVAT: `exec-stage-4.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A vertical narrow panel of ten precise glowing amber step
+indicators arranged like a staircase, all ten steps now uniformly
+illuminated with a clean warm amber glow (#FFD400), aligned on the
+left-center of the dark wood surface. To the right of the panel, a
+single printed business invoice page laid flat, visibly clean and
+perfectly structured, single header row, clean data rows below, no
+subtotals, no blank gaps, no contamination. The page catches the same
+warm amber light from upper right.
+
+Lighting: Single warm amber light source from upper right. The step
+panel emits its own gentle amber halo. Far-left corner of frame in
+deep shadow.
+
+Composition: Step panel left-center, vertical. Clean page right-center.
+Both equally weighted, suggesting machine and output side by side.
+
+Style: Editorial business photography meets engineering panel
+photography. Razor sharp focus on both step panel and page.
+
+Mood: Successful execution, all systems green. The viewer feels:
+"the machine has done its job. Every step. Every time."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, step
+indicators are abstract glowing bars, not text labels. NO visible brand
+logos. NO cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 05 · STABILIZARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Tabelul denumit. Out la fluxul cleared. Marcaj de identitate
+"Vanzari_Normalizat" pe colțul paginii. Ceea ce iese este un activ
+recunoscut, nu o foaie anonimă.
+
+NUME FISIER SALVAT: `exec-stage-5.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A single printed business invoice page on the dark wood surface,
+perfectly clean and structured, photographed at slight three-quarter
+angle. On the top-right corner of the page, a small embossed paper tab
+or bracket marker visible, suggestion of a named identifier attached
+to the page, like an Excel table name reference. The bracket is subtle
+but precise, catching a hint of golden ink. To the left of the page on
+the wood surface, a small brass plaque or label tag laid flat, with
+a fine engraved horizontal line suggesting it bears an identifier (no
+readable text). The scene communicates: this is no longer just paper.
+It is a named, addressable asset.
+
+Lighting: Single warm amber light source from upper right, the brass
+tag catching a polished gold reflection. Left 40% of frame in shadow
+gradient.
+
+Composition: Page center-right, slightly angled. Brass tag center-left,
+flat on wood. Left third in shadow for slide text.
+
+Style: Editorial business photography. Razor sharp focus on page corner
+bracket and brass tag, slight depth-of-field falloff on the rest of
+the page.
+
+Mood: Identity, asset stabilization, named delivery. The viewer feels:
+"this output has a name. It can be referenced. It exists in the system."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, brass
+tag should be suggestive engraved horizontal line, not readable
+characters. NO visible brand logos beyond the implied subtle bracket
+icon on paper corner. NO cartoon style. Pure photographic realism.
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 06 · CONFIRMARE
+─────────────────────────────────────────────────────────────────────────
+
+CONCEPT: Predarea către C05. Tabelul curat, denumit, refreshabil, stă
+gata. Treapta 1 STRUCTURA se închide. Treapta 2 CUNOAȘTERE va prelua
+exact acest activ.
+
+NUME FISIER SALVAT: `exec-stage-6.jpg`
+
+
+PROMPT (copy-paste integral)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: Two printed business invoice pages on the dark wood surface,
+side by side. The left page is the clean named output from C04 (single
+header, clean rows, bracket marker on top-right corner). The right page
+is identical in form but slightly translucent, lit from behind with a
+faint warm amber backlight, suggestion of the next stage about to begin
+on the same dataset. Between the two pages, a thin horizontal beam of
+warm amber light (#FFD400) connects them, like a baton being passed.
+Above the connecting beam in the upper background, four small glowing
+indicators arranged in a row, the first three illuminated brightly
+(STRUCTURĂ · CONTROL · AUDIT · NORMALIZARE complete) and the fourth
+just lit, while a fifth indicator visible faintly to the right, dimmer
+(CUNOAȘTERE pending).
+
+Lighting: Single warm amber light source from upper right plus a faint
+warm backlight on the right-side page. The connecting horizontal beam
+glows softly with volumetric haze.
+
+Composition: Two pages occupying center-right and right, the connecting
+beam horizontal between them. Indicators upper background. Left third
+in shadow for slide text.
+
+Style: Editorial business photography meets cinematic transition still.
+Razor sharp focus on both pages, slight depth-of-field falloff on
+indicators.
+
+Mood: Handover, baton pass, transition between epics. The viewer feels:
+"the foundation is laid. The next stage begins from here."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04
+series, same dark wood surface, same warm amber lighting, same paper
+texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, indicators
+are abstract glowing bullets, not text labels. NO visible brand logos.
+NO cartoon style. Pure photographic realism.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 4 · CLOSING SLIDE APOTEOTIC (text-only, fără imagine)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Ultimul slide din Executive Show este text-only, fără imagine cinematică.
+Este momentul în care construcția se închide cu MOTTO-ul C04.
+
+LOC ÎN PRODUCȚIE: HTML-VIDEO, ultimul slide al secțiunii Executive Show.
+
+CONȚINUT VIZUAL
+Fundal negru complet. Text central mare, font Trainity (Inter / SF Pro
+Display weight 800), galben #FFD400.
+
+Linie 1 (mare, weight 800, 80px+):
+"CONSTRUIESTI MANUAL O SINGURĂ DATĂ."
+
+Linie 2 (mare, weight 800, 80px+):
+"APOI SISTEMUL CONTINUĂ SINGUR AUTOMAT."
+
+Sub linii, mică (24px, gri #888):
+"C04 NORMALIZAREA DATELOR · Treapta 1 închisă"
+
+ZERO IMAGINE GENERATĂ AI. Slide-ul este construit direct în HTML/CSS
+sau în programul de post-producție.
+
+══════════════════════════════════════════════════════════════════════════════
+SFÂRȘIT FIȘIER CREATIV-Excel-04-Normalizare.txt
+══════════════════════════════════════════════════════════════════════════════

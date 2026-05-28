@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C02 · Controlul Datelor · Trainity</title>
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root {
+  --y: #FFD400;
+  --y-soft: #FFFAE0;
+  --y-border: #FFE680;
+  --k: #000;
+  --k-soft: #0A0A0A;
+  --grey-1: #1A1A1A;
+  --grey-2: #444;
+  --grey-3: #888;
+  --grey-4: #BBB;
+  --grey-5: #EEE;
+  --grey-6: #F7F7F7;
+  --green: #1F7A1F;
+  --green-light: #E8F5E8;
+  --green-bright: #5FBE5F;
+  --red: #C00000;
+  --red-light: #FFEEEE;
+  --blue: #4DA6FF;
+  --orange: #E8A800;
+
+  --maxw: 920px;
+  --gutter: 32px;
+  --nav-w: 260px;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, "Segoe UI", Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, Monaco, monospace;
+
+  --shadow-y: 4px 4px 0 0 var(--y);
+  --shadow-k: 4px 4px 0 0 var(--k);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background: #fff; color: var(--k);
+  font-family: var(--font-body);
+  font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  width: 100%;
+}
+::selection { background: var(--green); color: #fff; }
+::-moz-selection { background: var(--green); color: #fff; }
+
+/* ============ LAYOUT ============ */
+.book-app { max-width: 1280px; margin: 0 auto; position: relative; }
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr var(--nav-w);
+  gap: 48px;
+  padding: 0 var(--gutter);
+  align-items: start;
+}
+.main-content { min-width: 0; max-width: var(--maxw); margin: 0 auto; padding: 32px 0 80px; }
+
+/* ============ TOP PROGRESS BAR ============ */
+.top-progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: rgba(0,0,0,0.05);
+  z-index: 200;
+}
+.top-progress-fill {
+  height: 100%;
+  background: var(--y);
+  width: 0;
+  transition: width .3s ease;
+}
+
+/* ============ SIDE NAV ============ */
+.side-nav {
+  position: sticky; top: 24px;
+  align-self: start;
+  background: var(--k);
+  color: var(--y);
+  border-radius: 0;
+  padding: 0;
+  height: calc(100vh - 48px);
+  overflow-y: auto;
+  display: flex; flex-direction: column;
+}
+.side-nav::-webkit-scrollbar { width: 4px; }
+.side-nav::-webkit-scrollbar-track { background: transparent; }
+.side-nav::-webkit-scrollbar-thumb { background: #333; }
+
+.nav-brand {
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid #222;
+}
+.nav-brand-label { font-size: 10px; letter-spacing: 2px; font-weight: 700; color: var(--grey-3); margin-bottom: 6px; }
+.nav-brand-title { font-size: 15px; font-weight: 700; color: var(--y); line-height: 1.15; }
+
+.nav-progress {
+  padding: 14px 18px;
+  border-bottom: 1px solid #222;
+}
+.nav-progress-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.nav-progress-num { font-size: 24px; font-weight: 800; color: var(--y); letter-spacing: -0.5px; }
+.nav-progress-total { font-size: 11px; color: var(--grey-3); letter-spacing: 1px; }
+.nav-progress-track { height: 3px; background: #1f1f1f; overflow: hidden; }
+.nav-progress-fill { height: 100%; background: var(--y); width: 0; transition: width .35s ease-out; }
+
+.nav-section-label {
+  font-size: 9px; letter-spacing: 2px; font-weight: 700;
+  color: var(--grey-3); padding: 16px 18px 8px;
+  text-transform: uppercase;
+}
+
+.nav-items { padding: 0 12px 8px; }
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: background .15s, border-color .15s, opacity .15s;
+}
+.nav-item:hover { background: #1a1a1a; }
+.nav-item.active { border-left-color: var(--y); background: #1a1a1a; }
+.nav-item.complete .nav-item-num { background: var(--green); color: #fff; border-color: var(--green); }
+.nav-item.complete .nav-item-num::after {
+  content: " ✓";
+  font-weight: 800;
+}
+.nav-item.complete .nav-item-name { color: var(--green-bright); }
+/* LOCKED state (R-V03.16 + V11.1 contrast WCAG AA): etapa neatinsa, nu se da click */
+.nav-item.locked {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.nav-item.locked:hover { background: transparent; }
+.nav-item.locked .nav-item-num {
+  background: transparent;
+  border-color: #6A6A6A;
+  color: #B5B5B5;
+}
+.nav-item.locked .nav-item-name { color: #C8C8C8; }
+.nav-item.locked .nav-item-meta { color: #9A9A9A; }
+.nav-item-num {
+  width: 22px; height: 22px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  color: var(--grey-4);
+  flex-shrink: 0;
+}
+.nav-item-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.nav-item-name { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; color: var(--y); text-transform: uppercase; }
+.nav-item-meta { font-size: 10px; color: var(--grey-3); letter-spacing: 0.3px; }
+
+.nav-finals { padding: 0 18px 8px; }
+.nav-finals-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.nav-final-dot {
+  display: flex; align-items: center; justify-content: center;
+  height: 36px;
+  font-size: 12px; font-weight: 700;
+  color: var(--grey-3);
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .15s;
+}
+.nav-final-dot:hover { border-color: var(--y); color: var(--y); }
+.nav-final-dot.complete { background: var(--green); color: #fff; border-color: var(--green); }
+/* LOCKED state (R-V03.16 + V11.1 contrast): verificare neatinsa */
+.nav-final-dot.locked {
+  cursor: not-allowed;
+  opacity: 0.7;
+  color: #B5B5B5;
+  border-color: #555;
+}
+.nav-final-dot.locked:hover { border-color: #555; color: #B5B5B5; }
+
+.nav-controls {
+  padding: 12px 18px 18px;
+  border-top: 1px solid #222;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.nav-ctrl-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--grey-4);
+  font-family: inherit;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 1.2px;
+  padding: 11px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .15s;
+  min-height: 36px;
+}
+/* V11.2 R-V03.21: TOAST etapa stabilizata (reward fara cifre fake) */
+.stage-toast {
+  position: fixed;
+  bottom: 28px; left: 28px;
+  background: var(--green);
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 13px; font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 0 var(--k);
+  z-index: 250;
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+  transition: opacity .28s ease-out, transform .28s ease-out;
+  max-width: calc(100vw - 56px);
+}
+.stage-toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.stage-toast::before {
+  content: "✓ ";
+  color: #fff;
+  font-weight: 900;
+  margin-right: 4px;
+}
+@media (max-width: 1024px) {
+  .stage-toast { bottom: 80px; left: 16px; right: 16px; max-width: none; font-size: 12px; padding: 12px 18px; }
+}
+body.has-continue .stage-toast { bottom: 88px; }
+@media (max-width: 1024px) {
+  body.has-continue .stage-toast { bottom: 130px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage-toast { transition: opacity .15s; transform: none; }
+  .stage-toast.show { transform: none; }
+}
+
+/* V11.2 R-V03.21: stagger reveal pe pasi current (subtil, NU gimmick) */
+@keyframes stepReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.step.current.just-revealed {
+  animation: stepReveal .22s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .step.current.just-revealed { animation: none; }
+}
+
+/* V11.2 R-V03.21: pulse one-shot pe MIZA cover (atrage atentie o singura data) */
+@keyframes mizaPulseOnce {
+  0%   { transform: scale(1); box-shadow: 4px 4px 0 0 var(--k); }
+  50%  { transform: scale(1.012); box-shadow: 4px 4px 0 0 var(--k), 0 0 0 6px rgba(192, 0, 0, 0.18); }
+  100% { transform: scale(1); box-shadow: 4px 4px 0 0 var(--k); }
+}
+.cover-miza.pulse-once {
+  animation: mizaPulseOnce .9s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-miza.pulse-once { animation: none; }
+}
+
+/* R-V03.9 EXTINS V09.1: condensare verticala side-nav DESKTOP cu rezerva
+   pentru butonul Continua (R-V03.14) dedesubt. Side-nav inaltime maxima
+   redusa cu 70px (24px bottom + ~46px buton). Componentele condensate
+   suplimentar cu ~10% pentru densitate vizibila.
+   Mobile drawer (max-width: 1024px) ramane neschimbat. */
+@media (min-width: 1025px) {
+  .side-nav {
+    top: 20px;
+    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
+  }
+  .nav-brand { padding: 12px 18px 9px; }
+  .nav-brand-label { margin-bottom: 4px; font-size: 9px; }
+  .nav-brand-title { font-size: 13px; }
+  .nav-progress { padding: 9px 18px; }
+  .nav-progress-row { margin-bottom: 5px; }
+  .nav-progress-num { font-size: 19px; }
+  .nav-section-label { padding: 10px 18px 5px; font-size: 9px; }
+  .nav-items { padding: 0 12px 5px; }
+  .nav-item { padding: 6px 8px; gap: 8px; }
+  .nav-item-name { font-size: 11px; }
+  .nav-item-meta { font-size: 9px; }
+  .nav-finals { padding: 0 18px 5px; }
+  .nav-finals-grid { gap: 4px; }
+  .nav-final-dot { height: 28px; font-size: 11px; }
+  .nav-controls { padding: 8px 18px 12px; gap: 4px; }
+  .nav-ctrl-btn { padding: 7px 10px; min-height: 28px; font-size: 10px; }
+}
+
+/* ============ COVER ============ */
+.cover {
+  padding: 64px 0 40px;
+  border-bottom: 1px solid var(--grey-5);
+  margin-bottom: 48px;
+  position: relative;
+}
+.cover-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.2px;
+  color: var(--grey-2); text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--y-soft);
+  border: 1px solid var(--y-border);
+  margin-bottom: 28px;
+}
+.cover-label::before {
+  content: ""; display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--y);
+  margin-right: 10px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+.cover-title {
+  font-size: clamp(40px, 7vw, 84px);
+  font-weight: 900; line-height: 0.98;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+@media (min-width: 768px) {
+  .cover-title { letter-spacing: -2.5px; }
+}
+.cover-subtitle {
+  font-size: 22px; font-weight: 500;
+  color: var(--grey-2);
+  line-height: 1.4;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+.cover-miza {
+  font-size: 16px; font-weight: 600;
+  color: #fff; padding: 18px 22px;
+  background: var(--red); border-left: 6px solid var(--k);
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  box-shadow: 4px 4px 0 0 var(--k);
+  letter-spacing: 0.1px;
+}
+.cover-meta {
+  display: grid; grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--grey-5);
+}
+.cover-meta-row {
+  display: grid; grid-template-columns: 200px 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey-5);
+  font-size: 13px;
+  gap: 16px;
+}
+.cover-meta-key { font-weight: 700; color: var(--grey-3); letter-spacing: 0.5px; text-transform: uppercase; font-size: 11px; }
+.cover-meta-val { color: var(--k); }
+.cover-meta-val a { color: var(--k); text-decoration: underline; text-decoration-color: var(--y); text-decoration-thickness: 2px; text-underline-offset: 3px; padding: 8px 0; display: inline-block; min-height: 36px; box-sizing: content-box; }
+.cover-meta-val a:hover { background: var(--y); }
+
+/* ============ EXEC HERO ============ */
+.exec-hero {
+  background: var(--k); color: #fff;
+  padding: 48px 40px;
+  margin: 48px 0;
+  position: relative;
+}
+.exec-hero::before {
+  content: ""; position: absolute;
+  top: 0; left: 0; width: 100%; height: 6px;
+  background: var(--y);
+}
+.exec-hero-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.2px;
+  color: var(--y); margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.exec-hero h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800; line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.exec-hero-sharp {
+  font-size: 18px; font-weight: 600;
+  color: var(--y); margin-bottom: 16px;
+  line-height: 1.4;
+}
+.exec-hero p { font-size: 15px; line-height: 1.7; color: var(--grey-4); max-width: 680px; }
+
+/* ============ MANTRA ============ */
+.mantra-band {
+  text-align: center;
+  padding: 48px 24px;
+  margin: 48px 0;
+  border-top: 1px solid var(--grey-5);
+  border-bottom: 1px solid var(--grey-5);
+}
+.mantra-band-sub {
+  font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+  color: var(--grey-3); margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.mantra-band-main {
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 800; letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+.mantra-band-main mark {
+  background: var(--y); color: var(--k);
+  padding: 2px 8px;
+}
+
+/* ============ SECTION MARKERS ============ */
+.section-marker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  color: var(--grey-2);
+  padding: 6px 14px;
+  background: var(--y-soft);
+  border: 1px solid var(--y-border);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.section-marker::before {
+  content: ""; display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--y);
+}
+
+.section-sublabel {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  color: var(--grey-3); margin: 32px 0 16px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--grey-5);
+}
+
+/* ============ ANOMALY GRID ============ */
+.anomaly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 24px 0 48px;
+}
+.anomaly-card {
+  background: #fff;
+  border: 1px solid var(--grey-5);
+  padding: 20px 18px 18px;
+  position: relative;
+  transition: border-color .2s, transform .2s;
+}
+.anomaly-card:hover {
+  border-color: var(--y);
+  transform: translateY(-2px);
+}
+.anomaly-num {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  color: var(--y); background: var(--k);
+  padding: 4px 8px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.anomaly-title {
+  display: block; font-size: 13px;
+  letter-spacing: 1.2px; margin-bottom: 8px;
+}
+.anomaly-desc {
+  font-size: 13px; line-height: 1.55;
+  color: var(--grey-2);
+}
+
+/* ============ STAGE ============ */
+.stage {
+  margin: 80px 0;
+  scroll-margin-top: 32px;
+  position: relative;
+  overflow: hidden;
+}
+/* V11.1 R-V03.20: stage number ghosted gigantic ca watermark de fundal */
+.stage::before {
+  content: attr(data-stage-ghost);
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  font-family: var(--font-body);
+  font-size: clamp(200px, 28vw, 360px);
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--y);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -12px;
+  z-index: 0;
+}
+.stage > * { position: relative; z-index: 1; }
+.stage-header {
+  display: grid; grid-template-columns: 100px 1fr;
+  gap: 24px; align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--k);
+  margin-bottom: 24px;
+}
+.stage-number {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--y);
+  letter-spacing: -3px;
+}
+.stage-meta { padding-top: 12px; }
+.stage-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  color: var(--grey-3); margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.stage-name {
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 900; letter-spacing: -1px;
+  line-height: 1; margin-bottom: 14px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  .stage-name { letter-spacing: -1.5px; }
+}
+.stage-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.phase-tag, .type-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+.phase-tag { background: var(--k); color: var(--y); }
+.type-tag { background: var(--y-soft); color: var(--grey-2); border: 1px solid var(--y-border); }
+
+.stage-quote {
+  font-size: 17px; line-height: 1.55;
+  color: var(--grey-2);
+  border-left: 3px solid var(--y);
+  padding: 4px 0 4px 20px;
+  margin-bottom: 32px;
+  font-style: normal;
+}
+
+.stage-body { display: flex; flex-direction: column; gap: 12px; }
+
+/* ============ STEP ============ */
+.step {
+  background: #fff;
+  border: 1px solid var(--grey-5);
+  padding: 22px 24px;
+  transition: border-color .2s, transform .15s, box-shadow .2s;
+  cursor: default;
+  position: relative;
+}
+.step:hover {
+  border-color: var(--y);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 0 var(--y);
+}
+.step.done {
+  background: var(--green-light);
+  border-color: var(--green);
+}
+.step.done .step-title {
+  color: var(--grey-2);
+}
+.step-head {
+  display: grid; grid-template-columns: auto 1fr 36px;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.step-marker {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--grey-3);
+  padding: 4px 10px;
+  background: var(--grey-6);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.step.done .step-marker {
+  background: var(--green); color: #fff;
+}
+.step-title {
+  font-size: 19px; font-weight: 700;
+  line-height: 1.3; color: var(--k);
+  letter-spacing: -0.3px;
+}
+.step-check {
+  width: 36px; height: 36px;
+  border: 2px solid var(--grey-4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  flex-shrink: 0;
+}
+.step-check:hover {
+  border-color: var(--y);
+  background: var(--y-soft);
+}
+.step.done .step-check {
+  background: var(--green);
+  border-color: var(--green);
+}
+.step.done .step-check::after {
+  content: ""; position: absolute;
+  left: 12px; top: 6px;
+  width: 9px; height: 17px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+  animation: checkDraw .3s ease-out;
+}
+@keyframes checkDraw {
+  from { transform: rotate(45deg) scale(0); }
+  to { transform: rotate(45deg) scale(1); }
+}
+/* V11.1 R-V03.20: done celebration micro la momentul tranzitiei spre done */
+@keyframes stepDonePulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.012); box-shadow: 0 0 0 4px rgba(31, 122, 31, 0.18); }
+  100% { transform: scale(1); box-shadow: none; }
+}
+.step.just-done {
+  animation: stepDonePulse .42s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .step.just-done { animation: none; }
+}
+
+/* === ACCORDION HARD: ascunde pasi nebifati care NU sunt curent. Vad doar done + current + expanded === */
+.step {
+  display: none;
+}
+.step.done,
+.step.current,
+.step.expanded {
+  display: block;
+}
+.step-body {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--grey-5);
+  animation: stepBodyIn .25s ease-out;
+}
+.step.current > .step-body,
+.step.expanded > .step-body {
+  display: block;
+}
+.step.done .step-body { border-top-color: var(--y-border); }
+
+/* === STAGE PROGRESIVE: stage e vizibil daca current step e in stage SAU stage e in done (cursantul a trecut prin el) === */
+.stage {
+  display: none;
+}
+.stage.visible {
+  display: block;
+}
+/* Quote ramane vizibil cand stage e in joc (current step in stage) sau in trecut */
+.stage.visible .stage-quote { display: block; }
+
+/* HERO + anomaly-grid + mantra + exec-hero raman vizibile mereu (sunt cadru, nu pasi) */
+.final-section, .next-section, .payoff-section {
+  display: none;
+}
+.final-section.visible, .next-section.visible, .payoff-section.visible {
+  display: block;
+}
+@keyframes stepBodyIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.step-action {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--grey-2);
+  max-width: 64ch;
+  margin: 0;
+}
+.step-head { padding: 4px 0; }
+
+/* Vizual accordion: cursor pe head, indicator chevron */
+.step-head::after {
+  content: "";
+  display: none;
+}
+.step:not(.current):not(.done) {
+  background: #fff;
+}
+.step.current {
+  border-color: var(--y);
+  border-width: 2px;
+  box-shadow: 0 2px 0 0 var(--y);
+}
+.step.current .step-marker {
+  background: var(--y);
+  color: var(--k);
+}
+.step.done .step-title {
+  color: var(--grey-3);
+  text-decoration: line-through;
+  text-decoration-color: var(--green);
+  text-decoration-thickness: 2px;
+}
+/* R-V03.17: chevron expand/collapse pe step done */
+.step.done .step-title::after {
+  content: " ▾";
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  color: var(--k);
+  background: var(--y);
+  font-size: 0.85em;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: transform .2s ease-out, background .15s;
+  vertical-align: middle;
+  line-height: 1;
+}
+.step.done .step-head:hover .step-title::after { background: #FFC700; }
+.step.done.expanded .step-title::after {
+  transform: rotate(180deg);
+}
+.step.done {
+  background: var(--green-light);
+}
+
+/* ============ PROMPT BOX ============ */
+.prompt-box {
+  background: linear-gradient(180deg, var(--k-soft) 0%, var(--k) 100%);
+  color: #fff;
+  padding: 28px 28px 24px;
+  margin: 24px 0;
+  border-left: 4px solid var(--y);
+  position: relative;
+}
+.prompt-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 2.2px;
+  color: var(--y); margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.prompt-text {
+  font-size: 15px; line-height: 1.7;
+  color: #fff;
+  font-family: var(--font-mono);
+  margin-bottom: 20px;
+}
+.copy-btn {
+  background: var(--y); color: var(--k);
+  border: 2px solid var(--k);
+  font-family: inherit;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 12px 22px;
+  cursor: pointer;
+  box-shadow: var(--shadow-k);
+  transition: all .15s;
+}
+.copy-btn::before {
+  content: "▸"; margin-right: 8px;
+}
+.copy-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--k);
+}
+.copy-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--k);
+}
+.copy-btn.copied {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* ============ INVESTIGATION LIST ============ */
+.inv-list { list-style: none; padding: 0; margin: 0 0 48px; display: flex; flex-direction: column; gap: 8px; }
+.inv-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--grey-5);
+  align-items: center;
+  transition: border-color .15s, transform .15s;
+}
+.inv-item:hover { border-color: var(--y); transform: translateX(2px); }
+.inv-item-status {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.status-bad { background: var(--red-light); color: var(--red); border: 1px solid var(--red); }
+.status-good { background: var(--green-light); color: var(--green); border: 1px solid var(--green); }
+.status-neutral { background: var(--y-soft); color: var(--grey-2); border: 1px solid var(--y-border); }
+.inv-item-label {
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.inv-item-desc {
+  font-size: 13px;
+  color: var(--grey-2);
+  line-height: 1.5;
+}
+
+/* ============ BEFORE/AFTER LIST ============ */
+.ba-list { list-style: none; padding: 0; margin: 0 0 48px; display: flex; flex-direction: column; gap: 8px; }
+.ba-item {
+  background: #fff;
+  border: 1px solid var(--grey-5);
+  padding: 18px 22px;
+  transition: border-color .15s;
+}
+.ba-item:hover { border-color: var(--y); }
+.ba-item-indicator {
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: var(--grey-3);
+}
+.ba-pair {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+.ba-before, .ba-after {
+  padding: 10px 14px;
+  border-radius: 0;
+}
+.ba-before { background: var(--red-light); border-left: 3px solid var(--red); }
+.ba-after { background: var(--green-light); border-left: 3px solid var(--green); }
+.ba-tag {
+  display: block;
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.ba-before .ba-tag { color: var(--red); }
+.ba-after .ba-tag { color: var(--green); }
+.ba-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--k);
+  line-height: 1.4;
+}
+.ba-arrow {
+  text-align: center;
+  font-size: 20px;
+  color: var(--y);
+  font-weight: 700;
+}
+
+/* ============ FINAL CHECKS ============ */
+.final-section {
+  margin: 80px 0 64px;
+  padding: 48px 0;
+  border-top: 2px solid var(--k);
+}
+.final-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900; letter-spacing: -1px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.final-intro {
+  font-size: 15px; color: var(--grey-2);
+  margin-bottom: 32px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+.final-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.final-card {
+  background: #fff;
+  border: 1px solid var(--grey-5);
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  align-items: start;
+  transition: border-color .15s, background .2s;
+  scroll-margin-top: 32px;
+}
+.final-card:hover { border-color: var(--y); }
+.final-card.done { background: var(--green-light); border-color: var(--green); }
+.final-num {
+  font-size: 28px; font-weight: 900;
+  color: var(--grey-4); line-height: 1;
+  letter-spacing: -1px;
+}
+.final-card.done .final-num { color: var(--green); }
+.final-card.done .final-num::after {
+  content: " ✓";
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 700;
+}
+.final-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  color: var(--y); background: var(--k);
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.final-text {
+  font-size: 14px; line-height: 1.5;
+  color: var(--grey-2);
+  margin-bottom: 12px;
+}
+.final-card.done .final-text { color: var(--k); }
+.final-check-btn {
+  background: var(--k); color: #fff;
+  border: 1px solid var(--k);
+  font-family: inherit;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 12px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .15s;
+  min-height: 36px;
+}
+.final-check-btn:hover { background: var(--y); color: var(--k); border-color: var(--y); }
+.final-card.done .final-check-btn {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+  font-size: 0;
+}
+.final-card.done .final-check-btn:hover {
+  background: #167016;
+  border-color: #167016;
+}
+.final-card.done .final-check-btn::before {
+  content: "✓ VERIFICAT";
+  font-size: 10px;
+}
+
+.completion-badge {
+  display: none;
+  background: var(--k); color: var(--y);
+  padding: 28px 32px;
+  margin-top: 24px;
+  border-left: 6px solid var(--y);
+  text-align: center;
+}
+.completion-badge.show { display: block; animation: fadeIn .4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.completion-title {
+  font-size: 22px; font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.completion-subtitle {
+  font-size: 14px; color: #fff; line-height: 1.5;
+}
+
+/* ============ NEXT (C02) ============ */
+.next-section {
+  margin: 64px 0;
+  padding: 40px 32px;
+  background: var(--y-soft);
+  border: 1px solid var(--y-border);
+  border-left: 4px solid var(--y);
+}
+.next-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  color: var(--grey-2); margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.next-title {
+  font-size: 28px; font-weight: 900;
+  letter-spacing: -1px; line-height: 1.1;
+  margin-bottom: 16px;
+}
+.next-desc {
+  font-size: 15px; line-height: 1.6;
+  color: var(--grey-2);
+  max-width: 560px;
+}
+
+/* ============ PAYOFF ============ */
+.payoff-section {
+  background: var(--k); color: #fff;
+  padding: 80px 48px;
+  margin: 64px 0 0;
+  text-align: left;
+  position: relative;
+}
+.payoff-section::before {
+  content: ""; position: absolute;
+  top: 0; left: 0; width: 100%; height: 6px;
+  background: var(--y);
+}
+.payoff-line {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.payoff-line.dim { color: var(--grey-4); }
+.payoff-line.accent {
+  color: var(--y);
+  font-weight: 700;
+  margin: 24px 0 32px;
+}
+.payoff-line.regular { color: #fff; }
+.payoff-motto {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #1f1f1f;
+  color: var(--y);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  padding: 32px 0;
+  text-align: center;
+  border-top: 1px solid var(--grey-5);
+  font-size: 11px;
+  color: var(--grey-3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 48px;
+}
+.footer-brand { color: var(--k); font-weight: 800; }
+
+/* ============ SCROLL TOP ============ */
+.scroll-top {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  background: var(--k); color: var(--y);
+  border: 2px solid var(--y);
+  width: 48px; height: 48px;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s, transform .15s;
+  z-index: 150;
+  box-shadow: var(--shadow-y);
+}
+.scroll-top.show { opacity: 1; pointer-events: auto; }
+.scroll-top:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--y); }
+
+/* ============ CONTINUE BUTTON (R-V03.14, updated V09.1) ============ */
+/* Desktop: in spatiul de sub side-nav (R-V03.9 extins lasa 70px).
+   Latime = coloana side-nav (260px), aliniat vertical cu nav-ul. */
+.continue-btn {
+  position: fixed;
+  bottom: 24px; right: var(--gutter);
+  width: var(--nav-w);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--y);
+  color: var(--k);
+  border: 2px solid var(--k);
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 160;
+  box-shadow: -5px 5px 0 0 var(--k);
+  transition: transform .15s, box-shadow .15s;
+  font-variant-numeric: tabular-nums;
+  box-sizing: border-box;
+}
+.continue-btn.show { display: inline-flex; }
+.continue-btn:hover { transform: translate(-2px, -2px); box-shadow: -7px 7px 0 0 var(--k); }
+.continue-btn:active { transform: translate(1px, 1px); box-shadow: -3px 3px 0 0 var(--k); }
+.continue-btn-counter {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--k);
+  color: var(--y);
+  padding: 3px 7px;
+  letter-spacing: 0.4px;
+}
+.continue-btn-arrow {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Continue-btn pe desktop = sub side-nav, nu suprapune scroll-top. */
+/* Scroll-top urca deasupra continue-btn cand acesta e activ */
+body.has-continue .scroll-top { bottom: 88px; }
+
+/* ============ MOBILE TOPBAR + NAV TOGGLE ============ */
+.mobile-topbar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: var(--k);
+  border-bottom: 1px solid #222;
+  z-index: 190;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mobile-topbar-title {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--y);
+  text-transform: uppercase;
+  flex: 1; min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mobile-topbar-progress {
+  font-size: 11px; font-weight: 700;
+  color: var(--y);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.mobile-nav-toggle {
+  display: none;
+  background: var(--y); color: var(--k);
+  border: none;
+  width: 40px; height: 40px;
+  font-size: 18px; font-weight: 800;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-items: center; justify-content: center;
+  transition: background .15s;
+}
+.mobile-nav-toggle:active { background: #fff; }
+.mobile-nav-toggle.is-open::before { content: "✕"; }
+.mobile-nav-toggle:not(.is-open)::before { content: "☰"; }
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 175;
+}
+.mobile-nav-overlay.show { display: block; }
+
+/* ============ RESPONSIVE ============ */
+/* TABLETA + DESKTOP MIC (641-1024px): typography +1 vs desktop pentru lizibilitate */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body { font-size: 17px; line-height: 1.7; }
+  .cover-subtitle { font-size: 24px; }
+  .cover-miza { font-size: 18px; }
+  .exec-hero p { font-size: 17px; }
+  .stage-hook { font-size: 19px; }
+  .step-title { font-size: 19px; }
+  .step-action { font-size: 17px; line-height: 1.7; }
+  .step-instruction { font-size: 17px; line-height: 1.7; }
+  .step-callout { font-size: 17px; }
+  .anomaly-desc { font-size: 15px; line-height: 1.6; }
+  .inv-item-desc { font-size: 15px; line-height: 1.6; }
+  .prompt-text { font-size: 16px; line-height: 1.75; }
+  .prompt-label { font-size: 12px; }
+  .verify-title { font-size: 17px; }
+  .verify-sub { font-size: 16px; }
+  .final-text { font-size: 16px; line-height: 1.6; }
+  .final-label { font-size: 11px; }
+  .payoff-section p { font-size: 17px; }
+  .anomaly-title { font-size: 14px; }
+  .copy-btn { font-size: 12px; padding: 13px 24px; }
+  .final-check-btn { font-size: 12px; padding: 11px 20px; }
+  /* TOUCH TARGETS: padding generos pe step cards si butoane */
+  .step { padding: 22px 22px; }
+  .step-marker { font-size: 11px; padding: 6px 11px; }
+  .inv-item { padding: 18px 22px; }
+  .anomaly-card { padding: 22px 20px; }
+  .final-card { padding: 22px 20px; }
+}
+@media (max-width: 1024px) {
+  body { padding-top: 52px; }
+  .mobile-topbar { display: flex; }
+  .mobile-nav-toggle { display: inline-flex; }
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 24px;
+  }
+  .side-nav {
+    position: fixed;
+    top: 52px; right: -280px;
+    width: 280px;
+    height: calc(100vh - 52px);
+    z-index: 180;
+    transition: right .3s;
+    border-radius: 0;
+  }
+  .side-nav.open { right: 0; }
+  .mobile-nav-overlay { top: 52px; }
+  .main-content { padding: 16px 0 64px; }
+  .scroll-top { bottom: 16px; right: 16px; }
+  .top-progress { top: 52px; }
+  /* CONTINUE BUTTON MOBILE: sticky JOS, full-width bar */
+  .continue-btn {
+    bottom: 0; right: 0; left: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+    border: none;
+    border-top: 2px solid var(--k);
+    box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08);
+    font-size: 14px;
+    min-height: 52px;
+  }
+  .continue-btn:hover { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); }
+  .continue-btn:active { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); background: #FFC700; }
+  /* Body padding-bottom cand butonul e vizibil pe mobile */
+  body.has-continue { padding-bottom: 64px; }
+  /* Scroll-top urca deasupra barii Continuă pe mobile */
+  body.has-continue .scroll-top { bottom: 76px; }
+  /* Touch targets larger pe tableta + mobile */
+  .mobile-topbar { min-height: 52px; }
+  .mobile-topbar-title { font-size: 14px; }
+  .mobile-topbar-progress { font-size: 13px; }
+}
+/* MOBILE (≤640px): typography optim pentru lectura pe ecran mic */
+@media (max-width: 640px) {
+  body { font-size: 17px; line-height: 1.7; }
+  .app-grid { padding: 0 18px; }
+  .cover { padding: 32px 0 24px; }
+  .cover-label { font-size: 10px; }
+  .cover-subtitle { font-size: 19px; line-height: 1.45; }
+  .cover-miza { font-size: 16px; line-height: 1.55; }
+  .cover-meta-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+  .cover-meta-key, .cover-meta-val { font-size: 13px; }
+  .exec-hero { padding: 32px 24px; }
+  .exec-hero p { font-size: 16px; line-height: 1.7; }
+  .stage-header { grid-template-columns: 1fr; gap: 12px; }
+  .stage-number { font-size: 64px; }
+  .stage-hook { font-size: 17px; line-height: 1.55; }
+  .step { padding: 20px 18px; }
+  .step-head { grid-template-columns: 1fr 26px; }
+  .step-marker { grid-column: 1 / -1; justify-self: start; font-size: 11px; padding: 6px 11px; }
+  .step-title { font-size: 18px; line-height: 1.4; }
+  .step-action { font-size: 16px; line-height: 1.65; }
+  .step-instruction { font-size: 16px; line-height: 1.65; }
+  .step-callout { font-size: 16px; line-height: 1.55; }
+  .anomaly-grid { grid-template-columns: 1fr; }
+  .anomaly-card { padding: 22px 20px; }
+  .anomaly-title { font-size: 14px; }
+  .anomaly-desc { font-size: 15px; line-height: 1.6; }
+  .inv-item { grid-template-columns: 1fr; gap: 10px; padding: 18px 20px; }
+  .inv-item-desc { font-size: 15px; line-height: 1.6; }
+  .prompt-text { font-size: 15px; line-height: 1.75; }
+  .prompt-label { font-size: 11px; }
+  .copy-btn { font-size: 12px; padding: 13px 22px; width: 100%; }
+  .verify-title { font-size: 16px; }
+  .verify-sub { font-size: 15px; }
+  .final-card { padding: 22px 20px; }
+  .final-grid { grid-template-columns: 1fr; }
+  .final-label { font-size: 11px; }
+  .final-text { font-size: 16px; line-height: 1.55; }
+  .final-check-btn { font-size: 12px; padding: 12px 20px; width: 100%; }
+  .ba-pair { grid-template-columns: 1fr; gap: 8px; }
+  .ba-arrow { display: none; }
+  .payoff-section { padding: 48px 24px; }
+  .payoff-section p { font-size: 16px; line-height: 1.7; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
+
+<div class="mobile-topbar" role="banner">
+  <div class="mobile-topbar-title">C02 · Controlul Datelor</div>
+  <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
+  <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
+</div>
+<div class="mobile-nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
+
+<div class="book-app">
+  <div class="app-grid">
+
+    <main class="main-content">
+
+      <header class="cover">
+        <div class="cover-label">PACK 02 EXCEL · TREAPTA 1 · CONSTRUCȚIA C02</div>
+        <h1 class="cover-title">CONTROLUL<br>DATELOR</h1>
+        <p class="cover-subtitle">Tabelul cu date pare curat. Datele însă mint.</p>
+        <div class="cover-miza">Un raport construit pe date care mint produce decizii care costă.</div>
+
+        <div class="cover-meta">
+          <div class="cover-meta-row">
+            <span class="cover-meta-key">TREAPTA</span>
+            <span class="cover-meta-val">STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)</span>
+          </div>
+          <div class="cover-meta-row">
+            <span class="cover-meta-key">CONSTRUCȚIE</span>
+            <span class="cover-meta-val">02 din 20 · Pack 02 Excel</span>
+          </div>
+          <div class="cover-meta-row">
+            <span class="cover-meta-key">AI INTEGRAT</span>
+            <span class="cover-meta-val">2 prompturi Copilot · audit + marcare controlată</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="exec-hero">
+        <div class="exec-hero-label">DE CE C02 · ÎNAINTE DE ORICE RAPORT</div>
+        <h2>Datele par curate. Nu sunt.</h2>
+        <p class="exec-hero-sharp">Problema nu este că datele lipsesc. Problema este că datele prezente nu sunt toate corecte.</p>
+        <p>Date în viitor, coduri client inexistente, duplicate exacte, tranzacții pe filiale închise, câmpuri obligatorii goale. Toate trec validare tehnică Excel. Niciuna nu este corectă operațional. C02 nu șterge și nu repară. Separă valid tehnic de corect operațional și marchează fiecare anomalie cu motivul ei.</p>
+      </section>
+
+      <div class="mantra-band">
+        <div class="mantra-band-sub">MANTRA · TRAINITY</div>
+        <div class="mantra-band-main">Marcăm acum datele neconforme. Decidem după ce facem cu <mark>ele</mark>.</div>
+      </div>
+
+      <section>
+        <div class="section-marker">SCENA REALĂ · CE PARE VALID DAR NU ESTE CORECT</div>
+        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">DATĂ ÎN VIITOR</b><p class="anomaly-desc">Vânzări cu dată ulterioară raportului. Trec validare, mint cronologia.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">COD CLIENT INEXISTENT</b><p class="anomaly-desc">Cod client care nu se regăsește în nomenclator. Referință ruptă.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">DUPLICAT EXACT</b><p class="anomaly-desc">Perechi identice de factură, dată și sumă. Aceeași tranzacție de două ori.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">TRANZACȚIE WEEK-END</b><p class="anomaly-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">CÂMP OBLIGATORIU GOL</b><p class="anomaly-desc">Cantitate sau preț unitar lipsă pe linii de tranzacție.</p></div></div>
+      </section>
+
+      <section class="stage" id="stage-1" data-stage="1" data-stage-ghost="01">
+  <header class="stage-header">
+    <div class="stage-number">01</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 1 · TABELUL PARE CURAT</div>
+      <h2 class="stage-name">REALITATE</h2>
+      <div class="stage-tags"><span class="phase-tag">INPUT</span><span class="type-tag">Manual</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Deschizi fișierul controlat de construcția precedentă. Aparent curat. Fixezi suma martor înainte să cauți anomalii.</p>
+  <div class="stage-body">
+<div class="step" data-step="1">
+  <div class="step-head" onclick="toggleStep(1)">
+    <div class="step-marker">PAS 01</div>
+    <h3 class="step-title">Deschide fișierul predat de construcția precedentă</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Dublu-click pe Date_MASTER-C02.xlsx, foaia Vanzari. Tabelul predat de construcția precedentă e curat structural. Acum cauți altceva.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="2">
+  <div class="step-head" onclick="toggleStep(2)">
+    <div class="step-marker">PAS 02</div>
+    <h3 class="step-title">Caută anomaliile invizibile la prima privire</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">O factură datată în viitor. Un cod client care nu există. Două facturi identice. O vânzare sâmbătă pe filiala L-V. Un câmp obligatoriu gol. Ochiul vede tabel curat. Datele mint.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="3">
+  <div class="step-head" onclick="toggleStep(3)">
+    <div class="step-marker">PAS 03</div>
+    <h3 class="step-title">Fixează suma martor pe valoare_neta</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Selectează coloana valoare_neta. Citește SUM din status bar. Notează martorul. C02 marchează, nu șterge. Suma fizică totală trebuie să rămână identică după marcare.</p>
+    
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="stage" id="stage-2" data-stage="2" data-stage-ghost="02">
+  <header class="stage-header">
+    <div class="stage-number">02</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 2 · SUSPICIUNI ASISTATE DE AI</div>
+      <h2 class="stage-name">INVESTIGAȚIE</h2>
+      <div class="stage-tags"><span class="phase-tag">AI</span><span class="type-tag">Copilot · Promptul 1</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Nu marcăm încă. Întâi auditează AI. Raport pe categorii de anomalii, fără modificare.</p>
+  <div class="stage-body">
+<div class="step" data-step="4">
+  <div class="step-head" onclick="toggleStep(4)">
+    <div class="step-marker">PAS 04</div>
+    <h3 class="step-title">Activează Copilot pe foaia Vanzari</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Deschide Copilot în panoul lateral Excel, pe foaia Vanzari. Nu ceri nicio modificare. Doar audit.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="5">
+  <div class="step-head" onclick="toggleStep(5)">
+    <div class="step-marker">PAS 05</div>
+    <h3 class="step-title">Rulează Promptul 1 de audit</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Lipești promptul de mai jos. AI auditează tabelul și raportează pe categorii de anomalii, fără să modifice o singură celulă.</p>
+    <div class="prompt-box">
+      <div class="prompt-label">PROMPT 1 · INSTRUMENT DE AUDIT</div>
+      <div class="prompt-text">Mă uit la acest tabel și pare ordonat, dar suspectez că unele rânduri nu sunt corecte operațional. Verifică pe coloane și spune-mi: există date după data raportului? Există coduri de client care nu apar în nomenclator? Există duplicate exacte? Există vânzări în week-end pe filiale L-V? Există câmpuri obligatorii goale (cantitate sau preț)? Numără pe fiecare categorie. Nu modifica nimic, doar raportează.</div>
+      <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
+    </div>
+  </div>
+</div>
+<div class="step" data-step="6">
+  <div class="step-head" onclick="toggleStep(6)">
+    <div class="step-marker">PAS 06</div>
+    <h3 class="step-title">Citește raportul de anomalii</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">AI întoarce harta anomaliilor: câte date în viitor, câte coduri rupte, câte duplicate, câte week-end-uri, câte câmpuri goale. Acum știi, nu bănuiești.</p>
+    <div class="section-sublabel">RAPORT AI · ANOMALII DETECTATE</div>
+    <ul class="inv-list">
+<li class="inv-item">
+      <div class="inv-item-status status-bad">DE VERIFICAT</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">DATĂ ÎN VIITOR</div>
+        <div class="inv-item-desc">Facturi cu data_factura ulterioară datei raportului. Cronologie greșită.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-bad">EXCLUS</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">COD CLIENT INEXISTENT</div>
+        <div class="inv-item-desc">Înregistrări cu client_nume nereferențiat în nomenclator. Referință ruptă.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-bad">EXCLUS</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">DUPLICAT EXACT</div>
+        <div class="inv-item-desc">Perechi de rânduri identice pe nr_factura, dată și sumă. Aceeași tranzacție dublată.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-bad">DE VERIFICAT</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">TRANZACȚIE WEEK-END</div>
+        <div class="inv-item-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-bad">EXCLUS</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">CÂMP OBLIGATORIU GOL</div>
+        <div class="inv-item-desc">Înregistrări cu cantitate sau pret_unitar lipsă. Linii incomplete.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-good">VALID</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">RESTUL TRANZACȚIILOR</div>
+        <div class="inv-item-desc">Conforme cu toate cele cinci reguli. Intră în raportul oficial.</div>
+      </div>
+    </li>
+    </ul>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="stage" id="stage-3" data-stage="3" data-stage-ghost="03">
+  <header class="stage-header">
+    <div class="stage-number">03</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 3 · MARCARE CONTROLATĂ</div>
+      <h2 class="stage-name">TRANSFORMARE</h2>
+      <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Cu suspiciunile auditate, marcăm. Power Query aplică reguli care produc două coloane noi: status și motiv.</p>
+  <div class="stage-body">
+<div class="step" data-step="7">
+  <div class="step-head" onclick="toggleStep(7)">
+    <div class="step-marker">PAS 07</div>
+    <h3 class="step-title">Încarcă tabelul în Power Query</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Date > Obține date > Din tabel/interval. Tabelul intră ca sursă în editorul Power Query. Sursa rămâne intactă, marcarea se aplică deasupra.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="8">
+  <div class="step-head" onclick="toggleStep(8)">
+    <div class="step-marker">PAS 08</div>
+    <h3 class="step-title">Rulează Promptul 2 de marcare</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Lipești promptul de mai jos. AI construiește pașii Power Query pentru fiecare regulă de anomalie: dată în viitor, cod rupt, duplicat, week-end, câmp gol. Două coloane noi: status_validare și motiv_anomalie.</p>
+    <div class="prompt-box">
+      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE MARCARE CONTROLATĂ</div>
+      <div class="prompt-text">Acum că știi exact ce anomalii sunt în tabel, ajută-mă să le marchez. Construiește în Power Query pași care adaugă două coloane noi: status_validare cu valorile VALID, DE VERIFICAT sau EXCLUS și motiv_anomalie cu textul exact al anomaliei. Aplică: data în viitor și week-end pe filiale L-V devin DE VERIFICAT, cod client inexistent și duplicat exact și câmp gol devin EXCLUS, restul rămân VALID. Nu șterge niciun rând. Vreau să reaplic același flux pe alt set luna viitoare.</div>
+      <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
+    </div>
+  </div>
+</div>
+<div class="step" data-step="9">
+  <div class="step-head" onclick="toggleStep(9)">
+    <div class="step-marker">PAS 09</div>
+    <h3 class="step-title">Aplică și încarcă tabelul controlat</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Power Query execută regulile. Fiecare rând primește status: VALID, DE VERIFICAT sau EXCLUS. Motivul exact apare alături. Închide și încarcă ca tabel Excel Vanzari_Controlate.</p>
+    <div class="section-sublabel">DOVADA MARCĂRII</div>
+    <ul class="ba-list">
+<li class="ba-item">
+      <div class="ba-item-indicator">Anomalii prezente</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">amestecate invizibil cu datele bune</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">vizibil marcate cu status și motiv</span></div>
+      </div>
+    </li>
+<li class="ba-item">
+      <div class="ba-item-indicator">Decizia pe anomalie</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">implicită, ad-hoc, repetabilă greu</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">explicită pe trei niveluri standardizate</span></div>
+      </div>
+    </li>
+<li class="ba-item">
+      <div class="ba-item-indicator">Volum rânduri</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">total rânduri input</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">același total, zero pierderi, zero adăugiri</span></div>
+      </div>
+    </li>
+<li class="ba-item">
+      <div class="ba-item-indicator">Sumă fizică</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">suma martor pe coloana valoare_neta</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">identică, marcarea nu schimbă valori</span></div>
+      </div>
+    </li>
+<li class="ba-item">
+      <div class="ba-item-indicator">Suma raport oficial</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">total contaminat cu anomalii</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">SUMIF pe status VALID, raportabilă cu încredere</span></div>
+      </div>
+    </li>
+    </ul>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="stage" id="stage-4" data-stage="4" data-stage-ghost="04">
+  <header class="stage-header">
+    <div class="stage-number">04</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 4 · CROSS-CHECK NUMERIC</div>
+      <h2 class="stage-name">VERIFICARE</h2>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">SUMIF / COUNTIF</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Nu avem încredere oarbă în marcare. COUNTIF pe status. SUMIF pe valoare. Distribuția se confirmă numeric.</p>
+  <div class="stage-body">
+<div class="step" data-step="10">
+  <div class="step-head" onclick="toggleStep(10)">
+    <div class="step-marker">PAS 10</div>
+    <h3 class="step-title">Recalculează suma pe tabelul controlat</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">SUM pe valoare_neta în tabelul controlat. Compară cu martorul fixat în Etapa 1. Sumele fizice trebuie să fie identice. Marcarea nu modifică valori.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="11">
+  <div class="step-head" onclick="toggleStep(11)">
+    <div class="step-marker">PAS 11</div>
+    <h3 class="step-title">Calculează suma oficială cu SUMIF</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">SUMIF pe status_validare = VALID. Aceasta este suma raportabilă. Anomaliile DE VERIFICAT și EXCLUS rămân în tabel marcate, dar nu intră în raport.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="12">
+  <div class="step-head" onclick="toggleStep(12)">
+    <div class="step-marker">PAS 12</div>
+    <h3 class="step-title">Verifică distribuția pe motive</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">COUNTIF pe motiv_anomalie pentru fiecare regulă. Fiecare anomalie e marcată cu motivul ei exact. Foaia CONTROL_FINAL confirmă cross-check.</p>
+    
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="stage" id="stage-5" data-stage="5" data-stage-ghost="05">
+  <header class="stage-header">
+    <div class="stage-number">05</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 5 · REGULI REAPLICABILE</div>
+      <h2 class="stage-name">STABILIZARE</h2>
+      <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Marcarea nu e o intervenție unică. Regulile rămân conectate. Lună viitoare, aceeași judecată, alt set.</p>
+  <div class="stage-body">
+<div class="step" data-step="13">
+  <div class="step-head" onclick="toggleStep(13)">
+    <div class="step-marker">PAS 13</div>
+    <h3 class="step-title">Leagă regulile la sursă ca mecanism</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Pașii Power Query rămân conectați la sursă. La un set nou cu aceeași schemă, un singur Refresh reaplică toate regulile de marcare.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="14">
+  <div class="step-head" onclick="toggleStep(14)">
+    <div class="step-marker">PAS 14</div>
+    <h3 class="step-title">Testează refresh pe un set nou</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Înlocuiește sursa cu un set nou de aceeași schemă. Date > Reîmprospătează tot. Status și motiv se reaplică automat. Aceeași judecată, alt set.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="15">
+  <div class="step-head" onclick="toggleStep(15)">
+    <div class="step-marker">PAS 15</div>
+    <h3 class="step-title">Documentează cele 5 reguli de marcare</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Notează în fișier cele 5 reguli de marcare și pragul fiecăreia. Dacă apare un fenomen nou, regula se extinde explicit, nu silențios.</p>
+    
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="stage" id="stage-6" data-stage="6" data-stage-ghost="06">
+  <header class="stage-header">
+    <div class="stage-number">06</div>
+    <div class="stage-meta">
+      <div class="stage-label">ETAPA 6 · PAYOFF</div>
+      <h2 class="stage-name">CONFIRMARE</h2>
+      <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
+    </div>
+  </header>
+  <p class="stage-quote">Construcția e validată operațional. Verificăm sistemul cap-coadă și predăm baza controlată către C03.</p>
+  <div class="stage-body">
+<div class="step" data-step="16">
+  <div class="step-head" onclick="toggleStep(16)">
+    <div class="step-marker">PAS 16</div>
+    <h3 class="step-title">Verifică sistemul cap-coadă</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Tabelul curat primește status și motiv. Numărul de rânduri rămâne identic. Suma fizică se conservă. Suma raport oficial e bine definită.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="17">
+  <div class="step-head" onclick="toggleStep(17)">
+    <div class="step-marker">PAS 17</div>
+    <h3 class="step-title">Confirmă baza controlată</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Tabelul controlat poate intra direct în raport, analiză, dashboard, fără să amplifice anomaliile. Datele nu mai mint.</p>
+    
+  </div>
+</div>
+<div class="step" data-step="18">
+  <div class="step-head" onclick="toggleStep(18)">
+    <div class="step-marker">PAS 18</div>
+    <h3 class="step-title">Predă către C03</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
+  </div>
+  <div class="step-body">
+    <p class="step-action">Baza controlată e pregătită pentru C03 Auditarea datelor: detectarea contaminării invizibile sub aparența curățeniei.</p>
+    
+  </div>
+</div>
+  </div>
+</section>
+
+      <section class="final-section" id="final-section">
+        <div class="section-marker">RITUAL TRAINITY · CONTROL FINAL</div>
+        <h2 class="final-title">8 verificări finale canonice</h2>
+        <p class="final-intro">Înainte de a preda baza către C03, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
+        <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C02.xlsx există și se deschide.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">SCHEMĂ</div><div class="final-text">Două coloane noi: status_validare și motiv_anomalie.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">VOLUM</div><div class="final-text">Număr rânduri OUTPUT egal cu număr rânduri INPUT.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">VALID</div><div class="final-text">Statusul VALID definit fără ambiguitate pe rândurile conforme.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">DE VERIFICAT</div><div class="final-text">Statusul DE VERIFICAT aplicat doar pe regulile cu decizie operator.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">EXCLUS</div><div class="final-text">Statusul EXCLUS aplicat doar pe regulile fără ambiguitate.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SUMĂ FIZICĂ</div><div class="final-text">Suma valoare_neta fizică conservată INPUT egal OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SUMĂ OFICIAL</div><div class="final-text">SUMIF pe status VALID returnează suma raportabilă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+        <div class="completion-badge" id="completion">
+          <div class="completion-title">Bază controlată validată.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C02 e pregătit pentru C03 Auditarea datelor.</div>
+        </div>
+      </section>
+
+      <section class="next-section">
+        <div class="next-label">TREAPTA 1 · CONSTRUCȚIA URMĂTOARE</div>
+        <h3 class="next-title">C03 · Auditarea datelor</h3>
+        <p class="next-desc">Anomaliile evidente sunt marcate, dar restul datelor par curate. Aparența nu este dovadă. C03 demonstrează forensic ce e cu adevărat curat, sub spațiile invizibile și caracterele ascunse.</p>
+      </section>
+
+      <section class="payoff-section">
+        <div class="payoff-line dim">Nu am șters anomalii.</div>
+        <div class="payoff-line dim">Nu am ascuns rânduri.</div>
+        <div class="payoff-line dim">Nu am cosmetizat datele.</div>
+        <div class="payoff-line accent">Am marcat ce e neconform cu motivul exact.</div>
+        <div class="payoff-line regular">Anomaliile nu mai trec neobservate.</div>
+        <div class="payoff-line regular">C03 poate începe.</div>
+        <div class="payoff-motto">Datele neconforme se controlează și se marchează, niciodată nu se ascund.</div>
+      </section>
+
+      <footer class="footer">
+        TRAINITY · C02 CONTROLUL DATELOR · Cockpit operațional
+      </footer>
+
+    </main>
+
+    <nav class="side-nav" id="sideNav">
+      <div class="nav-brand">
+        <div class="nav-brand-label">PACK 02 EXCEL · C02</div>
+        <div class="nav-brand-title">CONTROLUL DATELOR</div>
+      </div>
+
+      <div class="nav-progress">
+        <div class="nav-progress-row">
+          <span class="nav-progress-num" id="navProgressNum">0/18</span>
+          <span class="nav-progress-total">PAȘI</span>
+        </div>
+        <div class="nav-progress-track"><div class="nav-progress-fill" id="navProgressFill"></div></div>
+      </div>
+
+      <div class="nav-section-label">6 ETAPE</div>
+      <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
+<a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
+<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · AGGREGATE</span></span></a>
+<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Power Query Refresh</span></span></a>
+<a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
+
+      <div class="nav-section-label">8 VERIFICĂRI FINALE</div>
+      <div class="nav-finals">
+        <div class="nav-finals-grid"><a class="nav-final-dot" data-nav-final="1" href="#final-1" onclick="navigateFinal(1,event)">1</a>
+<a class="nav-final-dot" data-nav-final="2" href="#final-2" onclick="navigateFinal(2,event)">2</a>
+<a class="nav-final-dot" data-nav-final="3" href="#final-3" onclick="navigateFinal(3,event)">3</a>
+<a class="nav-final-dot" data-nav-final="4" href="#final-4" onclick="navigateFinal(4,event)">4</a>
+<a class="nav-final-dot" data-nav-final="5" href="#final-5" onclick="navigateFinal(5,event)">5</a>
+<a class="nav-final-dot" data-nav-final="6" href="#final-6" onclick="navigateFinal(6,event)">6</a>
+<a class="nav-final-dot" data-nav-final="7" href="#final-7" onclick="navigateFinal(7,event)">7</a>
+<a class="nav-final-dot" data-nav-final="8" href="#final-8" onclick="navigateFinal(8,event)">8</a></div>
+      </div>
+
+      <div class="nav-controls">
+        <button class="nav-ctrl-btn" onclick="resetProgress()">RESETEAZĂ PROGRES</button>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Sus">↑</button>
+
+<div class="stage-toast" id="stageToast" role="status" aria-live="polite"></div>
+
+<button class="continue-btn" id="continueBtn" onclick="continueToCurrentStep()" aria-label="Continuă cu pasul curent">
+  <span class="continue-btn-text">Continuă</span>
+  <span class="continue-btn-counter" id="continueBtnCounter">pasul 1/18</span>
+  <span class="continue-btn-arrow">↓</span>
+</button>
+
+<script>
+"use strict";
+
+const STORAGE_KEY = "trainity_c02_study_v1";
+const TOTAL_STEPS = 18;
+const TOTAL_FINALS = 8;
+
+let state = {
+  doneSteps: {},
+  doneFinals: {}
+};
+
+// V11.2 R-V03.21: toast pentru etapa stabilizata
+let _toastTimer = null;
+function showStageToast(msg) {
+  const t = document.getElementById('stageToast');
+  if (!t) return;
+  t.textContent = msg;
+  if (_toastTimer) { clearTimeout(_toastTimer); _toastTimer = null; }
+  // Show cu delay scurt ca animatia just-done sa nu se suprapuna
+  setTimeout(() => t.classList.add('show'), 280);
+  _toastTimer = setTimeout(() => {
+    t.classList.remove('show');
+    _toastTimer = null;
+  }, 2680);
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) state = Object.assign(state, JSON.parse(raw));
+  } catch(e) {}
+}
+
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+
+function countDone() {
+  return Object.values(state.doneSteps).filter(Boolean).length;
+}
+function countFinalsDone() {
+  return Object.values(state.doneFinals).filter(Boolean).length;
+}
+
+function checkStep(n) {
+  const wasDone = !!state.doneSteps[n];
+  // V11.2: detectez DACA aceasta bifare completeaza o etapa pentru prima oara
+  const stepEl = document.querySelector('.step[data-step="' + n + '"]');
+  const stageEl = stepEl ? stepEl.closest('.stage[data-stage]') : null;
+  const stageN = stageEl ? parseInt(stageEl.getAttribute('data-stage'), 10) : null;
+  let willCompleteStage = false;
+  if (!wasDone && stageEl && stageN) {
+    // simulam: dupa flip, toti pasii etapei = done?
+    const stepsInStage = stageEl.querySelectorAll('.step[data-step]');
+    let allDoneAfter = true;
+    stepsInStage.forEach(s => {
+      const sn = parseInt(s.getAttribute('data-step'), 10);
+      if (sn === n) return; // asta tocmai se va bifa
+      if (!state.doneSteps[sn]) allDoneAfter = false;
+    });
+    willCompleteStage = allDoneAfter;
+  }
+
+  state.doneSteps[n] = !wasDone;
+  saveState();
+  applyState();
+  // V11.1 R-V03.20: celebration micro la momentul tranzitiei spre done
+  if (!wasDone && state.doneSteps[n]) {
+    const el = document.querySelector('.step[data-step="' + n + '"]');
+    if (el) {
+      el.classList.add("just-done");
+      setTimeout(() => el.classList.remove("just-done"), 480);
+    }
+    // V11.2 R-V03.21: stagger reveal pe NOUL step.current
+    setTimeout(() => {
+      const nextCurrent = document.querySelector('.step.current');
+      if (nextCurrent && nextCurrent !== el) {
+        nextCurrent.classList.add('just-revealed');
+        setTimeout(() => nextCurrent.classList.remove('just-revealed'), 260);
+      }
+    }, 60);
+    // V11.2 R-V03.21: toast cand etapa devine completa
+    if (willCompleteStage && stageN) {
+      const navItem = document.querySelector('.nav-item[data-nav-stage="' + stageN + '"] .nav-item-name');
+      const stageName = navItem ? navItem.textContent.trim() : ('ETAPA ' + stageN);
+      showStageToast('ETAPA ' + stageN + ' · ' + stageName + ' · STABILIZATĂ');
+    }
+  }
+  // Daca tocmai am bifat (devine done=true), avansam
+  if (!wasDone && state.doneSteps[n]) {
+    setTimeout(() => {
+      const nextN = findNextPending();
+      if (nextN === null) {
+        // Toate pasii bifati - scroll la sectiunea final-checks
+        const finalSection = document.getElementById("final-section");
+        if (finalSection) finalSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      // Verifica daca next step e intr-o stage noua (diferita de cea a pasului bifat)
+      const currentEl = document.querySelector('.step[data-step="' + n + '"]');
+      const nextEl = document.querySelector('.step[data-step="' + nextN + '"]');
+      const currentStage = currentEl ? currentEl.closest(".stage[data-stage]") : null;
+      const nextStage = nextEl ? nextEl.closest(".stage[data-stage]") : null;
+      if (currentStage && nextStage && currentStage !== nextStage) {
+        // Stage nou - scroll la stage-header
+        scrollToStage(nextStage);
+      } else {
+        scrollToStep(nextN);
+      }
+    }, 250);
+  }
+}
+
+function scrollToStage(stageEl) {
+  if (!stageEl) return;
+  const isMobile = window.innerWidth <= 1024;
+  const offset = isMobile ? 70 : 32;
+  const rect = stageEl.getBoundingClientRect();
+  const y = rect.top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function toggleStep(n) {
+  // Expand/collapse manual al unui step (independent de bifare)
+  // Daca step e current (auto-deschis), un click colapseaza el si toate
+  const el = document.querySelector('.step[data-step="' + n + '"]');
+  if (!el) return;
+  if (el.classList.contains('expanded')) {
+    el.classList.remove('expanded');
+  } else {
+    el.classList.add('expanded');
+  }
+}
+
+function findNextPending() {
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    if (!state.doneSteps[i]) return i;
+  }
+  return null;
+}
+
+function scrollToStep(n) {
+  const el = document.querySelector('.step[data-step="' + n + '"]');
+  if (!el) return;
+  // Calcul offset cu topbar mobile (52px) sau cu padding desktop (24px)
+  const isMobile = window.innerWidth <= 1024;
+  const offset = isMobile ? 70 : 32;
+  const rect = el.getBoundingClientRect();
+  const y = rect.top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+function confirmFinal(n) {
+  state.doneFinals[n] = !state.doneFinals[n];
+  saveState();
+  applyState();
+}
+
+function resetProgress() {
+  if (!confirm("Sigur dorești resetarea progresului?")) return;
+  state.doneSteps = {};
+  state.doneFinals = {};
+  saveState();
+  applyState();
+}
+
+function navigateStage(n, ev) {
+  if (ev) ev.preventDefault();
+  const stageEl = document.getElementById("stage-" + n);
+  if (!stageEl) return;
+  // R-V03.16: locked stages (neatinse) NU primesc click activ
+  if (!stageEl.classList.contains("visible")) return;
+  setTimeout(() => {
+    scrollToStage(stageEl);
+    closeMobileNav();
+  }, 50);
+}
+
+function navigateFinal(n, ev) {
+  if (ev) ev.preventDefault();
+  // R-V03.16: verificarile locked (cand inca exista pasi nebifati) NU primesc click activ
+  if (findNextPending() !== null) return;
+  const el = document.querySelector('[data-final="' + n + '"]');
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  closeMobileNav();
+}
+
+function copyPrompt(btn, n) {
+  const promptText = btn.parentElement.querySelector(".prompt-text").textContent.trim();
+  function done() {
+    btn.classList.add("copied");
+    const orig = btn.textContent;
+    btn.textContent = "✓ COPIAT";
+    setTimeout(() => { btn.classList.remove("copied"); btn.textContent = orig; }, 1800);
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(promptText).then(done).catch(() => fallbackCopy(promptText, done));
+  } else {
+    fallbackCopy(promptText, done);
+  }
+}
+
+function fallbackCopy(text, cb) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed"; ta.style.left = "-9999px";
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand("copy"); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+function applyState() {
+  // Steps: done state + current (primul nebifat) + expanded (manual override)
+  const currentN = findNextPending();
+  let currentStageNum = null;
+  document.querySelectorAll(".step").forEach(el => {
+    const n = parseInt(el.getAttribute("data-step"));
+    el.classList.toggle("done", !!state.doneSteps[n]);
+    el.classList.toggle("current", n === currentN);
+    if (n === currentN) {
+      // Determina stage-ul curent
+      const parentStage = el.closest(".stage[data-stage]");
+      if (parentStage) currentStageNum = parseInt(parentStage.getAttribute("data-stage"));
+    }
+  });
+  // Stage-uri vizibile: cele unde au pasi done SAU stage-ul current
+  document.querySelectorAll(".stage[data-stage]").forEach(stageEl => {
+    const stageN = parseInt(stageEl.getAttribute("data-stage"));
+    const stepsInStage = stageEl.querySelectorAll(".step[data-step]");
+    let hasAnyDone = false;
+    let hasCurrent = false;
+    stepsInStage.forEach(s => {
+      const sn = parseInt(s.getAttribute("data-step"));
+      if (state.doneSteps[sn]) hasAnyDone = true;
+      if (sn === currentN) hasCurrent = true;
+    });
+    const visible = hasAnyDone || hasCurrent || (currentN === null && stageN === 6);
+    stageEl.classList.toggle("visible", visible);
+  });
+  // Daca toate pasii sunt done, etapele toate vizibile + apar final/next/payoff
+  const allStepsDone = (currentN === null);
+  if (allStepsDone) {
+    document.querySelectorAll(".stage[data-stage]").forEach(s => s.classList.add("visible"));
+  }
+  ["final-section", "next-section", "payoff-section"].forEach(cls => {
+    document.querySelectorAll("." + cls).forEach(el => {
+      el.classList.toggle("visible", allStepsDone);
+    });
+  });
+  // Finals
+  document.querySelectorAll(".final-card").forEach(el => {
+    const n = parseInt(el.getAttribute("data-final"));
+    if (state.doneFinals[n]) el.classList.add("done");
+    else el.classList.remove("done");
+  });
+  // Nav items - 3 stari (R-V03.16): LOCKED / ACTIVE / COMPLETE
+  // LOCKED = etapa neatinsa (stage NU are clasa .visible)
+  // COMPLETE = toti pasii etapei done
+  // ACTIVE (implicit) = atinsa dar nu complet finalizata
+  document.querySelectorAll(".nav-item").forEach(el => {
+    const stageN = parseInt(el.getAttribute("data-nav-stage"));
+    const stageEl = document.querySelector('[data-stage="' + stageN + '"]');
+    const stageReached = stageEl && stageEl.classList.contains("visible");
+    const stepsInStage = document.querySelectorAll('[data-stage="' + stageN + '"] .step');
+    let allDone = stepsInStage.length > 0;
+    stepsInStage.forEach(s => {
+      const sn = parseInt(s.getAttribute("data-step"));
+      if (!state.doneSteps[sn]) allDone = false;
+    });
+    // Reset clase de stare
+    el.classList.remove("locked", "complete");
+    if (allDone) {
+      el.classList.add("complete");
+    } else if (!stageReached) {
+      el.classList.add("locked");
+    }
+    // 'active' e gestionata separat de IntersectionObserver
+  });
+  // Nav final dots - 2 stari: LOCKED (toti 18 pasi NU done) / COMPLETE (final bifat)
+  // Verificarile finale apar fizic doar dupa toti 18 done, deci sunt locked pana atunci
+  const allStepsDoneCheck = (findNextPending() === null);
+  document.querySelectorAll(".nav-final-dot").forEach(el => {
+    const fn = parseInt(el.getAttribute("data-nav-final"));
+    el.classList.remove("locked", "complete");
+    if (state.doneFinals[fn]) {
+      el.classList.add("complete");
+    } else if (!allStepsDoneCheck) {
+      el.classList.add("locked");
+    }
+  });
+
+  // Progres
+  const done = countDone();
+  const finalsDone = countFinalsDone();
+  const pct = (done / TOTAL_STEPS) * 100;
+  const navNum = document.getElementById("navProgressNum");
+  const navFill = document.getElementById("navProgressFill");
+  const topFill = document.getElementById("topProgressFill");
+  const mobileProg = document.getElementById("mobileTopProgress");
+  if (navNum) navNum.textContent = done + "/" + TOTAL_STEPS;
+  if (navFill) navFill.style.width = pct + "%";
+  if (mobileProg) mobileProg.textContent = done + "/" + TOTAL_STEPS;
+  if (topFill) topFill.style.width = ((done + finalsDone) / (TOTAL_STEPS + TOTAL_FINALS) * 100) + "%";
+
+  // Continue button (R-V03.14): vizibil cand 0 < done < TOTAL_STEPS
+  const continueBtn = document.getElementById("continueBtn");
+  const continueCounter = document.getElementById("continueBtnCounter");
+  if (continueBtn && continueCounter) {
+    const nextPending = findNextPending();
+    if (done > 0 && nextPending !== null) {
+      continueCounter.textContent = "pasul " + nextPending + "/" + TOTAL_STEPS;
+      continueBtn.classList.add("show");
+      document.body.classList.add("has-continue");
+    } else {
+      continueBtn.classList.remove("show");
+      document.body.classList.remove("has-continue");
+    }
+  }
+
+  // Completion badge
+  const compl = document.getElementById("completion");
+  if (compl) {
+    if (finalsDone === TOTAL_FINALS) compl.classList.add("show");
+    else compl.classList.remove("show");
+  }
+}
+
+// Active stage tracking with IntersectionObserver
+function setupActiveStageTracking() {
+  const stages = document.querySelectorAll(".stage[data-stage]");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const n = entry.target.getAttribute("data-stage");
+        document.querySelectorAll(".nav-item").forEach(ni => ni.classList.remove("active"));
+        const active = document.querySelector('.nav-item[data-nav-stage="' + n + '"]');
+        if (active) active.classList.add("active");
+      }
+    });
+  }, { rootMargin: "-30% 0px -50% 0px", threshold: 0 });
+  stages.forEach(s => observer.observe(s));
+}
+
+// Scroll top button
+function setupScrollTop() {
+  const btn = document.getElementById("scrollTop");
+  if (!btn) return;
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) btn.classList.add("show");
+    else btn.classList.remove("show");
+  });
+}
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Continue button (R-V03.14): scroll la pasul curent
+function continueToCurrentStep() {
+  const n = findNextPending();
+  if (n === null) return;
+  // Expand pasul curent daca e in stage care nu e inca .visible (edge case)
+  const stepEl = document.querySelector('.step[data-step="' + n + '"]');
+  if (stepEl) {
+    const stageEl = stepEl.closest(".stage[data-stage]");
+    if (stageEl && !stageEl.classList.contains("visible")) {
+      stageEl.classList.add("visible");
+    }
+  }
+  closeMobileNav();
+  setTimeout(() => scrollToStep(n), 50);
+}
+
+// Mobile nav
+function toggleMobileNav() {
+  const nav = document.getElementById("sideNav");
+  const overlay = document.getElementById("navOverlay");
+  if (nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    overlay.classList.remove("show");
+  } else {
+    nav.classList.add("open");
+    overlay.classList.add("show");
+  }
+}
+function closeMobileNav() {
+  document.getElementById("sideNav").classList.remove("open");
+  document.getElementById("navOverlay").classList.remove("show");
+}
+
+// INIT
+loadState();
+applyState();
+setupActiveStageTracking();
+setupScrollTop();
+
+// V11.2 R-V03.21: pulse one-shot pe MIZA dupa 700ms (atrage atentie o data)
+setTimeout(() => {
+  const miza = document.querySelector('.cover-miza');
+  if (miza) {
+    miza.classList.add('pulse-once');
+    setTimeout(() => miza.classList.remove('pulse-once'), 1000);
+  }
+}, 700);
+
+</script>
+</body>
+</html>

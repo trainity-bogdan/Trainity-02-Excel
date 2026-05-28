@@ -1,0 +1,530 @@
+══════════════════════════════════════════════════════════════════════════════
+CREATIVE-Excel-03-Auditare.txt
+══════════════════════════════════════════════════════════════════════════════
+Sistemul 02 · Excel · Construcția 03 · Auditarea Datelor
+Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
+ale constructiei C03.
+
+Versiune: V12
+Status: PRODUCTIE
+══════════════════════════════════════════════════════════════════════════════
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ INSTRUCȚIUNI GENERALE                                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CE FACE NANO BANANA / GEMINI IMAGEN 3
+Este motorul Google de generare imagini foto-realistice. Genereaza imagini
+de pana la ~2048x2048 px (sau 1920x1280 pentru aspect 3:2). Functioneaza
+cel mai bine cu prompturi in engleza, lungi, detaliate, cu instructiuni
+foto-tehnice specifice (lens, aperture, lighting, composition).
+
+CUM SE FOLOSESTE
+1. Acceseaza Gemini (gemini.google.com) sau aplicatia Banana 2 daca o ai
+   instalata.
+2. Selecteaza modul "Generate image" sau "Imagine".
+3. Copiezi promptul intreg din acest fisier (de la "Cinematic editorial..."
+   pana la "no cartoon style.").
+4. Astepti generarea (10-30 secunde).
+5. Daca tool-ul ofera 4 variante, alegi cea care respecta cel mai bine
+   compozitia ceruta.
+6. Salvezi imaginea la rezolutia maxima oferita.
+
+REGULI ESENTIALE LA GENERARE
+- NU modifica prompturile (au fost calibrate cu zeci de iteratii).
+- DA, generezi mai multe variante daca prima nu este perfecta.
+- Pastreaza paleta Trainity stricta: negru + alb + galben #FFD400.
+- Verifica compozitia inainte sa salvezi: subiectul cheie trebuie sa fie
+  in zona indicata (vezi notele de compozitie per prompt).
+
+DUPA GENERARE
+- Salveaza imaginile cu numele exact indicat in capul fiecarui prompt.
+- Pune-le in folderul `assets/` alaturi de fisierele HTML.
+- Daca livrezi fisier standalone (cu imagini incorporate base64), trimite
+  imaginile la Claude pentru integrare automata.
+
+VERIFICARE CONFORM (checklist universal aplicabil la fiecare creativ)
+Inainte sa accepti o imagine ca finala, raspunde DA la urmatoarele 8:
+1. Subiectul cheie este in pozitia ceruta?
+2. Lighting-ul este DOAR auriu/galben warm (zero alte culori)?
+3. Fundalul este in shadow profund (negru complet pe partea cu textul)?
+4. Aspect ratio este orizontal (3:2 sau 16:9, NU patrat sau vertical)?
+5. NU exista oameni, fete, maini in imagine (decat daca explicit cerut)?
+6. NU exista text gibberish (litere aleatoare sub forma de "text fake")?
+7. NU exista logo-uri vizibile sau brand text recognoscibil?
+8. Imaginea simte ca apartine SERIEI Trainity (continuitate cu celelalte
+   imagini deja generate pentru C03)?
+
+Daca pierzi un singur DA: regenereaza cu prompt-ul identic. Modelul produce
+variante diferite la fiecare rulare; alegi cea care trece checklist-ul.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 1 · COVER PAGE CU HOOK VIDEO YOUTUBE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA THUMBNAIL pentru video-ul YouTube al constructiei C03.
+Trebuie sa atraga click-ul. NU este o imagine cinematica subtila. Este
+HOOK BRUTAL pe paradoxul vizibilitatii: ce pare curat NU este curat.
+
+NUME FISIER SALVAT: `cover-yt-excel-03-auditare.jpg`
+DIMENSIUNE THUMBNAIL YT: 1280x720 px (16:9 orizontal)
+LOC IN PRODUCTIE: Thumbnail YouTube + cover pentru landing pages.
+
+
+COMPOZITIE CERUTA
+- Element principal centru-stanga: o pagina printata cu un tabel impecabil
+  la prima vedere - randuri uniforme, coloane drepte, cifre curate. Sub
+  o lampa cu fascicul warm yellow, devin vizibile insertii fluorescente:
+  spatii fantoma la finalul cuvintelor, caractere zero-width ca puncte
+  ghost, cifre stocate ca text revelate prin aliniere asimetrica.
+- Dreapta (zona text in 45% latime negru profund): spatiu pentru titlu
+  alb si subtitlu galben suprapuse in post-productie.
+- Lighting: lumina laterala calda peste pagina pe stanga, restul scenei
+  inchis. Aer cu particule fine ca un laborator forensic de noapte.
+
+
+PROMPT COMPLET (copiaza intreg in Banana 2):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a single printed spreadsheet page resting on a dark forensic examination
+desk. The table on the page appears clean at first glance with perfectly
+aligned rows, straight columns, well-formatted numbers. But under a soft
+warm yellow examination light raking across the page, faint fluorescent
+markings reveal hidden contaminants: invisible trailing spaces glowing
+as small dots at the end of words, zero-width characters as ghost marks
+between letters, numbers stored as text betrayed by left-alignment, dates
+written as strings exposed by inconsistent format. The contamination is
+invisible to the naked eye but the forensic lighting makes it visible.
+
+Composition: page positioned on the LEFT half of the frame, occupying
+about 55 percent of width, centered vertically. RIGHT side, 45 percent
+width, is deep black shadow reserved for typography overlay. The page
+is lit by a single warm directional light source from upper-left, giving
+it texture, paper grain, slight shadow depth. The dark side fades to
+near absolute black.
+
+Atmosphere: forensic laboratory at night. Fine dust particles in the
+light beam. The mood is investigative, quiet, methodical, not dramatic,
+not panicked. A specialist examining evidence.
+
+Color palette: strict. Only black, warm white for paper, warm yellow
+gold for highlights and fluorescent markings at #FFD400 tone, faint
+violet hint in deep shadows. No blue, no green, no red. The yellow
+markings should feel like discovered evidence, not decorative.
+
+Technical: shot on a full-frame camera, 50mm prime lens at f/4, shallow
+depth of field on the page edges, ISO 400, slight film grain. Reuters
+forensic documentary aesthetic. Photorealistic, no illustration style,
+no cartoon style."
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 2 · INFOGRAFIC INTELEGERE CONSTRUCTIE IN 10 SECUNDE
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Imagine de tip diagrama vizuala plasata in HTML-Studiu (cockpit operational)
+imediat dupa hero-band. Cititorul trebuie sa inteleaga in 10 secunde ce
+face C03 fara sa citeasca text.
+
+NUME FISIER SALVAT: `infografic-excel-03-auditare.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+LOC IN PRODUCTIE: HTML-Studiu sectiunea overview.
+
+
+COMPOZITIE CERUTA
+"Ah, C03 ia un tabel care pare curat, il trece printr-un audit invizibil
+si demonstreaza ce contaminari ascundea fara sa schimbe valoarea reala
+a datelor."
+- Stanga (35 percent): tabel aparent curat - pagina printata cu randuri
+  aliniate, cifre frumos formatate, ce pare verificabil.
+- Centru (30 percent): scanner forensic orizontal - o bara luminoasa
+  galbena trece peste pagina, lasand in urma marcaje fluorescente pe
+  celulele contaminate (spatii fantoma, caractere ascunse).
+- Dreapta (35 percent): raport forensic - pagina noua alaturata care
+  sumarizeaza pe categorii: 550 contaminari, 5 categorii, 0 valori
+  modificate.
+- Lighting: warm yellow accent peste scanner si raport, restul scena
+  in shadow profund.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial infographic photograph, 3:2 aspect ratio, 1920x1280
+px. Three-element horizontal composition representing data forensic audit:
+
+LEFT, 35 percent width: a printed spreadsheet page that appears
+immaculately clean - rows perfectly aligned, columns straight, numbers
+well-formatted, dates uniform. The viewer's first impression is that
+everything is fine.
+
+CENTER, 30 percent width: a horizontal forensic scanning bar of warm
+yellow light at #FFD400 tone passing across the page. Where the beam
+crosses, faint fluorescent yellow marks appear on specific cells:
+trailing space dots at word endings, ghost characters between letters,
+asymmetric alignment indicators on number cells. The beam reveals what
+was invisible.
+
+RIGHT, 35 percent width: a forensic report page placed beside the
+original, showing a structured summary with category icons and counts.
+The text is suggested but never readable as real words. The report
+visually implies contamination detected, values intact. A small warm
+yellow stamp or seal in the corner suggests certification.
+
+A subtle horizontal flow line connects the three elements suggesting
+sequence: appearance, scan, proof. No arrows, no logos, no text.
+
+Atmosphere: forensic laboratory desk seen from above. Warm desk lamp
+from the upper-right, fine particles in the air, paper texture visible.
+The mood is methodical, quiet, almost surgical - the precision of an
+analyst documenting evidence.
+
+Color palette: strict. Black background, warm white papers, warm yellow
+gold at #FFD400 highlights for the scanner beam and fluorescent
+markings, neutral gray for paper shadows. No blue, no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even depth of field across
+all three elements, ISO 200, slight film grain. Editorial photojournalism
+aesthetic. Photorealistic, no illustration style, no cartoon style.
+Maintain visual continuity with other scenes in the C03 series of
+forensic examination, fluorescent markings, evidence presentation."
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 3 · IMAGINI EXECUTIVE PER ETAPA (6 imagini)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceste sase imagini apar in EXECUTIVE SHOW la finalul HTML-VIDEO al C03.
+Sunt afisate cinematic in succesiune cu titlu si sub-titlu peste fiecare.
+Toate sase TREBUIE sa traiasca in acelasi univers vizual (continuitate
+de serie obligatorie).
+
+UNIVERS COMUN AL SERIEI C03
+- Decor recurent: birou forensic intunecat, hartie examinata, lumina
+  laterala calda, particule fine in aer.
+- Recurenta vizuala: pagina cu tabel + marcaje fluorescente galbene =
+  semnatura vizuala a C03.
+- Lighting recurent: o singura lumina calda directionala, restul scenei
+  in shadow profund.
+- Atmosphere: laborator de noapte, ritm metodic, fara dramatism.
+
+"Maintain strict visual continuity with the previous scenes in the C03
+series of forensic spreadsheet examination, fluorescent contamination
+markings, evidence documentation. Same surface, same lighting style,
+same paper type, same mood."
+
+
+─── IMAGINE 1 din 6 · ETAPA REALITATE ────────────────────────────────────
+
+NUME FISIER SALVAT: `executive-c03-01-realitate.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Aparenta de curatenie. Pagina printata cu tabel impecabil la
+prima vedere, lumina calda peste ea, fara niciun marcaj de contaminare
+inca vizibil. Operatorul recunoaste ca aparenta nu e dovada.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a single printed spreadsheet page on a dark forensic desk. The table is
+perfectly clean to the naked eye - rows aligned, numbers formatted,
+dates uniform. No contamination is visible. The page looks trustworthy.
+
+Composition: page positioned left-center, occupying about 55 percent of
+frame width. Right 45 percent is deep black shadow reserved for
+typography overlay. Page is lit by single warm directional light from
+upper-left, revealing paper texture and subtle grain without showing
+any flaws.
+
+Atmosphere: forensic laboratory at the moment before examination begins.
+Quiet, methodical, expectant. The viewer should feel that this looks
+fine, but wonder if it really is. Fine dust particles in the light beam.
+
+Color palette: strict black, warm white for paper, warm yellow gold
+accents on the lamp glow. No fluorescent markings yet - this is the
+before state. No blue, no green, no red.
+
+Technical: 50mm lens at f/4, shallow depth of field on page edges,
+ISO 400, slight film grain. Reuters forensic documentary aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series of forensic
+examination, fluorescent contamination markings, evidence documentation.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─── IMAGINE 2 din 6 · ETAPA INVESTIGATIE ─────────────────────────────────
+
+NUME FISIER SALVAT: `executive-c03-02-investigatie.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Auditul incepe. Un scanner luminos galben trece peste pagina.
+Pe celulele atinse de fascicul apar marcaje fluorescente. AI raporteaza,
+datele raman neatinse.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a printed spreadsheet page being scanned by a horizontal beam of warm
+yellow forensic light. Where the beam crosses the page, fluorescent
+yellow markings reveal themselves on specific cells: small dots at the
+end of words for trailing spaces, ghost characters between letters for
+zero-width spaces, left-alignment indicators on number cells for numbers
+stored as text, date-format inconsistencies.
+
+Composition: page positioned center-right, occupying about 55 percent of
+frame width. Left 45 percent is deep black shadow reserved for
+typography overlay. The yellow scanning beam crosses horizontally at the
+visual middle of the page, brighter where it touches problematic cells.
+
+Atmosphere: forensic laboratory in active examination. The scanner beam
+is the dominant light source. Fine particles drift through the beam.
+The mood is methodical investigation - discovery happening in real time,
+without drama, without panic. The page is being read, not modified.
+
+Color palette: strict black background, warm white paper, warm yellow
+gold at #FFD400 for the scanner beam and fluorescent contamination
+markings. Subtle violet hint in deep shadows suggesting UV examination
+wavelength. No blue, no green, no red.
+
+Technical: 50mm lens at f/4, sharp focus on the scan area, slight motion
+blur suggesting beam movement, ISO 400, film grain. Reuters forensic
+documentary aesthetic. Photorealistic, no illustration style, no cartoon
+style. Maintain visual continuity with other scenes in the C03 series
+of forensic examination, fluorescent contamination markings, evidence
+documentation. Same surface, same lighting style, same paper type,
+same mood."
+
+
+─── IMAGINE 3 din 6 · ETAPA TRANSFORMARE ─────────────────────────────────
+
+NUME FISIER SALVAT: `executive-c03-03-transformare.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Power Query ca audit engine. O succesiune vizibila de pasi PQ
+documentati pe o pagina alaturata, fiecare pas neutralizand o categorie
+de contaminare. Datele raman aceleasi, doar invelisul lor devine curat.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed pages side by side on a forensic desk, showing data audit
+transformation.
+
+LEFT page, 45 percent width: the original contaminated spreadsheet,
+fluorescent yellow markings still visible on problem cells - trailing
+space dots, ghost characters, left-aligned numbers, string-formatted
+dates.
+
+RIGHT page, 45 percent width: a documented audit recipe page, showing
+a list of forensic neutralization steps in structured format. Each line
+implies a Power Query transformation step, visually rendered as
+monospaced text blocks never readable as real words, each with a small
+warm yellow checkmark beside it. The recipe is documented, repeatable.
+
+Between the two pages, 10 percent center width: a soft warm yellow light
+gradient suggesting flow from contamination to clean, but no arrow,
+no logo, no explicit symbol.
+
+Atmosphere: forensic analyst's documentation moment. The contamination
+has been catalogued, the neutralization recipe written. The mood is
+methodical proof, the work of building reusable forensic protocol.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the fluorescent markings on the left page and for
+the checkmarks and gradient on the right. No blue, no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus across both
+pages, ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series of forensic
+examination, fluorescent contamination markings, evidence documentation.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─── IMAGINE 4 din 6 · ETAPA VERIFICARE ────────────────────────────────────
+
+NUME FISIER SALVAT: `executive-c03-04-verificare.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Conservarea sumei demonstrata. Doua pagini cu totaluri identice
+asezate alaturat - INPUT contaminat si OUTPUT curat. Suma martor egala
+pe ambele. Dovada ca operatia a curatat invelisul fara sa modifice
+valoarea reala.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed spreadsheet pages placed side by side on a forensic desk,
+each with a highlighted summary total at the bottom. The two totals are
+visually identical - same digits, same font, same warm yellow accent
+highlight box around them.
+
+LEFT page, 45 percent width: the contaminated input version, with faint
+fluorescent markings still visible on problem cells.
+
+RIGHT page, 45 percent width: the clean output version, identical layout
+but with all contamination removed. Numbers properly right-aligned,
+dates in uniform format, text cells clean.
+
+Between the two pages, 10 percent center width: negative space with
+subtle warm yellow ambient glow. No equals sign, no arrow, no logo.
+
+Both summary totals are highlighted with warm yellow gold at #FFD400
+box accents. The visual proof is unmistakable: the value is conserved.
+
+Atmosphere: the moment of forensic certification. Quiet, methodical,
+conclusive. The mood is earned trust - the work is done, the proof is
+on the desk.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 accents on the highlighted totals and faint contamination
+markings on the left page. No blue, no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus, ISO 200,
+slight film grain. Editorial photojournalism aesthetic. Photorealistic,
+no illustration style, no cartoon style. Maintain visual continuity
+with other scenes in the C03 series. Same surface, same lighting style,
+same paper type, same mood."
+
+
+─── IMAGINE 5 din 6 · ETAPA STABILIZARE ───────────────────────────────────
+
+NUME FISIER SALVAT: `executive-c03-05-stabilizare.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Refresh resistant. Cele cateva pagini cu pasi PQ asezate ca un
+flux care se reia singur la fiecare export nou. O pagina noua de date
+intra de sus, pasii PQ documentati o curata automat, pagina rezultata
+iese curata fara interventie manuala.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+three printed pages stacked in a vertical workflow on a dark forensic
+desk, viewed from a slight downward angle, depicting an automated audit
+pipeline.
+
+TOP page representing input: a freshly exported spreadsheet with new
+contamination markings - fluorescent yellow dots and ghost characters
+visible on cells, representing data that arrived contaminated.
+
+MIDDLE page representing pipeline: a documented audit protocol with
+structured monospaced text blocks suggesting Power Query steps. Small
+warm yellow checkmarks beside each step suggest the steps are active,
+automated.
+
+BOTTOM page representing output: a clean spreadsheet, no fluorescent
+markings, all data properly typed and formatted. A small warm yellow
+seal or stamp in the corner suggests certification.
+
+Between the three pages: subtle warm yellow ambient glow suggesting
+continuous flow, but no arrows, no logos, no explicit symbols.
+
+Atmosphere: the moment of system maturity. The audit recipe has become
+a self-running protocol. The mood is engineered confidence: repeatable,
+deterministic, refreshable.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the contamination markings, checkmarks, and stamp.
+No blue, no green, no red.
+
+Technical: top-down slight angle shot, 35mm lens at f/5.6, even focus
+across all three pages, ISO 200, slight film grain. Editorial photo
+journalism aesthetic. Photorealistic, no illustration style, no cartoon
+style. Maintain visual continuity with other scenes in the C03 series.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─── IMAGINE 6 din 6 · ETAPA CONFIRMARE (cap-coada catre C04) ─────────────
+
+NUME FISIER SALVAT: `executive-c03-06-confirmare.jpg`
+DIMENSIUNE: 1920x1280 px (3:2 orizontal)
+
+CONCEPT: Predarea bazei demonstrabile catre C04. Pagina curata C03 cu
+sigiliu de certificare, langa o pagina noua goala cu titlu implicit.
+Continuitate cap-coada in cadrul aceluiasi univers vizual.
+
+
+PROMPT COMPLET:
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed spreadsheet pages on a dark forensic desk, depicting the
+moment of handoff between two stages.
+
+LEFT page, 50 percent width: a completed audit-certified spreadsheet.
+All contamination is gone. In the bottom-right corner is a small warm
+yellow gold stamp or seal rendered as an abstract circular yellow mark,
+no readable text inside it, signifying forensic certification. The page
+projects authority, finality.
+
+RIGHT page, 50 percent width: the top of a new spreadsheet just placed
+beside the first. It is mostly blank, with only a faint header suggesting
+the next stage of work begins. The header area is empty, ready to be
+filled. The page suggests fresh production work, not a continuation of
+the same.
+
+Between the pages: minimal negative space. The two pages touch but do
+not overlap. A subtle warm yellow ambient glow connects them.
+
+Atmosphere: the closing of one chapter, the opening of the next. Quiet,
+deliberate, no celebration - the mood of a forensic specialist signing
+off and stepping away from the desk, leaving evidence prepared for the
+next stage.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the certification stamp and ambient glow. No blue,
+no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus across both
+pages, ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series. Same surface,
+same lighting style, same paper type, same mood."
+
+
+══════════════════════════════════════════════════════════════════════════════
+NOTE DE PRODUCTIE
+══════════════════════════════════════════════════════════════════════════════
+
+PALETA STRICTA C03
+- Negru fundal (#000000)
+- Alb cald hartie (~#F5F1E8)
+- Galben Trainity (#FFD400) - accent unic, folosit doar pentru sigilii,
+  marcaje fluorescente, beam-uri si highlight-uri
+- Violet subtil in shadows (sugestie UV forensic, NU dominant)
+- ZERO albastru, ZERO verde, ZERO rosu
+
+SEMNATURA VIZUALA C03
+- Pagina printata + marcaje fluorescente galbene = semnatura recurenta
+- Lumina laterala calda directionala = lighting recurent
+- Particule fine in beam = atmosfera recurenta
+- Sigiliu galben in colt = certificare forensic
+
+ORDINEA DE PRODUCTIE RECOMANDATA
+1. Genereaza intai SECTIUNEA 3 (cele 6 imagini executive show) - formeaza
+   universul vizual al constructiei C03.
+2. Apoi SECTIUNEA 2 (infograficul) - reuseste cu paleta deja stabilizata.
+3. Ultima SECTIUNEA 1 (cover YouTube) - varianta cea mai brutala, asculta
+   semnatura vizuala dar amplifica contrast.
+
+DUPA INTEGRARE BASE64
+- Imaginile cinematice (sectiunea 3) se incorporeaza inline in
+  HTML-Video-Excel-03-Auditare.html ca base64 (executive show).
+- Infograficul (sectiunea 2) ramane in folder assets/ si se referentiaza
+  prin path relativ in HTML-Studiu.
+- Cover YouTube (sectiunea 1) NU se include in HTML, se foloseste DOAR
+  pe YouTube si pe landing-uri.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SFARSIT FISIER CREATIVE-Excel-03-Auditare.txt
+══════════════════════════════════════════════════════════════════════════════

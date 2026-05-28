@@ -1,0 +1,28 @@
+regula: R-V03.61
+nume: "Buton RESETEAZĂ PROGRES lipit de meniu (responsive)"
+introdus_in: V33
+status: ACTIVĂ
+descriere: |
+  Butonul RESETEAZĂ PROGRES din .nav-controls trebuie lipit imediat sub meniu,
+  fără gap pe orice viewport.
+  
+  Implementare: .nav-controls NU are margin-top: auto (care crea gap pe viewport mic).
+
+target_files:
+  - "c*/HTML-Studiu-Excel-*.html"
+  - "c*/HTML-Editor-Studiu-Excel-*.html"
+
+target_canonic: false
+
+operatii:
+  - tip: regex_replace
+    pattern: '(\.nav-controls\s*\{[^}]*?)\s*margin-top:\s*auto\s*;?\s*'
+    replacement: '\1'
+
+detector:
+  scope: "studiu+editor_studiu"
+  fn_python: |
+    m = re.search(r'\.nav-controls\s*\{[^}]+\}', content)
+    return m and 'margin-top: auto' not in m.group(0) and 'margin-top:auto' not in m.group(0)
+
+mesaj_commit: "R-V03.61: buton RESETEAZĂ lipit responsive - editat C01-C05"

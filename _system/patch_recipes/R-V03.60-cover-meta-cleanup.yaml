@@ -1,0 +1,26 @@
+regula: R-V03.60
+nume: "Cover-meta fără rândurile INPUT/OUTPUT"
+introdus_in: V32
+status: ACTIVĂ
+descriere: |
+  Cover-meta din HTML-Studiu și HTML-Editor-Studiu trebuie să conțină EXACT 3 rânduri canonice:
+  TREAPTA, CONSTRUCȚIE, AI INTEGRAT.
+  
+  Rândurile INPUT și OUTPUT (schema veche pre-R-V03.47) trebuie ELIMINATE.
+
+target_files:
+  - "c*/HTML-Studiu-Excel-*.html"
+  - "c*/HTML-Editor-Studiu-Excel-*.html"
+
+target_canonic: false
+
+operatii:
+  - tip: sterge_linii
+    pattern: '<div[^>]*><span\s+class="cover-meta-key"[^>]*>(?:INPUT|OUTPUT)<'
+
+detector:
+  scope: "studiu+editor_studiu"
+  fn_python: |
+    return 0 == len(re.findall(r'cover-meta-key">(?:INPUT|OUTPUT)<', content))
+
+mesaj_commit: "R-V03.60: cover-meta cleanup INPUT/OUTPUT - editat C01-C05"
