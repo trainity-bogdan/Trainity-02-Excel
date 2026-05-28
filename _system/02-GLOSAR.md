@@ -29,7 +29,7 @@ Cele 3 axe de analiză descriptivă T2 CUNOAȘTERE.
 ## B
 
 **Banana 2**
-Tool de generare imagini cinematice (asset Trainity perpetuu). Produce imagini 3:2 format jpg + png pentru exec-stage-1..6 (cele 6 stadii cinematice din HTML-Video).
+Tool de generare imagini cinematice (asset Trainity perpetuu). Produce imagini 3:2 format jpg pentru exec-stage-1..6 (cele 6 stadii cinematice din HTML-Video). V41: eliminat PNG duplicate (wasteful pentru photo-realistic).
 
 **Base64 inline (R-V03.33)**
 Imaginile cinematic sunt încorporate în HTML-Video ca data URI, nu ca fișiere separate. HTML-Video e self-contained ~800KB.

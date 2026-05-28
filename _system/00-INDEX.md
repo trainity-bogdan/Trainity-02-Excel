@@ -6,7 +6,7 @@
 
 ## Ce este acest sistem
 
-Un pachet de **20 de construcții educaționale Excel** (C01-C20), augmentate cu AI, organizate pe 5 trepte SCARA. Fiecare construcție livrează 7 artefacte canonice (studiu interactiv, film cinematic, dataset, narativă, script video) + folder `assets/` cu 12 imagini exec-stage.
+Un pachet de **20 de construcții educaționale Excel** (C01-C20), augmentate cu AI, organizate pe 5 trepte SCARA. Fiecare construcție livrează 7 artefacte canonice (studiu interactiv, film cinematic, dataset, narativă, script video) + folder `assets/` cu 6 imagini exec-stage jpg.
 
 Acesta este sistemul TRAINITY pentru produsele B2C (Pack Work 10X Excel) și B2B (Sistem Trainity Excel).
 
@@ -106,7 +106,7 @@ Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bog
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
 │   ├── Date_MASTER-C01.xlsx
 │   ├── Creativ + FILM
-│   └── assets/                       12 imagini exec-stage SPECIFICE C01 (jpg+png)
+│   └── assets/                       6 imagini exec-stage SPECIFICE C01 (jpg, 3:2 cinematic)
 │
 ├── c02/  c03/  c04/  c05/            idem (fiecare cu assets/ proprii)
 └── (c06-c20: queue)

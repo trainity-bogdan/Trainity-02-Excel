@@ -276,7 +276,7 @@ Cele 7 artefacte includ:
 - 6 livrabile cursant (R-V03.47: HTML × 4 + Date_MASTER + Creativ)
 - 1 artefact arhivare: `FILM-Excel-NN-{slug}.docx`
 
-Asset-urile cinematic (12 imagini exec-stage × jpg+png) sunt centralizate în `_system/referinte/assets_canonice/`, NU duplicate per construcție.
+Asset-urile cinematic (6 imagini exec-stage jpg per construcție, V39+) sunt în `cNN/assets/`, **diferite per axă** (regula R-V39.assets). Schema veche `_system/referinte/assets_canonice/` cu poze partajate — eliminată V39.
 
 **Detector empiric:** prezența `FILM-Excel-NN-*.docx` în folderul construcției.
 

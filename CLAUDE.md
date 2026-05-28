@@ -111,7 +111,7 @@ cNN/
 ├── HTML-Video, HTML-Editor-Video (base64 inline)
 ├── Date_MASTER-CNN.xlsx
 ├── Creativ + FILM
-└── assets/           ← cele 6 imagini exec-stage ALE construcției (jpg+png)
+└── assets/           ← cele 6 imagini exec-stage ALE construcției (jpg, 3:2 cinematic)
 ```
 
 **MATRIȚA pentru COPY+MODIFY** = `_template/`. La generare CNN, citești de aici.

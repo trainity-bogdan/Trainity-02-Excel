@@ -20,7 +20,7 @@ Fiecare folder `cNN/` conține următoarele 7 fișiere + folderul `assets/`:
 | 6 | `Creativ-Excel-NN-{slug}.txt` | Narativa creativă a construcției — voce trainer, identitate cinematică | TXT |
 | 7 | `FILM-Excel-NN-{slug}.docx` | Script video procedural cinematic ~150 paragrafe pentru OBS recording | DOCX |
 
-Plus folderul `cNN/assets/` cu 12 imagini exec-stage (6 numere × jpg+png), **specifice axei construcției**.
+Plus folderul `cNN/assets/` cu 6 imagini exec-stage (jpg, 3:2 cinematic), **specifice axei construcției**.
 
 ---
 
@@ -36,10 +36,10 @@ cNN/
 ├── Creativ-Excel-NN-{slug}.txt
 ├── FILM-Excel-NN-{slug}.docx
 └── assets/
-    ├── exec-stage-1.jpg / .png
-    ├── exec-stage-2.jpg / .png
+    ├── exec-stage-1.jpg
+    ├── exec-stage-2.jpg
     ├── ...
-    └── exec-stage-6.jpg / .png
+    └── exec-stage-6.jpg
 ```
 
 **Schema veche (pre-V39):** existau `cNN/canonic/` (înghețat) + `cNN/editat/` (evolutiv) cu meta marker `trainity-snapshot`. Eliminată — versionarea o face git (commit + branch + tag v{N}) conform regulilor G1-G5 din CLAUDE.md.
@@ -65,7 +65,7 @@ _template/
 ├── Date_MASTER-C01.xlsx
 ├── Creativ-Excel-01-Structura.txt
 ├── FILM-Excel-01-Structura.docx
-└── assets/                                   ← 12 imagini placeholder
+└── assets/                                   ← 6 imagini placeholder jpg
 ```
 
 **Flow generare CNN:**
@@ -168,7 +168,7 @@ La comanda `genereaza CNN`:
 3. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx` + SPEC CNN (schema sheet-uri input/output)
 4. Generează Creativ-Excel-NN-{slug}.txt din SPEC narativ
 5. Generează FILM-Excel-NN-{slug}.docx prin sablon + completare cu specificul CNN
-6. Copiază/generează 12 imagini exec-stage în `cNN/assets/` (placeholder din _template inițial; ARHITECT regenerează cu Banana 2 specifice axei)
+6. Copiază/generează 6 imagini exec-stage jpg în `cNN/assets/` (placeholder din _template inițial; ARHITECT regenerează cu Banana 2 specifice axei)
 7. Scrie în `cNN/` (un singur folder)
 8. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
 9. Gate v20 → confirmare PASS

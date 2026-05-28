@@ -42,7 +42,7 @@ Detectori activi (V40):
 - R-V03.33 imagini base64 inline în Video
 - R-V03.47 cele 6 livrabile canonice
 - R-V03.58 FILM.docx prezent
-- R-V39.assets folder `assets/` cu 12 imagini exec-stage
+- R-V39.assets folder `assets/` cu 6 imagini exec-stage jpg (V41 update: eliminat PNG duplicate wasteful)
 
 ---
 
@@ -165,7 +165,7 @@ Toate lecțiile cumulate (L01-L159) în `_system/arhiva/brain-evolutia-V01-V38.m
 | COVER-CHECKLIST.md | `_system/referinte/` | ✓ |
 | PROTOCOL-FILM-OBS.md | `_system/referinte/` | ✓ |
 | highlighter-snippet.{css,js} | `_system/referinte/` | ✓ |
-| 12 imagini exec-stage per cNN | `cNN/assets/` | ✓ jpg+png (diferite per construcție) |
+| 6 imagini exec-stage per cNN | `cNN/assets/` | ✓ jpg 3:2 cinematic (diferite per construcție; PNG eliminat V41) |
 | _template/ matriță | rădăcină | ✓ 7 livrabile + assets/ |
 
 ---

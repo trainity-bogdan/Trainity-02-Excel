@@ -7,7 +7,7 @@ Audit empiric de sincronizare. Structura noua:
     HTML-* x4
     Date_MASTER-CNN.xlsx
     Creativ + FILM
-    assets/             cele 12 imagini exec-stage
+    assets/             cele 6 imagini exec-stage (jpg)
 
 Usage:
     python3 _system/generatoare/audit_sync.py
@@ -73,13 +73,12 @@ def _r0358(folder):
     if not nn: return False
     return bool(glob.glob(os.path.join(folder, f'FILM-Excel-{nn}-*.docx')))
 
-@detector('R-V39.assets', 'Folder assets/ cu 12 imagini exec-stage', 'folder')
+@detector('R-V39.assets', 'Folder assets/ cu 6 imagini exec-stage jpg', 'folder')
 def _rassets(folder):
     assets = os.path.join(folder, 'assets')
     if not os.path.isdir(assets): return False
     jpgs = glob.glob(os.path.join(assets, 'exec-stage-*.jpg'))
-    pngs = glob.glob(os.path.join(assets, 'exec-stage-*.png'))
-    return len(jpgs) == 6 and len(pngs) == 6
+    return len(jpgs) == 6
 
 
 def audit(root='.', json_out=False):

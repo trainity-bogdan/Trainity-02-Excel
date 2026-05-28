@@ -62,7 +62,7 @@ Fiecare construcție are **un singur set** de fișiere în `cNN/`. NU mai exist�
 
 **Matrița pentru generare** = `_template/` (clonă a structurii, folosită la COPY+MODIFY pentru C06+).
 
-**Imaginile sunt DIFERITE per construcție** — fiecare `cNN/assets/` conține cele 6 imagini exec-stage (jpg+png) specifice acelei construcții. La generare nouă, se înlocuiesc cu poze Banana specifice axei.
+**Imaginile sunt DIFERITE per construcție** — fiecare `cNN/assets/` conține cele 6 imagini exec-stage (jpg) specifice acelei construcții. La generare nouă, se înlocuiesc cu poze Banana specifice axei.
 
 ---
 
@@ -76,7 +76,7 @@ Fiecare construcție are **un singur set** de fișiere în `cNN/`. NU mai exist�
 6. Creativ-Excel-NN-{slug}.txt
 7. FILM-Excel-NN-{slug}.docx
 
-Plus folder `assets/` cu cele 12 fișiere imagine (6 × jpg+png).
+Plus folder `assets/` cu cele 6 fișiere imagine exec-stage (jpg, 3:2 cinematic).
 
 ---
 

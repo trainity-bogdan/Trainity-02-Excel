@@ -69,7 +69,7 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
 
 7. **Generez `Creativ-Excel-06-{slug}.txt`** și **`FILM-Excel-06-{slug}.docx`**
 
-8. **Copiez 12 imagini placeholder** din `_template/assets/` în `c06/assets/`
+8. **Copiez 6 imagini jpg placeholder** din `_template/assets/` în `c06/assets/`
 
 9. **Scriu toate în `c06/`** (un singur folder, fără canonic/editat)
 
@@ -160,11 +160,11 @@ Decizi cum mergi: push + PR (recomandat pentru schimbări sistemice), sau merge 
 
 ## Variant A — Atașezi pozele în chat
 
-> *„Pentru C06, poza nouă exec-stage-1: [atașat exec-stage-1-c06.jpg + exec-stage-1-c06.png]. Aplică în HTML-Video."*
+> *„Pentru C06, poza nouă exec-stage-1: [atașat exec-stage-1-c06.jpg]. Aplică în HTML-Video."*
 
 ## Variant B — Pozele sunt deja pe disk local
 
-Tu le-ai salvat manual în `c06/assets/exec-stage-1.{jpg,png}` și commit-uit. Apoi:
+Tu le-ai salvat manual în `c06/assets/exec-stage-1.jpg` și commit-uit. Apoi:
 
 > *„Pentru C06, exec-stage-1 e schimbat în assets/. Reaplică base64 în HTML-Video."*
 

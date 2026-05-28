@@ -56,7 +56,7 @@ comenzi:
       - "Generez Date_MASTER-C{NN}.xlsx din _system/referinte/Date_MASTER-initial.xlsx + SPEC"
       - "Generez Creativ-Excel-{NN}-{slug}.txt"
       - "Generez FILM-Excel-{NN}-{slug}.docx"
-      - "Copiez 12 imagini placeholder din _template/assets/ în c{NN}/assets/"
+      - "Copiez 6 imagini jpg placeholder din _template/assets/ în c{NN}/assets/"
       - "Scriu toate în c{NN}/"
       - "git add c{NN}/ && git commit -m 'feat(c{NN}): generare initiala'"
     post_check:
@@ -187,14 +187,14 @@ comenzi:
     pre_check:
       - "Pozele atașate sau prezente local"
     executie:
-      - "Salvez pozele în c{NN}/assets/exec-stage-{X}.{jpg,png}"
+      - "Salvez poza ca c{NN}/assets/exec-stage-{X}.jpg (dacă input e PNG, convert la JPG quality 88)"
       - "Encode base64"
       - "Înlocuiesc în c{NN}/HTML-Video-Excel-{NN}-{slug}.html și HTML-Editor-Video"
       - "git add c{NN}/ && git commit -m 'chore(c{NN}): poza exec-stage-{X}'"
     post_check:
       - "audit_sync.py → ZERO DRIFT"
     atinge:
-      - "c{NN}/assets/exec-stage-{X}.{jpg,png}"
+      - "c{NN}/assets/exec-stage-{X}.jpg"
       - "c{NN}/HTML-Video-Excel-*.html"
       - "c{NN}/HTML-Editor-Video-Excel-*.html"
     raport: "Imagine nouă exec-stage-{X} în C{NN}. Commit local. Push când vrei."
@@ -208,7 +208,7 @@ comenzi:
       - "ARHITECT confirmă (impact pe toate)"
       - "Working tree clean"
     executie:
-      - "Pentru fiecare c{NN}/ existent: salvez în c{NN}/assets/exec-stage-{X}.{jpg,png}"
+      - "Pentru fiecare c{NN}/ existent: salvez în c{NN}/assets/exec-stage-{X}.jpg"
       - "Re-encode base64"
       - "Aplic peste toate c*/HTML-Video-*.html + HTML-Editor-Video"
       - "git add . && git commit -m 'chore(brand): exec-stage-{X} pe toate construcțiile'"

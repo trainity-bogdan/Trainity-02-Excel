@@ -268,7 +268,7 @@ Toate verbele la persoana 1 plural în sesiunile narrative:
 
 ### Imagini cinematic
 
-12 fișiere `exec-stage-1.jpg/png` până la `exec-stage-6.jpg/png` per construcție, în `cNN/assets/`.
+6 fișiere `exec-stage-1.jpg` până la `exec-stage-6.jpg` per construcție, în `cNN/assets/` (3:2 cinematic, V41 eliminat PNG duplicate).
 
 **Important (V39):** imaginile sunt **diferite per construcție** — fiecare cNN/ are propriul `assets/` cu pozele specifice axei sale. NU mai există `_system/referinte/assets_canonice/` partajat (eliminat la V39). Pentru o poză nouă brand care merge peste toate construcțiile, se aplică patch pe fiecare `cNN/assets/` separat.
 

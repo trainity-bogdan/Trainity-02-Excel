@@ -26,7 +26,7 @@ Motorul face:
 4. Aplică COPY+MODIFY pe cele 4 HTML-uri
 5. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx`
 6. Generează Creativ-Excel-NN-{slug}.txt + FILM-Excel-NN-{slug}.docx
-7. Copiază 12 imagini placeholder în `cNN/assets/`
+7. Copiază 6 imagini jpg placeholder în `cNN/assets/`
 8. Scrie totul în `cNN/`
 9. Rulează `audit_sync.py` → confirmă zero drift
 10. Rulează `gate_v20.py NN cNN _template` → PASS
@@ -108,14 +108,14 @@ Sau, dacă vrei să fac eu commit-ul:
 
 | Vrei să... | Scrii în chat | Atașez? |
 |---|---|---|
-| Înlocuiești poza X în C06 | `pentru C06, poza nouă exec-stage-1` + atașezi cele 2 fișiere (jpg + png) | DA |
+| Înlocuiești poza X în C06 | `pentru C06, poza nouă exec-stage-1` + atașezi fișierul (jpg sau png — îl salvez ca jpg) | DA |
 | Înlocuiești poză peste toate | `aceasta poză înlocuiește exec-stage-1 la toate` + atașezi | DA |
 | Folosești poză care e deja în repo | `pentru C06, refoloseste imaginea curentă din c06/assets/` | NU |
 
 ### Detalii
 
 **Asset-uri per construcție:**
-Imaginile sunt **diferite per construcție** (V39). Trăiesc în `cNN/assets/exec-stage-1..6.{jpg,png}`. Eu le pun acolo, le encodez base64, le inlinuesc în HTML-Video + HTML-Editor-Video, commit cu mesaj `chore(cNN): poza exec-stage-X`.
+Imaginile sunt **diferite per construcție** (V39). Trăiesc în `cNN/assets/exec-stage-1..6.jpg` (3:2 cinematic, V41 eliminat PNG duplicate). Eu le pun acolo, le encodez base64, le inlinuesc în HTML-Video + HTML-Editor-Video, commit cu mesaj `chore(cNN): poza exec-stage-X`.
 
 **Asset-uri brand (toate construcțiile):**
 Pentru o imagine brand-wide, branch `chore/brand-exec-stage-X` + aplic în fiecare `cNN/assets/` separat. Merge prin PR (recomandat pentru schimbări brand-wide).
