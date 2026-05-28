@@ -2977,6 +2977,13 @@ body.exec-mode .screen.active::after { display: none; }
 
 <script id="edit-script">
 (function setupLiveEditor() {
+  // V42: pe touch devices (tableta/mobil), NU activez mod edit
+  // → text rămâne pur viewer, click stânga/dreapta navighează curat
+  // → fără outline flash, fără ✕ accidental, fără focus contenteditable
+  // → editarea reală se face pe desktop cu mouse precise
+  if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
+    return;
+  }
   const EDITABLE_SELECTORS = [
     ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
     ".explain-emotion", ".explain-name", ".explain-hook", ".explain-next",
