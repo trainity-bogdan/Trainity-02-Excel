@@ -3126,8 +3126,7 @@ window.editorExport = function() {
   clone.querySelectorAll("[contenteditable]").forEach(e => e.removeAttribute("contenteditable"));
   clone.querySelectorAll("[spellcheck]").forEach(e => e.removeAttribute("spellcheck"));
   clone.querySelectorAll("[data-editor-ready]").forEach(e => e.removeAttribute("data-editor-ready"));
-  const html = "<!DOCTYPE html>
-" + clone.outerHTML;
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
   const blob = new Blob([html], {type: "text/html"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
