@@ -1,8 +1,8 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V40
+**Versiune sistem:** V41
 **Ultima actualizare:** 28 mai 2026
-**Ultima sesiune:** Sesiune audit exhaustiv V40 — reparare infrastructura validare (audit_sync encoding, gate_v20 print, pre_generation_check path), sync docs cu V39 (assets per cNN, schema Date_MASTER), refactor complet GitHub → OneDrive (12 docs), cleanup fisiere stale
+**Ultima sesiune:** Fix responsive complet pe matrița HTML-Studiu (safe-area iPhone, breakpoint-uri 380px/landscape, a11y aria-expanded/keyboard) + **refactor invers OneDrive → git** (V40 a fost OneDrive, V41 revine la git ca singura sursă de versionare; reguli G1-G5 noi în CLAUDE.md)
 
 ---
 
@@ -30,7 +30,7 @@
 
 ```
 ✓ 8 detectoare empirice × 5 construcții = 40 verificări PASS
-✓ ZERO DRIFT (versiune unică per cNN — OneDrive ține istoricul + backup auto pre-destructive)
+✓ ZERO DRIFT (versiune unică per cNN — git ține istoricul complet via log/tags/branches)
 ✓ Toate cele 7 artefacte + assets/ prezente per construcție
 ```
 
@@ -57,6 +57,23 @@ Detectori activi (V40):
 
 ---
 
+## Sesiunea V41 (28 mai 2026) — Responsive matriță + refactor git
+
+**Lucrări:**
+1. **Fix responsive complet pe `_template/HTML-Studiu`** (matriță, NU propagat la C01-C05):
+   - Critical: safe-area iPhone (notch + home indicator) pe mobile-topbar/side-nav/continue-btn/scroll-top, padding-uri intermediare 641-1024px (exec-hero, payoff-section), cover-meta-row tabletă (150px gutter), inv-item-status mobile pill, prompt-box mobile padding + `word-break: break-word`, stage-number `clamp(56-96px)` unificat
+   - Medium: breakpoint `≤380px` (iPhone SE / Android budget) + continue-btn condensat sub 380px + landscape phone drawer
+   - A11y: `aria-expanded` dinamic pe mobile-toggle + `aria-hidden` pe overlay + Escape închide drawer + focus management + `role=button` / `tabindex=0` / `aria-label` pe `.step-check` + keyboard support (Space/Enter)
+   - Commit: `2a31f46` pe branch `claude/status-7j30w`, push reușit pe origin
+2. **Refactor invers OneDrive → git** (V40 a fost greșit înțeles — ARHITECT folosește git, nu OneDrive):
+   - CLAUDE.md: secțiunea „VERSIONARE ONEDRIVE + BACKUP DISCIPLINE" rescrisă ca „VERSIONARE GIT" cu regulile G1-G5
+   - STARE-CURENTA, README, COMENZI.yaml, 00-INDEX, 01-REGULI, 02-GLOSAR, 03-COMENZI-OPERATIONALE, 04-ARHITECTURA-LIVRABILE, 05-WORKFLOW-PER-SCENARIU: rescrise referințele OneDrive
+   - Reguli noi git (G1 branch-per-task, G2 commit descriptiv, G3 tag V{N} la increment, G4 restore git, G5 PR pentru schimbări sistemice) — au înlocuit V1/V2/V3 OneDrive
+
+**L159 (nou):** Sistemul a oscilat două sesiuni la rând între GitHub și OneDrive (V40 a refactorizat spre OneDrive bazat pe presupunere; V41 revine la git pe confirmare directă din partea ARHITECT). **Regulă durabilă:** orice schimbare a workflow-ului de versionare se face DOAR pe confirmare scrisă explicită din partea ARHITECT, nu pe deducție din artefacte existente.
+
+---
+
 ## Sesiunea de audit V40 (28 mai 2026)
 
 Audit exhaustiv din partea ARHITECT. Findings prioritizate (14 total, 4 critical), fix-uri aplicate în Sesiunea 2.
@@ -79,23 +96,8 @@ Audit exhaustiv din partea ARHITECT. Findings prioritizate (14 total, 4 critical
 - **#12 STARE-CURENTA detectori** — eliminat R-V03.62-c/e marker (nu se mai folosesc).
 - **#13 .gitignore** — eliminat `*-Editat.html.bak` (convenție nume veche).
 
-**Finding adițional V40 (clarificat de ARHITECT post-raport):**
-- **#15 Sistemul a fost designat pentru GitHub** dar ARHITECT folosește **OneDrive** (nu Git). Multiple docs aveau referințe Git/GitHub stale.
-- **Fixat COMPLET în această sesiune:**
-  - `CLAUDE.md` — nouă secțiune "VERSIONARE ONEDRIVE + BACKUP DISCIPLINE" cu regulile V1/V2/V3
-  - `README.md` — versionare OneDrive
-  - `STARE-CURENTA.md` — eliminat ref Git + L158
-  - `_system/COMENZI.yaml` — eliminat Git, adăugat BACKUP AUTO + comandă nouă `snapshot V{N}`
-  - `_system/04-ARHITECTURA-LIVRABILE.md` — rewrite complet V39+OneDrive
-  - `_system/05-WORKFLOW-PER-SCENARIU.md` — rewrite complet cele 5 scenarii fără GitHub Desktop
-  - `_system/03-COMENZI-OPERATIONALE.md` — rewrite complet workflow OneDrive
-  - `_system/01-REGULI-ACTIVE.md` — R-V01.1, R-V01.5, R-V02.0, R-V03.37 actualizate, R-V03.66+ propus
-  - `_system/INDEX-CAUTARE.md` — V40, canonic/editat marcate ABSORBITE, top 10 comenzi V40
-  - `_system/02-GLOSAR.md` — Canonic, Editat, Meta marker ABSORBITE V39; Matriță/Pilot/Setup actualizate la _template/
-  - `_system/00-INDEX.md` — rewrite structură repo V40 + snapshots/
-  - `GHID-SETUP-GITHUB.md` → mutat la `_system/arhiva/GHID-SETUP-GITHUB-PLAN-NEEXECUTAT.md`
-- **Audit final:** ZERO DRIFT 40/40 confirmat post-toate-modificările.
-- **Total fișiere modificate V40:** 14 docs + 3 scripturi Python + 1 fișier mutat în arhivă + 2 fișiere memorie create.
+**Finding adițional V40 (REVOCAT în V41):**
+- **#15 V40 a presupus că ARHITECT folosește OneDrive.** Presupunerea greșită — ARHITECT lucrează doar cu git. V41 a rescris înapoi toate docurile spre workflow git (vezi sesiunea V41 mai sus).
 
 **Confirmate empiric PASS:**
 - Zero em-dash (—), zero en-dash (–), zero vocab interzis în HTML-uri C01-C05
@@ -119,9 +121,10 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L155** Punctarea permanentă a sincronizării prin audit empiric (V38)
 - **L156** Audit infrastructure poate ascunde drift real prin exception silent capture — orice `except Exception:` fără raportare pe stderr e suspect. Toate scripturile de validare TREBUIE să raporteze ERR explicit, nu doar PASS/FAIL.
 - **L157** Documentația sistemului poate diverge silent de realitatea pe disk la refactor (V38→V39 a lăsat 4 docs stale). La fiecare refactor structural, audit sync docs-vs-disk e obligatoriu.
-- **L158** Sistemul a fost designat pentru GitHub workflow (commits, push, GitHub Desktop) dar ARHITECT folosește OneDrive. Multiple docs și COMENZI.yaml asumau Git ca versionare. **Regulă nouă:** orice nou doc/comandă verifică ce versionare folosește ARHITECT efectiv înainte de a presupune nimic. OneDrive = backup auto pre-destructive + snapshots V{N} (vezi CLAUDE.md "VERSIONARE ONEDRIVE").
+- **L158** [REVOCAT în V41] V40 a presupus OneDrive bazat pe artefacte istorice (foldere `OUT-V{N}.zip`, lipsa `.gitignore` clar). Confirmare directă V41: ARHITECT folosește exclusiv git.
+- **L159** Workflow-ul de versionare nu se schimbă pe deducție din artefacte. Doar pe confirmare scrisă explicită din partea ARHITECT. Două sesiuni consecutive au oscilat între GitHub și OneDrive pentru că am inferat în loc să întreb. **Regulă durabilă:** la orice schimbare de model (versionare, structură repo, convenție livrabile), motor întreabă ARHITECT direct înainte de a refactoriza docs.
 
-Toate lecțiile cumulate (L01-L158) în `_system/arhiva/brain-evolutia-V01-V38.md`.
+Toate lecțiile cumulate (L01-L159) în `_system/arhiva/brain-evolutia-V01-V38.md`.
 
 ---
 
