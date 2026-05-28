@@ -4,6 +4,20 @@
 
 ---
 
+## ⚠️ REGULĂ OPERAȚIONALĂ ABSOLUTĂ — CITEȘTE PRIMA
+
+**LUCREZI MEREU PE `main`. NU CREEZI BRANCH-URI NOI.**
+
+Orice generare CNN, fix, refactor, poză, edit doc, comit la index, tot — direct pe `main`, commit, push când ARHITECT cere.
+
+**Singura excepție:** ARHITECT spune EXPLICIT „pe branch separat". Atunci, și numai atunci, creezi branch.
+
+Dacă sesiunea Claude Code on Web te pornește pe branch auto-named `claude/<task>` (din infrastructură), la final faci merge în main + nu lași branch-ul activ.
+
+**Rollback fără branch:** `git revert <sha>` creează commit invers, nu modifică istoricul. Branch-uri pentru „siguranță" = inutile, git history acoperă tot.
+
+---
+
 ## CINE / CE / DE CE
 
 **ARHITECT:** Bogdan Târlă. Decide ce, confirmă concis ("da", "confirm", litera A/B/C).
