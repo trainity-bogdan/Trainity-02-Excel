@@ -42,12 +42,12 @@ cNN/
     └── exec-stage-6.jpg / .png
 ```
 
-**Schema veche (pre-V39):** existau `cNN/canonic/` (înghețat) + `cNN/editat/` (evolutiv) cu meta marker `trainity-snapshot`. Eliminată — versionarea o face OneDrive (auto-sync, Version History per fișier) + disciplină backup (regulile V1 și V2 din CLAUDE.md).
+**Schema veche (pre-V39):** existau `cNN/canonic/` (înghețat) + `cNN/editat/` (evolutiv) cu meta marker `trainity-snapshot`. Eliminată — versionarea o face git (commit + branch + tag v{N}) conform regulilor G1-G5 din CLAUDE.md.
 
 **Avantaje versiune unică:**
 - O singură copie pe disk (50% storage)
 - Workflow editare simplificat (nu mai e nevoie de "patch peste editat")
-- OneDrive Version History (per fișier) + snapshots V{N} (per stare oficială) sunt sursele de adevăr pentru evoluție
+- git log + tag v{N} sunt sursa de adevăr pentru evoluție (per fișier prin `git log --follow -- path`, per stare oficială prin `git checkout v{N}`)
 - Audit simplificat (8 detectoare × N construcții, nu × 2 versiuni)
 
 ---
@@ -76,7 +76,7 @@ _template/
 5. Scrie în `cNN/`
 6. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
 7. Gate v20 → confirmare PASS
-8. OneDrive sync auto (eventual snapshot V{N} la consolidare)
+8. `git add c{NN}/ && git commit -m 'feat(c{NN}): generare initiala'` (push când ARHITECT cere; tag v{N} la consolidare)
 
 ---
 
@@ -117,7 +117,7 @@ Ambele au același conținut narativ + structural, dar:
 | **Export funcțional** | N/A | Buton 💾 EXPORT descarcă HTML curat (fără toolbar) |
 | **Rol în workflow** | Versiunea livrată cursantului | Versiunea cu care lucrezi tu, ARHITECT |
 
-**Workflow editare V39:** ARHITECT deschide `HTML-Editor-Studiu` → editează inline → EXPORT → înlocuiește `HTML-Studiu` cu fișierul exportat (fără toolbar) în `cNN/`. OneDrive sync auto + Version History captează modificarea per fișier.
+**Workflow editare V39 (git V41):** ARHITECT deschide `HTML-Editor-Studiu` → editează inline → EXPORT → înlocuiește `HTML-Studiu` cu fișierul exportat (fără toolbar) în `cNN/` → `git add c{NN}/ && git commit -m 'docs(c{NN}): editare ARHITECT'`. Istoricul per fișier accesibil via `git log --follow -- c{NN}/HTML-Studiu-...html`.
 
 Aceeași logică pentru `HTML-Video` vs `HTML-Editor-Video`.
 

@@ -45,13 +45,13 @@ După orice modificare la livrabile, rulează `_system/generatoare/audit_sync.py
 |---|---|---|
 | `status` | Raportez stare + audit | citește STARE-CURENTA + rulează audit_sync |
 | `genereaza CNN` | Prima generare construcție | `_system/COMENZI.yaml` → genereaza_constructie |
-| `regenereaza CNN de la zero` | Suprascrie versiunea (cu confirmare) | backup auto `cNN_BACKUP_AAAALLZZ_pre-regen/` înainte |
+| `regenereaza CNN de la zero` | Suprascrie versiunea (cu confirmare) | branch dedicat `regen/cNN-AAAALLZZ` + commit înainte de suprascriere |
 | `verifica sincronizare` | Rulez audit_sync.py | raportez tabel drift |
-| `aplica fix [desc]` | Patch script peste construcții | folosesc patch_runner.py + rețetă YAML + backup auto dacă >3 fișiere |
-| `compara C{NN} cu versiunea anterioara` | Diff vs versiune mai veche OneDrive | folosesc OneDrive Version History per fișier |
+| `aplica fix [desc]` | Patch script peste construcții | folosesc patch_runner.py + rețetă YAML pe branch `fix/<desc>` |
+| `compara C{NN} cu versiunea anterioara` | Diff vs versiune mai veche | `git log -- cNN/`, `git show <sha>:cNN/...`, `git diff v{N-1}..HEAD -- cNN/` |
 | `regula noua R-V03.X: [desc]` | Codific regulă nouă | adaug în 01-REGULI + detector + rețetă patch |
-| `snapshot V{N}` | Salvez snapshot oficial la incrementare V | copie c01..cN în `_system/snapshots/V{N}_AAAALLZZ/` |
-| `consolideaza brain` | Sumarizare sesiune | update STARE-CURENTA + snapshot V{N} automat |
+| `tag V{N}` | Marchez stare oficială la incrementare V | `git tag -a v{N} -m "..."` + `git push --tags` |
+| `consolideaza brain` | Sumarizare sesiune | update STARE-CURENTA + tag V{N} automat + commit + push |
 | `help` | Listă comenzi disponibile | citesc COMENZI.yaml |
 
 Pentru lista exhaustivă: `_system/03-COMENZI-OPERATIONALE.md`.
@@ -106,38 +106,53 @@ cNN/
 
 ---
 
-## VERSIONARE ONEDRIVE + BACKUP DISCIPLINE
+## VERSIONARE GIT
 
-**Proiectul trăiește în OneDrive cloud.** NU folosim Git. Versionarea = OneDrive auto-sync + Version History per fișier (~30 zile).
+**Proiectul trăiește în git** (remote `github.com/trainity-bogdan/Trainity-02-Excel`). Versionarea = commit + branch + tag. Restore = `git checkout`, `git revert`, `git show`. Nu există backup folders manuale, nu există `_system/snapshots/`. Git ține istoricul complet.
 
-**Limitarea OneDrive:** nu există restore la nivel de folder întreg nativ. Pentru asta folosim disciplina backup manual prin 3 reguli:
+### G1. BRANCH PER TASK SEMNIFICATIV
+Modificările care nu sunt triviale stau pe branch separat înainte de merge:
+- `feat/cNN-generare` — generare construcție nouă
+- `fix/<descriere>` — bug fix
+- `refactor/<scope>` — restructurare
+- `regen/cNN-AAAALLZZ` — regenerare de la zero
+- `claude/<task>` — sesiune Claude Code on the Web (auto-named)
 
-### V1. BACKUP PRE-DESTRUCTIVE (auto)
-Înainte de orice operațiune care **suprascrie un folder** sau **modifică >3 fișiere simultan**, motor creează automat:
+Fix-uri triviale 1-2 fișiere pot merge direct pe `main`. Solo dev, judecată proporțională.
+
+### G2. COMMIT FREQUENT + DESCRIPTIV
+Formă: `tip(scope): descriere scurtă`. Tipuri: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `audit`. Exemple:
+- `feat(c06): generare initiala T2 cantitativ`
+- `fix(template): responsive complet HTML-Studiu`
+- `refactor(system): docs OneDrive -> git`
+- `audit(c01-c05): ZERO DRIFT post V41`
+
+Body opțional pentru context (cele 9 elemente SPEC, schimbări structurale, decizii arhitectură).
+
+### G3. TAG V{N} LA INCREMENTARE
+La `consolideaza brain` (V40 → V41), motor execută:
 ```
-cNN/                              ← original (va fi suprascris)
-cNN_BACKUP_AAAALLZZ_pre-{op}/     ← copie de siguranță, sync OneDrive
+git tag -a v{N} -m "V{N}: <sumar>"
+git push --tags
 ```
-Aplicabil la: `regenereaza CNN de la zero`, `aplica fix [desc]` (dacă atinge >3 fișiere), refactor masiv.
+Tag-ul = echivalent „snapshot oficial". `git checkout v40` te întoarce instantaneu la starea V40. Manifest-ul (ce s-a schimbat vs V{N-1}) trăiește în mesajul tag-ului + STARE-CURENTA.md.
 
-### V2. SNAPSHOT LA INCREMENTARE V (auto, în `consolideaza brain`)
-La fiecare bump versiune (V40 → V41), motor creează automat:
-```
-_system/snapshots/V{N}_AAAALLZZ/
-├── c01/  c02/  ...  c{ultima}/   ← copii ale construcțiilor la momentul V{N}
-└── manifest.md                    ← ce conține V{N}, ce s-a schimbat vs V{N-1}
-```
-Asta e echivalent Git "tag" în OneDrive. Permite întoarcere la orice V istoric.
+### G4. RESTORE = COMENZI GIT
+- Fișier unic la o versiune veche: `git show <sha>:path/fisier > /tmp/old && cp /tmp/old path/fisier`
+- Folder întreg la stare veche: `git checkout <sha-sau-tag> -- cNN/`
+- Anulare commit recent: `git revert <sha>`
+- Vizualizare istoric: `git log --oneline -- cNN/`, `git diff v40..HEAD -- cNN/`
 
-### V3. RESTORE FIȘIER UNIC = OneDrive Version History
-Dacă strici un singur fișier: drept-click în Explorer → **Version History** → alegi versiunea → Restore. Nu necesită implicarea motorului.
+### G5. PR PENTRU REVIEW (recomandat pentru schimbări sistemice)
+Pentru generări noi, regule noi, refactor sistemic — deschide PR pe GitHub și fă merge din UI după review. Pentru fix-uri evidente solo, merge direct pe main e OK.
 
 **Sumar disciplină:**
-- Modificări mici (1-3 fișiere): OneDrive auto-version e suficient
-- Modificări medii (>3 fișiere) sau distructive: backup folder auto
-- Increment V: snapshot oficial în `_system/snapshots/`
+- Modificări mici (1-2 fișiere triviale): commit direct pe main, push
+- Modificări medii: branch + commit-uri + merge la finalizare
+- Schimbări sistemice / generări noi: branch + PR + merge after review
+- Increment V: tag git + push
 
-Detalii operațional: `_system/COMENZI.yaml` (comenzi cu backup auto) + `_system/03-COMENZI-OPERATIONALE.md`.
+Detalii operațional: `_system/COMENZI.yaml` + `_system/03-COMENZI-OPERATIONALE.md` + `_system/05-WORKFLOW-PER-SCENARIU.md`.
 
 ---
 
@@ -168,11 +183,12 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 La sfârșit de sesiune cu decizii importante:
 1. Actualizezi `STARE-CURENTA.md` (versiune nouă, lecții noi)
 2. Update `_system/arhiva/brain-evolutia-V01-V38.md` cu sumar V{N curent}
-3. **Snapshot V{N} automat** (regula V2): creez `_system/snapshots/V{N}_AAAALLZZ/` cu copii ale construcțiilor + manifest.md
-4. Raportez ARHITECT: "V{N} consolidat. Snapshot salvat. OneDrive sync în background."
+3. **Tag V{N} automat** (regula G3): `git tag -a v{N} -m "..."` + `git push --tags`
+4. Commit final + push pe branch curent (sau merge în main dacă sesiunea a fost pe branch)
+5. Raportez ARHITECT: "V{N} consolidat. Tag v{N} pushat pe origin. Branch {nume} / main la zi."
 
 ---
 
 **FINAL:** orice e ambiguu, consultă INDEX-CAUTARE.md. Orice e blocant, oprește și raportează.
 
-Versiune document: V40 · 28 mai 2026
+Versiune document: V41 · 28 mai 2026

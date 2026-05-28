@@ -34,11 +34,11 @@ Regulile **ABANDONATE** sunt cele care au fost explicit eliminate (ex: PPT, form
 
 Acestea NU se schimbă niciodată. Sunt fundament Trainity.
 
-## R-V01.1 · SNAPSHOT LA INCREMENTARE V
-**Status:** ACTIVĂ permanentă (V40 update: OneDrive snapshots, NU Git commit)
-La `consolideaza brain` / incrementare V, motor creează snapshot oficial `_system/snapshots/V{N}_AAAALLZZ/` cu copii ale `c01..cN/` + manifest.md. Echivalent OneDrive al unui Git tag. Vezi CLAUDE.md "VERSIONARE ONEDRIVE" regula V2.
+## R-V01.1 · TAG LA INCREMENTARE V
+**Status:** ACTIVĂ permanentă (V41 update: git tag, NU folder snapshot)
+La `consolideaza brain` / incrementare V, motor creează tag git anotat `v{N}` cu sumar în mesaj, apoi `git push --tags`. Permite `git checkout v{N}` pentru rollback complet la orice versiune oficială. Vezi CLAUDE.md „VERSIONARE GIT" regula G3.
 
-**Istoric:** pre-GitHub plan, arhivele zip OUT-V{N}.zip; planul GitHub (descriptive commits) nu a fost adoptat — ARHITECT folosește OneDrive sync + snapshots locale.
+**Istoric:** pre-V40 arhive zip OUT-V{N}.zip; V40 a încercat folder snapshots `_system/snapshots/V{N}_AAAALLZZ/` bazat pe presupunerea greșită OneDrive; V41 revine la git tag (idiomatic).
 
 ## R-V01.2 · LIVRARE TOATE ODATĂ
 **Status:** ACTIVĂ permanentă (EXTINSĂ V04 la 7 artefacte, V30 la includere FILM+assets)
@@ -50,7 +50,7 @@ HTML-Editor-Studiu și HTML-Editor-Video sunt parte din cele 7 livrabile canonic
 
 ## R-V01.5 · CHECK-IN CONSTRUCȚIE SIMULTAN
 **Status:** ABSORBITĂ în R-V03.51 (acceptarea check-in implicit la generare directă)
-**Pre-refactor V38:** chat-urile `CHECKIN CONSTRUCTIE NN` rulau paralel cu plan zip-arhivare. **Post-V38:** workflow simplificat — generare directă în `cNN/`, audit, OneDrive sync auto.
+**Pre-refactor V38:** chat-urile `CHECKIN CONSTRUCTIE NN` rulau paralel cu plan zip-arhivare. **Post-V38:** workflow simplificat — generare directă în `cNN/`, audit, commit + push la finalizare (workflow git V41).
 
 ## R-V01.7 · F-BIS ANOMALY-GRID PARAMETRIZAT
 **Status:** ACTIVĂ permanentă
@@ -65,7 +65,7 @@ Fiecare step din HTML-Studiu are buton `VERIFICĂ` care, după click, schimbă v
 # B. REGULI TEHNICE FUNDAMENTALE
 
 ## R-V02.0 · NUMIRE ARHIVE CHECKOUT
-**Status:** ABSORBITĂ în R-V01.1 (snapshot OneDrive în loc de zip/commit).
+**Status:** ABSORBITĂ în R-V01.1 (git tag v{N} în loc de zip arhive sau folder snapshot).
 
 ## R-V02.2 · DIACRITICE ROMÂNEȘTI
 **Status:** ACTIVĂ permanentă
@@ -335,7 +335,7 @@ Vezi `_system/generatoare/audit_sync.py` pentru lista detectoarelor.
 Nu sunt în producție acum, dar înregistrate pentru viitor:
 
 - **R-V03.64+**: pattern unificat patch_runner.py care substituie scripturile individuale `inject_highlighter.py`, `fix_reset_button_position.py`, `remove_input_output_meta.py`
-- **R-V03.66+**: hook OneDrive sau Task Scheduler Windows pentru audit_sync automat la fiecare modificare sync-uită (de explorat — momentan rulare manuală)
+- **R-V03.66+**: git pre-commit hook pentru `audit_sync.py` (rulare automată la fiecare commit; blochează commit-urile cu DRIFT > 0). De explorat — momentan rulare manuală.
 
 ---
 

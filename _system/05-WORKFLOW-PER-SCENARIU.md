@@ -1,8 +1,8 @@
-# Workflow per scenariu · Pas cu pas (V40)
+# Workflow per scenariu · Pas cu pas (V41)
 
 Cele 5 scenarii reale pe care le vei face zilnic / lunar.
 
-**Versionare:** OneDrive auto-sync + Version History per fișier + backup/snapshot discipline (regulile V1/V2/V3 din CLAUDE.md). **NU Git, NU GitHub Desktop.**
+**Versionare:** git (commit + branch + tag) cu remote `github.com/trainity-bogdan/Trainity-02-Excel`. Reguli G1-G5 în `CLAUDE.md` secțiunea „VERSIONARE GIT". Tool oficial pentru ARHITECT: GitHub Desktop pentru sync local; GitHub web UI pentru PR-uri, review, merge.
 
 **Structură construcție:** versiune unică `cNN/` (NU canonic/editat). Vezi `04-ARHITECTURA-LIVRABILE.md`.
 
@@ -18,13 +18,13 @@ Cele 5 scenarii reale pe care le vei face zilnic / lunar.
 
 | Element | Conținut |
 |---|---|
-| 1. SLUG | "Cifre" sau "KPI" sau "Cantitate" |
-| 2. INTRIGA | "Setul are cifre. Excel le știe. Tu nu." |
+| 1. SLUG | „Cifre" sau „KPI" sau „Cantitate" |
+| 2. INTRIGA | „Setul are cifre. Excel le știe. Tu nu." |
 | 3. PROBLEMELE | Cantitate care vorbește vs cifre incoerente |
 | 4. MIZA | Decizii pe cifre care nu reprezintă realitatea |
-| 5. MANTRA | "Înainte de raport, cifra exactă" |
+| 5. MANTRA | „Înainte de raport, cifra exactă" |
 | 6. WOW (PAYOFF) | Inventar cantitativ complet |
-| 7. MOTTO | "Un set măsurabil. Apoi orice raport." |
+| 7. MOTTO | „Un set măsurabil. Apoi orice raport." |
 | 8. FENOMENE | 5 cantități semnificative (sumă totală, medii pe categorii, top-N, distribuție, Pareto) |
 | 9. STEP-TITLES | 18 titluri specifice axei CANTITATIVE (NU clone din C01) |
 
@@ -36,7 +36,7 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
 
 În chat (oricare cu Claude):
 
-> *"Genereaza C06"*
+> *„Genereaza C06"*
 
 ## Pasul 3 — Ce fac EU automat
 
@@ -46,202 +46,200 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
    - L143 FENOMENE vs asset fizic Date_MASTER-initial.xlsx aliniate?
    - Dacă FAIL → te anunț cu eroare clară, OPRESC generarea
 
-2. **Citesc matrița** `_template/`:
+2. **Verific working tree clean** (`git status`). Dacă dirty, te întreb dacă commit înainte sau abandonez modificările.
+
+3. **Creez branch dedicat** (G1):
+   ```
+   git checkout -b feat/c06-generare
+   ```
+
+4. **Citesc matrița** `_template/`:
    - HTML-Studiu, HTML-Editor-Studiu, HTML-Video, HTML-Editor-Video
    - Tot ca string, voi modifica doar zone narrative
 
-3. **Aplic COPY+MODIFY** pe cele 4 HTML-uri:
+5. **Aplic COPY+MODIFY** pe cele 4 HTML-uri:
    - Înlocuiesc cover-title cu noua axă
    - Înlocuiesc INTRIGA, MIZA, MANTRA, WOW, MOTTO (din SPEC)
    - Înlocuiesc cele 18 step-titles (specifice axei CANTITATIVE)
-   - Înlocuiesc prompturile Copilot (Prompt 1 audit, Prompt 2 transformare)
+   - Înlocuiesc prompturile Copilot
    - Înlocuiesc final-text și final-label cu cifrele specifice
-   - Înlocuiesc imaginile cinematic dacă sunt diferite (rar — de obicei placeholder din _template, regenerezi ulterior cu Banana 2)
+   - Imaginile cinematic rămân placeholder din `_template/assets/` (regenerezi cu Banana 2 — scenariul 3)
 
-4. **Generez `Date_MASTER-C06.xlsx`** din `_system/referinte/Date_MASTER-initial.xlsx`:
-   - Sheet input cu fenomene cantitative
-   - Sheet output cu inventar cantitativ
-   - Sumă conservată cu predecesoarea (C05)
+6. **Generez `Date_MASTER-C06.xlsx`** din `_system/referinte/Date_MASTER-initial.xlsx`
 
-5. **Generez `Creativ-Excel-06-{slug}.txt`** și **`FILM-Excel-06-{slug}.docx`**
+7. **Generez `Creativ-Excel-06-{slug}.txt`** și **`FILM-Excel-06-{slug}.docx`**
 
-6. **Copiez 12 imagini placeholder** din `_template/assets/` în `c06/assets/` (le vei regenera ulterior cu Banana 2 specifice axei)
+8. **Copiez 12 imagini placeholder** din `_template/assets/` în `c06/assets/`
 
-7. **Scriu toate în `c06/`** (un singur folder, fără canonic/editat)
+9. **Scriu toate în `c06/`** (un singur folder, fără canonic/editat)
 
-8. **Audit empiric:**
-   - Rulez `audit_sync.py` → confirm zero drift (8 reguli × 6 zone = 48 verificări PASS)
-   - Rulez `gate_v20.py 06 c06 _template` → PASS pe 6 clase
+10. **Audit empiric:**
+    - `audit_sync.py` → zero drift (8 detectoare × 6 zone = 48 verificări PASS)
+    - `gate_v20.py 06 c06 _template` → PASS
 
-9. **Raportez în chat:**
-   > "C06 generată cu zero drift. Cele 7 artefacte + 12 imagini placeholder prezente. Gate v20 PASS. OneDrive sync în background. Imaginile sunt placeholder din pilot; regenerează cu Banana 2 pentru axa cantitativă (vezi Scenariul 3)."
+11. **Commit (G2):**
+    ```
+    git add c06/
+    git commit -m "feat(c06): generare initiala T2 cantitativ"
+    ```
+
+12. **Raportez în chat:**
+    > „C06 generată pe branch `feat/c06-generare`. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axa cantitativă — vezi Scenariul 3). Pentru push + PR: spune-mi `push C06` sau `deschide PR pentru C06`."
 
 ## Pasul 4 — Ce faci TU
 
-**Nimic activ.** Fișierele apar în OneDrive sync (vezi iconița OneDrive în system tray devine bifă verde când e sync). 
+**Decizi când publici:**
+- *„push C06"* → eu fac `git push -u origin feat/c06-generare`. Apoi vezi în GitHub Desktop branch-ul nou.
+- *„deschide PR pentru C06"* → push + creez PR pe GitHub `feat/c06-generare` → `main`. Tu review-uiezi în UI și faci merge.
+- *„merge direct pe main"* → fac `git checkout main && git merge feat/c06-generare` local + push. Fără review formal.
 
-**Verifică deschizând** `c06/HTML-Studiu-Excel-06-{slug}.html` direct (dublu-click în Explorer sau eu îți deschid cu `start`). Dacă ceva nu pare bine, scrii: *"C06 are problema X"* — eu o repar fie prin patch, fie prin regenerare punctuală (cu backup auto pre-distructiv).
+**Verificare locală înainte de merge:** dublu-click pe `c06/HTML-Studiu-Excel-06-{slug}.html` direct din Explorer (după ce GitHub Desktop a făcut pull pe branch). Dacă ceva nu pare bine: *„C06 are problema X"* — eu repar.
 
-**Timp total estimat:** 5-10 minute (3-5 generare + 2-5 verificare).
+**Timp total estimat:** 5-10 min generare + 2-5 verificare + 1 min merge/PR.
 
 ---
 
 # SCENARIUL 2 — Bug fix HTML-Studiu propagat peste toate construcțiile
 
-**Contextul:** Observi că pe HTML-Studiu, butonul "VERIFICĂ" are font 12px (prea mic pe mobile). Vrei să fie 14px peste TOATE construcțiile (C01-C06).
+**Contextul:** Observi că pe HTML-Studiu, butonul „VERIFICĂ" are font 12px (prea mic pe mobile). Vrei să fie 14px peste TOATE construcțiile (C01-C06).
 
 ## Pasul 1 — Tu raportezi bug-ul în chat
 
-> *"Bug: butonul VERIFICĂ în HTML-Studiu are font 12px pe mobile, ar trebui 14px. Aplică pe C01-C06."*
+> *„Bug: butonul VERIFICĂ în HTML-Studiu are font 12px pe mobile, ar trebui 14px. Aplică pe C01-C06."*
 
 Opțional, atașezi un screenshot pentru context vizual.
 
 ## Pasul 2 — Ce fac EU
 
-1. **Citesc** `c01/HTML-Studiu-Excel-01-Structura.html`, localizez CSS-ul:
-   ```css
-   .step-verify-btn {
-     ...
-     font-size: 12px;
-   }
-   ```
+1. **Citesc** `c01/HTML-Studiu-Excel-01-Structura.html`, localizez CSS-ul
 
 2. **Confirm cu tine soluția:**
-   > "Propun:
-   > - Desktop: `font-size: 13px` (de la 12px, pentru lizibilitate)
+   > „Propun:
+   > - Desktop: `font-size: 13px` (de la 12px)
    > - Mobile (@media max-width 768px): `font-size: 14px`
    > 
-   > Aplic pe C01-C06. Patch atinge >3 fișiere — creez BACKUP AUTO (regula V1) `cNN_BACKUP_AAAALLZZ_pre-fix/` pentru fiecare construcție afectată. Confirmi?"
+   > Aplic pe C01-C06 pe branch `fix/font-buton-verifica-responsive`. Confirmi?"
 
-3. **Tu:** *"da"*
+3. **Tu:** *„da"*
 
-4. **BACKUP AUTO**: copiez `c01/`, `c02/`, ..., `c06/` → `c0N_BACKUP_AAAALLZZ_pre-fix/` (regula V1)
+4. **Creez branch dedicat:**
+   ```
+   git checkout -b fix/font-buton-verifica-responsive
+   ```
 
-5. **Scriu patch script** în `_system/patch_recipes/R-V03.66-font-buton-responsive.yaml`:
-   - Regex pe regula `.step-verify-btn { ... font-size: 12px ... }`
-   - Idempotent: re-rularea NU strică nimic, recunoaște ce e deja patch-uit
-   - Anti-duble-inject: nu adaugă @media de două ori
+5. **Scriu patch script** în `_system/patch_recipes/R-V03.66-font-buton-responsive.yaml` (idempotent, anti-double-inject)
 
-6. **Aplic peste toate folderele:**
-   - `c01/HTML-Studiu-...html` + `HTML-Editor-Studiu-...html`
-   - `c02/...` similar
-   - ... până la `c06/...`
+6. **Aplic peste toate folderele** (c01-c06)
 
 7. **Rulez audit_sync.py** → confirm zero drift rămas
 
-8. **Adaug regulă nouă** R-V03.66 în `01-REGULI-ACTIVE.md`:
-   ```
-   ## R-V03.66 · FONT BUTON VERIFICĂ RESPONSIVE
-   Status: ACTIVĂ (V40+)
-   Buton .step-verify-btn: 13px desktop, 14px mobile.
-   Detector empiric: regex pe @media max-width 768px cu .step-verify-btn font-size: 14px
-   ```
+8. **Adaug regulă nouă** R-V03.66 în `01-REGULI-ACTIVE.md` + detector în `audit_sync.py`
 
-9. **Adaug detector** în `audit_sync.py`:
-   ```python
-   @detector('R-V03.66', 'Font buton VERIFICĂ responsive', 'studiu')
-   def _r0366(c):
-       return '.step-verify-btn' in c and 'font-size: 14px' in c
-   ```
+9. **Re-rulez audit** → confirm noul detector PASS pe toate 6 zone
 
-10. **Re-rulez audit** → confirm noul detector PASS pe toate 6 zone
+10. **Commit (cu detalii în body):**
+    ```
+    git commit -m "fix(buton): font-size 13/14px desktop/mobile pe .step-verify-btn
+
+    Regula nouă R-V03.66 + detector audit_sync.
+    Aplicat pe C01-C06. Rețetă patch în _system/patch_recipes/."
+    ```
 
 11. **Raportez:**
-    > "Fix aplicat pe C01-C06. Audit PASS pe noua regulă R-V03.66. Backup-uri salvate la cNN_BACKUP_AAAALLZZ_pre-fix/. OneDrive sync în background. Dacă vrei rollback: ștergi cNN/ și redenumești backup-ul."
+    > „Fix aplicat pe branch `fix/font-buton-verifica-responsive`. Regula R-V03.66 codificată. Audit PASS pe toate cele 6 zone. Pentru merge: spune-mi `push fix` sau `deschide PR`."
 
 ## Pasul 3 — Ce faci TU
 
-Nimic activ. OneDrive sync-uiește automat. Verifici un fișier deschizând în browser dacă vrei să confirmi vizual.
+Decizi cum mergi: push + PR (recomandat pentru schimbări sistemice), sau merge direct pe main. Rollback: `git revert <sha>` dacă observi probleme post-merge.
 
 ---
 
 # SCENARIUL 3 — Imagine nouă cu Banana 2 pentru C06
 
-**Contextul:** Pentru C06 (axa CANTITATIVĂ), vrei poza exec-stage-1 să fie un grafic specific cantitativ, nu poza placeholder.
+**Contextul:** Pentru C06, vrei poza exec-stage-1 să fie un grafic specific cantitativ, nu placeholder-ul.
 
-## Variant A — Atașezi pozele
+## Variant A — Atașezi pozele în chat
 
-În chat:
+> *„Pentru C06, poza nouă exec-stage-1: [atașat exec-stage-1-c06.jpg + exec-stage-1-c06.png]. Aplică în HTML-Video."*
 
-> *"Pentru C06, poza nouă exec-stage-1: [atașat exec-stage-1-c06.jpg + exec-stage-1-c06.png]. Aplică în HTML-Video."*
+## Variant B — Pozele sunt deja pe disk local
 
-## Variant B — Pozele sunt deja pe disk
+Tu le-ai salvat manual în `c06/assets/exec-stage-1.{jpg,png}` și commit-uit. Apoi:
 
-Tu salvezi manual pozele în `c06/assets/exec-stage-1.{jpg,png}` (suprascrii placeholderul). OneDrive sync automat. Apoi în chat:
-
-> *"Pentru C06, exec-stage-1 e schimbat în assets/. Reaplică base64 în HTML-Video."*
+> *„Pentru C06, exec-stage-1 e schimbat în assets/. Reaplică base64 în HTML-Video."*
 
 ## Pasul 1 — Ce fac EU
 
-1. **Salvez pozele** (dacă atașate) în `c06/assets/exec-stage-1.{jpg,png}` (suprascrie placeholderul)
+1. **Salvez pozele** (dacă atașate) în `c06/assets/exec-stage-1.{jpg,png}`
 
 2. **Encode base64** pozele
 
-3. **Localizez în `c06/HTML-Video-Excel-06-{slug}.html`** secțiunea Executive Show — exec-stage-1:
-   ```html
-   <img src="data:image/jpeg;base64,/9j/4AAQ..." class="exec-stage-img" data-stage="1">
+3. **Localizez în `c06/HTML-Video-Excel-06-{slug}.html`** secțiunea exec-stage-1 și înlocuiesc base64-ul vechi (în HTML-Video + HTML-Editor-Video)
+
+4. **Commit:**
+   ```
+   git add c06/
+   git commit -m "chore(c06): poza exec-stage-1 actualizată (Banana 2)"
    ```
 
-4. **Înlocuiesc base64-ul** vechi cu noul (în HTML-Video + HTML-Editor-Video)
+5. **Raportez:**
+   > „C06 exec-stage-1 actualizat. assets/ + HTML-Video + HTML-Editor-Video sincronizate. Commit local. Push când vrei."
 
-5. **Audit + raport:**
-   > "C06 exec-stage-1 actualizat. assets/ + HTML-Video + HTML-Editor-Video sincronizate. OneDrive sync în background."
+## Caz special — poză aplicată la TOATE construcțiile (brand)
 
-## Caz special — poză aplicată la TOATE construcțiile
-
-Dacă noua imagine e brand (de ex. logo nou pentru slide finală):
-
-> *"Aceasta poză înlocuiește exec-stage-final la TOATE construcțiile"*
+> *„Aceasta poză înlocuiește exec-stage-final la TOATE construcțiile"*
 
 Eu:
-1. **Confirm impact pe toate** (atinge >3 fișiere — BACKUP AUTO regula V1)
-2. Copy `c01/, c02/, ..., cN/` → `c0N_BACKUP_AAAALLZZ_pre-brand-update/`
-3. Pentru fiecare cNN/: salvez în `cNN/assets/exec-stage-final.{jpg,png}` + re-encode base64 în HTML-Video + HTML-Editor-Video
+1. **Confirm impact pe toate**
+2. Creez branch `chore/brand-exec-stage-final`
+3. Pentru fiecare cNN/: salvez în `cNN/assets/exec-stage-final.{jpg,png}` + re-encode base64
 4. Audit → confirm PASS
-5. Raportez: "Imagine brand exec-stage-final actualizată în toate construcțiile. Backup-uri salvate. OneDrive sync."
+5. Commit + raportez. Pentru merge: PR pe GitHub (recomandat pentru schimbare brand-wide).
 
 ---
 
 # SCENARIUL 4 — Editezi tu HTML-Studiu local
 
-**Contextul:** La C03, vrei să modifici niște text în step-action 5 (corectare frazare).
+**Contextul:** La C03, vrei să modifici niște text în step-action 5.
 
-## Pasul 1 — Editare locală
+## Pasul 1 — Pull local înainte de editare
 
-1. Deschide **Windows Explorer**:
-   `D:\Desktop\___TRAINITY\__Cloud\OneDrive\__TRAINITY\____CONSTRUCTII Trainity\02 Excel\c03\`
+În **GitHub Desktop**:
+1. Verifică branch curent (default `main`)
+2. Apasă **Fetch origin** (sus dreapta) → trage ultimele schimbări
+3. Dacă există modificări remote, apasă **Pull origin**
 
-2. **Dublu-click** pe `HTML-Editor-Studiu-Excel-03-Auditare.html` → se deschide în Chrome
+## Pasul 2 — Editare locală
 
-3. **Click pe textul** pe care vrei să-l modifici (în step-action 5) → cursorul intră în mod edit → tastezi noul text
+1. Deschide Explorer la calea clonei locale a repo-ului
+2. **Dublu-click** pe `c03/HTML-Editor-Studiu-Excel-03-Auditare.html` → se deschide în Chrome
+3. **Click pe textul** pe care vrei să-l modifici (step-action 5) → cursorul intră în mod edit → tastezi
+4. **Apasă butonul** 💾 **EXPORT** sus → primesti în Downloads: `HTML-Studiu-Excel-03-Auditare-Editat.html`
+5. **Înlocuiește** fișierul: redenumește la `HTML-Studiu-Excel-03-Auditare.html` și mut în `c03/` (suprascrie cel existent)
 
-4. **Apasă butonul** 💾 **EXPORT** sus → primesti în Downloads:
-   `HTML-Studiu-Excel-03-Auditare-Editat.html`
+## Pasul 3 — Commit + push în GitHub Desktop
 
-5. **Înlocuiește** fișierul:
-   - Mergi în Downloads
-   - Redenumește `HTML-Studiu-Excel-03-Auditare-Editat.html` → `HTML-Studiu-Excel-03-Auditare.html`
-   - Mut în `c03\` (suprascrie cel existent — OneDrive captează versiunea veche în Version History automat)
+GitHub Desktop detectează automat modificarea în `c03/HTML-Studiu-Excel-03-Auditare.html`:
 
-## Pasul 2 — Salvare
+1. **Stânga jos**: vezi „Summary" → scrii `docs(c03): editare step-action 5 frazare`
+2. **Apasă** „Commit to main" (sau crează branch dedicat dacă e schimbare semnificativă)
+3. **Push origin** (buton sus dreapta)
 
-**Nimic explicit.** OneDrive sync-uiește automat în câteva secunde. Vezi iconița OneDrive în system tray.
+Sau alternativ, în chat:
+> *„Am modificat C03 local și am pus în c03/. Verifică, fă commit cu mesaj clar și push."*
 
-**Version History capturează modificarea** — pentru rollback: drept-click pe fișier → Version History → alegi versiunea anterioară.
+Eu fac `git status` + diff + commit + push.
 
-## Pasul 3 — Ce fac EU
+## Pasul 4 — Dacă vrei să vezi ce ai modificat vs versiunea veche
 
-**Nimic activ.** Modificările tale sunt pe disk. Le văd când le voi consulta în următoarea sesiune.
-
-Dacă ulterior îmi ceri:
-
-> *"Verifică ce am modificat la C03 vs versiunea de săptămâna trecută"*
+În chat:
+> *„Verifică ce am modificat la C03 vs versiunea de săptămâna trecută"*
 
 Eu:
-1. Citesc `c03/HTML-Studiu-Excel-03-Auditare.html` (versiunea actuală)
-2. Te rog să deschizi OneDrive Version History pentru fișier și să-mi spui aproximativ care versiune e cea veche (sau o restorezi temporar în alt nume ca `HTML-Studiu-C03_OLD.html`)
-3. Diff
-4. Raportez: *"Ai modificat la step-action 5 — 2 fraze. Înainte: '...'. Acum: '...'. Restul identic."*
+1. `git log --follow --oneline -- c03/HTML-Studiu-Excel-03-Auditare.html` → arăt commit-urile relevante
+2. Te las să alegi commit-ul referință (sau folosesc HEAD~5 sau tag-ul `v40` automat)
+3. `git diff <ref>..HEAD -- c03/HTML-Studiu-Excel-03-Auditare.html`
+4. Raportez: *„Ai modificat la step-action 5 — 2 fraze. Înainte: '...'. Acum: '...'. Restul identic."*
 
 ---
 
@@ -251,80 +249,68 @@ Eu:
 
 ## Pasul 1 — Înghețezi SPEC nou
 
-În chat:
-
-> *"Pentru C03, propun SPEC nou. Axa rămâne AUDIT, dar fenomenele se concentrează pe AUDIT VALORIC (nu structural):
-> - INTRIGA: 'Suma e corectă. Componentele mint.'
-> - MIZA: ...
-> - FENOMENE: 5 fenomene valorice (rotunjiri, TVA inconsistent, calcule eronate, conversii valutare, marje negative)
-> - ..."*
-
-Procedeul SPEC FREEZING normal cu grilă A/B/C. La final, SPEC e înghețat în `_system/arhiva/SISTEM_TRAINITY-versiuni.md` + IDENTITATE_TEHNICA C03 update în `_system/referinte/IDENTITATE-TEHNICA.md`.
+Procedeul SPEC FREEZING normal cu grilă A/B/C. La final, SPEC e înghețat în `_system/arhiva/SISTEM_TRAINITY-versiuni.md` + IDENTITATE_TEHNICA C03 update.
 
 ## Pasul 2 — Comanda refacere
 
-> *"Regenereaza C03 de la zero cu noul SPEC."*
+> *„Regenereaza C03 de la zero cu noul SPEC."*
 
 ## Pasul 3 — Ce fac EU
 
 1. **CER CONFIRMARE EXPLICITĂ** (cerere distructivă):
-   > "Atenție: voi suprascrie `c03/` complet. Creez BACKUP AUTO (regula V1):
-   > - `c03_BACKUP_AAAALLZZ_pre-regen/` cu starea curentă (poți recupera oricând)
-   > 
-   > Confirmi regenerarea? (da/nu)"
+   > „Atenție: voi suprascrie `c03/` complet pe branch `regen/c03-AAAALLZZ`. Versiunea curentă rămâne în git history pe `main` — accesibilă oricând via `git checkout main -- c03/`. Confirmi regenerarea? (da/nu)"
 
-2. **Tu:** *"da"*
+2. **Tu:** *„da"*
 
 3. **Pași efectivi:**
-   - Copiez `c03/` → `c03_BACKUP_AAAALLZZ_pre-regen/` (BACKUP AUTO)
-   - Șterg `c03/`
+   - `git checkout -b regen/c03-AAAALLZZ`
+   - `git rm -r c03/ && git commit -m "chore(c03): wipe pre-regen"`
    - Aplic flow `genereaza_constructie` din scenariul 1
+   - `git add c03/ && git commit -m "feat(c03): regenerare de la zero cu noul SPEC"`
    - Audit empiric → confirm zero drift
    - Gate v20 PASS
 
 4. **Raportez:**
-   > "C03 regenerat cu noul SPEC. Backup la c03_BACKUP_AAAALLZZ_pre-regen/ (poți recupera oricând ștergând c03/ + redenumind backup-ul). OneDrive sync în background."
+   > „C03 regenerat cu noul SPEC pe branch `regen/c03-AAAALLZZ`. Versiunea anterioară accesibilă via `git log` sau `git show <sha>:c03/...`. Pentru rollback la versiunea veche: `git checkout main -- c03/`. Push când vrei + PR recomandat."
 
 ## Pasul 4 — Ce vezi TU
 
-Pe disc local (OneDrive sync):
-```
-c03/                                  ← C03 nou (cu SPEC actualizat)
-c03_BACKUP_AAAALLZZ_pre-regen/        ← vechiul C03, păstrat ca backup local
-```
+În GitHub Desktop după Fetch origin:
+- Branch `regen/c03-AAAALLZZ` nou cu c03/ regenerat
+- Branch `main` cu versiunea veche intactă
 
-OneDrive sync-uiește ambele în cloud. Backup-ul rămâne acolo până când îl ștergi manual (sau decizi că nu mai ai nevoie).
+Compari side-by-side în UI înainte de merge.
 
 ## Pasul 5 — Dacă vrei să te întorci la versiunea veche
 
-> *"Reverteaza C03 la versiunea din backup"*
+> *„Reverteaza C03 la versiunea din `main`"*
 
 Eu:
-1. Ștergi `c03/` (versiunea nouă)
-2. Redenumesc `c03_BACKUP_AAAALLZZ_pre-regen/` → `c03/`
+1. Pe branch curent: `git checkout main -- c03/`
+2. Commit „revert(c03): rollback la versiunea pre-regen"
 3. Audit → confirm
 
-Sau alternativ: dacă a trecut mai mult timp și ai pierdut backup-ul local, dar ai sync-uit cloud, deschizi OneDrive web → restore folder din Recycle Bin sau "Restore your OneDrive" (vezi CLAUDE.md secțiunea VERSIONARE).
+Sau, dacă regen-ul a ajuns deja pe main și vrei rollback: `git revert <sha-regen-merge>`.
 
 ---
 
 # Sumar fluxuri
 
-| Scenariu | Cine inițiază | Eu | Tu | Backup auto | Timp estimat |
+| Scenariu | Cine inițiază | Eu | Tu | Branch dedicat | Timp estimat |
 |---|---|---|---|---|---|
-| 1. Generare CNN | Tu (comandă) | Generez, audit | Nimic (verifică opțional) | Nu (nu suprascrie) | 5-10 min |
-| 2. Bug fix global | Tu (comandă) | Patch, backup, audit | Nimic | Da (>3 fișiere) | 10-20 min |
-| 3. Imagine nouă (1 cNN) | Tu (comandă + atașez) | Encode, înlocuiesc | Nimic | Nu (1 cNN) | 5-10 min |
-| 3b. Imagine brand (toate) | Tu (comandă + atașez) | Backup, encode, înlocuiesc | Nimic | Da | 15-30 min |
-| 4. Editare locală | Tu (local) | Nimic (pasiv) | Editare + EXPORT + suprascriu | Nu (OneDrive Version History per fișier acoperă) | 5-30 min |
-| 5. Regenerare CNN | Tu (comandă) | Backup, regenerez, audit | Nimic | Da | 10-20 min |
+| 1. Generare CNN | Tu (comandă) | Generez, audit, commit | Push/PR/merge | Da (`feat/cNN-generare`) | 5-10 min |
+| 2. Bug fix global | Tu (comandă) | Patch, audit, commit | Push/PR/merge | Da (`fix/<slug>`) | 10-20 min |
+| 3. Imagine nouă (1 cNN) | Tu (comandă + atașez) | Encode, înlocuiesc, commit | Push | Nu (commit direct pe branch curent) | 5-10 min |
+| 3b. Imagine brand (toate) | Tu (comandă + atașez) | Encode, înlocuiesc, commit | Push/PR/merge | Da (`chore/brand-*`) | 15-30 min |
+| 4. Editare locală | Tu (local + GitHub Desktop) | Pasiv (sau audit la cerere) | Editare + Export + commit + push în GitHub Desktop | Decizi tu | 5-30 min |
+| 5. Regenerare CNN | Tu (comandă) | Wipe + regenerez, audit, commit | Push/PR/merge | Da (`regen/cNN-AAAALLZZ`) | 10-20 min |
 
-**Nicio comandă nu necesită setup remote** (Git/GitHub Desktop nu sunt folosite). 
+**Tool oficial pentru ARHITECT:** GitHub Desktop pentru sync local + GitHub web UI pentru PR-uri/review/merge.
 
-**Singura excepție atașare:** scenariul 3 (imagini Banana) când pozele NU sunt deja pe disk.
+**Singura excepție atașare în chat:** scenariul 3 (imagini Banana) când pozele NU sunt deja pe disk.
 
 ---
 
 Pentru lista completă a comenzilor pe care le poți da → `03-COMENZI-OPERATIONALE.md`.
 
-Pentru detalii backup și versionare → `CLAUDE.md` secțiunea "VERSIONARE ONEDRIVE + BACKUP DISCIPLINE".
+Pentru detalii versionare git → `CLAUDE.md` secțiunea „VERSIONARE GIT".

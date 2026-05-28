@@ -53,10 +53,12 @@ trainity-pack-02-excel/
 
 Fiecare construcție are **un singur set** de fișiere în `cNN/`. NU mai există canonic/editat.
 
-**Versionarea o face OneDrive:**
-- Auto-sync la fiecare modificare (cloud)
-- Version History per fișier ~30 zile (drept-click → Version History)
-- Pentru folder restore: BACKUP AUTO pre-destructive (regula V1) + SNAPSHOT V{N} la consolidare (regula V2). Detalii în `CLAUDE.md` secțiunea "VERSIONARE ONEDRIVE + BACKUP DISCIPLINE".
+**Versionarea o face git:**
+- Remote: `github.com/trainity-bogdan/Trainity-02-Excel`
+- Branch per task semnificativ (`feat/cNN-*`, `fix/*`, `refactor/*`), merge pe main
+- Tag anotat `v{N}` la incrementare versiune sistem (echivalent „snapshot oficial")
+- Restore = `git show <sha>:path`, `git checkout v40 -- cNN/`, `git revert <sha>`
+- Detalii: `CLAUDE.md` secțiunea „VERSIONARE GIT" (regulile G1-G5)
 
 **Matrița pentru generare** = `_template/` (clonă a structurii, folosită la COPY+MODIFY pentru C06+).
 
@@ -91,8 +93,8 @@ Plus folder `assets/` cu cele 12 fișiere imagine (6 × jpg+png).
 
 ---
 
-## Versiune sistem: V40 · 28 mai 2026
+## Versiune sistem: V41 · 28 mai 2026
 
-**V40 = reparare infrastructura validare + sync docs cu V39 (colaps canonic/editat la versiune unica + assets/ per construcție + _template matriță) + workflow OneDrive (NU Git) cu backup discipline.**
+**V41 = fix responsive complet pe matrița HTML-Studiu (safe-area iPhone, breakpoint ≤380px, a11y aria/keyboard) + refactor invers OneDrive → git (V40 a presupus OneDrive bazat pe artefacte istorice; V41 confirmă git ca singura sursă de versionare).**
 
-Versionarea = OneDrive auto-sync + Version History per fișier + backup automat pre-destructive (regula V1) + snapshots oficiale la incrementare V (regula V2). Imaginile organizate per construcție (diferite per axă). Documentația operațională ~84 KB în 8 fișiere + meta-fișiere.
+Versionarea = git commit + branch + tag + remote GitHub. Restore via `git checkout/show/revert`. Imaginile organizate per construcție (diferite per axă). Documentația operațională ~84 KB în 8 fișiere + meta-fișiere.

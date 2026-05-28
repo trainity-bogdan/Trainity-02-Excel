@@ -1,5 +1,5 @@
 # Catalog comenzi Trainity · machine-readable
-# Versiune: V40 · 28 mai 2026
+# Versiune: V41 · 28 mai 2026
 #
 # Fiecare comandă are:
 #   sintaxa        Forma canonică
@@ -16,9 +16,9 @@
 # Acest fișier ESTE catalogul. Claude îl citește on-demand
 # pentru a executa corect comenzile.
 #
-# V40: actualizat la versiune unică per construcție (V39) + workflow
-# OneDrive (NU Git). Backup automat înainte de operațiuni distructive
-# (regula V1 din CLAUDE.md). Snapshot V{N} la consolideaza_brain (V2).
+# V41: versionare git (commit + branch + tag), eliminate referințele
+# OneDrive și backup folders manuale. Restore = git checkout/show/revert.
+# Reguli noi G1-G5 în CLAUDE.md secțiunea "VERSIONARE GIT".
 
 comenzi:
 
@@ -32,23 +32,26 @@ comenzi:
     executie:
       - "Citesc STARE-CURENTA.md"
       - "Rulez _system/generatoare/audit_sync.py"
+      - "git status (branch curent, working tree clean?)"
     post_check: []
     atinge: []
-    raport: "Versiune V{N} | Construcții livrate X/20 | Audit: {zero drift / drift detectat} | Pe agenda: {primul item}"
+    raport: "Versiune V{N} | Construcții livrate X/20 | Audit: {zero drift / drift detectat} | Branch: {nume} | Pe agenda: {primul item}"
     confirmare: false
     referinta_doc: "_system/03-COMENZI-OPERATIONALE.md"
 
   - id: genereaza_constructie
     sintaxa: "genereaza C{NN}"
     aliasuri: ["genereaza constructia {NN}", "creeaza C{NN}", "genereaza C{NN} {slug}"]
-    intentie: "Prima generare a construcției NN"
+    intentie: "Prima generare a construcției NN, pe branch dedicat"
     pre_check:
       - "SPEC C{NN} înghețat narativ în _system/arhiva/SISTEM_TRAINITY-versiuni.md (R-V03.55)"
       - "IDENTITATE_TEHNICA C{NN} completă în _system/referinte/IDENTITATE-TEHNICA.md (R-V03.40 / L142)"
       - "Prompt-label specific construcției NU clone (L144)"
       - "C{NN-1} predată cu sumă conservată (R-V02.14)"
       - "Rulez _system/generatoare/pre_generation_check.py {NN} → exit 0"
+      - "Working tree clean (git status) sau pe branch deja deschis"
     executie:
+      - "git checkout -b feat/c{NN}-generare (dacă nu e deja pe branch)"
       - "Citesc _template/ ca matriță (R-V03.54)"
       - "Aplic COPY+MODIFY pe cele 4 HTML-uri (text/identitate per CNN, CSS/JS intacte)"
       - "Generez Date_MASTER-C{NN}.xlsx din _system/referinte/Date_MASTER-initial.xlsx + SPEC"
@@ -56,62 +59,67 @@ comenzi:
       - "Generez FILM-Excel-{NN}-{slug}.docx"
       - "Copiez 12 imagini placeholder din _template/assets/ în c{NN}/assets/"
       - "Scriu toate în c{NN}/"
+      - "git add c{NN}/ && git commit -m 'feat(c{NN}): generare initiala'"
     post_check:
       - "audit_sync.py → ZERO DRIFT (R-V03.63)"
       - "gate_v20.py {NN} c{NN}/ _template/ → PASS"
     atinge:
       - "c{NN}/ (7 artefacte + assets/)"
-    raport: "C{NN} generată. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axă)."
+      - "branch feat/c{NN}-generare (nou)"
+    raport: "C{NN} generată pe branch feat/c{NN}-generare. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axă). Pentru merge: git push -u origin feat/c{NN}-generare + PR pe GitHub."
     confirmare: false
     referinta_doc: "_system/05-WORKFLOW-PER-SCENARIU.md scenariu 1"
 
   - id: regenereaza_de_la_zero
     sintaxa: "regenereaza C{NN} de la zero"
     aliasuri: ["recreaza C{NN}", "rebuild C{NN}"]
-    intentie: "DISTRUCTIVE: suprascrie c{NN}/. Rollback prin backup auto sau OneDrive Version History."
+    intentie: "DISTRUCTIVE: suprascrie c{NN}/. Rollback prin git (commit-ul anterior rămâne în istoric)."
     pre_check:
       - "ARHITECT confirmă explicit (cerere distructivă)"
+      - "Working tree clean (toate modificările pe c{NN} commited)"
     executie:
-      - "BACKUP AUTO (regula V1): copiez c{NN}/ → c{NN}_BACKUP_AAAALLZZ_pre-regen/"
-      - "ŞTERG c{NN}/"
+      - "git checkout -b regen/c{NN}-$(date +%Y%m%d)"
+      - "git rm -r c{NN}/ && git commit -m 'chore(c{NN}): wipe pre-regen'"
       - "Aplic flow genereaza_constructie de la zero"
+      - "git add c{NN}/ && git commit -m 'feat(c{NN}): regenerare de la zero'"
     post_check:
       - "audit_sync.py → ZERO DRIFT"
       - "gate_v20.py PASS"
-      - "Backup c{NN}_BACKUP_AAAALLZZ_pre-regen/ vizibil"
     atinge:
       - "c{NN}/ (suprascris complet)"
-      - "c{NN}_BACKUP_AAAALLZZ_pre-regen/ (creat)"
-    raport: "C{NN} regenerată de la zero. Backup la c{NN}_BACKUP_AAAALLZZ_pre-regen/. OneDrive sync în background. Dacă vrei rollback: ștergi c{NN}/ și redenumești backup-ul."
+      - "branch regen/c{NN}-AAAALLZZ (nou)"
+    raport: "C{NN} regenerată de la zero pe branch regen/c{NN}-AAAALLZZ. Versiunea anterioară accesibilă via git log/show pe main. Pentru rollback: git revert sau git checkout main -- c{NN}/."
     confirmare: true
-    confirmare_text: "Atenție: voi suprascrie c{NN}/ complet. Creez backup automat c{NN}_BACKUP_AAAALLZZ_pre-regen/. Confirmi? (da/nu)"
+    confirmare_text: "Atenție: voi suprascrie c{NN}/ complet pe branch regen/c{NN}-AAAALLZZ. Versiunea curentă rămâne în git history pe main. Confirmi? (da/nu)"
 
   # ─── EDITARE & PATCH ─────────────────────────────────────
 
   - id: aplica_fix
     sintaxa: "aplica fix [descriere]"
     aliasuri: ["bug: [desc]. Aplică", "patch [descriere]"]
-    intentie: "Patch script peste TOATE construcțiile c01-cN."
+    intentie: "Patch script peste TOATE construcțiile c01-cN, pe branch dedicat."
     pre_check:
       - "ARHITECT descrie clar bug-ul"
       - "Citesc fișier reprezentativ pentru localizare"
       - "Estimez câte fișiere atinge patch-ul"
+      - "Working tree clean"
     executie:
       - "Propun fix-ul concret cu citate exacte"
       - "ARHITECT confirmă"
-      - "Dacă patch atinge >3 fișiere: BACKUP AUTO (regula V1) pe construcțiile afectate (cNN/ → cNN_BACKUP_AAAALLZZ_pre-fix/)"
+      - "git checkout -b fix/{slug-descriere}"
       - "Scriu rețetă patch YAML în _system/patch_recipes/R-V03.X-{slug}.yaml"
       - "Rulez patch_runner.py rețetă pe toate c*/"
+      - "git add . && git commit -m 'fix({scope}): {descriere}'"
     post_check:
       - "audit_sync.py → ZERO DRIFT (cu noul detector adăugat)"
       - "gate_v20 PASS pe construcțiile afectate"
     atinge:
       - "c*/{fișiere afectate}"
-      - "c*_BACKUP_AAAALLZZ_pre-fix/ (dacă >3 fișiere)"
       - "_system/patch_recipes/R-V03.X-{slug}.yaml (nou)"
       - "_system/01-REGULI-ACTIVE.md (regulă nouă)"
       - "_system/generatoare/audit_sync.py (detector nou)"
-    raport: "Fix aplicat pe C01-C{ultima}. Regula R-V03.X codificată. {Backup creat la cNN_BACKUP... / Modificare mică, fără backup}. OneDrive sync."
+      - "branch fix/{slug} (nou)"
+    raport: "Fix aplicat pe C01-C{ultima} pe branch fix/{slug}. Regula R-V03.X codificată. Pentru merge: git push -u origin fix/{slug} + PR (recomandat pentru schimbări sistemice)."
     confirmare: true
 
   - id: regula_noua
@@ -123,12 +131,13 @@ comenzi:
       - "Adaug în _system/01-REGULI-ACTIVE.md cu status PROPUSĂ"
       - "Scriu detector în _system/generatoare/audit_sync.py (dacă fișier-bazată)"
       - "Scriu rețetă patch în _system/patch_recipes/ (dacă patch-abilă)"
+      - "git commit -m 'docs(reguli): propun R-V03.X'"
     post_check: []
     atinge:
       - "_system/01-REGULI-ACTIVE.md"
       - "_system/generatoare/audit_sync.py (dacă fișier-bazată)"
       - "_system/patch_recipes/R-V03.X-{slug}.yaml (dacă patch-abilă)"
-    raport: "R-V03.X codificată ca PROPUSĂ. Aplic cu 'aplica R-V03.X' când ești gata."
+    raport: "R-V03.X codificată ca PROPUSĂ + commit. Aplic cu 'aplica R-V03.X' când ești gata."
     confirmare: false
 
   # ─── AUDIT & VERIFICARE ──────────────────────────────────
@@ -161,15 +170,16 @@ comenzi:
   - id: compara_versiuni
     sintaxa: "compara C{NN} cu versiunea anterioara"
     aliasuri: ["diff C{NN}", "ce am modificat in C{NN}"]
-    intentie: "Diff între c{NN}/ actual și fie backup local, fie OneDrive Version History"
+    intentie: "Diff între c{NN}/ actual și o versiune anterioară din git history"
     pre_check: []
     executie:
-      - "Identific surse de comparat: (a) c{NN}_BACKUP_AAAALLZZ_*/ locale, (b) snapshot _system/snapshots/V{N}/c{NN}/, (c) OneDrive Version History (per fișier)"
-      - "Diff line-by-line pe fișiere comparabile (HTML, MD, txt)"
+      - "git log --oneline -- c{NN}/ → arăt commit-urile relevante"
+      - "Aleg referința de comparat (tag v{N-1}, sha specific, sau HEAD~k)"
+      - "git diff {ref}..HEAD -- c{NN}/"
       - "Sumarizez diferențele semantic"
     post_check: []
     atinge: []
-    raport: "C{NN} diff vs {sursă comparată}: {sumar modificări}. Pentru istoric per fișier, OneDrive Version History (drept-click → Version History în Explorer)."
+    raport: "C{NN} diff vs {ref}: {sumar modificări}. Pentru istoric complet: `git log --follow -- c{NN}/path/fisier`."
     confirmare: false
 
   # ─── IMAGINI & ASSETS ────────────────────────────────────
@@ -184,32 +194,37 @@ comenzi:
       - "Salvez pozele în c{NN}/assets/exec-stage-{X}.{jpg,png}"
       - "Encode base64"
       - "Înlocuiesc în c{NN}/HTML-Video-Excel-{NN}-{slug}.html și HTML-Editor-Video"
+      - "git add c{NN}/ && git commit -m 'chore(c{NN}): poza exec-stage-{X}'"
     post_check:
       - "audit_sync.py → ZERO DRIFT"
     atinge:
       - "c{NN}/assets/exec-stage-{X}.{jpg,png}"
       - "c{NN}/HTML-Video-Excel-*.html"
       - "c{NN}/HTML-Editor-Video-Excel-*.html"
-    raport: "Imagine nouă exec-stage-{X} în C{NN}. OneDrive sync în background."
+    raport: "Imagine nouă exec-stage-{X} în C{NN}. Commit local. Push când vrei."
     confirmare: true
 
   - id: poza_noua_toate
     sintaxa: "aceasta poza inlocuieste exec-stage-{X} la toate"
     aliasuri: ["update brand poza exec-stage-{X}"]
-    intentie: "Înlocuiesc imagine în toate construcțiile (brand-wide)"
+    intentie: "Înlocuiesc imagine în toate construcțiile (brand-wide), pe branch dedicat"
     pre_check:
       - "ARHITECT confirmă (impact pe toate)"
+      - "Working tree clean"
     executie:
+      - "git checkout -b chore/brand-exec-stage-{X}"
       - "Pentru fiecare c{NN}/ existent: salvez în c{NN}/assets/exec-stage-{X}.{jpg,png}"
       - "Re-encode base64"
       - "Aplic peste toate c*/HTML-Video-*.html + HTML-Editor-Video"
+      - "git add . && git commit -m 'chore(brand): exec-stage-{X} pe toate construcțiile'"
     post_check:
       - "audit_sync.py → ZERO DRIFT"
     atinge:
       - "c*/assets/exec-stage-{X}.*"
       - "c*/HTML-Video-*.html"
       - "c*/HTML-Editor-Video-*.html"
-    raport: "Imagine brand exec-stage-{X} actualizată în toate construcțiile. OneDrive sync în background."
+      - "branch chore/brand-exec-stage-{X} (nou)"
+    raport: "Imagine brand exec-stage-{X} actualizată în toate construcțiile pe branch chore/brand-exec-stage-{X}. Pentru merge: PR pe GitHub."
     confirmare: true
 
   # ─── META-SISTEM ─────────────────────────────────────────
@@ -217,41 +232,41 @@ comenzi:
   - id: consolideaza_brain
     sintaxa: "consolideaza brain"
     aliasuri: ["checkout brain", "consolidare V{N}"]
-    intentie: "Sumarizare sesiune + update STARE-CURENTA + SNAPSHOT AUTO V{N}"
-    pre_check: []
+    intentie: "Sumarizare sesiune + update STARE-CURENTA + TAG V{N}"
+    pre_check:
+      - "audit_sync.py → ZERO DRIFT (consolidare doar pe stare validă)"
     executie:
       - "Sumar sesiune: ce s-a făcut, ce decizii, ce lecții"
       - "Update STARE-CURENTA.md (versiune nouă V{N})"
       - "Update _system/arhiva/brain-evolutia-V01-V38.md cu sumar V{N}"
-      - "audit_sync.py → confirm ZERO DRIFT pre-consolidare"
-      - "SNAPSHOT AUTO (regula V2): copiez c01..c{ultima} → _system/snapshots/V{N}_AAAALLZZ/"
-      - "Generez _system/snapshots/V{N}_AAAALLZZ/manifest.md cu sumar V{N}"
+      - "git add STARE-CURENTA.md _system/arhiva/ && git commit -m 'docs(brain): consolidare V{N}'"
+      - "git tag -a v{N} -m 'V{N}: {sumar scurt}'"
+      - "git push && git push --tags"
     post_check:
-      - "Snapshot V{N} vizibil + manifest.md prezent"
+      - "Tag v{N} vizibil în git tag -l"
+      - "Push remote OK"
     atinge:
       - "STARE-CURENTA.md"
       - "_system/arhiva/brain-evolutia-V01-V38.md"
-      - "_system/snapshots/V{N}_AAAALLZZ/ (creat, conține copii cNN/ + manifest)"
-    raport: "Consolidare V{N} finalizată. Snapshot oficial salvat la _system/snapshots/V{N}_AAAALLZZ/. OneDrive sync în background. Pe agenda: {primul item}."
+      - "tag v{N} (nou)"
+    raport: "Consolidare V{N} finalizată. Tag v{N} pushat pe origin. Branch curent la zi. Pe agenda: {primul item}."
     confirmare: false
 
-  - id: snapshot_versiune
-    sintaxa: "snapshot V{N}"
-    aliasuri: ["fa snapshot V{N}", "salveaza snapshot V{N}"]
-    intentie: "Creez snapshot oficial al stării curente (regula V2, manual)"
+  - id: tag_versiune
+    sintaxa: "tag V{N}"
+    aliasuri: ["fa tag V{N}", "marcheaza V{N}"]
+    intentie: "Creez tag git oficial al stării curente (regula G3, manual)"
     pre_check:
-      - "audit_sync.py → ZERO DRIFT (snapshot doar pe stare validă)"
+      - "audit_sync.py → ZERO DRIFT (tag doar pe stare validă)"
+      - "Working tree clean (toate modificările commited)"
     executie:
-      - "Determină data AAAALLZZ"
-      - "Creez folderul _system/snapshots/V{N}_AAAALLZZ/"
-      - "Copiez c01/, c02/, ..., c{ultima}/ în snapshot"
-      - "Copiez STARE-CURENTA.md în snapshot ca state-at-snapshot.md"
-      - "Generez manifest.md cu: versiunea V{N}, data, ce construcții incluse, schimbări vs V{N-1}"
+      - "git tag -a v{N} -m 'V{N}: {sumar din STARE-CURENTA}'"
+      - "git push --tags"
     post_check:
-      - "Snapshot vizibil + manifest.md prezent"
+      - "git tag -l confirmă v{N}"
     atinge:
-      - "_system/snapshots/V{N}_AAAALLZZ/ (creat)"
-    raport: "Snapshot V{N} salvat la _system/snapshots/V{N}_AAAALLZZ/. OneDrive sync în background. Folosește pentru rollback la V{N} dacă ulterior greșim ceva."
+      - "tag v{N} (nou pe local + remote)"
+    raport: "Tag v{N} creat și pushat pe origin. Pentru rollback: git checkout v{N} sau git diff v{N}..HEAD."
     confirmare: false
 
   - id: help
@@ -295,9 +310,14 @@ reguli_aplicare:
   comenzi_distructive:
     - "Cer confirmare explicită"
     - "Niciodată suprascriu fără 'da' explicit"
-    - "BACKUP AUTO (regula V1) pentru orice operațiune ce suprascrie folder sau atinge >3 fișiere"
-    - "Format backup: cNN_BACKUP_AAAALLZZ_pre-{operatiune}/"
-    - "OneDrive Version History per fișier rămâne fallback pentru pierderi mici"
+    - "Branch dedicat pentru orice operațiune distructivă (regenerare, refactor masiv)"
+    - "Convenție: regen/c{NN}-AAAALLZZ, refactor/{scope}, fix/{slug}"
+    - "Git history este fallback complet pentru rollback (git revert, git checkout)"
+
+  push_explicit:
+    - "Commit-urile rămân locale (în container) până ARHITECT cere 'push'"
+    - "Excepție: când ARHITECT a confirmat anterior un workflow autonom pentru sesiunea curentă"
+    - "Niciodată push pe main fără confirmare scrisă"
 
   cereri_paralele:
     - "Dacă ARHITECT cere 2 comenzi simultan, le execut în serie cu raport per fiecare"
@@ -311,9 +331,10 @@ reguli_aplicare:
 # ─── VERSIONARE ACESTUI FIȘIER ──────────────────────────────
 
 metadata:
-  versiune: V40
+  versiune: V41
   data: 2026-05-28
   format: YAML 1.2
   citit_de: ["Claude (motor)", "ARHITECT (referință)"]
   modificat_de: "Claude la fiecare codificare comenzi noi"
-  changelog_v40: "Colaps canonic/editat în comenzi (genereaza, aplica_fix, regenereaza, poze). Eliminat refa_canonic + aplica_si_pe_canonic (nu mai au sens). compara_canonic_editat → compara_versiuni (folosește OneDrive Version History + snapshots locale). Adăugat pre_generation_check.py în pre_check pentru genereaza. Adăugat BACKUP AUTO (regula V1) la regenereaza + aplica_fix >3 fișiere. Adăugat SNAPSHOT AUTO (regula V2) la consolideaza_brain. Adăugat comanda separată snapshot_versiune. Eliminate toate referințele Git → OneDrive."
+  changelog_v41: "Refactor invers V40 (OneDrive → git). Eliminate BACKUP AUTO folders manuale (acum git history acoperă). Eliminate SNAPSHOT folder (acum git tag v{N}). Toate comenzile primesc pași git (checkout -b, commit, push, tag). Adăugată regulă push_explicit (commit local până la cerere explicită push). compara_versiuni folosește git log/diff în loc de OneDrive Version History."
+  changelog_v40: "[REVOCAT în V41] Colaps canonic/editat. Adăugat BACKUP AUTO + SNAPSHOT V{N} (eliminat în V41). pre_generation_check.py în pre_check pentru genereaza."

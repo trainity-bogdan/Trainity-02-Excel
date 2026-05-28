@@ -45,15 +45,15 @@ Plus `COMENZI.yaml` (catalog machine-readable) + `INDEX-CAUTARE.md` (search alph
 
 ---
 
-## Structura repository (V40)
+## Structura repository (V41)
 
 ```
-trainity-pack-02-excel/                (în OneDrive, NU Git)
+Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bogdan/Trainity-02-Excel)
 │
 ├── CLAUDE.md                         boot rapid pentru motor (Claude)
 ├── STARE-CURENTA.md                  single source of truth status
 ├── README.md                         prima pagină proiect
-├── .gitignore                        artefact istoric (NU folosim Git)
+├── .gitignore                        config git
 │
 ├── _template/                        MATRIȚĂ de generare (clonă structură pentru C06+)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
@@ -72,16 +72,15 @@ trainity-pack-02-excel/                (în OneDrive, NU Git)
 │   ├── COMENZI.yaml                  catalog machine-readable
 │   ├── INDEX-CAUTARE.md              search alphabetic
 │   │
-│   ├── arhiva/                       istoric V01-V40, NU pentru referință zilnică
+│   ├── arhiva/                       istoric V01-V41, NU pentru referință zilnică
 │   │   ├── brain-evolutia-V01-V38.md
 │   │   ├── SISTEM_TRAINITY-versiuni.md
 │   │   ├── KIT-V38-INSTRUCTIUNI.md
 │   │   ├── WORKFLOW-CAP-COADA.md
-│   │   ├── GHID-SETUP-GITHUB-PLAN-NEEXECUTAT.md  (plan istoric, neadoptat)
 │   │   └── RAPORT-CONSTRUCTIE-C04-V27.md
 │   │
 │   ├── generatoare/                  scripturi Python operationale
-│   │   ├── audit_sync.py             ✓ esential (8 detectoare V40)
+│   │   ├── audit_sync.py             ✓ esential (8 detectoare)
 │   │   ├── gate_v20.py               ✓ esential (6 clase)
 │   │   ├── pre_generation_check.py   ✓ esential (3 checks)
 │   │   ├── patch_runner.py           ✓ esential (motor patch unificat)
@@ -93,18 +92,15 @@ trainity-pack-02-excel/                (în OneDrive, NU Git)
 │   ├── patch_recipes/                rețete YAML pentru patch-uri
 │   │   └── R-V03.{XX}-{slug}.yaml
 │   │
-│   ├── referinte/                    asset perpetuu
-│   │   ├── Date_MASTER-initial.xlsx  dataset canonic 2000 facturi
-│   │   ├── IDENTITATE-TEHNICA.md     schema R-V03.47
-│   │   ├── DATA-INSTRUCTIUNI.md
-│   │   ├── SCHEMA-MASTER.md
-│   │   ├── COVER-CHECKLIST.md
-│   │   ├── PROTOCOL-FILM-OBS.md
-│   │   ├── highlighter-snippet.css
-│   │   └── highlighter-snippet.js
-│   │
-│   └── snapshots/                    snapshots oficiale V{N} (regula V2 din CLAUDE.md)
-│       └── V{N}_AAAALLZZ/            copii ale construcțiilor la momentul V{N} + manifest.md
+│   └── referinte/                    asset perpetuu
+│       ├── Date_MASTER-initial.xlsx  dataset canonic 2000 facturi
+│       ├── IDENTITATE-TEHNICA.md     schema R-V03.47
+│       ├── DATA-INSTRUCTIUNI.md
+│       ├── SCHEMA-MASTER.md
+│       ├── COVER-CHECKLIST.md
+│       ├── PROTOCOL-FILM-OBS.md
+│       ├── highlighter-snippet.css
+│       └── highlighter-snippet.js
 │
 ├── c01/                              CONSTRUCȚIE (o singură versiune V39+)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
@@ -116,37 +112,37 @@ trainity-pack-02-excel/                (în OneDrive, NU Git)
 └── (c06-c20: queue)
 ```
 
-**Backup-uri ad-hoc** (regula V1): `cNN_BACKUP_AAAALLZZ_pre-{operatiune}/` apar temporar la rădăcină când motor face operațiune distructivă. ARHITECT le poate șterge după ce e sigur că modificarea e bună.
+**Versionare:** git ține istoricul complet. Branch-uri per task semnificativ (`feat/cNN-generare`, `fix/<slug>`, `regen/cNN-AAAALLZZ`, `chore/brand-*`). Tag-uri anotate `v{N}` la incrementare versiune sistem. Rollback prin `git checkout`, `git revert`, `git show`.
 
 ---
 
-## Filozofia sistemului (V40)
+## Filozofia sistemului (V41)
 
-Sistemul respectă trei principii:
+Sistemul respectă patru principii:
 
 **1. Matriță explicit separată (V39+)**
 `_template/` e matrița curată folosită la generare CNN+. Construcțiile cNN/ sunt fiecare o versiune unică (NU canonic/editat split). Modificările live se aplică direct în cNN/.
 
 **2. Patch over Edited (R-V03.62 absorbită, V39+)**
-Upgrade-urile KIT se aplică ca patch-uri izolate în cNN/. Conținutul ARHITECT rămâne intact prin natura faptului că patch-ul țintește doar zona specifică. Pattern confirmat empiric V32-V34. Pentru operațiuni care ating >3 fișiere, BACKUP AUTO (regula V1) precede patch-ul.
+Upgrade-urile KIT se aplică ca patch-uri izolate în cNN/. Conținutul ARHITECT rămâne intact prin natura faptului că patch-ul țintește doar zona specifică. Pattern confirmat empiric V32-V34. Pentru schimbări sistemice, branch dedicat + commit + PR (recomandat).
 
 **3. Audit empiric exhaustiv (R-V03.63)**
 La fiecare consolidare/finalizare batch, `audit_sync.py` verifică toate regulile active per zonă. Zero drift = sistem sincronizat. Drift sau ERR > 0 = blocant, se repară înainte de continuare.
 
-**4. Versionare OneDrive + backup discipline (V40+)**
-OneDrive sync auto + Version History per fișier (~30 zile) + backup auto pre-destructive (V1) + snapshots V{N} la consolidare (V2) + restore fișier prin OneDrive Version History (V3). NU folosim Git. Vezi CLAUDE.md "VERSIONARE ONEDRIVE + BACKUP DISCIPLINE".
+**4. Versionare git (V41+)**
+Versionarea o face git: commit per modificare logică + branch per task semnificativ + tag anotat `v{N}` la incrementare versiune sistem. Restore via `git checkout/show/revert`. Remote: GitHub. Vezi CLAUDE.md „VERSIONARE GIT" (regulile G1-G5).
 
 ---
 
-## Status actual (verificat empiric V40)
+## Status actual (verificat empiric V41)
 
 ```
 ✓ 40 verificări empirice PASS (8 detectoare × 5 construcții)
-✓ ZERO DRIFT real (post fix encoding audit_sync V40)
+✓ ZERO DRIFT real
 ✓ Cele 7 artefacte + assets/ prezente per construcție
 ✓ Gate v20 PASS pe construcțiile testate (C02 confirmat)
-✓ Scripturile validare reparate (encoding utf-8, stdout reconfigure, paths actualizate)
-✓ Workflow OneDrive documentat (regulile V1/V2/V3)
+✓ Scripturile validare funcționale (encoding utf-8, stdout reconfigure)
+✓ Workflow git documentat (regulile G1-G5)
 ```
 
 ---
@@ -157,10 +153,11 @@ OneDrive sync auto + Version History per fișier (~30 zile) + backup auto pre-de
 |---|---|---|
 | ...generez C06 | `genereaza C06` | 03 + 05 scenariu 1 |
 | ...verific sincronizarea | `verifica sincronizare` | 03 |
-| ...modific text într-o construcție | (nu necesită chat — lucrezi local, OneDrive sync auto) | 05 scenariu 4 |
+| ...modific text într-o construcție | (lucrezi local + commit/push în GitHub Desktop, opțional ceri eu commit-ul) | 05 scenariu 4 |
 | ...aplic bug fix la toate | `aplica fix [descriere]` | 05 scenariu 2 |
 | ...adaug poză nouă cu Banana | `pentru CNN poza X` + atașez | 05 scenariu 3 |
-| ...regenerez CNN cu SPEC nou | `regenereaza CNN de la zero` (cu backup auto) | 05 scenariu 5 |
-| ...salvez snapshot oficial V{N} | `snapshot V{N}` | CLAUDE.md regula V2 |
+| ...regenerez CNN cu SPEC nou | `regenereaza CNN de la zero` (branch dedicat + git history păstrează versiunea veche) | 05 scenariu 5 |
+| ...marchez stare oficială V{N} | `tag V{N}` | CLAUDE.md regula G3 |
+| ...urc commit-urile pe GitHub | `push` | 03 secțiunea remote git |
 
 Pentru detalii pas cu pas → `03-COMENZI-OPERATIONALE.md`.

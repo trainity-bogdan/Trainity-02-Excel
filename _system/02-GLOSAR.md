@@ -41,9 +41,8 @@ Imaginile cinematic sunt încorporate în HTML-Video ca data URI, nu ca fișiere
 **Canonic — ABSORBIT V39**
 Era stare istorică pre-V39 (`cNN/canonic/`). ELIMINATĂ la V39 (versiune unică `cNN/`). Rolurile fostei stări canonic sunt acum împărțite:
 - Matriță pentru generare construcții viitoare = `_template/` (separat explicit)
-- Backup automat = `cNN_BACKUP_AAAALLZZ_pre-{op}/` la operațiuni distructive (regula V1 din CLAUDE.md)
-- Snapshots oficiale V{N} = `_system/snapshots/V{N}_AAAALLZZ/` (regula V2)
-- Referință pentru audit/diff = OneDrive Version History per fișier (regula V3)
+- Versionare oficială = git commit + branch + tag `v{N}` (regulile G1-G3 din CLAUDE.md)
+- Referință pentru audit/diff = `git log` + `git show <sha>:path` + `git diff v{N-1}..HEAD` (regula G4)
 
 **Capture phase**
 Tehnică JavaScript: `addEventListener('click', fn, true)`. Permite intercepție event înainte de bubble la parent. Folosit în highlighter V34 pentru a opri advance-ul slide-ului la click pe text marcat (L153).
