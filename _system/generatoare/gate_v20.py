@@ -802,10 +802,10 @@ def get_pilot_hash(pilot_dir):
     """Calcul hash MD5 pe pilot pentru versionare (V18)."""
     import hashlib
     md5 = hashlib.md5()
-    for f in sorted(['HTML-Studiu-Excel-01-Structura.html',
-                     'HTML-Editor-Studiu-Excel-01-Structura.html',
-                     'HTML-Video-Excel-01-Structura.html',
-                     'HTML-Editor-Video-Excel-01-Structura.html']):
+    for f in sorted(['HTML-Studiu-Excel-01-Structurare.html',
+                     'HTML-Editor-Studiu-Excel-01-Structurare.html',
+                     'HTML-Video-Excel-01-Structurare.html',
+                     'HTML-Editor-Video-Excel-01-Structurare.html']):
         fp = os.path.join(pilot_dir, f)
         if os.path.exists(fp):
             with open(fp, 'rb') as fh:
@@ -834,10 +834,10 @@ def run_gate(NN, livrabile_path, pilot_dir, identitate):
     creativ_file = f"Creativ-Excel-{NN}-{nume_slug}.txt"
     excel_file = f"Date_MASTER-C{NN}.xlsx"  # V19: NUME NOU (era Date_MASTER-dupa-C{NN} in V18)
     
-    pilot_studiu = os.path.join(pilot_dir, "HTML-Studiu-Excel-01-Structura.html")
-    pilot_editor_studiu = os.path.join(pilot_dir, "HTML-Editor-Studiu-Excel-01-Structura.html")
-    pilot_video = os.path.join(pilot_dir, "HTML-Video-Excel-01-Structura.html")
-    pilot_editor_video = os.path.join(pilot_dir, "HTML-Editor-Video-Excel-01-Structura.html")
+    pilot_studiu = os.path.join(pilot_dir, "HTML-Studiu-Excel-01-Structurare.html")
+    pilot_editor_studiu = os.path.join(pilot_dir, "HTML-Editor-Studiu-Excel-01-Structurare.html")
+    pilot_video = os.path.join(pilot_dir, "HTML-Video-Excel-01-Structurare.html")
+    pilot_editor_video = os.path.join(pilot_dir, "HTML-Editor-Video-Excel-01-Structurare.html")
     
     all_erori = []
     files_present = []
@@ -972,12 +972,12 @@ def load_identitate(NN, identitate_path):
     IDENTITATI = {
         '01': {
             'cod': 'C01', 'nume_hero_caps_rand1': 'STRUCTURA',
-            'nume_slug': 'Structura',
+            'nume_slug': 'Structurare',
             'meta_val_treapta': '<b>STRUCTURA</b> · CONTROL · AUDIT · NORMALIZARE (SCAN)'
         },
         '02': {
             'cod': 'C02', 'nume_hero_caps_rand1': 'CONTROLUL',
-            'nume_slug': 'Control',
+            'nume_slug': 'Marcare',
             'meta_val_treapta': 'STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)'
         },
         '03': {

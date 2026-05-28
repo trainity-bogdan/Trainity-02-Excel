@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C01 · Structura Tabelelor · Trainity</title>
+<title>C02 · Marcare · Trainity</title>
 <style>
 /* ============ DESIGN TOKENS ============ */
 :root {
@@ -515,7 +515,7 @@ body.has-continue .stage-toast { bottom: 88px; }
   margin-bottom: 24px;
 }
 .stage-number {
-  font-size: clamp(56px, 9vw, 96px);
+  font-size: 96px;
   font-weight: 900;
   line-height: 0.85;
   color: var(--y);
@@ -1184,8 +1184,6 @@ body.has-continue .scroll-top { bottom: 88px; }
   body { font-size: 17px; line-height: 1.7; }
   .cover-subtitle { font-size: 24px; }
   .cover-miza { font-size: 18px; }
-  .cover-meta-row { grid-template-columns: 150px 1fr; gap: 12px; }
-  .exec-hero { padding: 40px 32px; }
   .exec-hero p { font-size: 17px; }
   .stage-hook { font-size: 19px; }
   .step-title { font-size: 19px; }
@@ -1200,8 +1198,6 @@ body.has-continue .scroll-top { bottom: 88px; }
   .verify-sub { font-size: 16px; }
   .final-text { font-size: 16px; line-height: 1.6; }
   .final-label { font-size: 11px; }
-  .payoff-section { padding: 56px 32px; }
-  .payoff-line { font-size: 20px; }
   .payoff-section p { font-size: 17px; }
   .anomaly-title { font-size: 14px; }
   .copy-btn { font-size: 12px; padding: 13px 24px; }
@@ -1214,13 +1210,8 @@ body.has-continue .scroll-top { bottom: 88px; }
   .final-card { padding: 22px 20px; }
 }
 @media (max-width: 1024px) {
-  /* SAFE-AREA: respectă notch/home indicator pe iPhone modern */
-  body { padding-top: calc(52px + env(safe-area-inset-top)); }
-  .mobile-topbar {
-    display: flex;
-    padding-top: env(safe-area-inset-top);
-    height: calc(52px + env(safe-area-inset-top));
-  }
+  body { padding-top: 52px; }
+  .mobile-topbar { display: flex; }
   .mobile-nav-toggle { display: inline-flex; }
   .app-grid {
     grid-template-columns: 1fr;
@@ -1229,26 +1220,24 @@ body.has-continue .scroll-top { bottom: 88px; }
   }
   .side-nav {
     position: fixed;
-    top: calc(52px + env(safe-area-inset-top));
-    right: -280px;
+    top: 52px; right: -280px;
     width: 280px;
-    height: calc(100vh - 52px - env(safe-area-inset-top));
+    height: calc(100vh - 52px);
     z-index: 180;
     transition: right .3s;
     border-radius: 0;
-    padding-bottom: env(safe-area-inset-bottom);
   }
   .side-nav.open { right: 0; }
-  .mobile-nav-overlay { top: calc(52px + env(safe-area-inset-top)); }
+  .mobile-nav-overlay { top: 52px; }
   .main-content { padding: 16px 0 64px; }
-  .scroll-top { bottom: calc(16px + env(safe-area-inset-bottom)); right: 16px; }
-  .top-progress { top: calc(52px + env(safe-area-inset-top)); }
-  /* CONTINUE BUTTON MOBILE: sticky JOS, full-width bar, respectă safe-area */
+  .scroll-top { bottom: 16px; right: 16px; }
+  .top-progress { top: 52px; }
+  /* CONTINUE BUTTON MOBILE: sticky JOS, full-width bar */
   .continue-btn {
     bottom: 0; right: 0; left: 0;
     width: 100%;
     justify-content: center;
-    padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+    padding: 16px 20px;
     border: none;
     border-top: 2px solid var(--k);
     box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08);
@@ -1257,11 +1246,9 @@ body.has-continue .scroll-top { bottom: 88px; }
   }
   .continue-btn:hover { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); }
   .continue-btn:active { transform: none; box-shadow: 0 -3px 0 0 rgba(0,0,0,0.08); background: #FFC700; }
-  /* Body padding-bottom cand butonul e vizibil pe mobile */
-  body.has-continue { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
-  /* Scroll-top urca deasupra barii Continuă pe mobile */
-  body.has-continue .scroll-top { bottom: calc(76px + env(safe-area-inset-bottom)); }
-  /* Touch targets larger pe tableta + mobile */
+  body.has-continue { padding-bottom: 64px; }
+  body.has-continue .scroll-top { bottom: 76px; }
+  .mobile-topbar { min-height: 52px; }
   .mobile-topbar-title { font-size: 14px; }
   .mobile-topbar-progress { font-size: 13px; }
 }
@@ -1278,6 +1265,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   .exec-hero { padding: 32px 24px; }
   .exec-hero p { font-size: 16px; line-height: 1.7; }
   .stage-header { grid-template-columns: 1fr; gap: 12px; }
+  .stage-number { font-size: 64px; }
   .stage-hook { font-size: 17px; line-height: 1.55; }
   .step { padding: 20px 18px; }
   .step-head { grid-template-columns: 1fr 26px; }
@@ -1291,10 +1279,8 @@ body.has-continue .scroll-top { bottom: 88px; }
   .anomaly-title { font-size: 14px; }
   .anomaly-desc { font-size: 15px; line-height: 1.6; }
   .inv-item { grid-template-columns: 1fr; gap: 10px; padding: 18px 20px; }
-  .inv-item-status { justify-self: start; width: max-content; min-width: 100px; }
   .inv-item-desc { font-size: 15px; line-height: 1.6; }
-  .prompt-box { padding: 22px 20px 20px; }
-  .prompt-text { font-size: 15px; line-height: 1.75; word-break: break-word; overflow-wrap: anywhere; }
+  .prompt-text { font-size: 15px; line-height: 1.75; }
   .prompt-label { font-size: 11px; }
   .copy-btn { font-size: 12px; padding: 13px 22px; width: 100%; }
   .verify-title { font-size: 16px; }
@@ -1307,47 +1293,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   .ba-pair { grid-template-columns: 1fr; gap: 8px; }
   .ba-arrow { display: none; }
   .payoff-section { padding: 48px 24px; }
-  .payoff-line { font-size: 18px; }
   .payoff-section p { font-size: 16px; line-height: 1.7; }
-  .completion-badge { padding: 22px 20px; }
-  .completion-title { font-size: 19px; }
-}
-
-/* H2 + M1: TELEFOANE FOARTE MICI (≤380px) — iPhone SE 1/2, Android budget */
-@media (max-width: 380px) {
-  .app-grid { padding: 0 14px; }
-  .cover { padding: 24px 0 20px; }
-  .cover-title { letter-spacing: -0.8px; }
-  .exec-hero { padding: 28px 18px; }
-  .payoff-section { padding: 40px 18px; }
-  .step { padding: 18px 16px; }
-  .stage-header { gap: 8px; }
-  .prompt-box { padding: 18px 16px; }
-  .continue-btn {
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    padding: 16px 12px calc(16px + env(safe-area-inset-bottom));
-    gap: 6px;
-  }
-  .continue-btn-counter { font-size: 10px; padding: 2px 5px; }
-  .mobile-topbar { padding-left: 12px; padding-right: 12px; }
-}
-
-/* M2: LANDSCAPE PHONE — condensare drawer pentru iPhone landscape */
-@media (max-height: 500px) and (orientation: landscape) and (max-width: 1024px) {
-  .side-nav { font-size: 11px; }
-  .nav-brand { padding: 8px 14px 6px; }
-  .nav-brand-title { font-size: 13px; }
-  .nav-progress { padding: 8px 14px; }
-  .nav-progress-num { font-size: 19px; }
-  .nav-section-label { padding: 8px 14px 4px; }
-  .nav-item { padding: 5px 6px; gap: 8px; }
-  .nav-item-name { font-size: 11px; }
-  .nav-item-meta { font-size: 9px; }
-  .nav-finals { padding: 0 14px 4px; }
-  .nav-final-dot { height: 28px; font-size: 11px; }
-  .nav-controls { padding: 8px 14px 10px; gap: 4px; }
-  .nav-ctrl-btn { padding: 7px 10px; min-height: 28px; font-size: 10px; }
 }
 
 /* V41 R-V03.67: SIDE-NAV scroll vizibil + condensare la viewport scurt
@@ -1395,11 +1341,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C01 · Structura Tabelelor</div>
+  <div class="mobile-topbar-title">C02 · Marcare</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
-  <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu" aria-expanded="false" aria-controls="sideNav"></button>
+  <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
-<div class="mobile-nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+<div class="mobile-nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
 
 <div class="book-app">
   <div class="app-grid">
@@ -1407,89 +1353,89 @@ body.has-continue .scroll-top { bottom: 88px; }
     <main class="main-content">
 
       <header class="cover">
-        <div class="cover-label">PACK 02 EXCEL · TREAPTA 1 · CONSTRUCȚIA C01</div>
-        <h1 class="cover-title">STRUCTURA<br>TABELELOR</h1>
-        <p class="cover-subtitle">Arată ca tabel. Nu este tabel.</p>
-        <div class="cover-miza">O decizie corectă pe date structurate greșit rămâne o decizie greșită.</div>
+        <div class="cover-label">PACK 02 EXCEL · TREAPTA 1 · CONSTRUCȚIA C02</div>
+        <h1 class="cover-title">Cum construim controlul anomaliilor de date</h1>
+        <p class="cover-subtitle">Tabelul cu date pare curat. Datele însă mint.</p>
+        <div class="cover-miza">Un raport construit pe date care mint produce decizii care costă.</div>
 
         <div class="cover-meta">
           <div class="cover-meta-row">
             <span class="cover-meta-key">TREAPTA</span>
-            <span class="cover-meta-val"><b>STRUCTURA</b> · CONTROL · AUDIT · NORMALIZARE (SCAN)</span>
+            <span class="cover-meta-val">STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)</span>
           </div>
           <div class="cover-meta-row">
             <span class="cover-meta-key">CONSTRUCȚIE</span>
-            <span class="cover-meta-val">01 din 20 · Pack 02 Excel</span>
+            <span class="cover-meta-val">02 din 20 · Pack 02 Excel</span>
           </div>
           <div class="cover-meta-row">
             <span class="cover-meta-key">AI INTEGRAT</span>
-            <span class="cover-meta-val">2 prompturi Copilot · investigație + transformare controlată</span>
+            <span class="cover-meta-val">2 prompturi Copilot · audit + marcare controlată</span>
           </div>
         </div>
       </header>
 
       <section class="exec-hero">
-        <div class="exec-hero-label">DE CE C01 · ÎNAINTE DE ORICE CALCUL</div>
-        <h2>Exportul ERP pare tabel. Nu este.</h2>
-        <p class="exec-hero-sharp">Problema nu este că datele sunt greșite. Problema este că Excel nu știe unde încep datele.</p>
-        <p>Are subtotaluri, anteturi de raport, blank-uri false, un total general numărat ca dată. Orice calcul, analiză sau dashboard construit peste această structură moștenește haosul și îl amplifică. C01 nu reconstruiește fișierul. Îl face controlabil.</p>
+        <div class="exec-hero-label">DE CE C02 · ÎNAINTE DE ORICE RAPORT</div>
+        <h2>Datele par curate. Nu sunt.</h2>
+        <p class="exec-hero-sharp">Problema nu este că datele lipsesc. Problema este că datele prezente nu sunt toate corecte.</p>
+        <p>Date în viitor, coduri client inexistente, duplicate exacte, tranzacții pe filiale închise, câmpuri obligatorii goale. Toate trec validare tehnică Excel. Niciuna nu este corectă operațional. C02 nu șterge și nu repară. Separă valid tehnic de corect operațional și marchează fiecare anomalie cu motivul ei.</p>
       </section>
 
       <div class="mantra-band">
         <div class="mantra-band-sub">MANTRA · TRAINITY</div>
-        <div class="mantra-band-main">Nu reconstruim tabelul. Îl facem <mark>controlabil</mark>.</div>
+        <div class="mantra-band-main">Marcăm acum datele neconforme. Decidem după ce facem cu <mark>ele</mark>.</div>
       </div>
 
       <section>
-        <div class="section-marker">SCENA REALĂ · CE PARE DATĂ DAR ESTE AMBALAJ</div>
-        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">ANTET RAPORT</b><p class="anomaly-desc">Rânduri de titlu raport înainte de antetul real al tabelului.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">SUBTOTALURI</b><p class="anomaly-desc">Rânduri SUBTOTAL pe categorie, inserate între tranzacții.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">TOTAL GENERAL</b><p class="anomaly-desc">Un rând TOTAL GENERAL la final, numărat de SUM ca dată.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">BLANK FALS</b><p class="anomaly-desc">Rânduri goale false care rup continuitatea tabelului între tranzacții.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">COLOANE ASCUNSE</b><p class="anomaly-desc">Coloane ascunse care nu se văd, dar există în fișier.</p></div></div>
+        <div class="section-marker">SCENA REALĂ · CE PARE VALID DAR NU ESTE CORECT</div>
+        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">DATĂ ÎN VIITOR</b><p class="anomaly-desc">Vânzări cu dată ulterioară raportului. Trec validare, mint cronologia.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">COD CLIENT INEXISTENT</b><p class="anomaly-desc">Cod client care nu se regăsește în nomenclator. Referință ruptă.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">DUPLICAT EXACT</b><p class="anomaly-desc">Perechi identice de factură, dată și sumă. Aceeași tranzacție de două ori.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">TRANZACȚIE WEEK-END</b><p class="anomaly-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">CÂMP OBLIGATORIU GOL</b><p class="anomaly-desc">Cantitate sau preț unitar lipsă pe linii de tranzacție.</p></div></div>
       </section>
 
       <section class="stage" id="stage-1" data-stage="1" data-stage-ghost="01">
   <header class="stage-header">
     <div class="stage-number">01</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 1 · CONFRUNTAREA CU HAOSUL</div>
+      <div class="stage-label">ETAPA 1 · TABELUL PARE CURAT</div>
       <h2 class="stage-name">REALITATE</h2>
       <div class="stage-tags"><span class="phase-tag">INPUT</span><span class="type-tag">Manual</span></div>
     </div>
   </header>
-  <p class="stage-quote">Deschizi exportul ERP. Pare un tabel ordonat. Fixezi referința înainte să atingi orice.</p>
+  <p class="stage-quote">Deschizi fișierul controlat de construcția precedentă. Aparent curat. Fixezi suma martor înainte să cauți anomalii.</p>
   <div class="stage-body">
 <div class="step" data-step="1">
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
-    <h3 class="step-title">Deschide exportul ERP brut</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Deschide fișierul predat de construcția precedentă</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Dublu-click pe Date_MASTER-C01.xlsx, foaia Vanzari. Un volum aparent de rânduri care arată ca un tabel curat. Citește mai întâi foaia _REALITATE.</p>
+    <p class="step-action">Dublu-click pe Date_MASTER-C02.xlsx, foaia Vanzari. Tabelul predat de construcția precedentă e curat structural. Acum cauți altceva.</p>
     
   </div>
 </div>
 <div class="step" data-step="2">
   <div class="step-head" onclick="toggleStep(2)">
     <div class="step-marker">PAS 02</div>
-    <h3 class="step-title">Privește structura, nu conținutul</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Caută anomaliile invizibile la prima privire</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Antet de raport pe primele rânduri. Subtotaluri inserate între categorii. Blank-uri false. Un TOTAL GENERAL la final. Ochiul vede tabel. Structura nu e tabel.</p>
+    <p class="step-action">O factură datată în viitor. Un cod client care nu există. Două facturi identice. O vânzare sâmbătă pe filiala L-V. Un câmp obligatoriu gol. Ochiul vede tabel curat. Datele mint.</p>
     
   </div>
 </div>
 <div class="step" data-step="3">
   <div class="step-head" onclick="toggleStep(3)">
     <div class="step-marker">PAS 03</div>
-    <h3 class="step-title">Fixează suma de referință</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Fixează suma martor pe valoare_neta</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Selectează coloana valoare_neta. Citește SUM din status bar. Notează martorul. Dacă se schimbă după transformare, ceva s-a pierdut.</p>
+    <p class="step-action">Selectează coloana valoare_neta. Citește SUM din status bar. Notează martorul. C02 marchează, nu șterge. Suma fizică totală trebuie să rămână identică după marcare.</p>
     
   </div>
 </div>
@@ -1500,35 +1446,35 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">02</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 2 · ÎNȚELEGERE ASISTATĂ DE AI</div>
+      <div class="stage-label">ETAPA 2 · SUSPICIUNI ASISTATE DE AI</div>
       <h2 class="stage-name">INVESTIGAȚIE</h2>
       <div class="stage-tags"><span class="phase-tag">AI</span><span class="type-tag">Copilot · Promptul 1</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu reparăm încă. Întâi înțelegem. Promptul natural este instrument de investigație, nu de execuție.</p>
+  <p class="stage-quote">Nu marcăm încă. Întâi auditează AI. Raport pe categorii de anomalii, fără modificare.</p>
   <div class="stage-body">
 <div class="step" data-step="4">
   <div class="step-head" onclick="toggleStep(4)">
     <div class="step-marker">PAS 04</div>
-    <h3 class="step-title">Activează Copilot pe foaia Date</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Activează Copilot pe foaia Vanzari</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Deschide Copilot în panoul lateral Excel, pe foaia Date. Nu ceri nicio modificare. Doar investighezi.</p>
+    <p class="step-action">Deschide Copilot în panoul lateral Excel, pe foaia Vanzari. Nu ceri nicio modificare. Doar audit.</p>
     
   </div>
 </div>
 <div class="step" data-step="5">
   <div class="step-head" onclick="toggleStep(5)">
     <div class="step-marker">PAS 05</div>
-    <h3 class="step-title">Rulează Promptul 1 de investigație</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Rulează Promptul 1 de audit</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Lipești promptul de mai jos. AI analizează structura și raportează pe categorii, fără să atingă o singură celulă.</p>
+    <p class="step-action">Lipești promptul de mai jos. AI auditează tabelul și raportează pe categorii de anomalii, fără să modifice o singură celulă.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 1 · INSTRUMENT DE INVESTIGAȚIE</div>
-      <div class="prompt-text">Mă uit la acest fișier și pare un tabel normal, dar bănuiesc că nu este. Verifică structura și spune-mi: ce nu ar trebui să fie aici dacă ar fi un tabel curat? Numără pe categorii. Nu modifica nimic, doar raportează.</div>
+      <div class="prompt-label">PROMPT 1 · INSTRUMENT DE AUDIT</div>
+      <div class="prompt-text">Mă uit la acest tabel și pare ordonat, dar suspectez că unele rânduri nu sunt corecte operațional. Verifică pe coloane și spune-mi: există date după data raportului? Există coduri de client care nu apar în nomenclator? Există duplicate exacte? Există vânzări în week-end pe filiale L-V? Există câmpuri obligatorii goale (cantitate sau preț)? Numără pe fiecare categorie. Nu modifica nimic, doar raportează.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1536,53 +1482,53 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="6">
   <div class="step-head" onclick="toggleStep(6)">
     <div class="step-marker">PAS 06</div>
-    <h3 class="step-title">Citește raportul de structură</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Citește raportul de anomalii</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">AI întoarce harta structurală: ce e antet, ce e subtotal, ce e gol fals, unde începe tabelul real. Acum știi, nu bănuiești.</p>
-    <div class="section-sublabel">RAPORT AI · STRUCTURĂ INVESTIGATĂ</div>
+    <p class="step-action">AI întoarce harta anomaliilor: câte date în viitor, câte coduri rupte, câte duplicate, câte week-end-uri, câte câmpuri goale. Acum știi, nu bănuiești.</p>
+    <div class="section-sublabel">RAPORT AI · ANOMALII DETECTATE</div>
     <ul class="inv-list">
 <li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
+      <div class="inv-item-status status-bad">DE VERIFICAT</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">ANTET DE RAPORT</div>
-        <div class="inv-item-desc">Rânduri de titlu raport care nu fac parte din tabelul real.</div>
+        <div class="inv-item-label">DATĂ ÎN VIITOR</div>
+        <div class="inv-item-desc">Facturi cu data_factura ulterioară datei raportului. Cronologie greșită.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-neutral">reper</div>
+      <div class="inv-item-status status-bad">EXCLUS</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">ANTET REAL TABEL</div>
-        <div class="inv-item-desc">Singurul rând valid de antet. Punctul de la care începe tabelul.</div>
+        <div class="inv-item-label">COD CLIENT INEXISTENT</div>
+        <div class="inv-item-desc">Înregistrări cu client_nume nereferențiat în nomenclator. Referință ruptă.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
+      <div class="inv-item-status status-bad">EXCLUS</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">SUBTOTALURI PE CATEGORIE</div>
-        <div class="inv-item-desc">Rânduri agregate inserate între tranzacțiile reale.</div>
+        <div class="inv-item-label">DUPLICAT EXACT</div>
+        <div class="inv-item-desc">Perechi de rânduri identice pe nr_factura, dată și sumă. Aceeași tranzacție dublată.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
+      <div class="inv-item-status status-bad">DE VERIFICAT</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">TOTAL GENERAL</div>
-        <div class="inv-item-desc">Rând final cu suma totală, format ca tranzacție.</div>
+        <div class="inv-item-label">TRANZACȚIE WEEK-END</div>
+        <div class="inv-item-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
+      <div class="inv-item-status status-bad">EXCLUS</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">BLANK-URI FALSE</div>
-        <div class="inv-item-desc">Rânduri goale care taie continuitatea tabelului.</div>
+        <div class="inv-item-label">CÂMP OBLIGATORIU GOL</div>
+        <div class="inv-item-desc">Înregistrări cu cantitate sau pret_unitar lipsă. Linii incomplete.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-good">date</div>
+      <div class="inv-item-status status-good">VALID</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">TRANZACȚII REALE</div>
-        <div class="inv-item-desc">Continutul efectiv al tabelului, ce trebuie păstrat.</div>
+        <div class="inv-item-label">RESTUL TRANZACȚIILOR</div>
+        <div class="inv-item-desc">Conforme cu toate cele cinci reguli. Intră în raportul oficial.</div>
       </div>
     </li>
     </ul>
@@ -1595,35 +1541,35 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">03</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 3 · RECONSTRUCȚIE STRUCTURALĂ</div>
+      <div class="stage-label">ETAPA 3 · MARCARE CONTROLATĂ</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
       <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Cu realitatea înțeleasă, reconstruim continuitatea. Power Query ca motor de maturitate, nu ca trick.</p>
+  <p class="stage-quote">Cu suspiciunile auditate, marcăm. Power Query aplică reguli care produc două coloane noi: status și motiv.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
-    <h3 class="step-title">Încarcă exportul în Power Query</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Încarcă tabelul în Power Query</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Date > Obține date > Din tabel/interval. Exportul intră ca sursă în editorul Power Query. Sursa brută rămâne intactă pentru trasabilitate.</p>
+    <p class="step-action">Date > Obține date > Din tabel/interval. Tabelul intră ca sursă în editorul Power Query. Sursa rămâne intactă, marcarea se aplică deasupra.</p>
     
   </div>
 </div>
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Rulează Promptul 2 de reconstrucție</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Rulează Promptul 2 de marcare</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Lipești promptul pentru pașii M: skip rândurile parazite, promovează antet, filtrează SUBTOTAL/TOTAL, elimină rânduri goale, păstrează coloanele reale.</p>
+    <p class="step-action">Lipești promptul de mai jos. AI construiește pașii Power Query pentru fiecare regulă de anomalie: dată în viitor, cod rupt, duplicat, week-end, câmp gol. Două coloane noi: status_validare și motiv_anomalie.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE TRANSFORMARE CONTROLATĂ</div>
-      <div class="prompt-text">Acum că știi exact ce e în plus, ajută-mă să curăț fișierul. Construiește un flux repetabil care păstrează doar tranzacțiile reale și antetul corect. Vreau să pot reaplica același flux luna viitoare, când iau alt export. Folosește Power Query.</div>
+      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE MARCARE CONTROLATĂ</div>
+      <div class="prompt-text">Acum că știi exact ce anomalii sunt în tabel, ajută-mă să le marchez. Construiește în Power Query pași care adaugă două coloane noi: status_validare cu valorile VALID, DE VERIFICAT sau EXCLUS și motiv_anomalie cu textul exact al anomaliei. Aplică: data în viitor și week-end pe filiale L-V devin DE VERIFICAT, cod client inexistent și duplicat exact și câmp gol devin EXCLUS, restul rămân VALID. Nu șterge niciun rând. Vreau să reaplic același flux pe alt set luna viitoare.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1631,51 +1577,51 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="9">
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
-    <h3 class="step-title">Aplică și încarcă tabelul curat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Aplică și încarcă tabelul controlat</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Power Query execută pașii. Ambalajul dispare. Coloanele reale rămân. Închide și încarcă ca tabel Excel curat pe foaie nouă.</p>
-    <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
+    <p class="step-action">Power Query execută regulile. Fiecare rând primește status: VALID, DE VERIFICAT sau EXCLUS. Motivul exact apare alături. Închide și încarcă ca tabel Excel Vanzari_Controlate.</p>
+    <div class="section-sublabel">DOVADA MARCĂRII</div>
     <ul class="ba-list">
+<li class="ba-item">
+      <div class="ba-item-indicator">Anomalii prezente</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">amestecate invizibil cu datele bune</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">vizibil marcate cu status și motiv</span></div>
+      </div>
+    </li>
+<li class="ba-item">
+      <div class="ba-item-indicator">Decizia pe anomalie</div>
+      <div class="ba-pair">
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">implicită, ad-hoc, repetabilă greu</span></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">explicită pe trei niveluri standardizate</span></div>
+      </div>
+    </li>
 <li class="ba-item">
       <div class="ba-item-indicator">Volum rânduri</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">umflat cu ambalaj</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">total rânduri input</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">exact tranzacțiile reale</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">același total, zero pierderi, zero adăugiri</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Continuitate tabel</div>
+      <div class="ba-item-indicator">Sumă fizică</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ruptă de blank-uri și subtotaluri</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">suma martor pe coloana valoare_neta</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">stabilă, fără întreruperi</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">identică, marcarea nu schimbă valori</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Coloane reale</div>
+      <div class="ba-item-indicator">Suma raport oficial</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">amestecate cu coloane ascunse</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">total contaminat cu anomalii</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">doar coloanele reale, stabile</span></div>
-      </div>
-    </li>
-<li class="ba-item">
-      <div class="ba-item-indicator">Funcție SUM</div>
-      <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">prinde și subtotaluri</span></div>
-        <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">egală cu AGGREGATE, exclude subtotaluri</span></div>
-      </div>
-    </li>
-<li class="ba-item">
-      <div class="ba-item-indicator">Re-export luna viitoare</div>
-      <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rulare manuală de la zero</span></div>
-        <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">un singur Refresh</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">SUMIF pe status VALID, raportabilă cu încredere</span></div>
       </div>
     </li>
     </ul>
@@ -1688,43 +1634,43 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">04</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 4 · ÎNCREDERE CÂȘTIGATĂ</div>
+      <div class="stage-label">ETAPA 4 · CROSS-CHECK NUMERIC</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">AGGREGATE</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">SUMIF / COUNTIF</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în flux. Verificăm efectul, nu doar că a rulat.</p>
+  <p class="stage-quote">Nu avem încredere oarbă în marcare. COUNTIF pe status. SUMIF pe valoare. Distribuția se confirmă numeric.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
-    <h3 class="step-title">Recalculează suma pe tabelul curat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Recalculează suma pe tabelul controlat</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">SUM pe valoare_neta în tabelul curat. Compară cu martorul fixat în Etapa 1. Sumele trebuie să fie identice.</p>
+    <p class="step-action">SUM pe valoare_neta în tabelul controlat. Compară cu martorul fixat în Etapa 1. Sumele fizice trebuie să fie identice. Marcarea nu modifică valori.</p>
     
   </div>
 </div>
 <div class="step" data-step="11">
   <div class="step-head" onclick="toggleStep(11)">
     <div class="step-marker">PAS 11</div>
-    <h3 class="step-title">Confruntă SUM cu AGGREGATE</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Calculează suma oficială cu SUMIF</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">AGGREGATE(9;...) pe aceeași coloană. Pe datele murdare SUM prindea și subtotalurile. Acum SUM = AGGREGATE. Aceeași poveste numerică.</p>
+    <p class="step-action">SUMIF pe status_validare = VALID. Aceasta este suma raportabilă. Anomaliile DE VERIFICAT și EXCLUS rămân în tabel marcate, dar nu intră în raport.</p>
     
   </div>
 </div>
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Verifică integritatea referențială</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Verifică distribuția pe motive</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Fiecare cod client din tabel există în nomenclatorul CLIENTI. Zero referințe lipsă. Tabelul este coerent.</p>
+    <p class="step-action">COUNTIF pe motiv_anomalie pentru fiecare regulă. Fiecare anomalie e marcată cu motivul ei exact. Foaia CONTROL_FINAL confirmă cross-check.</p>
     
   </div>
 </div>
@@ -1735,43 +1681,43 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">05</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 5 · CALM OPERAȚIONAL</div>
+      <div class="stage-label">ETAPA 5 · REGULI REAPLICABILE</div>
       <h2 class="stage-name">STABILIZARE</h2>
       <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
     </div>
   </header>
-  <p class="stage-quote">Transformarea nu e o intervenție unică. O facem repetabilă, ca să nu se mai întoarcem aici luna viitoare.</p>
+  <p class="stage-quote">Marcarea nu e o intervenție unică. Regulile rămân conectate. Lună viitoare, aceeași judecată, alt set.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Leagă fluxul la sursă ca mecanism</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Leagă regulile la sursă ca mecanism</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Fluxul Power Query rămâne conectat la sursă. La un export nou cu aceeași structură, un singur Refresh reconstruiește totul.</p>
+    <p class="step-action">Pașii Power Query rămân conectați la sursă. La un set nou cu aceeași schemă, un singur Refresh reaplică toate regulile de marcare.</p>
     
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh simulat</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Testează refresh pe un set nou</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Înlocuiește sursa cu un export nou de structură identică. Date > Reîmprospătează tot. Rezultatul se reconstruiește identic, zero clic manual.</p>
+    <p class="step-action">Înlocuiește sursa cu un set nou de aceeași schemă. Date > Reîmprospătează tot. Status și motiv se reaplică automat. Aceeași judecată, alt set.</p>
     
   </div>
 </div>
 <div class="step" data-step="15">
   <div class="step-head" onclick="toggleStep(15)">
     <div class="step-marker">PAS 15</div>
-    <h3 class="step-title">Documentează regula anti-recurență</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Documentează cele 5 reguli de marcare</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează în fișier structura ERP cunoscută și pașii fixați. O abatere de structură oprește fluxul vizibil, nu silențios.</p>
+    <p class="step-action">Notează în fișier cele 5 reguli de marcare și pragul fiecăreia. Dacă apare un fenomen nou, regula se extinde explicit, nu silențios.</p>
     
   </div>
 </div>
@@ -1787,38 +1733,38 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Construcția e validată operațional. Verificăm sistemul cap-coadă și predăm baza către C02.</p>
+  <p class="stage-quote">Construcția e validată operațional. Verificăm sistemul cap-coadă și predăm baza controlată către C03.</p>
   <div class="stage-body">
 <div class="step" data-step="16">
   <div class="step-head" onclick="toggleStep(16)">
     <div class="step-marker">PAS 16</div>
     <h3 class="step-title">Verifică sistemul cap-coadă</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Rândurile brute devin tranzacții reale. Coloanele rămân stabile. Suma este conservată. Tabel curat, refreshabil.</p>
+    <p class="step-action">Tabelul curat primește status și motiv. Numărul de rânduri rămâne identic. Suma fizică se conservă. Suma raport oficial e bine definită.</p>
     
   </div>
 </div>
 <div class="step" data-step="17">
   <div class="step-head" onclick="toggleStep(17)">
     <div class="step-marker">PAS 17</div>
-    <h3 class="step-title">Confirmă baza BI-ready</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Confirmă baza controlată</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Tabelul curat poate intra direct în calcul, analiză, dashboard, fără să amplifice haos. Structura nu mai minte.</p>
+    <p class="step-action">Tabelul controlat poate intra direct în raport, analiză, dashboard, fără să amplifice anomaliile. Datele nu mai mint.</p>
     
   </div>
 </div>
 <div class="step" data-step="18">
   <div class="step-head" onclick="toggleStep(18)">
     <div class="step-marker">PAS 18</div>
-    <h3 class="step-title">Predă către C02</h3>
-    <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat" aria-label="Marchează pasul ca verificat" role="button" tabindex="0"></div>
+    <h3 class="step-title">Predă către C03</h3>
+    <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Baza stabilă e pregătită pentru C02 Controlul datelor: separarea valid tehnic de corect operațional.</p>
+    <p class="step-action">Baza controlată e pregătită pentru C03 Auditarea datelor: detectarea contaminării invizibile sub aparența curățeniei.</p>
     
   </div>
 </div>
@@ -1828,47 +1774,47 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="final-section" id="final-section">
         <div class="section-marker">RITUAL TRAINITY · CONTROL FINAL</div>
         <h2 class="final-title">8 verificări finale canonice</h2>
-        <p class="final-intro">Înainte de a preda baza către C02, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
-        <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C01.xlsx există și se deschide.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">VOLUM IN</div><div class="final-text">Volumul brut de rânduri citit corect.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">VOLUM OUT</div><div class="final-text">Tranzacțiile reale păstrate complet.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">STRUCTURĂ</div><div class="final-text">Coloanele reale stabilizate.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">AMBALAJ</div><div class="final-text">Toate categoriile de ambalaj eliminate.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">Suma valoare_neta conservată de la INPUT la OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">SUM egal cu AGGREGATE (subtotalurile excluse).</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">REFERINȚĂ</div><div class="final-text">Integritate clienți confirmată, zero referințe lipsă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+        <p class="final-intro">Înainte de a preda baza către C03, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
+        <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C02.xlsx există și se deschide.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">SCHEMĂ</div><div class="final-text">Două coloane noi: status_validare și motiv_anomalie.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">VOLUM</div><div class="final-text">Număr rânduri OUTPUT egal cu număr rânduri INPUT.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">VALID</div><div class="final-text">Statusul VALID definit fără ambiguitate pe rândurile conforme.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">DE VERIFICAT</div><div class="final-text">Statusul DE VERIFICAT aplicat doar pe regulile cu decizie operator.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">EXCLUS</div><div class="final-text">Statusul EXCLUS aplicat doar pe regulile fără ambiguitate.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SUMĂ FIZICĂ</div><div class="final-text">Suma valoare_neta fizică conservată INPUT egal OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SUMĂ OFICIAL</div><div class="final-text">SUMIF pe status VALID returnează suma raportabilă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Bază BI-ready validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C01 e pregătit pentru C02 Controlul datelor.</div>
+          <div class="completion-title">Bază controlată validată.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C02 e pregătit pentru C03 Auditarea datelor.</div>
         </div>
       </section>
 
       <section class="next-section">
         <div class="next-label">TREAPTA 1 · CONSTRUCȚIA URMĂTOARE</div>
-        <h3 class="next-title">C02 · Controlul datelor</h3>
-        <p class="next-desc">Structura e curată, dar nu tot ce e valid tehnic e și corect operațional. C02 separă cele două și marchează anomaliile, fără să repare orbește.</p>
+        <h3 class="next-title">C03 · Auditarea datelor</h3>
+        <p class="next-desc">Anomaliile evidente sunt marcate, dar restul datelor par curate. Aparența nu este dovadă. C03 demonstrează forensic ce e cu adevărat curat, sub spațiile invizibile și caracterele ascunse.</p>
       </section>
 
       <section class="payoff-section">
-        <div class="payoff-line dim">Nu am șters date.</div>
-        <div class="payoff-line dim">Nu am adăugat date.</div>
-        <div class="payoff-line dim">Nu am cosmetizat fișierul.</div>
-        <div class="payoff-line accent">Am separat realitatea de ambalaj.</div>
-        <div class="payoff-line regular">Structura este eliberată.</div>
-        <div class="payoff-line regular">C02 poate începe.</div>
-        <div class="payoff-motto">Mai întâi structura. Apoi orice.</div>
+        <div class="payoff-line dim">Nu am șters anomalii.</div>
+        <div class="payoff-line dim">Nu am ascuns rânduri.</div>
+        <div class="payoff-line dim">Nu am cosmetizat datele.</div>
+        <div class="payoff-line accent">Am marcat ce e neconform cu motivul exact.</div>
+        <div class="payoff-line regular">Anomaliile nu mai trec neobservate.</div>
+        <div class="payoff-line regular">C03 poate începe.</div>
+        <div class="payoff-motto">Datele neconforme se controlează și se marchează, niciodată nu se ascund.</div>
       </section>
 
       <footer class="footer">
-        TRAINITY · C01 STRUCTURA TABELELOR · Cockpit operațional
+        TRAINITY · C02 MARCARE · Cockpit operațional
       </footer>
 
     </main>
 
     <nav class="side-nav" id="sideNav">
       <div class="nav-brand">
-        <div class="nav-brand-label">PACK 02 EXCEL · C01</div>
-        <div class="nav-brand-title">STRUCTURA TABELELOR</div>
+        <div class="nav-brand-label">PACK 02 EXCEL · C02</div>
+        <div class="nav-brand-title">MARCARE</div>
       </div>
 
       <div class="nav-progress">
@@ -1920,7 +1866,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <script>
 "use strict";
 
-const STORAGE_KEY = "trainity_c01_study_v1";
+const STORAGE_KEY = "trainity_c02_study_v1";
 const TOTAL_STEPS = 18;
 const TOTAL_FINALS = 8;
 
@@ -2291,52 +2237,22 @@ function continueToCurrentStep() {
   setTimeout(() => scrollToStep(n), 50);
 }
 
-// Mobile nav — A11y: aria-expanded, aria-hidden, Escape to close, focus first item on open
+// Mobile nav
 function toggleMobileNav() {
   const nav = document.getElementById("sideNav");
   const overlay = document.getElementById("navOverlay");
-  const btn = document.getElementById("mobileToggleBtn");
   if (nav.classList.contains("open")) {
     nav.classList.remove("open");
     overlay.classList.remove("show");
-    btn && btn.setAttribute("aria-expanded", "false");
-    btn && btn.classList.remove("is-open");
-    overlay.setAttribute("aria-hidden", "true");
-    btn && btn.focus();
   } else {
     nav.classList.add("open");
     overlay.classList.add("show");
-    btn && btn.setAttribute("aria-expanded", "true");
-    btn && btn.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
-    const firstItem = nav.querySelector(".nav-item, .nav-ctrl-btn, a, button");
-    if (firstItem) setTimeout(() => firstItem.focus(), 320);
   }
 }
 function closeMobileNav() {
-  const nav = document.getElementById("sideNav");
-  const overlay = document.getElementById("navOverlay");
-  const btn = document.getElementById("mobileToggleBtn");
-  nav.classList.remove("open");
-  overlay.classList.remove("show");
-  btn && btn.setAttribute("aria-expanded", "false");
-  btn && btn.classList.remove("is-open");
-  overlay.setAttribute("aria-hidden", "true");
+  document.getElementById("sideNav").classList.remove("open");
+  document.getElementById("navOverlay").classList.remove("show");
 }
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    const nav = document.getElementById("sideNav");
-    if (nav && nav.classList.contains("open")) closeMobileNav();
-  }
-});
-// step-check keyboard support (Space/Enter)
-document.addEventListener("keydown", function(e) {
-  const t = e.target;
-  if (t && t.classList && t.classList.contains("step-check") && (e.key === " " || e.key === "Enter")) {
-    e.preventDefault();
-    t.click();
-  }
-});
 
 // INIT
 loadState();
@@ -2354,5 +2270,256 @@ setTimeout(() => {
 }, 700);
 
 </script>
+
+<style id="edit-style">
+/* Toolbar slim */
+#edit-toolbar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #FFD400; color: #000;
+  padding: 6px 18px;
+  z-index: 99999;
+  font-family: -apple-system, "SF Pro Display", Arial, sans-serif;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; gap: 12px;
+  border-top: 2px solid #000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+  min-height: 36px;
+}
+#edit-toolbar span.label { letter-spacing: 1.2px; text-transform: uppercase; font-size: 11px; }
+#edit-toolbar button {
+  background: #000; color: #FFD400; border: none;
+  padding: 6px 12px;
+  font-family: inherit; font-size: 10px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer;
+}
+#edit-toolbar button:hover { background: #1a1a1a; }
+#edit-toolbar .hint {
+  margin-left: auto; font-size: 10px; font-weight: 500;
+  color: #000; opacity: 0.75;
+}
+body { padding-bottom: 42px !important; }
+
+/* Contenteditable - outline cu vizibilitate maxima */
+[contenteditable="true"] {
+  outline: 1px dashed rgba(255, 212, 0, 0.4);
+  outline-offset: 2px;
+  cursor: text;
+}
+[contenteditable="true"]:hover { outline-color: rgba(255, 212, 0, 0.9); }
+[contenteditable="true"]:focus {
+  outline: 2px solid #FFD400;
+  outline-offset: 2px;
+  /* NO background change - pastram lizibilitatea textului */
+}
+
+/* Wrapper element editabil + buton sterge SIBLING */
+.edit-wrap {
+  position: relative;
+}
+.edit-delete-btn {
+  position: absolute;
+  top: -10px; right: -10px;
+  width: 24px; height: 24px;
+  background: #C00000; color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: 14px; font-weight: 900;
+  cursor: pointer;
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 100;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  padding: 0;
+}
+.edit-wrap:hover > .edit-delete-btn { display: flex; }
+.edit-delete-btn:hover { background: #ff0000; transform: scale(1.15); }
+
+/* Wrapper container (anomaly-card, inv-item etc) - hover shows STERGE CONTAINER */
+.edit-container-wrap {
+  position: relative;
+  transition: outline 0.15s;
+}
+.edit-container-wrap:hover {
+  outline: 2px dashed #C00000;
+  outline-offset: 4px;
+}
+.edit-container-btn {
+  position: absolute;
+  top: -14px; right: -14px;
+  background: #C00000; color: #fff;
+  border: 2px solid #000;
+  border-radius: 18px;
+  padding: 5px 11px;
+  font-size: 10px; font-weight: 800;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  cursor: pointer;
+  display: none;
+  z-index: 200;
+  font-family: -apple-system, Arial, sans-serif;
+  line-height: 1;
+}
+.edit-container-wrap:hover > .edit-container-btn { display: block; }
+.edit-container-btn:hover { background: #ff0000; transform: scale(1.05); }
+</style>
+
+<div id="edit-toolbar">
+  <span class="label">📝 EDITOR PAGINĂ VIE</span>
+  <button onclick="editorExport()">💾 EXPORT</button>
+  <button onclick="editorReset()">↻ RESET</button>
+  <span class="hint">Click pe text → editezi. Hover deasupra + ✕ → șterge element. Hover pe card + buton roșu sus → șterge tot containerul. Ctrl+Z = Undo.</span>
+</div>
+
+<script id="edit-script">
+(function blockKeyboardInEditor() {
+  document.addEventListener("keydown", (e) => {
+    const a = document.activeElement;
+    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) {
+      e.stopPropagation();
+    }
+  }, true);
+})();
+
+(function setupLiveEditor() {
+  // Texte vorbite
+  const EDITABLE_SELECTORS = [
+    "h1", "h2", "h3", "h4",
+    ".cover-hook", ".cover-sub", ".cover-miza",
+    ".stage-name", ".stage-emotion", ".stage-hook", ".stage-next",
+    ".step-title", ".step-action", ".step-instruction", ".step-callout",
+    ".verify-title", ".verify-sub",
+    ".final-text", ".final-label",
+    ".final-block p", ".final-motto",
+    ".anomaly-title", ".anomaly-desc",
+    ".inv-item-label", ".inv-item-desc",
+    ".prompt-label", ".prompt-text",
+    "p", "li"
+  ];
+
+  // Containere care pot fi sterse intregi
+  const CONTAINER_SELECTORS = [
+    ".anomaly-card",
+    ".inv-item",
+    ".final-card",
+    ".step",
+    ".verify-block",
+    ".prompt-box",
+    ".cover-block"
+  ];
+
+  function wrapElementWithDelete(el) {
+    if (el.parentElement && el.parentElement.classList.contains("edit-wrap")) return;
+    const wrapper = document.createElement("span");
+    wrapper.className = "edit-wrap";
+    const computedDisplay = getComputedStyle(el).display;
+    if (computedDisplay && computedDisplay !== "inline") wrapper.style.display = "block";
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+    const btn = document.createElement("button");
+    btn.className = "edit-delete-btn";
+    btn.textContent = "✕";
+    btn.type = "button";
+    btn.title = "Șterge acest element";
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (confirm("Ștergi acest element?")) wrapper.remove();
+    };
+    wrapper.appendChild(btn);
+  }
+
+  function wrapContainerWithDelete(el) {
+    if (el.dataset.containerEditorReady) return;
+    el.dataset.containerEditorReady = "1";
+    el.classList.add("edit-container-wrap");
+    // Pozitie relativa daca nu are
+    const cs = getComputedStyle(el);
+    if (cs.position === "static") el.style.position = "relative";
+    const btn = document.createElement("button");
+    btn.className = "edit-container-btn";
+    btn.textContent = "🗑 ȘTERGE CARD";
+    btn.type = "button";
+    btn.title = "Șterge tot containerul";
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (confirm("Ștergi tot acest container? Toate elementele din el dispar.")) el.remove();
+    };
+    el.appendChild(btn);
+  }
+
+  function makeEditable(root) {
+    // Elemente text
+    EDITABLE_SELECTORS.forEach(sel => {
+      try {
+        root.querySelectorAll(sel).forEach(el => {
+          if (el.dataset.editorReady) return;
+          if (el.closest("#edit-toolbar")) return;
+          if (el.tagName === "BUTTON" || el.tagName === "SCRIPT" || el.tagName === "STYLE") return;
+          if (!el.textContent.trim()) return;
+          el.setAttribute("contenteditable", "true");
+          el.setAttribute("spellcheck", "true");
+          el.dataset.editorReady = "1";
+          wrapElementWithDelete(el);
+        });
+      } catch(e) {}
+    });
+    // Containere
+    CONTAINER_SELECTORS.forEach(sel => {
+      try {
+        root.querySelectorAll(sel).forEach(el => {
+          wrapContainerWithDelete(el);
+        });
+      } catch(e) {}
+    });
+  }
+
+  makeEditable(document);
+
+  const observer = new MutationObserver((mutations) => {
+    let need = false;
+    mutations.forEach(m => { if (m.addedNodes.length > 0) need = true; });
+    if (need) setTimeout(() => makeEditable(document), 30);
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+
+window.editorExport = function() {
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll("#edit-toolbar").forEach(e => e.remove());
+  clone.querySelectorAll("#edit-style").forEach(e => e.remove());
+  clone.querySelectorAll("#edit-script").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-delete-btn").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-container-btn").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-wrap").forEach(wrap => {
+    while (wrap.firstChild) wrap.parentNode.insertBefore(wrap.firstChild, wrap);
+    wrap.remove();
+  });
+  clone.querySelectorAll(".edit-container-wrap").forEach(el => {
+    el.classList.remove("edit-container-wrap");
+    el.removeAttribute("data-container-editor-ready");
+    if (el.style.position === "relative" && !el.getAttribute("style").includes(":")) {
+      el.removeAttribute("style");
+    }
+  });
+  clone.querySelectorAll("[contenteditable]").forEach(e => e.removeAttribute("contenteditable"));
+  clone.querySelectorAll("[spellcheck]").forEach(e => e.removeAttribute("spellcheck"));
+  clone.querySelectorAll("[data-editor-ready]").forEach(e => e.removeAttribute("data-editor-ready"));
+  clone.querySelectorAll("[data-container-editor-ready]").forEach(e => e.removeAttribute("data-container-editor-ready"));
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  const blob = new Blob([html], {type: "text/html"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "HTML-Studiu-Excel-01-Structura-Editat.html";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+window.editorReset = function() {
+  if (confirm("Anulezi TOATE modificările și reîncarci pagina?")) location.reload();
+};
+</script>
+
 </body>
 </html>

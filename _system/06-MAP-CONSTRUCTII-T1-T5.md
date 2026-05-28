@@ -16,13 +16,13 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 ---
 
-## TREAPTA 1 · SCAN · STRUCTURA
+## TREAPTA 1 · SCANARE · STRUCTURA
 
 **Promisia pedagogică:** transformă exporturile ERP brute în baze curate, controlabile, BI-ready. Operatorul recunoaște fenomenele structurale care contaminează datele și le neutralizează prin uneltele native Excel + Power Query.
 
 **Tehnologie:** Excel basic (AutoFilter, AGGREGATE, IFERROR), Power Query (Promoted Headers, Filtered Rows, Removed Top Rows, Removed Blank Rows, Removed Duplicates).
 
-### C01 · STRUCTURA TABELELOR ✓
+### C01 · STRUCTURARE ✓
 
 | Aspect | Conținut |
 |---|---|
@@ -36,7 +36,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | 7.986.019,38 lei |
 | **Status** | LIVRABIL CANONIC V12 (matriță pentru toate celelalte) |
 
-### C02 · CONTROLUL DATELOR ✓
+### C02 · MARCARE ✓
 
 | Aspect | Conținut |
 |---|---|
@@ -49,7 +49,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | 8.018.087,99 lei (suma input cu duplicate planted) |
 | **Status** | LIVRABIL CANONIC V26 |
 
-### C03 · AUDITAREA DATELOR ✓
+### C03 · AUDITARE ✓
 
 | Aspect | Conținut |
 |---|---|
@@ -62,7 +62,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | DELTA 0 (audit non-distructiv) |
 | **Status** | LIVRABIL CANONIC V26 |
 
-### C04 · NORMALIZAREA DATELOR ✓
+### C04 · NORMALIZARE ✓
 
 | Aspect | Conținut |
 |---|---|
@@ -85,7 +85,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 **Tehnologie:** Excel + Power Query (Group By, Pivot, Distinct, Top N).
 
-### C05 · CLASIFICAREA DATELOR ✓
+### C05 · CLASIFICARE ✓
 
 | Aspect | Conținut |
 |---|---|
@@ -98,7 +98,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | DELTA 0 |
 | **Status** | LIVRABIL CANONIC V28 |
 
-### C06 · KPI și CALCULE (PROPUS)
+### C06 · CUANTIFICARE (PROPUS)
 
 | Aspect | Conținut |
 |---|---|
@@ -107,7 +107,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **FENOMENE propuse** | sumă totală pe categorii, medii pe segmente, top-N clienți cu Pareto, distribuție pe filiale, marje pe agenți |
 | **Status** | SPEC NEGENERAT — în queue pentru SPEC freezing |
 
-### C07 · MEMORIA SETULUI (PROPUS)
+### C07 · DATARE (PROPUS)
 
 | Aspect | Conținut |
 |---|---|
@@ -116,7 +116,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **FENOMENE propuse** | evoluții lună-de-lună, trend YoY, sezonalitate, ratio prima-vs-ultima lună |
 | **Status** | SPEC NEGENERAT |
 
-### C08 · TIPARE TEMPORALE COMPLEXE (PROPUS)
+### C08 · TIPIZARE COMPLEXE (PROPUS)
 
 | Aspect | Conținut |
 |---|---|
@@ -127,7 +127,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 ---
 
-## TREAPTA 3 · ANALIZA (C09-C12)
+## TREAPTA 3 · ANALIZARE (C09-C12)
 
 **Promisia pedagogică:** transformă datele, cunoașterea, în insight, prioritizare, decizie. Datele încep să spună povestea business-ului.
 

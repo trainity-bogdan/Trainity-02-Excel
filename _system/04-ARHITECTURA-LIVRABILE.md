@@ -58,13 +58,13 @@ La generare CNN+ (C06+), motorul folosește `_template/` ca șablon — clonă c
 
 ```
 _template/
-├── HTML-Studiu-Excel-01-Structura.html      ← șablon, se modifică conținut/identitate
-├── HTML-Editor-Studiu-Excel-01-Structura.html
-├── HTML-Video-Excel-01-Structura.html
-├── HTML-Editor-Video-Excel-01-Structura.html
+├── HTML-Studiu-Excel-01-Structurare.html      ← șablon, se modifică conținut/identitate
+├── HTML-Editor-Studiu-Excel-01-Structurare.html
+├── HTML-Video-Excel-01-Structurare.html
+├── HTML-Editor-Video-Excel-01-Structurare.html
 ├── Date_MASTER-C01.xlsx
-├── Creativ-Excel-01-Structura.txt
-├── FILM-Excel-01-Structura.docx
+├── Creativ-Excel-01-Structurare.txt
+├── FILM-Excel-01-Structurare.docx
 └── assets/                                   ← 6 imagini placeholder jpg
 ```
 

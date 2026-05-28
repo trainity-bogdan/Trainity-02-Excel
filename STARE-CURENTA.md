@@ -15,9 +15,9 @@
 | **C03** | AUDITAREA DATELOR | V26 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C04** | NORMALIZAREA DATELOR | V27 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | CLASIFICAREA DATELOR | V28 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| C06 | KPI și CALCULE | — | NESTAR | — | — |
-| C07 | MEMORIA SETULUI | — | NESTAR | — | — |
-| C08 | TIPARE TEMPORALE | — | NESTAR | — | — |
+| C06 | CUANTIFICARE | — | NESTAR | — | — |
+| C07 | DATARE | — | NESTAR | — | — |
+| C08 | TIPIZARE | — | NESTAR | — | — |
 | C09-C12 | (T3 ANALIZA) | — | NESTAR | — | — |
 | C13-C16 | (T4 RAPORTARE) | — | NESTAR | — | — |
 | C17-C20 | (T5 AUTOMATIZARE) | — | NESTAR | — | — |

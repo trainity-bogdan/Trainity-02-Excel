@@ -16,23 +16,23 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - treapta_pozitie: 1 din 4 (Structura, Control, Audit, Normalizare)
 - nume_hero_caps_rand1: STRUCTURA
 - nume_hero_caps_rand2: TABELELOR
-- nume_hero_caps: STRUCTURA TABELELOR
-- nume_title_case: Structura tabelelor
-- nume_slug: Structura
+- nume_hero_caps: STRUCTURARE
+- nume_title_case: Structurare
+- nume_slug: Structurare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C01.xlsx
-- creativ_filename: Creativ-Excel-01-Structura.txt
-- meta_val_treapta: <b>STRUCTURA</b> · CONTROL · AUDIT · NORMALIZARE (SCAN)
+- creativ_filename: Creativ-Excel-01-Structurare.txt
+- meta_val_treapta: <b>STRUCTURARE</b> · MARCARE · AUDITARE · NORMALIZARE (SCANARE)
 - next_cod: C02
-- next_nume_title: Controlul datelor
+- next_nume_title: Marcare
 - next_label: TREAPTA 1 · CONSTRUCȚIA URMĂTOARE
-- footer_text: TRAINITY · C01 STRUCTURA TABELELOR · Cockpit operațional
-- topbar_text: Sistemul 02 - Excel · C01 · Structura tabelelor
-- mobile_topbar: C01 · Structura tabelelor
+- footer_text: TRAINITY · C01 STRUCTURARE · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C01 · Structurare
+- mobile_topbar: C01 · Structurare
 - nav_brand_label: PACK 02 EXCEL · C01
-- nav_brand_title: STRUCTURA TABELELOR
-- title_studiu: C01 · Structura Tabelelor · Trainity
-- title_video: C01 · STRUCTURA TABELELOR · BROADCAST
+- nav_brand_title: STRUCTURARE
+- title_studiu: C01 · Structurare · Trainity
+- title_video: C01 · STRUCTURARE · BROADCAST
 - localStorage_studiu: trainity_c01_study_v1
 - localStorage_video: trainity_c01_video_v1
 
@@ -44,23 +44,23 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - treapta_pozitie: 2 din 4
 - nume_hero_caps_rand1: CONTROLUL
 - nume_hero_caps_rand2: DATELOR
-- nume_hero_caps: CONTROLUL DATELOR
-- nume_title_case: Controlul datelor
-- nume_slug: Control
+- nume_hero_caps: MARCARE
+- nume_title_case: Marcare
+- nume_slug: Marcare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C02.xlsx
-- creativ_filename: Creativ-Excel-02-Control.txt
-- meta_val_treapta: STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)
+- creativ_filename: Creativ-Excel-02-Marcare.txt
+- meta_val_treapta: STRUCTURARE · <b>MARCARE</b> · AUDITARE · NORMALIZARE (SCANARE)
 - next_cod: C03
 - next_nume_title: Auditarea datelor
 - next_label: TREAPTA 1 · CONSTRUCȚIA URMĂTOARE
-- footer_text: TRAINITY · C02 CONTROLUL DATELOR · Cockpit operațional
-- topbar_text: Sistemul 02 - Excel · C02 · Controlul datelor
-- mobile_topbar: C02 · Controlul datelor
+- footer_text: TRAINITY · C02 MARCARE · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C02 · Marcare
+- mobile_topbar: C02 · Marcare
 - nav_brand_label: PACK 02 EXCEL · C02
-- nav_brand_title: CONTROLUL DATELOR
-- title_studiu: C02 · Controlul Datelor · Trainity
-- title_video: C02 · CONTROLUL DATELOR · BROADCAST
+- nav_brand_title: MARCARE
+- title_studiu: C02 · Marcare · Trainity
+- title_video: C02 · MARCARE · BROADCAST
 - localStorage_studiu: trainity_c02_study_v1
 - localStorage_video: trainity_c02_video_v1
 
@@ -78,7 +78,7 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C03.xlsx
 - creativ_filename: Creativ-Excel-03-Auditare.txt
-- meta_val_treapta: STRUCTURA · CONTROL · <b>AUDIT</b> · NORMALIZARE (SCAN)
+- meta_val_treapta: STRUCTURARE · MARCARE · <b>AUDITARE</b> · NORMALIZARE (SCANARE)
 - next_cod: C04
 - next_nume_title: Normalizarea datelor
 - next_label: TREAPTA 1 · CONSTRUCȚIA URMĂTOARE
@@ -106,7 +106,7 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C04.xlsx
 - creativ_filename: Creativ-Excel-04-Normalizare.txt
-- meta_val_treapta: STRUCTURA · CONTROL · AUDIT · <b>NORMALIZARE</b> (SCAN)
+- meta_val_treapta: STRUCTURARE · MARCARE · AUDITARE · <b>NORMALIZARE</b> (SCANARE)
 - next_cod: C05
 - next_nume_title: (per SPEC C05, T2)
 - next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE (treapta noua!)
@@ -141,7 +141,7 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C05.xlsx
 - creativ_filename: Creativ-Excel-05-Clasificare.txt
-- meta_val_treapta: <b>CLASIFICARE</b> · KPI · LOGICĂ · ANOMALII (CARE)
+- meta_val_treapta: <b>CLASIFICARE</b> · CUANTIFICARE · DATARE · TIPIZARE (CUNOAȘTERE)
 - next_cod: C06
 - next_nume_title: KPI și Calcule
 - next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE

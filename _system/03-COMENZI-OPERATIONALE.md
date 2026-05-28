@@ -91,7 +91,7 @@ Sau, dacă vrei să fac eu commit-ul:
 > **Tu**: „bug: butonul VERIFICĂ are font 12px pe mobile, ar trebui 14px. Aplică pe C01-C06"
 
 > **Eu**:
-> 1. Citesc `c01/HTML-Studiu-Excel-01-Structura.html` să localizez CSS-ul
+> 1. Citesc `c01/HTML-Studiu-Excel-01-Structurare.html` să localizez CSS-ul
 > 2. Confirm: „Propun `@media (max-width: 768px) { .step-verify-btn { font-size: 14px; } }`. Aplic pe C01-C06 pe branch `fix/font-buton-responsive`. Confirmi?"
 > 3. **Tu**: „da"
 > 4. `git checkout -b fix/font-buton-responsive`

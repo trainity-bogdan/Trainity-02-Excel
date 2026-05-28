@@ -111,7 +111,7 @@ Opțional, atașezi un screenshot pentru context vizual.
 
 ## Pasul 2 — Ce fac EU
 
-1. **Citesc** `c01/HTML-Studiu-Excel-01-Structura.html`, localizez CSS-ul
+1. **Citesc** `c01/HTML-Studiu-Excel-01-Structurare.html`, localizez CSS-ul
 
 2. **Confirm cu tine soluția:**
    > „Propun:
