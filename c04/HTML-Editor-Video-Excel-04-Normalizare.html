@@ -2909,7 +2909,9 @@ document.addEventListener("keydown", (e) => {
     if (t.closest("button, a, input, textarea, [role='button'], .prompt-copy-inline")) return;
     if (t.closest(".panel")) return;
     if (t.closest(".modal")) return;
-    
+    // V42 EDITOR: click PE text → edit (browser default), NU navigare
+    if (t.closest("[contenteditable='true']")) return;
+    if (t.closest(".edit-wrap, .edit-container-wrap")) return;
     // Click pe text selectat = ignora ca sa nu deselecteze
     const sel = window.getSelection();
     if (sel && sel.toString().length > 0) return;
@@ -2977,13 +2979,6 @@ render();
 
 <script>
 (function setupLiveEditor() {
-  // V42: pe touch devices (tableta/mobil), NU activez mod edit
-  // → text rămâne pur viewer, click stânga/dreapta navighează curat
-  // → fără outline flash, fără ✕ accidental, fără focus contenteditable
-  // → editarea reală se face pe desktop cu mouse precise
-  if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
-    return;
-  }
   const EDITABLE_SELECTORS = [
     ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
     ".explain-emotion", ".explain-name", ".explain-hook", ".explain-next",
