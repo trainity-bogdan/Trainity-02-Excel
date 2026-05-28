@@ -291,10 +291,11 @@ Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 Subject: A vintage brass magnifying glass hovering low above a printed
 business invoice register on a dark wood surface. Through the lens,
 visible MAGNIFIED: a single row glowing slightly warmer, with a date
-"OCT 2026" partially readable in the date column. Around the lens,
-the rest of the page is in slight shadow, slightly out of focus.
-Beside the lens on the wood: a small notebook open with handwritten
-tally marks in pencil.
+"4 OCT 2036" clearly readable in the date column (a planted future
+date — the report's nominal timeframe is October 2026, so a 2036 entry
+is the anomaly the AI is investigating). Around the lens, the rest of
+the page is in slight shadow, slightly out of focus. Beside the lens on
+the wood: a small notebook open with handwritten tally marks in pencil.
 
 Lighting: Single warm amber light source from upper right, the lens
 catching and refracting the light slightly, creating a soft warm aura
