@@ -2910,11 +2910,21 @@ document.addEventListener("keydown", (e) => {
     if (t.closest("button, a, input, textarea, [role='button'], .prompt-copy-inline")) return;
     if (t.closest(".panel")) return;
     if (t.closest(".modal")) return;
+    // V42 EDITOR: skip dacă click pe text în mod edit (contenteditable)
+    if (t.closest("[contenteditable='true']")) return;
+    if (t.closest(".edit-wrap, .edit-container-wrap")) return;
     // Click pe text selectat = ignora ca sa nu deselecteze
     const sel = window.getSelection();
     if (sel && sel.toString().length > 0) return;
-    // Avanseaza fragment
-    nextFrag();
+    // V42 R-V03.68: split stage in 2 jumatati pentru navigare tap pe tableta
+    // Click pe jumatatea STANGA = prevFrag, pe jumatatea DREAPTA = nextFrag
+    const rect = stageEl.getBoundingClientRect();
+    const localX = e.clientX - rect.left;
+    if (localX < rect.width / 2) {
+      prevFrag();
+    } else {
+      nextFrag();
+    }
   });
 })();
 
@@ -2962,6 +2972,8 @@ render();
 
 <div id="edit-toolbar">
   <span class="label">📝 EDITOR PAGINĂ VIE</span>
+  <button onclick="prevFrag()" aria-label="Înapoi" title="Înapoi (←)">◀</button>
+  <button onclick="nextFrag()" aria-label="Înainte" title="Înainte (→)">▶</button>
   <button onclick="editorExport()">💾 EXPORT</button>
   <button onclick="editorReset()">↻ RESET</button>
   <span class="hint">Click pe text → editezi. Hover deasupra + ✕ → șterge element. Hover pe card + buton roșu → șterge container. Ctrl+Z = Undo.</span>

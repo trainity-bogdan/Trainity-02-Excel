@@ -2813,8 +2813,15 @@ document.addEventListener("keydown", (e) => {
     // Click pe text selectat = ignora ca sa nu deselecteze
     const sel = window.getSelection();
     if (sel && sel.toString().length > 0) return;
-    // Avanseaza fragment
-    nextFrag();
+    // V42 R-V03.68: split stage in 2 jumatati pentru navigare tap pe tableta
+    // Click pe jumatatea STANGA = prevFrag, pe jumatatea DREAPTA = nextFrag
+    const rect = stageEl.getBoundingClientRect();
+    const localX = e.clientX - rect.left;
+    if (localX < rect.width / 2) {
+      prevFrag();
+    } else {
+      nextFrag();
+    }
   });
 })();
 
