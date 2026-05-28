@@ -2787,49 +2787,8 @@ document.addEventListener("keydown", (e) => {
   });
 })();
 
-// V42 R-V03.68: BUTOANE FLOATING NAVIGARE pentru tableta/mobil
-// În Editor-Video, textul acoperă tot ecranul → click stânga/dreapta nu prinde
-// (edit-wrap intercepteaza). Solutia: 2 butoane fixed pe margini, sub deget.
-(function attachFloatingNav() {
-  const css = document.createElement("style");
-  css.id = "edit-nav-arrows-style";
-  css.textContent = `
-    .nav-arrow-tablet {
-      position: fixed; top: 50%; transform: translateY(-50%);
-      width: 52px; height: 72px;
-      background: rgba(0,0,0,0.55);
-      color: #FFD400;
-      border: 2px solid #FFD400;
-      border-radius: 8px;
-      font-size: 28px; font-weight: 900;
-      font-family: -apple-system, sans-serif;
-      display: none; align-items: center; justify-content: center;
-      cursor: pointer; z-index: 99998;
-      user-select: none; -webkit-tap-highlight-color: transparent;
-      transition: background .15s, transform .1s;
-      padding: 0;
-    }
-    .nav-arrow-tablet:active { background: rgba(255,212,0,0.95); color: #000; transform: translateY(-50%) scale(0.95); }
-    .nav-arrow-tablet.left  { left: max(8px, env(safe-area-inset-left)); }
-    .nav-arrow-tablet.right { right: max(8px, env(safe-area-inset-right)); }
-    @media (max-width: 1024px), (pointer: coarse) {
-      .nav-arrow-tablet { display: inline-flex; }
-    }
-  `;
-  document.head.appendChild(css);
-  const navPrev = document.createElement("button");
-  navPrev.className = "nav-arrow-tablet left";
-  navPrev.setAttribute("aria-label", "Înapoi");
-  navPrev.textContent = "‹";
-  navPrev.addEventListener("click", (e) => { e.stopPropagation(); prevFrag(); });
-  const navNext = document.createElement("button");
-  navNext.className = "nav-arrow-tablet right";
-  navNext.setAttribute("aria-label", "Înainte");
-  navNext.textContent = "›";
-  navNext.addEventListener("click", (e) => { e.stopPropagation(); nextFrag(); });
-  document.body.appendChild(navPrev);
-  document.body.appendChild(navNext);
-})();
+// V42: navigarea pe tableta se face din edit-toolbar (butoanele ◀ ▶)
+// Edit-toolbar e oricum vizibil pe tableta + se sterge automat la EXPORT.
 
 // V11.3 FIX: SWIPE left/right pe mobile pentru navigare
 (function attachSwipe() {
@@ -3014,6 +2973,8 @@ body.exec-mode .screen.active::after { display: none; }
 
 <div id="edit-toolbar">
   <span class="label">📝 EDITOR PAGINĂ VIE</span>
+  <button onclick="prevFrag()" aria-label="Înapoi" title="Înapoi (←)">◀</button>
+  <button onclick="nextFrag()" aria-label="Înainte" title="Înainte (→)">▶</button>
   <button onclick="editorExport()">💾 EXPORT</button>
   <button onclick="editorReset()">↻ RESET</button>
   <span class="hint">Click pe text → editezi. Hover deasupra + ✕ → șterge element. Hover pe card + buton roșu → șterge container. Ctrl+Z = Undo.</span>
