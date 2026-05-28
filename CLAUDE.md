@@ -187,7 +187,7 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 - **NU em-dash sau en-dash** (semnal AI).
 - **NU prezenta variante** la decizii evidente (ARHITECT a confirmat).
 - **NU inventa silentios** — flaghezi conflicte înainte de a genera.
-- **Întrebări ca grilă** A/B/C, niciodată variantă unică autoritară.
+- **Întrebări scrise în text liber**, NU în grile A/B/C cu AskUserQuestion. ARHITECT preferă răspunsuri narative.
 - **Filtrul SIGUR/CONFLICT** la feedback extern (vezi G-06 în arhivă).
 - **Limbaj** românesc cu diacritice.
 
