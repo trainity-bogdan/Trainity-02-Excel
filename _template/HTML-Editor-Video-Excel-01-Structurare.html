@@ -2976,47 +2976,6 @@ body.exec-mode .screen.active::after { display: none; }
 </div>
 
 <script id="edit-script">
-(function blockStageInteractions() {
-  window.__EDITOR_MODE__ = true;
-
-  function isInEditable() {
-    const a = document.activeElement;
-    return a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA");
-  }
-
-  document.addEventListener("click", (e) => {
-    const t = e.target;
-    if (!t) return;
-    if (t.closest("#edit-toolbar")) return;
-    if (t.closest(".edit-delete-btn") || t.closest(".edit-container-btn")) return;
-    if (t.closest("[contenteditable='true']")) {
-      e.stopPropagation();
-      return;
-    }
-    if (t.closest("button, a, input, textarea, [role='button']")) return;
-    if (t.closest(".panel")) return;
-    if (t.closest(".modal")) return;
-    if (t.closest("#stage")) e.stopPropagation();
-  }, true);
-
-  document.addEventListener("keydown", (e) => {
-    if (isInEditable()) e.stopPropagation();
-  }, true);
-
-  document.addEventListener("touchstart", (e) => {
-    const t = e.target;
-    if (t && t.closest("#stage") && !t.closest("button, .panel, .modal, [contenteditable='true']")) {
-      e.stopPropagation();
-    }
-  }, true);
-  document.addEventListener("touchend", (e) => {
-    const t = e.target;
-    if (t && t.closest("#stage") && !t.closest("button, .panel, .modal, [contenteditable='true']")) {
-      e.stopPropagation();
-    }
-  }, true);
-})();
-
 (function setupLiveEditor() {
   const EDITABLE_SELECTORS = [
     ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
