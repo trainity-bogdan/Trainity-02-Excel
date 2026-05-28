@@ -1349,6 +1349,45 @@ body.has-continue .scroll-top { bottom: 88px; }
   .nav-controls { padding: 8px 14px 10px; gap: 4px; }
   .nav-ctrl-btn { padding: 7px 10px; min-height: 28px; font-size: 10px; }
 }
+
+/* V41 R-V03.67: SIDE-NAV scroll vizibil + condensare la viewport scurt
+   Fix tabletă landscape (1025-1366px width × <850px height): side-nav
+   nu mai e tăiat brutal de continue-btn, scroll evident, conținut condensat. */
+@media (min-width: 1025px) {
+  /* Scrollbar mai vizibil pe side-nav (din 4px gri închis greu de văzut) */
+  .side-nav::-webkit-scrollbar { width: 6px; }
+  .side-nav::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+  .side-nav::-webkit-scrollbar-thumb:hover { background: #777; }
+  .side-nav { scrollbar-width: thin; scrollbar-color: #555 transparent; }
+  /* Fade gradient bottom = indicator vizual că există conținut sub */
+  .side-nav { position: sticky; }
+}
+/* Viewport scurt (tabletă landscape, laptop mic): condensare agresivă */
+@media (min-width: 1025px) and (max-height: 850px) {
+  .side-nav {
+    top: 12px;
+    height: calc(100vh - 92px);
+    max-height: calc(100vh - 92px);
+  }
+  .nav-brand { padding: 8px 16px 6px; }
+  .nav-brand-label { font-size: 8px; margin-bottom: 2px; letter-spacing: 1.5px; }
+  .nav-brand-title { font-size: 12px; }
+  .nav-progress { padding: 6px 16px; border-bottom: 1px solid #1a1a1a; }
+  .nav-progress-row { margin-bottom: 3px; }
+  .nav-progress-num { font-size: 16px; }
+  .nav-progress-total { font-size: 10px; }
+  .nav-section-label { padding: 7px 16px 3px; font-size: 8px; letter-spacing: 1.5px; }
+  .nav-items { padding: 0 10px 3px; }
+  .nav-item { padding: 4px 6px; gap: 7px; }
+  .nav-item-num { width: 18px; height: 18px; font-size: 10px; }
+  .nav-item-name { font-size: 10px; letter-spacing: 0.3px; }
+  .nav-item-meta { font-size: 8px; letter-spacing: 0.2px; }
+  .nav-finals { padding: 0 16px 4px; }
+  .nav-finals-grid { gap: 3px; }
+  .nav-final-dot { height: 22px; font-size: 10px; }
+  .nav-controls { padding: 6px 16px 8px; gap: 3px; border-top: 1px solid #1a1a1a; }
+  .nav-ctrl-btn { padding: 5px 8px; min-height: 24px; font-size: 9px; letter-spacing: 1px; }
+}
 </style>
 </head>
 <body>
