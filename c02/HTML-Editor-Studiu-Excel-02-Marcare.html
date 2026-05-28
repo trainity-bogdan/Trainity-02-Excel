@@ -2537,13 +2537,27 @@ window.editorExport = function() {
   const blob = new Blob([html], {type: "text/html"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "HTML-Studiu-Excel-01-Structura-Editat.html";
+  a.download = "HTML-Studiu-Excel-02-Marcare-Editat.html";
   a.click();
   URL.revokeObjectURL(a.href);
 };
 
 window.editorReset = function() {
-  if (confirm("Anulezi TOATE modificările și reîncarci pagina?")) location.reload();
+  if (!confirm("Anulezi TOATE modificările + curățești progresul + reîncarci de la 0?")) return;
+  // V42: șterg TOATE cheile trainity_* (state curent + highlights + orice cache)
+  try {
+    Object.keys(localStorage).forEach(k => {
+      if (k.indexOf("trainity_") === 0) localStorage.removeItem(k);
+    });
+    if (window.sessionStorage) {
+      Object.keys(sessionStorage).forEach(k => {
+        if (k.indexOf("trainity_") === 0) sessionStorage.removeItem(k);
+      });
+    }
+  } catch(e) {}
+  // Hard refresh cu cache-busting: timestamp în query string → request fresh
+  const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
+  window.location.replace(fresh);
 };
 </script>
 
