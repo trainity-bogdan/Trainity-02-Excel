@@ -110,15 +110,17 @@ cNN/
 
 **Proiectul trăiește în git** (remote `github.com/trainity-bogdan/Trainity-02-Excel`). Versionarea = commit + branch + tag. Restore = `git checkout`, `git revert`, `git show`. Nu există backup folders manuale, nu există `_system/snapshots/`. Git ține istoricul complet.
 
-### G1. BRANCH PER TASK SEMNIFICATIV
-Modificările care nu sunt triviale stau pe branch separat înainte de merge:
-- `feat/cNN-generare` — generare construcție nouă
-- `fix/<descriere>` — bug fix
-- `refactor/<scope>` — restructurare
-- `regen/cNN-AAAALLZZ` — regenerare de la zero
-- `claude/<task>` — sesiune Claude Code on the Web (auto-named)
+### G1. DEFAULT = COMMIT DIRECT PE MAIN
+Workflow solo dev: orice modificare merge **direct pe `main`** cu commit descriptiv. Un singur branch în GitHub Desktop, un singur Pull pentru sync. Rollback prin `git revert <sha>` dacă ceva merge prost (nu trebuie branch pentru asta).
 
-Fix-uri triviale 1-2 fișiere pot merge direct pe `main`. Solo dev, judecată proporțională.
+**Branch separat doar în 3 cazuri:**
+- **Regenerare CNN de la zero** (`regen/cNN-AAAALLZZ`) — operațiune masiv distructivă
+- **Experiment** când motor nu e sigur că abordarea e bună (Claude alege)
+- **ARHITECT cere explicit** „pe branch separat"
+
+În rest, lucrurile (generare CNN, bug fix, refactor, poze, edit docs) → direct pe `main`.
+
+Sesiunile Claude Code on the Web pot porni pe branch auto-named `claude/<task>` (din infrastructură). În acest caz, lucrez acolo, dar la final fac merge în main + șterg branch-ul.
 
 ### G2. COMMIT FREQUENT + DESCRIPTIV
 Formă: `tip(scope): descriere scurtă`. Tipuri: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `audit`. Exemple:
@@ -147,10 +149,9 @@ Tag-ul = echivalent „snapshot oficial". `git checkout v40` te întoarce instan
 Pentru generări noi, regule noi, refactor sistemic — deschide PR pe GitHub și fă merge din UI după review. Pentru fix-uri evidente solo, merge direct pe main e OK.
 
 **Sumar disciplină:**
-- Modificări mici (1-2 fișiere triviale): commit direct pe main, push
-- Modificări medii: branch + commit-uri + merge la finalizare
-- Schimbări sistemice / generări noi: branch + PR + merge after review
-- Increment V: tag git + push
+- Default = commit direct pe `main` cu mesaj descriptiv
+- Branch separat doar pentru regenerări CNN distructive / experimente / la cererea ARHITECT
+- Increment V: tag git anotat `v{N}` + push --tags
 
 Detalii operațional: `_system/COMENZI.yaml` + `_system/03-COMENZI-OPERATIONALE.md` + `_system/05-WORKFLOW-PER-SCENARIU.md`.
 

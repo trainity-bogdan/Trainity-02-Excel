@@ -42,16 +42,15 @@ comenzi:
   - id: genereaza_constructie
     sintaxa: "genereaza C{NN}"
     aliasuri: ["genereaza constructia {NN}", "creeaza C{NN}", "genereaza C{NN} {slug}"]
-    intentie: "Prima generare a construcției NN, pe branch dedicat"
+    intentie: "Prima generare a construcției NN, direct pe main (G1 default)"
     pre_check:
       - "SPEC C{NN} înghețat narativ în _system/arhiva/SISTEM_TRAINITY-versiuni.md (R-V03.55)"
       - "IDENTITATE_TEHNICA C{NN} completă în _system/referinte/IDENTITATE-TEHNICA.md (R-V03.40 / L142)"
       - "Prompt-label specific construcției NU clone (L144)"
       - "C{NN-1} predată cu sumă conservată (R-V02.14)"
       - "Rulez _system/generatoare/pre_generation_check.py {NN} → exit 0"
-      - "Working tree clean (git status) sau pe branch deja deschis"
+      - "Working tree clean (git status)"
     executie:
-      - "git checkout -b feat/c{NN}-generare (dacă nu e deja pe branch)"
       - "Citesc _template/ ca matriță (R-V03.54)"
       - "Aplic COPY+MODIFY pe cele 4 HTML-uri (text/identitate per CNN, CSS/JS intacte)"
       - "Generez Date_MASTER-C{NN}.xlsx din _system/referinte/Date_MASTER-initial.xlsx + SPEC"
@@ -65,8 +64,7 @@ comenzi:
       - "gate_v20.py {NN} c{NN}/ _template/ → PASS"
     atinge:
       - "c{NN}/ (7 artefacte + assets/)"
-      - "branch feat/c{NN}-generare (nou)"
-    raport: "C{NN} generată pe branch feat/c{NN}-generare. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axă). Pentru merge: git push -u origin feat/c{NN}-generare + PR pe GitHub."
+    raport: "C{NN} generată pe main. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axă). Pentru push: spune-mi `push`."
     confirmare: false
     referinta_doc: "_system/05-WORKFLOW-PER-SCENARIU.md scenariu 1"
 
@@ -97,7 +95,7 @@ comenzi:
   - id: aplica_fix
     sintaxa: "aplica fix [descriere]"
     aliasuri: ["bug: [desc]. Aplică", "patch [descriere]"]
-    intentie: "Patch script peste TOATE construcțiile c01-cN, pe branch dedicat."
+    intentie: "Patch script peste TOATE construcțiile c01-cN, direct pe main (G1 default)."
     pre_check:
       - "ARHITECT descrie clar bug-ul"
       - "Citesc fișier reprezentativ pentru localizare"
@@ -106,7 +104,6 @@ comenzi:
     executie:
       - "Propun fix-ul concret cu citate exacte"
       - "ARHITECT confirmă"
-      - "git checkout -b fix/{slug-descriere}"
       - "Scriu rețetă patch YAML în _system/patch_recipes/R-V03.X-{slug}.yaml"
       - "Rulez patch_runner.py rețetă pe toate c*/"
       - "git add . && git commit -m 'fix({scope}): {descriere}'"
@@ -118,8 +115,7 @@ comenzi:
       - "_system/patch_recipes/R-V03.X-{slug}.yaml (nou)"
       - "_system/01-REGULI-ACTIVE.md (regulă nouă)"
       - "_system/generatoare/audit_sync.py (detector nou)"
-      - "branch fix/{slug} (nou)"
-    raport: "Fix aplicat pe C01-C{ultima} pe branch fix/{slug}. Regula R-V03.X codificată. Pentru merge: git push -u origin fix/{slug} + PR (recomandat pentru schimbări sistemice)."
+    raport: "Fix aplicat pe C01-C{ultima} pe main. Regula R-V03.X codificată. Pentru push: spune-mi `push`."
     confirmare: true
 
   - id: regula_noua
@@ -207,12 +203,11 @@ comenzi:
   - id: poza_noua_toate
     sintaxa: "aceasta poza inlocuieste exec-stage-{X} la toate"
     aliasuri: ["update brand poza exec-stage-{X}"]
-    intentie: "Înlocuiesc imagine în toate construcțiile (brand-wide), pe branch dedicat"
+    intentie: "Înlocuiesc imagine în toate construcțiile (brand-wide), direct pe main"
     pre_check:
       - "ARHITECT confirmă (impact pe toate)"
       - "Working tree clean"
     executie:
-      - "git checkout -b chore/brand-exec-stage-{X}"
       - "Pentru fiecare c{NN}/ existent: salvez în c{NN}/assets/exec-stage-{X}.{jpg,png}"
       - "Re-encode base64"
       - "Aplic peste toate c*/HTML-Video-*.html + HTML-Editor-Video"
@@ -223,8 +218,7 @@ comenzi:
       - "c*/assets/exec-stage-{X}.*"
       - "c*/HTML-Video-*.html"
       - "c*/HTML-Editor-Video-*.html"
-      - "branch chore/brand-exec-stage-{X} (nou)"
-    raport: "Imagine brand exec-stage-{X} actualizată în toate construcțiile pe branch chore/brand-exec-stage-{X}. Pentru merge: PR pe GitHub."
+    raport: "Imagine brand exec-stage-{X} actualizată în toate construcțiile pe main. Pentru push: spune-mi `push`."
     confirmare: true
 
   # ─── META-SISTEM ─────────────────────────────────────────
