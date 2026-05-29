@@ -107,23 +107,37 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **FENOMENE propuse** | sumă totală pe categorii, medii pe segmente, top-N clienți cu Pareto, distribuție pe filiale, marje pe agenți |
 | **Status** | SPEC NEGENERAT — în queue pentru SPEC freezing |
 
-### C07 · DATARE (PROPUS)
+### C07 · DATARE — MEMORIA SETULUI (PROPUS, AXĂ LOCK V43)
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | TEMPORALĂ — evoluții, trenduri, sezonalitate |
-| **INTRIGA propusă** | Setul are memorie. Excel o vede. Tu nu. |
-| **FENOMENE propuse** | evoluții lună-de-lună, trend YoY, sezonalitate, ratio prima-vs-ultima lună |
-| **Status** | SPEC NEGENERAT |
+| **AXA** | TEMPORALĂ (unică pe treaptă) — „cum se mișcă setul în timp" |
+| **OBIECT** | memoria |
+| **ÎNTREBARE-MAMĂ** | Cum se comportă setul în timp? |
+| **INTRIGA propusă** | Setul are memorie. Excel o ține minte. Tu nu. |
+| **MARKER** | memorie |
+| **FENOMENE propuse** | perioada reală acoperită (prima→ultima lună), goluri în timp (luni lipsă), ritmul/volumul pe lună, luna dominantă, accelerare/încetinire (trend), sezonalitate (recurență), săptămâna tipică |
+| **LIVRABIL** | Fișa temporală a setului (Memoria setului) |
+| **Status** | AXĂ LOCK — SPEC narativ negenerat |
 
-### C08 · TIPIZARE COMPLEXE (PROPUS)
+### C08 · TIPIZARE — HARTA ECOSISTEMULUI (PROPUS, AXĂ LOCK V43)
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | TEMPORALĂ-COMBINATĂ |
-| **INTRIGA propusă** | Setul are tipare. Excel le poate dezvălui. |
-| **FENOMENE propuse** | săptămâna predilectă pe categorie, weekend effect, end-of-month pattern, anomalii temporale |
-| **Status** | SPEC NEGENERAT |
+| **AXA** | RELAȚIONALĂ DESCRIPTIVĂ — „cu cine vorbește setul" (RECUNOAȘTERE, nu modelare) |
+| **OBIECT** | ecosistemul |
+| **ÎNTREBARE-MAMĂ** | Cu cine vorbește setul? |
+| **INTRIGA propusă** | Setul are un ecosistem. Excel îl vede. Tu nu. |
+| **MARKER** | ecosistem / satelit / cheie / rol / câmp extern |
+| **FENOMENE propuse** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei par comune (cod_client, cod_produs), ce câmpuri lipsesc din setul principal dar există în sateliți, ce convenții diferă și trebuie aliniate înainte de modelare |
+| **LIVRABIL** | Harta ecosistemului de date |
+| **Status** | AXĂ LOCK — SPEC narativ negenerat |
+
+**Delimitare obsesivă C08 ↔ C09 (T2 vs T3):**
+C08 **cartografiază**, NU unește. C08 = *vezi relațiile posibile* (recunoaștere
+descriptivă). C09 (T3) = *construiești relațiile reale* (merge, append, 1:M,
+Data Model, măsuri, analiză prin relații). Tot ce e join/model/măsură →
+teritoriu C09. C08 doar recunoaște ecosistemul; C09 îl activează.
 
 ---
 
@@ -135,7 +149,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 | Construcție | Tema posibilă | Status |
 |---|---|---|
-| C09 | Relații între seturi (clienți × produse) | NESTAR |
+| C09 | Relații între seturi — ACTIVAREA ecosistemului recunoscut în C08 (merge/1:M/Data Model) | NESTAR |
 | C10 | KPI-uri compozite cu DAX | NESTAR |
 | C11 | Prioritizare (ABC analysis, Pareto avansat) | NESTAR |
 | C12 | What-if analysis (scenarii business) | NESTAR |
@@ -202,10 +216,11 @@ Date_MASTER-initial  →  C01  →  C02  →  C03  →  C04  →  C05  →  C06 
 - Voce: "nu reconstruim, facem controlabil"
 
 **T2 CUNOAȘTERE — voce profilare descriptivă**:
-- C05 axa calitativă: "setul are dicționar"
-- C06 axa cantitativă: "setul are cifre"
-- C07 axa temporală: "setul are memorie"
-- C08 axa temporală-combinată: "setul are tipare"
+- C05 axa calitativă (dicționar): "setul are dicționar"
+- C06 axa cantitativă (profil numeric): "setul are cifre"
+- C07 axa temporală (memorie): "setul are memorie"
+- C08 axa relațională descriptivă (ecosistem): "setul are un ecosistem" — RECUNOAȘTERE, nu modelare (modelarea = C09/T3)
+- Cele 4 obiecte: dicționar (CE) · profil numeric (CÂT) · memorie (CÂND) · ecosistem (CU CINE)
 - Voce: "nu privim, interogăm"
 
 **T3 ANALIZA — voce decizională**:
