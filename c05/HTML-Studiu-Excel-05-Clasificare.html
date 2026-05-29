@@ -1499,45 +1499,45 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="section-sublabel">RAPORT AI · STRUCTURĂ INVESTIGATĂ</div>
     <ul class="inv-list">
 <li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
+      <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">ANTET DE RAPORT</div>
-        <div class="inv-item-desc">Rânduri de titlu raport care nu fac parte din tabelul real.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-neutral">reper</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">ANTET REAL TABEL</div>
-        <div class="inv-item-desc">Singurul rând valid de antet. Punctul de la care începe tabelul.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">SUBTOTALURI PE CATEGORIE</div>
-        <div class="inv-item-desc">Rânduri agregate inserate între tranzacțiile reale.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">TOTAL GENERAL</div>
-        <div class="inv-item-desc">Rând final cu suma totală, format ca tranzacție.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-bad">ambalaj</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">BLANK-URI FALSE</div>
-        <div class="inv-item-desc">Rânduri goale care taie continuitatea tabelului.</div>
+        <div class="inv-item-label">CLIENT_NUME · 15 valori unice</div>
+        <div class="inv-item-desc">Dicționar complet identificare client. Pareto: top-3 clienți = 97.5% volum.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">TRANZACȚII REALE</div>
-        <div class="inv-item-desc">Continutul efectiv al tabelului, ce trebuie păstrat.</div>
+        <div class="inv-item-label">COD_PRODUS · 13 valori unice</div>
+        <div class="inv-item-desc">SKU-uri active distribuite pe 4 categorii.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-good">date</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">CATEGORIE · 4 valori unice</div>
+        <div class="inv-item-desc">Taxonomia produselor. Granularitatea de raportare.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-neutral">reper</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">JUDET · 8 valori unice</div>
+        <div class="inv-item-desc">Acoperire teritorială a portofoliului.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-neutral">reper</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">COTA_TVA · 3 valori unice</div>
+        <div class="inv-item-desc">Cotele fiscale aplicabile. Reper conformitate.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-neutral">reper</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">MONEDA · 3 valori unice</div>
+        <div class="inv-item-desc">Monede tranzacționate. Reper pentru rapoarte agregate.</div>
       </div>
     </li>
     </ul>
