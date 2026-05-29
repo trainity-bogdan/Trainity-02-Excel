@@ -1,8 +1,40 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V41
-**Ultima actualizare:** 28 mai 2026
-**Ultima sesiune:** Fix responsive complet pe matrița HTML-Studiu (safe-area iPhone, breakpoint-uri 380px/landscape, a11y aria-expanded/keyboard) + **refactor invers OneDrive → git** (V40 a fost OneDrive, V41 revine la git ca singura sursă de versionare; reguli G1-G5 noi în CLAUDE.md)
+**Versiune sistem:** V42 (în lucru, fără tag git încă — se va consolida la finalul rundei C06+)
+**Ultima actualizare:** 29 mai 2026
+**Ultima sesiune V42 — sumar:**
+
+Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
+
+1. **Naming -ARE peste tot** (T1+T2): denumiri scurte unifilament în filenames + titluri lungi „Cum construim X" în Hero. Schimbări vizibile:
+   - C01 STRUCTURA → STRUCTURARE
+   - C02 CONTROL → MARCARE (era CONTROL, descris corect ce face: marchează anomalii fără șterge)
+   - C03 AUDIT → AUDITARE
+   - C04 NORMALIZARE (rămâne)
+   - C05 CLASIFICARE (rămâne)
+   - Treaptele: SCAN → SCANARE; CARE → CUNOAȘTERE; ANALIZA → ANALIZARE
+   - T2 plan: C06 CUANTIFICARE / C07 DATARE / C08 TIPIZARE (înlocuiește KPI/MEMORIA SETULUI/TIPARE TEMPORALE)
+2. **Cover-meta restructurat în 4 rânduri**: DENUMIRE TREAPTĂ / CONSTRUCȚIILE TREPTEI (cu bold pe curentă) / CONSTRUCȚIE CURENTĂ / AI INTEGRAT. Aplicat în matriță Studiu+Editor-Studiu + propagat la c01-c05.
+3. **Editor live editabil EXTINS** (V42 EDITABLE_SELECTORS): acum și mantra-band-main, cover-label, cover-subtitle, cover-meta-key/val, exec-hero-label/sharp, section-marker/sublabel, stage-label/quote, next-label/title/desc, payoff-line/motto, completion-title/subtitle. Aplicat matriță + c01-c05 Editor-Studiu.
+4. **Video navigation tableta**: click stânga = prevFrag, click dreapta = nextFrag (split L/R). Combinat cu: click pe text = edit (browser default), click între texte = nav. Eliminat IIFE blockStageInteractions (era piedică pentru background clicks).
+5. **Editor-Video tastatură fix critic** (V42 R-V03.70): Enter în mod edit crea newline (nu nextFrag), ArrowKeys mută cursor în text (nu schimbă slide). Folosit `stopImmediatePropagation` în CAPTURE phase pe document.keydown (stopPropagation simplu nu era suficient — nu oprește alte listeneri pe ACELAȘI nod). Plus walk manual prin parentNode pentru Text nodes fără closest. Aplicat matriță + propagat c01-c05.
+6. **Reset video = hard refresh + cleanup**: `editorReset()` acum șterge cheile localStorage `trainity_*`, sessionStorage similar, apoi `location.replace(pathname + '?_=' + timestamp + hash)` cu cache-bust + entry curat în history. Plus recuperare c04 (lipseau editorExport + editorReset complet — drift preexistent).
+7. **GitHub Pages activ**: repo trecut la public, workflow `.github/workflows/pages.yml` deploy automat la fiecare push pe main. URL live: `https://trainity-bogdan.github.io/Trainity-02-Excel/`. Dashboard index.html cu link-uri direct, toate cu `?v=2` cache-bust. Privacy: robots.txt + noindex meta pe toate paginile (nu sunt indexate Google).
+8. **Audit narativ R-V03.69 ANTI-CLONĂ NARATIVĂ**: detector nou care prinde cazul când două cNN au liste titlare identice literal (inv-item-label, anomaly-title, final-label). Descoperit empiric drift c05 inv-list = clonă C01 (din generarea V28, neprins în 7 sesiuni). Fixat + detector permanent în audit_sync.py. Total audit: 9 detectori × 5 cNN = 45 verificări PASS.
+9. **Assets PNG eliminate** (~40 MB economisit): doar JPG rămâne (lossless PNG inutil pentru fotografii foto-realistice Banana 2). Detector V39.assets actualizat la 6 jpg per folder.
+10. **Banana 2 exec-stage C02**: aplicate primele 2 imagini dedicate (REALITATE, INVESTIGAȚIE) + fix prompt „future date" → „4 OCT 2036" (independent de când vede cursantul cursul).
+
+**Regulile noi în CLAUDE.md** (V42):
+- ⚠️ **REGULĂ ABSOLUTĂ:** LUCREZI MEREU PE `main`. NU CREEZI BRANCH-URI NOI. Excepție: ARHITECT cere EXPLICIT.
+- **Întrebări în text liber**, NU în grile A/B/C cu AskUserQuestion.
+
+**Reguli noi în 01-REGULI-ACTIVE.md**:
+- **R-V03.69 ANTI-CLONĂ NARATIVĂ**: detector permanent în audit_sync
+- **R-V03.70 STOP IMMEDIATE KEYDOWN ÎN EDIT**: pattern blockKeyboardInEditor (capture + stopImmediatePropagation)
+
+---
+
+**Ultima actualizare V41:** Fix responsive complet pe matrița HTML-Studiu (safe-area iPhone, breakpoint-uri 380px/landscape, a11y aria-expanded/keyboard) + **refactor invers OneDrive → git** (V40 a fost OneDrive, V41 revine la git ca singura sursă de versionare; reguli G1-G5 noi în CLAUDE.md)
 
 ---
 
@@ -10,19 +42,19 @@
 
 | Cod | Nume | Versiune | Stare | Audit |
 |-----|------|----------|-------|-------|
-| **C01** | STRUCTURA TABELELOR | V12 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C02** | CONTROLUL DATELOR | V26 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITAREA DATELOR | V26 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C04** | NORMALIZAREA DATELOR | V27 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C05** | CLASIFICAREA DATELOR | V28 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| C06 | CUANTIFICARE | — | NESTAR | — | — |
-| C07 | DATARE | — | NESTAR | — | — |
-| C08 | TIPIZARE | — | NESTAR | — | — |
-| C09-C12 | (T3 ANALIZA) | — | NESTAR | — | — |
-| C13-C16 | (T4 RAPORTARE) | — | NESTAR | — | — |
-| C17-C20 | (T5 AUTOMATIZARE) | — | NESTAR | — | — |
+| **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C05** | CLASIFICARE (cum construim un dicționar al setului) | V28 → V42 (inv-list fix din clonă C01) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| C06 | CUANTIFICARE (T2 CUNOAȘTERE, axă cantitativă) | — | SPEC pending | — |
+| C07 | DATARE (T2 CUNOAȘTERE, axă temporală-range) | — | NESTAR | — |
+| C08 | TIPIZARE (T2 CUNOAȘTERE, axă temporală-pattern) | — | NESTAR | — |
+| C09-C12 | (T3 ANALIZARE: CORELARE / COMPARARE / SEGMENTARE / PROIECTARE — draft) | — | NESTAR | — |
+| C13-C16 | (T4 RAPORTARE: VIZUALIZARE / SINTETIZARE / NARARE / PUBLICARE — draft) | — | NESTAR | — |
+| C17-C20 | (T5 AUTOMATIZARE: DECLANȘARE / PROGRAMARE / INTEGRARE / STANDARDIZARE — draft) | — | NESTAR | — |
 
-**Progres: 5/20 (25%) livrate. T1 SCAN complet + C05 (T2 CALITATIV) livrat.**
+**Progres: 5/20 (25%) livrate. T1 SCANARE complet + C05 (T2 CUNOAȘTERE, primul pas calitativ) livrat.**
 
 ---
 
@@ -123,8 +155,10 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L157** Documentația sistemului poate diverge silent de realitatea pe disk la refactor (V38→V39 a lăsat 4 docs stale). La fiecare refactor structural, audit sync docs-vs-disk e obligatoriu.
 - **L158** [REVOCAT în V41] V40 a presupus OneDrive bazat pe artefacte istorice (foldere `OUT-V{N}.zip`, lipsa `.gitignore` clar). Confirmare directă V41: ARHITECT folosește exclusiv git.
 - **L159** Workflow-ul de versionare nu se schimbă pe deducție din artefacte. Doar pe confirmare scrisă explicită din partea ARHITECT. Două sesiuni consecutive au oscilat între GitHub și OneDrive pentru că am inferat în loc să întreb. **Regulă durabilă:** la orice schimbare de model (versionare, structură repo, convenție livrabile), motor întreabă ARHITECT direct înainte de a refactoriza docs.
+- **L160** (V42) Drift narativ poate trăi luni în repo fără detectare dacă audit verifică doar structură + prezență CSS. Cazul empiric: c05 inv-list era clonă C01 literal de la V28 (7 sesiuni nedetectat). audit_sync.py verifica „6 jpg present", „CSS class X există", dar nu „lista titlară A == lista titlară B → DRIFT". **Regulă durabilă:** detectorii noi trebuie să acopere și COERENȚĂ SEMANTICĂ (nu doar prezență tehnică). Detector R-V03.69 ANTI-CLONĂ NARATIVĂ adăugat ca prevenție viitoare.
+- **L161** (V42) `e.stopPropagation()` NU oprește alte event listenere de pe ACELAȘI nod. Doar oprește propagarea spre alte noduri (DOM tree). Pentru a opri și listener-ele bubble pe același nod (document) când e capture, folosesc `e.stopImmediatePropagation()`. Cauza descoperită empiric: blockKeyboardInEditor cu stopPropagation simplu nu opera Enter→nextFrag pentru că bubble handler-ul global pe document rula oricum. **Regulă durabilă:** când vrei blocare totală a unui event în fază capture pe nod cu multipli listenere (document), foloseşte stopImmediatePropagation, nu stopPropagation.
 
-Toate lecțiile cumulate (L01-L159) în `_system/arhiva/brain-evolutia-V01-V38.md`.
+Toate lecțiile cumulate (L01-L161) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
 ---
 
