@@ -1400,7 +1400,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">CHEILE COMUNE</b><p class="anomaly-desc">cod_produs leagă Vanzari de PRODUSE; client_nume trimite către CLIENTI. Fiecare satelit are cheia lui.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">ROLURILE</b><p class="anomaly-desc">Vanzari măsoară (fapt); CLIENTI, PRODUSE, AGENTI, DEPOZITE explică (descriere).</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">CÂMPURI EXTERNE</b><p class="anomaly-desc">Atribute descriptive care trăiesc doar în sateliți, absente din setul principal.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">CONVENȚII DE ALINIAT</b><p class="anomaly-desc">Formate și denumiri care diferă între foi și trebuie recunoscute înainte de modelare. Cartografiem, nu unim.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">LIMBI DIFERITE</b><p class="anomaly-desc">Seturile nu vorbesc încă aceeași limbă: formate de cod și denumiri care diferă între foi. Cartografiem, nu unim.</p></div>
 </div>
       </section>
 
@@ -1529,8 +1529,8 @@ body.has-continue .scroll-top { bottom: 88px; }
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">CONVENȚII · FORMATE DE ALINIAT</div>
-        <div class="inv-item-desc">Formate de cod și denumiri care diferă și trebuie aliniate.</div>
+        <div class="inv-item-label">LIMBI DIFERITE · FORMATE CE NU SE POTRIVESC</div>
+        <div class="inv-item-desc">Seturile nu vorbesc aceeași limbă. Formate și denumiri care diferă între foi.</div>
       </div>
     </li>
 <li class="inv-item">
@@ -1575,10 +1575,10 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere detaliile: ce câmpuri externe trăiesc doar în sateliți și ce convenții de cod diferă între foi. Copilot răspunde cu harta relațională completă.</p>
+    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere detaliile: ce câmpuri externe trăiesc doar în sateliți și în ce nu vorbesc încă aceeași limbă. Copilot răspunde cu harta relațională completă.</p>
     <div class="prompt-box">
       <div class="prompt-label">PROMPT 2 · CHEI ȘI CÂMPURI EXTERNE</div>
-      <div class="prompt-text">Ce câmpuri descriptive există în foile-satelit dar lipsesc din Vanzari? Și ce convenții de cod sau format diferă între foi și ar trebui aliniate înainte de a construi relații?</div>
+      <div class="prompt-text">Ce câmpuri descriptive există în foile-satelit dar lipsesc din Vanzari? Și unde nu vorbesc încă aceeași limbă: ce formate de cod sau denumiri diferă între foi?</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1790,7 +1790,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">ROLURI</div><div class="final-text">Rolurile fixate: Vanzari = fapt, sateliții = descriere.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">FAPT</div><div class="final-text">Câmpurile externe listate: atribute care există doar în sateliți.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">DESCRIERE</div><div class="final-text">Legăturile clasificate: directă (PRODUSE), prin nume (CLIENTI), lipsă (AGENTI/DEPOZITE).</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">CONVENȚII</div><div class="final-text">Convențiile de aliniat marcate: formate de cod care diferă între foi.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">LIMBI</div><div class="final-text">Limbile diferite marcate: formate și denumiri care nu se potrivesc între foi.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">ECOSISTEM</div><div class="final-text">Harta ecosistemului cap-coadă livrată ca _ECOSISTEM, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Bază BI-ready validată.</div>
@@ -1809,7 +1809,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line dim">Nu am unit seturile.</div>
         <div class="payoff-line dim">Nu am alterat tranzacțiile.</div>
         <div class="payoff-line accent">Pentru prima dată, setul are vecini, chei și roluri.</div>
-        <div class="payoff-line regular">Un ecosistem cunoscut. Apoi orice decizie.</div>
+        <div class="payoff-line regular">O hartă completă. Apoi orice decizie.</div>
         <div class="payoff-line regular">C09 poate începe.</div>
         <div class="payoff-motto">Mai întâi structura. Apoi orice.</div>
       </section>
