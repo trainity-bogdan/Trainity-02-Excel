@@ -1,8 +1,22 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V42 (în lucru, fără tag git încă — se va consolida la finalul rundei C06+)
+**Versiune sistem:** V43 (consolidat · tag git v43)
 **Ultima actualizare:** 29 mai 2026
-**Ultima sesiune V42 — sumar:**
+**Ultima sesiune V43 — sumar:**
+
+Sesiune C06 + control de calitate pe machete + procedură FILM-ca-sursă:
+
+1. **C06 CUANTIFICARE generat** (T2 CUNOAȘTERE, axa CANTITATIVĂ, marker „cifră"). 7 artefacte + assets. SPEC înghețat + IDENTITATE_TEHNICA populată (pre_generation_check 3/3). Date_MASTER-C06 cu coloana marja_estimata + sheet-uri KPI_GENERAL/_AGREGATE/_DISTRIBUTIE/_EXTREME/CONTROL_FINAL, sumă conservată 7.986.019,38 (DELTA 0). Live în index.html.
+2. **Fix layout buton** continue-btn + scroll-top: erau ancorate la viewport (`right:var(--gutter)`), dar `.book-app` e max-width:1280px centrat → se desprindeau de sub side-nav la zoom/ecran lat. Fix: `right: calc((100% - min(100%,1280px))/2 + var(--gutter))`. Aplicat matriță + C01-C06 (Studiu+Editor-Studiu).
+3. **Drift exec video reparat la sursă**: C03/C05 aveau exec-emotion = clonă C01; C05/C06 și exec-phrase = clonă C01 (moștenit prin COPY+MODIFY, neprins de R-V03.69 care citea doar Studiu). Rescrise pe axa fiecărei construcții.
+4. **Detector nou R-V03.71 ANTI-CLONĂ EXEC VIDEO** (exec-phrase / exec-emotion / hero-sub, comparație pe tuplu complet). Audit acum **10 detectoare × 6 = 60 PASS**.
+5. **Procedură nouă** `_system/08-PROCEDURA-GENERARE-VALIDARE.md`: manifest de conținut + injectare în matriță + pipeline 4 gate-uri + **workflow FILM-ca-sursă** (FILM = sursa de adevăr textuală; propagare în machete cu verificare round-trip).
+6. **Secțiune SLIDES EXECUTIVE** adăugată în toate FILM-urile (matriță + C01-C06), după MOTTO: cele 6 slide-uri exec (STARE + FRAZĂ DE IMPACT).
+7. **Set texte C06 rafinat** (ARHITECT + filtru motor): INTRIGA, MIZA (formă de dorință), WOW, MOTTO („Un profil cunoscut. Apoi orice decizie."), exec-phrase S2-S6. Aplicat FILM → 4 machete, round-trip PASS.
+
+---
+
+**Sesiunea anterioară V42 — sumar:**
 
 Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 
@@ -47,21 +61,21 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | CLASIFICARE (cum construim un dicționar al setului) | V28 → V42 (inv-list fix din clonă C01) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| C06 | CUANTIFICARE (T2 CUNOAȘTERE, axă cantitativă) | — | SPEC pending | — |
+| **C06** | CUANTIFICARE (cum construim profilul numeric al setului) | V43 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | C07 | DATARE (T2 CUNOAȘTERE, axă temporală-range) | — | NESTAR | — |
 | C08 | TIPIZARE (T2 CUNOAȘTERE, axă temporală-pattern) | — | NESTAR | — |
 | C09-C12 | (T3 ANALIZARE: CORELARE / COMPARARE / SEGMENTARE / PROIECTARE — draft) | — | NESTAR | — |
 | C13-C16 | (T4 RAPORTARE: VIZUALIZARE / SINTETIZARE / NARARE / PUBLICARE — draft) | — | NESTAR | — |
 | C17-C20 | (T5 AUTOMATIZARE: DECLANȘARE / PROGRAMARE / INTEGRARE / STANDARDIZARE — draft) | — | NESTAR | — |
 
-**Progres: 5/20 (25%) livrate. T1 SCANARE complet + C05 (T2 CUNOAȘTERE, primul pas calitativ) livrat.**
+**Progres: 6/20 (30%) livrate. T1 SCANARE complet + C05 (calitativ) + C06 (cantitativ) din T2 CUNOAȘTERE.**
 
 ---
 
 ## Audit empiric (rulează `_system/generatoare/audit_sync.py`)
 
 ```
-✓ 8 detectoare empirice × 5 construcții = 40 verificări PASS
+✓ 10 detectoare empirice × 6 construcții = 60 verificări PASS
 ✓ ZERO DRIFT (versiune unică per cNN — git ține istoricul complet via log/tags/branches)
 ✓ Toate cele 7 artefacte + assets/ prezente per construcție
 ```
@@ -80,9 +94,8 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. **SPEC C06 freezing** — axa CANTITATIVĂ (cifre, sume, distribuții, Pareto)
-2. **Generare C06** sub schema V40 (versiune unică, _template ca matriță)
-3. **SPEC C07** cinematic — axa TEMPORALĂ ("setul are memorie")
+1. ~~SPEC + generare C06~~ ✓ LIVRAT V43 (CUANTIFICARE)
+2. **SPEC C07** cinematic — axa TEMPORALĂ ("setul are memorie")
 4. **Generare C07** după SPEC freezing
 5. **SPEC C08** — axa TEMPORALĂ-COMBINATĂ ("setul are tipare")
 6. **Setup B2C landing pages live** (paralel)
@@ -158,7 +171,10 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L160** (V42) Drift narativ poate trăi luni în repo fără detectare dacă audit verifică doar structură + prezență CSS. Cazul empiric: c05 inv-list era clonă C01 literal de la V28 (7 sesiuni nedetectat). audit_sync.py verifica „6 jpg present", „CSS class X există", dar nu „lista titlară A == lista titlară B → DRIFT". **Regulă durabilă:** detectorii noi trebuie să acopere și COERENȚĂ SEMANTICĂ (nu doar prezență tehnică). Detector R-V03.69 ANTI-CLONĂ NARATIVĂ adăugat ca prevenție viitoare.
 - **L161** (V42) `e.stopPropagation()` NU oprește alte event listenere de pe ACELAȘI nod. Doar oprește propagarea spre alte noduri (DOM tree). Pentru a opri și listener-ele bubble pe același nod (document) când e capture, folosesc `e.stopImmediatePropagation()`. Cauza descoperită empiric: blockKeyboardInEditor cu stopPropagation simplu nu opera Enter→nextFrag pentru că bubble handler-ul global pe document rula oricum. **Regulă durabilă:** când vrei blocare totală a unui event în fază capture pe nod cu multipli listenere (document), foloseşte stopImmediatePropagation, nu stopPropagation.
 
-Toate lecțiile cumulate (L01-L161) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
+- **L162** (V43) Detectorii de coerență trebuie să acopere TOATE machetele, nu doar Studiu. Driftul exec video (C03/C05 exec-emotion = clonă C01, C05/C06 și exec-phrase) a trăit nedetectat pentru că R-V03.69 citea doar HTML-Studiu. **Regulă durabilă:** orice zonă de conținut construcție-specific (în oricare din cele 4 machete) primește detector de anti-clonă pe tuplu complet la introducere. R-V03.71 a extins acoperirea pe Video.
+- **L163** (V43) COPY+MODIFY cu înlocuiri de string e fundamental leaky — moștenește literal orice zonă nemapată. **Regulă durabilă:** FILM-ul (.docx) e sursa de adevăr textuală; generarea = injectare manifest în matriță + propagare FILM→machete cu verificare round-trip, NU editare directă în 4 machete. Vezi `_system/08-PROCEDURA-GENERARE-VALIDARE.md`.
+
+Toate lecțiile cumulate (L01-L163) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
 ---
 
