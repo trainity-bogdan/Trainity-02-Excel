@@ -1062,7 +1062,7 @@ body.has-continue .stage-toast { bottom: 88px; }
 /* ============ SCROLL TOP ============ */
 .scroll-top {
   position: fixed;
-  bottom: 24px; right: 24px;
+  bottom: 24px; right: calc((100vw - min(100vw, 1280px)) / 2 + var(--gutter));
   background: var(--k); color: var(--y);
   border: 2px solid var(--y);
   width: 48px; height: 48px;
@@ -1082,7 +1082,7 @@ body.has-continue .stage-toast { bottom: 88px; }
    Latime = coloana side-nav (260px), aliniat vertical cu nav-ul. */
 .continue-btn {
   position: fixed;
-  bottom: 24px; right: var(--gutter);
+  bottom: 24px; right: calc((100vw - min(100vw, 1280px)) / 2 + var(--gutter));
   width: var(--nav-w);
   display: none;
   align-items: center;
