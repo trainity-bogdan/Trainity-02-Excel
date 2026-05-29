@@ -2863,10 +2863,15 @@ function doReset() {
 
 // KEYBOARD
 document.addEventListener("keydown", (e) => {
-  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  // V42: dacă user e în mod edit (contenteditable), NU intercepta tastele
+  // Enter trebuie să creeze newline în text, nu să avanseze slide-ul.
+  // ArrowLeft/Right trebuie să mute cursor în text, nu să schimbe slide-ul.
+  const a = document.activeElement;
+  if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return;
+  if (e.target && (e.target.isContentEditable || e.target.closest && e.target.closest('[contenteditable="true"]'))) return;
   if (document.getElementById("modal-reset").classList.contains("show")) return;
 
-  if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFrag(); }
+if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFrag(); }
   else if (e.code === "ArrowLeft") { e.preventDefault(); prevFrag(); }
   else if (e.code === "Enter") {
     e.preventDefault();
@@ -2978,6 +2983,44 @@ render();
 
 
 <script>
+(function blockKeyboardInEditor() {
+  // V42 R-V03.70: STOP IMMEDIATE PROPAGATION când user e în mod edit
+  // (contenteditable, INPUT, TEXTAREA). În CAPTURE phase.
+  //
+  // stopPropagation NU oprește alte listener-e de pe ACELAȘI nod (document).
+  // Bubble handler-ul global keydown rulează oricum și apelează nextFrag().
+  // stopImmediatePropagation oprește TOATE listener-ele rămase (capture+bubble)
+  // pe acest nod. Combinat cu check explicit pe activeElement și closest.
+  function isEditingTarget(e) {
+    const a = document.activeElement;
+    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return true;
+    const t = e.target;
+    if (!t) return false;
+    if (t.isContentEditable) return true;
+    if (typeof t.closest === "function") {
+      if (t.closest('[contenteditable="true"]')) return true;
+      if (t.closest("input, textarea")) return true;
+    }
+    // Pentru cazuri unde e.target e un Text node (fără closest), urc manual
+    let node = t;
+    while (node) {
+      if (node.nodeType === 1 && node.getAttribute && node.getAttribute("contenteditable") === "true") return true;
+      node = node.parentNode;
+    }
+    return false;
+  }
+  document.addEventListener("keydown", (e) => {
+    if (isEditingTarget(e)) {
+      e.stopImmediatePropagation();
+    }
+  }, true);
+  // Backup: și pentru keypress + keyup, în caz că handler-ul global ar avea
+  // multiple variante de capture
+  document.addEventListener("keypress", (e) => {
+    if (isEditingTarget(e)) e.stopImmediatePropagation();
+  }, true);
+})();
+
 (function setupLiveEditor() {
   const EDITABLE_SELECTORS = [
     ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
