@@ -2983,6 +2983,20 @@ body.exec-mode .screen.active::after { display: none; }
 </div>
 
 <script id="edit-script">
+(function blockKeyboardInEditor() {
+  // V42 R-V03.70: STOP propagation pe orice keydown când user e în mod edit
+  // (contenteditable, INPUT, TEXTAREA). Asta în CAPTURE phase, deci omoară
+  // event-ul ÎNAINTE să ajungă la handler-ul global care face nextFrag().
+  // Enter, ArrowKeys, Space — toate rămân native în text fără să avanseze
+  // slide-ul. Pattern preluat din Editor-Studiu unde era deja consolidat.
+  document.addEventListener("keydown", (e) => {
+    const a = document.activeElement;
+    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) {
+      e.stopPropagation();
+    }
+  }, true);
+})();
+
 (function setupLiveEditor() {
   const EDITABLE_SELECTORS = [
     ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
