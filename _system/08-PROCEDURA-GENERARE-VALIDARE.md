@@ -132,11 +132,10 @@ predispusa la desincronizare. Un singur document sursa = un singur loc de
 adevar + propagare deterministica + verificare round-trip.
 
 ### 8.1 FILM conține (manifestul textual, în ordinea din document)
-- IDENTITATE CINEMATICĂ: INTRIGA (HOOK), MIZA, MANTRA
-- **SLIDES EXECUTIVE · SHOW FINAL VIDEO** (NOU V43, plasat sus după MANTRA
-  pentru acces rapid la rafinare): cele 6 slide-uri exec, fiecare cu STARE
-  (exec-emotion) + FRAZĂ DE IMPACT (exec-phrase)
-- WOW (PAYOFF), MOTTO
+- IDENTITATE CINEMATICĂ: INTRIGA (HOOK), MIZA, MANTRA, WOW (PAYOFF), MOTTO
+- **SLIDES EXECUTIVE · SHOW FINAL VIDEO** (NOU V43, plasat imediat după MOTTO
+  pentru acces rapid la rafinare, după blocul de identitate): cele 6 slide-uri
+  exec, fiecare cu STARE (exec-emotion) + FRAZĂ DE IMPACT (exec-phrase)
 - DESCHIDERE · DE CE CNN
 - ROLURI · CINE FACE CE
 - SCENA REALĂ · fenomene (lista axei)
@@ -144,9 +143,10 @@ adevar + propagare deterministica + verificare round-trip.
   DEMONSTRAȚIA, INTERVENȚIA AI, MOMENT DE CONTROL, REVEAL, TRANZIȚIE)
 - FINAL · SEMNĂTURĂ
 
-Secțiunile de rafinare creativă (INTRIGA, MIZA, MANTRA, SLIDES EXECUTIVE, WOW,
-MOTTO) sunt grupate în partea de sus a FILM-ului. ARHITECT le rafinează acolo;
-urmează apoi un rând de rafinări fine direct în editoarele vizuale.
+Secțiunile de rafinare creativă (INTRIGA, MIZA, MANTRA, WOW, MOTTO, urmate de
+SLIDES EXECUTIVE) sunt grupate în partea de sus a FILM-ului. ARHITECT le
+rafinează acolo; urmează apoi un rând de rafinări fine direct în editoarele
+vizuale.
 
 ### 8.2 Maparea FILM → machete (deterministă, verificabilă)
 | Câmp în FILM | Slot(uri) în machete |
