@@ -2297,7 +2297,93 @@ Coloane reale folosite: data_factura, valoare_neta, nr_factura.
 
 ---
 
-## SPEC C08 - PREGATIREA PENTRU ANALIZA   [Status: NEGENERAT]
+## SPEC C08 - CARTOGRAFIERE (HARTA ECOSISTEMULUI)   [Status: INGHETAT 29.05.2026]
+
+Treapta T2 CUNOASTERE · Axa RELATIONALA DESCRIPTIVA · pozitie 4/4 (inchide T2).
+Obiect: ecosistemul. Marker strict: "ecosistem" (+ satelit, cheie, rol, camp extern).
+SEPARARE OBSESIVA C08 vs C09: C08 CARTOGRAFIAZA (recunoaste relatiile posibile,
+descriptiv). C09 (T3) CONSTRUIESTE relatiile reale (merge, 1:M, Data Model,
+masuri). C08 NU uneste, NU modeleaza, NU analizeaza prin relatii.
+Intrebare-mama: "Cu cine vorbeste setul?"
+
+### 1. INTRIGA
+Setul are un ecosistem. Excel il vede. Tu nu.
+
+### 2. PROBLEMELE (recunoastere, incep cu Ce / Care / Cu cine)
+- Ce alte seturi descriu setul principal?
+- Care e cheia comuna cu fiecare satelit?
+- Ce rol are fiecare set: fapt sau descriere?
+- Ce campuri lipsesc din setul principal dar exista in sateliti?
+- Ce conventii difera si trebuie aliniate inainte de modelare?
+
+### 3. MIZA
+Operatorul iese cu harta ecosistemului de date din jurul setului: stie cu cine
+vorbeste, prin ce chei, cu ce roluri. NU uneste, NU construieste model (acelea
+sunt C09/T3). Doar cartografiaza inainte de a lega.
+
+### 4. MANTRA
+Nu privim tabelul. Il interogam. (voce T2 partajata)
+Accent de separare: C08 CARTOGRAFIAZA. Nu uneste.
+
+### 5. MOTTO
+Un ecosistem cunoscut. Apoi orice decizie.
+
+### 6. STEP-TITLES (6 etape macro)
+- ETAPA 1 · DESCHIDERE RELATIONALA
+- ETAPA 2 · INTEROGARE ASISTATA DE AI
+- ETAPA 3 · CARTOGRAFIEREA ECOSISTEMULUI
+- ETAPA 4 · AUDIT AL CHEILOR
+- ETAPA 5 · ANCORARE LA SURSA
+- ETAPA 6 · PREDAREA HARTII
+
+### 7. PROMPTURI (2 Copilot)
+P1 (ETAPA 2 interogare ecosistem): "Pe langa foaia Vanzari, ce alte foi exista in
+acest registru? Pentru fiecare spune-mi ce coloana-cheie o leaga de Vanzari si ce
+rol are: fapt sau descriere."
+P2 (ETAPA 3 campuri externe + conventii): "Ce campuri descriptive exista in foile
+satelit dar lipsesc din Vanzari? Si ce conventii de cod sau format difera intre foi
+si ar trebui aliniate inainte de a construi relatii?"
+
+### 8. FINAL-LABELS (8 ancore de retentie)
+- SATELITI
+- CHEI
+- ROLURI
+- FAPT
+- DESCRIERE
+- CAMP EXTERN
+- CONVENTII
+- ECOSISTEM
+
+### 9. FENOMENE / OPS
+
+CELE 5 FENOMENE ALESE (axa relationala descriptiva, structuri REALE din registru):
+
+**1. Setiele-satelit** — pe langa Vanzari, registrul contine foile CLIENTI,
+PRODUSE, AGENTI, DEPOZITE. Setul nu e singur.
+
+**2. Cheile comune** — coloana cod_produs leaga Vanzari de PRODUSE; client_nume si
+judet trimit catre CLIENTI; fiecare satelit are cheia lui de legatura.
+
+**3. Rolul fiecarui set** — Vanzari = fapt (tranzactiile); CLIENTI/PRODUSE/AGENTI/
+DEPOZITE = descriere (lookup). Faptul masoara, descrierea explica.
+
+**4. Campuri externe** — atribute descriptive care exista doar in sateliti, absente
+din Vanzari (ex. descrierea produsului in PRODUSE dincolo de produs_nume).
+
+**5. Conventii de aliniat** — formate de cod si denumiri care difera intre foi si
+trebuie RECUNOSCUTE inainte de modelare (alinierea efectiva = C09).
+
+Operatii: inspectie foi registru, identificare chei (cod_produs, client_nume),
+clasificare fapt/descriere, listare campuri externe. NU merge, NU join, NU
+Data Model (acelea sunt C09).
+
+DATE (Date_MASTER-C08.xlsx): NU planteaza anomalii. Porneste din output-ul C07,
+adauga sheet-uri de cartografiere (_ECOSISTEM, _CHEI, _ROLURI, _CAMPURI_EXTERNE,
+CONTROL_FINAL). Suma conservata: 7.986.019,38 lei (DELTA 0).
+Coloane reale folosite: cod_produs, produs_nume, client_nume, judet, categorie.
+
+---
+
 ## SPEC C09 - EXPLORAREA DATELOR   [Status: NEGENERAT]
 ## SPEC C10 - ANALIZA PIVOT   [Status: NEGENERAT]
 ## SPEC C11 - DATA MODEL   [Status: NEGENERAT]

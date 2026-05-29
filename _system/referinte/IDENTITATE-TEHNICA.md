@@ -211,6 +211,34 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c07_study_v1
 - localStorage_video: trainity_c07_video_v1
 
+## IDENTITATE_TEHNICA C08 — ECOSISTEMUL SETULUI
+
+- cod: C08
+- treapta_nr: 2
+- treapta_nume: CUNOASTERE
+- treapta_pozitie: 4 din 4 (Clasificare, Cuantificare, Datare, Cartografiere) — inchide T2
+- nume_hero_caps_rand1: ECOSISTEMUL
+- nume_hero_caps_rand2: SETULUI
+- nume_hero_caps: ECOSISTEMUL SETULUI
+- nume_title_case: Cartografierea ecosistemului
+- nume_slug: Cartografiere
+- input_filename: Date_MASTER-C07.xlsx
+- output_filename: Date_MASTER-C08.xlsx
+- creativ_filename: Creativ-Excel-08-Cartografiere.txt
+- meta_val_treapta: CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)
+- next_cod: C09
+- next_nume_title: Relații
+- next_label: TREAPTA 3 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C08 ECOSISTEMUL SETULUI · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C08 · Ecosistemul setului
+- mobile_topbar: C08 · Ecosistemul setului
+- nav_brand_label: PACK 02 EXCEL · C08
+- nav_brand_title: ECOSISTEMUL SETULUI
+- title_studiu: C08 · Cartografiere · Trainity
+- title_video: C08 · CARTOGRAFIERE · BROADCAST
+- localStorage_studiu: trainity_c08_study_v1
+- localStorage_video: trainity_c08_video_v1
+
 
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral

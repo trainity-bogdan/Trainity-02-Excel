@@ -998,12 +998,17 @@ def load_identitate(NN, identitate_path):
         '06': {
             'cod': 'C06', 'nume_hero_caps_rand1': 'CUANTIFICAREA',
             'nume_slug': 'Cuantificare',
-            'meta_val_treapta': 'CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · TIPIZARE (CUNOAȘTERE)'
+            'meta_val_treapta': 'CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '07': {
             'cod': 'C07', 'nume_hero_caps_rand1': 'MEMORIA',
             'nume_slug': 'Datare',
-            'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · TIPIZARE (CUNOAȘTERE)'
+            'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · CARTOGRAFIERE (CUNOAȘTERE)'
+        },
+        '08': {
+            'cod': 'C08', 'nume_hero_caps_rand1': 'ECOSISTEMUL',
+            'nume_slug': 'Cartografiere',
+            'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)'
         },
     }
     return IDENTITATI.get(NN)
