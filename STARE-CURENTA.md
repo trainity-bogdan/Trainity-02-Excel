@@ -1,8 +1,23 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V43 (consolidat · tag git v43)
+**Versiune sistem:** V44 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 29 mai 2026
-**Ultima sesiune V43 — sumar:**
+**Ultima sesiune V44 — sumar:**
+
+Sesiune T2 încheiat (C07 + C08) + procedură FILM-ca-sursă în practică + G-06 codificat:
+
+1. **C07 DATARE / MEMORIA SETULUI generat** (T2, axa TEMPORALĂ unică, marker „memorie"). Date_MASTER-C07 cu _TIMELINE/_TREND/_RITM/_SEZON. Perioada iun 2025-mai 2026, 12 luni. Rafinat cu ARHITECT (voce impersonală „noi" în loc de „operatorul", slide 5 memorie↔refresh, fenomen TREND separat). Purge C06 din FILM (deschidere+fenomene+etape).
+2. **C08 CARTOGRAFIERE / HARTA ECOSISTEMULUI generat** (T2, axa RELAȚIONALĂ DESCRIPTIVĂ, marker „ecosistem"). RECUNOAȘTERE, nu modelare (join/Data Model = C09). Date_MASTER-C08 cu _ECOSISTEM/_CHEI/_ROLURI/_CAMPURI_EXTERNE. Cartografiere reală: PRODUSE prin cod_produs, CLIENTI prin nume, AGENTI/DEPOZITE neconectate. Rafinat: motto „O hartă completă", F5 „LIMBI DIFERITE".
+3. **Naming C08: TIPIZARE → CARTOGRAFIERE** (se potrivește cu obiectul ecosistem). Meta-list propagată C05-C08.
+4. **Delimitare obsesivă C07/C08** lock în 06-MAP (după G-06): C07 = MEMORIA (timp), C08 = ECOSISTEM (recunoaștere). C08↔C09: C08 vezi relațiile posibile / C09 construiești relațiile reale. Cele 4 obiecte T2: dicționar/profil/memorie/ecosistem.
+5. **G-06 FILTRU SIGUR/CONFLICT codificat** ca document activ `_system/09-FILTRU-G06-SIGUR-CONFLICT.md` (era doar referențiat în arhivă).
+6. **T2 CUNOAȘTERE COMPLET** (C05-C08). Audit **10 detectoare × 8 = 80 PASS**. Toate live în index.html.
+
+**T2 SCARA — cele 4 obiecte narative:** dicționar (C05) · profil numeric (C06) · memorie (C07) · ecosistem (C08).
+
+---
+
+**Sesiunea anterioară V43 — sumar:**
 
 Sesiune C06 + control de calitate pe machete + procedură FILM-ca-sursă:
 
@@ -62,20 +77,20 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | CLASIFICARE (cum construim un dicționar al setului) | V28 → V42 (inv-list fix din clonă C01) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CUANTIFICARE (cum construim profilul numeric al setului) | V43 | versiune unica + assets/ | ✓ ZERO DRIFT |
-| C07 | DATARE (T2 CUNOAȘTERE, axă temporală-range) | — | NESTAR | — |
-| C08 | TIPIZARE (T2 CUNOAȘTERE, axă temporală-pattern) | — | NESTAR | — |
+| **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C08** | CARTOGRAFIERE — HARTA ECOSISTEMULUI (axă relațională descriptivă; închide T2) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | C09-C12 | (T3 ANALIZARE: CORELARE / COMPARARE / SEGMENTARE / PROIECTARE — draft) | — | NESTAR | — |
 | C13-C16 | (T4 RAPORTARE: VIZUALIZARE / SINTETIZARE / NARARE / PUBLICARE — draft) | — | NESTAR | — |
 | C17-C20 | (T5 AUTOMATIZARE: DECLANȘARE / PROGRAMARE / INTEGRARE / STANDARDIZARE — draft) | — | NESTAR | — |
 
-**Progres: 6/20 (30%) livrate. T1 SCANARE complet + C05 (calitativ) + C06 (cantitativ) din T2 CUNOAȘTERE.**
+**Progres: 8/20 (40%) livrate. T1 SCANARE complet + T2 CUNOAȘTERE complet (C05-C08).**
 
 ---
 
 ## Audit empiric (rulează `_system/generatoare/audit_sync.py`)
 
 ```
-✓ 10 detectoare empirice × 6 construcții = 60 verificări PASS
+✓ 10 detectoare empirice × 8 construcții = 80 verificări PASS
 ✓ ZERO DRIFT (versiune unică per cNN — git ține istoricul complet via log/tags/branches)
 ✓ Toate cele 7 artefacte + assets/ prezente per construcție
 ```
@@ -174,7 +189,11 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L162** (V43) Detectorii de coerență trebuie să acopere TOATE machetele, nu doar Studiu. Driftul exec video (C03/C05 exec-emotion = clonă C01, C05/C06 și exec-phrase) a trăit nedetectat pentru că R-V03.69 citea doar HTML-Studiu. **Regulă durabilă:** orice zonă de conținut construcție-specific (în oricare din cele 4 machete) primește detector de anti-clonă pe tuplu complet la introducere. R-V03.71 a extins acoperirea pe Video.
 - **L163** (V43) COPY+MODIFY cu înlocuiri de string e fundamental leaky — moștenește literal orice zonă nemapată. **Regulă durabilă:** FILM-ul (.docx) e sursa de adevăr textuală; generarea = injectare manifest în matriță + propagare FILM→machete cu verificare round-trip, NU editare directă în 4 machete. Vezi `_system/08-PROCEDURA-GENERARE-VALIDARE.md`.
 
-Toate lecțiile cumulate (L01-L163) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
+- **L164** (V44) Propagarea FILM trebuie să acopere TOT documentul, nu doar identitatea + creativ + slides exec. La C07, DESCHIDERE + SCENA REALĂ (fenomene) + OBIECTIVELE etapelor au rămas în axa veche (C06 numeric) după transform parțial. **Regulă durabilă:** transformul FILM include explicit DESCHIDERE, SCENA REALĂ (cele 5 fenomene), OBIECTIVE etape + scan final de markeri pe axa veche.
+- **L165** (V44) `open(f,'w').write(open(f).read())` în Python TRUNCHIAZĂ fișierul (modul 'w') ÎNAINTE ca `open(f).read()` să citească → scrie gol. A golit 3 fișiere C08 (raportate „done", scanate „CLEAN" fiindcă erau goale). **Regulă durabilă:** CITEȘTE întâi într-o variabilă, apoi scrie; verifică dimensiunea fișierului (>0) după orice transform în masă.
+- **L166** (V44) Coliziuni de ordine la înlocuiri: o regulă scurtă („Setul are memorie.") rulată înaintea uneia lungi care o conține îi sparge match-ul (instr18 a devenit Frankenstein). Plus numerele bare („Construcția 0X") nu sunt prinse de shift-ul de cod C0x. **Regulă durabilă:** înlocuirile lungi înaintea celor scurte (sau placeholdere); numerele bare de construcție se tratează explicit.
+
+Toate lecțiile cumulate (L01-L166) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
 ---
 
