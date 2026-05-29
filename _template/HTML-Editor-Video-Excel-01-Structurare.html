@@ -2722,7 +2722,12 @@ function doReset() {
 
 // KEYBOARD
 document.addEventListener("keydown", (e) => {
-  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  // V42: dacă user e în mod edit (contenteditable), NU intercepta tastele
+  // Enter trebuie să creeze newline în text, nu să avanseze slide-ul.
+  // ArrowLeft/Right trebuie să mute cursor în text, nu să schimbe slide-ul.
+  const a = document.activeElement;
+  if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return;
+  if (e.target && (e.target.isContentEditable || e.target.closest && e.target.closest('[contenteditable="true"]'))) return;
   if (document.getElementById("modal-reset").classList.contains("show")) return;
 
   if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFrag(); }
