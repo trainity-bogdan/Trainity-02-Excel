@@ -316,6 +316,32 @@ La fiecare consolidare brain / commit major, motorul rulează `_system/generatoa
 
 Vezi `_system/generatoare/audit_sync.py` pentru lista detectoarelor.
 
+## R-V03.69 · ANTI-CLONĂ NARATIVĂ
+**Status:** ACTIVĂ V42 · introdusă după drift c05 inv-list = clonă C01
+
+Construcțiile generate prin COPY+MODIFY pot lăsa zone narative netraduse
+în axa noii construcții. Cazul descoperit empiric: `c05/HTML-Studiu` step 06
+avea `inv-list` cu fenomenele C01 (ANTET DE RAPORT, SUBTOTALURI, TOTAL
+GENERAL, BLANK-URI FALSE, TRANZACȚII REALE) în loc de cardinalitățile C05
+CLASIFICARE (CLIENT_NUME · 15, COD_PRODUS · 13 etc.). Drift de la V28
+neprins în 7 sesiuni ulterioare pentru că audit_sync verifica STRUCTURĂ,
+NU IDENTITATE NARATIVĂ.
+
+**Detector empiric R-V03.69:** verifică ca două cNN să NU aibă liste
+identice literal în zone titlare distinctive:
+- `inv-item-label` (raport AI)
+- `anomaly-title` (cele 5-6 fenomene)
+- `final-label` (verificările finale)
+
+Dacă cNN-A și cNN-B au aceeași listă (după trim) într-una din aceste zone
+→ FAIL (clonă netradusă).
+
+**Status post-V42 fix:** c05 inv-list reparat cu cardinalitățile corecte.
+Detector adăugat în audit_sync.py ca rulare permanentă.
+
+**False positive cunoscut:** dacă două construcții au LEGITIM aceleași
+fenomene (nu e cazul în T1+T2 actual), regula necesită refinare.
+
 ---
 
 # REGULI ABANDONATE EXPLICIT

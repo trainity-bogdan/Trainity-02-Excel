@@ -81,6 +81,58 @@ def _rassets(folder):
     return len(jpgs) == 6
 
 
+# ============================================================
+# R-V03.69 — DETECTOR ANTI-CLONĂ NARATIVĂ
+# ============================================================
+# Scop: prinde cazul când o construcție livrabilă are LISTE TITLARE
+# IDENTICE LITERAL cu altă construcție (semnal că generarea COPY+MODIFY
+# nu a înlocuit conținutul specific axei). Exemplu istoric: c05/HTML-Studiu
+# avea inv-list cu fenomenele C01 (ANTET DE RAPORT, SUBTOTALURI etc.)
+# nesubstituite la generare V28 (descoperit empiric V42).
+#
+# Zone verificate: inv-item-label, anomaly-title, final-label.
+# Verdict: dacă două cNN au ACEEAȘI listă în aceeași zonă → DRIFT NARATIV.
+# ============================================================
+
+import re as _re_v369
+
+def _extract_zone(content, pattern):
+    return tuple(m.strip() for m in _re_v369.findall(pattern, content))
+
+_NARRATIVE_ZONES = {
+    'inv': r'<div class="inv-item-label">([^<]+)</div>',
+    'anomaly': r'<b class="anomaly-title">([^<]+)</b>',
+    'final': r'<div class="final-label">([^<]+)</div>',
+}
+
+# Cache pentru lista de zone narative per cNN — populat la primul apel
+_NARR_CACHE = {}
+
+def _populate_narr_cache(root):
+    if _NARR_CACHE: return
+    for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
+        nn = os.path.basename(c_folder).upper()
+        sts = glob.glob(os.path.join(c_folder, 'HTML-Studiu-Excel-*.html'))
+        if not sts: continue
+        with open(sts[0], encoding='utf-8') as f: content = f.read()
+        _NARR_CACHE[nn] = {z: _extract_zone(content, p) for z, p in _NARRATIVE_ZONES.items()}
+
+@detector('R-V03.69', 'Anti-clonă narativă: liste titlare neidentice cu alt cNN', 'folder')
+def _r0369(folder):
+    _populate_narr_cache('.')
+    nn = os.path.basename(folder).upper()
+    if nn not in _NARR_CACHE: return True
+    my = _NARR_CACHE[nn]
+    for other_nn, other in _NARR_CACHE.items():
+        if other_nn == nn: continue
+        for zone in _NARRATIVE_ZONES.keys():
+            ml, ol = my.get(zone, ()), other.get(zone, ())
+            if ml and ol and ml == ol:
+                # Drift detectat: identitate literală cu alt cNN
+                return False
+    return True
+
+
 def audit(root='.', json_out=False):
     zones = {}
     for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
