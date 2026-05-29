@@ -2984,16 +2984,40 @@ body.exec-mode .screen.active::after { display: none; }
 
 <script id="edit-script">
 (function blockKeyboardInEditor() {
-  // V42 R-V03.70: STOP propagation pe orice keydown când user e în mod edit
-  // (contenteditable, INPUT, TEXTAREA). Asta în CAPTURE phase, deci omoară
-  // event-ul ÎNAINTE să ajungă la handler-ul global care face nextFrag().
-  // Enter, ArrowKeys, Space — toate rămân native în text fără să avanseze
-  // slide-ul. Pattern preluat din Editor-Studiu unde era deja consolidat.
-  document.addEventListener("keydown", (e) => {
+  // V42 R-V03.70: STOP IMMEDIATE PROPAGATION când user e în mod edit
+  // (contenteditable, INPUT, TEXTAREA). În CAPTURE phase.
+  //
+  // stopPropagation NU oprește alte listener-e de pe ACELAȘI nod (document).
+  // Bubble handler-ul global keydown rulează oricum și apelează nextFrag().
+  // stopImmediatePropagation oprește TOATE listener-ele rămase (capture+bubble)
+  // pe acest nod. Combinat cu check explicit pe activeElement și closest.
+  function isEditingTarget(e) {
     const a = document.activeElement;
-    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) {
-      e.stopPropagation();
+    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return true;
+    const t = e.target;
+    if (!t) return false;
+    if (t.isContentEditable) return true;
+    if (typeof t.closest === "function") {
+      if (t.closest('[contenteditable="true"]')) return true;
+      if (t.closest("input, textarea")) return true;
     }
+    // Pentru cazuri unde e.target e un Text node (fără closest), urc manual
+    let node = t;
+    while (node) {
+      if (node.nodeType === 1 && node.getAttribute && node.getAttribute("contenteditable") === "true") return true;
+      node = node.parentNode;
+    }
+    return false;
+  }
+  document.addEventListener("keydown", (e) => {
+    if (isEditingTarget(e)) {
+      e.stopImmediatePropagation();
+    }
+  }, true);
+  // Backup: și pentru keypress + keyup, în caz că handler-ul global ar avea
+  // multiple variante de capture
+  document.addEventListener("keypress", (e) => {
+    if (isEditingTarget(e)) e.stopImmediatePropagation();
   }, true);
 })();
 
