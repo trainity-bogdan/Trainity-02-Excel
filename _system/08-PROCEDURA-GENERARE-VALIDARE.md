@@ -120,6 +120,66 @@ Livrare DOAR dacă: Gate1 ∧ Gate2(sau paritate documentată) ∧ Gate3 ZERO DR
 
 ---
 
+## 8. Workflow FILM-CA-SURSĂ (V43) — sursa de adevăr textuală
+
+**Principiu:** FILM-ul (`.docx`) este SURSA DE ADEVĂR pentru toate textele
+narative ale unei construcții. ARHITECT rafinează textele în FILM (mantre,
+intrigi, fraze exec etc.) pana la ~90% final, apoi le propag in toate cele 4
+machete. In editabile raman doar rafinari fine, nu rescrieri.
+
+**De ce:** editarea directa in 4 machete (x HTML mari, base64) e lenta si
+predispusa la desincronizare. Un singur document sursa = un singur loc de
+adevar + propagare deterministica + verificare round-trip.
+
+### 8.1 FILM conține (manifestul textual)
+- IDENTITATE CINEMATICĂ: INTRIGA (HOOK), MIZA, MANTRA, WOW (PAYOFF), MOTTO
+- DESCHIDERE · DE CE CNN
+- ROLURI · CINE FACE CE
+- SCENA REALĂ · fenomene (lista axei)
+- CELE 6 ETAPE · SCRIPT VIDEO (per etapă: OBIECTIV, STARE, VOCEA TRAINERULUI,
+  DEMONSTRAȚIA, INTERVENȚIA AI, MOMENT DE CONTROL, REVEAL, TRANZIȚIE)
+- **SLIDES EXECUTIVE · SHOW FINAL VIDEO** (NOU V43): cele 6 slide-uri exec,
+  fiecare cu STARE (exec-emotion) + FRAZĂ DE IMPACT (exec-phrase)
+- FINAL · SEMNĂTURĂ
+
+### 8.2 Maparea FILM → machete (deterministă, verificabilă)
+| Câmp în FILM | Slot(uri) în machete |
+|---|---|
+| INTRIGA (HOOK) | Studiu `cover-subtitle`; Video `hero-hook` (lead+twist) — cu acord gramatical |
+| MANTRA | Studiu `mantra-band-main`; Video `mantra` |
+| WOW (PAYOFF) | Studiu `payoff` accent; Video `accent` |
+| MOTTO | Studiu `payoff-motto`/motto construcție |
+| SLIDE EXEC N · STARE | Video + Editor-Video `exec-emotion` [N] |
+| SLIDE EXEC N · FRAZĂ DE IMPACT | Video + Editor-Video `exec-phrase` [N] |
+| ETAPA N · VOCEA TRAINERULUI | Video FLOW / narațiune etapă [N] |
+| SCENA REALĂ fenomene | Studiu `inv-item`/`anomaly` (după caz) |
+
+### 8.3 Pașii workflow-ului
+1. ARHITECT deschide FILM-ul construcției, rafinează textele (inclusiv
+   secțiunea SLIDES EXECUTIVE).
+2. ARHITECT uploadează FILM-ul modificat.
+3. Motor PARSEAZĂ FILM-ul pe secțiuni etichetate și extrage fiecare câmp.
+4. Motor PROPAGĂ fiecare câmp în slotul mapat, în toate cele 4 machete
+   (Studiu, Editor-Studiu, Video, Editor-Video), cu acord gramatical.
+5. Motor rulează **verificarea round-trip FILM↔machete**: re-extrage fiecare
+   câmp din fiecare machetă și confirmă că == valoarea din FILM. Orice
+   nepotrivire = BLOCAJ + raport.
+6. Motor rulează pipeline-ul de 4 gate-uri (secțiunea 5).
+7. ARHITECT face doar rafinări fine în editabile, dacă mai e nevoie.
+
+### 8.4 Reguli de fortificare (nenegociabile)
+- **FILM = singura sursă** pentru câmpurile mapate. Nu se editează direct în
+  machete un câmp care există în FILM (s-ar desincroniza). Modificarea pleacă
+  MEREU din FILM → propagare.
+- **Completitudine FILM:** înainte de propagare, FILM trebuie să conțină
+  TOATE secțiunile din 8.1. Lipsă secțiune = BLOCAJ.
+- **Round-trip obligatoriu:** livrare doar dacă fiecare câmp din FILM apare
+  identic în toate machetele mapate (verificare automată).
+- **Idempotență:** re-propagarea aceluiași FILM nemodificat produce zero
+  diferențe (semn că maparea e completă și corectă).
+
+---
+
 ## 7. Lecția durabilă (L162)
 
 Detectorii de coerență trebuie să acopere TOATE machetele (Studiu + Video +
