@@ -2215,7 +2215,88 @@ client_nume, nr_factura.
 
 ---
 
-## SPEC C07 - LOGICA TEMPORALA   [Status: NEGENERAT]
+## SPEC C07 - DATARE (MEMORIA SETULUI)   [Status: INGHETAT 29.05.2026]
+
+Treapta T2 CUNOASTERE · Axa TEMPORALA (unica pe treapta) · pozitie 3/4.
+Obiect: memoria. Marker lingvistic strict: cuvantul "memorie" (+ vocabular
+temporal: luna, perioada, evolutie, ritm, sezon). Separare obsesiva: C07 =
+TIMP (cum se misca setul), C08 = ECOSISTEM (cu cine vorbeste setul).
+Intrebare-mama: "Cum se comporta setul in timp?"
+
+### 1. INTRIGA
+Setul are memorie. Excel o tine minte. Tu nu.
+
+### 2. PROBLEMELE (profilare temporala, incep cu Pe ce / Care / Cum / Exista)
+- Pe ce perioada reala se intind tranzactiile?
+- Exista luni care lipsesc din timeline?
+- Care e ritmul natural al setului (volum pe luna)?
+- Care e luna dominanta si care cea minima?
+- Setul accelereaza sau incetineste?
+- Exista sezonalitate recurenta si o saptamana tipica?
+
+### 3. MIZA
+Operatorul iese cu memoria temporala a setului (perioada, ritm, trend, sezon).
+Nu mai presupune cand s-a intamplat. NU strategie, NU prognoza (acelea vin la T3).
+
+### 4. MANTRA
+Nu privim tabelul. Il interogam. (voce T2 partajata)
+Accent de separare: C07 = MEMORIE (timpul setului).
+
+### 5. MOTTO
+O memorie citita. Apoi orice decizie.
+
+### 6. STEP-TITLES (6 etape macro)
+- ETAPA 1 · DESCHIDERE TEMPORALA
+- ETAPA 2 · INTEROGARE ASISTATA DE AI
+- ETAPA 3 · PROFILARE TEMPORALA
+- ETAPA 4 · AUDIT AL CRONOLOGIEI
+- ETAPA 5 · ANCORARE LA SURSA
+- ETAPA 6 · PREDAREA MEMORIEI
+
+### 7. PROMPTURI (2 Copilot)
+P1 (ETAPA 2 interogare cronologie): "Pentru coloana data_factura spune-mi
+perioada acoperita (prima si ultima data), cate luni distincte exista si daca
+lipseste vreo luna din secventa. Apoi numara tranzactiile pe fiecare luna."
+P2 (ETAPA 3 profilare ritm): "Pentru acelasi set arata-mi cum evolueaza volumul
+lunar (creste sau scade), care luna are cel mai mare si cel mai mic volum, si ce
+zi a saptamanii concentreaza cele mai multe tranzactii."
+
+### 8. FINAL-LABELS (8 ancore de retentie)
+- PERIOADA
+- TIMELINE
+- GOLURI
+- RITM
+- LUNA-VARF
+- TREND
+- SEZON
+- MEMORIE
+
+### 9. FENOMENE / OPS
+
+CELE 5 FENOMENE ALESE (axa temporala, COLOANE REALE din asset):
+
+**1. Perioada acoperita** — MIN si MAX pe data_factura; prima si ultima luna,
+intinderea reala a setului in timp.
+
+**2. Goluri in timp** — secventa lunilor; ce luni lipsesc din timeline.
+
+**3. Ritm lunar** — COUNT pe data_factura grupat pe luna; volumul tipic/luna.
+
+**4. Trend** — directia volumului luna-la-luna (creste/scade/stationar).
+
+**5. Sezonalitate si saptamana tipica** — grupare pe luna-din-an si pe ziua
+saptamanii (extrase din data_factura); recurente si zi predilecta.
+
+Operatii: MIN, MAX pe date, COUNT/COUNTIFS pe luna, grupare cronologica,
+delta luna-la-luna, extragere componente (luna-din-an, zi-din-saptamana).
+
+DATE (Date_MASTER-C07.xlsx): NU planteaza anomalii. Porneste din output-ul C06,
+adauga sheet-uri temporale (_TIMELINE, _TREND, _RITM, _SEZON, CONTROL_FINAL).
+Suma conservata: 7.986.019,38 lei (DELTA 0).
+Coloane reale folosite: data_factura, valoare_neta, nr_factura.
+
+---
+
 ## SPEC C08 - PREGATIREA PENTRU ANALIZA   [Status: NEGENERAT]
 ## SPEC C09 - EXPLORAREA DATELOR   [Status: NEGENERAT]
 ## SPEC C10 - ANALIZA PIVOT   [Status: NEGENERAT]

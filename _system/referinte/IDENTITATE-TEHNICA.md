@@ -183,6 +183,34 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c06_study_v1
 - localStorage_video: trainity_c06_video_v1
 
+## IDENTITATE_TEHNICA C07 — MEMORIA SETULUI
+
+- cod: C07
+- treapta_nr: 2
+- treapta_nume: CUNOASTERE
+- treapta_pozitie: 3 din 4 (Clasificare, Cuantificare, Datare, Tipizare)
+- nume_hero_caps_rand1: MEMORIA
+- nume_hero_caps_rand2: SETULUI
+- nume_hero_caps: MEMORIA SETULUI
+- nume_title_case: Datarea datelor
+- nume_slug: Datare
+- input_filename: Date_MASTER-C06.xlsx
+- output_filename: Date_MASTER-C07.xlsx
+- creativ_filename: Creativ-Excel-07-Datare.txt
+- meta_val_treapta: CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · TIPIZARE (CUNOAȘTERE)
+- next_cod: C08
+- next_nume_title: Tipizare
+- next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C07 MEMORIA SETULUI · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C07 · Memoria setului
+- mobile_topbar: C07 · Memoria setului
+- nav_brand_label: PACK 02 EXCEL · C07
+- nav_brand_title: MEMORIA SETULUI
+- title_studiu: C07 · Datare · Trainity
+- title_video: C07 · DATARE · BROADCAST
+- localStorage_studiu: trainity_c07_study_v1
+- localStorage_video: trainity_c07_video_v1
+
 
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral

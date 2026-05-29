@@ -1000,6 +1000,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Cuantificare',
             'meta_val_treapta': 'CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · TIPIZARE (CUNOAȘTERE)'
         },
+        '07': {
+            'cod': 'C07', 'nume_hero_caps_rand1': 'MEMORIA',
+            'nume_slug': 'Datare',
+            'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · TIPIZARE (CUNOAȘTERE)'
+        },
     }
     return IDENTITATI.get(NN)
 
