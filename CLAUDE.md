@@ -188,7 +188,7 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 - **NU prezenta variante** la decizii evidente (ARHITECT a confirmat).
 - **NU inventa silentios** — flaghezi conflicte înainte de a genera.
 - **Întrebări scrise în text liber**, NU în grile A/B/C cu AskUserQuestion. ARHITECT preferă răspunsuri narative.
-- **Filtrul SIGUR/CONFLICT** la feedback extern (vezi G-06 în arhivă).
+- **Filtrul SIGUR/CONFLICT** la feedback extern (vezi `_system/09-FILTRU-G06-SIGUR-CONFLICT.md`). Se aplică AUTOMAT, cu format „FILTRU G-06 aplicat:".
 - **Limbaj** românesc cu diacritice.
 
 ---
