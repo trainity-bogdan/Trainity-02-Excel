@@ -133,6 +133,54 @@ def _r0369(folder):
     return True
 
 
+# ============================================================
+# R-V03.71 — ANTI-CLONĂ EXEC VIDEO (extensie R-V03.69 pe machetele Video)
+# ============================================================
+# Prinde clonarea zonelor de CONȚINUT din HTML-Video intre constructii:
+# exec-phrase (frazele de impact / etapa), exec-emotion (starea / etapa),
+# hero-sub (subtitlul hero). Cauza descoperita empiric V43: C03/C05/C06 aveau
+# exec-emotion (si C05/C06 si exec-phrase) identice cu C01 - mostenite la
+# generarea COPY+MODIFY si NEPRINSE de R-V03.69 (care citea doar HTML-Studiu).
+# Zone EXCLUSE intentionat (shared brand/generic): exec-title (REALITATE...),
+# exec-label (Etapa 0X), motto-ul de brand.
+# ============================================================
+
+_VIDEO_ZONES = {
+    'exec-phrase': r'class="exec-phrase[^"]*"[^>]*>([^<]+)<',
+    'exec-emotion': r'class="exec-emotion[^"]*"[^>]*>([^<]+)<',
+    'hero-sub': r'class="hero-sub[^"]*"[^>]*>([^<]+)<',
+}
+_VID_CACHE = {}
+
+def _populate_vid_cache(root):
+    if _VID_CACHE: return
+    for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
+        nn = os.path.basename(c_folder).upper()
+        vids = glob.glob(os.path.join(c_folder, 'HTML-Video-Excel-*.html'))
+        if not vids: continue
+        with open(vids[0], encoding='utf-8') as f:
+            content = f.read()
+        # strip base64 (zgomot, nu contine clase de continut)
+        content = _re_v369.sub(r'data:image/[^"\']+', '', content)
+        _VID_CACHE[nn] = {z: tuple(m.strip() for m in _re_v369.findall(p, content))
+                          for z, p in _VIDEO_ZONES.items()}
+
+@detector('R-V03.71', 'Anti-clonă exec video: exec-phrase/emotion/hero-sub neidentice cu alt cNN', 'folder')
+def _r0371(folder):
+    _populate_vid_cache('.')
+    nn = os.path.basename(folder).upper()
+    if nn not in _VID_CACHE: return True
+    my = _VID_CACHE[nn]
+    for other_nn, other in _VID_CACHE.items():
+        if other_nn == nn: continue
+        for zone in _VIDEO_ZONES.keys():
+            ml, ol = my.get(zone, ()), other.get(zone, ())
+            if ml and ol and ml == ol:
+                # Identitate literala a zonei de continut cu alt cNN
+                return False
+    return True
+
+
 def audit(root='.', json_out=False):
     zones = {}
     for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
