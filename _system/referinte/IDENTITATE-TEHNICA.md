@@ -155,6 +155,34 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c05_study_v1
 - localStorage_video: trainity_c05_video_v1
 
+## IDENTITATE_TEHNICA C06 — CUANTIFICAREA DATELOR
+
+- cod: C06
+- treapta_nr: 2
+- treapta_nume: CUNOASTERE
+- treapta_pozitie: 2 din 4 (Clasificare, Cuantificare, Datare, Tipizare)
+- nume_hero_caps_rand1: CUANTIFICAREA
+- nume_hero_caps_rand2: DATELOR
+- nume_hero_caps: CUANTIFICAREA DATELOR
+- nume_title_case: Cuantificarea datelor
+- nume_slug: Cuantificare
+- input_filename: Date_MASTER-C05.xlsx
+- output_filename: Date_MASTER-C06.xlsx
+- creativ_filename: Creativ-Excel-06-Cuantificare.txt
+- meta_val_treapta: CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · TIPIZARE (CUNOAȘTERE)
+- next_cod: C07
+- next_nume_title: Datare
+- next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C06 CUANTIFICAREA DATELOR · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C06 · Cuantificarea datelor
+- mobile_topbar: C06 · Cuantificarea datelor
+- nav_brand_label: PACK 02 EXCEL · C06
+- nav_brand_title: CUANTIFICAREA DATELOR
+- title_studiu: C06 · Cuantificarea Datelor · Trainity
+- title_video: C06 · CUANTIFICAREA DATELOR · BROADCAST
+- localStorage_studiu: trainity_c06_study_v1
+- localStorage_video: trainity_c06_video_v1
+
 
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral

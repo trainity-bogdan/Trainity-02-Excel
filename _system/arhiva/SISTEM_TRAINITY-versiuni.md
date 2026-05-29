@@ -2131,7 +2131,90 @@ REZUMAT INGHETARE C05:
 
 ---
 
-## SPEC C06 - KPI & CALCULE   [Status: NEGENERAT]
+## SPEC C06 - CUANTIFICARE   [Status: INGHETAT 29.05.2026]
+
+Treapta T2 CUNOASTERE · Axa CANTITATIVA (numeric, statistic) · pozitie 2/4.
+Marker lingvistic strict: cuvantul "cifra" (cum C05 a fost "eticheta").
+Separare obsesiva C05/C06 (RAFINARE L136.A): C05 = ETICHETE, C06 = CIFRE.
+Intrebare-mama: "Cum arata numeric setul?" (descriptiv, NU decizional).
+
+### 1. INTRIGA
+Setul are cifre. Excel le stie. Tu nu.
+
+### 2. PROBLEMELE (profilare, incep cu Cat/Care/Cum)
+- Cat insumeaza setul, total si pe categorie?
+- Care e media si mediana per factura?
+- Cat de intins e setul (minim, maxim, amplitudine)?
+- Cum se concentreaza valoarea (Pareto numeric, nu de frecventa)?
+- Care sunt extremele numerice (top-N si bottom-N)?
+
+### 3. MIZA
+Operatorul iese cu fisa de profil NUMERIC a setului (intervale, medii,
+distributii, agregate). NU strategie, NU prioritizare (acelea vin la T3).
+
+### 4. MANTRA
+Nu privim tabelul. Il interogam. (voce T2 partajata)
+Accent de separare pe slide-uri: C06 = CIFRE.
+
+### 5. MOTTO
+O cifra cunoscuta. Apoi orice decizie.
+
+### 6. STEP-TITLES (6 etape macro)
+- ETAPA 1 · DESCHIDERE NUMERICA
+- ETAPA 2 · INTEROGARE ASISTATA DE AI
+- ETAPA 3 · PROFILARE CANTITATIVA
+- ETAPA 4 · AUDIT AL AGREGATELOR
+- ETAPA 5 · ANCORARE LA SURSA
+- ETAPA 6 · PREDAREA PROFILULUI NUMERIC
+
+### 7. PROMPTURI (2 Copilot)
+P1 (ETAPA 2 interogare agregate): "Calculeaza pentru coloana valoare_neta:
+suma totala, media, mediana, minimul si maximul. Apoi suma pe fiecare
+categorie de produs."
+P2 (ETAPA 3 profilare distributii): "Arata-mi cum se distribuie valoarea
+pe categorii: ce procent din total aduce fiecare categorie si care sunt
+primele si ultimele facturi dupa valoare_neta."
+
+### 8. FINAL-LABELS (8 ancore de retentie)
+- SUMA TOTALA
+- MEDIE SI MEDIANA
+- AMPLITUDINE
+- DISPERSIE
+- CONCENTRARE
+- TOP-N / BOTTOM-N
+- PROFIL NUMERIC
+- O CIFRA CUNOSCUTA
+
+### 9. FENOMENE / OPS
+
+CELE 5 FENOMENE ALESE (axa cantitativa, COLOANE REALE din asset):
+
+**1. Suma totala si pe categorie** — SUM, SUMIFS pe valoare_neta grupat
+pe categorie. Setul are o dimensiune.
+
+**2. Medie si mediana per factura** — AVERAGE, MEDIAN pe valoare_neta;
+contrastul medie-vs-mediana arata asimetria.
+
+**3. Amplitudine** — MIN, MAX pe valoare_neta; intinderea setului.
+
+**4. Dispersie** — STDEV pe valoare_neta; cat de imprastiate sunt cifrele.
+
+**5. Concentrare numerica** — proportii % pe categorie, LARGE/SMALL pentru
+top-N si bottom-N facturi dupa valoare_neta (Pareto numeric, distinct de
+Pareto-frecventa din C05).
+
+Operatii: SUM, SUMIFS, AVERAGE, AVERAGEIFS, MEDIAN, MIN, MAX, STDEV,
+LARGE, SMALL, proportii procentuale.
+
+DATE (Date_MASTER-C06.xlsx): NU planteaza anomalii. Porneste din output-ul
+curat conservat, adauga coloana derivata marja_estimata (procent sintetic
+pe categorie) si sheet KPI_GENERAL cu agregatele descriptive.
+Suma conservata: 7.986.019,38 lei (DELTA 0).
+Coloane reale folosite: valoare_neta, categorie, cantitate, pret_unitar,
+client_nume, nr_factura.
+
+---
+
 ## SPEC C07 - LOGICA TEMPORALA   [Status: NEGENERAT]
 ## SPEC C08 - PREGATIREA PENTRU ANALIZA   [Status: NEGENERAT]
 ## SPEC C09 - EXPLORAREA DATELOR   [Status: NEGENERAT]

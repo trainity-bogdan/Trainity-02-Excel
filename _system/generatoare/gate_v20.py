@@ -995,6 +995,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Clasificare',
             'meta_val_treapta': '<b>CLASIFICARE</b> · KPI · LOGICĂ · ANOMALII (CARE)'
         },
+        '06': {
+            'cod': 'C06', 'nume_hero_caps_rand1': 'CUANTIFICAREA',
+            'nume_slug': 'Cuantificare',
+            'meta_val_treapta': 'CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · TIPIZARE (CUNOAȘTERE)'
+        },
     }
     return IDENTITATI.get(NN)
 
