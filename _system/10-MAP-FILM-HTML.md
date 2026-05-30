@@ -65,5 +65,8 @@ Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": 
 |---|---|---|---|---|---|---|---|
 | C01 | parţial (hero ✓, cover-subtitle ≠) | ≠ (HTML propriu) | ≠ | ≠ | ✓ | ✓ slot nou | ✓ draft |
 | C02 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
+| C03 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 
-C01: identitatea HTML (MIZA/MANTRA/MOTTO) încă diferă de FILM (drift vechi, HTML mai şlefuit). Direcţie de reconciliere pending ARHITECT (sync HTML←FILM vs back-port HTML→FILM). WOW + CONTRACT însă au fost adăugate la ambele.
+C01: identitatea HTML (MIZA/MANTRA/MOTTO) încă diferă de FILM (drift vechi, HTML mai şlefuit). Direcţie de reconciliere pending ARHITECT (sync HTML←FILM vs back-port HTML→FILM). WOW + CONTRACT însă au fost adăugate la toate.
+
+C03: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45), sincronizat complet.

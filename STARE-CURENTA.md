@@ -1,7 +1,20 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V45 (consolidat · marker SHA în `_system/VERSIUNI.md`)
-**Ultima actualizare:** 29 mai 2026
+**Versiune sistem:** V46 (în lucru)
+**Ultima actualizare:** 30 mai 2026
+
+**Sesiunea V46 — sumar (sincronizare FILM↔HTML + sloturi noi):**
+
+1. **Mapare canonică FILM → HTML codificată** în `_system/10-MAP-FILM-HTML.md` (nu exista document care să spună ce frază de impact din FILM merge în ce slot HTML). FILM = MASTER. „update html" devine mecanic: INTRIGA→cover-subtitle+hero-hook · MIZA→cover-miza · MANTRA→mantra-band-main · MOTTO→payoff-motto+final-motto+exec-closing · STARE/FRAZĂ exec→exec-emotion/exec-phrase ×6.
+2. **Slot nou WOW**: linie-climax verbatim înainte de motto, highlight VERDE `.payoff-wow` (#18843e) + etichetă `WOW:`. Fraza în `<span data-wow>` (sync atinge doar fraza). Video = frag propriu + renumerotare motto. Adăugat C01+C02+C03.
+3. **Slot nou CONTRACT (DESTINAȚIE)** în cusătura SCENA REALĂ → primul pas (`exec-hero [data-contract]`, Studiu). Element NOU în SPEC, copy DRAFT (de formalizat în FILM + propagat în `_template`).
+4. **Sincronizări:** C01 = slide-2 exec + WOW + CONTRACT (identitate MIZA/MANTRA/MOTTO pending direcție); C02 = identitate completă + exec + WOW + CONTRACT; C03 = identitate completă + exec + WOW + CONTRACT (FILM repo = docx reparat, voce „noi").
+5. **Diacritice reparate** în FILM C02 + C03 (docx returnate ARHITECT): typo „.." + sute de corecturi.
+
+**Deschis:** (a) direcție reconciliere identitate C01; (b) formalizare copy CONTRACT în FILM-SPEC + `_template`.
+
+---
+
 **Ultima sesiune V45 — sumar:**
 
 Re-arhitectură T2 (după feedback extern trecut prin G-06) + rafinări ARHITECT:

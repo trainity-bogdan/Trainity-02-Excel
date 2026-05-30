@@ -1138,6 +1138,8 @@ body.exec-mode .stage { bottom: 0 !important; }
 
 .final-block p { margin-bottom: 10px; }
 .final-block .dim { color: var(--dim); }
+.payoff-wow { display:inline-block; background:#18843e; color:#fff; font-weight:700; padding:4px 14px; border-radius:3px; }
+.payoff-wow .wow-tag { opacity:.8; margin-right:6px; }
 .final-block .accent {
   color: var(--yellow);
   font-weight: 800;
@@ -1633,7 +1635,7 @@ body.exec-mode .hud-bar { display: none !important; }
   <section class="screen" data-screen="hero" data-frag-total="2">
     <div class="hero-prelabel">Construcția 03 Excel</div>
     <h1 class="hero-title">AUDITAREA<br>DATELOR</h1>
-    <p class="hero-hook frag" data-frag="1">Pare curat.<br><span class="hero-hook-twist">Nu este.</span></p>
+    <p class="hero-hook frag" data-frag="1">Tabelul controlat valoric pare gata de raportat.<br><span class="hero-hook-twist">Contaminările tehnice îl blochează.</span></p>
     <p class="hero-sub frag" data-frag="2">Cel mai periculos defect este cel care pare corect.</p>
   </section>
 
@@ -1643,7 +1645,7 @@ body.exec-mode .hud-bar { display: none !important; }
   <section class="screen" data-screen="prompt"></section>
   <section class="screen" data-screen="switch"></section>
   <section class="screen" data-screen="verify"></section>
-  <section class="screen" data-screen="final" data-frag-total="7">
+  <section class="screen" data-screen="final" data-frag-total="8">
     <div class="final-block">
       <p class="dim frag" data-frag="1">Nu am șters date.</p>
       <p class="dim frag" data-frag="2">Nu am modificat valori.</p>
@@ -1651,7 +1653,8 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="accent frag" data-frag="4">Am demonstrat ce era ascuns.</p>
       <p class="frag" data-frag="5">Datele nu mai mint.</p>
       <p class="frag" data-frag="6">C04 poate începe.</p>
-      <div class="final-motto frag" data-frag="7">Defectele nu au dispărut singure.<br>Au fost detectate.</div>
+            <p class="payoff-wow frag" data-frag="7"><span class="wow-tag">WOW:</span><span data-wow="1">Datele par curate. Astăzi am demonstrat că nu erau.</span></p>
+      <div class="final-motto frag" data-frag="8">Audităm ce nu se vede.</div>
     </div>
   </section>
 
@@ -1700,7 +1703,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 02</div>
       <div class="exec-emotion frag" data-frag="2">Audit forensic</div>
       <h2 class="exec-title frag" data-frag="3">INVESTIGAȚIE</h2>
-      <p class="exec-phrase frag" data-frag="4">AI-ul nu repară. AI-ul mărturisește.</p>
+      <p class="exec-phrase frag" data-frag="4">AI-ul nu repară. AI-ul găsește ce nu se vede.</p>
     </div>
   </section>
 
@@ -1732,7 +1735,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 04</div>
       <div class="exec-emotion frag" data-frag="2">Dovada prin formulă</div>
       <h2 class="exec-title frag" data-frag="3">VERIFICARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Un proces care a rulat nu este un proces care a funcționat.</p>
+      <p class="exec-phrase frag" data-frag="4">O formulă care nu dă eroare nu înseamnă că a găsit ce trebuia.</p>
     </div>
   </section>
 
@@ -1748,7 +1751,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 05</div>
       <div class="exec-emotion frag" data-frag="2">Protocol permanent</div>
       <h2 class="exec-title frag" data-frag="3">STABILIZARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Un audit reușit astăzi este o contaminare nedetectată mâine. Dacă nu există protocol.</p>
+      <p class="exec-phrase frag" data-frag="4">O contaminare eliminată azi revine mâine. Dacă nu există protocol.</p>
     </div>
   </section>
 
@@ -1772,10 +1775,7 @@ body.exec-mode .hud-bar { display: none !important; }
   <section class="screen exec-closing" data-screen="executive" data-exec-slide="7" data-frag-total="4">
     <div class="exec-content">
       <div class="exec-closing-prelabel frag" data-frag="1">Motto:</div>
-      <h1 class="exec-closing-motto frag" data-frag="2">
-        Defectele nu au dispărut singure.
-        <span class="exec-closing-motto-yellow">Au fost detectate.</span>
-      </h1>
+      <h1 class="exec-closing-motto frag" data-frag="2">Audităm <span class="exec-closing-motto-yellow">ce nu se vede.</span></h1>
       <div class="exec-closing-divider frag" data-frag="3"></div>
       <div class="exec-closing-signature frag" data-frag="4">
         <span class="sig-line-1">Trainity · Sistemul 02 Excel</span>
