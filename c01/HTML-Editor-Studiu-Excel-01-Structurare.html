@@ -1386,6 +1386,63 @@ body.has-continue .scroll-top { bottom: 88px; }
 .ts-yes{color:#111;font-weight:800}
 @media(max-width:640px){.ts-no{display:block;margin:0}.ts-yes{display:block}}
 </style>
+<style id="hero-v2-premium">
+:root{ --tr-y:#FFD400; }
+/* ===== HERO v2 PREMIUM (Trainity · poster + cockpit) ===== */
+.cover{ padding:6px 0 8px; }
+.cover-label{ font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#999; font-weight:700; }
+/* A. Identitate: imagine dominanta + obiect */
+.hero-visual{ position:relative; margin:16px 0 22px; border-radius:0; overflow:hidden; border:2px solid #0a0a0a; }
+.hero-visual-img{ display:block; width:100%; height:clamp(190px,34vw,330px); object-fit:cover; filter:grayscale(.06) contrast(1.04); }
+.hero-object-tag{ position:absolute; left:0; bottom:0; background:var(--tr-y); color:#000; font-weight:900; font-size:14px; letter-spacing:2px; padding:9px 18px; border-radius:0; }
+.cover-title{ font-size:clamp(30px,6vw,56px); font-weight:900; line-height:1.02; letter-spacing:-1.5px; color:#0a0a0a; margin:8px 0 20px; }
+/* B. Intrebare + intriga + micro-brief + miza */
+.hero-question{ border-left:5px solid var(--tr-y); padding:4px 0 4px 18px; margin:20px 0 16px; background:none; }
+.hero-question-label{ display:block; font-size:11px; letter-spacing:3px; color:#9a7600; font-weight:800; margin-bottom:7px; }
+.hero-question-text{ display:block; font-size:clamp(24px,4.6vw,42px); font-weight:800; line-height:1.1; color:#0a0a0a; }
+.cover-subtitle{ font-size:clamp(20px,3.2vw,30px); font-weight:800; color:#0a0a0a; margin:12px 0 6px; line-height:1.2; }
+.hero-microbrief{ font-size:16px; line-height:1.7; color:#4a4a4a; max-width:66ch; margin:6px 0 0; }
+.cover-miza{ font-size:17px; line-height:1.6; color:#111; font-weight:600; border-top:1px solid #e6e6e6; margin-top:20px; padding-top:16px; max-width:66ch; }
+/* C. Inainte / Dupa — bloc mare bicolor */
+.hero-beforeafter{ display:grid; grid-template-columns:1fr 56px 1fr; gap:0; align-items:stretch; margin:32px 0; border:2px solid #0a0a0a; flex-wrap:nowrap; }
+.hero-beforeafter .ba-col{ padding:24px 22px; min-width:0; border-radius:0; }
+.ba-before{ background:#fff; }
+.ba-after{ background:#0a0a0a; }
+.ba-label{ font-size:12px; letter-spacing:2px; font-weight:900; margin-bottom:14px; }
+.ba-before .ba-label{ color:#c0392b; }
+.ba-after .ba-label{ color:var(--tr-y); }
+.hero-beforeafter ul{ margin:0; padding-left:18px; }
+.hero-beforeafter .ba-before li{ font-size:15px; line-height:1.95; color:#555; }
+.hero-beforeafter .ba-after li{ font-size:15px; line-height:1.95; color:#fff; font-weight:600; }
+.ba-arrow{ display:flex; align-items:center; justify-content:center; background:var(--tr-y); color:#000; font-size:26px; font-weight:900; }
+/* D. Rezultat — competenta = certificat (dominant), outcomes secundar */
+.hero-competency{ background:#0a0a0a; border:0; border-left:6px solid var(--tr-y); border-radius:0; padding:24px 26px; margin:28px 0 12px; }
+.hc-label{ font-size:11px; letter-spacing:3px; font-weight:900; color:var(--tr-y); margin-bottom:10px; }
+.hero-competency p{ font-size:clamp(19px,2.8vw,26px); line-height:1.38; color:#fff; font-weight:700; margin:0; }
+.hero-outcomes{ background:#fafafa; border:1px solid #e2e2e2; border-radius:0; padding:16px 20px; margin:12px 0; }
+.outcomes-label{ font-size:11px; letter-spacing:2px; font-weight:800; color:#9a9a9a; margin-bottom:10px; }
+.outcomes-list{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:7px 20px; }
+.outcomes-list li{ color:#333; font-size:15px; font-weight:600; padding-left:22px; position:relative; }
+.outcomes-list li::before{ content:"\2713"; position:absolute; left:0; color:#1a8f3c; font-weight:900; }
+/* E. AHA / Greseala / Simptom — 3 carduri premium */
+.arsenal-band{ margin:34px 0 8px; }
+.arsenal-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.arsenal-card{ border-radius:0; padding:20px 20px; border:2px solid #0a0a0a; background:#fff; }
+.arsenal-card .ac-label{ font-size:11px; letter-spacing:2px; font-weight:900; margin-bottom:12px; color:#0a0a0a; }
+.arsenal-card .ac-phrase{ font-size:clamp(17px,1.9vw,20px); line-height:1.35; font-weight:800; color:#0a0a0a; margin:0; }
+.arsenal-card.aha{ background:#0a0a0a; border-color:#0a0a0a; }
+.arsenal-card.aha .ac-label{ color:var(--tr-y); }
+.arsenal-card.aha .ac-phrase{ color:#fff; }
+.arsenal-card.simptom ul{ margin:0; padding-left:18px; }
+.arsenal-card.simptom li{ font-size:14px; line-height:1.8; color:#555; }
+/* mobil */
+@media(max-width:720px){
+  .hero-beforeafter{ grid-template-columns:1fr; }
+  .ba-arrow{ padding:8px 0; }
+  .arsenal-grid{ grid-template-columns:1fr; }
+  .outcomes-list{ grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
 
@@ -1428,10 +1485,10 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text">„Este acesta cu adevărat un tabel?"</span></div>
         <p class="cover-subtitle">Arată ca tabel. Nu este unul.</p>
         <p class="hero-microbrief">Un export poate avea aspectul unui tabel Excel și totuși să nu respecte regulile unui tabel real. În această construcție demonstrăm diferența dintre aparență și structură.</p>
-        <div class="cover-miza">Când structura e contaminată, fiecare formulă construită deasupra moștenește contaminarea. Decizia ta de business e ancorată în date care doar par tabel.</div>
+        <div class="cover-miza">Obținem o structură pe care Excel o poate înțelege, verifica și reutiliza. Orice calcul construit deasupra pornește de pe o fundație controlabilă.</div>
         <div class="hero-beforeafter">
           <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>subtotaluri amestecate cu date</li><li>celule unite</li><li>coloane ascunse</li><li>separatoare artificiale</li></ul></div>
-          <div class="ba-arrow">↓</div>
+          <div class="ba-arrow">→</div>
           <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>tabel valid</li><li>structură continuă</li><li>bază pentru formule</li><li>bază pentru Power Query</li></ul></div>
         </div>
         <div class="hero-competency"><div class="hc-label">CE VEI PUTEA FACE</div><p>Poți identifica în mai puțin de 30 de secunde dacă un export ERP este utilizabil sau trebuie restructurat înainte de analiză.</p></div>
@@ -1439,10 +1496,10 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       </header>
 
-            <section class="arsenal-band">
-        <div class="aha-callout"><span class="aha-label">AHA MOMENT</span><p class="aha-text">Nu există formule corecte peste o structură greșită.</p></div>
-        <div class="arsenal-row">
-          <div class="arsenal-card greseala"><div class="ac-label">GREȘEALA CLASICĂ</div><p>Oamenii încep cu formulele.<br><b>Profesioniștii încep cu structura.</b></p></div>
+                  <section class="arsenal-band">
+        <div class="arsenal-grid">
+          <div class="arsenal-card aha"><div class="ac-label">AHA MOMENT</div><p class="ac-phrase">Nu există formule corecte peste o structură greșită.</p></div>
+          <div class="arsenal-card greseala"><div class="ac-label">GREȘEALA CLASICĂ</div><p class="ac-phrase">Oamenii încep cu formulele. Profesioniștii încep cu structura.</p></div>
           <div class="arsenal-card simptom"><div class="ac-label">SUNĂ CUNOSCUT?</div><ul><li>rapoarte diferite pe același fișier</li><li>sume care nu coincid</li><li>filtre care ascund tranzacții</li></ul></div>
         </div>
       </section>
