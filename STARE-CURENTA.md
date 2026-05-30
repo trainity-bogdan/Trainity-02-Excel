@@ -13,7 +13,7 @@
 6. **Metodă nouă (L171):** instalat **randator headless (Chromium/Playwright)** — orice schimbare vizuală se verifică randată mobil (393px) + desktop (1280px) ÎNAINTE de livrare. Gata cu „lucrul orb" care a spart mobilul de 2 ori.
 7. **L172:** designul se face prin **scădere + concentrare** (3-1-1: o idee, o memorie), nu prin adăugare de carduri. Două transformări (date vs cursant) separate prin fundal/ton/persoană, NU prin etichete textuale.
 
-**Deschis (înainte de propagare C02-C08):** (a) coerență C01 — vechile blocuri `exec-hero „DE CE"` + `CONTRACT` se suprapun cu arcul (de topit/eliminat); (b) cleanup CSS mort (`.ts-comp`, `.nav-brand`, regula veche `.cover-miza` roșie, triptic vechi) + consolidare blocuri `<style>`; (c) propagare model C02-C08 (copy per beat + imagine-obiect per construcție); (d) sync FILM↔HTML C05-C08.
+**Făcut post-V47:** coerență C01 (eliminat `exec-hero „DE CE"` + `CONTRACT`, redundante cu arcul) + cleanup CSS mort (regula roșie `.cover-miza`, `.nav-brand`, `.ts-comp`). **Rămas deschis:** (a) propagare model C02-C08 (copy per beat + imagine-obiect per construcție); (b) sync FILM↔HTML C05-C08; (c) opțional: reguli `.exec-hero*` rămase moarte + consolidare blocuri `<style>`.
 
 ---
 
