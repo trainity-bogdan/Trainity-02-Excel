@@ -9,7 +9,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | Treapta | Cod | Nume | Construcții | Tehnologie dominantă | Status |
 |---|---|---|---|---|---|
 | T1 | **SCAN** | STRUCTURA | C01-C04 | Excel basic + AGGREGATE + Power Query (Promoted Headers, Filtered Rows) | ✓ COMPLET LIVRABIL |
-| T2 | **CUNOAȘTERE** | CUNOAȘTERE | C05-C08 | Excel + Power Query (Group By, Pivot, Distinct, Top N) | C05 ✓ | C06-C08 SPEC negenerate |
+| T2 | **CUNOAȘTERE** | CUNOAȘTERE | C05-C08 | Excel (UNIQUE, IFS/SWITCH/XLOOKUP, funcții dată, lookup) + Power Query | ✓ COMPLET LIVRABIL |
 | T3 | **ANALIZA** | ANALIZA | C09-C12 | Power Pivot + Data Model | NESTAR |
 | T4 | **RAPORTARE** | RAPORTARE | C13-C16 | Dashboards + BI UX | NESTAR |
 | T5 | **AUTOMATIZARE** | AUTOMATIZARE | C17-C20 | Power Query Refresh + Operational Flows | NESTAR |
@@ -85,27 +85,32 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 **Tehnologie:** Excel + Power Query (Group By, Pivot, Distinct, Top N).
 
-### C05 · CLASIFICARE ✓
+### C05 · DICȚIONAR ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | CALITATIVĂ — etichete, dicționar, granularitate |
+| **AXA** | DICȚIONAR — ce reprezintă datele (inventar categorii, cardinalități, granularitate) |
 | **INTRIGA** | Setul are un dicționar. Excel îl știe. Tu nu. |
 | **MIZA** | Decizii pe categorii pe care nu le cunoști exhaustiv. |
 | **MANTRA** | Nu privim tabelul. Îl interogăm. |
 | **MOTTO** | Un set cunoscut. Apoi orice decizie. |
-| **FENOMENE** | 5 fenomene calitative: cardinalitate clienți (15 distincți în 2000 facturi), cardinalitate produse (4 categorii în 13 produse), cardinalitate cantități (12 valori distincte), top frecvențe (Pareto: top-3 clienți = 97.5% volum), granularitate atomică (1 rând = 1 linie factură) |
+| **FENOMENE** | 5 fenomene calitative (inventar dicționar): cardinalitate clienți, categorii, cantități, top frecvențe (Pareto), granularitate atomică |
 | **Sumă conservată** | DELTA 0 |
-| **Status** | LIVRABIL CANONIC V28 |
+| **Status** | LIVRABIL V44 (rename din CLASIFICARE; conținut = inventar) |
 
-### C06 · CUANTIFICARE (PROPUS)
+### C06 · CLASIFICARE ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | CANTITATIVĂ — cifre, sume, distribuții |
-| **INTRIGA propusă** | Setul are cifre. Excel le știe. Tu nu. |
-| **FENOMENE propuse** | sumă totală pe categorii, medii pe segmente, top-N clienți cu Pareto, distribuție pe filiale, marje pe agenți |
-| **Status** | SPEC NEGENERAT — în queue pentru SPEC freezing |
+| **AXA** | CLASIFICARE — cum capătă sens datele (reguli, etichetare descriptivă) |
+| **OBIECT** | clasa / regula / scorul |
+| **ÎNTREBARE-MAMĂ** | Cum capătă sens datele? |
+| **INTRIGA** | Setul are clase ascunse. Excel le poate construi. Tu nu le-ai scris. |
+| **MARKER** | clasă / regulă / scor |
+| **FENOMENE** | clasa ABC (IFS pe valoare_neta), segment (SWITCH pe categorie), etichetă externă (XLOOKUP din nomenclator), regulă compusă (IFS condiții multiple), scor 0-100 |
+| **Date_MASTER** | coloane derivate clasa_valoare/segment_produs/scor + sheet-uri _CLASE/_SEGMENTE/_SCORURI |
+| **Garda T2/T3** | atribuie etichete descriptiv; prioritizarea strategică pe segmente = C11/T3 |
+| **Status** | LIVRABIL V44 (rebuild din CUANTIFICARE) |
 
 ### C07 · DATARE — MEMORIA SETULUI (PROPUS, AXĂ LOCK V43)
 
@@ -118,7 +123,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **MARKER** | memorie |
 | **FENOMENE propuse** | perioada reală acoperită (prima→ultima lună), goluri în timp (luni lipsă), ritmul/volumul pe lună, luna dominantă, accelerare/încetinire (trend), sezonalitate (recurență), săptămâna tipică |
 | **LIVRABIL** | Fișa temporală a setului (Memoria setului) |
-| **Status** | AXĂ LOCK — SPEC narativ negenerat |
+| **Status** | LIVRABIL V44 |
 
 ### C08 · TIPIZARE — HARTA ECOSISTEMULUI (PROPUS, AXĂ LOCK V43)
 
@@ -131,7 +136,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **MARKER** | ecosistem / satelit / cheie / rol / câmp extern |
 | **FENOMENE propuse** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei par comune (cod_client, cod_produs), ce câmpuri lipsesc din setul principal dar există în sateliți, ce convenții diferă și trebuie aliniate înainte de modelare |
 | **LIVRABIL** | Harta ecosistemului de date |
-| **Status** | AXĂ LOCK — SPEC narativ negenerat |
+| **Status** | LIVRABIL V44 (închide T2) |
 
 **Delimitare obsesivă C08 ↔ C09 (T2 vs T3):**
 C08 **cartografiază**, NU unește. C08 = *vezi relațiile posibile* (recunoaștere

@@ -1,8 +1,23 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V44 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V45 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 29 mai 2026
-**Ultima sesiune V44 — sumar:**
+**Ultima sesiune V45 — sumar:**
+
+Re-arhitectură T2 (după feedback extern trecut prin G-06) + rafinări ARHITECT:
+
+1. **Re-arhitectura C05/C06** (suprapunere rezolvată): **C05 CLASIFICARE → DICȚIONAR** (rename + fișiere Clasificare→Dictionar; conținut = inventar categorii) și **C06 CUANTIFICARE → CLASIFICARE** (REBUILD complet: dă sens fiecărui rând prin reguli — clasa ABC cu IFS, segment cu SWITCH, etichetă externă cu XLOOKUP, regulă compusă, scor 0-100). Aici apare Excel-ul de construit care lipsea din T2. Date_MASTER-C06 cu coloane derivate clasa_valoare/segment_produs/scor.
+2. **Cele 4 obiecte T2 acum complet distincte:** DICȚIONAR (ce reprezintă) · CLASIFICARE (cum capătă sens) · MEMORIE (cum evoluează) · ECOSISTEM (cum se conectează). Patru întrebări diferite.
+3. **Garda T2/T3:** C06 atribuie etichete descriptiv; prioritizarea strategică pe segmente rămâne C11/T3.
+4. **Rafinări** (filtru motor + ARHITECT): C07 voce impersonală „noi" + slide5 + fenomen TREND + F5 MEMORIA CICLICĂ + „Suma DELTA 0" scoasă din identitate; C08 MIZA cinematică + WOW „nu mai este singur" + F5 „LIMBI DIFERITE"; rol „CONTROL UMAN" (eliminat „operatorul") în toate 8 FILM-urile.
+5. **Naming C08:** TIPIZARE → CARTOGRAFIERE. **G-06** codificat ca doc 09.
+6. Meta-list `DICȚIONAR · CLASIFICARE · DATARE · CARTOGRAFIERE` propagată C05-C08. Audit **80/80 ZERO DRIFT**.
+
+**Progresie pedagogică validată:** C05 descoperi → C06 construiești sens → C07 citești timpul → C08 citești relațiile.
+
+---
+
+**Sesiunea anterioară V44 — sumar:**
 
 Sesiune T2 încheiat (C07 + C08) + procedură FILM-ca-sursă în practică + G-06 codificat:
 
@@ -193,7 +208,10 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L165** (V44) `open(f,'w').write(open(f).read())` în Python TRUNCHIAZĂ fișierul (modul 'w') ÎNAINTE ca `open(f).read()` să citească → scrie gol. A golit 3 fișiere C08 (raportate „done", scanate „CLEAN" fiindcă erau goale). **Regulă durabilă:** CITEȘTE întâi într-o variabilă, apoi scrie; verifică dimensiunea fișierului (>0) după orice transform în masă.
 - **L166** (V44) Coliziuni de ordine la înlocuiri: o regulă scurtă („Setul are memorie.") rulată înaintea uneia lungi care o conține îi sparge match-ul (instr18 a devenit Frankenstein). Plus numerele bare („Construcția 0X") nu sunt prinse de shift-ul de cod C0x. **Regulă durabilă:** înlocuirile lungi înaintea celor scurte (sau placeholdere); numerele bare de construcție se tratează explicit.
 
-Toate lecțiile cumulate (L01-L166) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
+- **L167** (V45) G-06 nu înseamnă apărare rigidă a oricărei reguli înghețate. Când feedback-ul extern identifică un defect REAL într-o decizie înghețată de ARHITECT (ex. suprapunerea C05/C06 + nume/conținut nepotrivit la C05), clasificarea corectă e CONFLICT-condiționat: resping soluția care contrazice sistemul, dar prezint onest defectul și las ARHITECT să-și dezghețe propria regulă. Intelectual honesty > consistență. (Mi-am schimbat verdictul între două mesaje pe baza unui argument nou, nu a presiunii repetate.)
+- **L168** (V45) Procedura de redenumire construcție: (a) replace stem filename repo-wide `Excel-NN-Vechi`→`Excel-NN-Nou` în toate fișierele text, (b) `git mv` fișierele, (c) rename DISPLAY separat (nume afișat în hero/meta/nav/title — atenție la protejarea meta-listei cu placeholder), (d) update C(N-1) next-pointer + index + IDENTITATE + gate dict. Verifică `git status` arată R (rename), nu D+A.
+
+Toate lecțiile cumulate (L01-L168) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
 ---
 
