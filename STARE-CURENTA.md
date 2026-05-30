@@ -1,7 +1,21 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V46 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V47 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 30 mai 2026
+
+**Sesiunea V47 — sumar (redesign experiență C01 = model premium validat):**
+
+1. **HERO COCKPIT** (poster + cockpit coexistă în ecranul 1): imagine-obiect generată (schelă STRUCTURĂ) cu cuvântul-obiect uriaș overlay + întrebarea construcției + bandă cockpit (hartă simplificată pe cele 4 din T1). Topbar păstrat. Fără buton/cover-meta în poster (orientarea rămâne în topbar+hartă).
+2. **ARC DE TRANSFORMARE A CURSANTULUI, cu DOUĂ VOCI simțite (fără etichete):** voce TU (fundal închis, persoana a II-a) vs voce DATE (deschis, tehnic). Ordine: titlu+micro-brief+miză → **BOMBA „Arată ca tabel. Nu este unul."** (memoria de 24h) → RECUNOAȘTERE → GREȘEALA → AHA (vârf) → CINE DEVII → demonstrația (date+pași) → DUPĂ C01 POȚI + DE ACUM ÎNAINTE (gated).
+3. **Bookend identitate:** CINE DEVII (promisiune vizibilă, după AHA) + DE ACUM ÎNAINTE (confirmare gated la final), ecou pe prima frază.
+4. **Ierarhie 3-1-1:** o singură idee dominantă (bomba) + un singur vârf intelectual (AHA). Restul = suport.
+5. **FILM C01 = Biblia (SPEC v2.0, 4 secțiuni)** completă: IDENTITATE / ARSENAL / BRIEF / TRANSFORMARE + CINE DEVII.
+6. **Metodă nouă (L171):** instalat **randator headless (Chromium/Playwright)** — orice schimbare vizuală se verifică randată mobil (393px) + desktop (1280px) ÎNAINTE de livrare. Gata cu „lucrul orb" care a spart mobilul de 2 ori.
+7. **L172:** designul se face prin **scădere + concentrare** (3-1-1: o idee, o memorie), nu prin adăugare de carduri. Două transformări (date vs cursant) separate prin fundal/ton/persoană, NU prin etichete textuale.
+
+**Deschis (înainte de propagare C02-C08):** (a) coerență C01 — vechile blocuri `exec-hero „DE CE"` + `CONTRACT` se suprapun cu arcul (de topit/eliminat); (b) cleanup CSS mort (`.ts-comp`, `.nav-brand`, regula veche `.cover-miza` roșie, triptic vechi) + consolidare blocuri `<style>`; (c) propagare model C02-C08 (copy per beat + imagine-obiect per construcție); (d) sync FILM↔HTML C05-C08.
+
+---
 
 **Sesiunea V46 — sumar (sincronizare FILM↔HTML + sloturi noi):**
 

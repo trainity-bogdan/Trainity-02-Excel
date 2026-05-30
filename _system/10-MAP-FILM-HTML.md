@@ -106,3 +106,26 @@ Apoi: SLIDES EXECUTIVE (→ exec slides Video) + cele 6 etape (script video).
 |---|---|---|
 | C01 | ✓ prototip | ✓ prototip |
 | C02-C08 | — (de propagat după validare C01) | — |
+
+---
+
+## C01 — model experiență VALIDAT (V47)
+
+Layout HTML-Studiu (de propagat în C02-C08), cu **două voci simțite, fără etichete**:
+
+**HERO COCKPIT** (poster+cockpit): imagine-obiect (schelă) cu cuvântul-obiect uriaș overlay (`.hov-object`) + `hero-question` (întrebarea) + bandă cockpit (`.system-map` simplificată pe cele 4 din treaptă, fără buton).
+
+**Apoi, în ordine:**
+1. `study-intro-top`: titlu (`cover-title`) + micro-brief (`hero-microbrief`) + miză (`cover-miza`) — context.
+2. **BOMBA** `intriga-bomb` (`cover-subtitle` gigantic, „Nu este unul." pe highlight galben) — memoria de 24h. **INTRIGA s-a mutat din Hero aici.**
+3. **VOCEA TA** (secțiuni `.tu-section`, fundal închis, persoana a II-a): `tu-recunoastere` (simptom) → `tu-greseala` → `tu-aha` (VÂRF, cel mai mare) → `tu-promise` (CINE DEVII).
+4. **VOCEA DATELOR** (deschis/tehnic): `hero-beforeafter` (ÎNAINTE❌→DUPĂ✅) + DE CE + mantra + scena + `hero-outcomes` + pașii.
+5. **RĂSPLATA** (gated, `.transformare-section`, voce TU): COMPETENȚA „DUPĂ C01 POȚI" + DE ACUM ÎNAINTE (ecou la CINE DEVII).
+
+**Bookend identitate:** CINE DEVII (promisiune, vizibilă, după AHA) + DE ACUM ÎNAINTE (confirmare, gated la final) — împart prima frază.
+
+**Rutare element nou:** INTRIGA → `intriga-bomb` (Studiu, gigantic) + hero-hook (Video). CINE DEVII → `tu-promise` (Studiu). Restul, ca în tabelul de sus.
+
+**Metodă:** orice modificare vizuală se verifică randată headless (chromium, 393px mobil + 1280px desktop) ÎNAINTE de livrare.
+
+**Status:** C01 = model validat. C02-C08 = de propagat (necesită copy per beat + imagine-obiect per construcție).
