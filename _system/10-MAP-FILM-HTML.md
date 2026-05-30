@@ -41,7 +41,7 @@ Rolul slotului e dat de eticheta proprie din HTML (`mantra-band-sub` = „MANTRA
 
 ## WOW (rezolvat — opţiunea B)
 
-WOW are acum slot dedicat: linie-climax verbatim chiar înainte de motto, ca vârf al fluxului emoţional. Ancorat pe `[data-wow="1"]`, reutilizează stilul `.accent` (galben, bold) — fără CSS nou. În Video e frag propriu (renumerotează motto-ul + creşte `data-frag-total` cu 1).
+WOW are acum slot dedicat: linie-climax verbatim chiar înainte de motto, ca vârf al fluxului emoţional. Vizual: highlight **verde** (`.payoff-wow`, `#18843e`) cu etichetă `WOW:` (`.wow-tag`). Structură: `<span class="wow-tag">WOW:</span><span data-wow="1">FRAZĂ</span>` — sync-ul atinge DOAR `[data-wow]` (fraza), eticheta + culoarea rămân. În Video e frag propriu (renumerotează motto-ul + creşte `data-frag-total` cu 1).
 
 ## CONTRACT (element nou — copy DRAFT)
 
