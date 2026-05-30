@@ -1337,6 +1337,32 @@ body.has-continue .scroll-top { bottom: 88px; }
   .nav-ctrl-btn { padding: 5px 8px; min-height: 24px; font-size: 9px; letter-spacing: 1px; }
 }
 </style>
+<style>
+.hero-visual{position:relative;margin:18px 0 8px;border-radius:8px;overflow:hidden}
+.hero-visual-img{height:200px;background-size:cover;background-position:center;filter:grayscale(.15)}
+.hero-object-tag{position:absolute;left:14px;bottom:12px;background:var(--y,#f5c518);color:#000;font-weight:800;font-size:12px;letter-spacing:1px;padding:5px 12px;border-radius:3px}
+.hero-question{margin:22px 0 10px}
+.hero-question-label{display:block;font-size:12px;letter-spacing:2px;color:#b8860b;font-weight:800;margin-bottom:6px}
+.hero-question-text{display:block;font-size:clamp(24px,4vw,34px);font-weight:800;line-height:1.2;color:#111}
+.hero-microbrief{font-size:16px;line-height:1.7;color:#444;max-width:62ch;margin:10px 0 18px}
+.hero-beforeafter{display:flex;align-items:stretch;gap:14px;margin:24px 0;flex-wrap:wrap}
+.hero-beforeafter .ba-col{flex:1;min-width:220px;border-radius:8px;padding:16px 18px}
+.ba-before{background:#fbeaea;border:1px solid #f0c9c9}
+.ba-after{background:#e8f6ec;border:1px solid #bfe6cb}
+.ba-label{font-size:12px;letter-spacing:2px;font-weight:800;margin-bottom:10px}
+.ba-before .ba-label{color:#b3261e}
+.ba-after .ba-label{color:#137a3a}
+.hero-beforeafter ul{margin:0;padding-left:18px}
+.hero-beforeafter li{font-size:15px;line-height:1.7;color:#333}
+.ba-arrow{align-self:center;font-size:26px;color:#999;font-weight:800}
+.hero-outcomes{background:#111;border-radius:8px;padding:18px 22px;margin:18px 0}
+.outcomes-label{font-size:12px;letter-spacing:2px;color:var(--y,#f5c518);font-weight:800;margin-bottom:10px}
+.outcomes-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.outcomes-list li{color:#fff;font-size:15px;font-weight:600;padding-left:24px;position:relative}
+.outcomes-list li::before{content:"\2713";position:absolute;left:0;color:var(--y,#f5c518);font-weight:800}
+.hero-start{display:inline-block;margin:8px 0 4px;background:var(--y,#f5c518);color:#000;font-weight:800;font-size:15px;letter-spacing:.5px;padding:14px 28px;border-radius:6px;text-decoration:none}
+@media(max-width:640px){.outcomes-list{grid-template-columns:1fr}.ba-arrow{transform:rotate(90deg)}}
+</style>
 </head>
 <body>
 
@@ -1356,9 +1382,19 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <header class="cover">
         <div class="cover-label">PACK 02 EXCEL · TREAPTA 1 · CONSTRUCȚIA C01</div>
+        <div class="hero-visual"><div class="hero-visual-img" style="background-image:url('assets/exec-stage-1.jpg')"></div><span class="hero-object-tag">OBIECT · STRUCTURĂ</span></div>
         <h1 class="cover-title">Cum construim o structură tabelară corectă</h1>
+        <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text">„Este acesta cu adevărat un tabel?"</span></div>
         <p class="cover-subtitle">Arată ca tabel. Nu este unul.</p>
+        <p class="hero-microbrief">Un export poate avea aspectul unui tabel Excel și totuși să nu respecte regulile unui tabel real. În această construcție demonstrăm diferența dintre aparență și structură.</p>
         <div class="cover-miza">Când structura e contaminată, fiecare formulă construită deasupra moștenește contaminarea. Decizia ta de business e ancorată în date care doar par tabel.</div>
+        <div class="hero-beforeafter">
+          <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>subtotaluri amestecate cu date</li><li>celule unite</li><li>coloane ascunse</li><li>separatoare artificiale</li></ul></div>
+          <div class="ba-arrow">↓</div>
+          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>tabel valid</li><li>structură continuă</li><li>bază pentru formule</li><li>bază pentru Power Query</li></ul></div>
+        </div>
+        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>structură controlabilă</li><li>tabel validat</li><li>bază pentru T1 complet</li><li>bază pentru T2</li></ul></div>
+        <a class="hero-start" href="#stage-1">ÎNCEPE CONSTRUCȚIA →</a>
 
                 <div class="cover-meta">
           <div class="cover-meta-row">
