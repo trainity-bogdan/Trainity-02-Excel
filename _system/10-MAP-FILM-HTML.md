@@ -26,8 +26,9 @@ Rolul slotului e dat de eticheta proprie din HTML (`mantra-band-sub` = „MANTRA
 | **INTRIGA (HOOK)** | `cover-subtitle` (text integral) | `hero-hook` (split pe cele 2 propoziții: prop.1 + `<span class="hero-hook-twist">`prop.2`</span>`) | — |
 | **MIZA** | `cover-miza` | — | doar Studiu |
 | **MANTRA · TRAINITY** | `mantra-band-main` (cuvânt-cheie în `<mark>`) | — | doar Studiu |
-| **WOW (PAYOFF FINAL)** | — | — | **NU are slot single.** Zona `payoff-section` (Studiu) / `final-block` (Video) e o secvență narativă proprie (dim → accent → regular). WOW e seminţa conceptuală, nu o linie verbatim. Vezi nota WOW. |
-| **MOTTO (SEMNĂTURĂ)** | `payoff-motto` | `final-motto` (data-frag 7) + `exec-closing-motto` (data-frag 2, ultima parte în `<span class="exec-closing-motto-yellow">`) | apare 3 locuri |
+| **WOW (PAYOFF FINAL)** | linie-climax `[data-wow="1"]` (`.payoff-line.accent`) chiar înainte de `payoff-motto` | frag `[data-wow="1"]` (`.accent`) chiar înainte de `final-motto` (renumerotează motto + bump `data-frag-total`) | vârful fluxului emoţional, înainte de semnătură |
+| **MOTTO (SEMNĂTURĂ)** | `payoff-motto` | `final-motto` (ultimul frag) + `exec-closing-motto` (ultima parte în `<span class="exec-closing-motto-yellow">`) | apare 3 locuri |
+| **CONTRACT (DESTINAȚIE)** *(element nou)* | bloc `<section class="exec-hero" data-contract="1">` în cusătura SCENA REALĂ → primul pas | (Studiu only; în Video rolul e jucat de `hero-sub`) | promisiune privită înainte; copy DRAFT, de formalizat în FILM după ce ARHITECT fixează wording-ul |
 
 | Câmp FILM (SLIDES EXECUTIVE) | HTML-Video | 
 |---|---|
@@ -38,13 +39,13 @@ Rolul slotului e dat de eticheta proprie din HTML (`mantra-band-sub` = „MANTRA
 
 ---
 
-## Nota WOW (gol de design)
+## WOW (rezolvat — opţiunea B)
 
-FILM-ul are WOW (PAYOFF FINAL) ca punchline unic, dar HTML realizează payoff-ul ca secvență cinematică pe mai multe rânduri (`dim` × n → `accent` → `regular` → motto). Nu există slot verbatim pentru WOW.
+WOW are acum slot dedicat: linie-climax verbatim chiar înainte de motto, ca vârf al fluxului emoţional. Ancorat pe `[data-wow="1"]`, reutilizează stilul `.accent` (galben, bold) — fără CSS nou. În Video e frag propriu (renumerotează motto-ul + creşte `data-frag-total` cu 1).
 
-Opțiuni de rezolvare (decizie ARHITECT, neîngheţată încă):
-- **A.** Se lasă payoff-ul bespoke (WOW = seminţă conceptuală, expandată cinematic). Status quo.
-- **B.** Se introduce o linie-climax verbatim cu WOW, înainte de motto, ca vârf al fluxului emoţional.
+## CONTRACT (element nou — copy DRAFT)
+
+Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": o promisiune privită înainte de călătorie (timp prezent-viitor). Bloc `exec-hero` ancorat `[data-contract="1"]`, Studiu only. Copy-ul curent e DRAFT, scris de motor; se formalizează ca element SPEC în FILM după ce ARHITECT fixează wording-ul, apoi se masterizează ca restul.
 
 ---
 
@@ -60,9 +61,9 @@ Opțiuni de rezolvare (decizie ARHITECT, neîngheţată încă):
 
 ## Status sincronizare per construcţie
 
-| Cod | INTRIGA | MIZA | MANTRA | MOTTO | exec slides | WOW |
-|---|---|---|---|---|---|---|
-| C01 | parţial (hero ✓, cover-subtitle ≠) | ≠ (HTML propriu) | ≠ | ≠ | ✓ | gol |
-| C02 | ✓ | ✓ | ✓ | ✓ | ✓ | gol (opţiune A/B pending) |
+| Cod | INTRIGA | MIZA | MANTRA | MOTTO | exec slides | WOW | CONTRACT |
+|---|---|---|---|---|---|---|---|
+| C01 | parţial (hero ✓, cover-subtitle ≠) | ≠ (HTML propriu) | ≠ | ≠ | ✓ | ✓ slot nou | ✓ draft |
+| C02 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 
-C01: identitatea HTML diferă de FILM (drift vechi, HTML mai şlefuit). Direcţie de reconciliere pending ARHITECT (sync HTML←FILM vs back-port HTML→FILM).
+C01: identitatea HTML (MIZA/MANTRA/MOTTO) încă diferă de FILM (drift vechi, HTML mai şlefuit). Direcţie de reconciliere pending ARHITECT (sync HTML←FILM vs back-port HTML→FILM). WOW + CONTRACT însă au fost adăugate la ambele.
