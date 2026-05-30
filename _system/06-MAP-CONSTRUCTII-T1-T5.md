@@ -216,11 +216,11 @@ Date_MASTER-initial  →  C01  →  C02  →  C03  →  C04  →  C05  →  C06 
 - Voce: "nu reconstruim, facem controlabil"
 
 **T2 CUNOAȘTERE — voce profilare descriptivă**:
-- C05 axa calitativă (dicționar): "setul are dicționar"
-- C06 axa cantitativă (profil numeric): "setul are cifre"
+- C05 axa DICȚIONAR (ce reprezintă): "setul are un dicționar"
+- C06 axa CLASIFICARE (cum capătă sens): "setul are clase ascunse" — reguli IFS/SWITCH/XLOOKUP/scor
 - C07 axa temporală (memorie): "setul are memorie"
 - C08 axa relațională descriptivă (ecosistem): "setul are un ecosistem" — RECUNOAȘTERE, nu modelare (modelarea = C09/T3)
-- Cele 4 obiecte: dicționar (CE) · profil numeric (CÂT) · memorie (CÂND) · ecosistem (CU CINE)
+- Cele 4 obiecte: dicționar (CE reprezintă) · clasificare (CUM capătă sens) · memorie (CÂND) · ecosistem (CU CINE)
 - Voce: "nu privim, interogăm"
 
 **T3 ANALIZA — voce decizională**:

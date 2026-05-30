@@ -1719,7 +1719,7 @@ arhitectural.
 VALIDARE: Gate 1 + Gate 2 + Gate 3 conforme. Cifrele reale traiesc in
 livrabile_C04/, citite fizic la fiecare verificare.
 
-## SPEC C05 - CLASIFICAREA DATELOR   [Status: INGHETAT 25.05.2026]
+## SPEC C05 - DICTIONAR (fost CLASIFICARE)A DATELOR   [Status: INGHETAT 25.05.2026]
 
 Inceput in chat SPEC C05 (25.05.2026, motor V24). Inghetare progresiva
 element cu element, ordinea narativa R-V03.56 V24 (modificata punctual
@@ -2131,7 +2131,7 @@ REZUMAT INGHETARE C05:
 
 ---
 
-## SPEC C06 - CUANTIFICARE   [Status: INGHETAT 29.05.2026]
+## SPEC C06 - CLASIFICARE (rebuild, fost CUANTIFICARE: reguli IFS/SWITCH/XLOOKUP/scor)   [Status: INGHETAT 29.05.2026]
 
 Treapta T2 CUNOASTERE · Axa CANTITATIVA (numeric, statistic) · pozitie 2/4.
 Marker lingvistic strict: cuvantul "cifra" (cum C05 a fost "eticheta").

@@ -75,8 +75,8 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C05** | CLASIFICARE (cum construim un dicționar al setului) | V28 → V42 (inv-list fix din clonă C01) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C06** | CUANTIFICARE (cum construim profilul numeric al setului) | V43 | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C08** | CARTOGRAFIERE — HARTA ECOSISTEMULUI (axă relațională descriptivă; închide T2) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | C09-C12 | (T3 ANALIZARE: CORELARE / COMPARARE / SEGMENTARE / PROIECTARE — draft) | — | NESTAR | — |
