@@ -63,10 +63,13 @@ Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": 
 
 | Cod | INTRIGA | MIZA | MANTRA | MOTTO | exec slides | WOW | CONTRACT |
 |---|---|---|---|---|---|---|---|
-| C01 | parţial (hero ✓, cover-subtitle ≠) | ≠ (HTML propriu) | ≠ | ≠ | ✓ | ✓ slot nou | ✓ draft |
+| C01 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 | C02 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 | C03 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
+| C04 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 
-C01: identitatea HTML (MIZA/MANTRA/MOTTO) încă diferă de FILM (drift vechi, HTML mai şlefuit). Direcţie de reconciliere pending ARHITECT (sync HTML←FILM vs back-port HTML→FILM). WOW + CONTRACT însă au fost adăugate la toate.
+C01: rezolvat prin sync HTML←FILM (repo). A reparat şi confuzia de rol (mantra-band ţinea textul MOTTO). Liniile HTML vechi înlocuite: cover-miza „O decizie corectă…", payoff-motto „Mai întâi structura. Apoi orice." → dacă ARHITECT le vrea înapoi, se pun în FILM şi se re-sincronizează.
 
-C03: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45), sincronizat complet.
+C03/C04: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45), sincronizat complet.
+
+C05-C08: încă NEsincronizate (FILM↔HTML drift vechi posibil); de procesat la primirea FILM-urilor rafinate sau la cerere.

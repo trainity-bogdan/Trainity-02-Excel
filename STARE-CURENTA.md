@@ -6,12 +6,13 @@
 **Sesiunea V46 — sumar (sincronizare FILM↔HTML + sloturi noi):**
 
 1. **Mapare canonică FILM → HTML codificată** în `_system/10-MAP-FILM-HTML.md` (nu exista document care să spună ce frază de impact din FILM merge în ce slot HTML). FILM = MASTER. „update html" devine mecanic: INTRIGA→cover-subtitle+hero-hook · MIZA→cover-miza · MANTRA→mantra-band-main · MOTTO→payoff-motto+final-motto+exec-closing · STARE/FRAZĂ exec→exec-emotion/exec-phrase ×6.
-2. **Slot nou WOW**: linie-climax verbatim înainte de motto, highlight VERDE `.payoff-wow` (#18843e) + etichetă `WOW:`. Fraza în `<span data-wow>` (sync atinge doar fraza). Video = frag propriu + renumerotare motto. Adăugat C01+C02+C03.
+2. **Slot nou WOW**: linie-climax verbatim înainte de motto, highlight VERDE `.payoff-wow` (#18843e) + etichetă `WOW:`. Fraza în `<span data-wow>` (sync atinge doar fraza). Video = frag propriu + renumerotare motto. Adăugat C01-C04.
 3. **Slot nou CONTRACT (DESTINAȚIE)** în cusătura SCENA REALĂ → primul pas (`exec-hero [data-contract]`, Studiu). Element NOU în SPEC, copy DRAFT (de formalizat în FILM + propagat în `_template`).
-4. **Sincronizări:** C01 = slide-2 exec + WOW + CONTRACT (identitate MIZA/MANTRA/MOTTO pending direcție); C02 = identitate completă + exec + WOW + CONTRACT; C03 = identitate completă + exec + WOW + CONTRACT (FILM repo = docx reparat, voce „noi").
-5. **Diacritice reparate** în FILM C02 + C03 (docx returnate ARHITECT): typo „.." + sute de corecturi.
+4. **Sincronizări complete C01-C04** (identitate + 6 exec slides + WOW + CONTRACT, 4 machete fiecare). C01 rezolvat prin sync HTML←FILM (a reparat și confuzia de rol mantra/motto). C03+C04 FILM repo = docx reparat (voce „noi", fără conflict V45).
+5. **Diacritice reparate** în FILM C02 + C03 + C04 (docx returnate ARHITECT): typo „.." + ~160-180 corecturi fiecare.
+6. **Lecție L169:** C01 nu era „special" tehnic — era singura construcție fără FILM proaspăt trimis de ARHITECT, deci FILM-repo (vechi) ≠ HTML (șlefuit) fără arbitru. Rezolvare: aplici regula FILM=master uniform.
 
-**Deschis:** (a) direcție reconciliere identitate C01; (b) formalizare copy CONTRACT în FILM-SPEC + `_template`.
+**Deschis:** (a) formalizare copy CONTRACT în FILM-SPEC + propagare `_template` C05-C20; (b) sync FILM↔HTML pentru C05-C08 (la primirea FILM-urilor sau la cerere).
 
 ---
 
