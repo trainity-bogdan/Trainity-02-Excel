@@ -24,7 +24,6 @@ trainity-pack-02-excel/
 ├── GHID-SETUP-GITHUB.md
 ├── .gitignore
 │
-├── _template/                        MATRIȚĂ de generare (clonă structură)
 │   ├── HTML × 4
 │   ├── Date_MASTER + Creativ + FILM
 │   └── assets/                       imagini placeholder
@@ -60,7 +59,7 @@ Fiecare construcție are **un singur set** de fișiere în `cNN/`. NU mai exist�
 - Restore = `git show <sha>:path`, `git checkout v40 -- cNN/`, `git revert <sha>`
 - Detalii: `CLAUDE.md` secțiunea „VERSIONARE GIT" (regulile G1-G5)
 
-**Matrița pentru generare** = `_template/` (clonă a structurii, folosită la COPY+MODIFY pentru C06+).
+**Construcția de referință** = `c01/` (cobaiul: COPY+MODIFY pentru construcții noi; modificările ample se testează întâi aici). V46: `_template/` eliminat.
 
 **Imaginile sunt DIFERITE per construcție** — fiecare `cNN/assets/` conține cele 6 imagini exec-stage (jpg) specifice acelei construcții. La generare nouă, se înlocuiesc cu poze Banana specifice axei.
 
@@ -85,7 +84,7 @@ Plus folder `assets/` cu cele 6 fișiere imagine exec-stage (jpg, 3:2 cinematic)
 | Vreau să... | Comandă |
 |---|---|
 | Status rapid | `status` |
-| Generez C06 | `genereaza C06` (din _template) |
+| Generez C06 | `genereaza C06` (din c01) |
 | Editez local | direct local + Commit/Push |
 | Aplic bug fix | `aplica fix [desc]` |
 | Adăug poză specifică | `pentru CNN poza X` + atașez |

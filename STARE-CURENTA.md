@@ -7,13 +7,13 @@
 
 1. **Mapare canonică FILM → HTML codificată** în `_system/10-MAP-FILM-HTML.md` (nu exista document care să spună ce frază de impact din FILM merge în ce slot HTML). FILM = MASTER. „update html" devine mecanic: INTRIGA→cover-subtitle+hero-hook · MIZA→cover-miza · MANTRA→mantra-band-main · MOTTO→payoff-motto+final-motto+exec-closing · STARE/FRAZĂ exec→exec-emotion/exec-phrase ×6.
 2. **Slot nou WOW**: linie-climax verbatim înainte de motto, highlight VERDE `.payoff-wow` (#18843e) + etichetă `WOW:`. Fraza în `<span data-wow>` (sync atinge doar fraza). Video = frag propriu + renumerotare motto. Adăugat C01-C04.
-3. **Slot nou CONTRACT (DESTINAȚIE)** în cusătura SCENA REALĂ → primul pas (`exec-hero [data-contract]`, Studiu). Element NOU în SPEC, copy DRAFT (de formalizat în FILM + propagat în `_template`).
+3. **Slot nou CONTRACT (DESTINAȚIE)** în cusătura SCENA REALĂ → primul pas (`exec-hero [data-contract]`, Studiu). Element NOU în SPEC, copy DRAFT (de formalizat în FILM + propagat în C02-C20).
 4. **Sincronizări complete C01-C04** (identitate + 6 exec slides + WOW + CONTRACT, 4 machete fiecare). C01 rezolvat prin sync HTML←FILM (a reparat și confuzia de rol mantra/motto). C03+C04 FILM repo = docx reparat (voce „noi", fără conflict V45).
 5. **Diacritice reparate** în FILM C02 + C03 + C04 (docx returnate ARHITECT): typo „.." + ~160-180 corecturi fiecare.
 6. **Lecție L169:** C01 nu era „special" tehnic — era singura construcție fără FILM proaspăt trimis de ARHITECT, deci FILM-repo (vechi) ≠ HTML (șlefuit) fără arbitru. Rezolvare: aplici regula FILM=master uniform.
 7. **C01 VALIDAT (închidere fir):** ARHITECT a trimis ulterior FILM-ul C01 → **byte-identic** cu cel din repo + identitatea confirmă fix valorile sincronizate (MOTTO „Nu reconstruim tabelul. Îl facem controlabil." etc.). Sync-ul HTML←FILM a fost corect, zero pierderi. Diacritice curate. **L170:** când sync-ul precede primirea FILM-ului, validarea ulterioară (diff FILM↔HTML) confirmă corectitudinea fără re-muncă.
 
-**Deschis:** (a) formalizare copy CONTRACT în FILM-SPEC + propagare `_template` C05-C20; (b) sync FILM↔HTML pentru C05-C08 (la primirea FILM-urilor sau la cerere).
+**Deschis:** (a) formalizare copy CONTRACT în FILM-SPEC + propagare în C05-C20; (b) sync FILM↔HTML pentru C05-C08 (la primirea FILM-urilor sau la cerere).
 
 ---
 
@@ -268,7 +268,7 @@ Toate lecțiile cumulate (L01-L168) în `_system/arhiva/brain-evolutia-V01-V38.m
 | PROTOCOL-FILM-OBS.md | `_system/referinte/` | ✓ |
 | highlighter-snippet.{css,js} | `_system/referinte/` | ✓ |
 | 6 imagini exec-stage per cNN | `cNN/assets/` | ✓ jpg 3:2 cinematic (diferite per construcție; PNG eliminat V41) |
-| _template/ matriță | rădăcină | ✓ 7 livrabile + assets/ |
+| c01/ = construcția de referință (cobai) | rădăcină | ✓ (V46: `_template/` eliminat) |
 
 ---
 

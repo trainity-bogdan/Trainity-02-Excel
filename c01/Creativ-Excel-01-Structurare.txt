@@ -159,7 +159,7 @@ in 6 etape, prin Excel + AI."
 
 NUME FISIER SALVAT: `infografic-excel-01-structura.jpg`
 DIMENSIUNE: 1920×1080 px (16:9 orizontal)
-LOC IN PRODUCȚIE: Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
+LOC IN PRODUCȚIE: Hero HTML-Studiu (vizualul construcției) + Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
 
 
 COMPOZIȚIE CERUTĂ

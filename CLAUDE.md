@@ -114,7 +114,7 @@ cNN/
 └── assets/           ← cele 6 imagini exec-stage ALE construcției (jpg, 3:2 cinematic)
 ```
 
-**MATRIȚA pentru COPY+MODIFY** = `_template/`. La generare CNN, citești de aici.
+**REFERINȚA pentru COPY+MODIFY** = `c01/`. C01 e construcția-cobai: orice modificare amplă de sistem se testează întâi pe ea, apoi se propagă. La generare CNN, copiezi din `c01/`. (V46: folderul `_template/` a fost eliminat ca duplicat care diverge.)
 
 **Imaginile sunt DIFERITE per construcție** — fiecare cNN/assets/ are pozele lui.
 

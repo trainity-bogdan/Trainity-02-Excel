@@ -55,7 +55,6 @@ Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bog
 ├── README.md                         prima pagină proiect
 ├── .gitignore                        config git
 │
-├── _template/                        MATRIȚĂ de generare (clonă structură pentru C06+)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
 │   ├── Date_MASTER + Creativ + FILM
 │   └── assets/                       imagini placeholder
@@ -121,7 +120,7 @@ Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bog
 Sistemul respectă patru principii:
 
 **1. Matriță explicit separată (V39+)**
-`_template/` e matrița curată folosită la generare CNN+. Construcțiile cNN/ sunt fiecare o versiune unică (NU canonic/editat split). Modificările live se aplică direct în cNN/.
+`c01/` e construcția de referință (cobaiul) folosită la generare CNN+ (V46: `_template/` eliminat). Construcțiile cNN/ sunt fiecare o versiune unică (NU canonic/editat split). Modificările live se aplică direct în cNN/.
 
 **2. Patch over Edited (R-V03.62 absorbită, V39+)**
 Upgrade-urile KIT se aplică ca patch-uri izolate în cNN/. Conținutul ARHITECT rămâne intact prin natura faptului că patch-ul țintește doar zona specifică. Pattern confirmat empiric V32-V34. Pentru schimbări sistemice, branch dedicat + commit + PR (recomandat).

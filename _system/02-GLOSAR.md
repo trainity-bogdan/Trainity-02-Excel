@@ -40,7 +40,7 @@ Imaginile cinematic sunt încorporate în HTML-Video ca data URI, nu ca fișiere
 
 **Canonic — ABSORBIT V39**
 Era stare istorică pre-V39 (`cNN/canonic/`). ELIMINATĂ la V39 (versiune unică `cNN/`). Rolurile fostei stări canonic sunt acum împărțite:
-- Matriță pentru generare construcții viitoare = `_template/` (separat explicit)
+- Construcția de referință pentru generare = `c01/` (cobaiul; V46: fără folder `_template/`)
 - Versionare oficială = git commit + branch + tag `v{N}` (regulile G1-G3 din CLAUDE.md)
 - Referință pentru audit/diff = `git log` + `git show <sha>:path` + `git diff v{N-1}..HEAD` (regula G4)
 
@@ -150,7 +150,7 @@ Plus 1 artefact arhivare (R-V03.58): FILM-Excel-NN.docx. Total = 7 artefacte.
 ## M
 
 **Matriță (pilot)**
-`_template/` la rădăcina proiectului (V39+). Clonă structurală a primei construcții pilot (C01 V12), servește ca șablon COPY+MODIFY pentru toate celelalte construcții. NU se modifică spontan; modificările matriței sunt comandă explicită.
+Începând cu V46 NU mai există folder `_template/`. Construcția de referință (cobaiul) e `c01/`: orice modificare amplă de sistem se testează întâi pe C01, apoi se propagă în C02-C20. La generare CNN se face COPY+MODIFY din `c01/`.
 
 **Meta marker (`<meta name="trainity-snapshot">`) — ELIMINAT V39**
 Era atribut HTML pentru a distinge canonic/editat. Eliminat la V39 (versiune unică, marker fără sens). Detectoarele R-V03.62-c/e din audit_sync.py au fost eliminate corespunzător.
@@ -173,7 +173,7 @@ Pre-V39: upgrade-urile KIT se aplicau doar pe `editat/`, NU pe `canonic/`. Post-
 Pre-V38: scripturi izolate per regulă (`inject_highlighter.py`, `fix_reset_button_position.py`, `remove_input_output_meta.py` — acum în `_system/generatoare/arhiva/`). Post-V38: motor unificat `_system/generatoare/patch_runner.py` + rețete YAML în `_system/patch_recipes/R-V03.X-{slug}.yaml`. Structura comună: regex strict + idempotent + anti-duble-inject.
 
 **Pilot**
-Sinonim cu Matriță. `_template/` (V39+). Inițial inspirat din C01 V12.
+Sinonim cu referință/cobai = `c01/` (V46+; `_template/` eliminat).
 
 **Power Query (PQ) whitelist (L146)**
 Lista de termeni canonici Microsoft acceptați în gate_v20 brand check (Promoted Headers, Filtered Rows, Applied Steps, Normalized Diacritics, etc.). Necesari în C04 NORMALIZAREA pentru prompturi Copilot.
@@ -201,7 +201,7 @@ Structura pedagogică macro a pack-ului:
 - **T5 AUTOMATIZARE** (C17-C20)
 
 **Setup**
-Sinonim: matriță, pilot. `_template/` (V39+).
+Sinonim: referință, cobai = `c01/` (V46+).
 
 **SPEC**
 Specificația narativă inghețată per construcție. Conține 9 elemente: SLUG, INTRIGA (HOOK), PROBLEMELE, MIZA, MANTRA, WOW (PAYOFF), MOTTO, FENOMENE, STEP-TITLES. Format grilă cu 3 variante per element (R-V03.56).

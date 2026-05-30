@@ -22,14 +22,14 @@ Motorul face:
    - L142 IDENTITATE_TEHNICA CNN populată?
    - L143 FENOMENE vs asset fizic aliniate?
 2. `git checkout -b feat/cNN-generare`
-3. Citește `_template/` ca matriță
+3. Citește `c01/` ca referință (cobai)
 4. Aplică COPY+MODIFY pe cele 4 HTML-uri
 5. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx`
 6. Generează Creativ-Excel-NN-{slug}.txt + FILM-Excel-NN-{slug}.docx
 7. Copiază 6 imagini jpg placeholder în `cNN/assets/`
 8. Scrie totul în `cNN/`
 9. Rulează `audit_sync.py` → confirmă zero drift
-10. Rulează `gate_v20.py NN cNN _template` → PASS
+10. Rulează `gate_v20.py NN cNN c01` → PASS
 11. `git add cNN/ && git commit -m "feat(cNN): generare initiala"`
 12. Raportează ZERO DRIFT + cele 7 livrabile prezente + branch numele
 

@@ -53,7 +53,7 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
    git checkout -b feat/c06-generare
    ```
 
-4. **Citesc matrița** `_template/`:
+4. **Citesc referința** `c01/`:
    - HTML-Studiu, HTML-Editor-Studiu, HTML-Video, HTML-Editor-Video
    - Tot ca string, voi modifica doar zone narrative
 
@@ -63,19 +63,19 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
    - Înlocuiesc cele 18 step-titles (specifice axei CANTITATIVE)
    - Înlocuiesc prompturile Copilot
    - Înlocuiesc final-text și final-label cu cifrele specifice
-   - Imaginile cinematic rămân placeholder din `_template/assets/` (regenerezi cu Banana 2 — scenariul 3)
+   - Imaginile cinematic rămân placeholder din `c01/assets/` (regenerezi cu Banana 2 — scenariul 3)
 
 6. **Generez `Date_MASTER-C06.xlsx`** din `_system/referinte/Date_MASTER-initial.xlsx`
 
 7. **Generez `Creativ-Excel-06-{slug}.txt`** și **`FILM-Excel-06-{slug}.docx`**
 
-8. **Copiez 6 imagini jpg placeholder** din `_template/assets/` în `c06/assets/`
+8. **Copiez 6 imagini jpg placeholder** din `c01/assets/` în `c06/assets/`
 
 9. **Scriu toate în `c06/`** (un singur folder, fără canonic/editat)
 
 10. **Audit empiric:**
     - `audit_sync.py` → zero drift (8 detectoare × 6 zone = 48 verificări PASS)
-    - `gate_v20.py 06 c06 _template` → PASS
+    - `gate_v20.py 06 c06 c01` → PASS
 
 11. **Commit (G2):**
     ```

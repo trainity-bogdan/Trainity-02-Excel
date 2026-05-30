@@ -28,7 +28,7 @@ de conținut nu coincide cu altă construcție (exceptând zonele de brand).
 
 | Rol | Cale | Notă |
 |---|---|---|
-| Matriță structură (HTML) | `_template/` | C01 fork; sursa pentru structură + JS + CSS |
+| Structură (HTML) de referință | `c01/` | construcția-cobai; sursa pentru structură + JS + CSS |
 | Referință axă T2 narativă | `c05/` (CLASIFICARE) | cea mai apropiată soră T2 (doar ca model de TON, nu de conținut) |
 | Schema date | `_system/referinte/` | Date_MASTER-initial + IDENTITATE-TEHNICA + SCHEMA-MASTER |
 

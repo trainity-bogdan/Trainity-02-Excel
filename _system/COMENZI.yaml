@@ -51,17 +51,17 @@ comenzi:
       - "Rulez _system/generatoare/pre_generation_check.py {NN} → exit 0"
       - "Working tree clean (git status)"
     executie:
-      - "Citesc _template/ ca matriță (R-V03.54)"
+      - "Citesc c01/ ca referință (R-V03.54)"
       - "Aplic COPY+MODIFY pe cele 4 HTML-uri (text/identitate per CNN, CSS/JS intacte)"
       - "Generez Date_MASTER-C{NN}.xlsx din _system/referinte/Date_MASTER-initial.xlsx + SPEC"
       - "Generez Creativ-Excel-{NN}-{slug}.txt"
       - "Generez FILM-Excel-{NN}-{slug}.docx"
-      - "Copiez 6 imagini jpg placeholder din _template/assets/ în c{NN}/assets/"
+      - "Copiez 6 imagini jpg placeholder din c01/assets/ în c{NN}/assets/"
       - "Scriu toate în c{NN}/"
       - "git add c{NN}/ && git commit -m 'feat(c{NN}): generare initiala'"
     post_check:
       - "audit_sync.py → ZERO DRIFT (R-V03.63)"
-      - "gate_v20.py {NN} c{NN}/ _template/ → PASS"
+      - "gate_v20.py {NN} c{NN}/ c01/ → PASS"
     atinge:
       - "c{NN}/ (7 artefacte + assets/)"
     raport: "C{NN} generată pe main. Zero drift. Gate PASS. Imagini placeholder (regenerează cu Banana 2 pentru axă). Pentru push: spune-mi `push`."
@@ -157,7 +157,7 @@ comenzi:
     pre_check: []
     executie:
       - "audit_sync.py (filtrat pe c{NN} prin grep raport)"
-      - "gate_v20.py {NN} c{NN}/ _template/"
+      - "gate_v20.py {NN} c{NN}/ c01/"
     post_check: []
     atinge: []
     raport: "Status C{NN}: {drift/PASS}. Reguli aplicate: {lista}. Erori detectate: {lista}."

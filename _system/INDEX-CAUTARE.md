@@ -271,7 +271,7 @@ Toți termenii, conceptele, regulile, comenzile și scripturile sortate alfabeti
 
 **matriță (pilot)**
 - `_system/02-GLOSAR.md` "Matriță (pilot)"
-- `_template/` (V39+: matriță explicit separată de c01)
+- referință/cobai de generare = `c01/` (V46+: `_template/` eliminat)
 - Folosire: COPY+MODIFY R-V03.54
 
 **meta marker (`trainity-snapshot`) — ELIMINAT V39**

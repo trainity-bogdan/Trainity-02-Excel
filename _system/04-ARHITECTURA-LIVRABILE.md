@@ -52,24 +52,24 @@ cNN/
 
 ---
 
-## Matrița pentru COPY+MODIFY: `_template/`
+## Construcția de referință pentru COPY+MODIFY: `c01/`
 
-La generare CNN+ (C06+), motorul folosește `_template/` ca șablon — clonă cu aceeași structură ca `c01/` dar marcată explicit ca matriță.
+La generare CNN+, motorul folosește `c01/` ca referință (cobaiul sistemului). **V46:** folderul `_template/` a fost eliminat - era un duplicat C01 care diverge la fiecare modificare. C01 e construcția reală, mereu la zi, pe care se testează întâi orice schimbare amplă, apoi se propagă în C02-C20.
 
 ```
-_template/
-├── HTML-Studiu-Excel-01-Structurare.html      ← șablon, se modifică conținut/identitate
+c01/   (construcția de referință / cobai)
+├── HTML-Studiu-Excel-01-Structurare.html      ← sursă structură/CSS/JS pentru COPY+MODIFY
 ├── HTML-Editor-Studiu-Excel-01-Structurare.html
 ├── HTML-Video-Excel-01-Structurare.html
 ├── HTML-Editor-Video-Excel-01-Structurare.html
 ├── Date_MASTER-C01.xlsx
 ├── Creativ-Excel-01-Structurare.txt
 ├── FILM-Excel-01-Structurare.docx
-└── assets/                                   ← 6 imagini placeholder jpg
+└── assets/                                   ← 6 imagini exec-stage jpg
 ```
 
 **Flow generare CNN:**
-1. Citește `_template/` ca matriță
+1. Citește `c01/` ca referință
 2. Aplică COPY+MODIFY (text/identitate per CNN, păstrează CSS/JS/structura)
 3. Generează Date_MASTER-CNN.xlsx pornind de la `_system/referinte/Date_MASTER-initial.xlsx`
 4. Generează Creativ + FILM pe SPEC CNN
@@ -163,12 +163,12 @@ Script video procedural cinematic. 8 secțiuni canonice:
 
 La comanda `genereaza CNN`:
 
-1. Motor citește `_template/` (matriță)
+1. Motor citește `c01/` (referință/cobai)
 2. Aplică COPY+MODIFY pe HTML-Studiu, HTML-Editor-Studiu, HTML-Video, HTML-Editor-Video → conținut specific CNN
 3. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx` + SPEC CNN (schema sheet-uri input/output)
 4. Generează Creativ-Excel-NN-{slug}.txt din SPEC narativ
 5. Generează FILM-Excel-NN-{slug}.docx prin sablon + completare cu specificul CNN
-6. Copiază/generează 6 imagini exec-stage jpg în `cNN/assets/` (placeholder din _template inițial; ARHITECT regenerează cu Banana 2 specifice axei)
+6. Copiază/generează 6 imagini exec-stage jpg în `cNN/assets/` (placeholder din c01/assets inițial; ARHITECT regenerează cu Banana 2 specifice axei)
 7. Scrie în `cNN/` (un singur folder)
 8. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
 9. Gate v20 → confirmare PASS
