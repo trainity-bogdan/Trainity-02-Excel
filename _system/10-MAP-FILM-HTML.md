@@ -73,3 +73,35 @@ C01: rezolvat prin sync HTML←FILM (repo). A reparat şi confuzia de rol (mantr
 C03/C04: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45), sincronizat complet.
 
 C05-C08: încă NEsincronizate (FILM↔HTML drift vechi posibil); de procesat la primirea FILM-urilor rafinate sau la cerere.
+
+---
+
+## SPEC v2.0 — FILM = „Biblia construcției" (4 secțiuni)
+
+Decizie ARHITECT: FILM-ul nu mai e doar script video, ci **sursa unică** pentru video + narație + Shorts + Study + PPT + LP. Structurat în 4 secțiuni distincte (ordine: înțeleg → aplic → devin):
+
+| # | Secțiune | Elemente | Rutare (consumator) |
+|---|---|---|---|
+| 1 | **IDENTITATE CINEMATICĂ** | Intriga · Miza · Mantra · Wow · Motto | Video (rendat) + Study |
+| 2 | **ARSENAL NARATIV** | Simptom în business · Greșeala clasică · Aha moment · Fraza de trailer | Narația lui Bogdan + Shorts + trailer + LP. **NU** slide-uri video noi (Video rămâne curat). În Study: callout-uri (`.arsenal-band` = AHA + greșeală + simptom). |
+| 3 | **BRIEF PEDAGOGIC** | Întrebarea · Micro-brief · De ce contează · Înainte · După · Ce vei obține | Study (hero + corp). |
+| 4 | **TRANSFORMAREA CURSANTULUI** | Competența dobândită · De acum înainte | Study (închidere `.transformare-section`) + LP + Shorts. |
+
+Apoi: SLIDES EXECUTIVE (→ exec slides Video) + cele 6 etape (script video).
+
+### Sloturi HTML-Studiu noi (v2.0)
+- `.arsenal-band` (`.aha-callout` + `.arsenal-card.greseala` + `.arsenal-card.simptom`) — după hero.
+- `.transformare-section` (`.ts-comp` competență + `.ts-identity` de-acum-înainte) — închidere, după payoff.
+- Hero (deja): question, micro-brief, before→after, outcomes (vezi sus).
+
+### Gărzi
+- **FRAZA DE TRAILER = linia-campioană PROMOVATĂ** (poate FI aha/motto/wow/mantra — cea mai virală pentru Shorts/copertă/LP), NU obligatoriu o frază nouă → evită ecoul + taie cost copy.
+- **Registru de voci** per construcție: toate frazele scurte (intriga/greșeala/aha/mantra/wow/motto/trailer) verificate una lângă alta, anti-ecou.
+- **R-V02.15** pe Simptom: calitativ generic, ZERO cifre business.
+- **3 unghiuri de „de ce" distincte:** Miza (dorință, cinematic) ≠ Simptom (durere business) ≠ De ce contează (consecință pedagogică).
+
+### Status propagare v2.0
+| Cod | FILM v2.0 (4 secțiuni) | Study arsenal+transformare |
+|---|---|---|
+| C01 | ✓ prototip | ✓ prototip |
+| C02-C08 | — (de propagat după validare C01) | — |
