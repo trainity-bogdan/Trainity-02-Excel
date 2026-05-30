@@ -1483,6 +1483,26 @@ body.has-continue .scroll-top { bottom: 88px; }
 .study-result{ margin:26px 0 8px; }
 @media(max-width:720px){ .hero-cockpit{ flex-direction:column; align-items:stretch; gap:12px; } .hero-start{ text-align:center; } }
 </style>
+<style id="arc-tu-v1">
+.tu-section{ background:#0a0a0a; color:#fff; border-radius:0; padding:clamp(26px,5.5vw,46px) clamp(20px,4vw,32px); margin:16px 0; }
+.tu-kicker{ display:block; font-size:11px; letter-spacing:3px; color:var(--tr-y,#FFD400); font-weight:900; margin-bottom:12px; }
+.tu-statement{ font-size:clamp(24px,4.2vw,40px); font-weight:900; line-height:1.16; letter-spacing:-.5px; color:#fff; margin:0; }
+.tu-statement-sm{ font-size:clamp(18px,2.6vw,24px); font-weight:700; line-height:1.4; color:#fff; margin:0; }
+.tu-hl{ color:var(--tr-y,#FFD400); }
+.tu-lead{ font-size:16px; color:#c9c9c9; margin:0; }
+.tu-list{ list-style:none; padding:0; margin:14px 0 0; }
+.tu-list li{ font-size:16px; line-height:1.95; color:#e6e6e6; padding-left:22px; position:relative; }
+.tu-list li::before{ content:"–"; position:absolute; left:0; color:var(--tr-y,#FFD400); font-weight:900; }
+.tu-aha{ border-left:6px solid var(--tr-y,#FFD400); }
+.tu-aha .tu-statement{ font-size:clamp(26px,4.8vw,46px); }
+.tu-promise .tu-statement{ font-size:clamp(22px,3.6vw,34px); }
+/* rasplata personala finala (gated) */
+.transformare-section{ background:#0a0a0a !important; color:#fff; border-top:0 !important; padding:clamp(28px,5.5vw,46px) clamp(20px,4vw,32px) !important; margin:16px 0; }
+.transformare-section .ts-label{ color:var(--tr-y,#FFD400); }
+.transformare-section .ts-no{ color:#7a7a7a; }
+.transformare-section .ts-yes{ color:#fff; }
+.tu-cert{ padding:0 0 18px; margin:0 0 18px; border-bottom:1px solid #2a2a2a; }
+</style>
 </head>
 <body>
 
@@ -1515,6 +1535,29 @@ body.has-continue .scroll-top { bottom: 88px; }
         </div>
       </header>
 
+      <!-- ARC TU: recunoastere -> greseala -> aha -> cine devii -->
+      <section class="tu-section tu-recunoastere">
+        <div class="tu-kicker">SUNĂ CUNOSCUT?</div>
+        <p class="tu-lead">Lucrezi cu un export care pare în regulă. Și totuși:</p>
+        <ul class="tu-list">
+          <li>rapoarte diferite pe același fișier</li>
+          <li>sume care nu coincid de la o filtrare la alta</li>
+          <li>filtre care ascund tranzacții fără să te avertizeze</li>
+        </ul>
+      </section>
+      <section class="tu-section tu-greseala">
+        <div class="tu-kicker">GREȘEALA CLASICĂ</div>
+        <p class="tu-statement">Oamenii încep cu formulele.<br><span class="tu-hl">Profesioniștii încep cu structura.</span></p>
+      </section>
+      <section class="tu-section tu-aha">
+        <div class="tu-kicker">AHA</div>
+        <p class="tu-statement">Nu există formule corecte peste o structură greșită.</p>
+      </section>
+      <section class="tu-section tu-promise">
+        <div class="tu-kicker">CINE DEVII</div>
+        <p class="tu-statement">Nu mai vezi tabele. <span class="tu-hl">Vezi structuri.</span></p>
+      </section>
+
       <section class="study-intro">
         <h1 class="cover-title">Cum construim o structură tabelară corectă</h1>
         <p class="hero-microbrief">Un export poate avea aspectul unui tabel Excel și totuși să nu respecte regulile unui tabel real. În această construcție demonstrăm diferența dintre aparență și structură.</p>
@@ -1525,16 +1568,7 @@ body.has-continue .scroll-top { bottom: 88px; }
           <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>tabel valid</li><li>structură continuă</li><li>bază pentru formule</li><li>bază pentru Power Query</li></ul></div>
         </div>
       </section>
-
-                        <section class="arsenal-band">
-        <div class="aha-banner"><span class="ab-label">AHA MOMENT</span><p class="ab-phrase">Nu există formule corecte peste o structură greșită.</p></div>
-        <div class="arsenal-grid2">
-          <div class="arsenal-card greseala"><div class="ac-label">GREȘEALA CLASICĂ</div><p class="ac-phrase">Oamenii încep cu formulele. Profesioniștii încep cu structura.</p></div>
-          <div class="arsenal-card simptom"><div class="ac-label">SUNĂ CUNOSCUT?</div><ul><li>rapoarte diferite pe același fișier</li><li>sume care nu coincid</li><li>filtre care ascund tranzacții</li></ul></div>
-        </div>
-      </section>
       <section class="study-result">
-        <div class="hero-competency"><div class="hc-label">✓ DUPĂ C01 POȚI</div><p>Identifici în mai puțin de 30 de secunde dacă un export ERP e utilizabil sau trebuie restructurat înainte de analiză.</p></div>
         <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>structură controlabilă</li><li>tabel validat</li><li>bază pentru T1 complet</li><li>bază pentru T2</li></ul></div>
         <div class="cover-meta">
           <div class="cover-meta-row"><span class="cover-meta-key">DENUMIRE TREAPTĂ</span><span class="cover-meta-val">SCANARE</span></div>
@@ -1984,6 +2018,10 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-motto">Nu reconstruim tabelul. Îl facem controlabil.</div>
       </section>
       <section class="transformare-section">
+        <div class="tu-cert">
+          <div class="tu-kicker">✓ DUPĂ C01 POȚI</div>
+          <p class="tu-statement-sm">Identifici în mai puțin de 30 de secunde dacă un export ERP e utilizabil sau trebuie restructurat înainte de analiză.</p>
+        </div>
         <div class="ts-block ts-identity"><div class="ts-label">DE ACUM ÎNAINTE</div>
           <div class="ts-pair"><span class="ts-no">Nu mai vezi tabele.</span><span class="ts-yes">Vezi structuri.</span></div>
           <div class="ts-pair"><span class="ts-no">Nu mai verifici cifre.</span><span class="ts-yes">Verifici fundația.</span></div>
