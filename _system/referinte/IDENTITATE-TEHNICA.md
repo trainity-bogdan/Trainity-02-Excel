@@ -127,59 +127,59 @@ campurile generice (cod, NN, treapta_nr) sunt cunoscute.
 Inghetarea ramane la nivel de SPEC narativ in SISTEM_TRAINITY.md
 pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 
-## IDENTITATE_TEHNICA C05 — CLASIFICAREA DATELOR
+## IDENTITATE_TEHNICA C05 — DICȚIONARUL SETULUI
 
 - cod: C05
 - treapta_nr: 2
 - treapta_nume: CUNOASTERE
-- treapta_pozitie: 1 din 4 (Clasificare, KPI, Logica, Anomalii)
-- nume_hero_caps_rand1: CLASIFICAREA
-- nume_hero_caps_rand2: DATELOR
-- nume_hero_caps: CLASIFICAREA DATELOR
-- nume_title_case: Clasificarea datelor
-- nume_slug: Clasificare
+- treapta_pozitie: 1 din 4 (Dicționar, Clasificare, Datare, Cartografiere)
+- nume_hero_caps_rand1: DICȚIONARUL
+- nume_hero_caps_rand2: SETULUI
+- nume_hero_caps: DICȚIONARUL SETULUI
+- nume_title_case: Dicționarul setului
+- nume_slug: Dictionar
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C05.xlsx
-- creativ_filename: Creativ-Excel-05-Clasificare.txt
-- meta_val_treapta: <b>CLASIFICARE</b> · CUANTIFICARE · DATARE · TIPIZARE (CUNOAȘTERE)
+- creativ_filename: Creativ-Excel-05-Dictionar.txt
+- meta_val_treapta: <b>DICȚIONAR</b> · CLASIFICARE · DATARE · CARTOGRAFIERE (CUNOAȘTERE)
 - next_cod: C06
-- next_nume_title: KPI și Calcule
+- next_nume_title: Clasificare
 - next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE
-- footer_text: TRAINITY · C05 CLASIFICAREA DATELOR · Cockpit operațional
-- topbar_text: Sistemul 02 - Excel · C05 · Clasificarea datelor
-- mobile_topbar: C05 · Clasificarea datelor
+- footer_text: TRAINITY · C05 DICȚIONARUL SETULUI · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C05 · Dicționarul setului
+- mobile_topbar: C05 · Dicționarul setului
 - nav_brand_label: PACK 02 EXCEL · C05
-- nav_brand_title: CLASIFICAREA DATELOR
-- title_studiu: C05 · Clasificarea Datelor · Trainity
-- title_video: C05 · CLASIFICAREA DATELOR · BROADCAST
+- nav_brand_title: DICȚIONARUL SETULUI
+- title_studiu: C05 · Dicționar · Trainity
+- title_video: C05 · DICȚIONAR · BROADCAST
 - localStorage_studiu: trainity_c05_study_v1
 - localStorage_video: trainity_c05_video_v1
 
-## IDENTITATE_TEHNICA C06 — CUANTIFICAREA DATELOR
+## IDENTITATE_TEHNICA C06 — CLASIFICAREA SETULUI
 
 - cod: C06
 - treapta_nr: 2
 - treapta_nume: CUNOASTERE
-- treapta_pozitie: 2 din 4 (Clasificare, Cuantificare, Datare, Tipizare)
-- nume_hero_caps_rand1: CUANTIFICAREA
-- nume_hero_caps_rand2: DATELOR
-- nume_hero_caps: CUANTIFICAREA DATELOR
-- nume_title_case: Cuantificarea datelor
-- nume_slug: Cuantificare
+- treapta_pozitie: 2 din 4 (Dicționar, Clasificare, Datare, Cartografiere)
+- nume_hero_caps_rand1: CLASIFICAREA
+- nume_hero_caps_rand2: SETULUI
+- nume_hero_caps: CLASIFICAREA SETULUI
+- nume_title_case: Clasificarea setului
+- nume_slug: Clasificare
 - input_filename: Date_MASTER-C05.xlsx
 - output_filename: Date_MASTER-C06.xlsx
-- creativ_filename: Creativ-Excel-06-Cuantificare.txt
-- meta_val_treapta: CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · TIPIZARE (CUNOAȘTERE)
+- creativ_filename: Creativ-Excel-06-Clasificare.txt
+- meta_val_treapta: DICȚIONAR · <b>CLASIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)
 - next_cod: C07
 - next_nume_title: Datare
 - next_label: TREAPTA 2 · CONSTRUCȚIA URMĂTOARE
-- footer_text: TRAINITY · C06 CUANTIFICAREA DATELOR · Cockpit operațional
-- topbar_text: Sistemul 02 - Excel · C06 · Cuantificarea datelor
-- mobile_topbar: C06 · Cuantificarea datelor
+- footer_text: TRAINITY · C06 CLASIFICAREA SETULUI · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C06 · Clasificarea setului
+- mobile_topbar: C06 · Clasificarea setului
 - nav_brand_label: PACK 02 EXCEL · C06
-- nav_brand_title: CUANTIFICAREA DATELOR
-- title_studiu: C06 · Cuantificarea Datelor · Trainity
-- title_video: C06 · CUANTIFICAREA DATELOR · BROADCAST
+- nav_brand_title: CLASIFICAREA SETULUI
+- title_studiu: C06 · Clasificare · Trainity
+- title_video: C06 · CLASIFICARE · BROADCAST
 - localStorage_studiu: trainity_c06_study_v1
 - localStorage_video: trainity_c06_video_v1
 

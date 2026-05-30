@@ -991,14 +991,14 @@ def load_identitate(NN, identitate_path):
             'meta_val_treapta': 'STRUCTURA · CONTROL · AUDIT · <b>NORMALIZARE</b> (SCAN)'
         },
         '05': {
-            'cod': 'C05', 'nume_hero_caps_rand1': 'CLASIFICAREA',
-            'nume_slug': 'Clasificare',
-            'meta_val_treapta': '<b>CLASIFICARE</b> · KPI · LOGICĂ · ANOMALII (CARE)'
+            'cod': 'C05', 'nume_hero_caps_rand1': 'DICȚIONARUL',
+            'nume_slug': 'Dictionar',
+            'meta_val_treapta': '<b>DICȚIONAR</b> · CLASIFICARE · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '06': {
-            'cod': 'C06', 'nume_hero_caps_rand1': 'CUANTIFICAREA',
-            'nume_slug': 'Cuantificare',
-            'meta_val_treapta': 'CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
+            'cod': 'C06', 'nume_hero_caps_rand1': 'CLASIFICAREA',
+            'nume_slug': 'Clasificare',
+            'meta_val_treapta': 'DICȚIONAR · <b>CLASIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '07': {
             'cod': 'C07', 'nume_hero_caps_rand1': 'MEMORIA',

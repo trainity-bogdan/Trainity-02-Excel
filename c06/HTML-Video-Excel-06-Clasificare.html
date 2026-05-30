@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C06 · CUANTIFICARE · BROADCAST</title>
+<title>C06 · CLASIFICARE · BROADCAST</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -1605,12 +1605,52 @@ body.exec-mode .hud-bar { display: none !important; }
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* Marcaj galben Trainity peste textul evidentiat */
+.trainity-highlight {
+  background: #FFD400;
+  color: #000;
+  padding: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.trainity-highlight:hover {
+  background: #FFC700;
+}
+
+/* === HIGHLIGHTER R-V03.59 (V34+) === */
+/* ============================================================
+   HIGHLIGHTER PERSISTENT (R-V03.59 V34+)
+   Marcaje galbene persistente pe selectie text in HTML-Video.
+   Persistenta: localStorage key `trainity_c{NN}_video_highlights_v1`
+   Toggle off: click pe marcaj (capture phase intercepteaza inainte
+   de handler stage, deci NU avanseaza la slide-ul urmator).
+   
+   V34: ELIMINAT buton Reset + ELIMINAT keybind ESC.
+   ============================================================ */
+
+/* Marcaj galben Trainity peste textul evidentiat */
+.trainity-highlight {
+  background: #FFD400;
+  color: #000;
+  padding: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.trainity-highlight:hover {
+  background: #FFC700;
+}
 </style>
 </head>
 <body>
 <!-- TOP STATUS BAR -->
 <header class="topbar">
-  <div class="topbar-brand">Sistemul 02 - Excel · C06 · Cuantificare</div>
+  <div class="topbar-brand">Sistemul 02 - Excel · C06 · Clasificare</div>
   <button class="skipped-btn" id="skipped-btn" onclick="jumpToNextSkipped()" style="display:none">
     <span class="skipped-icon">⚠</span>
     <span class="skipped-text">Mergem la pas sărit</span>
@@ -1632,9 +1672,9 @@ body.exec-mode .hud-bar { display: none !important; }
   <!-- HERO INTRO -->
   <section class="screen" data-screen="hero" data-frag-total="2">
     <div class="hero-prelabel">Construcția 06 Excel</div>
-    <h1 class="hero-title">CUANTIFICAREA<br>DATELOR</h1>
-    <p class="hero-hook frag" data-frag="1">Setul are cifre.<br><span class="hero-hook-twist">Excel le știe. Tu nu.</span></p>
-    <p class="hero-sub frag" data-frag="2">Înainte de orice analiză, măsurăm cât de mare e setul și unde îi sunt marginile.</p>
+    <h1 class="hero-title">CLASIFICAREA<br>DATELOR</h1>
+    <p class="hero-hook frag" data-frag="1">Setul are clase ascunse.<br><span class="hero-hook-twist">Excel le poate construi. Tu nu le-ai scris.</span></p>
+    <p class="hero-sub frag" data-frag="2">Înainte de orice analiză, scriem regulile care dau sens fiecărui rând.</p>
   </section>
 
   <!-- DINAMIC SCREENS injected here -->
@@ -1646,7 +1686,7 @@ body.exec-mode .hud-bar { display: none !important; }
   <section class="screen" data-screen="final" data-frag-total="7">
     <div class="final-block">
       <p class="dim frag" data-frag="1">Nu am modificat valori.</p>
-      <p class="dim frag" data-frag="2">Nu am șters cifre.</p>
+      <p class="dim frag" data-frag="2">Nu am etichetat de mână.</p>
       <p class="dim frag" data-frag="3">Nu am alterat tranzacțiile.</p>
       <p class="accent frag" data-frag="4">Pentru prima dată, setul are dimensiune, centru și margini.</p>
       <p class="frag" data-frag="5">Un profil cunoscut. Apoi orice decizie.</p>
@@ -1682,9 +1722,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">01</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 01</div>
-      <div class="exec-emotion frag" data-frag="2">Mărimea nevăzută</div>
+      <div class="exec-emotion frag" data-frag="2">Sensul nescris</div>
       <h2 class="exec-title frag" data-frag="3">REALITATE</h2>
-      <p class="exec-phrase frag" data-frag="4">Te uiți la o coloană de valori. Astăzi am aflat cât de mare e de fapt setul.</p>
+      <p class="exec-phrase frag" data-frag="4">Te uiți la rânduri fără clasă. Astăzi am scris regula care le dă sens.</p>
     </div>
   </section>
 
@@ -1698,9 +1738,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">02</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 02</div>
-      <div class="exec-emotion frag" data-frag="2">Interogare numerică</div>
+      <div class="exec-emotion frag" data-frag="2">Interogarea regulilor</div>
       <h2 class="exec-title frag" data-frag="3">INVESTIGAȚIE</h2>
-      <p class="exec-phrase frag" data-frag="4">Setul răspunde. Dacă știi ce să întrebi.</p>
+      <p class="exec-phrase frag" data-frag="4">Setul nu se clasifică singur. Tu scrii regula, Excel o aplică.</p>
     </div>
   </section>
 
@@ -1714,9 +1754,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">03</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 03</div>
-      <div class="exec-emotion frag" data-frag="2">Profilare cantitativă</div>
+      <div class="exec-emotion frag" data-frag="2">Construcție de sens</div>
       <h2 class="exec-title frag" data-frag="3">TRANSFORMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Nu am modificat setul. I-am aflat dimensiunea.</p>
+      <p class="exec-phrase frag" data-frag="4">Nu am introdus nimic de mână. Am scris o regulă și fiecare rând a căpătat clasă.</p>
     </div>
   </section>
 
@@ -1730,9 +1770,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">04</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 04</div>
-      <div class="exec-emotion frag" data-frag="2">Agregate confirmate</div>
+      <div class="exec-emotion frag" data-frag="2">Reguli confirmate</div>
       <h2 class="exec-title frag" data-frag="3">VERIFICARE</h2>
-      <p class="exec-phrase frag" data-frag="4">O cifră spusă poate fi greșită. O cifră verificată devine realitate.</p>
+      <p class="exec-phrase frag" data-frag="4">O clasă pusă manual îmbătrânește. O clasă din regulă se reconstruiește singură.</p>
     </div>
   </section>
 
@@ -1746,9 +1786,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">05</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 05</div>
-      <div class="exec-emotion frag" data-frag="2">Cifre ancorate</div>
+      <div class="exec-emotion frag" data-frag="2">Clase ancorate</div>
       <h2 class="exec-title frag" data-frag="3">STABILIZARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Astăzi e profil. Mâine trebuie să fie rutină.</p>
+      <p class="exec-phrase frag" data-frag="4">Astăzi scriu regula. Mâine setul se clasifică singur la refresh.</p>
     </div>
   </section>
 
@@ -1762,9 +1802,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">06</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 06</div>
-      <div class="exec-emotion frag" data-frag="2">Predarea profilului</div>
+      <div class="exec-emotion frag" data-frag="2">Predarea setului clasificat</div>
       <h2 class="exec-title frag" data-frag="3">CONFIRMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Era o listă de numere. Acum are dimensiune, centru și margini.</p>
+      <p class="exec-phrase frag" data-frag="4">Erau rânduri anonime. Acum fiecare are clasă, segment și scor.</p>
     </div>
   </section>
 
@@ -1828,94 +1868,94 @@ body.exec-mode .hud-bar { display: none !important; }
 
 const STAGES = [
   {
-    id: 1, name: "REALITATE", emotion: "Recunoaștere descriptivă",
-    hook: "Setul are cifre. Excel le știe. Tu nu.",
+    id: 1, name: "REALITATE", emotion: "Deschidere a sensului",
+    hook: "Setul are clase ascunse. Excel le poate construi. Tu nu le-ai scris.",
     next: "Astăzi îl inventariem cap-coadă.",
     steps: [
-      { num: "01", title: "Deschidem setul. Cel curat de la C05.",
-        instr: "Date_MASTER-C06.xlsx, foaia Vanzari. 2.000 rânduri, 14 coloane. <strong>Setul este structural curat. Dar nu îl cunoaștem.</strong>",
+      { num: "01", title: "Deschidem setul. Cel cu dicționar de la C05.",
+        instr: "Date_MASTER-C06.xlsx, foaia Vanzari. 2.000 rânduri, 14 coloane. <strong>Setul are dicționarul. Dar niciun rând nu are clasă.</strong>",
         excel: true },
       { num: "02", title: "Privim coloanele. Și recunoaștem necunoașterea.",
-        instr: "Câți clienți există? Câte categorii? Ce monede? <strong>Setul are un profil numeric pe care încă nu l-am citit.</strong>",
+        instr: "Care rând e mare? Care e prioritar? Ce segment? <strong>Setul are clase ascunse pe care încă nu le-am scris.</strong>",
         excel: true },
-      { num: "03", title: "Fixăm lista coloanelor de profilat.",
-        instr: "Cele 6 coloane categoriale: client_nume, judet, categorie, cod_produs, cota_tva, moneda. <strong>Pe acestea construim profilul numeric. Numericele rămân pentru C07.</strong>",
+      { num: "03", title: "Fixăm coloanele pe care construim sens.",
+        instr: "Coloanele pe care construim sens: valoare_neta, categorie. <strong>Pe ele scriem reguli. Rândurile capătă clasă, segment, scor.</strong>",
         excel: true }
     ]
   },
   {
-    id: 2, name: "INVESTIGAȚIE", emotion: "Interogare controlată",
+    id: 2, name: "INVESTIGAȚIE", emotion: "Interogarea regulilor",
     hook: "Nu privim tabelul. Îl interogăm.",
-    next: "Copilot răspunde cu inventarul. Apoi confruntăm cu setul.",
+    next: "Copilot răspunde cu regulile. Apoi le confruntăm cu setul.",
     steps: [
       { num: "04", title: "Activăm Copilot. Pe foaia Vanzari.",
-        instr: "Așteptăm confirmarea că tabelul a fost recunoscut. <strong>Promptul natural devine instrument de interogare descriptivă. Nu de execuție.</strong>",
+        instr: "Așteptăm confirmarea că tabelul a fost recunoscut. <strong>Promptul natural devine instrument de a propune reguli. Nu de execuție.</strong>",
         excel: true },
-      { num: "05", title: "Întrebăm setul. Promptul 1.", instr: "", prompt: 1 },
-      { num: "06", title: "Citim profilul numeric propus de sistem.",
-        instr: "Verificăm cardinalitățile cheie: 15 client_nume, 8 judet, 4 categorie. <strong>Dacă cifrele Copilot nu se potrivesc cu setul, repetăm întrebarea. Nu trecem mai departe.</strong>",
+      { num: "05", title: "Cerem regulile de clasificare. Promptul 1.", instr: "", prompt: 1 },
+      { num: "06", title: "Citim regulile propuse de sistem.",
+        instr: "Verificăm pragurile propuse: A = top 20%, C = jos 50%. <strong>Dacă regulile Copilot nu se potrivesc cu setul, repetăm întrebarea. Nu trecem mai departe.</strong>",
         excel: true }
     ]
   },
   {
-    id: 3, name: "TRANSFORMARE", emotion: "Profilare structurală",
-    hook: "Profilul numeric există. Adăugăm dispersia.",
+    id: 3, name: "TRANSFORMARE", emotion: "Construcție de sens",
+    hook: "Prima regulă există. Adăugăm segmente și scor.",
     next: "Power Query nu intră. Doar Copilot și foi de profil.",
     steps: [
-      { num: "07", title: "Încărcăm profilul numeric. Ca foaie de profil.",
-        instr: "Copiem tabelul răspuns pe sheet nou KPI_GENERAL. <strong>Profilul numeric devine livrabil vizibil. Nu o opinie a Copilot. O foaie din registru.</strong>",
+      { num: "07", title: "Construim prima clasă. Cu IFS.",
+        instr: "Construim clasa_valoare cu IFS într-o coloană nouă. <strong>Setul clasificat devine livrabil vizibil. Nu o opinie. O coloană din registru.</strong>",
         excel: true },
-      { num: "08", title: "Profilăm structura. Promptul 2.", instr: "", prompt: 2 },
-      { num: "09", title: "Calculăm media și dispersia.",
-        instr: "Confirmăm: o linie = o factură completă. 2.000 nr_factura unice. <strong>Nu este o linie de produs. Este o factură întreagă. Asta dictează tot ce urmează.</strong>",
+      { num: "08", title: "Cerem scoring și segmente. Promptul 2.", instr: "", prompt: 2 },
+      { num: "09", title: "Construim segmentul cu SWITCH.",
+        instr: "SWITCH pe categorie → segment de business. <strong>Hardware devine Echipamente, Software devine Licențe. Asta dictează tot ce urmează.</strong>",
         excel: true }
     ]
   },
   {
-    id: 4, name: "VERIFICARE", emotion: "Audit forensic",
-    hook: "Nu credem profilul numeric. Îl confruntăm cu setul.",
-    next: "Cifrele decid. Nu opinia AI. Sumă exactă, medie confirmată.",
+    id: 4, name: "VERIFICARE", emotion: "Audit al regulilor",
+    hook: "Nu credem regulile. Le confruntăm cu setul.",
+    next: "Regulile decid. Nu opinia AI. Clase exacte, scoruri confirmate.",
     steps: [
-      { num: "10", title: "Confruntăm suma. Cu SUM.",
-        instr: "=COUNTA(UNIQUE(C2:C2001)) pentru client_nume → 15. Repetăm pentru fiecare coloană categorială. <strong>Numerele din profil numeric trebuie să corespundă exact cu setul. Nu apropiat. Exact.</strong>",
+      { num: "10", title: "Aducem etichete externe. Cu XLOOKUP.",
+        instr: "XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
         excel: true },
-      { num: "11", title: "Verificăm agregatele. Coloană cu coloană.",
-        instr: "La categorie: Hardware 47.9%, Consumabile 26.1%, Software 23.6%. Top-3 acoperă 97.5% din set. <strong>Distribuția este extremă. O singură categorie aproape jumătate.</strong>",
+      { num: "11", title: "Construim o regulă compusă. Cu IFS.",
+        instr: "IFS din condiții multiple: clasa=A și segment=Licențe → strategic. <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",
         excel: true },
-      { num: "12", title: "Marcăm cifrele rare. Cu galben.",
-        instr: "Frecvență sub 3%? Servicii (2.5%), USD (1.0%). <strong>Nu sunt erori. Sunt observații documentate. Audit forensic, nu corecție.</strong>",
+      { num: "12", title: "Calculăm scorul. Pe fiecare rând.",
+        instr: "Scor = (valoare-MIN)/(MAX-MIN)*100. <strong>Fiecare rând capătă un scor 0-100. O etichetă, nu o decizie.</strong>",
         excel: true }
     ]
   },
   {
     id: 5, name: "STABILIZARE", emotion: "Ancorare la sursă",
-    hook: "Un profil numeric care nu reflectă setul nu este profil numeric. Este amintire.",
+    hook: "O clasă care nu vine din regulă nu este clasificare. Este părere.",
     next: "Tabel viu, refresh testat, regulă anti-derivă scrisă.",
     steps: [
-      { num: "13", title: "Legăm profilul numeric la sursă. Ca tabel viu.",
-        instr: "KPI_GENERAL → Format as Table → tbl_Profil. <strong>Profilul numeric nu mai este copie statică. Devine reflectare permanentă a setului.</strong>",
+      { num: "13", title: "Legăm coloanele derivate la sursă. Ca tabel viu.",
+        instr: "Coloanele derivate → Format as Table → tbl_Clasificat. <strong>Setul clasificat nu mai este copie statică. Devine reflectare permanentă.</strong>",
         excel: true },
-      { num: "14", title: "Testăm un refresh simulat. Pe profil.",
-        instr: "Adăugăm o categorie nouă inventată în Vanzari. Refresh. Categoria apare automat în tbl_Profil. <strong>Ștergem linia. Profilul numeric reflectă realitatea curentă. Întotdeauna.</strong>",
+      { num: "14", title: "Testăm un refresh. Pe reguli.",
+        instr: "Adăugăm o tranzacție nouă în Vanzari. Refresh. Clasa și scorul se calculează automat. <strong>Ștergem linia. Regulile reflectă realitatea curentă. Întotdeauna.</strong>",
         excel: true },
       { num: "15", title: "Documentăm regula anti-derivă.",
-        instr: "Pe foaia KPI_GENERAL scriem: 15 client_nume, 8 judet, 4 categorie. <strong>Orice valoare nouă în afara acestor liste declanșează alertă în C07. Profilul protejează cifrele.</strong>",
+        instr: "Scriem: clasele sunt derivate prin reguli, nu manual. <strong>Orice rând nou primește automat clasă. Regula protejează clasificarea în C07.</strong>",
         excel: false }
     ]
   },
   {
-    id: 6, name: "CONFIRMARE", emotion: "Predarea profilului",
-    hook: "Setul are cifre. Are medie. Are margini.",
-    next: "Profilul devine fundație. C07 măsoară deasupra.",
+    id: 6, name: "CONFIRMARE", emotion: "Predarea setului clasificat",
+    hook: "Setul are clase. Are segmente. Are scoruri.",
+    next: "Sensul devine fundație. C07 citește timpul deasupra.",
     steps: [
-      { num: "16", title: "Verificăm profilul. Cap-coadă.",
-        instr: "Pentru fiecare agregat din KPI_GENERAL, confirmăm că egalează SUM pe Vanzari. <strong>Zero discrepanțe. Profilul numeric descrie setul real, nu o ipoteză.</strong>",
+      { num: "16", title: "Verificăm clasificarea. Cap-coadă.",
+        instr: "Pentru fiecare rând din _CLASE, confirmăm că respectă regula declarată. <strong>Zero rânduri fără clasă. Clasificarea descrie setul real, nu o ipoteză.</strong>",
         excel: true },
-      { num: "17", title: "Confirmăm profilul numeric complet. Auditabil.",
-        instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Profilarea nu modifică valori. Inventariază.</strong>",
+      { num: "17", title: "Confirmăm setul clasificat complet. Auditabil.",
+        instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Clasificarea adaugă sens. Nu modifică valori.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C07.",
-        instr: "Setul are profil numeric. Amplitudine stabilită. Dispersie măsurată. <strong>C07 deschide axa temporală pe un set ale cărui cifre sunt deja măsurate.</strong>",
+        instr: "Setul are clase, segmente, scoruri. <strong>C07 deschide axa temporală pe un set ale cărui rânduri au deja sens.</strong>",
         excel: false }
     ]
   }
@@ -1923,14 +1963,14 @@ const STAGES = [
 
 const PROMPTS = {
   1: {
-    label: "Prompt 01 · Inventar cifre",
-    text: "Analizează acest set de date. Pentru coloana valoare_neta calculează suma totală, media, mediana, minimul și maximul. Apoi calculează suma pe fiecare categorie de produs. Returnează rezultatul ca tabel de agregate numerice ale setului.",
+    label: "Prompt 01 · Reguli de clasificare",
+    text: "Analizează acest set de date. Pentru coloana valoare_neta calculează suma totală, media, mediana, minimul și maximul. Apoi calculează suma pe fiecare categorie de produs. Returnează rezultatul ca tabel de clase, segmente și scoruri.",
     meta: "Copilot inventariază. Nu interpretează. Nu decide. Descrie."
   },
   2: {
-    label: "Prompt 02 · Profilare structurală",
+    label: "Prompt 02 · Construcție de sens",
     text: "Pentru același set, descrie cum se distribuie valoarea. Calculează ce procent din total aduce fiecare categorie și ordonează categoriile descrescător. Listează primele și ultimele facturi după valoare_neta și estimează abaterea standard. Marchează separat extremele numerice care se îndepărtează mult de medie.",
-    meta: "Sumă, medie, dispersie. Profilul numeric complet."
+    meta: "Clase, segmente, scoruri. Setul clasificat complet."
   }
 };
 
@@ -2722,15 +2762,10 @@ function doReset() {
 
 // KEYBOARD
 document.addEventListener("keydown", (e) => {
-  // V42: dacă user e în mod edit (contenteditable), NU intercepta tastele
-  // Enter trebuie să creeze newline în text, nu să avanseze slide-ul.
-  // ArrowLeft/Right trebuie să mute cursor în text, nu să schimbe slide-ul.
-  const a = document.activeElement;
-  if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return;
-  if (e.target && (e.target.isContentEditable || e.target.closest && e.target.closest('[contenteditable="true"]'))) return;
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
   if (document.getElementById("modal-reset").classList.contains("show")) return;
 
-if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFrag(); }
+  if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFrag(); }
   else if (e.code === "ArrowLeft") { e.preventDefault(); prevFrag(); }
   else if (e.code === "Enter") {
     e.preventDefault();
@@ -2773,9 +2808,6 @@ if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFra
     if (t.closest("button, a, input, textarea, [role='button'], .prompt-copy-inline")) return;
     if (t.closest(".panel")) return;
     if (t.closest(".modal")) return;
-    // V42 EDITOR: click PE text → edit (browser default), NU navigare
-    if (t.closest("[contenteditable='true']")) return;
-    if (t.closest(".edit-wrap, .edit-container-wrap")) return;
     // Click pe text selectat = ignora ca sa nu deselecteze
     const sel = window.getSelection();
     if (sel && sel.toString().length > 0) return;
@@ -2831,335 +2863,6 @@ if (e.code === "ArrowRight" || e.code === "Space") { e.preventDefault(); nextFra
 loadState();
 render();
 </script>
-
-<style id="edit-style">
-#edit-toolbar {
-  position: fixed; bottom: 0; left: 0; right: 0;
-  background: #FFD400; color: #000;
-  padding: 6px 18px;
-  z-index: 99999;
-  font-family: -apple-system, "SF Pro Display", Arial, sans-serif;
-  font-size: 11px; font-weight: 700;
-  display: flex; align-items: center; gap: 12px;
-  border-top: 2px solid #000;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
-  min-height: 36px;
-}
-#edit-toolbar span.label { letter-spacing: 1.2px; text-transform: uppercase; font-size: 11px; }
-#edit-toolbar button {
-  background: #000; color: #FFD400; border: none;
-  padding: 6px 12px;
-  font-family: inherit; font-size: 10px; font-weight: 800;
-  letter-spacing: 1px; text-transform: uppercase;
-  cursor: pointer;
-}
-#edit-toolbar button:hover { background: #1a1a1a; }
-#edit-toolbar .hint {
-  margin-left: auto; font-size: 10px; font-weight: 500;
-  color: #000; opacity: 0.75;
-}
-body { padding-bottom: 42px !important; }
-
-[contenteditable="true"] {
-  outline: 1px dashed rgba(255, 212, 0, 0.4);
-  outline-offset: 2px;
-  cursor: text;
-}
-[contenteditable="true"]:hover { outline-color: rgba(255, 212, 0, 0.9); }
-[contenteditable="true"]:focus {
-  outline: 2px solid #FFD400;
-  outline-offset: 2px;
-}
-
-.edit-wrap { position: relative; }
-.edit-delete-btn {
-  position: absolute;
-  top: -10px; right: -10px;
-  width: 24px; height: 24px;
-  background: #C00000; color: #fff;
-  border: 2px solid #000;
-  border-radius: 50%;
-  font-size: 14px; font-weight: 900;
-  cursor: pointer;
-  display: none;
-  align-items: center; justify-content: center;
-  z-index: 100;
-  font-family: Arial, sans-serif;
-  line-height: 1;
-  padding: 0;
-}
-.edit-wrap:hover > .edit-delete-btn { display: flex; }
-.edit-delete-btn:hover { background: #ff0000; transform: scale(1.15); }
-
-.edit-container-wrap {
-  position: relative;
-  transition: outline 0.15s;
-}
-.edit-container-wrap:hover {
-  outline: 2px dashed #C00000;
-  outline-offset: 4px;
-}
-.edit-container-btn {
-  position: absolute;
-  top: -14px; right: -14px;
-  background: #C00000; color: #fff;
-  border: 2px solid #000;
-  border-radius: 18px;
-  padding: 5px 11px;
-  font-size: 10px; font-weight: 800;
-  letter-spacing: 1.2px; text-transform: uppercase;
-  cursor: pointer;
-  display: none;
-  z-index: 200;
-  font-family: -apple-system, Arial, sans-serif;
-  line-height: 1;
-}
-.edit-container-wrap:hover > .edit-container-btn { display: block; }
-.edit-container-btn:hover { background: #ff0000; transform: scale(1.05); }
-
-.screen.active::after {
-  content: "MOD EDITARE";
-  position: absolute;
-  top: 8px; right: 8px;
-  background: #FFD400; color: #000;
-  font-size: 9px; font-weight: 800;
-  letter-spacing: 1.5px;
-  padding: 4px 8px;
-  z-index: 50;
-  pointer-events: none;
-}
-body.exec-mode .screen.active::after { display: none; }
-
-
-/* Marcaj galben Trainity peste textul evidentiat */
-.trainity-highlight {
-  background: #FFD400;
-  color: #000;
-  padding: 0 2px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 120ms ease;
-}
-
-.trainity-highlight:hover {
-  background: #FFC700;
-}
-
-/* === HIGHLIGHTER R-V03.59 (V34+) === */
-/* ============================================================
-   HIGHLIGHTER PERSISTENT (R-V03.59 V34+)
-   Marcaje galbene persistente pe selectie text in HTML-Video.
-   Persistenta: localStorage key `trainity_c{NN}_video_highlights_v1`
-   Toggle off: click pe marcaj (capture phase intercepteaza inainte
-   de handler stage, deci NU avanseaza la slide-ul urmator).
-   
-   V34: ELIMINAT buton Reset + ELIMINAT keybind ESC.
-   ============================================================ */
-
-/* Marcaj galben Trainity peste textul evidentiat */
-.trainity-highlight {
-  background: #FFD400;
-  color: #000;
-  padding: 0 2px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 120ms ease;
-}
-
-.trainity-highlight:hover {
-  background: #FFC700;
-}
-
-</style>
-
-<div id="edit-toolbar">
-  <span class="label">📝 EDITOR PAGINĂ VIE</span>
-  <button onclick="editorExport()">💾 EXPORT</button>
-  <button onclick="editorReset()">↻ RESET</button>
-  <span class="hint">Click pe text → editezi. Hover deasupra + ✕ → șterge element. Hover pe card + buton roșu → șterge container. Ctrl+Z = Undo.</span>
-</div>
-
-<script id="edit-script">
-(function blockKeyboardInEditor() {
-  // V42 R-V03.70: STOP IMMEDIATE PROPAGATION când user e în mod edit
-  // (contenteditable, INPUT, TEXTAREA). În CAPTURE phase.
-  //
-  // stopPropagation NU oprește alte listener-e de pe ACELAȘI nod (document).
-  // Bubble handler-ul global keydown rulează oricum și apelează nextFrag().
-  // stopImmediatePropagation oprește TOATE listener-ele rămase (capture+bubble)
-  // pe acest nod. Combinat cu check explicit pe activeElement și closest.
-  function isEditingTarget(e) {
-    const a = document.activeElement;
-    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) return true;
-    const t = e.target;
-    if (!t) return false;
-    if (t.isContentEditable) return true;
-    if (typeof t.closest === "function") {
-      if (t.closest('[contenteditable="true"]')) return true;
-      if (t.closest("input, textarea")) return true;
-    }
-    // Pentru cazuri unde e.target e un Text node (fără closest), urc manual
-    let node = t;
-    while (node) {
-      if (node.nodeType === 1 && node.getAttribute && node.getAttribute("contenteditable") === "true") return true;
-      node = node.parentNode;
-    }
-    return false;
-  }
-  document.addEventListener("keydown", (e) => {
-    if (isEditingTarget(e)) {
-      e.stopImmediatePropagation();
-    }
-  }, true);
-  // Backup: și pentru keypress + keyup, în caz că handler-ul global ar avea
-  // multiple variante de capture
-  document.addEventListener("keypress", (e) => {
-    if (isEditingTarget(e)) e.stopImmediatePropagation();
-  }, true);
-})();
-
-(function setupLiveEditor() {
-  const EDITABLE_SELECTORS = [
-    ".hero-prelabel", ".hero-title", ".hero-hook", ".hero-hook-twist", ".hero-sub",
-    ".explain-emotion", ".explain-name", ".explain-hook", ".explain-next",
-    ".step-title", ".step-instruction", ".step-callout",
-    ".switch-title", ".switch-sub", ".switch-sub-dim",
-    ".prompt-label", ".prompt-body", ".prompt-meta",
-    ".verify-title", ".verify-sub", ".verify-sub-dim", ".verify-label",
-    ".verify-checklist li",
-    ".final-block p", ".final-block .dim", ".final-block .accent", ".final-motto",
-    ".conclusion-prelabel", ".conclusion-title", ".conclusion-sub",
-    ".exec-label", ".exec-emotion", ".exec-title", ".exec-phrase",
-    ".exec-closing-prelabel", ".exec-closing-motto", ".exec-closing-signature"
-  ];
-
-  // Containere video care pot fi sterse intregi
-  const CONTAINER_SELECTORS = [
-    ".final-block",
-    ".verify-checklist li",
-    ".prompt-box",
-    "[data-screen='executive']",
-    "[data-screen='conclusion']",
-    ".conclusion-block"
-  ];
-
-  function wrapElement(el) {
-    if (el.parentElement && el.parentElement.classList.contains("edit-wrap")) return;
-    const wrapper = document.createElement("span");
-    wrapper.className = "edit-wrap";
-    const computedDisplay = getComputedStyle(el).display;
-    if (computedDisplay && computedDisplay !== "inline") wrapper.style.display = "block";
-    el.parentNode.insertBefore(wrapper, el);
-    wrapper.appendChild(el);
-    const btn = document.createElement("button");
-    btn.className = "edit-delete-btn";
-    btn.textContent = "✕";
-    btn.type = "button";
-    btn.onclick = (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      if (confirm("Ștergi acest element?")) wrapper.remove();
-    };
-    wrapper.appendChild(btn);
-  }
-
-  function wrapContainer(el) {
-    if (el.dataset.containerEditorReady) return;
-    el.dataset.containerEditorReady = "1";
-    el.classList.add("edit-container-wrap");
-    const cs = getComputedStyle(el);
-    if (cs.position === "static") el.style.position = "relative";
-    const btn = document.createElement("button");
-    btn.className = "edit-container-btn";
-    btn.textContent = "🗑 ȘTERGE";
-    btn.type = "button";
-    btn.onclick = (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      if (confirm("Ștergi tot acest container?")) el.remove();
-    };
-    el.appendChild(btn);
-  }
-
-  function makeEditable(root) {
-    EDITABLE_SELECTORS.forEach(sel => {
-      try {
-        root.querySelectorAll(sel).forEach(el => {
-          if (el.dataset.editorReady) return;
-          if (el.closest("#edit-toolbar")) return;
-          el.setAttribute("contenteditable", "true");
-          el.setAttribute("spellcheck", "true");
-          el.dataset.editorReady = "1";
-          wrapElement(el);
-        });
-      } catch(e) {}
-    });
-    CONTAINER_SELECTORS.forEach(sel => {
-      try {
-        root.querySelectorAll(sel).forEach(el => { wrapContainer(el); });
-      } catch(e) {}
-    });
-  }
-
-  makeEditable(document);
-
-  const observer = new MutationObserver((mutations) => {
-    let need = false;
-    mutations.forEach(m => { if (m.addedNodes.length > 0) need = true; });
-    if (need) setTimeout(() => makeEditable(document), 30);
-  });
-  document.querySelectorAll(".screen").forEach(s => {
-    observer.observe(s, { childList: true, subtree: true });
-  });
-})();
-
-window.editorExport = function() {
-  const clone = document.documentElement.cloneNode(true);
-  clone.querySelectorAll("#edit-toolbar").forEach(e => e.remove());
-  clone.querySelectorAll("#edit-style").forEach(e => e.remove());
-  clone.querySelectorAll("#edit-script").forEach(e => e.remove());
-  clone.querySelectorAll(".edit-delete-btn").forEach(e => e.remove());
-  clone.querySelectorAll(".edit-container-btn").forEach(e => e.remove());
-  clone.querySelectorAll(".edit-wrap").forEach(wrap => {
-    while (wrap.firstChild) wrap.parentNode.insertBefore(wrap.firstChild, wrap);
-    wrap.remove();
-  });
-  clone.querySelectorAll(".edit-container-wrap").forEach(el => {
-    el.classList.remove("edit-container-wrap");
-    el.removeAttribute("data-container-editor-ready");
-  });
-  clone.querySelectorAll("[contenteditable]").forEach(e => e.removeAttribute("contenteditable"));
-  clone.querySelectorAll("[spellcheck]").forEach(e => e.removeAttribute("spellcheck"));
-  clone.querySelectorAll("[data-editor-ready]").forEach(e => e.removeAttribute("data-editor-ready"));
-  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
-  const blob = new Blob([html], {type: "text/html"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "HTML-Video-Excel-05-Cuantificare-Editat.html";
-  a.click();
-  URL.revokeObjectURL(a.href);
-};
-
-window.editorReset = function() {
-  if (!confirm("Anulezi TOATE modificările + curățești progresul + reîncarci de la slide 0?")) return;
-  // V42: șterg TOATE cheile trainity_* (state slide curent + highlights + orice cache)
-  try {
-    Object.keys(localStorage).forEach(k => {
-      if (k.indexOf("trainity_") === 0) localStorage.removeItem(k);
-    });
-    if (window.sessionStorage) {
-      Object.keys(sessionStorage).forEach(k => {
-        if (k.indexOf("trainity_") === 0) sessionStorage.removeItem(k);
-      });
-    }
-  } catch(e) {}
-  // Hard refresh cu cache-busting: timestamp în query string → request fresh
-  // location.replace (NU .href) - nu las entry în history, back nu re-aduce state-ul vechi
-  const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
-  window.location.replace(fresh);
-};
-</script>
-
 
 <script>
 /* HIGHLIGHTER R-V03.59 (V34+) */

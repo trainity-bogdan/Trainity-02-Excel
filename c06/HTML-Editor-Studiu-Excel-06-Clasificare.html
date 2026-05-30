@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C06 · Cuantificare · Trainity</title>
+<title>C06 · Clasificare · Trainity</title>
 <style>
 /* ============ DESIGN TOKENS ============ */
 :root {
@@ -1344,7 +1344,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C06 · Cuantificare</div>
+  <div class="mobile-topbar-title">C06 · Clasificare</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -1357,9 +1357,9 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <header class="cover">
         <div class="cover-label">PACK 02 EXCEL · TREAPTA 2 · CONSTRUCȚIA C06</div>
-        <h1 class="cover-title">Cum construim profilul numeric al setului</h1>
-        <p class="cover-subtitle">Setul are cifre. Excel le știe. Tu nu. Acum îi descoperim dimensiunea.</p>
-        <div class="cover-miza">Obținem profilul numeric real al setului. Nu mai decidem pe impresii.</div>
+        <h1 class="cover-title">Cum dăm sens fiecărui rând din set</h1>
+        <p class="cover-subtitle">Setul are clase ascunse. Excel le poate construi. Tu nu le-ai scris.</p>
+        <div class="cover-miza">Obținem setul clasificat: fiecare rând capătă o clasă, un segment, un scor. Sensul se naște din reguli.</div>
 
                 <div class="cover-meta">
           <div class="cover-meta-row">
@@ -1368,15 +1368,15 @@ body.has-continue .scroll-top { bottom: 88px; }
           </div>
           <div class="cover-meta-row">
             <span class="cover-meta-key">CONSTRUCȚIILE TREPTEI</span>
-            <span class="cover-meta-val">CLASIFICARE · <b>CUANTIFICARE</b> · DATARE · CARTOGRAFIERE</span>
+            <span class="cover-meta-val">DICȚIONAR · <b>CLASIFICARE</b> · DATARE · CARTOGRAFIERE</span>
           </div>
           <div class="cover-meta-row">
             <span class="cover-meta-key">CONSTRUCȚIE CURENTĂ</span>
-            <span class="cover-meta-val"><b>CUANTIFICARE</b> · 06 din 20</span>
+            <span class="cover-meta-val"><b>CLASIFICARE</b> · 06 din 20</span>
           </div>
           <div class="cover-meta-row">
             <span class="cover-meta-key">AI INTEGRAT</span>
-            <span class="cover-meta-val">2 prompturi Copilot · agregate numerice + profilare cantitativă</span>
+            <span class="cover-meta-val">2 prompturi Copilot · reguli de clasificare + scoring</span>
           </div>
         </div>
       </header>
@@ -1384,8 +1384,8 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="exec-hero">
         <div class="exec-hero-label">DE CE C06 · ÎNAINTE DE ORICE ANALIZĂ</div>
         <h2>Setul pare cunoscut. Nu este.</h2>
-        <p class="exec-hero-sharp">Problema nu este că nu cunoști cifrele. Problema este că nu știi cât de mari sunt cifrele.</p>
-        <p>Setul are clienți, categorii, județe, monede. Dar câți, care, în ce proporții, cu ce anomalii de cifrare nimeni nu a inventariat încă. Orice analiză, analiză sau dashboard construit fără să cunoști taxonomia se construiește pe presupuneri. C06 nu măsoară nimic. Inventariază tot.</p>
+        <p class="exec-hero-sharp">Problema nu este că nu cunoști rândurile. Problema este că niciunul nu are încă o clasă.</p>
+        <p>Setul are rânduri, categorii, valori. Dar niciun rând nu are încă o clasă, un segment, un scor. Orice analiză construită fără sens scris se construiește pe presupuneri. C06 nu măsoară nimic. Dă sens fiecărui rând.</p>
       </section>
 
       <div class="mantra-band">
@@ -1394,13 +1394,13 @@ body.has-continue .scroll-top { bottom: 88px; }
       </div>
 
       <section>
-        <div class="section-marker">SCENA REALĂ · CE CIFRE ASCUNDE SETUL FĂRĂ SĂ ȘTII</div>
+        <div class="section-marker">SCENA REALĂ · CE SENS POATE CĂPĂTA SETUL</div>
         <div class="anomaly-grid">
-<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">SUMĂ AGREGATĂ</b><p class="anomaly-desc">Suma totală a setului, calculată cu SUM. Aceeași valoare conservată cap-coadă în tot lanțul de construcții.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">MEDIE vs MEDIANĂ</b><p class="anomaly-desc">Contrastul dintre medie și mediană. Când diferă mult, setul este asimetric.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">AMPLITUDINE</b><p class="anomaly-desc">Distanța dintre cea mai mică și cea mai mare factură. Întinderea reală a setului.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">DISPERSIE</b><p class="anomaly-desc">Abaterea standard: cât de departe stau cifrele de medie.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">TOP-N / BOTTOM-N</b><p class="anomaly-desc">Cât din valoarea totală aduce fiecare categorie. Concentrare numerică, nu de frecvență.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">CLASA ABC</b><p class="anomaly-desc">Fiecare rând capătă clasa A/B/C după valoare_neta, printr-o regulă IF/IFS. Top 20% = A.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">SEGMENTE</b><p class="anomaly-desc">Fiecare categorie primește un segment de business prin SWITCH: Hardware → Echipamente, Software → Licențe.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">ETICHETE EXTERNE</b><p class="anomaly-desc">Atribute care există în nomenclatoare (CLIENTI, PRODUSE) aduse în set cu XLOOKUP.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">REGULI COMPUSE</b><p class="anomaly-desc">Reguli din condiții multiple cu IFS: clasă A + segment Licențe → etichetă compusă.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">SCORING</b><p class="anomaly-desc">Un scor 0-100 pe fiecare rând, dintr-o formulă de normalizare. Etichetare, nu decizie.</p></div>
 </div>
       </section>
 
@@ -1408,21 +1408,21 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">01</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 1 · DESCHIDERE NUMERICĂ</div>
+      <div class="stage-label">ETAPA 1 · DESCHIDERE A SENSULUI</div>
       <h2 class="stage-name">REALITATE</h2>
       <div class="stage-tags"><span class="phase-tag">INPUT</span><span class="type-tag">Manual</span></div>
     </div>
   </header>
-  <p class="stage-quote">Deschizi setul cu cifrele cunoscute de la C05. Le știi numele, nu și mărimea. Notezi ce cifre trebuie măsurate.</p>
+  <p class="stage-quote">Deschizi setul cu dicționarul de la C05. Știi ce categorii există, dar niciun rând nu are clasă. Notezi ce sens trebuie construit.</p>
   <div class="stage-body">
 <div class="step" data-step="1">
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
-    <h3 class="step-title">Deschide tabelul curat predat de C05</h3>
+    <h3 class="step-title">Deschide tabelul cu dicționar predat de C05</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Dublu-click pe Date_MASTER-C06.xlsx, foaia Vanzari. Setul predat de C05 este structural curat. 2.000 rânduri, 14 coloane stabile. Nu citești încă conținutul, doar îl deschizi.</p>
+    <p class="step-action">Dublu-click pe Date_MASTER-C06.xlsx, foaia Vanzari. Setul predat de C05 are deja dicționarul. 2.000 rânduri, 14 coloane. Nu citești încă, doar îl deschizi.</p>
     
   </div>
 </div>
@@ -1433,18 +1433,18 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Privește coloanele numerice și recunoaște: știi ce conțin, dar nu cât de mari sunt. Cât însumează setul? Care e media per factură? Cât de întins e între minim și maxim? Setul are cifre pe care nu le-ai citit.</p>
+    <p class="step-action">Privește rândurile și recunoaște: știi ce categorii există, dar niciun rând nu are încă o clasă proprie. Care e mare? Care e prioritar? Setul nu are încă sens scris.</p>
     
   </div>
 </div>
 <div class="step" data-step="3">
   <div class="step-head" onclick="toggleStep(3)">
     <div class="step-marker">PAS 03</div>
-    <h3 class="step-title">Fixează lista coloanelor de profilat</h3>
+    <h3 class="step-title">Fixează coloanele pe care construiești sens</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează coloanele numerice de profilat: valoare_neta în centru, plus cantitate și pret_unitar. Pe valoare_neta calculezi suma, media, mediana și extremele. categorie devine axa pe care grupezi agregatele.</p>
+    <p class="step-action">Notează coloanele pe care construiești sens: valoare_neta (pentru clase și scor), categorie (pentru segment). Aici se nasc coloanele derivate.</p>
     
   </div>
 </div>
@@ -1460,7 +1460,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">AI</span><span class="type-tag">Copilot · Promptul 1</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu interpretăm nimic încă. Întâi calculăm agregatele setului. Promptul natural este instrument de interogare numerică.</p>
+  <p class="stage-quote">Nu etichetăm la întâmplare. Întâi cerem regulile de clasificare. Promptul natural este instrument de a propune reguli.</p>
   <div class="stage-body">
 <div class="step" data-step="4">
   <div class="step-head" onclick="toggleStep(4)">
@@ -1469,21 +1469,21 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Activează Copilot pe foaia Vanzari. Așteaptă confirmarea că tabelul a fost analizat. Promptul natural devine instrument de interogare numerică, nu de execuție.</p>
+    <p class="step-action">Activează Copilot pe foaia Vanzari. Așteaptă confirmarea. Promptul natural devine instrument de a propune reguli, nu de execuție.</p>
     
   </div>
 </div>
 <div class="step" data-step="5">
   <div class="step-head" onclick="toggleStep(5)">
     <div class="step-marker">PAS 05</div>
-    <h3 class="step-title">Rulează Promptul 1 de agregare numerică</h3>
+    <h3 class="step-title">Rulează Promptul 1 de reguli de clasificare</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază Promptul 1 din caseta de mai jos. Lasă Copilot să răspundă. Vei primi agregatele de bază: suma totală, media, mediana, minimul și maximul pe valoare_neta, plus suma pe fiecare categorie.</p>
+    <p class="step-action">Copiază Promptul 1. Copilot îți propune regulile de clasificare ABC pe valoare_neta: ce prag separă A de B de C, plus un segment pentru fiecare categorie.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 1 · AGREGATE NUMERICE</div>
-      <div class="prompt-text">Analizează acest set de date. Pentru coloana valoare_neta calculează suma totală, media, mediana, minimul și maximul. Apoi calculează suma pe fiecare categorie de produs. Returnează rezultatul ca tabel de agregate numerice ale setului.</div>
+      <div class="prompt-label">PROMPT 1 · REGULI DE CLASIFICARE</div>
+      <div class="prompt-text">Pentru coloana valoare_neta, propune-mi o regulă de clasificare ABC: ce prag separă clasa A (cele mai mari) de B și de C. Apoi propune o etichetă de segment pentru fiecare categorie de produs.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1491,53 +1491,53 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="6">
   <div class="step-head" onclick="toggleStep(6)">
     <div class="step-marker">PAS 06</div>
-    <h3 class="step-title">Citește profilul numeric propus de sistem</h3>
+    <h3 class="step-title">Citește regulile de clasificare propuse</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Citește profilul numeric propus. Verifică reperele: suma totală pe categorie, media per factură, intervalul minim-maxim. Dacă Copilot raportează altceva decât cifrele din set, repetă întrebarea.</p>
+    <p class="step-action">Citește regulile propuse. Verifică pragurile: A = top, C = jos. Dacă Copilot propune altceva decât forma setului, repetă întrebarea.</p>
     <div class="section-sublabel">RAPORT AI · STRUCTURĂ INVESTIGATĂ</div>
     <ul class="inv-list">
 <li class="inv-item">
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">SUMĂ TOTALĂ · SUM + SUMIFS</div>
-        <div class="inv-item-desc">Cât însumează setul, total și pe categorie. Prima cifră de mărime.</div>
+        <div class="inv-item-label">CLASA ABC · IF / IFS</div>
+        <div class="inv-item-desc">Fiecare rând capătă A/B/C după valoare, printr-o regulă IF.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">MEDIE & MEDIANĂ · AVERAGE / MEDIAN</div>
-        <div class="inv-item-desc">Centrul setului: media și mediana per factură.</div>
+        <div class="inv-item-label">SEGMENT · SWITCH</div>
+        <div class="inv-item-desc">Fiecare categorie capătă un segment de business, cu SWITCH.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">AMPLITUDINE · MIN / MAX</div>
-        <div class="inv-item-desc">Marginile setului: cea mai mică și cea mai mare valoare.</div>
+        <div class="inv-item-label">ETICHETĂ EXTERNĂ · XLOOKUP</div>
+        <div class="inv-item-desc">Atribute aduse din nomenclator cu XLOOKUP. Sens din alt set.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">DISPERSIE · STDEV</div>
-        <div class="inv-item-desc">Cât de împrăștiate sunt cifrele față de medie.</div>
+        <div class="inv-item-label">REGULĂ COMPUSĂ · IFS</div>
+        <div class="inv-item-desc">Clase din condiții multiple: clasă + segment → etichetă, cu IFS.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">CONCENTRARE · PROPORȚII %</div>
-        <div class="inv-item-desc">Cât din total aduce fiecare categorie. Pareto de valoare.</div>
+        <div class="inv-item-label">SCOR · FORMULĂ</div>
+        <div class="inv-item-desc">Un scor 0-100 pe fiecare rând, dintr-o formulă. Nu decizie, etichetă.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">EXTREME · LARGE / SMALL</div>
-        <div class="inv-item-desc">Primele și ultimele facturi după valoare.</div>
+        <div class="inv-item-label">COLOANĂ DERIVATĂ · ETICHETARE</div>
+        <div class="inv-item-desc">Coloane derivate care adaugă sens, fără să schimbe datele.</div>
       </div>
     </li>
     </ul>
@@ -1550,35 +1550,35 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">03</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 3 · PROFILARE CANTITATIVĂ</div>
+      <div class="stage-label">ETAPA 3 · CONSTRUIREA CLASELOR</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
       <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Profilul numeric există ca foaie de profil. Acum adaugăm media, mediana și dispersia. Setul devine măsurabil cap-coadă.</p>
+  <p class="stage-quote">Prima regulă există. Acum adăugăm segmente, etichete externe și scor. Setul devine clasificat cap-coadă.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
-    <h3 class="step-title">Încarcă profilul numeric ca foaie de profil</h3>
+    <h3 class="step-title">Construiește clasa ABC cu IFS</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază tabelul răspuns într-o foaie nouă numită KPI_GENERAL. Salvează. Acest profil numeric devine prima foaie de profil a setului, livrabilul vizibil al C06.</p>
+    <p class="step-action">Într-o coloană nouă clasa_valoare, scrie =IFS(valoare_neta>=prag_A;"A";valoare_neta>=prag_B;"B";ADEVĂRAT;"C"). Fiecare rând capătă o clasă.</p>
     
   </div>
 </div>
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Rulează Promptul 2 de profilare a distribuției</h3>
+    <h3 class="step-title">Rulează Promptul 2 de scoring și segmente</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere distribuția: ce procent din total aduce fiecare categorie, primele și ultimele facturi după valoare, abaterea standard. Copilot răspunde cu profilul numeric complet.</p>
+    <p class="step-action">Copiază Promptul 2. Copilot propune formula de scor și regula compusă. Răspunde cu logica completă de etichetare.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 2 · PROFILARE A DISTRIBUȚIEI</div>
-      <div class="prompt-text">Pentru același set, descrie cum se distribuie valoarea. Calculează ce procent din total aduce fiecare categorie și ordonează categoriile descrescător. Listează primele și ultimele facturi după valoare_neta și estimează abaterea standard. Marchează separat extremele numerice care se îndepărtează mult de medie.</div>
+      <div class="prompt-label">PROMPT 2 · SCORING ȘI SEGMENTE</div>
+      <div class="prompt-text">Pentru același set, propune o formulă de scor 0-100 pe valoare_neta și o regulă compusă (cu IFS) care combină clasa și segmentul într-o etichetă finală pe fiecare rând.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1586,11 +1586,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="9">
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
-    <h3 class="step-title">Adaugă media și dispersia pe segmente</h3>
+    <h3 class="step-title">Construiește segmentul cu SWITCH</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe foaia _AGREGATE generată, citește media și mediana pe fiecare categorie. Unde media depășește mult mediana, distribuția e trasă de câteva facturi mari. Setul devine măsurabil pe segmente.</p>
+    <p class="step-action">Într-o coloană segment_produs, scrie =SWITCH(categorie;"Hardware";"Echipamente";"Software";"Licențe";"Consumabile";"Recurente";"Servicii";"Proiecte"). Fiecare categorie primește un segment.</p>
     <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
@@ -1643,43 +1643,43 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">04</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 4 · AUDIT AL AGREGATELOR</div>
+      <div class="stage-label">ETAPA 4 · AUDIT AL REGULILOR</div>
       <h2 class="stage-name">VERIFICARE</h2>
       <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">AGGREGATE</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în agregate. Confruntăm fiecare cifră cu setul însuși. Marcăm extremele numerice.</p>
+  <p class="stage-quote">Nu avem încredere oarbă în reguli. Confruntăm fiecare clasă cu setul însuși. Marcăm rândurile fără clasă.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
-    <h3 class="step-title">Confruntă suma agregată cu SUM pe Vanzari</h3>
+    <h3 class="step-title">Adu etichete externe cu XLOOKUP</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În foaia Vanzari, scrie =SUM(J2:J2001) pentru valoare_neta. Confirmă că rezultatul egalează suma totală din KPI_GENERAL. Repetă cu =SUMIF pe fiecare categorie. Cifrele din profil trebuie să corespundă exact.</p>
+    <p class="step-action">Cu XLOOKUP aduci un atribut din nomenclator: =XLOOKUP(client_nume;CLIENTI[nume_client];CLIENTI[judet]). Setul se îmbogățește cu etichete externe.</p>
     
   </div>
 </div>
 <div class="step" data-step="11">
   <div class="step-head" onclick="toggleStep(11)">
     <div class="step-marker">PAS 11</div>
-    <h3 class="step-title">Verifică media și amplitudinea cu funcții native</h3>
+    <h3 class="step-title">Construiește o regulă compusă cu IFS</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Scrie =AVERAGE, =MEDIAN, =MIN, =MAX pe valoare_neta și confirmă valorile din profil. Pe _AGREGATE verifică suma pe categorie: Hardware aduce cea mai mare parte, Servicii cea mai mică. Amplitudinea e distanța minim-maxim.</p>
+    <p class="step-action">Construiește o regulă compusă cu IFS: dacă clasa=A și segment=Licențe → "strategic". Sensul se naște din condiții multiple.</p>
     
   </div>
 </div>
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Marchează extremele numerice cu LARGE și SMALL</h3>
+    <h3 class="step-title">Calculează scorul fiecărui rând</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe sheet-ul _EXTREME, marchează cu fundal galben primele 10 facturi (LARGE) și ultimele 10 (SMALL) după valoare_neta. Aceste extreme numerice nu sunt erori, sunt marginile reale ale setului.</p>
+    <p class="step-action">În coloana scor, normalizează: =(valoare_neta-MIN(valoare_neta))/(MAX(valoare_neta)-MIN(valoare_neta))*100. Fiecare rând capătă un scor 0-100. Nu e o decizie, e o etichetă.</p>
     
   </div>
 </div>
@@ -1695,38 +1695,38 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
     </div>
   </header>
-  <p class="stage-quote">Profilul nu e o copie statică. Devine tabel viu, legat la set, cu regulă anti-derivă scrisă.</p>
+  <p class="stage-quote">Clasificarea nu e o copie statică. Devine tabel viu, legat la set, cu regulă anti-derivă scrisă.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Leagă profilul numeric la sursă ca tabel viu</h3>
+    <h3 class="step-title">Leagă coloanele derivate la sursă ca tabel viu</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Selectează foaia KPI_GENERAL. Format ca tabel (Insert > Table). Numește-o tbl_Profil. Acum profilul numeric devine tabel viu, legat structural la set, nu o copie statică.</p>
+    <p class="step-action">Selectează zona cu coloanele derivate. Format ca tabel (Insert > Table). Numește-l tbl_Clasificat. Sensul devine tabel viu, legat la set.</p>
     
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh simulat pe profil</h3>
+    <h3 class="step-title">Testează un refresh pe regulile de clasificare</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugă o nouă tranzacție în Vanzari cu o valoare_neta mare. Recalculează agregatele. Verifică: suma totală și maximul se actualizează. Șterge linia adăugată. Profilul numeric reflectă realitatea curentă a setului.</p>
+    <p class="step-action">Adaugă o tranzacție nouă în Vanzari. Refresh. Verifică: clasa, segmentul și scorul se calculează automat. Șterge linia. Regulile reflectă realitatea curentă.</p>
     
   </div>
 </div>
 <div class="step" data-step="15">
   <div class="step-head" onclick="toggleStep(15)">
     <div class="step-marker">PAS 15</div>
-    <h3 class="step-title">Documentează regula anti-derivă a cifrelor</h3>
+    <h3 class="step-title">Documentează regula anti-derivă a claselor</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Scrie în KPI_GENERAL nota: "Suma valoare_neta a setului este conservată cap-coadă. Orice agregat care se abate de la SUM(Vanzari) declanșează alertă C07." Această regulă protejează profilul împotriva derivei.</p>
+    <p class="step-action">Scrie nota: "Clasele și scorurile sunt derivate prin reguli, nu introduse manual. Orice rând nou primește automat clasă." Regula protejează clasificarea împotriva derivei.</p>
     
   </div>
 </div>
@@ -1737,32 +1737,32 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">06</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 6 · PREDAREA PROFILULUI NUMERIC</div>
+      <div class="stage-label">ETAPA 6 · PREDAREA SETULUI CLASIFICAT</div>
       <h2 class="stage-name">CONFIRMARE</h2>
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Profilul e validat cap-coadă. Suma rămâne conservată. Predăm profilul numeric către C07.</p>
+  <p class="stage-quote">Clasificarea e validată cap-coadă. Suma rămâne conservată. Predăm setul clasificat către C07.</p>
   <div class="stage-body">
 <div class="step" data-step="16">
   <div class="step-head" onclick="toggleStep(16)">
     <div class="step-marker">PAS 16</div>
-    <h3 class="step-title">Verifică profilul cap-coadă cu setul</h3>
+    <h3 class="step-title">Verifică clasificarea cap-coadă cu setul</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Verifică profilul cap-coadă: deschide Date_MASTER-C06.xlsx, foaia KPI_GENERAL, și confirmă că suma agregată egalează SUM(valoare_neta) din Vanzari. Zero discrepanțe.</p>
+    <p class="step-action">Verifică cap-coadă: deschide Date_MASTER-C06.xlsx, foaia _CLASE, și confirmă că fiecare clasă respectă regula declarată. Zero rânduri fără clasă.</p>
     
   </div>
 </div>
 <div class="step" data-step="17">
   <div class="step-head" onclick="toggleStep(17)">
     <div class="step-marker">PAS 17</div>
-    <h3 class="step-title">Confirmă profilul numeric complet auditabil</h3>
+    <h3 class="step-title">Confirmă setul clasificat complet auditabil</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmă: profilul numeric este complet, auditabil, conectat la sursă. Suma valoare_neta rămâne 7.986.019,38 lei (profilarea nu modifică valori). Profilul setului este sistemul tău de referință numerică.</p>
+    <p class="step-action">Confirmă: setul e clasificat, auditabil, conectat la sursă. Suma valoare_neta rămâne 7.986.019,38 lei (clasificarea adaugă sens, nu modifică valori). Setul clasificat e referința ta.</p>
     
   </div>
 </div>
@@ -1773,7 +1773,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Predă către C07 setul cu profil numeric atașat. C07 deschide axa temporală (memoria setului, evoluții lună de lună, ritm propriu). Acolo intri cu un set ale cărui cifre sunt deja măsurate.</p>
+    <p class="step-action">Predă către C07 setul clasificat. C07 deschide axa temporală (memoria setului). Acolo intri cu un set ale cărui rânduri au deja sens.</p>
     
   </div>
 </div>
@@ -1785,13 +1785,13 @@ body.has-continue .scroll-top { bottom: 88px; }
         <h2 class="final-title">8 verificări finale canonice</h2>
         <p class="final-intro">Înainte de a preda baza către C07, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
         <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C06.xlsx există, se deschide, conține foaia Vanzari neschimbată.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">Suma totală a setului confirmată cu SUM pe valoare_neta.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">MEDIE</div><div class="final-text">Media și mediana per factură calculate cu AVERAGE și MEDIAN.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">AMPLITUDINE</div><div class="final-text">Amplitudinea setului: distanța dintre minim și maxim, cu MIN și MAX.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">DISPERSIE</div><div class="final-text">Dispersia cifrelor măsurată cu STDEV față de medie.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">CONCENTRARE</div><div class="final-text">Concentrarea valorii pe categorii: Pareto numeric, nu de frecvență.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">EXTREME</div><div class="final-text">Extremele numerice izolate: top-N și bottom-N cu LARGE și SMALL.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROFIL</div><div class="final-text">Fișa numerică cap-coadă livrată ca KPI_GENERAL, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">CLASE</div><div class="final-text">Clasa ABC construită cu IFS pe valoare_neta: A/B/C pe fiecare rând.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">SEGMENTE</div><div class="final-text">Segmentul de business atribuit cu SWITCH pe categorie.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">ETICHETE</div><div class="final-text">Etichete externe aduse din nomenclatoare cu XLOOKUP.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">REGULI</div><div class="final-text">Reguli compuse construite cu IFS din condiții multiple.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SCOR</div><div class="final-text">Scor 0-100 pe fiecare rând, dintr-o formulă de normalizare.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">COLOANE</div><div class="final-text">Coloanele derivate adaugă sens fără să modifice datele sursă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SENS</div><div class="final-text">Setul clasificat cap-coadă livrat ca _CLASE, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Bază BI-ready validată.</div>
           <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C06 e pregătit pentru C07 analiză și Calcule.</div>
@@ -1801,12 +1801,12 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="next-section">
         <div class="next-label">TREAPTA 2 · CONSTRUCȚIA URMĂTOARE</div>
         <h3 class="next-title">C07 · Datare</h3>
-        <p class="next-desc">Profilul numeric este complet. Acum trecem de la cifre la timp: C07 deschide axa temporală a setului, cu evoluții lună de lună și ritmul propriu pe care numai datele îl pot arăta.</p>
+        <p class="next-desc">Setul clasificat este complet. Acum trecem de la sens la timp: C07 deschide axa temporală a setului, cu evoluții lună de lună și ritmul propriu pe care numai datele îl pot arăta.</p>
       </section>
 
       <section class="payoff-section">
         <div class="payoff-line dim">Nu am modificat valori.</div>
-        <div class="payoff-line dim">Nu am șters cifre.</div>
+        <div class="payoff-line dim">Nu am etichetat de mână.</div>
         <div class="payoff-line dim">Nu am alterat tranzacțiile.</div>
         <div class="payoff-line accent">Pentru prima dată, setul are dimensiune, centru și margini.</div>
         <div class="payoff-line regular">Un profil cunoscut. Apoi orice decizie.</div>
@@ -1815,7 +1815,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </section>
 
       <footer class="footer">
-        TRAINITY · C06 CUANTIFICARE · Cockpit operațional
+        TRAINITY · C06 CLASIFICAREA SETULUI · Cockpit operațional
       </footer>
 
     </main>
@@ -1823,7 +1823,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <nav class="side-nav" id="sideNav">
       <div class="nav-brand">
         <div class="nav-brand-label">PACK 02 EXCEL · C06</div>
-        <div class="nav-brand-title">CUANTIFICARE</div>
+        <div class="nav-brand-title">CLASIFICARE</div>
       </div>
 
       <div class="nav-progress">
@@ -2279,5 +2279,292 @@ setTimeout(() => {
 }, 700);
 
 </script>
+
+<style id="edit-style">
+/* Toolbar slim */
+#edit-toolbar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #FFD400; color: #000;
+  padding: 6px 18px;
+  z-index: 99999;
+  font-family: -apple-system, "SF Pro Display", Arial, sans-serif;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; gap: 12px;
+  border-top: 2px solid #000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+  min-height: 36px;
+}
+#edit-toolbar span.label { letter-spacing: 1.2px; text-transform: uppercase; font-size: 11px; }
+#edit-toolbar button {
+  background: #000; color: #FFD400; border: none;
+  padding: 6px 12px;
+  font-family: inherit; font-size: 10px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer;
+}
+#edit-toolbar button:hover { background: #1a1a1a; }
+#edit-toolbar .hint {
+  margin-left: auto; font-size: 10px; font-weight: 500;
+  color: #000; opacity: 0.75;
+}
+body { padding-bottom: 42px !important; }
+
+/* Contenteditable - outline cu vizibilitate maxima */
+[contenteditable="true"] {
+  outline: 1px dashed rgba(255, 212, 0, 0.4);
+  outline-offset: 2px;
+  cursor: text;
+}
+[contenteditable="true"]:hover { outline-color: rgba(255, 212, 0, 0.9); }
+[contenteditable="true"]:focus {
+  outline: 2px solid #FFD400;
+  outline-offset: 2px;
+  /* NO background change - pastram lizibilitatea textului */
+}
+
+/* Wrapper element editabil + buton sterge SIBLING */
+.edit-wrap {
+  position: relative;
+}
+.edit-delete-btn {
+  position: absolute;
+  top: -10px; right: -10px;
+  width: 24px; height: 24px;
+  background: #C00000; color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: 14px; font-weight: 900;
+  cursor: pointer;
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 100;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  padding: 0;
+}
+.edit-wrap:hover > .edit-delete-btn { display: flex; }
+.edit-delete-btn:hover { background: #ff0000; transform: scale(1.15); }
+
+/* Wrapper container (anomaly-card, inv-item etc) - hover shows STERGE CONTAINER */
+.edit-container-wrap {
+  position: relative;
+  transition: outline 0.15s;
+}
+.edit-container-wrap:hover {
+  outline: 2px dashed #C00000;
+  outline-offset: 4px;
+}
+.edit-container-btn {
+  position: absolute;
+  top: -14px; right: -14px;
+  background: #C00000; color: #fff;
+  border: 2px solid #000;
+  border-radius: 18px;
+  padding: 5px 11px;
+  font-size: 10px; font-weight: 800;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  cursor: pointer;
+  display: none;
+  z-index: 200;
+  font-family: -apple-system, Arial, sans-serif;
+  line-height: 1;
+}
+.edit-container-wrap:hover > .edit-container-btn { display: block; }
+.edit-container-btn:hover { background: #ff0000; transform: scale(1.05); }
+</style>
+
+<div id="edit-toolbar">
+  <span class="label">📝 EDITOR PAGINĂ VIE</span>
+  <button onclick="editorExport()">💾 EXPORT</button>
+  <button onclick="editorReset()">↻ RESET</button>
+  <span class="hint">Click pe text → editezi. Hover deasupra + ✕ → șterge element. Hover pe card + buton roșu sus → șterge tot containerul. Ctrl+Z = Undo.</span>
+</div>
+
+<script id="edit-script">
+(function blockKeyboardInEditor() {
+  document.addEventListener("keydown", (e) => {
+    const a = document.activeElement;
+    if (a && (a.isContentEditable || a.tagName === "INPUT" || a.tagName === "TEXTAREA")) {
+      e.stopPropagation();
+    }
+  }, true);
+})();
+
+(function setupLiveEditor() {
+  // Texte vorbite
+  const EDITABLE_SELECTORS = [
+    "h1", "h2", "h3", "h4",
+    // Hero / Cover
+    ".cover-label", ".cover-hook", ".cover-sub", ".cover-subtitle", ".cover-miza",
+    ".cover-meta-key", ".cover-meta-val",
+    // Exec hero
+    ".exec-hero-label", ".exec-hero-sharp",
+    // Mantra band
+    ".mantra-band-sub", ".mantra-band-main",
+    // Section markers
+    ".section-marker", ".section-sublabel",
+    // Stage headers
+    ".stage-label", ".stage-name", ".stage-emotion", ".stage-hook", ".stage-next", ".stage-quote",
+    // Steps
+    ".step-title", ".step-action", ".step-instruction", ".step-callout",
+    // Verify blocks
+    ".verify-title", ".verify-sub",
+    // Final / outro
+    ".final-text", ".final-label", ".final-intro",
+    ".final-block p", ".final-motto",
+    // Anomaly cards
+    ".anomaly-title", ".anomaly-desc",
+    // Investigation list items
+    ".inv-item-label", ".inv-item-desc",
+    // Prompt boxes
+    ".prompt-label", ".prompt-text",
+    // Next section (cap-coadă C+1)
+    ".next-label", ".next-title", ".next-desc",
+    // Payoff final
+    ".payoff-line", ".payoff-motto",
+    // Completion badge
+    ".completion-title", ".completion-subtitle",
+    // Paragrafe + liste generice
+    "p", "li"
+  ];
+
+  // Containere care pot fi sterse intregi
+  const CONTAINER_SELECTORS = [
+    ".anomaly-card",
+    ".inv-item",
+    ".final-card",
+    ".step",
+    ".verify-block",
+    ".prompt-box",
+    ".cover-block"
+  ];
+
+  function wrapElementWithDelete(el) {
+    if (el.parentElement && el.parentElement.classList.contains("edit-wrap")) return;
+    const wrapper = document.createElement("span");
+    wrapper.className = "edit-wrap";
+    const computedDisplay = getComputedStyle(el).display;
+    if (computedDisplay && computedDisplay !== "inline") wrapper.style.display = "block";
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+    const btn = document.createElement("button");
+    btn.className = "edit-delete-btn";
+    btn.textContent = "✕";
+    btn.type = "button";
+    btn.title = "Șterge acest element";
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (confirm("Ștergi acest element?")) wrapper.remove();
+    };
+    wrapper.appendChild(btn);
+  }
+
+  function wrapContainerWithDelete(el) {
+    if (el.dataset.containerEditorReady) return;
+    el.dataset.containerEditorReady = "1";
+    el.classList.add("edit-container-wrap");
+    // Pozitie relativa daca nu are
+    const cs = getComputedStyle(el);
+    if (cs.position === "static") el.style.position = "relative";
+    const btn = document.createElement("button");
+    btn.className = "edit-container-btn";
+    btn.textContent = "🗑 ȘTERGE CARD";
+    btn.type = "button";
+    btn.title = "Șterge tot containerul";
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (confirm("Ștergi tot acest container? Toate elementele din el dispar.")) el.remove();
+    };
+    el.appendChild(btn);
+  }
+
+  function makeEditable(root) {
+    // Elemente text
+    EDITABLE_SELECTORS.forEach(sel => {
+      try {
+        root.querySelectorAll(sel).forEach(el => {
+          if (el.dataset.editorReady) return;
+          if (el.closest("#edit-toolbar")) return;
+          if (el.tagName === "BUTTON" || el.tagName === "SCRIPT" || el.tagName === "STYLE") return;
+          if (!el.textContent.trim()) return;
+          el.setAttribute("contenteditable", "true");
+          el.setAttribute("spellcheck", "true");
+          el.dataset.editorReady = "1";
+          wrapElementWithDelete(el);
+        });
+      } catch(e) {}
+    });
+    // Containere
+    CONTAINER_SELECTORS.forEach(sel => {
+      try {
+        root.querySelectorAll(sel).forEach(el => {
+          wrapContainerWithDelete(el);
+        });
+      } catch(e) {}
+    });
+  }
+
+  makeEditable(document);
+
+  const observer = new MutationObserver((mutations) => {
+    let need = false;
+    mutations.forEach(m => { if (m.addedNodes.length > 0) need = true; });
+    if (need) setTimeout(() => makeEditable(document), 30);
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+
+window.editorExport = function() {
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll("#edit-toolbar").forEach(e => e.remove());
+  clone.querySelectorAll("#edit-style").forEach(e => e.remove());
+  clone.querySelectorAll("#edit-script").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-delete-btn").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-container-btn").forEach(e => e.remove());
+  clone.querySelectorAll(".edit-wrap").forEach(wrap => {
+    while (wrap.firstChild) wrap.parentNode.insertBefore(wrap.firstChild, wrap);
+    wrap.remove();
+  });
+  clone.querySelectorAll(".edit-container-wrap").forEach(el => {
+    el.classList.remove("edit-container-wrap");
+    el.removeAttribute("data-container-editor-ready");
+    if (el.style.position === "relative" && !el.getAttribute("style").includes(":")) {
+      el.removeAttribute("style");
+    }
+  });
+  clone.querySelectorAll("[contenteditable]").forEach(e => e.removeAttribute("contenteditable"));
+  clone.querySelectorAll("[spellcheck]").forEach(e => e.removeAttribute("spellcheck"));
+  clone.querySelectorAll("[data-editor-ready]").forEach(e => e.removeAttribute("data-editor-ready"));
+  clone.querySelectorAll("[data-container-editor-ready]").forEach(e => e.removeAttribute("data-container-editor-ready"));
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  const blob = new Blob([html], {type: "text/html"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "HTML-Studiu-Excel-06-Clasificare-Editat.html";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+window.editorReset = function() {
+  if (!confirm("Anulezi TOATE modificările + curățești progresul + reîncarci de la 0?")) return;
+  // V42: șterg TOATE cheile trainity_* (state curent + highlights + orice cache)
+  try {
+    Object.keys(localStorage).forEach(k => {
+      if (k.indexOf("trainity_") === 0) localStorage.removeItem(k);
+    });
+    if (window.sessionStorage) {
+      Object.keys(sessionStorage).forEach(k => {
+        if (k.indexOf("trainity_") === 0) sessionStorage.removeItem(k);
+      });
+    }
+  } catch(e) {}
+  // Hard refresh cu cache-busting: timestamp în query string → request fresh
+  const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
+  window.location.replace(fresh);
+};
+</script>
+
 </body>
 </html>

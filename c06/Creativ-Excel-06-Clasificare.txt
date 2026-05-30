@@ -1,7 +1,7 @@
 ══════════════════════════════════════════════════════════════════════════════
-CREATIVE-Excel-05-Cuantificare.txt
+CREATIVE-Excel-05-Clasificare.txt
 ══════════════════════════════════════════════════════════════════════════════
-Sistemul 02 · Excel · Construcția 06 · Cuantificarea Datelor
+Sistemul 02 · Excel · Construcția 06 · Clasificarea Setului
 Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
 ale constructiei C06.
 
@@ -636,5 +636,5 @@ PASUL URMĂTOR DUPĂ GENERAREA TUTUROR IMAGINILOR
 4. HTML-VIDEO devine astfel un singur fisier standalone autonom.
 
 ══════════════════════════════════════════════════════════════════════════════
-SFÂRȘIT FIȘIER CREATIVE-Excel-05-Cuantificare.txt
+SFÂRȘIT FIȘIER CREATIVE-Excel-05-Clasificare.txt
 ══════════════════════════════════════════════════════════════════════════════
