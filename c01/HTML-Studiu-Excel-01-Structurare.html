@@ -678,10 +678,10 @@ body.has-continue .stage-toast { bottom: 88px; }
 .stage.visible .stage-quote { display: block; }
 
 /* HERO + anomaly-grid + mantra + exec-hero raman vizibile mereu (sunt cadru, nu pasi) */
-.final-section, .next-section, .payoff-section {
+.final-section, .next-section, .payoff-section, .transformare-section {
   display: none;
 }
-.final-section.visible, .next-section.visible, .payoff-section.visible {
+.final-section.visible, .next-section.visible, .payoff-section.visible, .transformare-section.visible {
   display: block;
 }
 @keyframes stepBodyIn {
@@ -1358,6 +1358,9 @@ body.has-continue .scroll-top { bottom: 88px; }
 .hero-beforeafter ul{margin:0;padding-left:18px}
 .hero-beforeafter li{font-size:15px;line-height:1.7;color:#333}
 .ba-arrow{align-self:center;font-size:26px;color:#999;font-weight:800}
+.hero-competency{background:#fff7d6;border:1px solid #f0d97a;border-radius:8px;padding:16px 20px;margin:18px 0}
+.hc-label{font-size:11px;letter-spacing:2px;font-weight:800;color:#b8860b;margin-bottom:8px}
+.hero-competency p{font-size:17px;line-height:1.55;color:#222;font-weight:600;margin:0}
 .hero-outcomes{background:#111;border-radius:8px;padding:18px 22px;margin:18px 0}
 .outcomes-label{font-size:12px;letter-spacing:2px;color:var(--y,#f5c518);font-weight:800;margin-bottom:10px}
 .outcomes-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
@@ -1416,6 +1419,7 @@ body.has-continue .scroll-top { bottom: 88px; }
           <div class="ba-arrow">↓</div>
           <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>tabel valid</li><li>structură continuă</li><li>bază pentru formule</li><li>bază pentru Power Query</li></ul></div>
         </div>
+        <div class="hero-competency"><div class="hc-label">CE VEI PUTEA FACE</div><p>Poți identifica în mai puțin de 30 de secunde dacă un export ERP este utilizabil sau trebuie restructurat înainte de analiză.</p></div>
         <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>structură controlabilă</li><li>tabel validat</li><li>bază pentru T1 complet</li><li>bază pentru T2</li></ul></div>
         <a class="hero-start" href="#stage-1">ÎNCEPE CONSTRUCȚIA →</a>
 
@@ -1887,7 +1891,6 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-motto">Nu reconstruim tabelul. Îl facem controlabil.</div>
       </section>
       <section class="transformare-section">
-        <div class="ts-block ts-comp"><div class="ts-label">COMPETENȚA DOBÂNDITĂ</div><p>Poți identifica în mai puțin de 30 de secunde dacă un export ERP este utilizabil sau trebuie restructurat înainte de analiză.</p></div>
         <div class="ts-block ts-identity"><div class="ts-label">DE ACUM ÎNAINTE</div>
           <div class="ts-pair"><span class="ts-no">Nu mai vezi tabele.</span><span class="ts-yes">Vezi structuri.</span></div>
           <div class="ts-pair"><span class="ts-no">Nu mai verifici cifre.</span><span class="ts-yes">Verifici fundația.</span></div>
@@ -2199,7 +2202,7 @@ function applyState() {
   if (allStepsDone) {
     document.querySelectorAll(".stage[data-stage]").forEach(s => s.classList.add("visible"));
   }
-  ["final-section", "next-section", "payoff-section"].forEach(cls => {
+  ["final-section", "next-section", "payoff-section", "transformare-section"].forEach(cls => {
     document.querySelectorAll("." + cls).forEach(el => {
       el.classList.toggle("visible", allStepsDone);
     });

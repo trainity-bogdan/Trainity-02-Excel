@@ -91,7 +91,8 @@ Apoi: SLIDES EXECUTIVE (→ exec slides Video) + cele 6 etape (script video).
 
 ### Sloturi HTML-Studiu noi (v2.0)
 - `.arsenal-band` (`.aha-callout` + `.arsenal-card.greseala` + `.arsenal-card.simptom`) — după hero.
-- `.transformare-section` (`.ts-comp` competență + `.ts-identity` de-acum-înainte) — închidere, după payoff.
+- **COMPETENȚA** → hero (`.hero-competency`, label „CE VEI PUTEA FACE"): obiectiv ÎNAINTE de pași (advance organizer).
+- **DE ACUM ÎNAINTE** → `.transformare-section` (`.ts-identity`): închidere **gated** (apare la final, când toți pașii sunt bifați, ca payoff-ul). Split pe timp: abilitate=obiectiv sus, identitate=răsplată jos.
 - Hero (deja): question, micro-brief, before→after, outcomes (vezi sus).
 
 ### Gărzi
