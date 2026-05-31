@@ -95,12 +95,23 @@
   memorie." · C08 „Cele mai importante date despre un rând nu sunt în rând."
 - **Detaliu complet:** `_system/11-ARHITECTURA-CONCEPTUALA-T2.md` (autoritate conceptuală T2).
 
-## §T3 — ANALIZĂ *(se completează prin TIER SEED la C09; azi: schiță)*
-- **Axă (de definit la SEED):** setul devine INTERPRETAT (relații reale, măsuri, sens
-  pentru business).
-- **GARDA T3/T4 (de definit la SEED):** T3 analizează/modelează, dar NU raportează
-  (dashboard/T4) și NU decide pentru business (T5). Termeni interziși = T4/T5.
-- *Status: gol până la prima construcție T3. Vezi R-SEED-1.*
+## §T3 — ANALIZĂ (inițiată prin TIER SEED la C09 · aprobat ARHITECT V58)
+- **Axă:** setul cunoscut (T2) devine INTERPRETAT. T3 = ANALIZĂ.
+- **Ce produce T3:** relații reale, măsuri, comparații, interpretare; răspuns la „de ce /
+  cât / care e mai mare / care e mai bun".
+- **Ce NU produce T3:** vizualizare/dashboard/raport (= T4 RAPORTARE), decizie/acțiune
+  automată/recomandare executată (= T5 AUTOMATIZARE).
+- **Lanț (provizoriu, rafinabil):** C09 RELAȚII · C10 MĂSURI · C11 COMPARAȚII · C12 INTERPRETARE.
+- **Întrebări:** C09 „Cum se leagă datele într-un model pe care pot să-l interoghez?" *(C10-C12 la SEED-ul lor.)*
+- **GARDA T3/T4-T5 (lista pentru R-TIER-PARAM):**
+  - **PERMIS** (competența T3, era INTERZIS în T2): join, Data Model, relații 1:M, merge,
+    măsuri/agregări peste model, comparații, trend, performanță, „cel mai mare/mic",
+    „care e mai bun", interpretare, citire cross-tabel.
+  - **INTERZIS** (= T4/T5): dashboard, vizualizare, grafic publicabil, raport (T4); decizie
+    automată, alertă, acțiune, recomandare executată (T5).
+- **AHA locked (S5):** C09 „Fără relații ai date. Cu relații ai răspunsuri."
+- **NOTĂ inversiune:** termenii din garda §T2 (join/Data Model/trend/„cel mai mare") sunt
+  AICI competență, nu contaminare. Detectorul tier-aware (R-TIER-PARAM) îi tratează corect.
 
 ## §T4 — RAPORTARE · §T5 — AUTOMATIZARE
 - *Goale. Se completează prin TIER SEED la prima construcție a fiecărei trepte.*

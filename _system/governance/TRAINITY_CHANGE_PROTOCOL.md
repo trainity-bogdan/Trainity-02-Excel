@@ -55,4 +55,5 @@ poziție structurală. Orice fix de poziție = pasă transversală.
 | 2026-05-31 | c05,c06,c07 | confirmare E6 | R-TERM-5/garda | C05,C06,C07 | ARHITECT | transversală |
 | 2026-05-31 | c06 | fenomen 03 | garda §T2 (XLOOKUP) | C06 | ARHITECT | regulă+local |
 | 2026-05-31 | 06-MAP | C08 secțiune | R-NAME-1 | doc | ARHITECT | regulă |
+| 2026-05-31 | Bible §T3 | inițiere treaptă T3 | R-SEED-1/2/3, R-TIER-PARAM | §T3 (identitate+gardă+AHA C09) | ARHITECT | seed |
 ```
