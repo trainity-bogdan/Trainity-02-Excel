@@ -1473,6 +1473,10 @@ body.has-continue .scroll-top { bottom: 88px; }
 .tu-recunoastere{ padding-top:clamp(22px,4vw,34px); padding-bottom:clamp(22px,4vw,34px); }
 .tu-recunoastere .tu-lead{ font-size:15px; }
 </style>
+<style id="anomaly-lie-v1">
+.anomaly-lie{ margin-top:10px; padding-top:8px; border-top:1px solid #f0d9d9; font-size:13.5px; line-height:1.5; color:#444; }
+.anomaly-lie b{ color:#c0392b; letter-spacing:.2px; }
+</style>
 </head>
 <body>
 
@@ -1506,7 +1510,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="study-intro-top">
         <h1 class="cover-title">Cum construim controlul anomaliilor de date</h1>
         <p class="hero-microbrief">Un set de date poate părea curat și totuși să ascundă rânduri care denaturează orice raport. În această construcție separăm ce e valid tehnic de ce e corect operațional, fără să ștergem nimic.</p>
-        <div class="cover-miza">Obținem un set auditat. Fiecare anomalie este identificată, explicată și urmărită până la rezolvare.</div>
+        <div class="cover-miza">Datele valide pot produce rapoarte false. C02 oprește minciuna înainte să ajungă în KPI, dashboard și decizie: fiecare rând suspect rămâne vizibil, motivat și trasabil.</div>
       </section>
 
       <section class="intriga-bomb">
@@ -1529,7 +1533,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </section>
       <section class="tu-section tu-aha">
         <div class="tu-kicker">AHA</div>
-        <p class="tu-statement">O anomalie ștearsă e o dovadă pierdută.</p>
+        <p class="tu-statement">Valid nu înseamnă adevărat.</p>
       </section>
       <section class="tu-section tu-promise">
         <div class="tu-kicker">CINE DEVII</div>
@@ -1554,11 +1558,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <section>
         <div class="section-marker">SCENA REALĂ · CE PARE VALID DAR NU ESTE CORECT</div>
-        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">DATĂ ÎN VIITOR</b><p class="anomaly-desc">Vânzări cu dată ulterioară raportului. Trec validare, mint cronologia.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">COD CLIENT INEXISTENT</b><p class="anomaly-desc">Cod client care nu se regăsește în nomenclator. Referință ruptă.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">DUPLICAT EXACT</b><p class="anomaly-desc">Perechi identice de factură, dată și sumă. Aceeași tranzacție de două ori.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">TRANZACȚIE WEEK-END</b><p class="anomaly-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">CÂMP OBLIGATORIU GOL</b><p class="anomaly-desc">Cantitate sau preț unitar lipsă pe linii de tranzacție.</p></div></div>
+        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">DATĂ ÎN VIITOR</b><p class="anomaly-desc">Vânzări cu dată ulterioară raportului. Trec validare, mint cronologia.</p><p class="anomaly-lie"><b>Minciuna produsă:</b> raportul include vânzări care nu aparțin perioadei.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">COD CLIENT INEXISTENT</b><p class="anomaly-desc">Cod client care nu se regăsește în nomenclator. Referință ruptă.</p><p class="anomaly-lie"><b>Minciuna produsă:</b> vânzarea nu poate fi atribuită corect.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">DUPLICAT EXACT</b><p class="anomaly-desc">Perechi identice de factură, dată și sumă. Aceeași tranzacție de două ori.</p><p class="anomaly-lie"><b>Minciuna produsă:</b> același venit intră de două ori în raport.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">TRANZACȚIE WEEK-END</b><p class="anomaly-desc">Vânzări sâmbătă sau duminică pe filiale cu program luni-vineri.</p><p class="anomaly-lie"><b>Minciuna produsă:</b> activitatea pare reală într-o zi imposibilă.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">CÂMP OBLIGATORIU GOL</b><p class="anomaly-desc">Cantitate sau preț unitar lipsă pe linii de tranzacție.</p><p class="anomaly-lie"><b>Minciuna produsă:</b> calculul devine incomplet sau fals.</p></div></div>
       </section>
 
 
@@ -1970,7 +1974,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line accent">Am marcat ce e neconform cu motivul exact.</div>
         <div class="payoff-line regular">Anomaliile nu mai trec neobservate.</div>
         <div class="payoff-line regular">C03 poate începe.</div>
-        <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Nimic nu mai este suspect. Totul este marcat.</span></div>
+        <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Raportul nu mai înghite minciuna. O marchează.</span></div>
         <div class="payoff-motto">Încrederea începe după verificare.</div>
       </section>
 
