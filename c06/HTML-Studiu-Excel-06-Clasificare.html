@@ -1757,43 +1757,43 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
-      <div class="ba-item-indicator">Volum rânduri</div>
+      <div class="ba-item-indicator">Clasă pe rând</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">umflat cu ambalaj</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rând fără clasă</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">exact tranzacțiile reale</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">clasă ABC din regulă</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Continuitate tabel</div>
+      <div class="ba-item-indicator">Segment business</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ruptă de blank-uri și subtotaluri</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">categorie brută</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">stabilă, fără întreruperi</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">segment derivat cu SWITCH</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Coloane reale</div>
+      <div class="ba-item-indicator">Etichetă externă</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">amestecate cu coloane ascunse</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rând fără atribut extern</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">doar coloanele reale, stabile</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">atribut adus cu XLOOKUP</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Funcție SUM</div>
+      <div class="ba-item-indicator">Scor pe rând</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">prinde și subtotaluri</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">valoare brută, fără reper</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">egală cu AGGREGATE, exclude subtotaluri</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">scor 0-100, etichetă</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Re-export luna viitoare</div>
+      <div class="ba-item-indicator">Sursa sensului</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rulare manuală de la zero</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">sens presupus manual</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">un singur Refresh</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">sens derivat prin regulă</span></div>
       </div>
     </li>
     </ul>
@@ -1808,7 +1808,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 4 · AUDIT AL REGULILOR</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">AGGREGATE</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">IFS / SWITCH / XLOOKUP</span></div>
     </div>
   </header>
   <p class="stage-quote">Nu avem încredere oarbă în reguli. Confruntăm fiecare clasă cu setul însuși. Marcăm rândurile fără clasă.</p>
@@ -1831,7 +1831,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Construiește o regulă compusă cu IFS: dacă clasa=A și segment=Licențe → "strategic". Sensul se naște din condiții multiple.</p>
+    <p class="step-action">Construiește o regulă compusă cu IFS: dacă clasa=A și segment=Licențe → "A_Licențe". Sensul se naște din condiții multiple.</p>
     
   </div>
 </div>
@@ -1855,7 +1855,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · ANCORARE LA SURSĂ</div>
       <h2 class="stage-name">STABILIZARE</h2>
-      <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
+      <div class="stage-tags"><span class="phase-tag">RECALCUL</span><span class="type-tag">Tabel structurat</span></div>
     </div>
   </header>
   <p class="stage-quote">Clasificarea nu e o copie statică. Devine tabel viu, legat la set, cu regulă anti-derivă scrisă.</p>
@@ -1956,8 +1956,8 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">COLOANE</div><div class="final-text">Coloanele derivate adaugă sens fără să modifice datele sursă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SENS</div><div class="final-text">Setul clasificat cap-coadă livrat ca _CLASE, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Bază BI-ready validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C06 e pregătit pentru C07 analiză și Calcule.</div>
+          <div class="completion-title">Set clasificat validat.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C06 e pregătit pentru C07 Datare.</div>
         </div>
       </section>
 
@@ -1971,10 +1971,10 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line dim">Nu am modificat valori.</div>
         <div class="payoff-line dim">Nu am etichetat de mână.</div>
         <div class="payoff-line dim">Nu am alterat tranzacțiile.</div>
-        <div class="payoff-line accent">Pentru prima dată, setul are dimensiune, centru și margini.</div>
-        <div class="payoff-line regular">Un profil cunoscut. Apoi orice decizie.</div>
+        <div class="payoff-line accent">Pentru prima dată, fiecare rând are sens scris.</div>
+        <div class="payoff-line regular">Un sens construit. Apoi orice decizie.</div>
         <div class="payoff-line regular">C07 poate începe.</div>
-        <div class="payoff-motto">Mai întâi structura. Apoi orice.</div>
+        <div class="payoff-motto">Un sens construit. Apoi orice decizie.</div>
       </section>
 
       <footer class="footer">
@@ -2001,8 +2001,8 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
 <a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · AGGREGATE</span></span></a>
-<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Power Query Refresh</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH / XLOOKUP</span></span></a>
+<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Tabel structurat</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
       <div class="nav-section-label">8 VERIFICĂRI FINALE</div>
