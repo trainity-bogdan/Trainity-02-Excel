@@ -1,7 +1,18 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V49 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V50 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V50 — sumar (propagare model premium C01 → C04 cap-coadă):**
+
+1. **C04 = a doua construcție cu model premium V47** (după C01). Grefat pe HTML-Studiu + HTML-Editor-Studiu: hero cockpit (imagine-obiect NORMALIZARE inline base64 + cuvânt overlay + întrebare + hartă treaptă), arcul TU (BOMBA „Fișierul curat nu e rezultatul. Fluxul este." → RECUNOAȘTERE → GREȘEALA → AHA → CINE DEVII), before/after, outcomes. Scos `exec-hero DE CE` + `CONTRACT` (ca la C01 V47). CSS premium injectat scoped (L173). Paritate structurală cu C01.
+2. **Metodă propagare premium (L175):** grefă, nu COPY+MODIFY. Delta premium = doar regiunea hero+arc + CSS (~5KB markup; restul „greutate" C01 = imaginea hero base64). Stadii/scenă/final/payoff C04 păstrate. Video + Editor-Video NU primesc premium (V47 = doar Studiu, verificat: C01 Video are 0 clase premium).
+3. **Imagini Banana dedicate C04:** hero-normalizare.jpg (buclă conducte flux) + 5 exec-stage (etape 02-06). **exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — încă clonă C01 (vezi „Deschis"). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
+4. **FILM C04** dus spre Biblia: + ARC TRANSFORMARE + FORMULA finală + notă video Prompt 2.
+5. **Feedback extern G-06 (tot SIGUR) aplicat:** marker „CEI 10 PAȘI...", precizie dedup (scos „fuzzy" — Table.Distinct = dedup exact), final „Refresh. Aceeași ordine.", framing „activ".
+6. **Fix sistem — gate v20 conștient de premium (L176):** checkul IDENTITY cerea cover-label + slug în titlu, ambele eliminate de V47 → C01 ȘI C04 picau. Acum: detectează hero-overlay (premium) → verifică identitatea în hero-overlay + topbar + footer; altfel legacy (cover-label) pentru C05-C08. C04 GATE PASS complet.
+7. **Lecție L177 — imaginile lipite în chat SUNT accesibile** prin transcriptul sesiunii (`~/.claude/projects/.../<session>.jsonl`, bloc `type:"image"`, `source.data`). Nu mai spun „nu pot accesa imaginea". Procedat la fel ca sesiunea C02.
+8. **Audit ZERO DRIFT 88/88 · Gate v20 C04 PASS.** Toate pe `main`.
 
 **Sesiunea V49 — sumar (reguli git workflow + start lucru paralel multi-sesiune):**
 
@@ -139,7 +150,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume → model premium V47 propagat (Studiu+Editor-Studiu) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -175,6 +186,8 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
+0. **C04 — GENEREAZĂ exec-stage-1.jpg (etapa 01 REALITATE).** Singurul artefact vizual rămas: imaginea „teanc de 3 facturi brute" (prompt în `c04/Creativ` SECȚIUNEA 3 ETAPA 01, marcat STATUS: NEGENERAT). Acum e clonă C01. La primire: strip watermark + re-inline în Video/Editor-Video. Restul C04 = COMPLET (premium Studiu/Editor + FILM + 5/6 exec dedicate).
+0b. **Propagare model premium C01 → C05-C08** (după C01+C04). Aceeași grefă: hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Atenție: gate v20 deja conștient de premium.
 1. ~~SPEC + generare C06~~ ✓ LIVRAT V43 (CUANTIFICARE)
 2. **SPEC C07** cinematic — axa TEMPORALĂ ("setul are memorie")
 4. **Generare C07** după SPEC freezing
@@ -264,6 +277,9 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 
 - **L173** (V48) CSS cu selectori BARE într-un bloc copiat/redesignat se scurge peste alte secțiuni care refolosesc aceleași clase. Cazul empiric: redesignul hero V47 a definit `.ba-after{background:#0a0a0a}` neîncadrat, iar lista DOVADA din pași (pasul 9) folosește aceeași clasă `.ba-after` → box negru cu text negru invizibil. A trăit o sesiune nedetectat (audit verifică structură+prezență, nu contrast/cascadă). **Regulă durabilă:** orice CSS component-specific se scrie ÎNTOTDEAUNA scoped la containerul lui (`.hero-beforeafter .ba-after`, nu `.ba-after`), mai ales când numele de clasă (ba-before/ba-after/ba-val/ba-arrow) sunt generice și refolosite în alte secțiuni. La redesign de bloc, verifică dacă clasele atinse mai apar în altă parte din document înainte de a scrie reguli bare.
 
+- **L175** (V50) Propagarea modelului premium = GREFĂ chirurgicală, nu COPY+MODIFY. Delta premium real (hero+arc+CSS scoped) e ~5KB markup; restul „greutății" C01 e imaginea hero base64. Procedeu sigur: păstrezi conținutul de domeniu al construcției (stadii, scenă, pași, final, payoff), grefezi DOAR regiunea hero+arc din C01 cu text propriu + injectezi blocul CSS premium (cu maparea variabilelor lipsă, ex. `var(--tr-y)`→`var(--y)`). Premium V47 = doar Studiu/Editor-Studiu; Video nu se atinge (verifică: 0 clase premium în C01 Video).
+- **L176** (V50) Gate/detectoarele trebuie făcute conștiente de redesign, altfel chiar construcția-model pică. Gate v20 cerea `cover-label` + slug în titlu (eliminate de V47) → C01 ÎNSUȘI pica IDENTITY. Fix: ramură premium (detectează `hero-visual-overlay` → verifică identitatea în hero-overlay+topbar+footer), păstrând legacy pentru construcțiile nepropagate. **Regulă durabilă:** când redesignul mută unde trăiește o informație (identitate), actualizează detectorul în aceeași mișcare, nu mai târziu.
+- **L177** (V50) Imaginile lipite de ARHITECT în chat SUNT accesibile motorului prin transcriptul sesiunii (`~/.claude/projects/.../<session>.jsonl`, bloc `type:"image"` → `source.data` base64). Nu se spune niciodată „nu pot accesa imaginea". Le extrag, scot watermark-ul (R-V49.1) și le salvez singur. Mapez 1:1 cu prompturile după conținut (verificare vizuală pe cele ambigue) și confirm înainte de salvare când lipsesc/dublează.
 - **L174** (V49) La lucru paralel pe sesiuni multiple (branch-uri `claude/<task>` simultane care fac toate merge în `main`), riscul de conflict e izolat la fișierele PARTAJATE, nu la construcții. Construcțiile `cNN/` sunt foldere disjuncte → merge curat. Punctele de conflict: `STARE-CURENTA.md` (toți scriu sumar sesiune), `CLAUDE.md` (reguli), `_system/*` (detectori, docs), `index.html` (dashboard cu link-uri). **Regulă durabilă:** înainte de merge în main, `git fetch origin main` + merge main în branch întâi (rezolv conflictele pe fișierele partajate local), apoi push. La STARE-CURENTA, fiecare sesiune adaugă propria secțiune V{N} — dacă două sesiuni incrementează simultan, a doua care face merge ajustează numărul V și fuzionează sumarele, nu suprascrie. Pentru `index.html`, fiecare construcție își are propriul rând → merge aditiv.
 
 - **L175** (V49) Containerul Claude Code on Web NU are browser/Playwright instalat → randarea de verificare (L171) nu e posibilă aici. Compensare: validare structurală programatică (parser HTML pentru nesting balansat + decode base64 imagine + audit_sync + grep prezență/absență elemente). **Regulă durabilă:** când randarea nu e disponibilă, declar explicit „NEVERIFICAT randat" în raport și STARE-CURENTA, NU pretind verificare vizuală pe care n-am făcut-o; ARHITECT face check-ul vizual final sau îl fac la o sesiune cu browser.
