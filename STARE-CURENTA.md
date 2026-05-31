@@ -1,15 +1,26 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V54 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V55 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
 
-**Sesiunea V54 — sumar (C03 imagini exec COMPLET 6/6 + tooling cleanup branch-uri):**
+**Sesiunea V55 — sumar (C03 imagini exec COMPLET 6/6 + tooling cleanup branch-uri):**
 
 1. **C03 = MODEL FINALIZAT (a treia construcție 100% gata, după C01+C02+C04).** Cele 6 imagini exec-stage forensic dedicate generate de ARHITECT, procesate singur (extras transcript jsonl → strip watermark → recomprimate ~120-200KB, normă C02 → base64 în Video + Editor-Video). Toate 7 imaginile C03 (hero + 6 exec) sunt acum proprii, zero clone C01. Video 1.31MB. Render-verificat (data URI valid + tabel forensic se vede în player). C03 complet: premium + rescope C03/C04 + hero + 6/6 exec + FILM sync.
-2. **L181 (nou) — rafinare `strip_watermark`:** `detect_sparkle` SUPRA-detectează când colțul dreapta-jos e ADIACENT unei zone luminoase (marginea unei pagini albe lângă steluță) → prinde o casetă mare (164px) și clonează din zona deschisă = pată vizibilă. Fix aplicat la exec-stage 3-6 C03: casetă mică fixă (~95px) în colț + **clonă verticală din banda întunecată direct deasupra**. Completează L179 (acolo colțul ERA pe fundal deschis; aici colțul e pe întuneric dar adiacent luminii). De integrat ca mod în `strip_watermark.py`.
+2. **L183 (nou) — rafinare `strip_watermark`:** `detect_sparkle` SUPRA-detectează când colțul dreapta-jos e ADIACENT unei zone luminoase (marginea unei pagini albe lângă steluță) → prinde o casetă mare (164px) și clonează din zona deschisă = pată vizibilă. Fix aplicat la exec-stage 3-6 C03: casetă mică fixă (~95px) în colț + **clonă verticală din banda întunecată direct deasupra**. Completează L179 (acolo colțul ERA pe fundal deschis; aici colțul e pe întuneric dar adiacent luminii). De integrat ca mod în `strip_watermark.py`.
 3. **Tooling nou — `_system/generatoare/cleanup_branches.sh`:** șterge toate branch-urile în afară de `main`. Safe by default (dry-run; `main` protejat; comută pe main înainte de a șterge branch-ul curent). Flags: `--local`/`--remote`/`--all` + `--force`.
-4. **Curățat branch-urile:** local → doar `main`; remote → 2/3 șterse (`admiring-babbage`, `dreamy-keller`). `vigilant-goldberg` BLOCAT (403/disconnect — sesiune paralelă activă). **L182:** proxy-ul Web blochează `git push origin --delete` pentru branch-uri de sesiuni ÎNCĂ ACTIVE (403, ca la tag-uri); GitHub MCP n-are tool de delete-branch. Ștergerea remote a unei sesiuni active se face de pe mașina ARHITECT (`git push origin --delete`) sau din GitHub UI, ori după ce sesiunea se închide.
+4. **Curățat branch-urile:** local → doar `main`; remote → 2/3 șterse (`admiring-babbage`, `dreamy-keller`). `vigilant-goldberg` BLOCAT (403/disconnect — sesiune paralelă activă). **L184:** proxy-ul Web blochează `git push origin --delete` pentru branch-uri de sesiuni ÎNCĂ ACTIVE (403, ca la tag-uri); GitHub MCP n-are tool de delete-branch. Ștergerea remote a unei sesiuni active se face de pe mașina ARHITECT (`git push origin --delete`) sau din GitHub UI, ori după ce sesiunea se închide.
 
+---
+
+**Sesiunea V54 — sumar (C05 copy ascuțit prin G-06 + fix gate cover-title legacy):**
+
+1. **Feedback extern pe C05 → G-06 → aplicat** (confirmat ARHITECT): hook „Tabelul este curat. Dar știm ce conține?" (tensiune, callback C01-04 „curat"); **WOW nou cu slot `payoff-wow` + `data-wow`** „Setul nu mai este o masă de date. Acum are hartă." (C05 nu avea slot WOW vizibil în modelul V44; l-am adăugat cu CSS din C01, badge verde); MIZA reframe spre teritoriu enumerabil; exec-slide 1/4/6 reformulate (slide 4 fără nume de funcții: COUNTUNIQUE/COUNTIF → „Sistemul decide"); fix drift `payoff-motto` (zicea „Mai întâi structura. Apoi orice." din C01) → motto corect C05 în slot. Mantra/motto/slide 2/3/5 = NEUTRU, păstrate. Propagat FILM (master) → 4 machete, round-trip consistent.
+2. **Notă poziționare C05 în `06-MAP`:** C01-04 răspund „pot avea încredere în set?"; C05 răspunde „știu ce există în el?" (poarta T2, teritoriu cartografiat, nu etichete izolate).
+3. **Fix `gate_v20.py` (stil L176 — detector conștient de redesign):** checkul legacy IDENTITY cerea slug-ul caps articulat (DICȚIONARUL etc.) în `cover-title`, dar V42 a făcut titlurile descriptive libere („Cum construim X" / „Cum dăm sens fiecărui rând" — C06 nici nu conține slug-ul). Identitatea rămâne garantată de `cover-label` (CONSTRUCȚIA CNN) + footer + meta; anti-clonă narativă = audit_sync R-V03.69. Acum verificăm doar că `cover-title` există și nu e gol. **Deblochează GATE PASS pe C05-C08** (aveau toate aceeași presupunere stale de la V42). Premium C01-C04 neatins (ramura hero-overlay separată).
+4. **Git (L174 în practică):** „unrelated histories" la merge era cu `main` LOCAL (lineage orfan V45, rămas după un force-push pe remote), NU cu `origin/main` real. `origin/main` (10aef81) împărțea strămoșul `57be5d2` cu branch-ul de sesiune. Merge cu munca paralelă (C04 exec-stage-1, zero conflicte — foldere disjuncte) → FF pe main `10aef81..b805920`. **L181:** după force-push pe remote, `main` local poate rămâne pe un lineage orfan; ținta corectă de merge e `origin/main` (post-fetch), nu `main` local.
+5. **L182:** verificarea anti-regresie după un fix de script (am rulat gate pe C01-C04 ca să confirm că fix-ul legacy nu rupe premium) e OK; săparea în cauzele unor FAIL-uri pre-existente, neînrudite de task, și raportarea lor = scope creep. Confirm doar „nu vine din schimbarea mea", apoi mă opresc.
+
+Audit ZERO DRIFT 88/88. Gate C05-C08 PASS. Zero em/en-dash, nesting balansat.
 ---
 
 **Sesiunea V53 — sumar (card MIZA cu chenar + shadow, propagat C01-C04):**
@@ -197,7 +208,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51 MODEL FINALIZAT: premium + rescope C03/C04 + hero-poster + 6/6 exec-stage forensic dedicate + FILM sync | versiune unica + assets/ + hero | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
-| **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V54 (copy ascuțit G-06: hook/WOW/MIZA reframe + slot payoff-wow + exec-slides) | versiune unica + assets/ | ✓ ZERO DRIFT · GATE PASS |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C08** | CARTOGRAFIERE — HARTA ECOSISTEMULUI (axă relațională descriptivă; închide T2) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
