@@ -1559,7 +1559,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section>
         <div class="section-marker">SCENA REALĂ · CE SENS POATE CĂPĂTA SETUL</div>
         <div class="anomaly-grid">
-<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">CLASA ABC</b><p class="anomaly-desc">Fiecare rând capătă clasa A/B/C după valoare_neta, printr-o regulă IF/IFS. Top 20% = A.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">CLASA ABC</b><p class="anomaly-desc">Fiecare rând capătă clasa A/B/C după valoare_neta, printr-o regulă IFS cu praguri valorice explicite (prag_A, prag_B).</p></div>
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">SEGMENTE</b><p class="anomaly-desc">Fiecare categorie primește un segment de business prin SWITCH: Hardware → Echipamente, Software → Licențe.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">ETICHETE EXTERNE</b><p class="anomaly-desc">Atribute care există în nomenclatoare (CLIENTI, PRODUSE) aduse în set cu XLOOKUP.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">REGULI COMPUSE</b><p class="anomaly-desc">Reguli din condiții multiple cu IFS: clasă A + segment Licențe → etichetă compusă.</p></div>
@@ -1715,7 +1715,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 3 · CONSTRUIREA CLASELOR</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
-      <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
+      <div class="stage-tags"><span class="phase-tag">FORMULE</span><span class="type-tag">IFS / SWITCH</span></div>
     </div>
   </header>
   <p class="stage-quote">Prima regulă există. Acum adăugăm segmente, etichete externe și scor. Setul devine clasificat cap-coadă.</p>
@@ -1874,11 +1874,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh pe regulile de clasificare</h3>
+    <h3 class="step-title">Testează recalcularea automată a claselor</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugă o tranzacție nouă în Vanzari. Refresh. Verifică: clasa, segmentul și scorul se calculează automat. Șterge linia. Regulile reflectă realitatea curentă.</p>
+    <p class="step-action">Adaugă o tranzacție nouă în Vanzari. Verifică recalcularea automată: clasa, segmentul și scorul se actualizează singure. Șterge linia. Regulile reflectă realitatea curentă.</p>
     
   </div>
 </div>
@@ -1925,7 +1925,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmă: setul e clasificat, auditabil, conectat la sursă. Suma valoare_neta rămâne 7.986.019,38 lei (clasificarea adaugă sens, nu modifică valori). Setul clasificat e referința ta.</p>
+    <p class="step-action">Confirmă: setul e clasificat, auditabil, conectat la sursă. Clasificarea adaugă sens, fără să modifice valorile sursă. Setul clasificat e referința ta.</p>
     
   </div>
 </div>
@@ -1954,7 +1954,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">REGULI</div><div class="final-text">Reguli compuse construite cu IFS din condiții multiple.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SCOR</div><div class="final-text">Scor 0-100 pe fiecare rând, dintr-o formulă de normalizare.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">COLOANE</div><div class="final-text">Coloanele derivate adaugă sens fără să modifice datele sursă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SENS</div><div class="final-text">Setul clasificat cap-coadă livrat ca _CLASE, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">SENS</div><div class="final-text">Setul clasificat cap-coadă livrat ca _CLASE, valorile sursă neatinse.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Set clasificat validat.</div>
           <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C06 e pregătit pentru C07 Datare.</div>
@@ -2000,7 +2000,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-section-label">6 ETAPE</div>
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
-<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
+<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH</span></span></a>
 <a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH / XLOOKUP</span></span></a>
 <a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Tabel structurat</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
