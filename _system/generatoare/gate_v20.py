@@ -279,14 +279,18 @@ def check_identity(content, identitate, fisier_nume):
                     'detaliu': f"Nu am gasit '{expected_label}' in cover-label"
                 })
 
-            # cover-title trebuie sa contina nume_hero_caps_rand1
+            # cover-title: post-V42 titlul e descriptiv liber ("Cum construim X" /
+            # "Cum dam sens fiecarui rand din set"), slug-ul caps articulat
+            # (DICTIONARUL/CLASIFICAREA/...) NU mai traieste aici. Identitatea e
+            # garantata de cover-label (CONSTRUCTIA CNN) + footer + meta. Verificam
+            # doar ca titlul exista si nu e gol; anti-clona narativa = audit_sync R-V03.69.
             m = re.search(r'<h1 class="cover-title">([^<]*(?:<br>?[^<]*)?)</h1>', content)
-            if m and identitate['nume_hero_caps_rand1'] not in m.group(1):
+            if not m or not m.group(1).strip():
                 erori.append({
                     'clasa': 'IDENTITY',
                     'zona': 'cover-title',
                     'fisier': fisier_nume,
-                    'detaliu': f"Cover-title='{m.group(1)}' lipsa '{identitate['nume_hero_caps_rand1']}'"
+                    'detaliu': "cover-title lipsa sau gol"
                 })
 
             # Meta-val EXACT

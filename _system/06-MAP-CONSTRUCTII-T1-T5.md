@@ -94,13 +94,16 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | Aspect | Conținut |
 |---|---|
 | **AXA** | DICȚIONAR — ce reprezintă datele (inventar categorii, cardinalități, granularitate) |
-| **INTRIGA** | Setul are un dicționar. Excel îl știe. Tu nu. |
-| **MIZA** | Decizii pe categorii pe care nu le cunoști exhaustiv. |
+| **INTRIGA** | Tabelul este curat. Dar știm ce conține? |
+| **MIZA** | Transformă tabelul curat într-un teritoriu pe care îl poți enumera. |
 | **MANTRA** | Nu privim tabelul. Îl interogăm. |
 | **MOTTO** | Un set cunoscut. Apoi orice decizie. |
+| **WOW** | Setul nu mai este o masă de date. Acum are hartă. |
 | **FENOMENE** | 5 fenomene calitative (inventar dicționar): cardinalitate clienți, categorii, cantități, top frecvențe (Pareto), granularitate atomică |
 | **Sumă conservată** | DELTA 0 |
-| **Status** | LIVRABIL V44 (rename din CLASIFICARE; conținut = inventar) |
+| **Status** | LIVRABIL V53 (rename din CLASIFICARE; conținut = inventar; copy ascuțit G-06) |
+
+**Poziționare (graniță valoare narativă):** C01-C04 răspund la „pot avea încredere în set?" (structură, control, audit, normalizare). C05 răspunde la o întrebare fundamental diferită: „știu ce există în set?". Nu descoperă etichete izolate, ci universul setului — îl transformă dintr-o masă de date într-un teritoriu cartografiat, enumerabil. C05 = poarta către T2 (Cunoaștere).
 
 ### C06 · CLASIFICARE ✓
 
