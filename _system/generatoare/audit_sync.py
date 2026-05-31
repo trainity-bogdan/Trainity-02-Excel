@@ -192,6 +192,24 @@ def _r0371(folder):
     return True
 
 
+@detector('R-V57.parity', 'Paritate semnatura premium (mantra V56 + miza card)', 'studiu')
+def _rparity(c):
+    # Se aplica DOAR constructiilor PREMIUM (hero-visual-overlay). Legacy
+    # (inca pe model vechi) = N/A pana primesc premium. Prinde cazul cand o
+    # propagare de componenta-semnatura (ex. mantra V56, miza card V53) ajunge
+    # la unele constructii premium dar NU la altele (drift de paritate vizuala
+    # pe care structura/anti-clona/dash NU il prind). L189.
+    if 'hero-visual-overlay' not in c:
+        return True  # legacy (nepremium) = N/A, pass vacuos (harness 'studiu' face all(), None devine False)
+    m = re.search(r'\.mantra-band-main\s*\{[^}]*\}', c)
+    if not m:
+        return False
+    mantra_scale = 'clamp(30px, 7vw, 64px)' in m.group(0) and 'font-weight: 900' in m.group(0)
+    mantra_clone = 'box-decoration-break: clone' in c
+    miza_card = re.search(r'\.cover-miza\s*\{[^}]*box-shadow[^}]*\}', c) is not None
+    return mantra_scale and mantra_clone and miza_card
+
+
 def audit(root='.', json_out=False):
     zones = {}
     for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):
