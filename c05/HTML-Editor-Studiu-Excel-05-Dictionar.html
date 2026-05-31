@@ -1559,7 +1559,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section>
         <div class="section-marker">SCENA REALĂ · CE EXISTĂ ÎN SET DAR NU AI VĂZUT</div>
         <div class="anomaly-grid">
-<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">15 CLIENȚI</b><p class="anomaly-desc">Cardinalitate mică concentrată pe client_nume. Media ~133 rânduri/client. Aproape unic, dar nu.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">15 CLIENȚI</b><p class="anomaly-desc">Cardinalitate mică concentrată pe client_nume. Puțini clienți, multe facturi fiecare. Aproape unic, dar nu.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">4 CATEGORII</b><p class="anomaly-desc">Hardware, Software, Consumabile, Servicii. Tipologie minimă pe categorie.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">12 CANTITĂȚI</b><p class="anomaly-desc">Coloana cantitate are pattern discret (1, 2, 5, 10, 20, 50, 100). Numeric cu profil categorial.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">2.000 FACTURI</b><p class="anomaly-desc">Granularitatea atomică: o linie = o factură completă, nu o linie de produs.</p></div>
@@ -1757,43 +1757,43 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
-      <div class="ba-item-indicator">Volum rânduri</div>
+      <div class="ba-item-indicator">Categorii produs</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">umflat cu ambalaj</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">presupuse din ochi</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">exact tranzacțiile reale</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">enumerate exhaustiv</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Continuitate tabel</div>
+      <div class="ba-item-indicator">Cardinalitate coloane</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ruptă de blank-uri și subtotaluri</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">necunoscută</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">stabilă, fără întreruperi</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">numărată cu COUNTUNIQUE</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Coloane reale</div>
+      <div class="ba-item-indicator">Valori distincte</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">amestecate cu coloane ascunse</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ghicite</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">doar coloanele reale, stabile</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">listate complet în dicționar</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Funcție SUM</div>
+      <div class="ba-item-indicator">Concentrare (Pareto)</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">prinde și subtotaluri</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">invizibilă</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">egală cu AGGREGATE, exclude subtotaluri</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">top-3 măsurat</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Re-export luna viitoare</div>
+      <div class="ba-item-indicator">Granularitate</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rulare manuală de la zero</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">linie sau factură?</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">un singur Refresh</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">1 linie = 1 factură</span></div>
       </div>
     </li>
     </ul>
@@ -1855,30 +1855,30 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · ANCORARE LA SURSĂ</div>
       <h2 class="stage-name">STABILIZARE</h2>
-      <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
+      <div class="stage-tags"><span class="phase-tag">RECALC</span><span class="type-tag">UNIQUE / COUNTUNIQUE</span></div>
     </div>
   </header>
-  <p class="stage-quote">Profilul nu e o copie statică. Devine tabel viu, legat la set, cu regulă anti-derivă scrisă.</p>
+  <p class="stage-quote">Profilul nu e o copie statică. Recalculează din set, cu regulă anti-derivă scrisă.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Leagă dicționarul la sursă ca tabel viu</h3>
+    <h3 class="step-title">Construiește dicționarul pe formule dinamice</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Selectează foaia _DICTIONAR. Format ca tabel (Insert > Table). Numește-o tbl_Dictionar. Acum dicționarul devine tabel viu, legat structural la set, nu o copie statică.</p>
+    <p class="step-action">Construiește dicționarul pe formule dinamice: UNIQUE pentru lista de etichete distincte, COUNTUNIQUE și COUNTIF pentru cardinalități. Spill-ul se extinde singur din coloana-sursă. Astfel _DICTIONAR nu e o copie statică, ci recalculează din set la fiecare schimbare.</p>
     
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh simulat pe profil</h3>
+    <h3 class="step-title">Testează recalcularea automată a dicționarului</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugă o nouă tranzacție în Vanzari cu o categorie nouă inventată (de ex. "Test"). Refresh tbl_Dictionar. Verifică: categoria nouă apare automat. Șterge linia adăugată. Dicționarul reflectă realitatea curentă a setului.</p>
+    <p class="step-action">Adaugă o nouă tranzacție în Vanzari cu o categorie nouă inventată (de ex. "Test"). Pentru că dicționarul stă pe UNIQUE și COUNTUNIQUE, recalculează singur: categoria nouă apare automat în listă. Șterge linia adăugată; dicționarul revine. Reflectă întotdeauna realitatea curentă a setului.</p>
     
   </div>
 </div>
@@ -1889,7 +1889,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Scrie în foaia _PROFIL nota: "Dicționarul setului are 15 client_nume, 8 judet, 4 categorie. Orice valoare nouă în afara acestor liste declanșează alertă C06." Această regulă protejează profilul împotriva derivei.</p>
+    <p class="step-action">Scrie în foaia _PROFIL nota: "Dicționarul setului are 15 client_nume, 8 judet, 4 categorie. Orice valoare nouă în afara acestor liste declanșează alertă de dicționar." Această regulă protejează profilul împotriva derivei.</p>
     
   </div>
 </div>
@@ -1925,7 +1925,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmă: dicționarul este complet, auditabil, conectat la sursă. Suma valoare_neta rămâne 7.986.019,38 lei (profilarea nu modifică valori). Profilul setului este sistemul tău de referință taxonomică.</p>
+    <p class="step-action">Confirmă: dicționarul este complet, auditabil, conectat la sursă. Suma valoare_neta rămâne neschimbată (profilarea nu atinge valori). Profilul setului este sistemul tău de referință taxonomică.</p>
     
   </div>
 </div>
@@ -1936,7 +1936,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Predă către C06 setul cu dicționar atașat. C06 deschide axa cantitativă (cifre, KPI, statistici descriptive numerice). Acolo intri cu un set ale cărui etichete sunt deja inventariate.</p>
+    <p class="step-action">Predă către C06 setul cu dicționar atașat. C06 dă sens fiecărui rând prin reguli (clasă, segment, scor). Acolo intri cu un set ale cărui etichete sunt deja inventariate.</p>
     
   </div>
 </div>
@@ -1957,14 +1957,14 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROFIL</div><div class="final-text">Fișa cap-coadă a setului livrată ca _PROFIL, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Bază BI-ready validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C05 e pregătit pentru C06 KPI și Calcule.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C05 e pregătit pentru C06 CLASIFICARE.</div>
         </div>
       </section>
 
       <section class="next-section">
-        <div class="next-label">TREAPTA 1 · CONSTRUCȚIA URMĂTOARE</div>
-        <h3 class="next-title">C06 · KPI și Calcule</h3>
-        <p class="next-desc">Dicționarul descriptiv este complet. Acum trecem de la etichete la cifre: C06 deschide axa cantitativă cu KPI, statistici și măsuri agregate pe setul deja inventariat.</p>
+        <div class="next-label">TREAPTA 2 · CONSTRUCȚIA URMĂTOARE</div>
+        <h3 class="next-title">C06 · CLASIFICARE</h3>
+        <p class="next-desc">Dicționarul descriptiv este complet. Acum trecem de la ce există la ce înseamnă: C06 dă sens fiecărui rând prin reguli (clasă cu IFS, segment cu SWITCH, etichetă cu XLOOKUP, scor), pe setul deja inventariat.</p>
       </section>
 
       <section class="payoff-section">
