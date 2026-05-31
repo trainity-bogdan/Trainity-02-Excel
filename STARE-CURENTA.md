@@ -1,19 +1,27 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V52 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V53 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V53 — sumar (card MIZA cu chenar + shadow, propagat C01-C04):**
+
+1. **Card `.cover-miza`** (cerere ARHITECT): textul MIZA din modelul premium HTML-Studiu, transformat din linie cu border-top (V47) în **card alb cu chenar + colțuri rotunjite 10px + accent galben Trainity 4px pe stânga + shadow dublu**. Îl ridică de pe pagină ca element-cheie. Aplicat **C01-C04** (Studiu + Editor-Studiu, 8 fișiere). Verificat randat (C01 + C03). Audit ZERO DRIFT 88/88.
+2. **Documentat** în `_system/07-BRAND-OPERATIONAL.md` → „Componente vizuale signature" (specificația CSS completă + notă propagare C05-C08).
+3. De propagat la C05-C08 odată cu modelul premium (T2 încă pe model vechi).
+
+---
 
 **Sesiunea V52 — sumar (C02 finalizat: premium + business G-06 + imagini exec + FILM sync + verificat randat):**
 
 1. **C02 = model premium complet** (Studiu + Editor-Studiu): hero cockpit imagine-obiect CONTROL + system-map MARCARE activ + arc TU (bombă „Pare curat. Datele mint." → SUNĂ CUNOSCUT → GREȘEALA „marchează întâi" → AHA → CINE DEVII) + before/after + outcomes + transformare gated. Eliminat exec-hero DE CE + CONTRACT.
 2. **Tensiune business (feedback extern → G-06 SIGUR, confirmat ARHITECT):** MIZA strategică (risc KPI/dashboard/decizie), „Minciuna produsă" calitativ pe cele 5 anomalii (fără cifre — garda R-V02.15 + granița C02/C03 respectată), AHA „Valid nu înseamnă adevărat", WOW „Raportul nu mai înghite minciuna. O marchează." Aplicat pe 4 machete (WOW slot data-wow) + FILM sync.
-3. **5 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-2/3 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video. **exec-stage-6 (CONFIRMARE) rămâne placeholder** (negenerat).
+3. **TOATE cele 6 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE/CONFIRMARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-1/2/3/6 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video (verificat: a N-a imagine == fișierul exec-stage-N). exec-6 = folder CONTROLAT + VALIDAT + handoff la C03. **C02 = 6/6 imagini exec proprii + hero-poster dedicate.**
 4. **FILM C02 sync** (R-V46 FILM=master): MIZA + WOW vechi → noi în .docx (text într-un singur run, înlocuire sigură).
 5. **`PROMPTURI-SLIDES-EXEC-C02.txt`** creat (cele 6 verbatim din Creativ) + livrat ARHITECT.
 6. **VERIFICAT RANDAT** (L178 aplicat): C02 Studiu randat 393px + 1280px — hero, arc TU, „minciuna produsă", outcomes, mantra toate corecte. Audit ZERO DRIFT 88/88, nesting 0 pe toate 4 machete.
 7. **L179 (nou):** `strip_watermark.py` eșuează când colțul dreapta-jos al imaginii e pe fundal DESCHIS (hârtie/lumină), nu întunecat — `detect_sparkle` prinde o casetă prea mare și lasă o pată gri. Fix: clonare verticală dintr-o bandă imediat deasupra casetei steluței (textură continuă), casetă fixă. De integrat în strip_watermark ca fallback când zona-țintă e luminoasă.
 
-**C02 = MODEL FINALIZAT.** Rămas deschis C02: doar exec-stage-6 (CONFIRMARE) de generat.
+**C02 = MODEL FINALIZAT COMPLET** (a doua construcție 100% gata după C01): premium + business G-06 + 6/6 imagini exec dedicate + hero + FILM sync + verificat randat. Nimic deschis pe C02. **L180:** consolidarea pe STARE-CURENTA poate fi suprascrisă de un merge paralel — verific persistența post-merge și re-aplic dacă a fost înlocuită.
 
 ---
 
@@ -34,7 +42,7 @@
 
 1. **C04 = a doua construcție cu model premium V47** (după C01). Grefat pe HTML-Studiu + HTML-Editor-Studiu: hero cockpit (imagine-obiect NORMALIZARE inline base64 + cuvânt overlay + întrebare + hartă treaptă), arcul TU (BOMBA „Fișierul curat nu e rezultatul. Fluxul este." → RECUNOAȘTERE → GREȘEALA → AHA → CINE DEVII), before/after, outcomes. Scos `exec-hero DE CE` + `CONTRACT` (ca la C01 V47). CSS premium injectat scoped (L173). Paritate structurală cu C01.
 2. **Metodă propagare premium (L175):** grefă, nu COPY+MODIFY. Delta premium = doar regiunea hero+arc + CSS (~5KB markup; restul „greutate" C01 = imaginea hero base64). Stadii/scenă/final/payoff C04 păstrate. Video + Editor-Video NU primesc premium (V47 = doar Studiu, verificat: C01 Video are 0 clase premium).
-3. **Imagini Banana dedicate C04:** hero-normalizare.jpg (buclă conducte flux) + 5 exec-stage (etape 02-06). **exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — încă clonă C01 (vezi „Deschis"). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
+3. **Imagini Banana dedicate C04 — COMPLET (6/6):** hero-normalizare.jpg (buclă conducte flux) + cele 6 exec-stage (etape 01-06, toate dedicate, zero clone C01). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
 4. **FILM C04** dus spre Biblia: + ARC TRANSFORMARE + FORMULA finală + notă video Prompt 2.
 5. **Feedback extern G-06 (tot SIGUR) aplicat:** marker „CEI 10 PAȘI...", precizie dedup (scos „fuzzy" — Table.Distinct = dedup exact), final „Refresh. Aceeași ordine.", framing „activ".
 6. **Fix sistem — gate v20 conștient de premium (L176):** checkul IDENTITY cerea cover-label + slug în titlu, ambele eliminate de V47 → C01 ȘI C04 picau. Acum: detectează hero-overlay (premium) → verifică identitatea în hero-overlay + topbar + footer; altfel legacy (cover-label) pentru C05-C08. C04 GATE PASS complet.
@@ -177,9 +185,9 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | Cod | Nume | Versiune | Stare | Audit |
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster + exec-stage 1-5 forensic dedicate (base64 in Video); ⚠️ exec-stage-6 CONFIRMARE pending | ✓ ZERO DRIFT |
-| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
+| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -215,8 +223,8 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. ⚠️ **POZĂ C03 exec-stage-6 (CONFIRMARE) NEGENERAT** — exec-stage 1-5 forensic dedicate INTEGRATE (V53); doar etapa 6 (clonă C01) de generat în Banana (prompt în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`). (opțional: infografic + cover-yt C03)
-2. ⚠️ **POZĂ C04 exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — clonă C01; prompt în `c04/Creativ` SECȚIUNEA 3 ETAPA 01. La primire: strip watermark + re-inline Video/Editor-Video. Restul C04 = COMPLET.
+1. ⚠️ **POZĂ C03 exec-stage-6 (CONFIRMARE) NEGENERAT** — exec-stage 1-5 forensic dedicate INTEGRATE base64 în Video; doar etapa 6 (clonă C01) de generat în Banana (prompt în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`). (opțional: infografic + cover-yt C03)
+2. ✓ **C04 COMPLET 100%** — toate 6 exec-stage + hero dedicate. Nimic rămas pe C04.
 3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
 4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
 5. **Setup B2C landing pages live** (paralel)
