@@ -185,7 +185,8 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 - **NU inventa silentios** — flaghezi conflicte înainte de a genera.
 - **Întrebări scrise în text liber**, NU în grile A/B/C cu AskUserQuestion. ARHITECT preferă răspunsuri narative.
 - **Filtrul SIGUR/CONFLICT** la feedback extern (vezi `_system/09-FILTRU-G06-SIGUR-CONFLICT.md`). Se aplică AUTOMAT, cu format „FILTRU G-06 aplicat:".
-- **Limbaj** românesc cu diacritice.
+- **LIMBA ROMÂNĂ MEREU (REGULĂ DURABILĂ).** TOATE mesajele către ARHITECT sunt în limba română cu diacritice. NICIODATĂ în engleză. Singura excepție: conținut tehnic care e intrinsec englez (cod, prompturi Banana în engleză, nume de funcții Excel, comenzi git). Comentariul, explicația, raportul, întrebarea — mereu română.
+- **LIVRARE HTML DUPĂ ORICE MODIFICARE STUDIU (REGULĂ DURABILĂ).** De fiecare dată când modific un `HTML-Studiu` dintr-o construcție, îi dau ARHITECTULUI fișierul HTML pentru descărcare (`SendUserFile`) în același mesaj, FĂRĂ să mi-l ceară, ca să-l poată deschide și trimite la feedback. Se aplică automat la finalul fiecărui set de modificări pe Studiu.
 - **IMAGINI DE LA ARHITECT = le procesez singur, FĂRĂ să întreb.** Când ARHITECT lipește/atașează o imagine în chat (poză generată Banana etc.), o salvez automat ca fișier în locația corectă (`cNN/assets/` cu numele din Creativ) ȘI elimin watermark-ul (steluța Gemini din colț) FĂRĂ să-i cer lui să o pună sau să confirme. NU spun „nu pot accesa imaginea" — POT. Procedeu: extrag base64-ul din transcriptul sesiunii `~/.claude/projects/.../<session>.jsonl` (content block `type:"image"`, `source.data`) → decode → procesez cu PIL (watermark-ul Gemini e în colțul dreapta-jos pe fundal întunecat: îl acopăr cu un patch de fundal adiacent, păstrând textura) → salvez JPEG quality 90 în assets. Apoi integrez base64 în HTML dacă e cazul.
 
 ---
