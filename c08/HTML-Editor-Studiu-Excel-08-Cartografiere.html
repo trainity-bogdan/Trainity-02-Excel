@@ -1497,13 +1497,13 @@ body.has-continue .scroll-top { bottom: 88px; }
       </header>
 
       <section class="study-intro-top">
-        <h1 class="cover-title">Cum conectăm setul la contextul lui</h1>
+        <h1 class="cover-title">Cum aflăm unde trăiește contextul setului</h1>
         <p class="hero-microbrief">Setul are calendar: știi când se întâmplă fiecare rând. Dar trăiește încă singur, fără legături cu sursele care îl descriu. În această construcție fiecare rând primește context: cheia care îl leagă de client, produs, agent, depozit.</p>
-        <div class="cover-miza">Obținem harta ecosistemului. Fiecare rând se conectează la sateliții care îl descriu prin chei explicite. Contextul se citește din legături, nu se presupune.</div>
+        <div class="cover-miza">Obținem harta surselor. Pentru fiecare rând, localizăm unde trăiește contextul care îl descrie și prin ce cheie ajungem la el. Contextul se găsește, nu se presupune.</div>
       </section>
 
       <section class="intriga-bomb">
-        <p class="cover-subtitle"><span class="ib-1">Setul are un ecosistem.</span> <span class="ib-2">Rândurile lui trăiesc încă singure.</span></p>
+        <p class="cover-subtitle"><span class="ib-1">Te uiți la un tabel întreg.</span> <span class="ib-2">Jumătate din el e în altă parte.</span></p>
       </section>
 
       <!-- ARC TU: recunoastere -> greseala -> aha -> cine devii -->
@@ -1522,7 +1522,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </section>
       <section class="tu-section tu-aha">
         <div class="tu-kicker">AHA</div>
-        <p class="tu-statement">Un cod fără nomenclator este o legătură ruptă, nu un context.</p>
+        <p class="tu-statement">Cele mai importante date despre un rând nu sunt în rând.</p>
       </section>
       <section class="tu-section tu-promise">
         <div class="tu-kicker">CINE DEVII</div>
@@ -1533,7 +1533,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="hero-beforeafter">
           <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>tabel izolat</li><li>coduri fără nomenclator</li><li>context presupus</li><li>rânduri suspendate</li></ul></div>
           <div class="ba-arrow">→</div>
-          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>tabel conectat la sateliți</li><li>chei explicite spre nomenclatoare</li><li>context citit din legături</li><li>rânduri conectate</li></ul></div>
+          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>sateliții care îl descriu identificați</li><li>chei explicite spre nomenclatoare</li><li>context citit din chei</li><li>rânduri cu sursele găsite</li></ul></div>
         </div>
       </section>
       <section class="study-result">
@@ -1542,7 +1542,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <div class="mantra-band">
         <div class="mantra-band-sub">MANTRA · TRAINITY</div>
-        <div class="mantra-band-main">Nu interpretăm relațiile. Le <mark>cartografiem</mark>.</div>
+        <div class="mantra-band-main">Nu aducem contextul. Îl <mark>localizăm</mark>.</div>
       </div>
 
       <section>
@@ -1689,7 +1689,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
         <div class="inv-item-label">LEGĂTURI · DIRECTE / PRIN NUME / LIPSĂ</div>
-        <div class="inv-item-desc">PRODUSE legat direct, CLIENTI prin nume, AGENTI/DEPOZITE neconectate.</div>
+        <div class="inv-item-desc">PRODUSE legat direct, CLIENTI prin nume, AGENTI/DEPOZITE fără cheie comună.</div>
       </div>
     </li>
     </ul>
@@ -1800,7 +1800,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">XLOOKUP / COUNTIF</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în hartă. Confruntăm fiecare cheie cu setul însuși. Marcăm sateliții neconectați.</p>
+  <p class="stage-quote">Nu avem încredere oarbă în hartă. Confruntăm fiecare cheie cu setul însuși. Marcăm sateliții orfani.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
@@ -1827,11 +1827,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Marchează sateliții neconectați din hartă</h3>
+    <h3 class="step-title">Marchează sateliții orfani din hartă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe sheet-ul _ECOSISTEM, marchează cu fundal galben sateliții neconectați (AGENTI, DEPOZITE). Aceste lipsuri nu sunt erori, sunt forma reală a ecosistemului.</p>
+    <p class="step-action">Pe sheet-ul _ECOSISTEM, marchează cu fundal galben sateliții orfani (AGENTI, DEPOZITE). Aceste lipsuri nu sunt erori, sunt forma reală a ecosistemului.</p>
     
   </div>
 </div>
@@ -1878,7 +1878,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Scrie în _ECOSISTEM nota: "5 seturi, 2 chei reale (PRODUSE, CLIENTI), 2 sateliți neconectați. Orice satelit nou fără cheie declanșează alertă C09." Această regulă protejează harta împotriva derivei.</p>
+    <p class="step-action">Scrie în _ECOSISTEM nota: "5 seturi, 2 chei reale (PRODUSE, CLIENTI), 2 sateliți orfani. Orice satelit nou fără cheie declanșează alertă C09." Această regulă protejează harta împotriva derivei.</p>
     
   </div>
 </div>
@@ -1914,7 +1914,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmă: harta ecosistemului este completă, auditabilă, conectată la sursă. Harta este sistemul tău de referință relațională.</p>
+    <p class="step-action">Confirmă: harta ecosistemului este completă, auditabilă, ancorat la sursă. Harta este sistemul tău de referință relațională.</p>
     
   </div>
 </div>
@@ -1960,11 +1960,11 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line dim">Nu am modificat valori.</div>
         <div class="payoff-line dim">Nu am unit seturile.</div>
         <div class="payoff-line dim">Nu am alterat tranzacțiile.</div>
-        <div class="payoff-line accent">Nu mai ai rânduri suspendate. Ai rânduri conectate la context.</div>
+        <div class="payoff-line accent">Nu mai ai rânduri suspendate. Știi unde trăiește contextul fiecăruia.</div>
         <div class="payoff-line regular">O hartă completă. Apoi orice decizie.</div>
         <div class="payoff-line regular">C09 poate începe.</div>
-        <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Un tabel izolat nu explică nimic. Conectat la context, începe să vorbească.</span></div>
-        <div class="payoff-motto">Un set conectat. Apoi orice analiză de context.</div>
+        <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Un tabel izolat nu explică nimic. Cu contextul localizat, începe să vorbească.</span></div>
+        <div class="payoff-motto">Un set cartografiat. Apoi orice analiză de context.</div>
       </section>
 
       <footer class="footer">
