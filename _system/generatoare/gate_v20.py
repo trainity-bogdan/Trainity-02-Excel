@@ -130,6 +130,14 @@ def read_file(path):
         return f.read()
 
 
+def fold_diac(s):
+    """Pliaza diacriticele romanesti -> ASCII, lowercase. Slug-ul (stem
+    filename, ex. 'Dictionar') vs display cu diacritice ('Dicționar') trebuie
+    comparate modulo diacritice."""
+    tbl = str.maketrans('ăâîșțĂÂÎȘȚşţŞŢ', 'aaistAAISTstST')
+    return s.translate(tbl).lower()
+
+
 def is_in_style_or_script(content, position):
     """Verifica daca pozitia e in interiorul <style> sau <script>."""
     last_style_open = content.rfind('<style', 0, position)
@@ -261,7 +269,7 @@ def check_identity(content, identitate, fisier_nume):
                     'detaliu': f"Premium: nu am gasit 'OBIECTUL CONSTRUCȚIEI · {cod}' in hero-overlay"
                 })
             m = re.search(r'mobile-topbar-title">([^<]+)<', content)
-            if m and identitate['nume_slug'] not in m.group(1):
+            if m and fold_diac(identitate['nume_slug']) not in fold_diac(m.group(1)):
                 erori.append({
                     'clasa': 'IDENTITY',
                     'zona': 'mobile-topbar',

@@ -11,6 +11,9 @@
 4. **Git (L174 în practică):** „unrelated histories" la merge era cu `main` LOCAL (lineage orfan V45, rămas după un force-push pe remote), NU cu `origin/main` real. `origin/main` (10aef81) împărțea strămoșul `57be5d2` cu branch-ul de sesiune. Merge cu munca paralelă (C04 exec-stage-1, zero conflicte — foldere disjuncte) → FF pe main `10aef81..b805920`. **L181:** după force-push pe remote, `main` local poate rămâne pe un lineage orfan; ținta corectă de merge e `origin/main` (post-fetch), nu `main` local.
 5. **L182:** verificarea anti-regresie după un fix de script (am rulat gate pe C01-C04 ca să confirm că fix-ul legacy nu rupe premium) e OK; săparea în cauzele unor FAIL-uri pre-existente, neînrudite de task, și raportarea lor = scope creep. Confirm doar „nu vine din schimbarea mea", apoi mă opresc.
 
+6. **Propagare model PREMIUM pe C05** (grefă L175, după ascuțirea G-06): hero cockpit cu imagine-obiect DICȚIONAR dedicată (generată de ARHITECT din promptul Creativ SECȚIUNEA 1, watermark Gemini scos, base64 inline) + overlay „DICȚIONAR" + system-map T2 (DICȚIONAR activ) + hero-question „Din ce este făcut acest set?"; arc TU (BOMBA „Tabelul este curat. Dar știm ce conține?" → SUNĂ CUNOSCUT → GREȘEALA „Oamenii presupun ce conține setul. Profesioniștii îl enumeră." → AHA „Nu cunoști un set până nu îl poți enumera." → CINE DEVII „Nu mai vezi coloane. Vezi un teritoriu.") + before/after + outcomes; cover-miza upgradat la card (V53 propagat acum și pe C05). Scos exec-hero „DE CE C05" + cover-meta. Doar Studiu + Editor-Studiu (Video neatins, per L175). CSS premium grefat scoped din C01 (fix L173 inclus). **Verificat randat** (L178): mobil 393px + desktop 1280px, hero + arc + card miza corecte. FILM (master) + secțiune „ARC TRANSFORMARE" (format C04). hero salvat `c05/assets/hero-poster-excel-05-dictionar.jpg`.
+7. **Fix gate (#2 azi): premium topbar diacritic-insensitive.** Checkul premium cerea slug-ul ASCII (`Dictionar`) în topbar, dar topbar afișează diacritic (`Dicționar`) → C05 pica doar pe asta. Adăugat `fold_diac()` (pliază diacriticele românești) la compararea slug↔topbar. C05 GATE PASS premium. **L183:** slug-ul = stem filename ASCII, display-ul = diacritic; comparațiile de identitate între ele se fac modulo diacritice.
+
 Audit ZERO DRIFT 88/88. Gate C05-C08 PASS. Zero em/en-dash, nesting balansat.
 
 ---
@@ -200,7 +203,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51 MODEL FINALIZAT: premium + rescope C03/C04 + hero-poster + 6/6 exec-stage forensic dedicate + FILM sync | versiune unica + assets/ + hero | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
-| **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V54 (copy ascuțit G-06: hook/WOW/MIZA reframe + slot payoff-wow + exec-slides) | versiune unica + assets/ | ✓ ZERO DRIFT · GATE PASS |
+| **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V54 model PREMIUM (hero cockpit DICȚIONAR + arc TU + before/after + outcomes, Studiu+Editor-Studiu) + copy G-06 (hook/WOW/MIZA + slot payoff-wow + exec-slides) | versiune unica + assets/ + hero dedicat | ✓ ZERO DRIFT · GATE PASS |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C08** | CARTOGRAFIERE — HARTA ECOSISTEMULUI (axă relațională descriptivă; închide T2) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -237,7 +240,7 @@ Detectori activi (V40):
 
 1. ✓ **C03 COMPLET** — 6/6 exec-stage forensic dedicate + hero + premium + rescope. (opțional rămas: infografic + cover-yt C03, neesențiale)
 2. ✓ **C04 COMPLET 100%** — toate 6 exec-stage + hero dedicate. Nimic rămas pe C04.
-3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
+3. **Propagare model premium C06-C08** (C01-C05 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium. Necesită hero imagine-obiect dedicat per construcție (generat de ARHITECT din prompt Creativ).
 4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
 5. **Setup B2C landing pages live** (paralel)
 
