@@ -178,7 +178,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster + exec-stage 1-5 forensic dedicate (base64 in Video); ⚠️ exec-stage-6 CONFIRMARE pending | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -215,7 +215,7 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. ⚠️ **POZE C03 exec-stage 1-6 NEGENERATE** — clone C01 + watermark; prompturi gata în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`. ARHITECT generează în Banana → motor strip watermark + base64 în Video/Editor-Video. (opțional: infografic + cover-yt C03)
+1. ⚠️ **POZĂ C03 exec-stage-6 (CONFIRMARE) NEGENERAT** — exec-stage 1-5 forensic dedicate INTEGRATE (V53); doar etapa 6 (clonă C01) de generat în Banana (prompt în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`). (opțional: infografic + cover-yt C03)
 2. ⚠️ **POZĂ C04 exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — clonă C01; prompt în `c04/Creativ` SECȚIUNEA 3 ETAPA 01. La primire: strip watermark + re-inline Video/Editor-Video. Restul C04 = COMPLET.
 3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
 4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
