@@ -248,41 +248,62 @@ def check_identity(content, identitate, fisier_nume):
                 'detaliu': f"<title>='{m.group(1)}' nu contine '{cod}'"
             })
     else:
-        # Pentru Studiu: cover-label OBLIGATORIU
-        expected_label = f'CONSTRUCȚIA {cod}'
-        if expected_label not in content:
-            erori.append({
-                'clasa': 'IDENTITY',
-                'zona': 'cover-label',
-                'fisier': fisier_nume,
-                'detaliu': f"Nu am gasit '{expected_label}' in cover-label"
-            })
-        
-        # cover-title trebuie sa contina nume_hero_caps_rand1
-        m = re.search(r'<h1 class="cover-title">([^<]*(?:<br>?[^<]*)?)</h1>', content)
-        if m and identitate['nume_hero_caps_rand1'] not in m.group(1):
-            erori.append({
-                'clasa': 'IDENTITY',
-                'zona': 'cover-title',
-                'fisier': fisier_nume,
-                'detaliu': f"Cover-title='{m.group(1)}' lipsa '{identitate['nume_hero_caps_rand1']}'"
-            })
-        
-        # Meta-val EXACT
-        if identitate['meta_val_treapta'] not in content:
-            m = re.search(
-                r'cover-meta-key">TREAPTA</span>\s*<span class="cover-meta-val">(.*?)</span>',
-                content
-            )
-            if m:
+        # Studiu: model PREMIUM V47+ (hero-overlay + cockpit) sau LEGACY (cover-label + cover-meta)
+        is_premium = 'hero-visual-overlay' in content or 'class="hov-object"' in content
+        if is_premium:
+            # Identitatea premium traieste in hero-overlay (cod) + topbar (slug) + footer (cod).
+            # cover-label si cover-meta sunt eliminate intentionat la redesignul V47.
+            if f'OBIECTUL CONSTRUCȚIEI · {cod}' not in content:
                 erori.append({
                     'clasa': 'IDENTITY',
-                    'zona': 'meta-val-treapta',
+                    'zona': 'hero-overlay',
                     'fisier': fisier_nume,
-                    'detaliu': f"Asteptat: '{identitate['meta_val_treapta']}'\n              Gasit:     '{m.group(1)}'"
+                    'detaliu': f"Premium: nu am gasit 'OBIECTUL CONSTRUCȚIEI · {cod}' in hero-overlay"
                 })
-        
-        # Footer
+            m = re.search(r'mobile-topbar-title">([^<]+)<', content)
+            if m and identitate['nume_slug'] not in m.group(1):
+                erori.append({
+                    'clasa': 'IDENTITY',
+                    'zona': 'mobile-topbar',
+                    'fisier': fisier_nume,
+                    'detaliu': f"Premium: topbar='{m.group(1)}' nu contine slug '{identitate['nume_slug']}'"
+                })
+        else:
+            # LEGACY: cover-label OBLIGATORIU
+            expected_label = f'CONSTRUCȚIA {cod}'
+            if expected_label not in content:
+                erori.append({
+                    'clasa': 'IDENTITY',
+                    'zona': 'cover-label',
+                    'fisier': fisier_nume,
+                    'detaliu': f"Nu am gasit '{expected_label}' in cover-label"
+                })
+
+            # cover-title trebuie sa contina nume_hero_caps_rand1
+            m = re.search(r'<h1 class="cover-title">([^<]*(?:<br>?[^<]*)?)</h1>', content)
+            if m and identitate['nume_hero_caps_rand1'] not in m.group(1):
+                erori.append({
+                    'clasa': 'IDENTITY',
+                    'zona': 'cover-title',
+                    'fisier': fisier_nume,
+                    'detaliu': f"Cover-title='{m.group(1)}' lipsa '{identitate['nume_hero_caps_rand1']}'"
+                })
+
+            # Meta-val EXACT
+            if identitate['meta_val_treapta'] not in content:
+                m = re.search(
+                    r'cover-meta-key">TREAPTA</span>\s*<span class="cover-meta-val">(.*?)</span>',
+                    content
+                )
+                if m:
+                    erori.append({
+                        'clasa': 'IDENTITY',
+                        'zona': 'meta-val-treapta',
+                        'fisier': fisier_nume,
+                        'detaliu': f"Asteptat: '{identitate['meta_val_treapta']}'\n              Gasit:     '{m.group(1)}'"
+                    })
+
+        # Footer (ambele modele)
         m = re.search(r'<footer[^>]*>([^<]+)<', content)
         if m and cod not in m.group(1):
             erori.append({
