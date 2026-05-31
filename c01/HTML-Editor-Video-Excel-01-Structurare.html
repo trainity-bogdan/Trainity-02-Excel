@@ -3154,7 +3154,7 @@ window.editorReset = function() {
     }
   } catch(e) {}
   // Hard refresh cu cache-busting: timestamp în query string → request fresh
-  // location.replace (NU .href) — nu las entry în history, back nu re-aduce state-ul vechi
+  // location.replace (NU .href) - nu las entry în history, back nu re-aduce state-ul vechi
   const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
   window.location.replace(fresh);
 };

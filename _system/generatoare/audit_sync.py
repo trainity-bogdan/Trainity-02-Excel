@@ -49,6 +49,17 @@ def _r0359(c):
 def _v32(c):
     return 0 == len(re.findall(r'Date-Output-Excel|Date-Input-Excel', c))
 
+@detector('R-V03.72', 'Zero em/en-dash + bullet tu-list canonic (2022)', 'all_html')
+def _r0372(c):
+    # B1: zero em-dash (U+2014) / en-dash (U+2013) ORIUNDE (text, CSS content, comentarii JS/CSS)
+    if '—' in c or '–' in c:
+        return False
+    # B2: daca exista model premium (tu-list), bullet-ul TREBUIE sa fie canonic \2022 (acelasi in toate constructiile)
+    m = re.search(r'\.tu-list li::before\{[^}]*content:"([^"]*)"', c)
+    if m and m.group(1) != '\\2022':
+        return False
+    return True
+
 @detector('R-V03.33', 'Imagini base64 inline in Video', 'video')
 def _r0333(c):
     return c.count('data:image/') >= 5

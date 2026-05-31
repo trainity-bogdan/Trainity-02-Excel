@@ -194,6 +194,88 @@ forensic examination, fluorescent markings, evidence presentation."
 
 
 ══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 2B · POSTER HERO STUDIU (MODEL PREMIUM · imagine-obiect cu overlay)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA-OBIECT din hero-ul paginii HTML-Studiu (modelul premium
+propagat din C01). Peste imagine se suprapune IN HTML, jos-stanga, cuvantul-
+obiect urias "AUDIT" + kicker-ul "OBIECTUL CONSTRUCTIEI · C03", asezate peste
+un gradient negru. De aceea imaginea TREBUIE compusa cu subiectul in zona
+superioara/centrala si treimea de jos lasata intunecata si calma, ca textul
+overlay sa ramana lizibil. Sub imagine, in HTML, urmeaza harta-cockpit a treptei.
+
+Obiectul-erou C03 (vezi nota continuitate): PAGINA DE TABEL care pare curata,
+dar sub lumina de examinare dezvaluie marcaje fluorescente de contaminare -
+demonstreaza ce era ascuns, NU schimba valoarea reala.
+
+NUME FISIER SALVAT: `hero-poster-excel-03-auditare.jpg`
+DIMENSIUNE: 1920×1280 px (3:2 orizontal, cinematic - la fel ca seria exec-stage).
+
+
+COMPOZITIE CERUTA
+- Subiect in TREIMEA SUPERIOARA si centrala: o pagina de tabel printat pe un
+  birou forensic intunecat, impecabila la prima vedere.
+- O bara orizontala de lumina galbena de examinare trece peste pagina; acolo
+  unde atinge celulele, apar marcaje fluorescente galbene (puncte de spatiu la
+  finalul cuvintelor, caractere fantoma intre litere, aliniere asimetrica pe
+  celulele numerice).
+- TREIMEA DE JOS: shadow / void de birou intunecat, INTENTIONAT goala, pentru
+  textul overlay. Cadranul stanga-jos = cel mai intunecat.
+- Iluminare laterala calda razanta + particule fine de praf in fascicul.
+
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+poster hero composition with reserved negative space.
+
+Subject: A single printed business spreadsheet page resting on a dark forensic
+examination desk, shot from a slight top-down three-quarter angle. The table
+looks immaculately clean at first glance, rows aligned and numbers formatted.
+A thin horizontal bar of warm yellow examination light rakes across the
+upper-center of the page; where the beam touches the cells, faint fluorescent
+yellow markings reveal hidden contamination - small glowing dots at the end of
+words for trailing spaces, ghost characters between letters, asymmetric
+left-alignment indicators on number cells. The contamination is invisible to
+the naked eye and only the forensic light makes it visible. The data is being
+read and revealed, never altered.
+
+Composition: The page, the scanning beam and the fluorescent markings occupy the
+TOP TWO-THIRDS of the frame. The BOTTOM THIRD falls into deep shadow and dark
+desk void - intentionally empty and calm, reserved for large text overlay in
+post-production. Keep the lower-left quadrant the darkest area of the image.
+
+Lighting: A single warm directional examination light from the upper left, the
+beam catching fine dust particles in the air. The fluorescent markings and the
+scanning beam glow warm yellow; the lower portion of the frame falls off into
+near-black. A faint violet hint sits in the deepest shadows suggesting UV
+forensic wavelength.
+
+Style: Editorial forensic documentary photography, slightly desaturated except
+for the warm yellow scanning beam and fluorescent markings. Visible paper
+texture and grain. Cinematic shallow depth of field - the scanned cells razor
+sharp, the surrounding desk softly out of focus.
+
+Mood: Quiet, methodical, surgical. A specialist examining evidence and proving
+what was hidden, without drama, without panic. Discovery, not destruction.
+
+Aspect ratio: 3:2 horizontal, 1920×1280 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text rendered as real
+words. NO visible brand logos. NO flat infographic icons, NO drawn charts or
+graphs over the image. NO cartoon style. Pure photographic realism. Strict
+palette: black, warm white paper, warm yellow gold #FFD400, faint violet in
+shadows - NO blue, NO green, NO red. Keep the bottom third dark and uncluttered
+for the text overlay.
+
+NOTA CONTINUITATE (obligatorie in prompt): "Maintain strict visual continuity
+with the other scenes in the C03 series of forensic spreadsheet examination,
+fluorescent contamination markings, evidence documentation - same surface, same
+lighting style, same paper type, same mood."
+
+
+══════════════════════════════════════════════════════════════════════════════
 SECTIUNEA 3 · IMAGINI EXECUTIVE PER ETAPA (6 imagini)
 ══════════════════════════════════════════════════════════════════════════════
 
