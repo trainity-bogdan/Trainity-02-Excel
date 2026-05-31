@@ -121,10 +121,10 @@ calendar. A slim golden brass pointer rests across the timeline, marking
 the first and the last month of the covered period.
 
 Lighting: Hero spotlight from above creating dramatic contrast. The data
-table is lit with cool clinical white light. The floating labels and
-magnifying glass are warmed by amber light (#FFD400) from above-right,
+table is lit with cool clinical white light. The golden calendar bar and
+brass pointer are warmed by amber light (#FFD400) from above-right,
 casting subtle warm shadows back onto the table. Strong rim light on
-the labels separating them from the page surface.
+the calendar bar separating it from the page surface.
 
 Composition: Subject occupies left two-thirds of frame. Right third is
 left intentionally in deep shadow, available for overlay text in post-
@@ -135,8 +135,8 @@ Background: Matte black dark wood or brushed dark surface, slight grain
 texture visible. No competing elements, no other props.
 
 Color palette: Strictly monochromatic dark background with warm amber
-yellow (#FFD400) accents on labels and magnifying glass. White paper,
-black printed text on the data table. No other colors. The labels
+yellow (#FFD400) accents on the calendar bar and brass pointer. White paper,
+black printed text on the data table. No other colors. The calendar bar
 should glow slightly warm against the cooler table beneath.
 
 Mood: Chronological clarity, surgical order, "every row finally knows
@@ -147,7 +147,7 @@ features, product photography for premium instruments, chiaroscuro of
 Caravaggio. Investigation aesthetic.
 
 Technical: Shot on medium format camera, 50mm lens equivalent, f/4
-aperture for shallow depth of field with the floating labels in sharp
+aperture for shallow depth of field with the calendar bar in sharp
 focus and the table beneath slightly soft. No digital artifacts. Numbers
 on the data table can be illegible blurred financial figures, NOT
 gibberish letters.
@@ -157,7 +157,8 @@ Aspect ratio: 16:9 horizontal, 1280 by 720 pixels.
 Negative prompt: no people, no faces, no hands, no text overlays added
 post-process, no readable brand text, no logos, no other colors except
 amber and the natural monochrome, no cluttered background, no fantasy
-or sci-fi elements, no cartoon style.
+or sci-fi elements, no cartoon style, no clock faces, no hourglasses,
+no category label cards, no magnifying glass.
 
 
 ══════════════════════════════════════════════════════════════════════════════
