@@ -138,7 +138,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume → model premium V47 propagat (Studiu+Editor-Studiu) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -155,7 +155,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 ## Audit empiric (rulează `_system/generatoare/audit_sync.py`)
 
 ```
-✓ 10 detectoare empirice × 8 construcții = 80 verificări PASS
+✓ 11 detectoare empirice × 8 construcții = 88 verificări PASS (R-V03.72 nou: anti em/en-dash + bullet canonic)
 ✓ ZERO DRIFT (versiune unică per cNN — git ține istoricul complet via log/tags/branches)
 ✓ Toate cele 7 artefacte + assets/ prezente per construcție
 ```
@@ -169,6 +169,7 @@ Detectori activi (V40):
 - R-V03.47 cele 6 livrabile canonice
 - R-V03.58 FILM.docx prezent
 - R-V39.assets folder `assets/` cu 6 imagini exec-stage jpg (V41 update: eliminat PNG duplicate wasteful)
+- R-V03.72 zero em/en-dash oriunde (text/CSS content/comentarii) + bullet `.tu-list` canonic `\2022` uniform în toate construcțiile (V50)
 
 ---
 
