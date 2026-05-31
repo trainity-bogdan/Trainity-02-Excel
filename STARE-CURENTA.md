@@ -7,7 +7,7 @@
 
 1. **C02 = model premium complet** (Studiu + Editor-Studiu): hero cockpit imagine-obiect CONTROL + system-map MARCARE activ + arc TU (bombă „Pare curat. Datele mint." → SUNĂ CUNOSCUT → GREȘEALA „marchează întâi" → AHA → CINE DEVII) + before/after + outcomes + transformare gated. Eliminat exec-hero DE CE + CONTRACT.
 2. **Tensiune business (feedback extern → G-06 SIGUR, confirmat ARHITECT):** MIZA strategică (risc KPI/dashboard/decizie), „Minciuna produsă" calitativ pe cele 5 anomalii (fără cifre — garda R-V02.15 + granița C02/C03 respectată), AHA „Valid nu înseamnă adevărat", WOW „Raportul nu mai înghite minciuna. O marchează." Aplicat pe 4 machete (WOW slot data-wow) + FILM sync.
-3. **5 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-2/3 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video. **exec-stage-6 (CONFIRMARE) rămâne placeholder** (negenerat).
+3. **TOATE cele 6 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE/CONFIRMARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-1/2/3/6 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video (verificat: a N-a imagine == fișierul exec-stage-N). exec-6 = folder CONTROLAT + VALIDAT + handoff la C03. **C02 = 6/6 imagini exec proprii + hero-poster dedicate.**
 4. **FILM C02 sync** (R-V46 FILM=master): MIZA + WOW vechi → noi în .docx (text într-un singur run, înlocuire sigură).
 5. **`PROMPTURI-SLIDES-EXEC-C02.txt`** creat (cele 6 verbatim din Creativ) + livrat ARHITECT.
 6. **VERIFICAT RANDAT** (L178 aplicat): C02 Studiu randat 393px + 1280px — hero, arc TU, „minciuna produsă", outcomes, mantra toate corecte. Audit ZERO DRIFT 88/88, nesting 0 pe toate 4 machete.
@@ -177,7 +177,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | Cod | Nume | Versiune | Stare | Audit |
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
