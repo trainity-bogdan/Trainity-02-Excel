@@ -198,7 +198,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51 MODEL FINALIZAT: premium + rescope C03/C04 + hero-poster + 6/6 exec-stage forensic dedicate + FILM sync | versiune unica + assets/ + hero | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V54 (copy ascuțit G-06: hook/WOW/MIZA reframe + slot payoff-wow + exec-slides) | versiune unica + assets/ | ✓ ZERO DRIFT · GATE PASS |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -235,8 +235,8 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. ⚠️ **POZE C03 exec-stage 1-6 NEGENERATE** — clone C01 + watermark; prompturi gata în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`. ARHITECT generează în Banana → motor strip watermark + base64 în Video/Editor-Video. (opțional: infografic + cover-yt C03)
-2. ✓ **C04 COMPLET 100%** — exec-stage-1 (etapa 01 REALITATE) generat, watermark scos, re-inline în Video/Editor-Video. Toate 6 exec-stage + hero dedicate. Nimic rămas pe C04.
+1. ✓ **C03 COMPLET** — 6/6 exec-stage forensic dedicate + hero + premium + rescope. (opțional rămas: infografic + cover-yt C03, neesențiale)
+2. ✓ **C04 COMPLET 100%** — toate 6 exec-stage + hero dedicate. Nimic rămas pe C04.
 3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
 4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
 5. **Setup B2C landing pages live** (paralel)
