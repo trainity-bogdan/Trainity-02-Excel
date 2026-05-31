@@ -13,7 +13,7 @@
 6. **VERIFICAT RANDAT** (L178 aplicat): C02 Studiu randat 393px + 1280px — hero, arc TU, „minciuna produsă", outcomes, mantra toate corecte. Audit ZERO DRIFT 88/88, nesting 0 pe toate 4 machete.
 7. **L179 (nou):** `strip_watermark.py` eșuează când colțul dreapta-jos al imaginii e pe fundal DESCHIS (hârtie/lumină), nu întunecat — `detect_sparkle` prinde o casetă prea mare și lasă o pată gri. Fix: clonare verticală dintr-o bandă imediat deasupra casetei steluței (textură continuă), casetă fixă. De integrat în strip_watermark ca fallback când zona-țintă e luminoasă.
 
-**C02 = MODEL FINALIZAT.** Rămas deschis C02: doar exec-stage-6 (CONFIRMARE) de generat.
+**C02 = MODEL FINALIZAT COMPLET** (a doua construcție 100% gata după C01): premium + business G-06 + 6/6 imagini exec dedicate + hero + FILM sync + verificat randat. Nimic deschis pe C02. **L180:** consolidarea pe STARE-CURENTA poate fi suprascrisă de un merge paralel — verific persistența post-merge și re-aplic dacă a fost înlocuită.
 
 ---
 
