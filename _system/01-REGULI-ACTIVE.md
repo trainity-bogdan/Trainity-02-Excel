@@ -344,6 +344,40 @@ fenomene (nu e cazul în T1+T2 actual), regula necesită refinare.
 
 ---
 
+## R-V03.72 · ZERO EM/EN-DASH + BULLET CANONIC UNIFORM
+**Status:** ACTIVĂ V50 · introdusă după ce CSS-ul premium V47 a propagat
+em-dash (`—`) și en-dash (`–`) în machete, iar bullet-ul `.tu-list` diferea
+între construcții (C01 = `–`, C03 = `-`).
+
+Două probleme legate, un singur detector:
+
+**B1. ZERO em-dash (U+2014) / en-dash (U+2013) ORIUNDE** în HTML — nu doar în
+proza vizibilă, ci și în `content:` la `::before`, în comentarii CSS și JS.
+Em/en-dash = semnal AI (regula de voce din CLAUDE.md). Au scăpat în:
+comentariu CSS `/* ... — bloc mare bicolor */`, comentariu JS
+`// location.replace ... —`, și bullet `content:"–"`. Înlocuire: `-` simplu
+în comentarii; bullet → vezi B2.
+
+**B2. BULLET CANONIC UNIFORM în TOATE construcțiile.** Lista de marcatori
+`::before` e standardizată și IDENTICĂ peste tot:
+- `.tu-list li::before` (simptome, secțiune întunecată) = `\2022` (•)
+- `.ba-before li::before` (ÎNAINTE) = `\2715` (✗)
+- `.ba-after li::before` + `.outcomes-list li::before` (DUPĂ / rezultate) = `\2713` (✓)
+- `.ba-arrow::after` = `\2192` (→) desktop / `\2193` (↓) mobil
+
+Bullet-urile se scriu MEREU ca escape Unicode (`\NNNN`), niciodată ca glyph
+literal (un glyph literal poate fi un em/en-dash deghizat). La propagarea
+modelului premium în C02, C04-C08, se folosește exact acest set.
+
+**Detector empiric R-V03.72** (`all_html`): FAIL dacă fișierul conține `—`
+sau `–`; FAIL dacă există `.tu-list li::before` cu un `content` diferit de
+`\2022`. Construcțiile fără model premium (fără `.tu-list`) trec automat B2.
+
+**Status post-fix:** C01+C03 standardizate pe `\2022`; em/en-dash curățate
+din 4× Editor-Video (c01, c02, c03, c05) + 2× Studiu C01. Audit 88/88.
+
+---
+
 # REGULI ABANDONATE EXPLICIT
 
 | Cod | Ce era | De ce abandonată |
