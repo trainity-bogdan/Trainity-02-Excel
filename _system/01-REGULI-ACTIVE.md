@@ -365,6 +365,15 @@ Nu sunt în producție acum, dar înregistrate pentru viitor:
 
 ---
 
+## R-V49.1 · WATERMARK GEMINI SCOS AUTOMAT (fără întrebare)
+
+- **Status:** ACTIVĂ
+- **Ce face:** Gemini / Banana 2 (Imagen) ștampilează AUTOMAT o steluță ✦ în colțul dreapta-jos pe ORICE imagine generată. Nu se poate elimina prin prompt (reapare la fiecare generare). Motorul o scoate ÎNTOTDEAUNA, fără să întrebe ARHITECT, înainte ca imaginea să ajungă în `cNN/assets/`.
+- **Cum:** `python3 _system/generatoare/strip_watermark.py IN.jpg OUT.jpg` (clonare verticală a coltului din zona de deasupra — invizibil pe fundal matte-black). Reglaj opțional `--w` / `--h` pentru dimensiunea casetei.
+- **Regulă durabilă:** orice asset Banana/Gemini integrat (hero, infografic, exec-stage) trece prin `strip_watermark.py` ca pas obligatoriu de finisare. Motorul NU mai cere confirmare pentru asta — e parte din procedura de integrare imagine.
+
+---
+
 ## Cum se adaugă o regulă nouă
 
 1. **Identifică** problema sau pattern-ul nou
