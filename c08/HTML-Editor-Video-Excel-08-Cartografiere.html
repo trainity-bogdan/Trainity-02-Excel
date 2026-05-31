@@ -1648,7 +1648,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="dim frag" data-frag="1">Nu am modificat valori.</p>
       <p class="dim frag" data-frag="2">Nu am unit seturile.</p>
       <p class="dim frag" data-frag="3">Nu am alterat tranzacțiile.</p>
-      <p class="accent frag" data-frag="4">Pentru prima dată, setul nu mai este singur.</p>
+      <p class="accent frag" data-frag="4">Un tabel izolat nu explică nimic. Conectat la context, începe să vorbească.</p>
       <p class="frag" data-frag="5">O hartă completă. Apoi orice decizie.</p>
       <p class="frag" data-frag="6">C09 poate începe.</p>
       <div class="final-motto frag" data-frag="7">Un set cunoscut.<br>Apoi orice decizie.</div>
@@ -1773,8 +1773,8 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-content">
       <div class="exec-closing-prelabel frag" data-frag="1">Motto:</div>
       <h1 class="exec-closing-motto frag" data-frag="2">
-        Mai întâi structura.
-        <span class="exec-closing-motto-yellow">Apoi orice.</span>
+        Un set conectat.
+        <span class="exec-closing-motto-yellow">Apoi orice analiză de context.</span>
       </h1>
       <div class="exec-closing-divider frag" data-frag="3"></div>
       <div class="exec-closing-signature frag" data-frag="4">
@@ -1845,7 +1845,7 @@ const STAGES = [
   },
   {
     id: 2, name: "INVESTIGAȚIE", emotion: "Interogare relațională",
-    hook: "Nu privim tabelul. Îl interogăm.",
+    hook: "Nu interpretăm relațiile. Le cartografiem.",
     next: "Copilot răspunde cu harta. Apoi confruntăm cu registrul.",
     steps: [
       { num: "04", title: "Activăm Copilot. Pe foaia Vanzari.",
@@ -1860,7 +1860,7 @@ const STAGES = [
   {
     id: 3, name: "TRANSFORMARE", emotion: "Cartografiere relațională",
     hook: "Harta există. Adăugăm cheile și rolurile.",
-    next: "Power Query nu intră. Doar Copilot și foi de profil.",
+    next: "Fără transformări de flux. Doar Copilot și fișe de legătură.",
     steps: [
       { num: "07", title: "Încărcăm harta. Ca foaie de profil.",
         instr: "Copiem tabelul răspuns pe sheet nou _ECOSISTEM. <strong>Harta devine livrabil vizibil. Nu o opinie a Copilot. O foaie din registru.</strong>",
@@ -1912,7 +1912,7 @@ const STAGES = [
         instr: "Pentru fiecare cheie din _ECOSISTEM, confirmăm că coloana există real în ambele foi. <strong>Zero chei inventate. Harta descrie registrul real, nu o ipoteză.</strong>",
         excel: true },
       { num: "17", title: "Confirmăm harta ecosistemului completă. Auditabilă.",
-        instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Cartografierea nu modifică valori. Desenează legăturile.</strong>",
+        instr: "Valorile sursă rămân neatinse, conservate din Date_MASTER-initial. <strong>Cartografierea nu modifică valori. Desenează legăturile.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C09.",
         instr: "Setul are o hartă. Sateliți, chei, roluri. <strong>C09 deschide Data Model pe un set al cărui ecosistem e deja cartografiat.</strong>",
@@ -1924,7 +1924,7 @@ const STAGES = [
 const PROMPTS = {
   1: {
     label: "Prompt 01 · Inventar cifre",
-    text: "Analizează acest set de date. Pentru coloana valoare_neta calculează suma totală, media, mediana, minimul și maximul. Apoi calculează suma pe fiecare categorie de produs. Returnează rezultatul ca hartă a ecosistemului setului.",
+    text: "Pentru fiecare cod din set (cod_produs, client_nume, agent), spune-mi în ce satelit se găsește corespondentul lui și ce câmpuri descriptive aduce. Identifică ce coduri nu au corespondent. Returnează rezultatul ca hartă a ecosistemului setului.",
     meta: "Copilot inventariază. Nu interpretează. Nu decide. Descrie."
   },
   2: {
