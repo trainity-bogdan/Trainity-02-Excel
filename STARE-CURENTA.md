@@ -1,7 +1,15 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V52 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V53 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V53 — sumar (card MIZA cu chenar + shadow, propagat C01-C04):**
+
+1. **Card `.cover-miza`** (cerere ARHITECT): textul MIZA din modelul premium HTML-Studiu, transformat din linie cu border-top (V47) în **card alb cu chenar + colțuri rotunjite 10px + accent galben Trainity 4px pe stânga + shadow dublu**. Îl ridică de pe pagină ca element-cheie. Aplicat **C01-C04** (Studiu + Editor-Studiu, 8 fișiere). Verificat randat (C01 + C03). Audit ZERO DRIFT 88/88.
+2. **Documentat** în `_system/07-BRAND-OPERATIONAL.md` → „Componente vizuale signature" (specificația CSS completă + notă propagare C05-C08).
+3. De propagat la C05-C08 odată cu modelul premium (T2 încă pe model vechi).
+
+---
 
 **Sesiunea V52 — sumar (C02 finalizat: premium + business G-06 + imagini exec + FILM sync + verificat randat):**
 
