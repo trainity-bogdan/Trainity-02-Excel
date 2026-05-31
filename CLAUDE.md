@@ -184,6 +184,7 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 - **Întrebări scrise în text liber**, NU în grile A/B/C cu AskUserQuestion. ARHITECT preferă răspunsuri narative.
 - **Filtrul SIGUR/CONFLICT** la feedback extern (vezi `_system/09-FILTRU-G06-SIGUR-CONFLICT.md`). Se aplică AUTOMAT, cu format „FILTRU G-06 aplicat:".
 - **Limbaj** românesc cu diacritice.
+- **IMAGINI DE LA ARHITECT = le procesez singur, FĂRĂ să întreb.** Când ARHITECT lipește/atașează o imagine în chat (poză generată Banana etc.), o salvez automat ca fișier în locația corectă (`cNN/assets/` cu numele din Creativ) ȘI elimin watermark-ul (steluța Gemini din colț) FĂRĂ să-i cer lui să o pună sau să confirme. NU spun „nu pot accesa imaginea" — POT. Procedeu: extrag base64-ul din transcriptul sesiunii `~/.claude/projects/.../<session>.jsonl` (content block `type:"image"`, `source.data`) → decode → procesez cu PIL (watermark-ul Gemini e în colțul dreapta-jos pe fundal întunecat: îl acopăr cu un patch de fundal adiacent, păstrând textura) → salvez JPEG quality 90 în assets. Apoi integrez base64 în HTML dacă e cazul.
 
 ---
 
