@@ -121,18 +121,21 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 > **NOTĂ ANTI-REDRIFT (lock V58, după L186 repetat de 3x).** C06 **ESTE CLASIFICARE**, decizie definitivă confirmată de ARHITECT. NU este „profil numeric / KPI / sume-medii-distribuții" — aceea era harta T2 **pre-V45** (C06 = CUANTIFICARE), abandonată la rebuild-ul V45 tocmai ca să elimine suprapunerea cu C05. Orice feedback extern care cere „C06 = profil numeric" lucrează pe harta veche și se RESPINGE (G-06 CONFLICT). C06 produce **etichete operaționale prin reguli** (clasă/segment/scor), NU decizii business. Limbaj INTERZIS în C06 (mută în T3/C11): „prioritar", „critic", „strategic", „irelevant", „valoros", „important pentru business". **Formula de control:** C05 = ce există · C06 = ce înseamnă fiecare rând · C07 = când se întâmplă · C08 = cu cine se leagă.
 
-### C07 · DATARE — MEMORIA SETULUI (PROPUS, AXĂ LOCK V43)
+### C07 · DATARE ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | TEMPORALĂ (unică pe treaptă) — „cum se mișcă setul în timp" |
-| **OBIECT** | memoria |
-| **ÎNTREBARE-MAMĂ** | Cum se comportă setul în timp? |
-| **INTRIGA propusă** | Setul are memorie. Excel o ține minte. Tu nu. |
-| **MARKER** | memorie |
-| **FENOMENE propuse** | perioada reală acoperită (prima→ultima lună), goluri în timp (luni lipsă), ritmul/volumul pe lună, luna dominantă, accelerare/încetinire (trend), sezonalitate (recurență), săptămâna tipică |
-| **LIVRABIL** | Fișa temporală a setului (Memoria setului) |
-| **Status** | LIVRABIL V44 |
+| **AXA** | TEMPORALĂ DESCRIPTIVĂ — „când se întâmplă fiecare rând" (atașarea timpului, NU analiza lui) |
+| **OBIECT** | calendarul setului |
+| **ÎNTREBARE-MAMĂ** | Când se întâmplă fiecare rând? |
+| **INTRIGA** | Setul are memorie. Excel o ține minte. Tu nu i-ai citit-o. |
+| **MARKER** | calendar / poziție temporală |
+| **FENOMENE** | perioada reală (prima→ultima dată, MIN/MAX), granularitate temporală (zi/lună/trimestru/an/zi a săptămânii derivate), acoperire temporală (luni prezente/lipsă, goluri), calendar operațional (sezon, perioadă comercială, weekend vs zi lucrătoare), fișa temporală (_TIMELINE auditabil) |
+| **Garda T2/T3** | C07 ATAȘEAZĂ timpul (descriptiv); interpretarea lui = T3. INTERZIS în C07: trend, direcție, accelerare, încetinire, delta, evoluție, creștere/scădere, comparație lună-la-lună, lună-vârf/minim, zi dominantă/predilectă, săptămână tipică, performanță temporală. Acestea migrează în T3. |
+| **LIVRABIL** | Calendarul setului (fișa temporală) |
+| **Status** | LIVRABIL V44 · DATARE PURĂ (lock V58: trend/direcție/accelerare scoase în T3, decizie fermă ARHITECT) |
+
+> **NOTĂ ANTI-REDRIFT C07 (lock V58).** C07 răspunde EXCLUSIV la „când se întâmplă fiecare rând", NU la „ce se întâmplă în timp / cum evoluează". Regula de aur: C07 atașează timpul, T3 interpretează timpul. C07 = calendarul setului; T3 = analiza calendarului. „Ritm" se folosește doar reformulat ca „granularitate" / „frecvență calendaristică", fără dominantă/comparație. Sheet `_TREND` (delta+direcție) a fost ELIMINAT din Date_MASTER; rămân `_TIMELINE` / `_CALENDAR` / `_SEZON` (datare pură).
 
 ### C08 · TIPIZARE — HARTA ECOSISTEMULUI (PROPUS, AXĂ LOCK V43)
 

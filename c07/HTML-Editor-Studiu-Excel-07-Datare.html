@@ -1510,9 +1510,9 @@ body.has-continue .scroll-top { bottom: 88px; }
       </header>
 
       <section class="study-intro-top">
-        <h1 class="cover-title">Cum construim memoria temporală a setului</h1>
-        <p class="hero-microbrief">Rândurile au sens: știi ce înseamnă fiecare. Dar timpul lor este încă necitit, fără perioadă, fără ritm, fără calendar. În această construcție le dai poziție în timp, nu interpretare.</p>
-        <div class="cover-miza">Obținem calendarul setului: fiecare rând capătă o perioadă, o frecvență, un sezon. Memoria temporală se citește, nu se presupune.</div>
+        <h1 class="cover-title">Cum construim calendarul intern al setului</h1>
+        <p class="hero-microbrief">Rândurile au sens: știi ce înseamnă fiecare. Dar timpul lor este încă necitit, fără poziție în calendar. În această construcție fiecare rând primește poziție în calendar: zi, lună, trimestru, an, sezon și perioadă.</p>
+        <div class="cover-miza">Obținem calendarul setului. Fiecare rând capătă poziție temporală controlabilă. Memoria temporală se citește, nu se presupune.</div>
       </section>
 
       <section class="intriga-bomb">
@@ -1526,7 +1526,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <ul class="tu-list">
           <li>nu poți spune ce perioadă acoperă fără să cauți prima și ultima dată</li>
           <li>nu știi dacă lipsesc luni din mijloc</li>
-          <li>presupui ritmul lunar în loc să îl citești</li>
+          <li>presupui ce perioadă acoperă în loc să o citești</li>
         </ul>
       </section>
       <section class="tu-section tu-greseala">
@@ -1544,28 +1544,28 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <section class="study-intro">
         <div class="hero-beforeafter">
-          <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>perioadă necunoscută</li><li>goluri în timp nevăzute</li><li>ritm presupus</li><li>set fără calendar</li></ul></div>
+          <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>perioadă necunoscută</li><li>goluri în timp nevăzute</li><li>poziție în calendar presupusă</li><li>set fără calendar</li></ul></div>
           <div class="ba-arrow">→</div>
-          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>perioadă reală (prima/ultima)</li><li>golurile în timp marcate</li><li>ritm lunar citit</li><li>set cu calendar</li></ul></div>
+          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>perioadă reală (prima/ultima)</li><li>golurile în timp marcate</li><li>poziție în calendar citită</li><li>set cu calendar</li></ul></div>
         </div>
       </section>
       <section class="study-result">
-        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>perioada reală a setului</li><li>golurile în secvența lunară</li><li>ritmul pe lună (vârf/minim)</li><li>bază pentru cartografiere (C08)</li></ul></div>
+        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>perioada reală a setului</li><li>golurile în secvența lunară</li><li>granularitate (zi/lună/trimestru)</li><li>bază pentru cartografiere (C08)</li></ul></div>
       </section>
 
       <div class="mantra-band">
         <div class="mantra-band-sub">MANTRA · TRAINITY</div>
-        <div class="mantra-band-main">Nu presupunem timpul. Îl <mark>citim din date</mark>.</div>
+        <div class="mantra-band-main">Nu analizăm timpul. Îl <mark>atașăm</mark>.</div>
       </div>
 
       <section>
         <div class="section-marker">SCENA REALĂ · CE MEMORIE ASCUNDE SETUL FĂRĂ SĂ ȘTII</div>
         <div class="anomaly-grid">
 <div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">PERIOADA REALĂ</b><p class="anomaly-desc">Intervalul real acoperit de set, cu MIN și MAX pe data_factura. Prima și ultima lună.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">RITM LUNAR</b><p class="anomaly-desc">Câte tranzacții apar în fiecare lună. Frecvența tipică pe lună.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">GRANULARITATE TEMPORALĂ</b><p class="anomaly-desc">Fiecare rând primește zi, lună, trimestru, an și zi a săptămânii derivate din data_factura.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">GOLURI ÎN TIMP</b><p class="anomaly-desc">Ce luni lipsesc din secvența cronologică. Golurile pe care timeline-ul le ascunde.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">SĂPTĂMÂNA TIPICĂ</b><p class="anomaly-desc">Ce zi a săptămânii domină și cum se distribuie tranzacțiile pe zile lucrătoare vs weekend.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">MEMORIA CICLICĂ</b><p class="anomaly-desc">Cum se grupează setul pe sezoane și ce zi a săptămânii domină. Recurența, nu volumul.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">CALENDAR OPERAȚIONAL</b><p class="anomaly-desc">Sezon calendaristic, perioadă comercială, zi lucrătoare vs weekend, derivate din dată.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">FIȘA TEMPORALĂ</b><p class="anomaly-desc">Sheet _TIMELINE cu câmpurile temporale derivate, auditabile și legate la set.</p></div>
 </div>
       </section>
 
@@ -1598,7 +1598,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Privește coloana data_factura și recunoaște: știi cât de mare e setul, dar nu și când trăiește. Pe ce perioadă? Cu ce ritm? Lipsește vreo lună? Setul are o memorie pe care nu ai citit-o.</p>
+    <p class="step-action">Privește coloana data_factura și recunoaște: știi cât de mare e setul, dar nu și când trăiește. Pe ce perioadă? Ce luni acoperă? Lipsește vreo lună? Setul are o cronologie pe care nu ai citit-o.</p>
     
   </div>
 </div>
@@ -1609,7 +1609,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează coloana de timp de profilat: data_factura. Pe ea citești perioada, ritmul lunar, golurile și sezonul. valoare_neta rămâne martorul de sumă, conservat cap-coadă.</p>
+    <p class="step-action">Notează coloana de timp de profilat: data_factura. Pe ea citești perioada, granularitatea, golurile și sezonul. valoare_neta rămâne martorul de sumă, conservat cap-coadă.</p>
     
   </div>
 </div>
@@ -1674,7 +1674,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
         <div class="inv-item-label">TIMELINE LUNAR · COUNT / LUNĂ</div>
-        <div class="inv-item-desc">Câte tranzacții pe fiecare lună. Ritmul de bază al setului.</div>
+        <div class="inv-item-desc">Câte tranzacții pe fiecare lună. Acoperirea temporală a setului.</div>
       </div>
     </li>
 <li class="inv-item">
@@ -1687,22 +1687,22 @@ body.has-continue .scroll-top { bottom: 88px; }
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">SĂPTĂMÂNA TIPICĂ</div>
-        <div class="inv-item-desc">Cum se distribuie tranzacțiile pe zilele săptămânii. Ce zi domină.</div>
+        <div class="inv-item-label">GRANULARITATE TEMPORALĂ</div>
+        <div class="inv-item-desc">Zi, lună, trimestru, an și zi a săptămânii derivate din dată.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
         <div class="inv-item-label">SEZON · GRUPARE PE SEZON</div>
-        <div class="inv-item-desc">Cum se distribuie setul pe sezoane. Vârful sezonier.</div>
+        <div class="inv-item-desc">Cum se distribuie setul pe sezoane calendaristice. Gruparea, nu volumul.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">SĂPTĂMÂNA TIPICĂ · ZI A SĂPTĂMÂNII</div>
-        <div class="inv-item-desc">Ce zi a săptămânii concentrează tranzacțiile. Efectul de weekend.</div>
+        <div class="inv-item-label">CALENDAR OPERAȚIONAL</div>
+        <div class="inv-item-desc">Sezon, perioadă comercială, zi lucrătoare vs weekend, derivate din dată.</div>
       </div>
     </li>
     </ul>
@@ -1720,7 +1720,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Timeline-ul există ca foaie de profil. Acum adaugăm ritmul, golurile și sezonul. Setul devine citibil în timp cap-coadă.</p>
+  <p class="stage-quote">Timeline-ul există ca foaie de profil. Acum adăugăm granularitatea, golurile și sezonul. Setul devine citibil în timp cap-coadă.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
@@ -1736,13 +1736,13 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Rulează Promptul 2 de profilare a ritmului</h3>
+    <h3 class="step-title">Rulează Promptul 2 de profilare a calendarului</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere ritmul: care e volumul pe fiecare lună, care lună e vârf și care minim, ce zi a săptămânii domină. Copilot răspunde cu profilul temporal complet.</p>
+    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere calendarul: câte tranzacții pe fiecare lună, ce trimestru și sezon are fiecare rând, ce zi a săptămânii. Copilot răspunde cu profilul temporal complet.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 2 · PROFILAREA RITMULUI</div>
+      <div class="prompt-label">PROMPT 2 · PROFILAREA CALENDARULUI</div>
       <div class="prompt-text">Pentru același set arată-mi care e volumul pe fiecare lună, care lună are cel mai mare și cel mai mic volum, și ce zi a săptămânii concentrează cele mai multe tranzacții.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
@@ -1751,11 +1751,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="9">
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
-    <h3 class="step-title">Adaugă ritmul săptămânal și sezonul pe timeline</h3>
+    <h3 class="step-title">Adaugă granularitatea și sezonul pe timeline</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe foaia _RITM generată, citește ritmul săptămânal: ce zi a săptămânii domină. Pe _SEZON vezi gruparea pe sezoane. Setul devine citibil în timp.</p>
+    <p class="step-action">Pe foaia _CALENDAR generată, citește granularitatea: zi a săptămânii, trimestru, sezon. Pe _SEZON vezi gruparea pe sezoane. Setul devine citibil în timp.</p>
     <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
@@ -1775,7 +1775,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Ritm lunar</div>
+      <div class="ba-item-indicator">Granularitate</div>
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">volum lunar presupus</span></div>
         <div class="ba-arrow">→</div>
@@ -1813,7 +1813,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">MIN / MAX / COUNTIFS</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în timeline. Confruntăm fiecare lună cu setul însuși. Marcăm lunile-vârf și golurile.</p>
+  <p class="stage-quote">Nu avem încredere oarbă în timeline. Confruntăm fiecare lună cu setul însuși. Marcăm golurile din secvență.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
@@ -1829,22 +1829,22 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="11">
   <div class="step-head" onclick="toggleStep(11)">
     <div class="step-marker">PAS 11</div>
-    <h3 class="step-title">Verifică ritmul lunar cu COUNTIFS pe lună</h3>
+    <h3 class="step-title">Verifică acoperirea lunară cu COUNTIFS pe lună</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Scrie =COUNTIFS pe fiecare lună și confirmă volumul din timeline. Pe _RITM verifică distribuția pe zilele săptămânii și pe _SEZON gruparea pe sezoane, fără să interpretezi de ceă. Ritmul lunar e fixat.</p>
+    <p class="step-action">Scrie =COUNTIFS pe fiecare lună și confirmă volumul din timeline. Pe _CALENDAR verifică granularitatea (zi/trimestru/sezon) și pe _SEZON gruparea pe sezoane, fără să interpretezi de ce. Calendarul e fixat.</p>
     
   </div>
 </div>
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Marchează lunile-vârf și golurile din timeline</h3>
+    <h3 class="step-title">Marchează golurile din timeline</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe sheet-ul _TIMELINE, marchează cu fundal galben luna-vârf și luna-minim, plus orice lună lipsă din secvență. Aceste repere nu sunt erori, sunt forma reală a memoriei setului.</p>
+    <p class="step-action">Pe sheet-ul _TIMELINE, marchează cu fundal galben orice lună lipsă din secvență. Aceste goluri nu sunt erori, sunt forma reală a cronologiei setului.</p>
     
   </div>
 </div>
@@ -1953,19 +1953,19 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">PERIOADĂ</div><div class="final-text">Perioada reală a setului confirmată cu MIN și MAX pe data_factura.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">TIMELINE</div><div class="final-text">Timeline-ul lunar construit: câte tranzacții în fiecare lună.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">GOLURI</div><div class="final-text">Golurile verificate: ce luni lipsesc din secvența cronologică.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">RITM</div><div class="final-text">Ritmul setului: volum tipic pe lună, lună-vârf și lună-minim.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">RITM</div><div class="final-text">Ritmul: volumul pe lună, ziua dominantă a săptămânii, gruparea pe sezon.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SEZON</div><div class="final-text">Sezonalitatea și ziua predilectă a săptămânii: ce ritmuri se repetă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">GRANULARITATE</div><div class="final-text">Câmpuri temporale derivate: zi, lună, trimestru, an, zi a săptămânii.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">CALENDAR</div><div class="final-text">Calendar operațional: sezon, perioadă comercială, zi lucrătoare vs weekend.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SEZON</div><div class="final-text">Gruparea pe sezoane calendaristice și ziua săptămânii, derivate din dată.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">MEMORIE</div><div class="final-text">Fișa temporală cap-coadă livrată ca _TIMELINE, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Bază BI-ready validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C07 e pregătit pentru C08 analiză și Calcule.</div>
+          <div class="completion-title">Cronologie validată.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C07 e pregătit pentru C08 Cartografiere.</div>
         </div>
       </section>
 
       <section class="next-section">
         <div class="next-label">TREAPTA 2 · CONSTRUCȚIA URMĂTOARE</div>
-        <h3 class="next-title">C08 · Tipizare</h3>
+        <h3 class="next-title">C08 · Cartografiere</h3>
         <p class="next-desc">Memoria temporală este completă. Acum trecem de la timp la context: C08 deschide ecosistemul setului, cu seturile-satelit care îl descriu și cheile care le leagă.</p>
       </section>
 
