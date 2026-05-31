@@ -408,15 +408,17 @@ RIGHT page, 45 percent width: a documented audit recipe page, showing
 a list of forensic neutralization steps in structured format. Each line
 implies a Power Query transformation step, visually rendered as
 monospaced text blocks never readable as real words, each with a small
-warm yellow checkmark beside it. The recipe is documented, repeatable.
+warm yellow checkmark beside it. The neutralization is demonstrated, each
+contamination removed without touching the real value.
 
 Between the two pages, 10 percent center width: a soft warm yellow light
 gradient suggesting flow from contamination to clean, but no arrow,
 no logo, no explicit symbol.
 
 Atmosphere: forensic analyst's documentation moment. The contamination
-has been catalogued, the neutralization recipe written. The mood is
-methodical proof, the work of building reusable forensic protocol.
+has been catalogued and demonstrably neutralized. The mood is methodical
+proof: showing that each contamination can be removed without changing the
+real value. The permanent reusable flow belongs to the next stage, not here.
 
 Color palette: strict black background, warm white papers, warm yellow
 gold at #FFD400 for the fluorescent markings on the left page and for
@@ -482,47 +484,49 @@ same paper type, same mood."
 NUME FISIER SALVAT: `executive-c03-05-stabilizare.jpg`
 DIMENSIUNE: 1920x1280 px (3:2 orizontal)
 
-CONCEPT: Refresh resistant. Cele cateva pagini cu pasi PQ asezate ca un
-flux care se reia singur la fiecare export nou. O pagina noua de date
-intra de sus, pasii PQ documentati o curata automat, pagina rezultata
-iese curata fara interventie manuala.
+CONCEPT: Auditul ca verificare repetabila (NU flux care curata singur).
+Pe un export nou, acelasi scan forensic se re-ruleaza ca sa CONFIRME daca
+datele sunt curate. Langa el, foaia-dovada certificata cu suma martor
+stabila ramane reper. Mecanismul permanent de curatare apartine C04, nu
+acestei etape.
 
 
 PROMPT COMPLET:
 
 "Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
-three printed pages stacked in a vertical workflow on a dark forensic
-desk, viewed from a slight downward angle, depicting an automated audit
-pipeline.
+a freshly exported spreadsheet page on a dark forensic desk being
+re-examined by the same warm yellow forensic scanning beam, depicting the
+audit being RE-RUN as a verification check on new data, not an automated
+cleanup.
 
-TOP page representing input: a freshly exported spreadsheet with new
-contamination markings - fluorescent yellow dots and ghost characters
-visible on cells, representing data that arrived contaminated.
+CENTER-RIGHT, about 55 percent width: the new export page. The horizontal
+warm yellow forensic beam passes across it again, the way it did in the
+first investigation, testing whether contamination is present. A few faint
+fluorescent markings light up where the beam finds issues, confirming the
+audit still detects what is hidden.
 
-MIDDLE page representing pipeline: a documented audit protocol with
-structured monospaced text blocks suggesting Power Query steps. Small
-warm yellow checkmarks beside each step suggest the steps are active,
-automated.
+LOWER-LEFT: the original certified proof sheet resting beside it, with a
+small warm yellow seal and a highlighted summary total that stays stable
+and unchanged, serving as the reference witness. The rest of the frame is
+deep forensic shadow.
 
-BOTTOM page representing output: a clean spreadsheet, no fluorescent
-markings, all data properly typed and formatted. A small warm yellow
-seal or stamp in the corner suggests certification.
+Between them: a subtle warm yellow ambient glow, but no arrows, no logos,
+no explicit symbols.
 
-Between the three pages: subtle warm yellow ambient glow suggesting
-continuous flow, but no arrows, no logos, no explicit symbols.
-
-Atmosphere: the moment of system maturity. The audit recipe has become
-a self-running protocol. The mood is engineered confidence: repeatable,
-deterministic, refreshable.
+Atmosphere: disciplined verification. The audit is repeatable - it can be
+re-applied to any new export to confirm whether the data is clean. This is
+not a machine cleaning by itself; it is a forensic check holding the proof
+steady. The mood is methodical confidence, evidence re-confirmed.
 
 Color palette: strict black background, warm white papers, warm yellow
-gold at #FFD400 for the contamination markings, checkmarks, and stamp.
-No blue, no green, no red.
+gold at #FFD400 for the scanning beam, fluorescent markings, and seal.
+Faint violet hint in the deepest shadows. No blue, no green, no red.
 
-Technical: top-down slight angle shot, 35mm lens at f/5.6, even focus
-across all three pages, ISO 200, slight film grain. Editorial photo
-journalism aesthetic. Photorealistic, no illustration style, no cartoon
-style. Maintain visual continuity with other scenes in the C03 series.
+Technical: top-down slight angle shot, 35mm lens at f/5.6, even focus,
+ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain visual
+continuity with other scenes in the C03 series of forensic spreadsheet
+examination, fluorescent contamination markings, evidence documentation.
 Same surface, same lighting style, same paper type, same mood."
 
 

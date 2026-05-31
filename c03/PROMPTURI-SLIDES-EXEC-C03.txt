@@ -1,0 +1,295 @@
+══════════════════════════════════════════════════════════════════════════════
+PROMPTURI SLIDES EXECUTIVE · C03 AUDITARE
+Cele 6 imagini exec-stage (Executive Show, finalul HTML-Video)
+Extras din Creativ-Excel-03-Auditare.txt (SECTIUNEA 3) · aliniat rescope V50
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceste sase imagini apar in EXECUTIVE SHOW la finalul HTML-VIDEO al C03.
+Fiecare e slide-ul de incheiere al unei etape. Toate sase TREBUIE sa
+traiasca in acelasi univers vizual (continuitate de serie obligatorie).
+
+LOC IN PRODUCTIE: HTML-Video, sectiunea Executive Show. Se salveaza ca
+exec-stage-1.jpg ... exec-stage-6.jpg in c03/assets/ si se integreaza base64.
+
+UNIVERS COMUN AL SERIEI C03
+- Decor recurent: birou forensic intunecat, hartie examinata, lumina
+  laterala calda directionala, particule fine in aer.
+- Semnatura vizuala: pagina cu tabel + marcaje fluorescente galbene.
+- Paleta stricta: negru + alb cald hartie + galben #FFD400 + violet subtil
+  in shadows (UV forensic). ZERO albastru, verde, rosu.
+- Aspect 3:2 orizontal (1920x1280), text slide-ului peste zona intunecata.
+
+REGULA DE CONTINUITATE (obligatorie in fiecare prompt)
+"Maintain strict visual continuity with the other scenes in the C03 series
+of forensic spreadsheet examination, fluorescent contamination markings,
+evidence documentation - same surface, same lighting, same paper, same mood."
+
+NOTA RESCOPE V50: etapa 5 STABILIZARE = audit REPETABIL ca verificare, NU
+flux care curata singur (mecanismul permanent refreshabil apartine C04).
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 01 · REALITATE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-1.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Aparenta de curatenie. Pagina printata cu tabel impecabil la prima vedere, lumina calda peste ea, fara niciun marcaj de contaminare inca vizibil. Operatorul recunoaste ca aparenta nu e dovada.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a single printed spreadsheet page on a dark forensic desk. The table is
+perfectly clean to the naked eye - rows aligned, numbers formatted,
+dates uniform. No contamination is visible. The page looks trustworthy.
+
+Composition: page positioned left-center, occupying about 55 percent of
+frame width. Right 45 percent is deep black shadow reserved for
+typography overlay. Page is lit by single warm directional light from
+upper-left, revealing paper texture and subtle grain without showing
+any flaws.
+
+Atmosphere: forensic laboratory at the moment before examination begins.
+Quiet, methodical, expectant. The viewer should feel that this looks
+fine, but wonder if it really is. Fine dust particles in the light beam.
+
+Color palette: strict black, warm white for paper, warm yellow gold
+accents on the lamp glow. No fluorescent markings yet - this is the
+before state. No blue, no green, no red.
+
+Technical: 50mm lens at f/4, shallow depth of field on page edges,
+ISO 400, slight film grain. Reuters forensic documentary aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series of forensic
+examination, fluorescent contamination markings, evidence documentation.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 02 · INVESTIGATIE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-2.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Auditul incepe. Un scanner luminos galben trece peste pagina. Pe celulele atinse de fascicul apar marcaje fluorescente. AI raporteaza, datele raman neatinse.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a printed spreadsheet page being scanned by a horizontal beam of warm
+yellow forensic light. Where the beam crosses the page, fluorescent
+yellow markings reveal themselves on specific cells: small dots at the
+end of words for trailing spaces, ghost characters between letters for
+zero-width spaces, left-alignment indicators on number cells for numbers
+stored as text, date-format inconsistencies.
+
+Composition: page positioned center-right, occupying about 55 percent of
+frame width. Left 45 percent is deep black shadow reserved for
+typography overlay. The yellow scanning beam crosses horizontally at the
+visual middle of the page, brighter where it touches problematic cells.
+
+Atmosphere: forensic laboratory in active examination. The scanner beam
+is the dominant light source. Fine particles drift through the beam.
+The mood is methodical investigation - discovery happening in real time,
+without drama, without panic. The page is being read, not modified.
+
+Color palette: strict black background, warm white paper, warm yellow
+gold at #FFD400 for the scanner beam and fluorescent contamination
+markings. Subtle violet hint in deep shadows suggesting UV examination
+wavelength. No blue, no green, no red.
+
+Technical: 50mm lens at f/4, sharp focus on the scan area, slight motion
+blur suggesting beam movement, ISO 400, film grain. Reuters forensic
+documentary aesthetic. Photorealistic, no illustration style, no cartoon
+style. Maintain visual continuity with other scenes in the C03 series
+of forensic examination, fluorescent contamination markings, evidence
+documentation. Same surface, same lighting style, same paper type,
+same mood."
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 03 · TRANSFORMARE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-3.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Power Query ca audit engine. O succesiune vizibila de pasi PQ documentati pe o pagina alaturata, fiecare pas neutralizand o categorie de contaminare. Datele raman aceleasi, doar invelisul lor devine curat.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed pages side by side on a forensic desk, showing data audit
+transformation.
+
+LEFT page, 45 percent width: the original contaminated spreadsheet,
+fluorescent yellow markings still visible on problem cells - trailing
+space dots, ghost characters, left-aligned numbers, string-formatted
+dates.
+
+RIGHT page, 45 percent width: a documented audit recipe page, showing
+a list of forensic neutralization steps in structured format. Each line
+implies a Power Query transformation step, visually rendered as
+monospaced text blocks never readable as real words, each with a small
+warm yellow checkmark beside it. The neutralization is demonstrated, each
+contamination removed without touching the real value.
+
+Between the two pages, 10 percent center width: a soft warm yellow light
+gradient suggesting flow from contamination to clean, but no arrow,
+no logo, no explicit symbol.
+
+Atmosphere: forensic analyst's documentation moment. The contamination
+has been catalogued and demonstrably neutralized. The mood is methodical
+proof: showing that each contamination can be removed without changing the
+real value. The permanent reusable flow belongs to the next stage, not here.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the fluorescent markings on the left page and for
+the checkmarks and gradient on the right. No blue, no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus across both
+pages, ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series of forensic
+examination, fluorescent contamination markings, evidence documentation.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 04 · VERIFICARE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-4.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Conservarea sumei demonstrata. Doua pagini cu totaluri identice asezate alaturat - INPUT contaminat si OUTPUT curat. Suma martor egala pe ambele. Dovada ca operatia a curatat invelisul fara sa modifice valoarea reala.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed spreadsheet pages placed side by side on a forensic desk,
+each with a highlighted summary total at the bottom. The two totals are
+visually identical - same digits, same font, same warm yellow accent
+highlight box around them.
+
+LEFT page, 45 percent width: the contaminated input version, with faint
+fluorescent markings still visible on problem cells.
+
+RIGHT page, 45 percent width: the clean output version, identical layout
+but with all contamination removed. Numbers properly right-aligned,
+dates in uniform format, text cells clean.
+
+Between the two pages, 10 percent center width: negative space with
+subtle warm yellow ambient glow. No equals sign, no arrow, no logo.
+
+Both summary totals are highlighted with warm yellow gold at #FFD400
+box accents. The visual proof is unmistakable: the value is conserved.
+
+Atmosphere: the moment of forensic certification. Quiet, methodical,
+conclusive. The mood is earned trust - the work is done, the proof is
+on the desk.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 accents on the highlighted totals and faint contamination
+markings on the left page. No blue, no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus, ISO 200,
+slight film grain. Editorial photojournalism aesthetic. Photorealistic,
+no illustration style, no cartoon style. Maintain visual continuity
+with other scenes in the C03 series. Same surface, same lighting style,
+same paper type, same mood."
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 05 · STABILIZARE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-5.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Auditul ca verificare repetabila (NU flux care curata singur). Pe un export nou, acelasi scan forensic se re-ruleaza ca sa CONFIRME daca datele sunt curate. Langa el, foaia-dovada certificata cu suma martor stabila ramane reper. Mecanismul permanent de curatare apartine C04, nu acestei etape.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+a freshly exported spreadsheet page on a dark forensic desk being
+re-examined by the same warm yellow forensic scanning beam, depicting the
+audit being RE-RUN as a verification check on new data, not an automated
+cleanup.
+
+CENTER-RIGHT, about 55 percent width: the new export page. The horizontal
+warm yellow forensic beam passes across it again, the way it did in the
+first investigation, testing whether contamination is present. A few faint
+fluorescent markings light up where the beam finds issues, confirming the
+audit still detects what is hidden.
+
+LOWER-LEFT: the original certified proof sheet resting beside it, with a
+small warm yellow seal and a highlighted summary total that stays stable
+and unchanged, serving as the reference witness. The rest of the frame is
+deep forensic shadow.
+
+Between them: a subtle warm yellow ambient glow, but no arrows, no logos,
+no explicit symbols.
+
+Atmosphere: disciplined verification. The audit is repeatable - it can be
+re-applied to any new export to confirm whether the data is clean. This is
+not a machine cleaning by itself; it is a forensic check holding the proof
+steady. The mood is methodical confidence, evidence re-confirmed.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the scanning beam, fluorescent markings, and seal.
+Faint violet hint in the deepest shadows. No blue, no green, no red.
+
+Technical: top-down slight angle shot, 35mm lens at f/5.6, even focus,
+ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain visual
+continuity with other scenes in the C03 series of forensic spreadsheet
+examination, fluorescent contamination markings, evidence documentation.
+Same surface, same lighting style, same paper type, same mood."
+
+
+─────────────────────────────────────────────────────────────────────────
+ETAPA 06 · CONFIRMARE
+─────────────────────────────────────────────────────────────────────────
+
+NUME FISIER SALVAT: exec-stage-6.jpg   (1920x1280 px, 3:2)
+
+CONCEPT: Predarea bazei demonstrabile catre C04. Pagina curata C03 cu sigiliu de certificare, langa o pagina noua goala cu titlu implicit. Continuitate cap-coada in cadrul aceluiasi univers vizual.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen):
+
+"Cinematic editorial photograph, 3:2 aspect ratio, 1920x1280 px. Subject:
+two printed spreadsheet pages on a dark forensic desk, depicting the
+moment of handoff between two stages.
+
+LEFT page, 50 percent width: a completed audit-certified spreadsheet.
+All contamination is gone. In the bottom-right corner is a small warm
+yellow gold stamp or seal rendered as an abstract circular yellow mark,
+no readable text inside it, signifying forensic certification. The page
+projects authority, finality.
+
+RIGHT page, 50 percent width: the top of a new spreadsheet just placed
+beside the first. It is mostly blank, with only a faint header suggesting
+the next stage of work begins. The header area is empty, ready to be
+filled. The page suggests fresh production work, not a continuation of
+the same.
+
+Between the pages: minimal negative space. The two pages touch but do
+not overlap. A subtle warm yellow ambient glow connects them.
+
+Atmosphere: the closing of one chapter, the opening of the next. Quiet,
+deliberate, no celebration - the mood of a forensic specialist signing
+off and stepping away from the desk, leaving evidence prepared for the
+next stage.
+
+Color palette: strict black background, warm white papers, warm yellow
+gold at #FFD400 for the certification stamp and ambient glow. No blue,
+no green, no red.
+
+Technical: top-down shot, 35mm lens at f/5.6, even focus across both
+pages, ISO 200, slight film grain. Editorial photojournalism aesthetic.
+Photorealistic, no illustration style, no cartoon style. Maintain
+visual continuity with other scenes in the C03 series. Same surface,
+same lighting style, same paper type, same mood."
+
+
+══════════════════════════════════════════════════════════════════════════════
+SFARSIT · PROMPTURI-SLIDES-EXEC-C03.txt
+══════════════════════════════════════════════════════════════════════════════

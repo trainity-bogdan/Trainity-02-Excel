@@ -1691,7 +1691,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="dim frag" data-frag="2">Nu am modificat valori.</p>
       <p class="dim frag" data-frag="3">Nu am crezut aparența.</p>
       <p class="accent frag" data-frag="4">Am demonstrat ce era ascuns.</p>
-      <p class="frag" data-frag="5">Datele nu mai mint.</p>
+      <p class="frag" data-frag="5">Datele nu mai ascund defecte.</p>
       <p class="frag" data-frag="6">C04 poate începe.</p>
             <p class="payoff-wow frag" data-frag="7"><span class="wow-tag">WOW:</span><span data-wow="1">Datele par curate. Astăzi am demonstrat că nu erau.</span></p>
       <div class="final-motto frag" data-frag="8">Audităm ce nu se vede.</div>
@@ -1789,9 +1789,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">05</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 05</div>
-      <div class="exec-emotion frag" data-frag="2">Protocol permanent</div>
+      <div class="exec-emotion frag" data-frag="2">Verificare repetabilă</div>
       <h2 class="exec-title frag" data-frag="3">STABILIZARE</h2>
-      <p class="exec-phrase frag" data-frag="4">O contaminare eliminată azi revine mâine. Dacă nu există protocol.</p>
+      <p class="exec-phrase frag" data-frag="4">Un audit care nu se poate repeta nu e dovadă, e o coincidență.</p>
     </div>
   </section>
 
@@ -1928,15 +1928,15 @@ const STAGES = [
     ]
   },
   {
-    id: 5, name: "STABILIZARE", emotion: "Protocol permanent",
+    id: 5, name: "STABILIZARE", emotion: "Verificare repetabilă",
     hook: "Un export curat astăzi este un export contaminat luna viitoare.",
     next: "Transformăm intervenția într-un mecanism. Reaplicabil. Predictibil.",
     steps: [
-      { num: "13", title: "Legăm fluxul la sursă.",
-        instr: "Power Query rămâne în registru cu Refresh activ pe sursa fișierului. <strong>Nu mai construim. De acum, fluxul muncește pentru noi.</strong>",
+      { num: "13", title: "Fixăm auditul ca verificare.",
+        instr: "Pașii de detecție rămân documentați, gata de re-rulat pe orice export. <strong>Nu automatizăm curățarea aici. O dovedim repetabilă.</strong>",
         excel: true },
-      { num: "14", title: "Testăm. Cu un export nou.",
-        instr: "Înlocuim sursa cu un export proaspăt de la ERP. Apăsăm Refresh. <strong>Dacă fluxul curăță singur, mecanismul este viu. Dacă nu, nu am construit nimic.</strong>",
+      { num: "14", title: "Re-rulăm auditul. Pe un export nou.",
+        instr: "Punem un export proaspăt de la ERP și rulăm din nou auditul. <strong>Dacă găsește aceleași categorii, dovada ține. Mecanismul permanent e treaba C04.</strong>",
         excel: true },
       { num: "15", title: "Documentăm. Pentru cine vine după.",
         instr: "Notăm: care era ambalajul, ce face fluxul, ce nu se atinge niciodată. <strong>Regula care trăiește doar în capul autorului moare cu autorul.</strong>",

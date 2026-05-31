@@ -1,7 +1,33 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V49 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V51 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V51 — sumar (C03 model premium + hero forensic + rescope C03/C04 + bullet canonic + prompturi exec):**
+
+1. **C03 = model premium propagat** (Studiu + Editor-Studiu): hero cockpit cu imagine-obiect forensic dedicată + overlay „AUDIT" + system-map (AUDIT activ); arc TU pe axa forensic — bombă „Arată curat. Nu este." → SUNĂ CUNOSCUT → GREȘEALA „Oamenii curăță ce se vede. Profesioniștii auditează ce nu se vede." → AHA → CINE DEVII „Nu mai vezi date curate. Vezi date neauditate." → before/after + outcomes. Video/Editor-Video neatinse (modelul premium NU atinge Video — confirmat empiric: C01 și C03 Video structural identice, zero markeri premium). Eliminat exec-hero DE CE + CONTRACT (paritate C01).
+2. **L178 — RANDAREA FUNCȚIONEAZĂ în containerul Web** (corectează presupunerea V47/V48/L175 că „Playwright nu e instalat"). Chromium + Playwright trăiesc în `/opt/node22/lib/node_modules/playwright`; rulez `node` cu `require(PW+'/index.js')` → screenshot la 393px (mobil) + 1280px (desktop). „NEVERIFICAT randat" nu mai e scuză — verific ÎNTOTDEAUNA înainte de livrare. C03 premium verificat randat integral.
+3. **R-V03.72 nou (detector + regulă):** zero em/en-dash ORIUNDE (text, CSS `content:`, comentarii JS/CSS) + bullet `.tu-list` canonic `\2022` (•) IDENTIC în toate construcțiile. Curățat C01 (en-dash bullet + comentariu CSS) + 4× Editor-Video (em-dash în comentariu JS: c01,c02,c03,c05). C01 = C02 = C03 bullet `•`. **Audit 80 → 88** (11 detectoare × 8).
+4. **Hero-poster forensic C03** generat de ARHITECT, procesat singur (extras din transcript jsonl, watermark Gemini scos cu `strip_watermark.py` per R-V49.1, base64) și integrat în hero Studiu+Editor-Studiu. Salvat `c03/assets/hero-poster-excel-03-auditare.jpg`. Numere lizibile în poză = textură fotografică (precedent C02 aprobat de ARHITECT; R-V02.15 vizează callout-uri de date HTML, nu fotografii).
+5. **Feedback extern → G-06 → ascuțire C03** (confirmat ARHITECT: rescope + titlu + da FILM): titlu „Cum auditezi ce nu se vede în date" (era „audit valoric", contabil/vag); miză mai dură („formulele, rapoartele și AI-ul lucrează pe o minciună tehnică"); „Datele nu mai mint" → „nu mai ascund defecte" (diferențiere de C02 operațional); prompt 1 scurtat pentru cursant.
+6. **RESCOPE C03/C04 (cel mai important):** C03 revendica „flux refreshabil... la fiecare export nou" (etapa 3 TRANSFORMARE, etapa 5 STABILIZARE pașii 13-15, prompt 2, outcomes, exec-slide 5 Video, prompturile imagine) = teritoriul C04. Corectat: **C03 = demonstrează + audit + dovadă + conservare; auditul = repetabil ca VERIFICARE** (îl re-rulezi pe export nou ca să confirmi); **C04 = mecanismul permanent refreshabil**. Toate mențiunile „refreshabil" rămase atribuie EXPLICIT mecanismul lui C04. Propagat în 4 machete + FILM (sursă) + Creativ (prompturi imagine etapa 3+5) + notă graniță anti-redrift în 06-MAP.
+7. **`PROMPTURI-SLIDES-EXEC-C03.txt`** creat (cele 6 prompturi exec-stage într-un singur fișier, format ca C02, aliniate rescope) + livrat ARHITECT.
+8. ⚠️ **PENDING — POZELE C03 NEGENERATE:** cele 6 imagini **exec-stage C03 sunt încă clone byte-identice cu C01** (scenă generică „monitor + Excel + legendă forme" + watermark Gemini) — NU universul forensic C03. Prompturile sunt gata (fișierul de la pct. 7). De generat în Banana → strip watermark → integrare base64 în HTML-Video + Editor-Video → salvare assets. Opțional negenerate: `infografic` (nefolosit în modelul premium, 0 referințe în Studiu) + `cover-yt` (thumbnail YouTube, extern HTML). **Singura imagine C03 dedicată generată până acum = hero-poster.**
+
+---
+
+**Sesiunea V50 — sumar (propagare model premium C01 → C04 cap-coadă):**
+
+1. **C04 = a doua construcție cu model premium V47** (după C01). Grefat pe HTML-Studiu + HTML-Editor-Studiu: hero cockpit (imagine-obiect NORMALIZARE inline base64 + cuvânt overlay + întrebare + hartă treaptă), arcul TU (BOMBA „Fișierul curat nu e rezultatul. Fluxul este." → RECUNOAȘTERE → GREȘEALA → AHA → CINE DEVII), before/after, outcomes. Scos `exec-hero DE CE` + `CONTRACT` (ca la C01 V47). CSS premium injectat scoped (L173). Paritate structurală cu C01.
+2. **Metodă propagare premium (L175):** grefă, nu COPY+MODIFY. Delta premium = doar regiunea hero+arc + CSS (~5KB markup; restul „greutate" C01 = imaginea hero base64). Stadii/scenă/final/payoff C04 păstrate. Video + Editor-Video NU primesc premium (V47 = doar Studiu, verificat: C01 Video are 0 clase premium).
+3. **Imagini Banana dedicate C04:** hero-normalizare.jpg (buclă conducte flux) + 5 exec-stage (etape 02-06). **exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — încă clonă C01 (vezi „Deschis"). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
+4. **FILM C04** dus spre Biblia: + ARC TRANSFORMARE + FORMULA finală + notă video Prompt 2.
+5. **Feedback extern G-06 (tot SIGUR) aplicat:** marker „CEI 10 PAȘI...", precizie dedup (scos „fuzzy" — Table.Distinct = dedup exact), final „Refresh. Aceeași ordine.", framing „activ".
+6. **Fix sistem — gate v20 conștient de premium (L176):** checkul IDENTITY cerea cover-label + slug în titlu, ambele eliminate de V47 → C01 ȘI C04 picau. Acum: detectează hero-overlay (premium) → verifică identitatea în hero-overlay + topbar + footer; altfel legacy (cover-label) pentru C05-C08. C04 GATE PASS complet.
+7. **Lecție L177 — imaginile lipite în chat SUNT accesibile** prin transcriptul sesiunii (`~/.claude/projects/.../<session>.jsonl`, bloc `type:"image"`, `source.data`). Nu mai spun „nu pot accesa imaginea". Procedat la fel ca sesiunea C02.
+8. **Audit ZERO DRIFT 88/88 · Gate v20 C04 PASS.** Toate pe `main`.
+
+---
 
 **Sesiunea V49 — sumar (reguli git workflow + start lucru paralel multi-sesiune):**
 
@@ -138,8 +164,8 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume → model premium V47 propagat (Studiu+Editor-Studiu) | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
+| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -175,11 +201,11 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. ~~SPEC + generare C06~~ ✓ LIVRAT V43 (CUANTIFICARE)
-2. **SPEC C07** cinematic — axa TEMPORALĂ ("setul are memorie")
-4. **Generare C07** după SPEC freezing
-5. **SPEC C08** — axa TEMPORALĂ-COMBINATĂ ("setul are tipare")
-6. **Setup B2C landing pages live** (paralel)
+1. ⚠️ **POZE C03 exec-stage 1-6 NEGENERATE** — clone C01 + watermark; prompturi gata în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`. ARHITECT generează în Banana → motor strip watermark + base64 în Video/Editor-Video. (opțional: infografic + cover-yt C03)
+2. ⚠️ **POZĂ C04 exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — clonă C01; prompt în `c04/Creativ` SECȚIUNEA 3 ETAPA 01. La primire: strip watermark + re-inline Video/Editor-Video. Restul C04 = COMPLET.
+3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
+4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
+5. **Setup B2C landing pages live** (paralel)
 
 ---
 
@@ -264,6 +290,9 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 
 - **L173** (V48) CSS cu selectori BARE într-un bloc copiat/redesignat se scurge peste alte secțiuni care refolosesc aceleași clase. Cazul empiric: redesignul hero V47 a definit `.ba-after{background:#0a0a0a}` neîncadrat, iar lista DOVADA din pași (pasul 9) folosește aceeași clasă `.ba-after` → box negru cu text negru invizibil. A trăit o sesiune nedetectat (audit verifică structură+prezență, nu contrast/cascadă). **Regulă durabilă:** orice CSS component-specific se scrie ÎNTOTDEAUNA scoped la containerul lui (`.hero-beforeafter .ba-after`, nu `.ba-after`), mai ales când numele de clasă (ba-before/ba-after/ba-val/ba-arrow) sunt generice și refolosite în alte secțiuni. La redesign de bloc, verifică dacă clasele atinse mai apar în altă parte din document înainte de a scrie reguli bare.
 
+- **L175** (V50) Propagarea modelului premium = GREFĂ chirurgicală, nu COPY+MODIFY. Delta premium real (hero+arc+CSS scoped) e ~5KB markup; restul „greutății" C01 e imaginea hero base64. Procedeu sigur: păstrezi conținutul de domeniu al construcției (stadii, scenă, pași, final, payoff), grefezi DOAR regiunea hero+arc din C01 cu text propriu + injectezi blocul CSS premium (cu maparea variabilelor lipsă, ex. `var(--tr-y)`→`var(--y)`). Premium V47 = doar Studiu/Editor-Studiu; Video nu se atinge (verifică: 0 clase premium în C01 Video).
+- **L176** (V50) Gate/detectoarele trebuie făcute conștiente de redesign, altfel chiar construcția-model pică. Gate v20 cerea `cover-label` + slug în titlu (eliminate de V47) → C01 ÎNSUȘI pica IDENTITY. Fix: ramură premium (detectează `hero-visual-overlay` → verifică identitatea în hero-overlay+topbar+footer), păstrând legacy pentru construcțiile nepropagate. **Regulă durabilă:** când redesignul mută unde trăiește o informație (identitate), actualizează detectorul în aceeași mișcare, nu mai târziu.
+- **L177** (V50) Imaginile lipite de ARHITECT în chat SUNT accesibile motorului prin transcriptul sesiunii (`~/.claude/projects/.../<session>.jsonl`, bloc `type:"image"` → `source.data` base64). Nu se spune niciodată „nu pot accesa imaginea". Le extrag, scot watermark-ul (R-V49.1) și le salvez singur. Mapez 1:1 cu prompturile după conținut (verificare vizuală pe cele ambigue) și confirm înainte de salvare când lipsesc/dublează.
 - **L174** (V49) La lucru paralel pe sesiuni multiple (branch-uri `claude/<task>` simultane care fac toate merge în `main`), riscul de conflict e izolat la fișierele PARTAJATE, nu la construcții. Construcțiile `cNN/` sunt foldere disjuncte → merge curat. Punctele de conflict: `STARE-CURENTA.md` (toți scriu sumar sesiune), `CLAUDE.md` (reguli), `_system/*` (detectori, docs), `index.html` (dashboard cu link-uri). **Regulă durabilă:** înainte de merge în main, `git fetch origin main` + merge main în branch întâi (rezolv conflictele pe fișierele partajate local), apoi push. La STARE-CURENTA, fiecare sesiune adaugă propria secțiune V{N} — dacă două sesiuni incrementează simultan, a doua care face merge ajustează numărul V și fuzionează sumarele, nu suprascrie. Pentru `index.html`, fiecare construcție își are propriul rând → merge aditiv.
 
 - **L175** (V49) Containerul Claude Code on Web NU are browser/Playwright instalat → randarea de verificare (L171) nu e posibilă aici. Compensare: validare structurală programatică (parser HTML pentru nesting balansat + decode base64 imagine + audit_sync + grep prezență/absență elemente). **Regulă durabilă:** când randarea nu e disponibilă, declar explicit „NEVERIFICAT randat" în raport și STARE-CURENTA, NU pretind verificare vizuală pe care n-am făcut-o; ARHITECT face check-ul vizual final sau îl fac la o sesiune cu browser.
