@@ -1537,7 +1537,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         </div>
       </section>
       <section class="study-result">
-        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>cheile de legătură ale setului</li><li>harta sateliților care îl descriu</li><li>câmpurile externe atașate prin lookup</li><li>set pregătit pentru analiză (T3)</li></ul></div>
+        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>cheile de legătură ale setului</li><li>harta sateliților care îl descriu</li><li>câmpurile externe identificate în sateliți</li><li>set pregătit pentru analiză (T3)</li></ul></div>
       </section>
 
       <div class="mantra-band">
@@ -1570,7 +1570,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="1">
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
-    <h3 class="step-title">Deschide setul profilat predat de C07</h3>
+    <h3 class="step-title">Deschide setul datat predat de C07</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
@@ -1596,7 +1596,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează seturile-satelit de cartografiat: CLIENTI, PRODUSE, AGENTI, DEPOZITE. Pentru fiecare cauți cheia și rolul. valoare_neta rămâne martorul de sumă, conservat cap-coadă.</p>
+    <p class="step-action">Notează seturile-satelit de cartografiat: CLIENTI, PRODUSE, AGENTI, DEPOZITE. Pentru fiecare cauți cheia și rolul. valorile sursă rămân neatinse, conservate cap-coadă.</p>
     
   </div>
 </div>
@@ -1704,7 +1704,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 3 · CARTOGRAFIEREA ECOSISTEMULUI</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
-      <div class="stage-tags"><span class="phase-tag">LOOKUP</span><span class="type-tag">Promptul 2</span></div>
+      <div class="stage-tags"><span class="phase-tag">HARTĂ</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
   <p class="stage-quote">Harta există ca foaie de profil. Acum adaugăm cheile, rolurile și câmpurile externe. Ecosistemul devine lizibil cap-coadă.</p>
@@ -1758,7 +1758,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">industrie/regiune necunoscute</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">atribute atașate prin lookup</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">atribute localizate în sateliți</span></div>
       </div>
     </li>
 <li class="ba-item">
@@ -1797,7 +1797,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 4 · VERIFICAREA CHEILOR</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">XLOOKUP / COUNTIF</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">COUNTIF / MATCH</span></div>
     </div>
   </header>
   <p class="stage-quote">Nu avem încredere oarbă în hartă. Confruntăm fiecare cheie cu setul însuși. Marcăm sateliții orfani.</p>
@@ -1894,7 +1894,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Harta e validată cap-coadă. Suma rămâne conservată. Predăm ecosistemul cartografiat către C09.</p>
+  <p class="stage-quote">Harta e validată cap-coadă. Tranzacțiile rămân neatinse. Predăm ecosistemul cartografiat către C09.</p>
   <div class="stage-body">
 <div class="step" data-step="16">
   <div class="step-head" onclick="toggleStep(16)">
@@ -1943,17 +1943,17 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">FAPT</div><div class="final-text">Câmpurile externe listate: atribute care există doar în sateliți.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">DESCRIERE</div><div class="final-text">Legăturile clasificate: directă (PRODUSE), prin nume (CLIENTI), lipsă (AGENTI/DEPOZITE).</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">LIMBI</div><div class="final-text">Limbile diferite marcate: formate și denumiri care nu se potrivesc între foi.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">ECOSISTEM</div><div class="final-text">Harta ecosistemului cap-coadă livrată ca _ECOSISTEM, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">ECOSISTEM</div><div class="final-text">Harta ecosistemului cap-coadă livrată ca _ECOSISTEM, valorile sursă neatinse.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Bază BI-ready validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C08 e pregătit pentru C09 analiză și Calcule.</div>
+          <div class="completion-title">Hartă a ecosistemului validată.</div>
+          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C08 e pregătit pentru C09 Relații.</div>
         </div>
       </section>
 
       <section class="next-section">
         <div class="next-label">TREAPTA 3 · CONSTRUCȚIA URMĂTOARE</div>
         <h3 class="next-title">C09 · Relații</h3>
-        <p class="next-desc">Harta ecosistemului este completă. Acum trecem de la cartografiere la conexiune: C09 deschide Data Model, unde relațiile recunoscute devin reale și analiza începe.</p>
+        <p class="next-desc">Harta ecosistemului este completă. Acum trecem de la cartografiere la relații: C09 deschide Data Model, unde relațiile recunoscute devin reale și analiza începe.</p>
       </section>
 
       <section class="payoff-section">
@@ -1987,7 +1987,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
 <a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · XLOOKUP / COUNTIF</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · COUNTIF / MATCH</span></span></a>
 <a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Tabel structurat</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
