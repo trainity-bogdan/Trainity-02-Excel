@@ -1578,16 +1578,16 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">INPUT</span><span class="type-tag">Manual</span></div>
     </div>
   </header>
-  <p class="stage-quote">Deschizi setul cu profilul numeric de la C06. Știi cât de mare e, dar nu și când s-a întâmplat. Notezi ce trebuie citit în timp.</p>
+  <p class="stage-quote">Deschizi setul clasificat de la C06. Știi ce înseamnă fiecare rând, dar nu și când s-a întâmplat. Notezi ce trebuie citit în timp.</p>
   <div class="stage-body">
 <div class="step" data-step="1">
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
-    <h3 class="step-title">Deschide setul profilat predat de C06</h3>
+    <h3 class="step-title">Deschide setul clasificat predat de C06</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Dublu-click pe Date_MASTER-C07.xlsx, foaia Vanzari. Setul predat de C06 este profilat numeric. 2.000 rânduri, 15 coloane stabile. Nu citești încă conținutul, doar îl deschizi.</p>
+    <p class="step-action">Dublu-click pe Date_MASTER-C07.xlsx, foaia Vanzari. Setul predat de C06 este clasificat: fiecare rând are clasă, segment și scor. 2.000 rânduri, 15 coloane stabile. Nu citești încă conținutul, doar îl deschizi.</p>
     
   </div>
 </div>
@@ -1605,11 +1605,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="3">
   <div class="step-head" onclick="toggleStep(3)">
     <div class="step-marker">PAS 03</div>
-    <h3 class="step-title">Fixează coloana de timp de profilat</h3>
+    <h3 class="step-title">Fixează coloana de timp de datat</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează coloana de timp de profilat: data_factura. Pe ea citești perioada, granularitatea, golurile și sezonul. valoare_neta rămâne martorul de sumă, conservat cap-coadă.</p>
+    <p class="step-action">Notează coloana de timp de datat: data_factura. Pe ea citești perioada, granularitatea, golurile și sezonul. valoare_neta rămâne martorul de sumă, conservat cap-coadă.</p>
     
   </div>
 </div>
@@ -1720,30 +1720,30 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Timeline-ul există ca foaie de profil. Acum adăugăm granularitatea, golurile și sezonul. Setul devine citibil în timp cap-coadă.</p>
+  <p class="stage-quote">Timeline-ul există ca fișă temporală. Acum adăugăm granularitatea, golurile și sezonul. Setul devine citibil în timp cap-coadă.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
-    <h3 class="step-title">Încarcă timeline-ul ca foaie de profil</h3>
+    <h3 class="step-title">Încarcă timeline-ul ca fișă temporală</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază tabelul răspuns într-o foaie nouă numită _TIMELINE. Salvează. Acest timeline devine prima foaie de profil temporal a setului, livrabilul vizibil al C07.</p>
+    <p class="step-action">Copiază tabelul răspuns într-o foaie nouă numită _TIMELINE. Salvează. Acest timeline devine prima fișă temporală a setului, livrabilul vizibil al C07.</p>
     
   </div>
 </div>
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Rulează Promptul 2 de profilare a calendarului</h3>
+    <h3 class="step-title">Rulează Promptul 2 de datare a calendarului</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere calendarul: câte tranzacții pe fiecare lună, ce trimestru și sezon are fiecare rând, ce zi a săptămânii. Copilot răspunde cu profilul temporal complet.</p>
+    <p class="step-action">Copiază Promptul 2 din caseta de mai jos. Acesta cere calendarul: câte tranzacții pe fiecare lună, ce trimestru și sezon are fiecare rând, ce zi a săptămânii. Copilot răspunde cu calendarul temporal complet.</p>
     <div class="prompt-box">
       <div class="prompt-label">PROMPT 2 · PROFILAREA CALENDARULUI</div>
-      <div class="prompt-text">Pentru același set arată-mi care e volumul pe fiecare lună, care lună are cel mai mare și cel mai mic volum, și ce zi a săptămânii concentrează cele mai multe tranzacții.</div>
+      <div class="prompt-text">Pentru același set atașează fiecărui rând trimestrul, sezonul calendaristic și ziua săptămânii derivate din data_factura. Apoi numără câte tranzacții cad în fiecare lună, fără să le compari.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1822,7 +1822,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În foaia Vanzari, scrie =MIN(B2:B2001) și =MAX(B2:B2001) pe data_factura. Confirmă că perioada egalează intervalul din _TIMELINE. Repetă cu COUNTIFS pe fiecare lună. Datele din profil trebuie să corespundă exact.</p>
+    <p class="step-action">În foaia Vanzari, scrie =MIN(B2:B2001) și =MAX(B2:B2001) pe data_factura. Confirmă că perioada egalează intervalul din _TIMELINE. Repetă cu COUNTIFS pe fiecare lună. Datele din timeline trebuie să corespundă exact.</p>
     
   </div>
 </div>

@@ -1832,8 +1832,8 @@ const STAGES = [
     hook: "Setul are memorie. Excel o ține minte. Tu nu.",
     next: "Astăzi îl inventariem cap-coadă.",
     steps: [
-      { num: "01", title: "Deschidem setul. Cel profilat de la C06.",
-        instr: "Date_MASTER-C07.xlsx, foaia Vanzari. 2.000 rânduri, 15 coloane. <strong>Setul este profilat numeric. Dar nu îi cunoaștem timpul.</strong>",
+      { num: "01", title: "Deschidem setul. Cel clasificat de la C06.",
+        instr: "Date_MASTER-C07.xlsx, foaia Vanzari. 2.000 rânduri, 15 coloane. <strong>Setul este clasificat. Dar nu îi cunoaștem timpul.</strong>",
         excel: true },
       { num: "02", title: "Privim coloana de timp. Și recunoaștem necunoașterea.",
         instr: "Pe ce perioadă? Ce luni acoperă? Lipsește vreo lună? <strong>Setul are o cronologie pe care încă nu am citit-o.</strong>",
@@ -1860,9 +1860,9 @@ const STAGES = [
   {
     id: 3, name: "TRANSFORMARE", emotion: "Profilare a calendarului",
     hook: "Timeline-ul există. Adăugăm granularitatea și sezonul.",
-    next: "Fără transformări de flux. Doar Copilot și foi de profil.",
+    next: "Fără transformări de flux. Doar Copilot și fișe temporale.",
     steps: [
-      { num: "07", title: "Încărcăm timeline-ul. Ca foaie de profil.",
+      { num: "07", title: "Încărcăm timeline-ul. Ca fișă temporală.",
         instr: "Copiem tabelul răspuns pe sheet nou _TIMELINE. <strong>Timeline-ul devine livrabil vizibil. Nu o opinie a Copilot. O foaie din registru.</strong>",
         excel: true },
       { num: "08", title: "Profilăm calendarul. Promptul 2.", instr: "", prompt: 2 },
