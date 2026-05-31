@@ -1,7 +1,19 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V47 (consolidat · marker SHA în `_system/VERSIUNI.md`)
-**Ultima actualizare:** 30 mai 2026
+**Versiune sistem:** V48 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V48 — sumar (fix CSS leak C01 = box DUPĂ negru cu text invizibil):**
+
+1. **Bug raportat de ARHITECT:** în secțiunea „DOVADA TRANSFORMĂRII" (pasul 9, lista ÎNAINTE→DUPĂ), box-urile DUPĂ apăreau negre cu text invizibil pe HTML-Studiu C01.
+2. **Cauza:** la redesignul hero V47, regulile blocului `.hero-beforeafter` au fost scrise cu selectori BARE (`.ba-after{background:#0a0a0a}`, `.ba-before{background:#fff}`, `.ba-arrow{...}`, `.ba-*  .ba-label{...}`) în loc de scoped `.hero-beforeafter .ba-*`. Clasa `.ba-after`/`.ba-before` e refolosită și de lista DOVADA din pași → fundalul devenea negru, dar textul `.ba-val` rămânea `color:var(--k)` (negru) → invizibil.
+3. **Fix:** încadrat toate regulile leak în `.hero-beforeafter` (backgrounds, `.ba-label` colors, `.ba-arrow` + `::after`). Aplicat în ambele machete afectate: `HTML-Studiu` + `HTML-Editor-Studiu`. DOVADA revine la verde/roșu-deschis (liniile 773/1266) cu text negru vizibil; săgeata revine la galben simplu.
+4. **Audit ZERO DRIFT** menținut (80/80 PASS). Playwright nu e instalat în containerul Web — verificare prin analiza cascadei CSS (nu randată).
+5. **L173 (nou):** vezi mai jos.
+
+**Notă propagare:** același pattern de leak ar apărea în C02-C08 DOAR dacă moștenesc blocul hero V47 — dar redesignul premium e încă nepropagat (doar C01 model finalizat). La propagare C02-C08 se folosește varianta corectată (scoped).
+
+---
 
 **Sesiunea V47 — sumar (redesign experiență C01 = model premium validat):**
 
@@ -239,6 +251,8 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 
 - **L167** (V45) G-06 nu înseamnă apărare rigidă a oricărei reguli înghețate. Când feedback-ul extern identifică un defect REAL într-o decizie înghețată de ARHITECT (ex. suprapunerea C05/C06 + nume/conținut nepotrivit la C05), clasificarea corectă e CONFLICT-condiționat: resping soluția care contrazice sistemul, dar prezint onest defectul și las ARHITECT să-și dezghețe propria regulă. Intelectual honesty > consistență. (Mi-am schimbat verdictul între două mesaje pe baza unui argument nou, nu a presiunii repetate.)
 - **L168** (V45) Procedura de redenumire construcție: (a) replace stem filename repo-wide `Excel-NN-Vechi`→`Excel-NN-Nou` în toate fișierele text, (b) `git mv` fișierele, (c) rename DISPLAY separat (nume afișat în hero/meta/nav/title — atenție la protejarea meta-listei cu placeholder), (d) update C(N-1) next-pointer + index + IDENTITATE + gate dict. Verifică `git status` arată R (rename), nu D+A.
+
+- **L173** (V48) CSS cu selectori BARE într-un bloc copiat/redesignat se scurge peste alte secțiuni care refolosesc aceleași clase. Cazul empiric: redesignul hero V47 a definit `.ba-after{background:#0a0a0a}` neîncadrat, iar lista DOVADA din pași (pasul 9) folosește aceeași clasă `.ba-after` → box negru cu text negru invizibil. A trăit o sesiune nedetectat (audit verifică structură+prezență, nu contrast/cascadă). **Regulă durabilă:** orice CSS component-specific se scrie ÎNTOTDEAUNA scoped la containerul lui (`.hero-beforeafter .ba-after`, nu `.ba-after`), mai ales când numele de clasă (ba-before/ba-after/ba-val/ba-arrow) sunt generice și refolosite în alte secțiuni. La redesign de bloc, verifică dacă clasele atinse mai apar în altă parte din document înainte de a scrie reguli bare.
 
 Toate lecțiile cumulate (L01-L168) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
