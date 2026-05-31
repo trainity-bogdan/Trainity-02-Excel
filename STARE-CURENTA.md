@@ -1,7 +1,29 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V51 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V53 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V53 — sumar (card MIZA cu chenar + shadow, propagat C01-C04):**
+
+1. **Card `.cover-miza`** (cerere ARHITECT): textul MIZA din modelul premium HTML-Studiu, transformat din linie cu border-top (V47) în **card alb cu chenar + colțuri rotunjite 10px + accent galben Trainity 4px pe stânga + shadow dublu**. Îl ridică de pe pagină ca element-cheie. Aplicat **C01-C04** (Studiu + Editor-Studiu, 8 fișiere). Verificat randat (C01 + C03). Audit ZERO DRIFT 88/88.
+2. **Documentat** în `_system/07-BRAND-OPERATIONAL.md` → „Componente vizuale signature" (specificația CSS completă + notă propagare C05-C08).
+3. De propagat la C05-C08 odată cu modelul premium (T2 încă pe model vechi).
+
+---
+
+**Sesiunea V52 — sumar (C02 finalizat: premium + business G-06 + imagini exec + FILM sync + verificat randat):**
+
+1. **C02 = model premium complet** (Studiu + Editor-Studiu): hero cockpit imagine-obiect CONTROL + system-map MARCARE activ + arc TU (bombă „Pare curat. Datele mint." → SUNĂ CUNOSCUT → GREȘEALA „marchează întâi" → AHA → CINE DEVII) + before/after + outcomes + transformare gated. Eliminat exec-hero DE CE + CONTRACT.
+2. **Tensiune business (feedback extern → G-06 SIGUR, confirmat ARHITECT):** MIZA strategică (risc KPI/dashboard/decizie), „Minciuna produsă" calitativ pe cele 5 anomalii (fără cifre — garda R-V02.15 + granița C02/C03 respectată), AHA „Valid nu înseamnă adevărat", WOW „Raportul nu mai înghite minciuna. O marchează." Aplicat pe 4 machete (WOW slot data-wow) + FILM sync.
+3. **TOATE cele 6 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE/CONFIRMARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-1/2/3/6 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video (verificat: a N-a imagine == fișierul exec-stage-N). exec-6 = folder CONTROLAT + VALIDAT + handoff la C03. **C02 = 6/6 imagini exec proprii + hero-poster dedicate.**
+4. **FILM C02 sync** (R-V46 FILM=master): MIZA + WOW vechi → noi în .docx (text într-un singur run, înlocuire sigură).
+5. **`PROMPTURI-SLIDES-EXEC-C02.txt`** creat (cele 6 verbatim din Creativ) + livrat ARHITECT.
+6. **VERIFICAT RANDAT** (L178 aplicat): C02 Studiu randat 393px + 1280px — hero, arc TU, „minciuna produsă", outcomes, mantra toate corecte. Audit ZERO DRIFT 88/88, nesting 0 pe toate 4 machete.
+7. **L179 (nou):** `strip_watermark.py` eșuează când colțul dreapta-jos al imaginii e pe fundal DESCHIS (hârtie/lumină), nu întunecat — `detect_sparkle` prinde o casetă prea mare și lasă o pată gri. Fix: clonare verticală dintr-o bandă imediat deasupra casetei steluței (textură continuă), casetă fixă. De integrat în strip_watermark ca fallback când zona-țintă e luminoasă.
+
+**C02 = MODEL FINALIZAT COMPLET** (a doua construcție 100% gata după C01): premium + business G-06 + 6/6 imagini exec dedicate + hero + FILM sync + verificat randat. Nimic deschis pe C02. **L180:** consolidarea pe STARE-CURENTA poate fi suprascrisă de un merge paralel — verific persistența post-merge și re-aplic dacă a fost înlocuită.
+
+---
 
 **Sesiunea V51 — sumar (C03 model premium + hero forensic + rescope C03/C04 + bullet canonic + prompturi exec):**
 
@@ -163,7 +185,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | Cod | Nume | Versiune | Stare | Audit |
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C02** | MARCARE (cum construim controlul anomaliilor de date) | V52 MODEL FINALIZAT (premium + business G-06 + 6/6 exec-stage dedicate + hero + FILM sync + verificat randat) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |

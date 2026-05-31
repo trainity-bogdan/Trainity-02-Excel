@@ -123,6 +123,7 @@ Sistemul vizual T-02 → T-10 (frozen 14 aprilie 2026):
 - **Stat-board negru `#0A0A0A`** cu `border-radius: 16px` + `box-shadow: 3px 3px 0 0 #FFD400` — semnătura Trainity
 - **Yellow bar 6px** între secțiuni (în landing-uri)
 - **CTA principal**: yellow `#FFD400` + border 2px black + box-shadow 5px 5px 0 0 black + black dot 7px + CAPS + weight 800
+- **Card MIZA (`.cover-miza`)** în modelul premium HTML-Studiu (V52): card alb cu `border-radius:10px`, `border:1px solid #ececec`, accent galben `border-left:4px solid var(--tr-y,#FFD400)`, shadow dublu `0 6px 24px rgba(10,10,10,.10), 0 1px 3px rgba(10,10,10,.06)`, `padding:20px 24px`. Ridică MIZA de pe pagină ca element-cheie. Aplicat C01-C04 (Studiu + Editor-Studiu); de propagat la C05-C08 odată cu modelul premium.
 
 ---
 
