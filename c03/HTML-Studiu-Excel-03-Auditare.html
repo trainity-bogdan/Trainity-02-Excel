@@ -1506,9 +1506,9 @@ body.has-continue .scroll-top { bottom: 88px; }
       </header>
 
       <section class="study-intro-top">
-        <h1 class="cover-title">Cum construim un audit valoric</h1>
+        <h1 class="cover-title">Cum auditezi ce nu se vede în date</h1>
         <p class="hero-microbrief">Un tabel poate arăta impecabil și totuși să poarte contaminări tehnice invizibile, care intră în orice raport fără să fie observate. În această construcție demonstrăm diferența dintre ce pare curat și ce este curat la nivel tehnic.</p>
-        <div class="cover-miza">Obținem date pe care orice formulă le poate citi corect. Nimic invizibil nu mai blochează o căutare, o sumă sau un raport, iar valoarea reală a datelor rămâne neatinsă.</div>
+        <div class="cover-miza">Dacă datele par curate dar ascund contaminări invizibile, formulele, rapoartele și AI-ul lucrează pe o minciună tehnică. C03 demonstrează contaminarea și dovedește că valoarea reală rămâne intactă.</div>
       </section>
 
       <section class="intriga-bomb">
@@ -1644,7 +1644,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <p class="step-action">Lipești promptul de mai jos. AI numără pe categorii contaminările invizibile, fără să modifice nicio celulă.</p>
     <div class="prompt-box">
       <div class="prompt-label">PROMPT 1 · INSTRUMENT DE AUDIT FORENSIC</div>
-      <div class="prompt-text">Verifică foaia Vanzari pe cinci categorii de contaminare invizibilă și numără celulele afectate, fără să modifici nimic. Categoriile: spații la finalul textului în client_nume și produs_nume; caractere zero-width sau soft hyphen în client_nume; numere stocate ca text în valoare_neta; date stocate ca șir în data_factura; caractere de rând nou la finalul produs_nume. Raportează doar numărul pe categorie.</div>
+      <div class="prompt-text">Verifică foaia Vanzari pentru contaminări invizibile, fără să modifici datele. Caută spații ascunse, caractere invizibile, numere ca text, date ca text și newline-uri în text. Raportează numărul de celule afectate pe fiecare categorie.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1716,7 +1716,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Cu contaminările identificate, construim un flux de neutralizare. Power Query ca audit engine refreshabil, nu intervenție unică.</p>
+  <p class="stage-quote">Cu contaminările identificate, demonstrăm neutralizarea: fiecare categorie poate fi curățată fără să atingem valoarea reală. Mecanismul permanent îl construiește C04.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
@@ -1739,7 +1739,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <p class="step-action">Lipești promptul pentru pașii M de curățare. Fiecare categorie primește un pas dedicat: Text.Trim, Text.Replace pe zero-width, Number.From, Date.From.</p>
     <div class="prompt-box">
       <div class="prompt-label">PROMPT 2 · INSTRUMENT DE NEUTRALIZARE TEHNICĂ</div>
-      <div class="prompt-text">Construiește în Power Query un flux refreshabil care neutralizează cele cinci categorii de contaminare invizibilă, fără să modifice valoarea reală. Aplică Text.Trim pe client_nume și produs_nume; Text.Replace pe caractere zero-width și soft hyphen în client_nume; Text.Replace pe caractere de rând nou în produs_nume; conversie Number.From și tip Number pe valoare_neta; conversie Date.From și tip Date pe data_factura. Vreau să pot reaplica fluxul la fiecare export nou.</div>
+      <div class="prompt-text">Construiește în Power Query o neutralizare demonstrativă a celor cinci categorii de contaminare invizibilă, fără să modifice valoarea reală. Aplică Text.Trim pe client_nume și produs_nume; Text.Replace pe caractere zero-width și soft hyphen în client_nume; Text.Replace pe caractere de rând nou în produs_nume; conversie Number.From și tip Number pe valoare_neta; conversie Date.From și tip Date pe data_factura. Scopul e să dovedești că fiecare contaminare poate fi neutralizată fără pierdere de valoare. Mecanismul permanent, refreshabil la fiecare export, îl construiești în C04.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1856,34 +1856,34 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
     </div>
   </header>
-  <p class="stage-quote">Auditul nu e o intervenție unică. Devine un protocol refreshabil care rezistă la fiecare export nou.</p>
+  <p class="stage-quote">Auditul rămâne repetabil ca verificare: îl rulezi pe orice export nou ca să confirmi dacă datele sunt curate. Curățarea permanentă o construiește C04.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Leagă fluxul de audit la sursă</h3>
+    <h3 class="step-title">Păstrează auditul ca verificare repetabilă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Fluxul Power Query cu cei opt pași de neutralizare rămâne conectat la foaia Vanzari. La un export nou cu aceeași schemă, un singur Refresh reaplică toate verificările.</p>
+    <p class="step-action">Pașii de detecție din audit rămân documentați, gata de re-rulat pe orice export nou cu aceeași schemă. Nu automatizezi curățarea aici, o dovedești repetabilă ca verificare.</p>
     
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh simulat</h3>
+    <h3 class="step-title">Re-rulează auditul pe un export nou</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Înlocuiește sursa cu un export nou contaminat similar. Date > Reîmprospătează tot. Foaia Vanzari_AUDIT se reconstruiește curată, zero clic manual, zero contaminări rezistente.</p>
+    <p class="step-action">Înlocuiește sursa cu un export nou contaminat similar și rulează din nou auditul. Dacă găsește aceleași categorii, dovada ține. Curățarea permanentă, refreshabilă, o construiește C04.</p>
     
   </div>
 </div>
 <div class="step" data-step="15">
   <div class="step-head" onclick="toggleStep(15)">
     <div class="step-marker">PAS 15</div>
-    <h3 class="step-title">Documentează protocolul forensic</h3>
+    <h3 class="step-title">Documentează dovada forensic</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
@@ -1923,7 +1923,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Vanzari_AUDIT poate intra direct în orice analiză sau dashboard, fără să propage contaminări invizibile. Datele nu mai mint, au fost demonstrate.</p>
+    <p class="step-action">Vanzari_AUDIT poate intra direct în orice analiză sau dashboard, fără să propage contaminări invizibile. Datele nu mai ascund defecte, au fost demonstrate.</p>
     
   </div>
 </div>
@@ -1952,7 +1952,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">NUMERIC</div><div class="final-text">valoare_neta este tip Number pur.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">DATE</div><div class="final-text">data_factura este tip Date real.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">Suma valoare_neta conservată de la INPUT la AUDIT.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROTOCOL</div><div class="final-text">Fluxul Power Query refreshabil la export nou.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROTOCOL</div><div class="final-text">Auditul documentat, repetabil ca verificare pe export nou.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Bază demonstrabilă validată.</div>
           <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C03 e pregătit pentru C04 Normalizarea datelor.</div>
@@ -1970,7 +1970,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line dim">Nu am modificat valori.</div>
         <div class="payoff-line dim">Nu am crezut aparența.</div>
         <div class="payoff-line accent">Am demonstrat ce era ascuns.</div>
-        <div class="payoff-line regular">Datele nu mai mint.</div>
+        <div class="payoff-line regular">Datele nu mai ascund defecte.</div>
         <div class="payoff-line regular">C04 poate începe.</div>
         <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Datele par curate. Astăzi am demonstrat că nu erau.</span></div>
         <div class="payoff-motto">Audităm ce nu se vede.</div>
