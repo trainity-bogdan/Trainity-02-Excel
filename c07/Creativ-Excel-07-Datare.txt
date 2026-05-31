@@ -73,30 +73,31 @@ Trebuie sa atraga click-ul intr-o oceana de thumbnail-uri concurente.
 NU este o imagine cinematica subtila. Este HOOK BRUTAL.
 
 C07 este prima constructie din T2 CUNOASTERE. INTRIGA este:
-"Setul are un dictionar. Excel il stie. Tu nu."
-Cover-ul trebuie sa exprime vizual descoperirea dictionarului ascuns al
-setului - operatorul priveste tabelul si nu vede cifrele care exista
-deja in spate.
+"Setul are memorie. Excel o tine minte. Tu nu i-ai citit-o."
+Cover-ul trebuie sa exprime vizual cronologia ascunsa a setului -
+operatorul priveste tabelul si nu vede CALENDARUL care exista deja in
+spate: perioada, lunile, golurile in timp.
 
-NUME FISIER SALVAT: `cover-yt-excel-05-datare.jpg`
+NUME FISIER SALVAT: `cover-yt-excel-07-datare.jpg`
 DIMENSIUNE THUMBNAIL YT: 1280×720 px (16:9 orizontal)
 LOC IN PRODUCȚIE: Thumbnail YouTube + cover pentru landing pages.
 
 
 COMPOZIȚIE CERUTĂ
-- Element principal CENTRU sau stanga-centru: hartie imprimata cu un
-  tabel de date, lizibila, dar PESTE tabel apare o suprapunere de
-  cifre categorice galbene (post-it sau cartonase) care identifica
-  fiecare coloana ca apartinand unei categorii ("CLIENT", "JUDET",
-  "CATEGORIE", "MONEDA", "CANTITATE"). Tabelul de baza este vizibil
-  prin transparenta.
-- Element shock: trei dintre cifre sunt rasturnate sau decolorate,
-  sugerand cifre neidentificate, ascunse. Una dintre cifre are
-  o lupa aurie deasupra, sugerand inspectia.
-- Zona dreapta: lasata mai libera, in shadow, pentru OVERLAY TEXT mare
-  in post-productie ("AI VAZUT ETICHETELE?" sau "TU NU LE VEZI." scris
-  in YouTube Studio peste).
-- Iluminare dramatica de sus, lumina alba clinica + un rim galben warm.
+- Element principal stanga-centru: hartie imprimata cu un tabel de date,
+  asezata pe o suprafata intunecata. Coloana de date (data_factura) e
+  evidentiata.
+- Element-cheie: deasupra tabelului pluteste o BANDA-CALENDAR aurie (o
+  axa temporala fizica, 12 casute-luni in linie, ca o rigla a timpului),
+  cu cateva casute pline si cateva GOALE (golurile in timp).
+- Mecanism: din randurile tabelului pornesc linii fine de lumina catre
+  casutele-luni, ca si cum fiecare rand isi gaseste pozitia in calendar.
+- Doua-trei casute-luni sunt marcate cu un mic semn (luna prezenta) si
+  una este vizibil GOALA (luna lipsa din secventa).
+- Zona dreapta-sus: lasata libera, in shadow, pentru OVERLAY TEXT mare in
+  post-productie ("CAND S-A INTAMPLAT?" scris in YouTube Studio).
+- Iluminare dramatica de sus, lumina alba clinica pe tabel + rim galben
+  warm (#FFD400) pe banda-calendar.
 - NU este aceeasi paleta moale ca slide-urile executive - este THUMBNAIL,
   trebuie sa sara la ochi.
 
@@ -107,18 +108,17 @@ Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
 thumbnail style, high impact composition.
 
 Subject: A printed business data table laid flat on a dark surface,
-photographed at slight three-quarter angle. The table shows multiple rows
-of data with columns clearly visible. Floating just above the page surface,
-hovering at a slight 3D depth, are five rectangular paper labels in
-distressed industrial typography, each label naming a category:
-"CLIENT", "JUDET", "CATEGORIE", "MONEDA", "CANTITATE". The labels are
-made of slightly aged kraft paper with a thin black border, lit from above
-with warm amber accent light. Two of the five labels appear flipped or
-faded, half-readable, suggesting hidden categories not yet identified.
+photographed at a slight three-quarter angle, with a date column clearly
+visible. Floating just above the page surface, hovering at a slight 3D
+depth, is a long golden calendar bar - a physical timeline ruler made of
+twelve small month cells in a row, like a ruler of time. Most month cells
+are filled with a small engraved mark; one or two cells are visibly EMPTY,
+suggesting missing months in the sequence (gaps in time).
 
-A small golden magnifying glass made of brass hovers near one of the
-labels in the upper right area, with a faint amber light glow at its
-focal point, suggesting active inspection.
+Thin beams of warm light connect rows of the table up to specific month
+cells on the calendar bar, as if each row finds its position in the
+calendar. A slim golden brass pointer rests across the timeline, marking
+the first and the last month of the covered period.
 
 Lighting: Hero spotlight from above creating dramatic contrast. The data
 table is lit with cool clinical white light. The floating labels and
@@ -139,8 +139,8 @@ yellow (#FFD400) accents on labels and magnifying glass. White paper,
 black printed text on the data table. No other colors. The labels
 should glow slightly warm against the cooler table beneath.
 
-Mood: Forensic investigation, surgical clarity, "you have not yet seen
-what is already here". Conveys the moment of dictionary discovery.
+Mood: Chronological clarity, surgical order, "every row finally knows
+when it happened". Conveys the moment when a flat list becomes a calendar.
 
 Style references: Editorial photography from Wired magazine forensic
 features, product photography for premium instruments, chiaroscuro of
@@ -170,7 +170,7 @@ deck-uri, in postari LinkedIn. Audienta trebuie sa inteleaga din priviri:
 "Ah, C07 transforma un tabel necunoscut intr-un dictionar al setului,
 profil complet, prin Copilot + Excel."
 
-NUME FISIER SALVAT: `infografic-excel-05-datare.jpg`
+NUME FISIER SALVAT: `infografic-excel-07-datare.jpg`
 DIMENSIUNE: 1920×1080 px (16:9 orizontal)
 LOC IN PRODUCȚIE: Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
 
@@ -615,8 +615,8 @@ SUMAR FIȘIERE GENERATE
 Total: 8 fisiere imagine de generat cu Banana 2 / Gemini Imagen.
 
 Cover & Infografic (2):
-  ☐ cover-yt-excel-05-datare.jpg        (1280×720, 16:9)
-  ☐ infografic-excel-05-datare.jpg      (1920×1080, 16:9)
+  ☐ cover-yt-excel-07-datare.jpg        (1280×720, 16:9)
+  ☐ infografic-excel-07-datare.jpg      (1920×1080, 16:9)
 
 Executive Show (6):
   ☐ exec-stage-1.jpg    (REALITATE)          (2400×1600, 3:2)
