@@ -119,6 +119,8 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Garda T2/T3** | atribuie etichete descriptiv; prioritizarea strategică pe segmente = C11/T3 |
 | **Status** | LIVRABIL V44 (rebuild din CUANTIFICARE) |
 
+> **NOTĂ ANTI-REDRIFT (lock V58, după L186 repetat de 3x).** C06 **ESTE CLASIFICARE**, decizie definitivă confirmată de ARHITECT. NU este „profil numeric / KPI / sume-medii-distribuții" — aceea era harta T2 **pre-V45** (C06 = CUANTIFICARE), abandonată la rebuild-ul V45 tocmai ca să elimine suprapunerea cu C05. Orice feedback extern care cere „C06 = profil numeric" lucrează pe harta veche și se RESPINGE (G-06 CONFLICT). C06 produce **etichete operaționale prin reguli** (clasă/segment/scor), NU decizii business. Limbaj INTERZIS în C06 (mută în T3/C11): „prioritar", „critic", „strategic", „irelevant", „valoros", „important pentru business". **Formula de control:** C05 = ce există · C06 = ce înseamnă fiecare rând · C07 = când se întâmplă · C08 = cu cine se leagă.
+
 ### C07 · DATARE — MEMORIA SETULUI (PROPUS, AXĂ LOCK V43)
 
 | Aspect | Conținut |
