@@ -1,7 +1,20 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V49 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V50 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V50 — sumar (C03 model premium + hero forensic + rescope C03/C04 + bullet canonic + prompturi exec):**
+
+1. **C03 = model premium propagat** (Studiu + Editor-Studiu): hero cockpit cu imagine-obiect forensic dedicată + overlay „AUDIT" + system-map (AUDIT activ); arc TU pe axa forensic — bombă „Arată curat. Nu este." → SUNĂ CUNOSCUT → GREȘEALA „Oamenii curăță ce se vede. Profesioniștii auditează ce nu se vede." → AHA → CINE DEVII „Nu mai vezi date curate. Vezi date neauditate." → before/after + outcomes. Video/Editor-Video neatinse (modelul premium NU atinge Video — confirmat empiric: C01 și C03 Video structural identice, zero markeri premium). Eliminat exec-hero DE CE + CONTRACT (paritate C01).
+2. **L176 — RANDAREA FUNCȚIONEAZĂ în containerul Web** (corectează presupunerea V47/V48/L175 că „Playwright nu e instalat"). Chromium + Playwright trăiesc în `/opt/node22/lib/node_modules/playwright`; rulez `node` cu `require(PW+'/index.js')` → screenshot la 393px (mobil) + 1280px (desktop). „NEVERIFICAT randat" nu mai e scuză — verific ÎNTOTDEAUNA înainte de livrare. C03 premium verificat randat integral.
+3. **R-V03.72 nou (detector + regulă):** zero em/en-dash ORIUNDE (text, CSS `content:`, comentarii JS/CSS) + bullet `.tu-list` canonic `\2022` (•) IDENTIC în toate construcțiile. Curățat C01 (en-dash bullet + comentariu CSS) + 4× Editor-Video (em-dash în comentariu JS: c01,c02,c03,c05). C01 = C02 = C03 bullet `•`. **Audit 80 → 88** (11 detectoare × 8).
+4. **Hero-poster forensic C03** generat de ARHITECT, procesat singur (extras din transcript jsonl, watermark Gemini scos cu `strip_watermark.py` per R-V49.1, base64) și integrat în hero Studiu+Editor-Studiu. Salvat `c03/assets/hero-poster-excel-03-auditare.jpg`. Numere lizibile în poză = textură fotografică (precedent C02 aprobat de ARHITECT; R-V02.15 vizează callout-uri de date HTML, nu fotografii).
+5. **Feedback extern → G-06 → ascuțire C03** (confirmat ARHITECT: rescope + titlu + da FILM): titlu „Cum auditezi ce nu se vede în date" (era „audit valoric", contabil/vag); miză mai dură („formulele, rapoartele și AI-ul lucrează pe o minciună tehnică"); „Datele nu mai mint" → „nu mai ascund defecte" (diferențiere de C02 operațional); prompt 1 scurtat pentru cursant.
+6. **RESCOPE C03/C04 (cel mai important):** C03 revendica „flux refreshabil... la fiecare export nou" (etapa 3 TRANSFORMARE, etapa 5 STABILIZARE pașii 13-15, prompt 2, outcomes, exec-slide 5 Video, prompturile imagine) = teritoriul C04. Corectat: **C03 = demonstrează + audit + dovadă + conservare; auditul = repetabil ca VERIFICARE** (îl re-rulezi pe export nou ca să confirmi); **C04 = mecanismul permanent refreshabil**. Toate mențiunile „refreshabil" rămase atribuie EXPLICIT mecanismul lui C04. Propagat în 4 machete + FILM (sursă) + Creativ (prompturi imagine etapa 3+5) + notă graniță anti-redrift în 06-MAP.
+7. **`PROMPTURI-SLIDES-EXEC-C03.txt`** creat (cele 6 prompturi exec-stage într-un singur fișier, format ca C02, aliniate rescope) + livrat ARHITECT.
+8. ⚠️ **PENDING — POZELE C03 NEGENERATE:** cele 6 imagini **exec-stage C03 sunt încă clone byte-identice cu C01** (scenă generică „monitor + Excel + legendă forme" + watermark Gemini) — NU universul forensic C03. Prompturile sunt gata (fișierul de la pct. 7). De generat în Banana → strip watermark → integrare base64 în HTML-Video + Editor-Video → salvare assets. Opțional negenerate: `infografic` (nefolosit în modelul premium, 0 referințe în Studiu) + `cover-yt` (thumbnail YouTube, extern HTML). **Singura imagine C03 dedicată generată până acum = hero-poster.**
+
+---
 
 **Sesiunea V49 — sumar (reguli git workflow + start lucru paralel multi-sesiune):**
 
@@ -138,7 +151,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume → model premium V47 propagat (Studiu+Editor-Studiu) | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V50: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -175,11 +188,10 @@ Detectori activi (V40):
 
 ## Pe agenda imediată
 
-1. ~~SPEC + generare C06~~ ✓ LIVRAT V43 (CUANTIFICARE)
-2. **SPEC C07** cinematic — axa TEMPORALĂ ("setul are memorie")
-4. **Generare C07** după SPEC freezing
-5. **SPEC C08** — axa TEMPORALĂ-COMBINATĂ ("setul are tipare")
-6. **Setup B2C landing pages live** (paralel)
+1. ⚠️ **POZE C03 exec-stage 1-6 NEGENERATE** — actual = clone C01 structurale + watermark; prompturi gata în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`. ARHITECT generează în Banana → motor face strip watermark + integrare base64 în Video/Editor-Video. (opțional: infografic + cover-yt C03)
+2. **Propagare model premium C05-C08** (C01-C04 făcute) — copy per beat pe axa fiecăreia + imagine-obiect hero per construcție (prompt secțiune 2B în Creativ)
+3. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
+4. **Setup B2C landing pages live** (paralel)
 
 ---
 
