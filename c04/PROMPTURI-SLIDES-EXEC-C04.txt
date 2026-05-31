@@ -1,0 +1,152 @@
+PROMPTURI SLIDES EXEC · C04 NORMALIZARE
+Cele 6 imagini exec-stage (Executive Show, finalul HTML-Video).
+Generezi in Banana 2 / Gemini Imagen. Salvezi cu numele indicat la fiecare.
+Watermark-ul (steluta) il scot eu automat dupa ce mi le dai.
+
+═══════════════════════════════════════════════════════════════════════════
+REGULI COMUNE (toate 6)
+═══════════════════════════════════════════════════════════════════════════
+- Subiect cheie in DREAPTA-CENTRU / CENTRU. STANGA 40% in shadow (acolo vine textul slide-ului).
+- 3:2 orizontal, 2400x1600 px.
+- Paleta: dark wood/metal + alb hartie + amber warm #FFD400 (+ rosu signal #C00000 doar pe butonul refresh, etapa 03).
+- O singura sursa principala de lumina amber din dreapta-sus.
+- Fraza de continuitate e deja inclusa in fiecare prompt (NU o scoate).
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 01 · REALITATE   →   salveaza ca: exec-stage-1.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A messy stack of three printed business invoice pages on a dark wood surface, slightly fanned, the topmost page showing visible structural contamination, a header row at top, several data rows, then a "SUBTOTAL" divider row in gray, a blank empty row creating a visual gap, then more data, and at the bottom a "TOTAL GENERAL" row in bold. Some text rows show subtle inconsistency (one row spelled with diacritic accents, another without, barely perceptible). The pages have just been printed and landed on the surface, no human touch yet. No tools visible.
+
+Lighting: Single warm amber light source from upper right, soft falloff. Left 40% of frame in deep shadow gradient, almost black. The top page catches the amber light on its right edge.
+
+Composition: Stack of pages occupies center-right of frame. Left third reserved for slide text, in shadow.
+
+Style: Editorial business photography, slightly desaturated except for the warm amber glow on paper. Cinematic depth of field, top page razor sharp, pages beneath softly out of focus.
+
+Mood: Raw arrival. The viewer feels: "this is what came out of the system. Now we have to do something with it, every single time."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text. NO visible brand logos. NO infographic icons. NO cartoon style. Pure photographic realism.
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 02 · INVESTIGAȚIE   →   salveaza ca: exec-stage-2.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: The same printed business invoice page from the previous scene, laid flat on the dark wood surface. Beside it on the left, a worn notebook open to a tally page showing handwritten ticks and crossed-out items , suggestion of repeated cleaning sessions logged manually. Above the page, a single small wall-mounted clock visible at the upper edge of the frame in shadow, hands at different positions captured in slight motion blur (suggestion of time passing repeatedly on the same task). No magnifying glass this time, the focus is on the realization, not the inspection.
+
+Lighting: Single warm amber light source from upper right, soft falloff. Left 40% of frame in deep shadow gradient. The notebook lit slightly, the clock barely visible in shadow.
+
+Composition: Invoice page center-right. Notebook center-left, slightly behind. Clock upper-edge, shadowed.
+
+Style: Editorial business photography. Cinematic depth of field, page and notebook sharp, clock and background out of focus.
+
+Mood: Quiet realization. The viewer feels: "this is repetitive work I've done before. Something has to change."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, notebook tally marks should be suggestive vertical pencil strokes. NO visible brand logos. NO cartoon style. Pure photographic realism.
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 03 · TRANSFORMARE   →   salveaza ca: exec-stage-3.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A large vintage industrial pushbutton with a glossy deep red cap (signal red, #C00000) on a dark wood surface, captured at the exact moment of being depressed, the button cap is pushed down about halfway, with a concentric ring of warm amber light (#FFD400) emanating outward from its base. Above and behind the button, a vertical stack of ten small precise glowing amber step indicators arranged like a staircase, each step a clean horizontal bar, the bottom three steps already illuminated bright, the upper steps glowing progressively dimmer in sequence, suggesting cascading activation. The button is being pressed by an unseen force, no hand visible.
+
+Lighting: Single warm amber light source from upper right plus the emanating pulse from the button base. The red button catches a hot specular highlight. Left 40% of frame in deep shadow gradient.
+
+Composition: Red button center-right of frame. Vertical step staircase behind and slightly left of button, fading into depth. Left third in shadow for slide text.
+
+Style: Editorial business photography meets engineering product photography. Razor sharp focus on button and pulse ring, slight depth-of-field falloff on the staircase.
+
+Mood: Mechanical satisfaction, ignition, the click that starts the flow. The viewer feels: "one press. Everything runs."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces (the button is being pressed by an unseen force). NO gibberish text. NO visible brand logos. NO cartoon style. Pure photographic realism.
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 04 · VERIFICARE   →   salveaza ca: exec-stage-4.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A vertical narrow panel of ten precise glowing amber step indicators arranged like a staircase, all ten steps now uniformly illuminated with a clean warm amber glow (#FFD400), aligned on the left-center of the dark wood surface. To the right of the panel, a single printed business invoice page laid flat, visibly clean and perfectly structured, single header row, clean data rows below, no subtotals, no blank gaps, no contamination. The page catches the same warm amber light from upper right.
+
+Lighting: Single warm amber light source from upper right. The step panel emits its own gentle amber halo. Far-left corner of frame in deep shadow.
+
+Composition: Step panel left-center, vertical. Clean page right-center. Both equally weighted, suggesting machine and output side by side.
+
+Style: Editorial business photography meets engineering panel photography. Razor sharp focus on both step panel and page.
+
+Mood: Successful execution, all systems green. The viewer feels: "the machine has done its job. Every step. Every time."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, step indicators are abstract glowing bars, not text labels. NO visible brand logos. NO cartoon style. Pure photographic realism.
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 05 · STABILIZARE   →   salveaza ca: exec-stage-5.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: A single printed business invoice page on the dark wood surface, perfectly clean and structured, photographed at slight three-quarter angle. On the top-right corner of the page, a small embossed paper tab or bracket marker visible, suggestion of a named identifier attached to the page, like an Excel table name reference. The bracket is subtle but precise, catching a hint of golden ink. To the left of the page on the wood surface, a small brass plaque or label tag laid flat, with a fine engraved horizontal line suggesting it bears an identifier (no readable text). The scene communicates: this is no longer just paper. It is a named, addressable asset.
+
+Lighting: Single warm amber light source from upper right, the brass tag catching a polished gold reflection. Left 40% of frame in shadow gradient.
+
+Composition: Page center-right, slightly angled. Brass tag center-left, flat on wood. Left third in shadow for slide text.
+
+Style: Editorial business photography. Razor sharp focus on page corner bracket and brass tag, slight depth-of-field falloff on the rest of the page.
+
+Mood: Identity, asset stabilization, named delivery. The viewer feels: "this output has a name. It can be referenced. It exists in the system."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, brass tag should be suggestive engraved horizontal line, not readable characters. NO visible brand logos beyond the implied subtle bracket icon on paper corner. NO cartoon style. Pure photographic realism.
+
+
+═══════════════════════════════════════════════════════════════════════════
+ETAPA 06 · CONFIRMARE   →   salveaza ca: exec-stage-6.jpg
+═══════════════════════════════════════════════════════════════════════════
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+
+Subject: Two printed business invoice pages on the dark wood surface, side by side. The left page is the clean named output from C04 (single header, clean rows, bracket marker on top-right corner). The right page is identical in form but slightly translucent, lit from behind with a faint warm amber backlight, suggestion of the next stage about to begin on the same dataset. Between the two pages, a thin horizontal beam of warm amber light (#FFD400) connects them, like a baton being passed. Above the connecting beam in the upper background, four small glowing indicators arranged in a row, the first three illuminated brightly (STRUCTURĂ · CONTROL · AUDIT · NORMALIZARE complete) and the fourth just lit, while a fifth indicator visible faintly to the right, dimmer (CUNOAȘTERE pending).
+
+Lighting: Single warm amber light source from upper right plus a faint warm backlight on the right-side page. The connecting horizontal beam glows softly with volumetric haze.
+
+Composition: Two pages occupying center-right and right, the connecting beam horizontal between them. Indicators upper background. Left third in shadow for slide text.
+
+Style: Editorial business photography meets cinematic transition still. Razor sharp focus on both pages, slight depth-of-field falloff on indicators.
+
+Mood: Handover, baton pass, transition between epics. The viewer feels: "the foundation is laid. The next stage begins from here."
+
+Maintain strict visual continuity with the previous scenes in the C01-C04 series, same dark wood surface, same warm amber lighting, same paper texture, same mood register.
+
+Aspect ratio: 3:2 horizontal, 2400×1600 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text, indicators are abstract glowing bullets, not text labels. NO visible brand logos. NO cartoon style. Pure photographic realism.
+
