@@ -1660,7 +1660,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Citește regulile propuse. Verifică pragurile: A = top, C = jos. Dacă Copilot propune altceva decât forma setului, repetă întrebarea.</p>
+    <p class="step-action">Citește regulile propuse. Verifică pragurile: A/B/C sunt definite prin praguri valorice explicite (prag_A, prag_B pe valoare_neta). Dacă Copilot propune altceva decât forma setului, repetă întrebarea.</p>
     <div class="section-sublabel">RAPORT AI · STRUCTURĂ INVESTIGATĂ</div>
     <ul class="inv-list">
 <li class="inv-item">
@@ -1767,7 +1767,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Segment business</div>
+      <div class="ba-item-indicator">Segment operațional</div>
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">categorie brută</span></div>
         <div class="ba-arrow">→</div>
@@ -1844,7 +1844,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În coloana scor, normalizează: =(valoare_neta-MIN(valoare_neta))/(MAX(valoare_neta)-MIN(valoare_neta))*100. Fiecare rând capătă un scor 0-100. Nu e o decizie, e o etichetă.</p>
+    <p class="step-action">În coloana scor, normalizează: =IF(MAX(valoare_neta)=MIN(valoare_neta);50;(valoare_neta-MIN(valoare_neta))/(MAX(valoare_neta)-MIN(valoare_neta))*100). Fiecare rând capătă un scor 0-100; IF-ul protejează cazul în care toate valorile sunt egale (MAX=MIN). Nu e o decizie, e o etichetă.</p>
     
   </div>
 </div>
@@ -1951,7 +1951,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <p class="final-intro">Înainte de a preda baza către C07, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
         <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C06.xlsx există, se deschide, conține foaia Vanzari neschimbată.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">CLASE</div><div class="final-text">Clasa ABC construită cu IFS pe valoare_neta: A/B/C pe fiecare rând.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">SEGMENTE</div><div class="final-text">Segmentul de business atribuit cu SWITCH pe categorie.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">SEGMENTE</div><div class="final-text">Segmentul operațional atribuit cu SWITCH pe categorie.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">ETICHETE</div><div class="final-text">Etichete externe aduse din nomenclatoare cu XLOOKUP.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">REGULI</div><div class="final-text">Reguli compuse construite cu IFS din condiții multiple.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SCOR</div><div class="final-text">Scor 0-100 pe fiecare rând, dintr-o formulă de normalizare.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
@@ -1966,7 +1966,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="next-section">
         <div class="next-label">TREAPTA 2 · CONSTRUCȚIA URMĂTOARE</div>
         <h3 class="next-title">C07 · Datare</h3>
-        <p class="next-desc">Setul clasificat este complet. Acum trecem de la sens la timp: C07 deschide axa temporală a setului, cu evoluții lună de lună și ritmul propriu pe care numai datele îl pot arăta.</p>
+        <p class="next-desc">Setul clasificat este complet. Acum trecem de la sens la timp: C07 deschide axa temporală a setului: zi, lună, trimestru, perioadă. Poziția fiecărui rând în calendar.</p>
       </section>
 
       <section class="payoff-section">
