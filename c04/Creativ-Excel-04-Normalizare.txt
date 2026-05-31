@@ -261,6 +261,97 @@ style, no infographic-style flat icons.
 
 
 ══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 2B · HERO POSTER STUDIU (IMAGINE-OBIECT)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA-OBIECT care deschide HTML-Studiu (hero cockpit, ecranul
+1). Un singur obiect cinematic care spune din priviri ce construiește C04:
+fluxul Power Query care se reconstruiește identic la fiecare Refresh. Aparține
+ACELEIAȘI serii cinematice ca exec-stage C01-C04 (suprafață matte-black, lumină
+amber #FFD400, chiaroscuro), dar este un poster-obiect, nu un triptic narativ.
+
+NUME FISIER SALVAT: `hero-normalizare.jpg`
+DIMENSIUNE: 2400×1600 px (3:2 orizontal)
+LOC ÎN PRODUCȚIE: hero HTML-Studiu C04 (inline base64 în `.hero-visual-img`).
+
+OVERLAY HTML PESTE IMAGINE (NU se desenează în poză, se pune din HTML):
+- kicker: „OBIECTUL CONSTRUCȚIEI · C04"
+- cuvânt-obiect uriaș: „NORMALIZARE" (paralel cu pasul activ din cockpit)
+- întrebarea construcției: „De câte ori vei curăța la fel același export?"
+De aceea imaginea trebuie să fie ZERO TEXT și să lase spațiu negativ (stânga-sus
++ banda de jos) pentru textul suprapus.
+
+COMPOZIȚIE CERUTĂ
+- Un singur obiect sculptural, centru-dreapta: o buclă închisă de conducte și
+  racorduri din metal întunecat polișat, prin care curge lumină-fluid amber.
+  Bucla se reîntoarce în ea însăși (Refresh = ciclu). Zece inele/racorduri
+  inline pe traseu sugerează cei 10 Applied Steps.
+- Materie brută intră pe o parte, iese rafinată și identică pe cealaltă.
+- Spațiu negativ deliberat stânga-sus și pe banda de jos (întunecat, curat)
+  pentru overlay-ul de text.
+- ZERO TEXT pe imagine. Atmosfera: inginerie de precizie, nu haos.
+
+
+PROMPT (copy-paste integral în Banana 2 / Gemini Imagen)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+single sculptural object centered on a dark surface, dramatic chiaroscuro.
+
+Subject: A single self-contained mechanical flow object resting on a matte
+black surface, photographed from a low three-quarter angle. The object is a
+closed-loop arrangement of polished dark-metal industrial pipes and conduits
+forming a continuous circuit — raw material implied entering on one side and
+emerging refined and identical on the other, the loop feeding back on itself.
+Inside the transparent sections of the conduits, a warm amber liquid-light
+(#FFD400) flows in a clean continuous stream, glowing from within, suggesting
+an automated process that repeats itself perfectly each cycle. Precise machined
+valves and ten subtle inline junction rings along the pipeline hint at
+sequential engineered steps. The object reads as "a flow built once, running
+identically forever" — engineering, not chaos.
+
+Lighting: Deep chiaroscuro. A single warm amber key light (#FFD400) rakes
+across the metal from the upper right, catching polished edges and the glowing
+fluid inside; the rest falls into rich shadow. Strong volumetric haze and faint
+dust catching the amber beam. Cold near-black background.
+
+Composition: The object sits center-right, leaving deliberate empty negative
+space in the upper-left third and along the lower edge of the frame (dark,
+uncluttered) so large text can be overlaid later in post. Shallow but readable
+depth.
+
+Background: Matte black brushed metal / dark wood surface, identical texture
+to the rest of the series, fading to pure black at the edges. No competing
+elements.
+
+Color palette: Strictly monochromatic dark scene — black, gunmetal gray, and
+warm amber yellow (#FFD400) only. White/clean highlights allowed on refined
+output. No other colors.
+
+Mood: Engineering automation, idempotent precision, quiet power. The feeling
+of a mechanism that you build once and that then works on its own, forever
+producing the identical clean result. Like a premium product shot of an
+invisible process made physical.
+
+Style references: Editorial photography from Wired engineering features,
+premium industrial product photography, chiaroscuro of Caravaggio. Maintain
+strict visual continuity with the C01-C03 series (matte black surface, amber
+#FFD400 light, cinematic still-life of an abstract operational object).
+
+Technical: Shot on medium format camera, 50mm lens equivalent, f/5.6 for a
+sharp object against soft shadow falloff, low three-quarter angle. No digital
+artifacts.
+
+Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+
+Negative prompt: no people, no faces, no hands, no text, no letters, no numbers,
+no logos, no readable brand text, no labels, no infographic flat icons, no
+charts or graphs, no arrows drawn as graphic elements (the glowing fluid IS the
+flow), no other colors except gunmetal gray and warm amber, no cluttered
+background, no fantasy or sci-fi neon, no cartoon style.
+
+
+══════════════════════════════════════════════════════════════════════════════
 SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
 ══════════════════════════════════════════════════════════════════════════════
 
