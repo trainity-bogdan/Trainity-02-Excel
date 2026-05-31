@@ -62,10 +62,9 @@ După orice modificare la livrabile, rulează `_system/generatoare/audit_sync.py
 | `regenereaza CNN de la zero` | Suprascrie versiunea (cu confirmare) | branch dedicat `regen/cNN-AAAALLZZ` + commit înainte de suprascriere |
 | `verifica sincronizare` | Rulez audit_sync.py | raportez tabel drift |
 | `aplica fix [desc]` | Patch script peste construcții | folosesc patch_runner.py + rețetă YAML pe branch `fix/<desc>` |
-| `compara C{NN} cu versiunea anterioara` | Diff vs versiune mai veche | `git log -- cNN/`, `git show <sha>:cNN/...`, `git diff v{N-1}..HEAD -- cNN/` |
+| `compara C{NN} cu versiunea anterioara` | Diff vs versiune mai veche | `git log -- cNN/`, `git show <sha>:cNN/...`, `git diff <sha>..HEAD -- cNN/` |
 | `regula noua R-V03.X: [desc]` | Codific regulă nouă | adaug în 01-REGULI + detector + rețetă patch |
-| `tag V{N}` | Marchez stare oficială la incrementare V | `git tag -a v{N} -m "..."` + `git push --tags` |
-| `consolideaza brain` | Sumarizare sesiune | update STARE-CURENTA + tag V{N} automat + commit + push |
+| `consolideaza brain` | Sumarizare sesiune | update STARE-CURENTA + commit + merge în main + push (FĂRĂ tag-uri, vezi G3) |
 | `help` | Listă comenzi disponibile | citesc COMENZI.yaml |
 
 Pentru lista exhaustivă: `_system/03-COMENZI-OPERATIONALE.md`.
@@ -122,7 +121,7 @@ cNN/
 
 ## VERSIONARE GIT
 
-**Proiectul trăiește în git** (remote `github.com/trainity-bogdan/Trainity-02-Excel`). Versionarea = commit + branch + tag. Restore = `git checkout`, `git revert`, `git show`. Nu există backup folders manuale, nu există `_system/snapshots/`. Git ține istoricul complet.
+**Proiectul trăiește în git** (remote `github.com/trainity-bogdan/Trainity-02-Excel`). Versionarea = commit descriptiv pe `main` + STARE-CURENTA (FĂRĂ tag-uri, vezi G3). Restore = `git checkout`, `git revert`, `git show`. Nu există backup folders manuale, nu există `_system/snapshots/`. Git ține istoricul complet.
 
 ### G1. DEFAULT = COMMIT DIRECT PE MAIN
 Workflow solo dev: orice modificare merge **direct pe `main`** cu commit descriptiv. Un singur branch în GitHub Desktop, un singur Pull pentru sync. Rollback prin `git revert <sha>` dacă ceva merge prost (nu trebuie branch pentru asta).
@@ -145,19 +144,14 @@ Formă: `tip(scope): descriere scurtă`. Tipuri: `feat`, `fix`, `refactor`, `cho
 
 Body opțional pentru context (cele 9 elemente SPEC, schimbări structurale, decizii arhitectură).
 
-### G3. TAG V{N} LA INCREMENTARE
-La `consolideaza brain` (V40 → V41), motor execută:
-```
-git tag -a v{N} -m "V{N}: <sumar>"
-git push --tags
-```
-Tag-ul = echivalent „snapshot oficial". `git checkout v40` te întoarce instantaneu la starea V40. Manifest-ul (ce s-a schimbat vs V{N-1}) trăiește în mesajul tag-ului + STARE-CURENTA.md.
+### G3. FĂRĂ TAG-URI GIT (ABANDONAT)
+**NU mai folosesc tag-uri git și NU mai scriu NICIODATĂ despre ele ARHITECTULUI.** Nu-i dau comenzi de tip `git tag` / `git push origin v{N}` de rulat, nu raportez „tag local", nu menționez tag-uri în niciun raport. Push-ul de tag dă oricum 403 din proxy-ul Web. Versionarea oficială = **commit descriptiv pe `main` + `STARE-CURENTA.md`**. Manifest-ul (ce s-a schimbat vs V{N-1}) trăiește în mesajul de commit + STARE-CURENTA. `git checkout <sha>` acoperă orice restore la o stare veche, fără tag.
 
 ### G4. RESTORE = COMENZI GIT
 - Fișier unic la o versiune veche: `git show <sha>:path/fisier > /tmp/old && cp /tmp/old path/fisier`
-- Folder întreg la stare veche: `git checkout <sha-sau-tag> -- cNN/`
+- Folder întreg la stare veche: `git checkout <sha> -- cNN/`
 - Anulare commit recent: `git revert <sha>`
-- Vizualizare istoric: `git log --oneline -- cNN/`, `git diff v40..HEAD -- cNN/`
+- Vizualizare istoric: `git log --oneline -- cNN/`, `git diff <sha>..HEAD -- cNN/`
 
 ### G5. PR PENTRU REVIEW (recomandat pentru schimbări sistemice)
 Pentru generări noi, regule noi, refactor sistemic — deschide PR pe GitHub și fă merge din UI după review. Pentru fix-uri evidente solo, merge direct pe main e OK.
@@ -165,7 +159,7 @@ Pentru generări noi, regule noi, refactor sistemic — deschide PR pe GitHub ș
 **Sumar disciplină:**
 - Default = commit direct pe `main` cu mesaj descriptiv
 - Branch separat doar pentru regenerări CNN distructive / experimente / la cererea ARHITECT
-- Increment V: tag git anotat `v{N}` + push --tags
+- Increment V: doar commit descriptiv pe `main` + STARE-CURENTA (FĂRĂ tag-uri — vezi G3)
 
 Detalii operațional: `_system/COMENZI.yaml` + `_system/03-COMENZI-OPERATIONALE.md` + `_system/05-WORKFLOW-PER-SCENARIU.md`.
 
@@ -198,9 +192,8 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 La sfârșit de sesiune cu decizii importante:
 1. Actualizezi `STARE-CURENTA.md` (versiune nouă, lecții noi)
 2. Update `_system/arhiva/brain-evolutia-V01-V38.md` cu sumar V{N curent}
-3. **Tag V{N} automat** (regula G3): `git tag -a v{N} -m "..."` + `git push --tags`
-4. Commit final + push pe branch curent, **apoi OBLIGATORIU merge în `main` + push origin main** (eu fac merge-ul, niciodată ARHITECT — vezi regula absolută din capul fișierului)
-5. Raportez ARHITECT: "V{N} consolidat. main la zi (merge făcut). Tag v{N} local (push tag blocat de proxy Web, îl pushezi tu)."
+3. Commit final + push pe branch curent, **apoi OBLIGATORIU merge în `main` + push origin main** (eu fac merge-ul, niciodată ARHITECT — vezi regula absolută din capul fișierului). FĂRĂ tag-uri (G3).
+4. Raportez ARHITECT: "V{N} consolidat. main la zi (merge făcut)." — NU menționez tag-uri.
 
 ---
 
