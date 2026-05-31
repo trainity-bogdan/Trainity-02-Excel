@@ -86,6 +86,7 @@ Pentru format machine-readable: `_system/COMENZI.yaml`.
 | Schema livrabile | `_system/04-ARHITECTURA-LIVRABILE.md` |
 | Workflow pas cu pas | `_system/05-WORKFLOW-PER-SCENARIU.md` |
 | Construcțiile T1-T5 | `_system/06-MAP-CONSTRUCTII-T1-T5.md` |
+| **Arhitectura conceptuală T2 (AUTORITATE)** | `_system/11-ARHITECTURA-CONCEPTUALA-T2.md` — citește OBLIGATORIU înainte de orice C05-C08 |
 | Brand, voce, colors | `_system/07-BRAND-OPERATIONAL.md` |
 | Istoric V01-V38 | `_system/arhiva/` (NU pentru referință zilnică) |
 
