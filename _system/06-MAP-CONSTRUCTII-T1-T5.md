@@ -53,14 +53,18 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 | Aspect | Conținut |
 |---|---|
-| **INTRIGA** | Tabelul controlat valoric pare gata. Contaminările tehnice îl blochează. |
-| **MIZA** | VLOOKUP, XLOOKUP, MATCH eșuează silentios pe contaminări invizibile. |
+| **TITLU (cover)** | Cum auditezi ce nu se vede în date (V50: era „Cum construim un audit valoric" — prea contabil/vag) |
+| **INTRIGA** | Tabelul controlat valoric pare gata. Contaminările tehnice îl blochează. (bombă Studiu: „Arată curat. Nu este.") |
+| **MIZA** | VLOOKUP, XLOOKUP, MATCH eșuează silentios pe contaminări invizibile. Formulele, rapoartele și AI-ul lucrează pe o minciună tehnică. |
 | **MANTRA** | Înainte de orice analiză, auditul tehnic. |
 | **MOTTO** | Auditam ce nu se vede. |
 | **FENOMENE** | 5 categorii × 110 fiecare = 550 contaminări: whitespace invizibil (trailing spaces), Unicode/ZWSP/SHY, numere ca text (blocheaza SUM), date ca string (blochează filtru), trailing newlines. |
 | **Date_MASTER** | C03 input cu 550 contaminări planted, output curat |
 | **Sumă conservată** | DELTA 0 (audit non-distructiv) |
 | **Status** | LIVRABIL CANONIC V26 |
+
+**⚠️ GRANIȚĂ C03/C04 (rescope V50, feedback extern prin G-06):** C03 = **demonstrează + audit + dovadă + conservare**. Auditul e repetabil ca **VERIFICARE** (îl re-rulezi pe un export nou ca să confirmi dacă datele sunt curate), non-distructiv, DELTA 0. C03 **NU** construiește mecanismul permanent refreshabil — îl predă explicit lui C04. C04 = **mecanismul permanent** (Refresh All, pași PQ versionați, documentat). Markeri care NU au voie în C03: „flux refreshabil", „Refresh activ", „fluxul muncește pentru noi", „protocol permanent" (toate = teritoriu C04). Driftul empiric (V50): etapa 5 STABILIZARE + prompt 2 + outcomes revendicaseră fluxul permanent → corectat.
+
 
 ### C04 · NORMALIZARE ✓
 
