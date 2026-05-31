@@ -307,6 +307,25 @@ Butonul "RESETEAZĂ PROGRES" din nav-controls e lipit imediat sub meniu, fără 
 
 **Detector empiric:** regex pe `.nav-controls { ... }` → absența `margin-top: auto`.
 
+## R-V03.73 · MENIU MOBIL FĂRĂ BANDĂ nav-brand (referință C01)
+**Status:** ACTIVĂ permanentă (V58) · introdusă după bug descoperit la C02-C07
+
+Side-nav-ul (meniul slide-out pe mobil + coloana pe desktop) începe DIRECT cu
+`.nav-progress` („0/18 · PAȘI"), exact ca în `c01/HTML-Studiu`. NU conține blocul
+`<div class="nav-brand">` (banda „PACK 02 EXCEL · C0X" + titlul construcției).
+
+**De ce:** banda nav-brand e redundantă (slug-ul + titlul apar deja în
+`mobile-topbar` și în hero) și pe mobil împinge meniul în jos, ascunzând butonul
+„RESETEAZĂ PROGRES" sub fold. C01 = REFERINȚA corectă (n-a avut niciodată banda).
+
+**Regula la generare CNN (COPY+MODIFY din c01):** c01 nu are nav-brand, deci o
+construcție nouă pornită corect din c01 nu o moștenește. Dacă o construcție o are
+(moștenită dintr-o sursă veche), se elimină blocul HTML + cele 9 reguli CSS
+`.nav-brand` / `.nav-brand-label` / `.nav-brand-title` (bază + 2 breakpoint-uri).
+
+**Detector empiric:** regex pe HTML-Studiu + Editor-Studiu → absența
+`<div class="nav-brand">` și a `.nav-brand {`. Prezența = drift, se repară.
+
 ## R-V03.63 · AUDIT EMPIRIC PERMANENT
 **Status:** ACTIVĂ · STRUCTURĂ MAJORĂ V38
 La fiecare consolidare brain / commit major, motorul rulează `_system/generatoare/audit_sync.py` care:

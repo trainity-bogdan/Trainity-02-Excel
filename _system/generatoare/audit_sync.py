@@ -197,6 +197,15 @@ def _r0371(folder):
     return True
 
 
+@detector('R-V03.73', 'Meniu mobil fara banda nav-brand (referinta C01)', 'studiu')
+def _rnavbrand(c):
+    # Side-nav-ul incepe direct cu .nav-progress, ca in c01. Banda nav-brand
+    # (PACK 02 EXCEL + titlu) e redundanta si pe mobil ascunde butonul Reset
+    # sub fold. Bug descoperit empiric la C02-C07 (V58). Prezenta blocului HTML
+    # sau a regulii CSS = drift. L191.
+    return '<div class="nav-brand">' not in c and '.nav-brand {' not in c
+
+
 @detector('R-V57.parity', 'Paritate semnatura premium (mantra V56 + miza card)', 'studiu')
 def _rparity(c):
     # Se aplica DOAR constructiilor PREMIUM (hero-visual-overlay). Legacy
