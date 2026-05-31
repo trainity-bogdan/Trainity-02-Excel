@@ -1688,7 +1688,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="dim frag" data-frag="1">Nu am modificat valori.</p>
       <p class="dim frag" data-frag="2">Nu am rescris cronologia.</p>
       <p class="dim frag" data-frag="3">Nu am alterat tranzacțiile.</p>
-      <p class="accent frag" data-frag="4">Pentru prima dată, setul are un început, un ritm și o direcție.</p>
+      <p class="accent frag" data-frag="4">Setul nu mai plutește în timp. Fiecare rând are poziție temporală.</p>
       <p class="frag" data-frag="5">O memorie citită. Apoi orice decizie.</p>
       <p class="frag" data-frag="6">C08 poate începe.</p>
       <div class="final-motto frag" data-frag="7">Un set cunoscut.<br>Apoi orice decizie.</div>
@@ -1804,7 +1804,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 06</div>
       <div class="exec-emotion frag" data-frag="2">Predarea memoriei</div>
       <h2 class="exec-title frag" data-frag="3">CONFIRMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Era o listă de date. Acum are început, ritm și direcție.</p>
+      <p class="exec-phrase frag" data-frag="4">Era o listă de date. Acum are început, ritm și calendar.</p>
     </div>
   </section>
 
@@ -1899,15 +1899,15 @@ const STAGES = [
   },
   {
     id: 3, name: "TRANSFORMARE", emotion: "Profilare a ritmului",
-    hook: "Timeline-ul există. Adăugăm trendul și sezonul.",
+    hook: "Timeline-ul există. Adăugăm ritmul și sezonul.",
     next: "Power Query nu intră. Doar Copilot și foi de profil.",
     steps: [
       { num: "07", title: "Încărcăm timeline-ul. Ca foaie de profil.",
         instr: "Copiem tabelul răspuns pe sheet nou _TIMELINE. <strong>Timeline-ul devine livrabil vizibil. Nu o opinie a Copilot. O foaie din registru.</strong>",
         excel: true },
       { num: "08", title: "Profilăm ritmul. Promptul 2.", instr: "", prompt: 2 },
-      { num: "09", title: "Adăugăm trendul și sezonul.",
-        instr: "Pe _TREND citim direcția: toamna urcă, începutul de an coboară. <strong>Setul accelerează sau încetinește. Asta dictează tot ce urmează.</strong>",
+      { num: "09", title: "Adăugăm ritmul și sezonul.",
+        instr: "Pe _RITM citim ziua dominantă; pe _SEZON gruparea pe sezoane. <strong>Setul capătă calendar, fără să interpretăm de ce.</strong>",
         excel: true }
     ]
   },
@@ -1945,7 +1945,7 @@ const STAGES = [
   },
   {
     id: 6, name: "CONFIRMARE", emotion: "Predarea memoriei",
-    hook: "Setul are perioadă. Are ritm. Are direcție.",
+    hook: "Setul are perioadă. Are ritm. Are calendar.",
     next: "Memoria devine fundație. C08 leagă ecosistemul deasupra.",
     steps: [
       { num: "16", title: "Verificăm memoria. Cap-coadă.",
@@ -1955,7 +1955,7 @@ const STAGES = [
         instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Profilarea temporală nu modifică valori. Citește timpul.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C08.",
-        instr: "Setul are memorie. Perioadă, ritm, trend, sezon. <strong>C08 deschide ecosistemul pe un set a cărui cronologie e deja citită.</strong>",
+        instr: "Setul are memorie. Perioadă, ritm, goluri, sezon. <strong>C08 deschide ecosistemul pe un set a cărui cronologie e deja citită.</strong>",
         excel: false }
     ]
   }
