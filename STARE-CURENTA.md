@@ -1,7 +1,21 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V51 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V52 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V52 — sumar (C02 finalizat: premium + business G-06 + imagini exec + FILM sync + verificat randat):**
+
+1. **C02 = model premium complet** (Studiu + Editor-Studiu): hero cockpit imagine-obiect CONTROL + system-map MARCARE activ + arc TU (bombă „Pare curat. Datele mint." → SUNĂ CUNOSCUT → GREȘEALA „marchează întâi" → AHA → CINE DEVII) + before/after + outcomes + transformare gated. Eliminat exec-hero DE CE + CONTRACT.
+2. **Tensiune business (feedback extern → G-06 SIGUR, confirmat ARHITECT):** MIZA strategică (risc KPI/dashboard/decizie), „Minciuna produsă" calitativ pe cele 5 anomalii (fără cifre — garda R-V02.15 + granița C02/C03 respectată), AHA „Valid nu înseamnă adevărat", WOW „Raportul nu mai înghite minciuna. O marchează." Aplicat pe 4 machete (WOW slot data-wow) + FILM sync.
+3. **5 imagini exec-stage C02 dedicate** generate de ARHITECT (REALITATE/INVESTIGAȚIE/TRANSFORMARE/VERIFICARE/STABILIZARE), procesate singur: extras din transcript jsonl, watermark Gemini scos (exec-2/3 reparate prin clonare verticală — colțul lor e pe fundal deschis, `strip_watermark` presupune fundal întunecat: L179), integrate base64 în HTML-Video. **exec-stage-6 (CONFIRMARE) rămâne placeholder** (negenerat).
+4. **FILM C02 sync** (R-V46 FILM=master): MIZA + WOW vechi → noi în .docx (text într-un singur run, înlocuire sigură).
+5. **`PROMPTURI-SLIDES-EXEC-C02.txt`** creat (cele 6 verbatim din Creativ) + livrat ARHITECT.
+6. **VERIFICAT RANDAT** (L178 aplicat): C02 Studiu randat 393px + 1280px — hero, arc TU, „minciuna produsă", outcomes, mantra toate corecte. Audit ZERO DRIFT 88/88, nesting 0 pe toate 4 machete.
+7. **L179 (nou):** `strip_watermark.py` eșuează când colțul dreapta-jos al imaginii e pe fundal DESCHIS (hârtie/lumină), nu întunecat — `detect_sparkle` prinde o casetă prea mare și lasă o pată gri. Fix: clonare verticală dintr-o bandă imediat deasupra casetei steluței (textură continuă), casetă fixă. De integrat în strip_watermark ca fallback când zona-țintă e luminoasă.
+
+**C02 = MODEL FINALIZAT.** Rămas deschis C02: doar exec-stage-6 (CONFIRMARE) de generat.
+
+---
 
 **Sesiunea V51 — sumar (C03 model premium + hero forensic + rescope C03/C04 + bullet canonic + prompturi exec):**
 
