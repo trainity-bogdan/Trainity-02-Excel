@@ -20,7 +20,7 @@
 
 1. **C04 = a doua construcție cu model premium V47** (după C01). Grefat pe HTML-Studiu + HTML-Editor-Studiu: hero cockpit (imagine-obiect NORMALIZARE inline base64 + cuvânt overlay + întrebare + hartă treaptă), arcul TU (BOMBA „Fișierul curat nu e rezultatul. Fluxul este." → RECUNOAȘTERE → GREȘEALA → AHA → CINE DEVII), before/after, outcomes. Scos `exec-hero DE CE` + `CONTRACT` (ca la C01 V47). CSS premium injectat scoped (L173). Paritate structurală cu C01.
 2. **Metodă propagare premium (L175):** grefă, nu COPY+MODIFY. Delta premium = doar regiunea hero+arc + CSS (~5KB markup; restul „greutate" C01 = imaginea hero base64). Stadii/scenă/final/payoff C04 păstrate. Video + Editor-Video NU primesc premium (V47 = doar Studiu, verificat: C01 Video are 0 clase premium).
-3. **Imagini Banana dedicate C04:** hero-normalizare.jpg (buclă conducte flux) + 5 exec-stage (etape 02-06). **exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — încă clonă C01 (vezi „Deschis"). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
+3. **Imagini Banana dedicate C04 — COMPLET (6/6):** hero-normalizare.jpg (buclă conducte flux) + cele 6 exec-stage (etape 01-06, toate dedicate, zero clone C01). Watermark Gemini scos automat (R-V49.1, `strip_watermark.py` cu auto-detecție corner-only).
 4. **FILM C04** dus spre Biblia: + ARC TRANSFORMARE + FORMULA finală + notă video Prompt 2.
 5. **Feedback extern G-06 (tot SIGUR) aplicat:** marker „CEI 10 PAȘI...", precizie dedup (scos „fuzzy" — Table.Distinct = dedup exact), final „Refresh. Aceeași ordine.", framing „activ".
 6. **Fix sistem — gate v20 conștient de premium (L176):** checkul IDENTITY cerea cover-label + slug în titlu, ambele eliminate de V47 → C01 ȘI C04 picau. Acum: detectează hero-overlay (premium) → verifică identitatea în hero-overlay + topbar + footer; altfel legacy (cover-label) pentru C05-C08. C04 GATE PASS complet.
@@ -165,7 +165,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C03** | AUDITARE (cum auditezi ce nu se vede în date) | V51: model premium + hero-poster forensic dedicat + rescope C03/C04 (audit≠mecanism permanent) | versiune unica · hero-poster generat; ⚠️ exec-stage 1-6 = clone C01 (forensic NEGENERAT) | ✓ ZERO DRIFT |
-| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 5/6 exec dedicate (etapa 01 negenerat) | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
+| **C04** | NORMALIZARE (model PREMIUM V50: hero cockpit + arc TU) | V50 premium · 6/6 exec dedicate + hero | versiune unica + assets/ + hero | ✓ ZERO DRIFT · GATE PASS |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C07** | DATARE — MEMORIA SETULUI (axă temporală) | V44 | versiune unica + assets/ | ✓ ZERO DRIFT |
@@ -202,7 +202,7 @@ Detectori activi (V40):
 ## Pe agenda imediată
 
 1. ⚠️ **POZE C03 exec-stage 1-6 NEGENERATE** — clone C01 + watermark; prompturi gata în `c03/PROMPTURI-SLIDES-EXEC-C03.txt`. ARHITECT generează în Banana → motor strip watermark + base64 în Video/Editor-Video. (opțional: infografic + cover-yt C03)
-2. ⚠️ **POZĂ C04 exec-stage-1 (etapa 01 REALITATE) NEGENERAT** — clonă C01; prompt în `c04/Creativ` SECȚIUNEA 3 ETAPA 01. La primire: strip watermark + re-inline Video/Editor-Video. Restul C04 = COMPLET.
+2. ✓ **C04 COMPLET 100%** — exec-stage-1 (etapa 01 REALITATE) generat, watermark scos, re-inline în Video/Editor-Video. Toate 6 exec-stage + hero dedicate. Nimic rămas pe C04.
 3. **Propagare model premium C05-C08** (C01-C04 făcute) — grefă hero+arc+CSS scoped + imagine-obiect per construcție + sync FILM. Gate v20 deja conștient de premium.
 4. **Sync FILM↔HTML C05-C08** (la primirea/cererea FILM-urilor)
 5. **Setup B2C landing pages live** (paralel)

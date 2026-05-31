@@ -394,10 +394,8 @@ suprapuse, cu antet, subtotale, blank-uri, diacritice mixate. Tăcere
 
 NUME FISIER SALVAT: `exec-stage-1.jpg`
 
->>> STATUS: NEGENERAT (31 mai 2026). exec-stage-1.jpg din c04/assets/ este inca
->>> CLONA C01, NU imaginea dedicata etapei 01. De generat in Banana cu promptul
->>> de mai jos si inlocuit (watermark se scoate automat + re-inline in Video).
->>> Celelalte 5 (etape 02-06) sunt dedicate C04. <<<
+>>> STATUS: GENERAT (31 mai 2026). Imagine dedicata etapei 01 (teanc facturi
+>>> brute), watermark scos, inline in Video. Toate 6 exec-stage C04 dedicate. <<<
 
 
 PROMPT (copy-paste integral)
