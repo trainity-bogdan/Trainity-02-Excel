@@ -1,7 +1,16 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V53 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V54 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V54 — sumar (C03 imagini exec COMPLET 6/6 + tooling cleanup branch-uri):**
+
+1. **C03 = MODEL FINALIZAT (a treia construcție 100% gata, după C01+C02+C04).** Cele 6 imagini exec-stage forensic dedicate generate de ARHITECT, procesate singur (extras transcript jsonl → strip watermark → recomprimate ~120-200KB, normă C02 → base64 în Video + Editor-Video). Toate 7 imaginile C03 (hero + 6 exec) sunt acum proprii, zero clone C01. Video 1.31MB. Render-verificat (data URI valid + tabel forensic se vede în player). C03 complet: premium + rescope C03/C04 + hero + 6/6 exec + FILM sync.
+2. **L181 (nou) — rafinare `strip_watermark`:** `detect_sparkle` SUPRA-detectează când colțul dreapta-jos e ADIACENT unei zone luminoase (marginea unei pagini albe lângă steluță) → prinde o casetă mare (164px) și clonează din zona deschisă = pată vizibilă. Fix aplicat la exec-stage 3-6 C03: casetă mică fixă (~95px) în colț + **clonă verticală din banda întunecată direct deasupra**. Completează L179 (acolo colțul ERA pe fundal deschis; aici colțul e pe întuneric dar adiacent luminii). De integrat ca mod în `strip_watermark.py`.
+3. **Tooling nou — `_system/generatoare/cleanup_branches.sh`:** șterge toate branch-urile în afară de `main`. Safe by default (dry-run; `main` protejat; comută pe main înainte de a șterge branch-ul curent). Flags: `--local`/`--remote`/`--all` + `--force`.
+4. **Curățat branch-urile:** local → doar `main`; remote → 2/3 șterse (`admiring-babbage`, `dreamy-keller`). `vigilant-goldberg` BLOCAT (403/disconnect — sesiune paralelă activă). **L182:** proxy-ul Web blochează `git push origin --delete` pentru branch-uri de sesiuni ÎNCĂ ACTIVE (403, ca la tag-uri); GitHub MCP n-are tool de delete-branch. Ștergerea remote a unei sesiuni active se face de pe mașina ARHITECT (`git push origin --delete`) sau din GitHub UI, ori după ce sesiunea se închide.
+
+---
 
 **Sesiunea V53 — sumar (card MIZA cu chenar + shadow, propagat C01-C04):**
 
