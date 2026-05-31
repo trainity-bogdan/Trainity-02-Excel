@@ -1,7 +1,8 @@
 # T2_DNA.md · ADN-ul real al Treptei 2 (extras din C05-C08)
 
 > **STATUT: EXTRACȚIE, NU NORMĂ.** Aici se descrie ce EXISTĂ empiric în C05-C08,
-> nu ce ar trebui. Regulile derivate trăiesc în `T2_ARCHITECTURE_BIBLE.md`.
+> nu ce ar trebui. Regulile derivate trăiesc în `TRAINITY_ARCHITECTURE_BIBLE.md`
+> (§SHARED + §T2). Acest DNA alimentează §T2.
 > Sursă: cele 4 construcții livrabile (Studiu) + observațiile auditului de treaptă.
 > Ancorat la commit `ca23b05`.
 
