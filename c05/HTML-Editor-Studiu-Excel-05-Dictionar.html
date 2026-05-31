@@ -1561,7 +1561,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">4 CATEGORII</b><p class="anomaly-desc">Hardware, Software, Consumabile, Servicii. Tipologie minimă pe categorie.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">12 CANTITĂȚI</b><p class="anomaly-desc">Coloana cantitate are pattern discret (1, 2, 5, 10, 20, 50, 100). Numeric cu profil categorial.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">2.000 FACTURI</b><p class="anomaly-desc">Granularitatea atomică: o linie = o factură completă, nu o linie de produs.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">TOP-3 97.5%</b><p class="anomaly-desc">Hardware + Consumabile + Software acoperă 97.5% din set. Servicii e reziduală.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">TOP-3 DOMINĂ</b><p class="anomaly-desc">Hardware + Consumabile + Software domină setul. Servicii e categoria reziduală.</p></div>
 </div>
       </section>
 
@@ -1663,7 +1663,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
         <div class="inv-item-label">CLIENT_NUME · 15 valori unice</div>
-        <div class="inv-item-desc">Dicționar complet identificare client. Pareto: top-3 clienți = 97.5% volum.</div>
+        <div class="inv-item-desc">Dicționar complet identificare client. Pareto: top-3 clienți domină volumul.</div>
       </div>
     </li>
 <li class="inv-item">
@@ -1952,9 +1952,9 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">FRECVENTE</div><div class="final-text">Top-3 frecvențe pe fiecare coloană categorială mapate și confirmate.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">TIPOLOGIE</div><div class="final-text">Coloanele clasificate pe cardinalitate: mic / mediu / mare.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">RARE</div><div class="final-text">Etichetele cu frecvență sub 3% marcate ca observații, nu erori.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROFIL</div><div class="final-text">Fișa cap-coadă a setului livrată ca _PROFIL, sumă valoare_neta conservată.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PROFIL</div><div class="final-text">Fișa cap-coadă a setului livrată ca _PROFIL, cu dicționarul auditabil complet.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Bază BI-ready validată.</div>
+          <div class="completion-title">Dicționar auditabil validat.</div>
           <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C05 e pregătit pentru C06 CLASIFICARE.</div>
         </div>
       </section>
@@ -1999,7 +1999,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
 <a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · AGGREGATE</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · COUNTUNIQUE / COUNTIF</span></span></a>
 <a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Formule dinamice</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
