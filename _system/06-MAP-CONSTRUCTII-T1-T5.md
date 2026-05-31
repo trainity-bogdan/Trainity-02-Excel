@@ -150,7 +150,7 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **FENOMENE** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei sunt comune, ce câmpuri externe trăiesc doar în sateliți, ce convenții diferă (limbi diferite) |
 | **Garda T2/T3** | C08 LOCALIZEAZĂ contextul (descriptiv), NU îl aduce. INTERZIS în C08: XLOOKUP/LOOKUP/join/aducere de valori, Data Model, relații activate, măsuri, conectat/conexiune, BI-ready. Acestea = C09/T3/T4. |
 | **LIVRABIL** | Harta ecosistemului de date (`_ECOSISTEM`) |
-| **Status** | LIVRABIL · CARTOGRAFIERE (nume LOCK V58; numele istoric „TIPIZARE" abandonat). Premium + identitate rafinată + hero dedicat. Închide T2. |
+| **Status** | LIVRABIL · CARTOGRAFIERE (nume LOCK V58). Premium + identitate rafinată + hero dedicat. Închide T2. |
 
 **Delimitare obsesivă C08 ↔ C09 (T2 vs T3):**
 C08 **cartografiază**, NU unește. C08 = *vezi relațiile posibile* (recunoaștere
