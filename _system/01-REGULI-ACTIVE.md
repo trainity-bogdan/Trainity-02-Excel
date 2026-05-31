@@ -326,6 +326,28 @@ construcție nouă pornită corect din c01 nu o moștenește. Dacă o construcț
 **Detector empiric:** regex pe HTML-Studiu + Editor-Studiu → absența
 `<div class="nav-brand">` și a `.nav-brand {`. Prezența = drift, se repară.
 
+## R-V03.74 · TESTUL CURSANTULUI + AUDIT CA LANȚ (non-confuzie inter-construcție)
+**Status:** ACTIVĂ permanentă (V58) · introdusă din feedback arhitectură ARHITECT
+
+Riscul dominant nu mai e tehnic (drift/sync/gate), ci conceptual: suprapuneri de
+identitate între construcții. La fiecare audit de construcție și la fiecare
+generare CNN se rulează OBLIGATORIU **testul cursantului ca lanț**:
+
+1. Extrage din construcția nouă ȘI din vecinele ei (N-1, N+1) doar: **obiect,
+   întrebare, titlu, mantra, payoff, WOW, motto**.
+2. Verifică: un cursant care vede DOAR aceste elemente distinge instant
+   construcțiile? Sau două sună la fel (același tipar sintactic, payoff care
+   spune același lucru, deschidere WOW identică)?
+3. Criteriul: construcția nu trebuie doar să fie bună — trebuie **imposibil de
+   confundat** cu vecinele. Tipare repetate („Setul nu mai X. Fiecare rând are
+   Y." la două construcții) = risc, se semnalează și se diversifică.
+
+Referință axă: ADN-ul T2 din `_system/11` (C05 vocabular · C06 sens · C07 calendar
+· C08 context). Vezi doc 11 pentru cele 5 lecții de arhitectură.
+
+**Detector:** semi-empiric (necesită judecată). Heuristic: payoff-uri/WOW-uri ale
+construcțiilor vecine cu același prefix/tipar de >4 cuvinte = flag de revizuit.
+
 ## R-V03.63 · AUDIT EMPIRIC PERMANENT
 **Status:** ACTIVĂ · STRUCTURĂ MAJORĂ V38
 La fiecare consolidare brain / commit major, motorul rulează `_system/generatoare/audit_sync.py` care:

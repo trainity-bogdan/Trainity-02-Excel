@@ -9,6 +9,54 @@
 
 ---
 
+## ADN-UL TREPTEI 2 (formula de identitate — criteriul suprem de audit)
+
+**C05 = vocabular · C06 = sens · C07 = calendar · C08 = context.**
+
+Aceasta NU e un slogan, e criteriul după care se evaluează orice construcție T2.
+Descoperită empiric la auditul C05-C06-C07 (V58): în momentul în care fiecare
+construcție a primit o identitate de un cuvânt imposibil de confundat, confuziile
+dintre ele au dispărut. Înțelesul fiecăreia:
+
+- **C05 vocabular** — setul primește un dicționar (ce valori/categorii există).
+- **C06 sens** — fiecare rând primește înțeles (clasă/segment/scor).
+- **C07 calendar** — fiecare rând primește poziție în timp.
+- **C08 context** — setul primește legături cu alte surse.
+
+### Cele 5 lecții de arhitectură (codificate din feedback ARHITECT, V58)
+
+1. **Riscul s-a mutat de la tehnic la conceptual.** Drift/sync/gate/CSS sunt
+   rezolvate. Riscul real acum = suprapuneri de identitate, granițe neclare,
+   payoff-uri care spun același lucru, construcții confundabile între ele.
+
+2. **Auditul se face ca LANȚ, nu izolat.** O construcție nu trebuie doar să fie
+   bună — trebuie să fie **imposibil de confundat** cu vecinele ei. C06 trebuie
+   să fie diferit de C05 ȘI de C07. C07 trebuie să fie imposibil de confundat cu
+   C06. Acesta e criteriul care domină toate auditurile viitoare.
+
+3. **TESTUL CURSANTULUI (nivel nou de audit).** Întrebarea: *„Dacă un cursant vede
+   DOAR titlul, mantra, payoff-ul și WOW-ul, înțelege instant diferența dintre
+   construcții?"* Dacă două construcții au payoff/WOW cu același tipar sintactic
+   („Setul nu mai X. Fiecare rând are Y." / „Dintr-o listă de tranzacții, am
+   construit..."), sună la fel chiar dacă cuvintele diferă = risc de confuzie,
+   se semnalează. Procedură: extrage obiect/întrebare/titlu/mantra/payoff/WOW/motto
+   din construcțiile vecine și compară-le ca set, nu individual.
+
+4. **Când apare o contradicție, identifică AUTORITATEA CURENTĂ — nu presupune că
+   HTML-ul e greșit.** Majoritatea „bug-urilor" din sesiune erau de fapt conflicte
+   între documente istorice (pre-V45) și actuale (post-V45). Pasul 1 la orice
+   contradicție: care document are prioritate? (doc 11 > istoric.) Abia apoi repari.
+
+5. **„ZERO contaminare" e prea absolut.** Formularea corectă: **„nicio contaminare
+   neautorizată detectată".** Există **excepții arhitecturale acceptate explicit**
+   care NU sunt contaminări:
+   - **Scorul 0-100 în C06** — discutabil teoretic (sună a măsurare/T3), dar e
+     excepție acceptată: scorul e ETICHETĂ descriptivă, nu decizie. Permis prin
+     decizie ARHITECT + doc 11. NU se raportează ca drift.
+   Diferența contează: o contaminare se repară; o excepție acceptată se documentează.
+
+---
+
 ## CELE 3 NIVELURI (sursa confuziei istorice — separă-le mereu)
 
 Confuzia C06 a venit din amestecarea a trei niveluri diferite. Se separă obligatoriu:
