@@ -1,7 +1,16 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V48 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V49 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V49 — sumar (reguli git workflow + start lucru paralel multi-sesiune):**
+
+1. **Regulă nouă — MERGE ÎN MAIN = MEREU MOTORUL, NICIODATĂ ARHITECT.** Codificată în 3 locuri în CLAUDE.md (regula absolută din cap + G1 + „consolideaza brain"). La finalul fiecărei sesiuni / fiecărui set de modificări, motorul face OBLIGATORIU `fetch → merge --ff-only (sau normal) → push origin main`, fără să întrebe. Permisiune durabilă.
+2. **Regulă nouă — FĂRĂ TAG-URI GIT (G3 rescris, ABANDONAT).** Push de tag dă 403 din proxy-ul Web. Nu mai folosesc tag-uri, nu mai scriu NICIODATĂ despre ele ARHITECTULUI, nu dau comenzi de push tag. Versionarea oficială = commit descriptiv pe `main` + STARE-CURENTA. Curățat tot CLAUDE.md (comanda `tag V{N}` ștearsă, restore fără `v{N}`, sumar disciplină actualizat).
+3. **Context nou — LUCRU PARALEL MULTI-SESIUNE.** ARHITECT va deschide mai multe construcții simultan pe sesiuni Claude Code on Web diferite (branch-uri `claude/<task>` paralele). Fiecare sesiune face merge în `main` la final. Construcțiile trăiesc în foldere separate `cNN/` → conflicte de merge rare (doar pe fișiere partajate: STARE-CURENTA, CLAUDE.md, `_system/`, `index.html`). Vezi L174.
+4. **Demarat propagarea modelului premium C01 → C02** (prima din seria C02-C08). În curs.
+
+---
 
 **Sesiunea V48 — sumar (fix CSS leak C01 = box DUPĂ negru cu text invizibil):**
 
@@ -253,6 +262,8 @@ Reguli existente, statusuri actuale: vezi `_system/01-REGULI-ACTIVE.md`.
 - **L168** (V45) Procedura de redenumire construcție: (a) replace stem filename repo-wide `Excel-NN-Vechi`→`Excel-NN-Nou` în toate fișierele text, (b) `git mv` fișierele, (c) rename DISPLAY separat (nume afișat în hero/meta/nav/title — atenție la protejarea meta-listei cu placeholder), (d) update C(N-1) next-pointer + index + IDENTITATE + gate dict. Verifică `git status` arată R (rename), nu D+A.
 
 - **L173** (V48) CSS cu selectori BARE într-un bloc copiat/redesignat se scurge peste alte secțiuni care refolosesc aceleași clase. Cazul empiric: redesignul hero V47 a definit `.ba-after{background:#0a0a0a}` neîncadrat, iar lista DOVADA din pași (pasul 9) folosește aceeași clasă `.ba-after` → box negru cu text negru invizibil. A trăit o sesiune nedetectat (audit verifică structură+prezență, nu contrast/cascadă). **Regulă durabilă:** orice CSS component-specific se scrie ÎNTOTDEAUNA scoped la containerul lui (`.hero-beforeafter .ba-after`, nu `.ba-after`), mai ales când numele de clasă (ba-before/ba-after/ba-val/ba-arrow) sunt generice și refolosite în alte secțiuni. La redesign de bloc, verifică dacă clasele atinse mai apar în altă parte din document înainte de a scrie reguli bare.
+
+- **L174** (V49) La lucru paralel pe sesiuni multiple (branch-uri `claude/<task>` simultane care fac toate merge în `main`), riscul de conflict e izolat la fișierele PARTAJATE, nu la construcții. Construcțiile `cNN/` sunt foldere disjuncte → merge curat. Punctele de conflict: `STARE-CURENTA.md` (toți scriu sumar sesiune), `CLAUDE.md` (reguli), `_system/*` (detectori, docs), `index.html` (dashboard cu link-uri). **Regulă durabilă:** înainte de merge în main, `git fetch origin main` + merge main în branch întâi (rezolv conflictele pe fișierele partajate local), apoi push. La STARE-CURENTA, fiecare sesiune adaugă propria secțiune V{N} — dacă două sesiuni incrementează simultan, a doua care face merge ajustează numărul V și fuzionează sumarele, nu suprascrie. Pentru `index.html`, fiecare construcție își are propriul rând → merge aditiv.
 
 Toate lecțiile cumulate (L01-L168) în `_system/arhiva/brain-evolutia-V01-V38.md` (până V41) + STARE-CURENTA (V42+).
 
