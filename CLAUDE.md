@@ -117,6 +117,8 @@ cNN/
 
 **Imaginile sunt DIFERITE per construcție** — fiecare cNN/assets/ are pozele lui.
 
+**WATERMARK GEMINI (R-V49.1):** orice imagine Banana 2 / Gemini are o steluță ✦ în colțul dreapta-jos (ștampilă automată, nu se scoate din prompt). O curăț ÎNTOTDEAUNA cu `_system/generatoare/strip_watermark.py` înainte s-o pun în `cNN/assets/`, fără să întreb ARHITECT.
+
 ---
 
 ## VERSIONARE GIT
