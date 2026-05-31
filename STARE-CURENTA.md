@@ -1,7 +1,19 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V55 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V56 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 31 mai 2026
+
+**Sesiunea V56 — sumar (mantra-band la scala tipografică de bombă, propagat C01-C04 + lecție cache-bust):**
+
+1. **Mantra-band ridicată la scala bombei** (cerere ARHITECT: „arăta prea mic și prea neimportant"). Din `clamp(20px, 2.6vw, 28px)` weight 800 → `clamp(30px, 7vw, 64px)` weight 900, letter-spacing `-1.5px`, line-height `1.02`. Mapat exact ca BOMBA premium: linia-setup în **gri masiv** (`#a6a6a6`) + cuvântul-cheie în **caseta galbenă** (`<mark>`), cu `box-decoration-break: clone` ca highlight-ul să rămână casetă curată dacă se rupe pe două rânduri (ex. C03 „auditul tehnic"). Bandă mai aerisită (padding vertical până la 84px) + eticheta sub puțin mai distanțată. Limbaj unitar cu bomba: gri = afirmația, galben = lovitura.
+2. **Propagat C01-C04** (Studiu + Editor-Studiu, 8 fișiere), păstrând textul propriu al fiecărei mantre: C01 „Înainte de orice calcul, structura.", C02 „Înainte de orice raport, controlul.", C03 „Înainte de orice analiză, auditul tehnic.", C04 „O dată construit. De fiecare dată identic." Întâi doar C04 (validat de ARHITECT), apoi propagat la 1/2/3 la OK. **Verificat randat** (L178) desktop 1280px + mobil 393px pe toate 4; C03 (cel mai lung, highlight pe 2 cuvinte) confirmat fără overflow.
+3. **L185 (nou) — disciplină cache-bust:** când un livrabil HTML se modifică dar link-ul din `index.html` păstrează același `?v=N`, browserul servește copia VECHE din cache (URL identic → zero refetch). Asta a fost bug-ul „nu văd în html" raportat de ARHITECT (vedea mantra veche neagră deși fișierul de pe main era corect gri). **Regulă durabilă:** orice modificare a unui HTML dintr-o construcție livrată → bump `?v=` pe link-urile ei din `index.html` în același commit. Aplicat: C01/C02/C03/C04 link-uri Studiu+Editor-Studiu `?v=3` → `?v=4`.
+4. **L181 reconfirmat în practică:** `main` local era încă pe lineage-ul orfan V45; `origin/main` real avansase V51 → V55 prin sesiuni paralele. Aliniat pe `origin/main` (fetch) + cherry-pick al singurului commit unic (mantra C04) → fișiere disjuncte, fără conflict. **ARHITECT a cerut explicit „lucrează doar pe main"** — starea pe care o vede el = `origin/main` (sursa Pages); push-ul pe branch nu era vizibil.
+5. ⚠️ **Observație (neatinsă, out of scope):** `index.html` card-title C03 = „Cum construim un audit valoric" (titlul vechi pre-V51); rename-ul V51 la „Cum auditezi ce nu se vede în date" nu a ajuns în dashboard. De aliniat la o sesiune C03.
+
+Audit ZERO DRIFT 88/88. Gate v20 C04 PASS. Zero em/en-dash. Toate pe `main`.
+
+---
 
 **Sesiunea V55 — sumar (C03 imagini exec COMPLET 6/6 + tooling cleanup branch-uri):**
 
