@@ -200,6 +200,80 @@ over. Pure photographic realism.
 
 
 ══════════════════════════════════════════════════════════════════════════════
+SECȚIUNEA 2B · POSTER HERO STUDIU (MODEL PREMIUM · imagine-obiect cu overlay)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceasta este IMAGINEA-OBIECT din hero-ul paginii HTML-Studiu (modelul premium
+propagat din C01). Peste imagine se suprapune IN HTML, jos-stanga, cuvantul-
+obiect urias "CONTROL" + kicker-ul "OBIECTUL CONSTRUCTIEI · C02", asezate peste
+un gradient negru. De aceea imaginea TREBUIE compusa cu subiectul in zona
+superioara/centrala si treimea de jos lasata intunecata si calma, ca textul
+overlay sa ramana lizibil. Sub imagine, in HTML, urmeaza harta-cockpit a treptei.
+
+Obiectul-erou C02 (vezi nota continuitate): STAMPILA DE CONTROL care marcheaza
+anomalia — marcare, NU eliminare.
+
+NUME FISIER SALVAT: `hero-poster-excel-02-control.jpg`
+DIMENSIUNE: 1920×1280 px (3:2 orizontal, cinematic — la fel ca seria exec-stage).
+
+
+COMPOZITIE CERUTA
+- Subiect in TREIMEA SUPERIOARA si centrala: o pagina de tabel printat pe lemn
+  inchis, cu o stampila galbena de control apasata exact pe UN rand anomal.
+- Un rand anterior poarta un mic bifaj rosu in margine (marcat, nu sters).
+- O axa subtire de cerneala galbena curge vertical pe stanga, ca un filtru.
+- TREIMEA DE JOS: shadow / void de lemn inchis, INTENTIONAT goala, pentru textul
+  overlay. Cadranul stanga-jos = cel mai intunecat.
+- Iluminare clinica alba sus-stanga + rim galben warm sus-dreapta.
+
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen)
+
+Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality,
+poster hero composition with reserved negative space.
+
+Subject: A single printed business spreadsheet page resting on a dark walnut
+wood surface, shot from a slight top-down three-quarter angle. Across the
+upper-center of the page, a heavy yellow rubber control stamp reading
+"DE VERIFICAT" is pressed firmly onto one specific data row, the amber ink
+bleeding slightly into the paper fibers, that single row faintly tinted amber.
+The rows above and below stay clean and untouched, their numeric data partially
+readable but abstract. One earlier row carries a small red ink checkmark in its
+left margin — marked, not erased. A thin stream of glossy golden-yellow ink
+runs vertically down the left third of the page like a control axis, catching
+the light.
+
+Composition: The stamped page, the marked row and the golden axis occupy the
+TOP TWO-THIRDS of the frame. The BOTTOM THIRD falls into deep shadow and dark
+wood void — intentionally empty and calm, reserved for large text overlay in
+post-production. Keep the lower-left quadrant the darkest area of the image.
+
+Lighting: Dramatic clinical white key light from the upper left, warm amber rim
+light from the upper right. The stamp and the golden axis catch the warm light;
+the lower portion of the frame falls off into near-black.
+
+Style: Editorial business photography, slightly desaturated except for the
+yellow stamp glow, the red checkmark, and the golden axis flow. Visible paper
+texture with a slight crinkle. Cinematic shallow depth of field — the stamp and
+the marked row razor sharp, the surrounding wood softly out of focus.
+
+Mood: Quiet authority. One row singled out and marked for control while the rest
+of the evidence is preserved intact. Judgment held, not destruction.
+
+Aspect ratio: 3:2 horizontal, 1920×1280 minimum.
+
+Constraints: NO people, NO hands, NO faces. NO gibberish text outside the single
+stamp phrase "DE VERIFICAT". NO visible brand logos. NO flat infographic icons,
+NO drawn charts or graphs over the image. NO cartoon style. Pure photographic
+realism. Keep the bottom third dark and uncluttered for the text overlay.
+
+NOTA STAMPILA: daca modelul scrie gresit "DE VERIFICAT", regenereaza identic; la
+al treilea esec, inlocuieste in prompt cu "REVIEW" (un cuvant scurt se randeaza
+mai curat) — sensul vizual ramane acelasi.
+
+
+══════════════════════════════════════════════════════════════════════════════
 SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
 ══════════════════════════════════════════════════════════════════════════════
 
