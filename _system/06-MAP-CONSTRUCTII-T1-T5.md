@@ -137,18 +137,20 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 > **NOTĂ ANTI-REDRIFT C07 (lock V58).** C07 răspunde EXCLUSIV la „când se întâmplă fiecare rând", NU la „ce se întâmplă în timp / cum evoluează". Regula de aur: C07 atașează timpul, T3 interpretează timpul. C07 = calendarul setului; T3 = analiza calendarului. „Ritm" se folosește doar reformulat ca „granularitate" / „frecvență calendaristică", fără dominantă/comparație. Sheet `_TREND` (delta+direcție) a fost ELIMINAT din Date_MASTER; rămân `_TIMELINE` / `_CALENDAR` / `_SEZON` (datare pură).
 
-### C08 · TIPIZARE — HARTA ECOSISTEMULUI (PROPUS, AXĂ LOCK V43)
+### C08 · CARTOGRAFIERE ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | RELAȚIONALĂ DESCRIPTIVĂ — „cu cine vorbește setul" (RECUNOAȘTERE, nu modelare) |
-| **OBIECT** | ecosistemul |
-| **ÎNTREBARE-MAMĂ** | Cu cine vorbește setul? |
-| **INTRIGA propusă** | Setul are un ecosistem. Excel îl vede. Tu nu. |
-| **MARKER** | ecosistem / satelit / cheie / rol / câmp extern |
-| **FENOMENE propuse** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei par comune (cod_client, cod_produs), ce câmpuri lipsesc din setul principal dar există în sateliți, ce convenții diferă și trebuie aliniate înainte de modelare |
-| **LIVRABIL** | Harta ecosistemului de date |
-| **Status** | LIVRABIL V44 (închide T2) |
+| **AXA** | RELAȚIONALĂ DESCRIPTIVĂ — „cu cine se leagă fiecare rând / unde trăiește contextul" (RECUNOAȘTERE, nu modelare) |
+| **OBIECT** | contextul / harta surselor |
+| **ÎNTREBARE-MAMĂ** | Cu cine se leagă fiecare rând? |
+| **INTRIGA** | Te uiți la un tabel întreg. Jumătate din el e în altă parte. |
+| **MARKER** | hartă / satelit / cheie / rol / câmp extern |
+| **AHA oficial (lock V58)** | Cele mai importante date despre un rând nu sunt în rând. |
+| **FENOMENE** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei sunt comune, ce câmpuri externe trăiesc doar în sateliți, ce convenții diferă (limbi diferite) |
+| **Garda T2/T3** | C08 LOCALIZEAZĂ contextul (descriptiv), NU îl aduce. INTERZIS în C08: XLOOKUP/LOOKUP/join/aducere de valori, Data Model, relații activate, măsuri, conectat/conexiune, BI-ready. Acestea = C09/T3/T4. |
+| **LIVRABIL** | Harta ecosistemului de date (`_ECOSISTEM`) |
+| **Status** | LIVRABIL · CARTOGRAFIERE (nume LOCK V58; numele istoric „TIPIZARE" abandonat). Premium + identitate rafinată + hero dedicat. Închide T2. |
 
 **Delimitare obsesivă C08 ↔ C09 (T2 vs T3):**
 C08 **cartografiază**, NU unește. C08 = *vezi relațiile posibile* (recunoaștere

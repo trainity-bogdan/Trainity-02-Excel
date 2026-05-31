@@ -1876,8 +1876,8 @@ const STAGES = [
     hook: "Nu credem regulile. Le confruntăm cu setul.",
     next: "Regulile decid. Nu opinia AI. Clase exacte, scoruri confirmate.",
     steps: [
-      { num: "10", title: "Aducem etichete externe. Cu XLOOKUP.",
-        instr: "XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
+      { num: "10", title: "Compunem eticheta derivată. Cu TEXT.",
+        instr: "TEXT: =clasa&\"-\"&segment, eticheta din datele rândului. (fost XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
         excel: true },
       { num: "11", title: "Construim o regulă compusă. Cu IFS.",
         instr: "IFS din condiții multiple: clasa=A și segment=Licențe → "A_Licențe". <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",

@@ -1550,7 +1550,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="anomaly-grid">
 <div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">CLASA ABC</b><p class="anomaly-desc">Fiecare rând capătă clasa A/B/C după valoare_neta, printr-o regulă IFS cu praguri valorice explicite (prag_A, prag_B).</p></div>
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">SEGMENTE</b><p class="anomaly-desc">Fiecare categorie primește un segment operațional prin SWITCH: Hardware → Echipamente, Software → Licențe.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">ETICHETE EXTERNE</b><p class="anomaly-desc">Atribute care există în nomenclatoare (CLIENTI, PRODUSE) aduse în set cu XLOOKUP.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">ETICHETĂ DERIVATĂ</b><p class="anomaly-desc">O etichetă text pe fiecare rând, compusă din clasa și segmentul lui, cu o formulă TEXT. Sens din datele rândului, nu din alt set.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">REGULI COMPUSE</b><p class="anomaly-desc">Reguli din condiții multiple cu IFS: clasă A + segment Licențe → etichetă compusă.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">SCORING</b><p class="anomaly-desc">Un scor 0-100 pe fiecare rând, dintr-o formulă de normalizare. Etichetare, nu decizie.</p></div>
 </div>
@@ -1667,8 +1667,8 @@ body.has-continue .scroll-top { bottom: 88px; }
 <li class="inv-item">
       <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">ETICHETĂ EXTERNĂ · XLOOKUP</div>
-        <div class="inv-item-desc">Atribute aduse din nomenclator cu XLOOKUP. Sens din alt set.</div>
+        <div class="inv-item-label">ETICHETĂ DERIVATĂ · TEXT</div>
+        <div class="inv-item-desc">O etichetă compusă din clasa și segmentul rândului. Sens din ce există deja.</div>
       </div>
     </li>
 <li class="inv-item">
@@ -1707,7 +1707,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">FORMULE</span><span class="type-tag">IFS / SWITCH</span></div>
     </div>
   </header>
-  <p class="stage-quote">Prima regulă există. Acum adăugăm segmente, etichete externe și scor. Setul devine clasificat cap-coadă.</p>
+  <p class="stage-quote">Prima regulă există. Acum adăugăm segmente, etichetă derivată și scor. Setul devine clasificat cap-coadă.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
@@ -1762,11 +1762,11 @@ body.has-continue .scroll-top { bottom: 88px; }
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Etichetă externă</div>
+      <div class="ba-item-indicator">Etichetă derivată</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rând fără atribut extern</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">rând fără etichetă</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">atribut adus cu XLOOKUP</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">etichetă compusă cu TEXT</span></div>
       </div>
     </li>
 <li class="ba-item">
@@ -1797,7 +1797,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 4 · AUDIT AL REGULILOR</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">IFS / SWITCH / XLOOKUP</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">IFS / SWITCH / TEXT</span></div>
     </div>
   </header>
   <p class="stage-quote">Nu avem încredere oarbă în reguli. Confruntăm fiecare clasă cu setul însuși. Marcăm rândurile fără clasă.</p>
@@ -1805,11 +1805,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
-    <h3 class="step-title">Adu etichete externe cu XLOOKUP</h3>
+    <h3 class="step-title">Compune eticheta derivată cu TEXT</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Cu XLOOKUP aduci un atribut din nomenclator: =XLOOKUP(client_nume;CLIENTI[nume_client];CLIENTI[judet]). Setul se îmbogățește cu etichete externe.</p>
+    <p class="step-action">Cu TEXT compui o etichetă din clasa și segmentul rândului: =clasa&"-"&segment. Setul se îmbogățește cu etichete derivate din clasa și segmentul propriu al rândului.</p>
     
   </div>
 </div>
@@ -1939,7 +1939,7 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C06.xlsx există, se deschide, conține foaia Vanzari neschimbată.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">CLASE</div><div class="final-text">Clasa ABC construită cu IFS pe valoare_neta: A/B/C pe fiecare rând.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">SEGMENTE</div><div class="final-text">Segmentul operațional atribuit cu SWITCH pe categorie.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">ETICHETE</div><div class="final-text">Etichete externe aduse din nomenclatoare cu XLOOKUP.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">ETICHETE</div><div class="final-text">Etichetă derivată compusă din clasă și segment, cu TEXT.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">REGULI</div><div class="final-text">Reguli compuse construite cu IFS din condiții multiple.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SCOR</div><div class="final-text">Scor 0-100 pe fiecare rând, dintr-o formulă de normalizare.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">COLOANE</div><div class="final-text">Coloanele derivate adaugă sens fără să modifice datele sursă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
@@ -1987,7 +1987,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
 <a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH / XLOOKUP</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · IFS / SWITCH / TEXT</span></span></a>
 <a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Tabel structurat</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
