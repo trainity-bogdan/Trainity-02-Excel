@@ -138,7 +138,7 @@ Refactor masiv naming + UX editor + audit narativ + deploy live Pages:
 |-----|------|----------|-------|-------|
 | **C01** | STRUCTURARE (cum construim o structură tabelară corectă) | V12 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C02** | MARCARE (cum construim controlul anomaliilor de date) | V26 → V42 nume + 2/6 exec-stage Banana dedicate | versiune unica + assets/ | ✓ ZERO DRIFT |
-| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume | versiune unica + assets/ | ✓ ZERO DRIFT |
+| **C03** | AUDITARE (cum construim un audit valoric) | V26 → V42 nume → model premium V47 propagat (Studiu+Editor-Studiu) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C04** | NORMALIZARE (cum construim o formă normalizată) | V27 → V42 (drift editor fix) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C05** | DICȚIONAR (ce reprezintă datele — inventar categorii) | V44 (rename din CLASIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
 | **C06** | CLASIFICARE (cum capătă sens datele — reguli IFS/SWITCH/XLOOKUP/scor) | V44 (rebuild din CUANTIFICARE) | versiune unica + assets/ | ✓ ZERO DRIFT |
