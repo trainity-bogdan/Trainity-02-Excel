@@ -12,7 +12,7 @@ Orice generare CNN, fix, refactor, poză, edit doc, comit la index, tot — dire
 
 **Singura excepție:** ARHITECT spune EXPLICIT „pe branch separat". Atunci, și numai atunci, creezi branch.
 
-Dacă sesiunea Claude Code on Web te pornește pe branch auto-named `claude/<task>` (din infrastructură), la final faci merge în main + nu lași branch-ul activ.
+**MERGE ÎN MAIN = MEREU TREABA MEA, NICIODATĂ A ARHITECTULUI.** Dacă sesiunea Claude Code on Web te pornește pe branch auto-named `claude/<task>` (din infrastructură), la **finalul fiecărei sesiuni / fiecărui set de modificări** faci OBLIGATORIU merge în `main` + push pe `origin main`, fără să întrebi. ARHITECT nu face merge niciodată. Permisiunea e dată durabil — nu o re-ceri de fiecare dată. Procedura: `git fetch origin main` → `git merge --ff-only <branch>` (sau merge normal dacă a divergat) → `git push origin main` cu retry exponential la erori de rețea. Branch-ul rămâne ca urmă de istoric, dar starea livrabilă trăiește pe `main`.
 
 **Rollback fără branch:** `git revert <sha>` creează commit invers, nu modifică istoricul. Branch-uri pentru „siguranță" = inutile, git history acoperă tot.
 
@@ -134,7 +134,7 @@ Workflow solo dev: orice modificare merge **direct pe `main`** cu commit descrip
 
 În rest, lucrurile (generare CNN, bug fix, refactor, poze, edit docs) → direct pe `main`.
 
-Sesiunile Claude Code on the Web pot porni pe branch auto-named `claude/<task>` (din infrastructură). În acest caz, lucrez acolo, dar la final fac merge în main + șterg branch-ul.
+Sesiunile Claude Code on the Web pot porni pe branch auto-named `claude/<task>` (din infrastructură). În acest caz, lucrez acolo, dar **la finalul fiecărei sesiuni fac OBLIGATORIU merge în `main` + push origin main** (eu, niciodată ARHITECT — permisiune durabilă, fără re-cerere). Branch-ul rămâne ca urmă de istoric.
 
 ### G2. COMMIT FREQUENT + DESCRIPTIV
 Formă: `tip(scope): descriere scurtă`. Tipuri: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `audit`. Exemple:
@@ -199,8 +199,8 @@ La sfârșit de sesiune cu decizii importante:
 1. Actualizezi `STARE-CURENTA.md` (versiune nouă, lecții noi)
 2. Update `_system/arhiva/brain-evolutia-V01-V38.md` cu sumar V{N curent}
 3. **Tag V{N} automat** (regula G3): `git tag -a v{N} -m "..."` + `git push --tags`
-4. Commit final + push pe branch curent (sau merge în main dacă sesiunea a fost pe branch)
-5. Raportez ARHITECT: "V{N} consolidat. Tag v{N} pushat pe origin. Branch {nume} / main la zi."
+4. Commit final + push pe branch curent, **apoi OBLIGATORIU merge în `main` + push origin main** (eu fac merge-ul, niciodată ARHITECT — vezi regula absolută din capul fișierului)
+5. Raportez ARHITECT: "V{N} consolidat. main la zi (merge făcut). Tag v{N} local (push tag blocat de proxy Web, îl pushezi tu)."
 
 ---
 
