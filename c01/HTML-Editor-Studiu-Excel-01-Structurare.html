@@ -1763,7 +1763,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">SUM pe valoare_neta în tabelul curat. Compară cu martorul fixat în Etapa 1. Sumele trebuie să fie identice.</p>
+    <p class="step-action">SUM pe valoare_neta în tabelul curat. Compară cu valoarea de control fixată în Etapa 1. Sumele trebuie să fie identice.</p>
     
   </div>
 </div>
@@ -1895,8 +1895,8 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">VOLUM OUT</div><div class="final-text">Tranzacțiile reale păstrate complet.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">STRUCTURĂ</div><div class="final-text">Coloanele reale stabilizate.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">AMBALAJ</div><div class="final-text">Toate categoriile de ambalaj eliminate.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">Suma valoare_neta conservată de la INPUT la OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">SUMĂ</div><div class="final-text">SUM egal cu AGGREGATE (subtotalurile excluse).</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">CONSERVARE</div><div class="final-text">Suma valoare_neta conservată de la INPUT la OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">AGGREGATE</div><div class="final-text">SUM egal cu AGGREGATE (subtotalurile excluse).</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
 <div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">REFERINȚĂ</div><div class="final-text">Integritate clienți confirmată, zero referințe lipsă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
           <div class="completion-title">Bază structurală validată.</div>
