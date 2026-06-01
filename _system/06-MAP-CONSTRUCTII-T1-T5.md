@@ -52,12 +52,26 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Delimitare C02↔C03** | C02 = greșit față de REALITATE (Excel acceptă, omul contestă). C03 = greșit față de MOTORUL Excel (omul acceptă, Excel contestă). Criteriu: *cine reclamă eroarea.* |
 | **Status** | **IDENTITATE LOCK V58.** Implementare HTML + Date_MASTER: **PENDING** — corpul actual al c02/ e încă versiunea veche „MARCARE" (36 anomalii structurale). Numele de fișier (`02-Marcare`) + identitatea HTML se aliniază la implementare. |
 
-> **CNP = EXEMPLU ICONIC (statut special, decizie ARHITECT V58).**
-> CNP NU e ales pentru că există în Date_MASTER (setul e B2B, nu are coloană CNP) — e ales ca **cea mai memorabilă demonstrație a principiului „valid ≠ corect"**: 13 cifre, arată perfect, Excel nu reclamă nimic, și totuși cifra de control e greșită / data încorporată e imposibilă → identificator invalid.
+> **C02.02 · CNP = EXEMPLUL ICONIC AL CONSTRUCȚIEI (decizie ARHITECT V58).**
+> Statut special: nu o simplă anomalie, ci demonstrația principală a principiului „valid ≠ corect". Ales nu pentru că există în Date_MASTER (setul e B2B, fără CNP), ci pentru că permite verificarea simultană a mai multor reguli ale realității pe un singur identificator.
 >
-> **REGULĂ ANTI-DRIFT CNP:** rămâne strict în registrul „arată perfect și totuși e fals" (**cifră de control + dată imposibilă**). NU se folosește lungime≠13 / caractere alfabetice / erori de format ca element central — acelea sunt **C03-adjacent**. NU se mută CNP în C03. NU devine exercițiu de validare tehnică.
+> **Structura de lucru:** CNP + Sex + Județ + Data_Nașterii. Fiecare valoare pare validă separat; Excel nu reclamă nimic. Scopul = descoperirea **contradicțiilor dintre informații**.
 >
-> **Ancora de memorabilitate:** după luni/ani, cursantul trebuie să-și amintească spontan „CNP-ul părea perfect și totuși era fals." Rezultat C02: *„Excel acceptă datele. Eu nu le cred până nu le verific împotriva realității."*
+> **Cele 4 verificări (toate de CORESPONDENȚĂ, nu de format):**
+> 1. **Data** derivată din CNP vs data declarată (dată imposibilă: 30 feb / 31 apr, sau diferită de cea declarată).
+> 2. **Sexul** derivat din prima cifră CNP vs sexul declarat.
+> 3. **Județul** derivat din codul CNP vs județul declarat (via nomenclator cod→județ).
+> 4. **Cifra de control** (algoritmul oficial) — totul pare corect, dar controlul e invalid.
+>
+> **REGULĂ ANTI-DRIFT CNP:** NU se validează formatul. NU lungime≠13, NU „doar cifre", NU caractere/spații — acelea sunt **C03-adjacent**. Se verifică dacă informațiile **descriu aceeași persoană reală**. CNP rămâne în registrul „mai multe informații par corecte separat și împreună se contrazic". NU se mută în C03. NU devine exercițiu de validare tehnică.
+>
+> **Instrumente:** Conditional Formatting = SEMNALIZARE (marchează sex/județ/dată/control inconsistente) · Formule = DEMONSTRAREA CONTRADICȚIILOR (extrag componentele CNP, interpretează sex/județ/dată, validează controlul) · Nomenclatoare = REFERINȚĂ OFICIALĂ (cod județ → județ oficial).
+>
+> **AHA (adâncit):** nu doar „un CNP poate fi fals", ci **„mai multe informații pot părea corecte separat și totuși să se contrazică între ele."**
+>
+> **Rezultat C02.02:** *„Excel acceptă toate valorile. Dar realitatea nu acceptă combinația lor."* — ancora de memorabilitate a întregii construcții C02.
+
+> **Notă arhitecturală:** C02.02 e locul unde **dimensiunea relațională / de corespondență între câmpuri** (semnalată în auditul de teritoriu ca margine a lui C02) primește casă concretă — CNP-ul o încapsulează natural, fiindcă encodează sex/dată/județ. Rămâne C02 pur: nu o valoare greșită izolat, ci **combinația de valori valide care se contrazice cu realitatea.**
 
 ### C03 · AUDITARE ✓
 
