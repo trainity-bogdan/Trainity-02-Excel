@@ -88,6 +88,19 @@ SCHEMA_CANONICA_VANZARI = [
     'cota_tva', 'valoare_tva', 'valoare_totala', 'moneda',
 ]
 
+# === EXCEPTIE C01 STRUCTURARE (constructia-pilot) ===
+# C01 NU deriva din Date_MASTER-initial: e scenariul-cobai cu schema proprie
+# (export ERP cu agenti + depozite, pentru lectia de integritate referentiala
+# la cele 4 nomenclatoare). Alt set, alta schema, alta suma (~1.25M vs ~8M).
+# Outputul curat traieste in 'Vanzari_Curat' si se valideaza pe contractul EI,
+# NU pe canonicul C02-C08 si NU prin comparatie cu Date_MASTER-initial.
+SHEET_OUTPUT_C01 = 'Vanzari_Curat'
+SCHEMA_C01_STRUCTURARE = [
+    'data', 'cod_client', 'nume_client', 'cod_produs', 'nume_produs',
+    'categorie', 'cod_agent', 'nume_agent', 'cod_depozit',
+    'cantitate', 'pret_unitar', 'valoare_neta', 'cota_tva', 'valoare_totala',
+]
+
 # Sheets auxiliare canonice (apar in toate Date_MASTER)
 SHEETS_AUXILIARE_CANONICE = ['CLIENTI', 'PRODUSE', 'AGENTI', 'DEPOZITE']
 
@@ -655,7 +668,38 @@ def check_data_continuity(excel_path, NN, initial_excel_path=None):
             'detaliu': f"Sheet '{SHEET_PRINCIPAL}' lipsa. Gasit: {wb.sheetnames}"
         })
         return erori
-    
+
+    # === EXCEPTIE EXPLICITA C01 (pilot, scenariu propriu) ===
+    # C01 nu participa la contractul de date C02-C08 (alt set, alta schema, alta
+    # suma, nomenclatoare proprii). Validam OUTPUT-ul ei real (Vanzari_Curat) pe
+    # schema EI + prezenta nomenclatoarelor, FARA comparatie cu Date_MASTER-initial.
+    # Justificare: input necanonic by design (export ERP brut); output verificabil
+    # corect (2000 randuri, 14 coloane, header rand 1, FK la 4 nomenclatoare).
+    if NN == '01':
+        if SHEET_OUTPUT_C01 not in wb.sheetnames:
+            erori.append({
+                'clasa': 'DATA-CONTINUITY', 'zona': 'sheet_output_c01',
+                'fisier': os.path.basename(excel_path),
+                'detaliu': f"Sheet OUTPUT C01 '{SHEET_OUTPUT_C01}' lipsa. Gasit: {wb.sheetnames}"
+            })
+            return erori
+        headers_c01 = [c.value for c in wb[SHEET_OUTPUT_C01][1]]
+        missing_c01 = [h for h in SCHEMA_C01_STRUCTURARE if h not in headers_c01]
+        if missing_c01:
+            erori.append({
+                'clasa': 'DATA-CONTINUITY', 'zona': 'schema_c01',
+                'fisier': os.path.basename(excel_path),
+                'detaliu': f"Coloane lipsa in OUTPUT C01 '{SHEET_OUTPUT_C01}': {missing_c01}"
+            })
+        for sheet_aux in SHEETS_AUXILIARE_CANONICE:
+            if sheet_aux not in wb.sheetnames:
+                erori.append({
+                    'clasa': 'DATA-CONTINUITY', 'zona': 'sheet_auxiliar',
+                    'fisier': os.path.basename(excel_path),
+                    'detaliu': f"Sheet auxiliar canonic LIPSA: '{sheet_aux}'"
+                })
+        return erori
+
     # R-V03.53 V27: verifica schema pe SHEET OUTPUT canonic, nu pe
     # sheet principal. Pentru C04 (Vanzari = input contaminat, header
     # rand 1 = "RAPORT VANZARI"), schema canonica e in Vanzari_Normalizat.
