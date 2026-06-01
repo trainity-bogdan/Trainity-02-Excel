@@ -36,18 +36,28 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | 7.986.019,38 lei |
 | **Status** | LIVRABIL CANONIC V12 (matriță pentru toate celelalte) |
 
-### C02 · MARCARE ✓
+### C02 · CONTROL — CORESPONDENȚA CU REALITATEA (IDENTITATE LOCK V58)
 
 | Aspect | Conținut |
 |---|---|
-| **INTRIGA** | Tabelul cu date pare curat. Datele însă mint. |
-| **MIZA** | Datele predate ca "curate structural" încă mint operațional. |
+| **TEMA** | CORESPONDENȚA CU REALITATEA |
+| **AHA (lock)** | Valid nu înseamnă corect. |
+| **Regula oficială** | Excel acceptă valoarea. Business-ul trebuie să o investigheze. *(Reclamantul = omul → C02; reclamantul = motorul Excel → C03.)* |
+| **Competență** | Identific valori pe care Excel le acceptă, dar care încalcă reguli ale lumii reale. |
+| **Filozofia** | C02 NU repară / NU șterge / NU modifică / NU decide / NU previne. Semnalează și construiește dovezi pentru o decizie de business. |
 | **MANTRA** | Înainte de orice raport, controlul. |
 | **MOTTO** | Nu reconstruim tabelul. Îl facem controlabil. |
-| **FENOMENE** | 5 categorii anomalii: facturi datate în viitor (5), coduri client inexistente (8), duplicate exacte (10), vânzări sâmbătă pe filiala L-V (6), câmpuri obligatorii goale (7). Total: 36 anomalii. |
-| **Date_MASTER** | C02 input cu cele 36 anomalii planted, output cu coloana STATUS + MOTIV |
-| **Sumă conservată** | 8.018.087,99 lei (suma input cu duplicate planted) |
-| **Status** | LIVRABIL CANONIC V26 |
+| **FENOMENE (5 anomalii LOCK)** | 1. Orașe nealiniate (nomenclator) · 2. CNP invalid (ICONIC) · 3. TVA greșit (regulă fiscală) · 4. Dată în viitor (regulă temporală) · 5. Vânzare în zi închisă (regulă operațională) |
+| **Instrumente** | Advanced Filter = DESCOPERIRE (valori unice, excepții, nomenclatoare) · Conditional Formatting = SEMNALIZARE · Data Validation = FORMALIZARE (marginală, DOAR după decizia business; NU e competența, NU e tema). |
+| **Delimitare C02↔C03** | C02 = greșit față de REALITATE (Excel acceptă, omul contestă). C03 = greșit față de MOTORUL Excel (omul acceptă, Excel contestă). Criteriu: *cine reclamă eroarea.* |
+| **Status** | **IDENTITATE LOCK V58.** Implementare HTML + Date_MASTER: **PENDING** — corpul actual al c02/ e încă versiunea veche „MARCARE" (36 anomalii structurale). Numele de fișier (`02-Marcare`) + identitatea HTML se aliniază la implementare. |
+
+> **CNP = EXEMPLU ICONIC (statut special, decizie ARHITECT V58).**
+> CNP NU e ales pentru că există în Date_MASTER (setul e B2B, nu are coloană CNP) — e ales ca **cea mai memorabilă demonstrație a principiului „valid ≠ corect"**: 13 cifre, arată perfect, Excel nu reclamă nimic, și totuși cifra de control e greșită / data încorporată e imposibilă → identificator invalid.
+>
+> **REGULĂ ANTI-DRIFT CNP:** rămâne strict în registrul „arată perfect și totuși e fals" (**cifră de control + dată imposibilă**). NU se folosește lungime≠13 / caractere alfabetice / erori de format ca element central — acelea sunt **C03-adjacent**. NU se mută CNP în C03. NU devine exercițiu de validare tehnică.
+>
+> **Ancora de memorabilitate:** după luni/ani, cursantul trebuie să-și amintească spontan „CNP-ul părea perfect și totuși era fals." Rezultat C02: *„Excel acceptă datele. Eu nu le cred până nu le verific împotriva realității."*
 
 ### C03 · AUDITARE ✓
 
