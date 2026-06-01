@@ -1,7 +1,17 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V58 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V59 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 1 iunie 2026
+
+**Sesiunea V59 — sumar (C03 refactor MAMUT: graniță AUDITARE/NORMALIZARE absolută, GATE PASS):**
+
+1. **Cauză-rădăcină reparată: confuzia AUDITARE vs NORMALIZARE.** Auditul senior pe 6 niveluri a arătat că C03 etapele 3-5 executau curățare Power Query (teritoriul C04), deghizată în „demonstrație". Refactor cap-coadă: C03 = detectează + cuantifică + dovedește recuperabilitatea + confirmă; C04 = construiește mecanismul. **Power Query eliminat complet ca unealtă activă din corpul C03** (toate 4 machete): zero PQ / Refresh All / Text.Trim / Number.From / Date.From / neutralizare / AGGREGATE / dashboard în machetele learner-facing.
+2. **Etapa 3 = „DEMONSTRAȚIA RECUPERABILITĂȚII"**: coloane martor cu formule (TRIM, CLEAN, SUBSTITUTE, VALUE, DATEVALUE) lângă sursa intactă; nu se produce foaie curată, se dovedește recuperabilitatea. Etapa 4 = „VERIFICAREA DOVEZII" (reconciliere detectat==explicat + sumă martor). Etapa 5 = „AUDIT REPETABIL" (aceeași metodă → aceeași dovadă; phase-tag REFRESH/Power Query Refresh → METODĂ/Audit repetabil).
+3. **Video JSON era integral C01/C04** (subtotaluri, antet promovat, „flux Power Query", AGGREGATE) — STAGES+PROMPTS rescrise complet pe axa forensic, aliniate la Studiu. Overlay slide 3 forensic.
+4. **transformare-section reintrodusă** (gated, CSS+JS reveal reparate) cu identitate proprie de auditor. Secțiuni 18→**19** (paritate C01/C02). **Bombă diferențiată de C02**: „Invizibil cu ochiul. Vizibil sub audit." Nav-meta corectate (AGGREGATE→Reconciliere, Power Query Refresh→Audit repetabil). **FILM rescris** (bombă, slide exec 3, narațiune boilerplate 6×3 specializată forensic, zero PQ/Refresh/AGGREGATE). Creativ etapa 3 reframe.
+5. **Stare:** C03 **GATE PASS**, audit_sync **ZERO DRIFT 112/112**, zero em/en-dash, randat-verificat desktop+mobil. Index cache-bust C03 v5/v4 + titlu reparat („Cum auditezi ce nu se vede în date", închide observația V51). **Rest minor:** xlsx `Vanzari_AUDIT` rămâne copie pe schemă (gate o cere), tratată narativ ca foaie-dovadă; rebuild cu coloane martor = follow-up gate-aware.
+
+---
 
 **Sesiunea V58 — sumar (C02 reconstruită cap-coadă CONTROL + audituri T1/T2 + remedieri C01 + excepție gate C01):**
 

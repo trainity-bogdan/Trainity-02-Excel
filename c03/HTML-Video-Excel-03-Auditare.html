@@ -1757,9 +1757,9 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-ghost-num">03</div>
     <div class="exec-content">
       <div class="exec-label frag" data-frag="1">Etapa 03</div>
-      <div class="exec-emotion frag" data-frag="2">Neutralizare tehnică</div>
+      <div class="exec-emotion frag" data-frag="2">Dovada recuperabilității</div>
       <h2 class="exec-title frag" data-frag="3">TRANSFORMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Nu am modificat valori. Am neutralizat contaminări tehnice.</p>
+      <p class="exec-phrase frag" data-frag="4">Nu am curățat datele. Am dovedit că pot fi recuperate.</p>
     </div>
   </section>
 
@@ -1869,77 +1869,77 @@ body.exec-mode .hud-bar { display: none !important; }
 const STAGES = [
   {
     id: 1, name: "REALITATE", emotion: "Curățenia înșelătoare",
-    hook: "Te uiți la un tabel.",
-    next: "Astăzi descoperim de ce nu este unul.",
+    hook: "Te uiți la un tabel care pare curat.",
+    next: "Astăzi dovedim că ascunde ce nu se vede.",
     steps: [
-      { num: "01", title: "Deschidem fișierul. Și îl lăsăm în pace.",
-        instr: "Exportul ERP rămâne exact așa cum vine. Zero atingeri. Zero cosmetică. <strong>Adevărul nu se editează.</strong>",
+      { num: "01", title: "Deschidem fișierul. Și îl lăsăm intact.",
+        instr: "Exportul rămâne exact așa cum vine. Zero atingeri, zero cosmetică. <strong>Un audit nu modifică ce investighează.</strong>",
         excel: true },
-      { num: "02", title: "Privim structura. Ignorăm cifrele.",
-        instr: "Antet de raport sus. Subtotaluri ascunse la mijloc. Rânduri goale ca cicatrici. <strong>Nu interesează valorile. Interesează ce le ține împreună.</strong>",
+      { num: "02", title: "Privim ce pare curat.",
+        instr: "Nume aliniate, valori prezente, date completate. La suprafață, totul în regulă. <strong>Ochiul spune curat. Auditul nu se bazează pe ochi.</strong>",
         excel: true },
-      { num: "03", title: "Fixăm martorul. Cel care nu minte.",
-        instr: "Selectăm coloana valoare. Citim suma din status bar. O notăm. <strong>Această cifră este judecătorul. La final, ea decide dacă am construit sau am stricat.</strong>",
+      { num: "03", title: "Fixăm martorul valorii.",
+        instr: "Pe coloana valoare scriem SUMPRODUCT cu VALUE, ca să citim suma reală chiar și prin numere stocate ca text. O notăm. <strong>Această cifră este judecătorul recuperabilității.</strong>",
         excel: true }
     ]
   },
   {
     id: 2, name: "INVESTIGAȚIE", emotion: "Audit forensic",
-    hook: "AI-ul nu repară. AI-ul mărturisește.",
-    next: "Înainte să atingem fișierul, îl punem să spună ce vede.",
+    hook: "AI-ul nu repară. AI-ul găsește ce nu se vede.",
+    next: "Înainte să atingem ceva, îl punem să numere contaminările.",
     steps: [
-      { num: "04", title: "Activăm Copilot. Fără să-i cerem nimic.",
-        instr: "Deschidem Copilot pe foaia Date. <strong>Nu îi dăm acțiune. Îi dăm o întrebare.</strong> AI care acționează fără diagnostic este AI care strică în liniște.",
+      { num: "04", title: "Activăm Copilot. Fără să-i cerem o acțiune.",
+        instr: "Deschidem Copilot pe foaia Vanzari. <strong>Nu îi dăm o acțiune. Îi dăm o întrebare.</strong> AI care curăță fără diagnostic strică în liniște.",
         excel: true },
-      { num: "05", title: "Întrebăm structura. Promptul 1.", instr: "", prompt: 1 },
-      { num: "06", title: "Citim raportul. Cu ochi de detectiv.",
-        instr: "Confirmăm pe categorii ce a raportat Copilot. <strong>Dacă cifra lui nu se potrivește cu ce vede ochiul, întrebăm din nou.</strong> Investigația nu se închide cu îndoieli.",
+      { num: "05", title: "Întrebăm contaminările. Promptul 1.", instr: "", prompt: 1 },
+      { num: "06", title: "Citim raportul forensic.",
+        instr: "Confirmăm pe categorii: spații ascunse, caractere invizibile, numere ca text, date ca șir, newline-uri. <strong>Acum știm exact ce se ascunde sub aparența de curățenie.</strong>",
         excel: true }
     ]
   },
   {
-    id: 3, name: "TRANSFORMARE", emotion: "Neutralizare tehnică",
-    hook: "Nu reparăm cifre. Reconstruim infrastructura.",
-    next: "Power Query separă realitatea de ambalaj. Definitiv.",
+    id: 3, name: "TRANSFORMARE", emotion: "Dovada recuperabilității",
+    hook: "Nu curățăm datele. Dovedim că pot fi recuperate.",
+    next: "Fiecare contaminare primește o coloană martor care o recuperează.",
     steps: [
-      { num: "07", title: "Încărcăm exportul în Power Query.",
-        instr: "Data → Get Data → From File. <strong>Nu confirmăm pașii detectați automat.</strong> Construim noi.",
+      { num: "07", title: "Construim coloanele martor.",
+        instr: "Lângă fiecare coloană contaminată, o coloană martor cu formula care recuperează valoarea reală. <strong>Sursa rămâne neatinsă. Doar dovedim.</strong>",
         excel: true },
-      { num: "08", title: "Construim mecanismul. Promptul 2.", instr: "", prompt: 2 },
-      { num: "09", title: "Aplicăm. Și încărcăm tabelul curat.",
-        instr: "Verificăm fiecare pas aplicat. Close & Load → As Table. <strong>Tabelul curat apare pe foaie nouă. Cel vechi rămâne intact, ca martor istoric.</strong>",
+      { num: "08", title: "Cerem formulele de recuperare. Promptul 2.", instr: "", prompt: 2 },
+      { num: "09", title: "Confruntăm martorul cu sursa.",
+        instr: "Un VLOOKUP care acum găsește, o sumă care acum se calculează. <strong>Valoarea era acolo, doar ascunsă. Masterul nu s-a modificat.</strong>",
         excel: true }
     ]
   },
   {
     id: 4, name: "VERIFICARE", emotion: "Dovada prin formulă",
-    hook: "Un proces care a rulat nu este un proces care a funcționat.",
-    next: "Cifrele decid. Noi doar le punem față în față.",
+    hook: "O formulă care nu dă eroare nu înseamnă că a găsit ce trebuia.",
+    next: "Reconciliem fiecare contaminare detectată cu dovada ei.",
     steps: [
-      { num: "10", title: "Recalculăm suma. Pe tabelul curat.",
-        instr: "Selectăm coloana valoare pe tabelul reconstruit. <strong>Suma trebuie să fie identică cu martorul fixat la pasul 03. Identică. Nu apropiată.</strong>",
+      { num: "10", title: "Reconciliem detectat cu explicat.",
+        instr: "Numărul raportat de AI se potrivește cu numărul confirmat de formulele martor, pe fiecare categorie. <strong>Zero contaminare neexplicată. Zero fals pozitiv.</strong>",
         excel: true },
-      { num: "11", title: "Confruntăm SUM cu AGGREGATE.",
-        instr: "Scriem =SUM(...) și =AGGREGATE(9, 3, ...) pe aceeași coloană. <strong>Dacă cifrele nu coincid, undeva există ambalaj rămas. Nu trecem mai departe.</strong>",
+      { num: "11", title: "Confruntăm suma cu martorul.",
+        instr: "SUM pe coloana martor de recuperare, comparată cu martorul SUMPRODUCT fixat la pasul 03. <strong>Identică. Nu apropiată. Valoarea se conservă fără să atingem masterul.</strong>",
         excel: true },
-      { num: "12", title: "Verificăm integritatea structurală.",
-        instr: "Antet pe rândul 1. Zero rânduri goale. Zero SUBTOTAL. Zero TOTAL GENERAL. <strong>Tabelul fie este curat, fie nu este tabel.</strong>",
+      { num: "12", title: "Confirmăm recuperabilitatea pe tip.",
+        instr: "Number pentru valoare, Date pentru dată, Text curat pentru nume, în coloanele martor. <strong>Dovada că datele pot redeveni corecte e completă. Construirea efectivă rămâne C04.</strong>",
         excel: true }
     ]
   },
   {
     id: 5, name: "STABILIZARE", emotion: "Verificare repetabilă",
-    hook: "Un export curat astăzi este un export contaminat luna viitoare.",
-    next: "Transformăm intervenția într-un mecanism. Reaplicabil. Predictibil.",
+    hook: "Un audit care nu se poate repeta nu e dovadă, e o coincidență.",
+    next: "Aceeași metodă, pe orice export, produce aceeași dovadă.",
     steps: [
-      { num: "13", title: "Fixăm auditul ca verificare.",
-        instr: "Pașii de detecție rămân documentați, gata de re-rulat pe orice export. <strong>Nu automatizăm curățarea aici. O dovedim repetabilă.</strong>",
+      { num: "13", title: "Fixăm auditul ca metodă.",
+        instr: "Prompturile de detecție și formulele martor rămân documentate, gata de re-aplicat. <strong>Nu construim un mecanism aici. Păstrăm o metodă.</strong>",
         excel: true },
-      { num: "14", title: "Re-rulăm auditul. Pe un export nou.",
-        instr: "Punem un export proaspăt de la ERP și rulăm din nou auditul. <strong>Dacă găsește aceleași categorii, dovada ține. Mecanismul permanent e treaba C04.</strong>",
+      { num: "14", title: "Re-aplicăm auditul. Pe un export nou.",
+        instr: "Pe un export proaspăt, aceeași metodă găsește aceleași categorii și aceeași recuperabilitate. <strong>Aceeași metodă, aceeași dovadă. Mecanismul permanent e treaba C04.</strong>",
         excel: true },
-      { num: "15", title: "Documentăm. Pentru cine vine după.",
-        instr: "Notăm: care era ambalajul, ce face fluxul, ce nu se atinge niciodată. <strong>Regula care trăiește doar în capul autorului moare cu autorul.</strong>",
+      { num: "15", title: "Documentăm dovada forensic.",
+        instr: "Notăm categoriile, formulele martor și sumele reconciliate. <strong>O contaminare nouă neacoperită apare ca abatere, nu trece neauditată.</strong>",
         excel: false }
     ]
   },
@@ -1949,10 +1949,10 @@ const STAGES = [
     next: "Baza demonstrabilă devine fundație. C04 normalizează deasupra.",
     steps: [
       { num: "16", title: "Confirmăm protocolul cap-coadă.",
-        instr: "Verificăm cele cinci categorii de contaminare în Vanzari_AUDIT. <strong>Zero spații parazite. Zero caractere invizibile. Numeric pur. Date reale. Sumă conservată.</strong>",
+        instr: "Cele cinci categorii: detectate, explicate, reconciliate. <strong>Recuperabilitate dovedită. Sumă conservată. Master nemodificat.</strong>",
         excel: true },
       { num: "17", title: "Confirmăm baza demonstrabilă.",
-        instr: "Foaia Vanzari_AUDIT poate intra direct în orice analiză. <strong>Fără surprize tehnice. Fără contaminări care propagă în rapoarte.</strong>",
+        instr: "Știm că datele sunt contaminate, unde, cât și că valoarea poate fi recuperată. <strong>Fără surprize tehnice propagate mai departe nedovedit.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C04.",
         instr: "Marcăm construcția finalizată. <strong>C04 nu va începe de la aparență. Va începe de la o bază demonstrabilă.</strong>",
@@ -1963,14 +1963,14 @@ const STAGES = [
 
 const PROMPTS = {
   1: {
-    label: "Prompt 01 · Diagnostic",
-    text: "Analizează structura acestui export ERP. Identifică, fără să modifici nimic: câte rânduri sunt antet de raport, câte sunt subtotaluri sau total general, câte sunt complet goale, care este antetul real al tabelului și pe ce rând începe. Raportează numeric, pe categorii.",
+    label: "Prompt 01 · Audit forensic",
+    text: "Verifică foaia Vanzari pentru contaminări invizibile, fără să modifici nimic: spații ascunse la final de text, caractere invizibile (zero-width, soft hyphen), numere stocate ca text, date scrise ca șir, newline-uri în text. Raportează numeric, pe fiecare categorie, câte celule sunt afectate.",
     meta: "AI investighează. Nu modifică. Nu decide. Mărturisește."
   },
   2: {
-    label: "Prompt 02 · Reconstrucție",
-    text: "Construiește un flux Power Query care: sare peste rândurile de antet de raport, promovează antetul real al tabelului, filtrează rândurile unde prima coloană începe cu SUBTOTAL sau TOTAL, elimină rândurile complet goale, păstrează doar coloanele reale ale tabelului. Încarcă rezultatul ca tabel curat.",
-    meta: "Power Query construiește mecanismul. Refreshabil. Repetabil. Definitiv."
+    label: "Prompt 02 · Recuperare forensic",
+    text: "Pentru fiecare din cele cinci categorii de contaminare invizibilă, arată într-o coloană martor formula care recuperează valoarea reală fără să modifice coloana sursă: TRIM și CLEAN pentru spații și caractere de control, SUBSTITUTE pentru zero-width și soft hyphen, SUBSTITUTE pentru newline, VALUE pentru numere ca text, DATEVALUE pentru date ca șir. Dovedește că fiecare contaminare e recuperabilă, fără să cureți datele.",
+    meta: "Formula dovedește recuperabilitatea. Masterul rămâne intact."
   }
 };
 
