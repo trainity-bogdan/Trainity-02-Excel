@@ -1010,7 +1010,7 @@ def load_identitate(NN, identitate_path):
         },
         '02': {
             'cod': 'C02', 'nume_hero_caps_rand1': 'CONTROLUL',
-            'nume_slug': 'Marcare',
+            'nume_slug': 'Control',
             'meta_val_treapta': 'STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)'
         },
         '03': {
