@@ -1,7 +1,37 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V64 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V65 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V65 — sumar (IMPLEMENTARE FINALĂ T1+T2 LOCK: FILM C02/C03/C04 rescris + diferențiere C02↔C03 + AUDIT MONSTRUOS V3):**
+
+1. **AUDIT MONSTRUOS V3 (15 niveluri, L192 aplicat).** Audit empiric complet C01-C08 pe identitate, distanță, memorabilitate, FILM, cinematic, pedagogie, redundanță, progresie, business, transformare cursant, vânzabilitate, scalabilitate, arhitectură T3/T4, atacul concurentului + Root Cause Analysis. Verdict: **PRODUS NEPREGĂTIT PENTRU C20** — 5 dovezi empirice principale: (1) FILM T1 boilerplate critic C02/C04, (2) saturație retorică "Oamenii/Profesioniștii" la 100%, (3) garduri T2 incompatibile cu T3 fără mecanism de tranziție, (4) titluri exec-stages identice 8/8 fără plan de scalare, (5) produs cu două viteze (C01+C05-C08 diferențiate, C02-C04 template). Top 50 probleme sistemice + Top 50 riscuri C09-C20 + Top 50 îmbunătățiri ROI + Top 20 cauze-rădăcină livrate.
+2. **FILM C02 rescris complet** (36 câmpuri, 6 etape × 6 câmpuri). Vocea CONTROL diferențiată per etapă: suspiciune metodică/atenție la discrepanțe/precizie de formulă/rigoare matematică/construcție durabilă/predare cu dovadă. Vocabular XLOOKUP/COUNTIF/NETWORKDAYS.INTL/nomenclator/semnalizare/anomalie. Boilerplate "Recunoastere si control. Nu inventam" eliminat complet.
+3. **FILM C03 rescris complet** (24 câmpuri — STARE EMOȚIONALĂ era deja diferențiată). Vocea FORENSIC/AUDITARE: martor forensic/catalogare fără modificare/coloane-martor/reconciliere detectat=explicat/repetabilitate metodei/predare cu dovadă. Vocabular LEN()/TRIM/CLEAN/VALUE/scanner/550 contaminări/delta 0. Boilerplate "Nu construim mai mult decât e necesar" eliminat.
+4. **FILM C04 rescris complet** (36 câmpuri). Vocea NORMALIZARE/AUTOMATIZARE: determinare de constructor/privire de arhitect/focus de constructor/testare de inginer/satisfacție de automatizare/predare de sistem. Vocabular Applied Steps/Power Query Editor/dependențe flux/idempotent/Refresh All. Boilerplate eliminat.
+5. **Diferențiere C02↔C03 întărită în HTML-Studiu** (5 modificări, 3 în C02 + 2 în C03). SUNĂ CUNOSCUT și PAS 04 recalibrate: C02="confrunt cu nomenclatoare, nu caut defecte tehnice", C03="lansezi scannerul forensic: cauți contaminări tehnice invizibile, nu neconcordanțe cu realitatea business". Testul 30 secunde: PASS.
+6. **Fix em-dash C02 HTML-Studiu** (introdusă de agent în PAS 04 diferențiere). Înlocuită cu `:` — R-V03.72 OK.
+7. **audit_sync ZERO DRIFT 123/144 PASS** post-implementare. Toate C01-C08 OK pe toate detectoarele.
+
+**L202 (nou) — agenți paraleli pot introduce em/en-dash în textele pe care le scriu.** La orice sesiune cu agenți care modifică HTML, rulează audit_sync post-commit și repară imediat (R-V03.72). Detectorul prinde; regula rămâne durabilă.
+
+**STARE T1+T2 după V65:**
+- C01: RELEASE PASS. FILM gold standard.
+- **C02: RELEASE PASS COMPLET.** FILM rescris cu voce CONTROL diferențiată. HTML diferențiat față de C03.
+- **C03: RELEASE PASS COMPLET.** FILM rescris cu voce FORENSIC/AUDITARE diferențiată. HTML diferențiat față de C02.
+- **C04: RELEASE PASS COMPLET.** FILM rescris cu voce NORMALIZARE/AUTOMATIZARE diferențiată.
+- C05-C08: RELEASE PASS COMPLET (neatins în V65).
+- **T1 LOCK = DA. T2 LOCK = DA.** Cele două probleme sistemice blocante pre-T3 sunt închise.
+
+**Probleme deschise non-blocante (din Audit Monstruos V3, neimplementate):**
+- Formula "Oamenii/Profesioniștii" la 100% saturație — de diversificat la C12+
+- Titluri exec-stages identice 8/8 — de revizuit la scalare T3
+- WOW C06/C07 sub standard față de C01/C04
+- Mecanism lingvistic tranziție T2→T3 (garduri inversate) — de construit la C09
+- Artefact output T2 demonstrabil față de manager nontehnic
+- Progresia T2 recadrată ca "4 lentile paralele" (nu 4 pași secvențiali)
+
+---
 
 **Sesiunea V64 — sumar (pachetul IMAGINI T2 ÎNCHIS: C08 6/6 ECOSISTEM + lecție inpaint):**
 
