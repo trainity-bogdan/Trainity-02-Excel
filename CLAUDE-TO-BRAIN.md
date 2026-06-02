@@ -1,44 +1,44 @@
 # CLAUDE → BRAIN
 
 ## STATUS
-DONE
+DONE (idle, niciun mandat activ)
 
 ## MANDAT-ID
-N/A (niciun mandat activ)
+N/A (BRAIN-TO-CLAUDE.md → MANDAT CURENT: "Nu există mandat de execuție activ.")
 
 ## MANDAT EXECUTAT
-Bootstrap protocol BRAIN <-> CLAUDE. Primul SYNC rulat. Nu a fost găsit mandat activ.
+SYNC rulat. Am aliniat main cu origin, am citit BRAIN-TO-CLAUDE.md, am verificat MANDAT CURENT. Nu există mandat de execuție activ, deci nu am modificat niciun artefact de proiect.
 
 ## REZUMAT EXECUTIV
-Am primit și am internalizat protocolul BRAIN <-> CLAUDE (BRAIN = ChatGPT/Andrei decide arhitectura, CLAUDE = executor). La primul SYNC am căutat `BRAIN-TO-CLAUDE.md` în rădăcina repo-ului: fișierul NU există, deci nu există mandat activ. Conform regulii 11, nu am modificat nimic în proiect și am creat acest fișier de raport. Confirm regulile: lucrăm doar pe main, fără branch-uri noi, fără PR, nu ating arhitectura locked (T1 + T2 + SPEC C09 v1.0 + gramatica de treaptă T3) fără mandat explicit, nu redenumesc concepte locked, nu introduc termeni din trepte viitoare, nu inventez conținut în afara mandatului. Aștept ca BRAIN să scrie un mandat în `BRAIN-TO-CLAUDE.md` și un nou semnal `SYNC`.
+La acest SYNC am făcut fetch + rebase pe origin/main (up to date), am recitit canalul BRAIN-TO-CLAUDE.md. STATUS = READY, dar secțiunea MANDAT CURENT declară explicit că nu există mandat de execuție activ. Conform regulii de aur a protocolului, nu am atins nimic în proiect și nu am inventat conținut. Aștept ca BRAIN să completeze un mandat în formatul cerut (STATUS PENDING + MANDAT-ID BRAIN-YYYY-MM-DD-XXX + MANDAT + FIȘIERE PERMISE/INTERZISE). Arhitectura locked rămâne intactă: T1, T2, SPEC C09 v1.0, gramatica de treaptă T3.
 
 ## FIȘIERE CITITE
-- BRAIN-TO-CLAUDE.md (inexistent la momentul citirii)
+- BRAIN-TO-CLAUDE.md
 
 ## FIȘIERE MODIFICATE
-- CLAUDE-TO-BRAIN.md (creat acum)
+- CLAUDE-TO-BRAIN.md (acest raport)
 
 ## SCHIMBĂRI EFECTUATE
-- Creat fișierul de raport CLAUDE-TO-BRAIN.md cu confirmarea că protocolul a fost citit și înțeles.
+- Actualizat raportul de stare la rezultatul acestui SYNC (idle, fără mandat activ).
 
 ## SCHIMBĂRI NEFĂCUTE
-- Niciun artefact de proiect atins (HTML / FILM / imagini / xlsx / governance) — nu există mandat activ.
-- C10 revizuit și granițele T3/T4/T5 din workshop-ul anterior rămân PROPUNERE, neînghețate (nu există mandat scris pentru ele).
+- Niciun artefact de proiect atins (governance / HTML / FILM / imagini / xlsx).
+- C10 revizuit + granițele T3/T4/T5 (publicate ca propunere în WORKSHOP-C10-T3-T4-T5.md) rămân NEÎNGHEȚATE; aștept mandat scris pentru îngheț.
 
 ## TESTE / AUDITURI RULATE
-- Niciunul (bootstrap, fără mandat).
+- Niciunul (idle).
 
 ## REZULTATE
-PASS (protocol citit, înțeles, fișier de comunicare creat)
+PASS (canal citit, fără mandat de executat)
 
 ## RISCURI RĂMASE
-- Niciun mandat activ: BRAIN trebuie să scrie `BRAIN-TO-CLAUDE.md` cu STATUS + MANDAT CURENT + MANDAT-ID + fișiere permise.
-- Recomand ca fiecare mandat să listeze explicit fișierele permise, ca să respect regula 4 (nu modific în afara lor).
+- Niciun mandat activ. Pentru a debloca execuția, BRAIN trebuie să scrie un bloc de mandat conform secțiunii "FORMAT MANDAT" din BRAIN-TO-CLAUDE.md, cu FIȘIERE PERMISE explicite.
 
 ## DECIZII CERUTE DE LA BRAIN
-- Niciuna acum. (Rămân pe masă, din workshop, dar separat de protocol: confirmarea C10 revizuit + granițele T3/T4/T5 pentru îngheț — doar dacă BRAIN le transformă în mandat scris.)
+- Niciuna nouă din protocol.
+- Pe masă (din workshop, doar dacă BRAIN le transformă în mandat): (a) confirm C10 revizuit pentru îngheț; (b) confirm granițele T3/T4/T5 pentru îngheț în Bible §T3/§T4/§T5.
 
 ## COMMIT / STATUS GIT
 - Branch: main
-- Commit: vezi mesajul de commit din această sesiune (bootstrap protocol)
-- Status: working tree curat după commit; push pe origin/main
+- Commit: acest raport pe origin/main (vezi ultimul commit al sesiunii)
+- Status: working tree curat după push
