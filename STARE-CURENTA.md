@@ -1,7 +1,15 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V62 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V63 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V63 — sumar (C07 DATARE = RELEASE PASS COMPLET prin 6/6 imagini exec dedicate + rafinare strip_watermark):**
+
+1. **C07 = a patra construcție RELEASE PASS real (după C01/C02/C05).** Cele 6 imagini exec-stage DATARE generate de ARHITECT (în 2 tranșe: 5 + 1) procesate cap-coadă: extrase din transcriptul sesiunii (`webp` 1264×848), watermark Gemini ✦ scos, salvate `c07/assets/exec-stage-1..6.jpg` (hash ≠ C01) + base64 inline (resize 1200/q82) în HTML-Video + Editor-Video. Teme: 1 REALITATE (set fără timp), 2 INVESTIGAȚIE (prima dată), 3 TRANSFORMARE (MONTH/QUARTER/SEASON/WEEKDAY), 4 VERIFICARE (timeline), 5 STABILIZARE (calendar+registru), 6 CONFIRMARE (sală arhivă YEAR/SEASON/QUARTER/MONTH + sigiliu MEMORY VERIFIED, predare C08). `R-V59.imgclone` → **PASS**; toate 18 detectoarele C07 OK; gate v20 PASS. **Axa CINEMATIC închisă → 8/8.**
+2. **L199 (nou) — strip_watermark per tip de fundal (rafinare L179/L183):** steluța Gemini stă la poziție FIXĂ relativă (~colț dreapta-jos, bbox ~1184-1231/768-815 pe 1264×848). Trei strategii după fundal, alese empiric: (a) **fundal întunecat** (matte black / desk închis — img1/2/4) → clonă standard din stânga, invizibilă; (b) **gradient lin** (mână/lemn iluminat — img3) → **blur-inpaint local** (mască steluța, înlocuiește cu mediana non-steluță a ferestrei, blur 16-18px, zgomot fin) ca să urmeze gradientul fără bloc; (c) **lemn deschis cu tranziție orizontală lemn→umbră sau parchet** (img5/img6) → **clonă ORIZONTALĂ din stânga imediată** (aceleași rânduri = aceeași bandă), fiindcă blur-inpaint lasă un blob neted vizibil iar clona verticală nu reproduce banda. Detecția steluței = strict alb-cenușiu neutru (`max-min < 45-70`) restrânsă la colțul extrem, ca să NU prindă obiecte luminoase legitime (paginile albe ale registrului, sigiliul, parchetul portocaliu). **Verificare obligatorie = vizuală pe crop-ul colțului** (reziduu px + ochi), nu doar numeric. Sigiliul „MEMORY VERIFIED" (conținut) lăsat intact — patch doar pe x>1160.
+3. **Stare pachet pe `main`:** C01·C02·C05·C06·**C07** = RELEASE PASS COMPLET. C03·C04 = model finalizat T1. **C08** = singura cu `R-V59.imgclone` XX (5/6 imagini ECOSISTEM, stage-6 pending — sesiune paralelă). audit_sync: 1 singură celulă XX rămasă (C08 imgclone), restul ZERO DRIFT.
+
+---
 
 **Sesiunea V62 (faza B) — sumar (AUDIT MAMUT T2 nivel sistem + IMPLEMENTARE FAZA FILM):**
 
