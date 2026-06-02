@@ -1,0 +1,269 @@
+==============================================================================
+CREATIV-Excel-09-Relatii.txt
+==============================================================================
+Sistemul 02 · Excel · Constructia 09 · Relatii intre seturi
+Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale C09.
+
+Versiune: V67 (slice 1, BRAIN-011)
+Status: BRIEF PENTRU ARHITECT (imaginile se genereaza de ARHITECT, se proceseaza aici)
+Treapta: T3 ANALIZA (prima constructie a treptei)
+Axa: RELATII - setul cunoscut devine un model relational interogabil
+AHA: "Fara relatii ai date. Cu relatii ai raspunsuri."
+==============================================================================
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ INSTRUCTIUNI GENERALE PENTRU ARHITECT                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CE GENERAM
+1 imagine HERO (cover, axa RELATII) + 6 imagini exec-stage (una per etapa).
+Total 7 imagini. Aspect 3:2 cinematic, ~1920x1280 px, foto-realiste.
+
+CUM SE FOLOSESTE
+1. Deschizi Gemini (gemini.google.com) / Banana 2, mod "Generate image".
+2. Copiezi promptul integral (sectiunea respectiva, blocul PROMPT).
+3. Generezi, descarci. Trimiti imaginea in chat la motor (Claude).
+4. Motorul scoate watermark-ul Gemini (steluta din colt, R-V49.1) si o pune
+   in c09/assets/ cu numele standard, apoi o integreaza base64 in HTML-Video.
+
+DIRECTIA VIZUALA C09 (obligatorie pe toate imaginile)
+C09 NU este C08. C08 = harta descriptiva a ecosistemului (cine cu cine s-ar
+putea lega). C09 = ACTIVAREA relatiilor: surse separate care se conecteaza
+prin chei, noduri, poduri, intr-un model care devine interogabil.
+
+TREBUIE sa apara, vizual:
+- surse de date separate (tabele/coli ca obiecte fizice distincte)
+- chei / conectori / poduri care se cupleaza intre tabele (1:M)
+- o relatie care se ACTIVEAZA (cheie care intra in lacas, linie care se aprinde)
+- model curat, ordonat (star schema: un fact central, dimensiuni in jur)
+- o singura intrebare care traverseaza tabelele si primeste raspuns
+
+NU trebuie sa apara (interdictii dure, altfel imaginea e gresita):
+- harti de ecosistem difuze tip C08, paienjenis de context descriptiv
+- inventar / liste descriptive (teritoriul C05-C08)
+- dashboard-uri, grafice publicabile, KPI vizuali (= T4)
+- clasamente, top/bottom, Pareto (= C11)
+- sageti de cauzalitate / "de ce", insight final (= C12)
+- butoane de actiune, alerte, automatizari (= T5)
+- oameni generici de business fara rol, stock photo decorativ
+
+STIL VIZUAL TRAINITY
+Cinematic editorial, foto-realist, paleta premium intunecata (matte black,
+grafit, bleu-otel rece) cu un singur accent cald (amber/auriu) pe relatia
+activa. Lumina dramatica, profunzime de camp mica, contrast inalt. Fara text
+suprapus, fara UI de aplicatie, fara cartoon. 50mm, f/2.0, lumina laterala.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 1 · HERO (COVER) · axa RELATII
+══════════════════════════════════════════════════════════════════════════════
+
+SCOP PEDAGOGIC
+Prima imagine pe care o vede cursantul. Trebuie sa comunice instant saltul
+T2 -> T3: de la date cunoscute dar izolate, la un model legat care raspunde.
+Intruchipeaza AHA: "Fara relatii ai date. Cu relatii ai raspunsuri."
+
+DESCRIERE VIZUALA
+Cateva placi/coli de date separate, suspendate pe un fond intunecat, fiecare
+distincta (un fact central mai mare, cateva dimensiuni mai mici in jur). Intre
+ele, conectori metalici lucrati ca niste chei/poduri care tocmai s-au cuplat:
+liniile de legatura se aprind in amber dinspre fact spre fiecare dimensiune
+(relatii 1:M). Un singur fascicul subtire de lumina pleaca dintr-o intrebare
+si traverseaza doua-trei placi, intorcandu-se cu un punct luminos (raspunsul).
+
+ELEMENTE OBLIGATORII
+- 1 placa "fact" centrala + 3-4 placi "dimensiune" in jur (star schema citibila)
+- conectori-cheie cuplati, linii 1:M aprinse in amber
+- un fascicul-intrebare care traverseaza placile
+RELATIA CU AHA
+Placile izolate = "date". Conectorii aprinsi + fasciculul care se intoarce cu
+raspuns = "raspunsuri". Contrastul izolat/legat ESTE mesajul.
+
+ELEMENTE INTERZISE
+harta difuza C08; dashboard; grafice; clasamente; text pe imagine; UI Excel.
+
+PROMPT (copy-paste integral in Banana 2 / Gemini Imagen 3)
+Cinematic editorial photograph, 3:2, ~1920x1280. On a matte black studio
+surface, several separate slabs of data float in space: one larger central
+slab (the fact) and three or four smaller satellite slabs around it
+(dimensions), each a clean brushed-steel panel etched with faint rows. Between
+them, precision machined key-connectors have just clicked into place; glowing
+amber relationship-lines ignite from the central slab outward to each
+satellite, forming a clean star pattern (one-to-many). A single thin beam of
+cold blue light departs from a small engraved question mark, travels across two
+of the slabs, and returns carrying one bright amber point of light (the
+answer). Dramatic side lighting, shallow depth of field, high contrast, premium
+graphite and steel-blue palette with a single warm amber accent on the active
+relations. 50mm, f/2.0. Photorealistic, no text overlay, no application UI.
+
+NEGATIVE PROMPT
+diffuse spider-web ecosystem map, descriptive context cloud, dashboard, charts,
+bar graphs, ranking, leaderboard, KPI tiles, arrows of causation, alert icons,
+buttons, generic business people, stock photo, cartoon, 3d render toy look,
+cluttered, text, watermark.
+
+
+══════════════════════════════════════════════════════════════════════════════
+SECTIUNEA 2 · IMAGINI EXECUTIVE PER ETAPA (6 imagini)
+══════════════════════════════════════════════════════════════════════════════
+
+Cele 6 etape C09 (din BLUEPRINT-C09-RELATII.md):
+1 REALITATE   - DESCHIDERE RELATIONALA (relatii doar identificate, inca inactive)
+2 INVESTIGATIE- INTEROGARE ASISTATA DE AI (ce relatii pot fi activate, cardinalitate)
+3 TRANSFORMARE- CONSTRUIREA MODELULUI (activeaza 1:M, model coerent)
+4 VERIFICARE  - VERIFICAREA RELATIILOR (zero circulare, zero chei orfane)
+5 STABILIZARE - ANCORARE LA SURSA (model viu, legat la surse)
+6 CONFIRMARE  - PREDAREA MODELULUI (predat catre C10)
+
+Fiecare imagine: 3:2 cinematic, acelasi stil Trainity, continuitate cu HERO.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 1 · REALITATE (DESCHIDERE RELATIONALA)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: arata punctul de plecare: sursele exista si harta lor e
+cunoscuta (predata de C08), dar legaturile sunt doar IDENTIFICATE, nu active.
+DESCRIERE VIZUALA: aceleasi placi de date separate, dar conectorii stau
+decuplati alaturi; liniile dintre placi sunt punctate, reci, stinse (gri-albastru).
+Nimic nu curge inca. Atmosfera de potential neactivat.
+ELEMENTE OBLIGATORII: placi separate; conectori-cheie prezenti dar decuplati;
+linii punctate stinse.
+ELEMENTE INTERZISE: linii aprinse; fascicul de raspuns; harta difuza C08.
+RELATIA CU AHA: aici esti la "date" - legaturile exista pe hartie, nu raspund.
+PROMPT: Cinematic editorial photograph, 3:2. Several separate brushed-steel
+data slabs on matte black, arranged loosely apart. Between them, dotted cold
+grey-blue guide lines mark where connections COULD be, but the machined
+key-connectors lie uncoupled beside the slabs. Nothing glows, nothing flows;
+quiet unrealized potential. Dramatic low-key side light, shallow depth of field,
+graphite and steel-blue palette, no warm accent yet. 50mm f/2.0, photorealistic,
+no text, no UI.
+NEGATIVE PROMPT: glowing lines, amber light, answer beam, dashboard, charts,
+ecosystem web, ranking, arrows, people, cartoon, text, watermark.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 2 · INVESTIGATIE (INTEROGARE ASISTATA DE AI)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: AI interogheaza ce relatii pot fi activate, ce cardinalitate
+(1:1 vs 1:M) si ce chei sunt sigure. Inspectie, nu constructie inca.
+DESCRIERE VIZUALA: un fascicul-scanner rece inspecteaza fittingul cheilor intre
+doua placi; deasupra unei chei apare o eticheta gravata fina "1:M"; o cheie e
+verificata, una e pusa deoparte ca nesigura.
+ELEMENTE OBLIGATORII: scanner/fascicul de inspectie; chei examinate; semn de
+cardinalitate 1:M gravat subtil.
+ELEMENTE INTERZISE: relatii deja aprinse global; raspuns final; clasamente.
+RELATIA CU AHA: inca nu ai raspunsuri; intrebi modelul ce poate fi legat.
+PROMPT: Cinematic editorial photograph, 3:2. A cold blue inspection beam scans
+the precision key-connectors between two separate steel data slabs on matte
+black. One key is held in the light and examined, a faint engraved label "1:M"
+hovers near a fitting; another key is set aside as unsafe. Investigative,
+diagnostic mood, no global glow yet, only the inspection beam. Shallow depth of
+field, graphite and steel-blue palette, single cold accent. 50mm f/2.0,
+photorealistic, no text overlay except the tiny engraved 1:M, no UI.
+NEGATIVE PROMPT: full amber network, answer beam, dashboard, charts, ranking,
+Pareto, cause arrows, buttons, alerts, people, cartoon, watermark.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 3 · TRANSFORMARE (CONSTRUIREA MODELULUI)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: momentul-cheie. Relatiile 1:M se activeaza, modelul coerent
+prinde forma (star schema: fact central + dimensiuni legate).
+DESCRIERE VIZUALA: cheile intra in lacasuri cu un click vizibil; liniile 1:M
+se aprind una cate una in amber dinspre placa-fact spre fiecare dimensiune;
+structura izolata devine un model curat, ordonat.
+ELEMENTE OBLIGATORII: chei cuplate in lacas; linii 1:M aprinse amber; star
+schema citibila (1 fact + dimensiuni).
+ELEMENTE INTERZISE: masuri/cifre evidentiate (C10); clasament (C11); dashboard.
+RELATIA CU AHA: treci de la "date" la structura care POATE raspunde.
+PROMPT: Cinematic editorial photograph, 3:2. The machined keys snap into their
+sockets between a larger central steel slab (fact) and surrounding smaller slabs
+(dimensions); amber relationship-lines ignite one by one from the center
+outward, forming a clean ordered star pattern (one-to-many). The previously
+isolated pieces become a coherent connected model. Decisive constructive mood,
+dramatic side light, shallow depth of field, graphite palette with strong warm
+amber accent on the newly active relations. 50mm f/2.0, photorealistic, no text,
+no UI.
+NEGATIVE PROMPT: highlighted numbers, named measures, KPI, ranking, leaderboard,
+dashboard, charts, cause arrows, alerts, buttons, ecosystem cloud, people,
+cartoon, watermark.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 4 · VERIFICARE (VERIFICAREA RELATIILOR)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: confrunta modelul: zero relatii circulare, cardinalitate
+corecta, zero chei orfane care rup join-ul.
+DESCRIERE VIZUALA: un model legat, calm; un singur conector-cheie ORFAN este
+evidentiat: nu se potriveste in niciun lacas, ramane suspendat si marcat (rece,
+respins), in timp ce restul relatiilor sunt aprinse si stabile.
+ELEMENTE OBLIGATORII: model legat stabil; o cheie orfana evidentiata ca
+neconforma; senzatie de control/verificare.
+ELEMENTE INTERZISE: clasament; raspuns de business final; dashboard.
+RELATIA CU AHA: un model care raspunde corect e un model fara chei rupte.
+PROMPT: Cinematic editorial photograph, 3:2. A connected steel data model with
+stable amber one-to-many lines on matte black. Calm, controlled. One single
+orphan key-connector is singled out: it fits no socket, held suspended in a thin
+cold spotlight and clearly marked as rejected, while every other relation stays
+lit and sound. Forensic verification mood. Shallow depth of field, graphite and
+steel-blue palette, amber on the valid relations, cold accent on the rejected
+key. 50mm f/2.0, photorealistic, no text, no UI.
+NEGATIVE PROMPT: ranking, top bottom, Pareto, dashboard, charts, business
+conclusion, cause arrows, alerts, buttons, ecosystem web, people, cartoon,
+watermark.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 5 · STABILIZARE (ANCORARE LA SURSA)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: modelul devine viu si ancorat la surse: cand sursa se schimba,
+relatiile raman; nu se reconstruieste de la zero.
+DESCRIERE VIZUALA: modelul legat are acum ancore solide care coboara din
+fiecare dimensiune spre placa-sursa de sub ea; relatiile pulseaza usor (viu);
+o noua placa de sursa aluneca in jos si se prinde de aceleasi ancore fara sa
+rupa modelul.
+ELEMENTE OBLIGATORII: ancore sursa-model; relatii care raman la schimbarea
+sursei; senzatie de permanenta/durabilitate.
+ELEMENTE INTERZISE: buton de refresh ca UI; automatizare de flux (T5); dashboard.
+RELATIA CU AHA: relatiile bune supravietuiesc sursei noi: raspunsul ramane.
+PROMPT: Cinematic editorial photograph, 3:2. The connected steel model now has
+solid anchors descending from each dimension slab into a source plate beneath
+it; the amber relation-lines pulse gently, alive. A fresh source plate slides in
+from below and locks onto the same anchors without breaking the model.
+Sense of durable, living structure anchored to its sources. Dramatic light,
+shallow depth of field, graphite palette, steady amber accent. 50mm f/2.0,
+photorealistic, no text, no UI, no buttons.
+NEGATIVE PROMPT: refresh button, UI controls, automation flow, pipeline, robot,
+dashboard, charts, ranking, cause arrows, alerts, people, cartoon, watermark.
+
+------------------------------------------------------------------------------
+EXEC-STAGE 6 · CONFIRMARE (PREDAREA MODELULUI)
+------------------------------------------------------------------------------
+SCOP PEDAGOGIC: modelul interogabil, complet si verificat, este predat catre
+C10 (care va defini masuri peste el). C09 se inchide cu prima citire cross-tabel.
+DESCRIERE VIZUALA: modelul star complet, aprins si stabil; un singur fascicul-
+intrebare traverseaza doua placi si se intoarce cu un punct de raspuns; in
+dreapta, un pod de predare se intinde spre o zona urmatoare goala, pregatita
+(C10), inca neactivata.
+ELEMENTE OBLIGATORII: model complet aprins; o singura citire cross-tabel
+(fascicul + raspuns); pod de predare spre urmatoarea zona.
+ELEMENTE INTERZISE: masuri numite in zona urmatoare; clasament; dashboard.
+RELATIA CU AHA: dovada finala "cu relatii ai raspunsuri"; predai un model care
+raspunde, nu doar date.
+PROMPT: Cinematic editorial photograph, 3:2. The complete star data model fully
+lit and stable on matte black. A single question-beam crosses two slabs and
+returns carrying one bright amber answer-point (one cross-table read). To the
+right, a clean handover bridge extends toward an empty, prepared next stage that
+is not yet activated. Sense of completion and transfer. Dramatic side light,
+shallow depth of field, graphite palette with confident amber accent. 50mm
+f/2.0, photorealistic, no text, no UI.
+NEGATIVE PROMPT: named measures in the next stage, numbers highlighted, ranking,
+leaderboard, dashboard, charts, cause arrows, alerts, buttons, ecosystem cloud,
+people, cartoon, watermark.
+
+══════════════════════════════════════════════════════════════════════════════
+NOTA FINALA PENTRU ARHITECT
+══════════════════════════════════════════════════════════════════════════════
+- Genereaza in ordine: HERO, apoi exec-stage 1..6. Pastreaza continuitatea de
+  paleta si material (steel + matte black + amber pe relatia activa).
+- Toate trebuie sa arate ACTIVAREA relatiilor, nu descrierea ecosistemului (C08).
+- Cand le ai, trimite-le in chat; motorul scoate steluta Gemini si le pune in
+  c09/assets/ (exec-stage-1..6.jpg + hero-poster-excel-09-relatii.jpg).
+- Verificare vizuala obligatorie pe colt (reziduu watermark) inainte de base64.
+==============================================================================
