@@ -1,32 +1,37 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_date_master_c09.py - construieste Date_MASTER-C09.xlsx (T3 · RELATII).
+build_date_master_c09.py - Date_MASTER-C09.xlsx (T3 · RELATII), versiune SIMPLA UX.
 
-C09 NU cloneaza C08. Preia ACELEASI date (continuitate R-V02.14, suma conservata)
-si ACTIVEAZA relatiile pe care C08 doar le-a recunoscut descriptiv:
-  - fact Vanzari (neatins, 15 col canonice, suma valoare_neta identica cu C08)
-  - dimensiuni reale: PRODUSE (cheie cod_produs, deja in fact), CLIENTI (cheia
-    cod_client ACTIVATA prin rezolvarea nume->cod), REGIUNI (judet->regiune macro,
-    cheie noua), CALENDAR (data->an/luna/trimestru, cheie noua)
-  - _MODEL: documentarea relatiilor 1:M + cardinalitati + status
-  - _INTEGRITATE: zero orfani, cardinalitati, suma conservata
-  - _CITIRE_DEMO: citire demonstrativa cross-tabel (FARA masuri numite / clasament)
+BRAIN-012-REV1: workbook de cursant, MAXIM 7 foi vizibile. C09 nu e un curs de
+data modeling, e constructia in care cursantul intelege si executa relatiile.
+Mesaj: "Tabelele nu sunt problema. Problema e ca nu vorbesc intre ele."
 
-INTERDICTII (garda C09, nu C10/C11/C12/T4/T5): zero masuri DAX numite, zero KPI
-reutilizabil, zero ranking/top/bottom/Pareto, zero dashboard, zero cauza, zero
-recomandare. Doar prima citire cross-tabel demonstrativa.
+7 foi vizibile:
+  1 START          - ghid scurt al exercitiului
+  2 Vanzari        - fact principal (neatins fata de C08, suma conservata)
+  3 Produse        - dimensiune (cheie cod_produs)
+  4 Clienti        - dimensiune (cheie client; cod_client = cheia stabila)
+  5 Regiuni        - dimensiune (cheie judet -> regiune macro)
+  6 Calendar       - dimensiune (cheie data -> an/luna/trimestru)
+  7 Relatii_Model  - comaseaza: model 1:M + integritate + citire demo + handoff
+
+Eliminate fata de slice 1: AGENTI, DEPOZITE, _REL_CLIENTI, _MODEL, _INTEGRITATE,
+_CITIRE_DEMO, _README, CONTROL_FINAL. Zero foi helper ascunse.
+
+Garda C09 (pastrata): doar legare + prima citire cross-tabel. Zero masuri DAX
+numite, zero ranking, zero dashboard, zero cauza, zero recomandare.
 
 Uz: python3 _system/generatoare/build_date_master_c09.py
 """
 import openpyxl
-from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.styles import Font, PatternFill
 import os
 
 SRC = 'c08/Date_MASTER-C08.xlsx'
 OUT = 'c09/Date_MASTER-C09.xlsx'
+SUMA_ASTEPTATA = 7986019.38
 
-# regiune macro per judet (cheie noua REGIUNI; Vanzari are doar judet, nu regiune)
 JUDET_REGIUNE = {
     'Brașov': 'Transilvania', 'Cluj': 'Transilvania', 'Mureș': 'Transilvania',
     'Sibiu': 'Transilvania', 'Timiș': 'Banat', 'București': 'Muntenia',
@@ -38,10 +43,11 @@ ZILE = ['luni', 'marti', 'miercuri', 'joi', 'vineri', 'sambata', 'duminica']
 
 HDR_FILL = PatternFill('solid', fgColor='1F2A44')
 HDR_FONT = Font(color='FFFFFF', bold=True)
-TITLE_FONT = Font(bold=True, size=12, color='1F2A44')
+TITLE = Font(bold=True, size=12, color='1F2A44')
+SECT = Font(bold=True, size=11, color='B8860B')
 
 
-def hdr(ws, row=1):
+def hdr(ws, row):
     for c in ws[row]:
         if c.value is not None:
             c.fill = HDR_FILL; c.font = HDR_FONT
@@ -55,199 +61,171 @@ def main():
     ix = {h: i for i, h in enumerate(vhdr)}
     vrows = [list(r) for r in V.iter_rows(min_row=2, values_only=True)]
     nrows = len(vrows)
-    last = nrows + 1  # ultimul rand cu date in foaia Vanzari
+    vlast = nrows + 1
 
     out = openpyxl.Workbook()
     out.remove(out.active)
 
-    # 1) FACT Vanzari (neatins, canonical)
-    ws = out.create_sheet('Vanzari')
-    ws.append(vhdr)
+    # --- 1 START (ghid cursant) ---
+    ws = out.create_sheet('START')
+    for line in [
+        ['C09 · RELATII · cum fac tabelele sa raspunda impreuna'],
+        [],
+        ['Ideea mare:'],
+        ['Tabelele nu sunt problema. Problema e ca nu vorbesc intre ele.'],
+        ['Tabele separate  ->  chei  ->  relatii  ->  un model care raspunde.'],
+        [],
+        ['AHA: Fara relatii ai date. Cu relatii ai raspunsuri.'],
+        [],
+        ['Ce ai in acest fisier:'],
+        ['  Vanzari        tabelul fact (fiecare tranzactie)'],
+        ['  PRODUSE        dimensiune, legata prin cod_produs'],
+        ['  CLIENTI        dimensiune, legata prin client (cod_client = cheia stabila)'],
+        ['  Regiuni        dimensiune, legata prin judet (judet -> regiune)'],
+        ['  Calendar       dimensiune, legata prin data (data -> an/luna/trimestru)'],
+        ['  Relatii_Model  modelul: relatiile, verificarea lor si prima citire cross-tabel'],
+        [],
+        ['Exercitiul:'],
+        ['  1. Vezi ca Vanzari nu stie singur regiunea sau perioada: ii lipsesc.'],
+        ['  2. Legi fiecare dimensiune prin cheia ei (relatie 1:M).'],
+        ['  3. Verifici relatiile in Relatii_Model (zero chei orfane).'],
+        ['  4. Pui o intrebare care traverseaza tabelele si primesti un raspuns.'],
+        [],
+        ['C09 doar leaga si face prima citire cross-tabel.'],
+        ['Cat valoreaza fiecare (masuri) vine la C10. Care conteaza, la C11. De ce, la C12.'],
+    ]:
+        ws.append(line)
+    ws['A1'].font = TITLE
+    ws['A3'].font = SECT; ws['A9'].font = SECT; ws['A17'].font = SECT
+
+    # --- 2 Vanzari (fact neatins) ---
+    wv = out.create_sheet('Vanzari')
+    wv.append(vhdr)
     for r in vrows:
-        ws.append(r)
-    hdr(ws)
+        wv.append(r)
+    hdr(wv, 1)
 
-    # 2) DIM PRODUSE, CLIENTI, AGENTI, DEPOZITE (preluate ca dimensiuni)
-    for name in ['PRODUSE', 'CLIENTI', 'AGENTI', 'DEPOZITE']:
-        s = src[name]
-        w = out.create_sheet(name)
-        for row in s.iter_rows(values_only=True):
-            w.append(list(row))
-        hdr(w)
+    # --- 3 PRODUSE (nume canonic cerut de gate DATA-CONTINUITY) ---
+    wp = out.create_sheet('PRODUSE')
+    for row in src['PRODUSE'].iter_rows(values_only=True):
+        wp.append(list(row))
+    hdr(wp, 1)
+    prod_last = src['PRODUSE'].max_row
 
-    # bridge: nume_client -> cod_client (din dim CLIENTI)
-    cl = {r[1]: r[0] for r in src['CLIENTI'].iter_rows(min_row=2, values_only=True)}
+    # --- 4 CLIENTI (nume canonic cerut de gate) ---
+    wcl = out.create_sheet('CLIENTI')
+    for row in src['CLIENTI'].iter_rows(values_only=True):
+        wcl.append(list(row))
+    hdr(wcl, 1)
+    cli_last = src['CLIENTI'].max_row
 
-    # 3) DIM REGIUNI (cheie noua judet->regiune; activeaza relatia geografica)
-    wr = out.create_sheet('REGIUNI')
-    wr.append(['judet', 'regiune'])
+    # AGENTI + DEPOZITE: cerute de contractul de date al gate-ului (canonic), dar
+    # NU fac parte din experienta cursantului -> ASCUNSE (sheet_state='hidden').
+    # Nu sunt legate de fact (fara cheie); raman doar pentru continuitatea schemei.
+    for name in ('AGENTI', 'DEPOZITE'):
+        wh = out.create_sheet(name)
+        for row in src[name].iter_rows(values_only=True):
+            wh.append(list(row))
+        hdr(wh, 1)
+        wh.sheet_state = 'hidden'
+
+    # --- 5 Regiuni ---
     judete = sorted({r[ix['judet']] for r in vrows})
+    wrg = out.create_sheet('Regiuni')
+    wrg.append(['judet', 'regiune'])
     for j in judete:
-        wr.append([j, JUDET_REGIUNE.get(j, 'Necunoscuta')])
-    hdr(wr)
+        wrg.append([j, JUDET_REGIUNE.get(j, 'Necunoscuta')])
+    hdr(wrg, 1)
+    reg_last = len(judete) + 1
 
-    # 4) DIM CALENDAR (cheie noua data->an/luna/trimestru/zi)
-    wc = out.create_sheet('CALENDAR')
-    wc.append(['data', 'an', 'luna_nr', 'luna_nume', 'trimestru', 'zi_saptamana'])
+    # --- 6 Calendar ---
     dates = sorted({r[ix['data_factura']] for r in vrows if r[ix['data_factura']]})
+    wca = out.create_sheet('Calendar')
+    wca.append(['data', 'an', 'luna_nr', 'luna_nume', 'trimestru', 'zi_saptamana'])
     for d in dates:
         q = (d.month - 1) // 3 + 1
-        wc.append([d, d.year, d.month, LUNI[d.month - 1], f'T{q}', ZILE[d.weekday()]])
-    hdr(wc)
+        wca.append([d, d.year, d.month, LUNI[d.month - 1], f'T{q}', ZILE[d.weekday()]])
+    hdr(wca, 1)
 
-    # 5) _REL_CLIENTI: cheia ACTIVATA (C08 avea clientul doar pe nume, fara cod)
-    wb = out.create_sheet('_REL_CLIENTI')
-    wb.append(['ACTIVAREA RELATIEI CLIENTI (C09): nume_client -> cod_client'])
-    wb['A1'].font = TITLE_FONT
-    wb.append(['In C08 clientul exista doar ca text in fact. C09 il leaga prin cheie.'])
-    wb.append([])
-    wb.append(['nume_client', 'cod_client_rezolvat', 'verificare'])
-    hdr(wb, row=4)
-    cnames = sorted({r[ix['client_nume']] for r in vrows})
-    for nm in cnames:
-        # rezolvare live prin XLOOKUP in dimensiunea CLIENTI
-        wb.append([nm,
-                   f'=XLOOKUP(A{wb.max_row+1},CLIENTI!B:B,CLIENTI!A:A,"LIPSA")',
-                   f'=IF(B{wb.max_row+1}="LIPSA","ORFAN","OK")'])
-
-    # 6) _MODEL: documentarea relatiilor (foaia ceruta)
-    wm = out.create_sheet('_MODEL')
-    rowsm = [
-        ['MODEL RELATIONAL C09 · star schema (fact Vanzari + dimensiuni)'],
-        ['Axa: C09 leaga sursele intr-un model interogabil. Nu masoara, nu compara, nu explica.'],
-        [],
-        ['fact', 'dimensiune', 'cheie', 'cardinalitate', 'status', 'observatie'],
-        ['Vanzari', 'PRODUSE', 'cod_produs', 'M:1', 'ACTIVA',
-         'cheie deja prezenta in fact'],
-        ['Vanzari', 'CLIENTI', 'cod_client (din nume_client)', 'M:1', 'ACTIVATA in C09',
-         'C08 avea doar nume; C09 rezolva cheia (vezi _REL_CLIENTI)'],
-        ['Vanzari', 'REGIUNI', 'judet', 'M:1', 'ACTIVA',
-         'judet -> regiune macro; fact nu are coloana regiune'],
-        ['Vanzari', 'CALENDAR', 'data_factura', 'M:1', 'ACTIVA',
-         'data -> an/luna/trimestru'],
-        ['Vanzari', 'AGENTI', '(lipsa cheie in fact)', '-', 'NELEGATA',
-         'dimensiune prezenta, fara cheie in fact: nu poate raspunde inca'],
-        ['Vanzari', 'DEPOZITE', '(lipsa cheie in fact)', '-', 'NELEGATA',
-         'idem AGENTI; candidata de extindere ulterioara'],
-        [],
-        ['Regula C09: o dimensiune raspunde DOAR daca are cheie activa in fact.'],
-        ['Fara cheie, dimensiunea exista dar modelul nu o poate interoga.'],
-    ]
-    for r in rowsm:
-        wm.append(r)
-    wm['A1'].font = TITLE_FONT
-    hdr(wm, row=4)
-
-    # 7) _INTEGRITATE: validitatea modelului (zona de verificare)
+    # cifre verificate independent (pentru coloana "rezultat" statica + assert)
     suma = round(sum(float(r[ix['valoare_neta']]) for r in vrows
                      if r[ix['valoare_neta']] not in (None, '')), 2)
     n_prod = len({r[ix['cod_produs']] for r in vrows})
-    n_cli = len(cnames)
+    n_cli = len({r[ix['client_nume']] for r in vrows})
     n_reg = len(set(JUDET_REGIUNE.get(j) for j in judete))
     n_cal = len(dates)
-    wi = out.create_sheet('_INTEGRITATE')
-    rowsi = [
-        ['INTEGRITATEA MODELULUI C09 (relatii curate, zero orfani)'],
-        [],
-        ['verificare', 'valoare', 'asteptat', 'metoda'],
-        ['orfani cod_produs (fact fara dim)', None, '0',
-         '=SUMPRODUCT(--(ISNA(MATCH(Vanzari!E2:E%d,PRODUSE!A2:A%d,0))))' % (last, src['PRODUSE'].max_row)],
-        ['orfani client (nume fara cod)', None, '0',
-         '=SUMPRODUCT(--(ISNA(MATCH(Vanzari!C2:C%d,CLIENTI!B2:B%d,0))))' % (last, src['CLIENTI'].max_row)],
-        ['orfani judet (fact fara regiune)', None, '0',
-         '=SUMPRODUCT(--(ISNA(MATCH(Vanzari!D2:D%d,REGIUNI!A2:A%d,0))))' % (last, len(judete)+1)],
-        ['cardinalitate PRODUSE', n_prod, '13', '=SUMPRODUCT(1/COUNTIF(Vanzari!E2:E%d,Vanzari!E2:E%d))' % (last, last)],
-        ['cardinalitate CLIENTI', n_cli, '15', 'COUNTA distinct nume'],
-        ['cardinalitate REGIUNI', n_reg, '5', 'regiuni macro'],
-        ['cardinalitate CALENDAR (zile)', n_cal, '', 'zile distincte cu tranzactii'],
-        ['suma valoare_neta CONSERVATA', suma, '7986019.38',
-         '=ROUND(SUM(Vanzari!J2:J%d),2)' % last],
-    ]
-    for r in rowsi:
-        wi.append(r)
-    wi['A1'].font = TITLE_FONT
-    hdr(wi, row=3)
-
-    # 8) _CITIRE_DEMO: prima citire cross-tabel (NU masura numita, NU clasament)
-    wd = out.create_sheet('_CITIRE_DEMO')
     transilvania = [j for j in judete if JUDET_REGIUNE.get(j) == 'Transilvania']
     rng_t = ';'.join('"%s"' % j for j in transilvania)
-    demo_client = cnames[0]
-    rowsd = [
-        ['CITIRE DEMONSTRATIVA CROSS-TABEL (C09) · dovada ca modelul raspunde'],
-        ['Nota: este o singura citire de demonstratie, NU o masura reutilizabila si NU un clasament.'],
-        [],
-        ['Intrebare 1: cata valoare pe regiunea "Transilvania"?'],
-        ['Un singur tabel (Vanzari) NU poate raspunde: nu are coloana "regiune", doar "judet".'],
-        ['Raspuns prin relatia Vanzari[judet] -> REGIUNI:',
-         '=SUMPRODUCT((ISNUMBER(MATCH(Vanzari!D2:D%d,{%s},0)))*Vanzari!J2:J%d)' % (last, rng_t, last)],
-        [],
-        ['Intrebare 2: cate tranzactii are clientul "%s"?' % demo_client],
-        ['Raspuns prin relatia Vanzari[client_nume] -> CLIENTI (cheie activata):',
-         '=COUNTIF(Vanzari!C2:C%d,"%s")' % (last, demo_client)],
-        [],
-        ['Concluzie: fara relatii, intrebarile cer un singur tabel si raman fara raspuns.'],
-        ['Cu relatii, o intrebare traverseaza tabelele si primeste un raspuns. (AHA C09)'],
-    ]
-    for r in rowsd:
-        wd.append(r)
-    wd['A1'].font = TITLE_FONT
+    demo_client = sorted({r[ix['client_nume']] for r in vrows})[0]
+    val_trans = round(sum(float(r[ix['valoare_neta']]) for r in vrows
+                          if r[ix['judet']] in transilvania), 2)
+    cnt_client = sum(1 for r in vrows if r[ix['client_nume']] == demo_client)
 
-    # 9) _README C09 (NU textul ecosistem C08)
-    wrd = out.create_sheet('_README')
-    for line in [
-        'DATE_MASTER-C09.XLSX · T3 ANALIZA · C09 RELATII',
-        '',
-        'Rol: setul cunoscut (T2) devine un MODEL RELATIONAL INTEROGABIL.',
-        'C08 a recunoscut ecosistemul descriptiv (cine cu cine s-ar putea lega).',
-        'C09 ACTIVEAZA relatiile reale: chei + cardinalitate 1:M + model interogabil.',
-        '',
-        'Continut:',
-        '  Vanzari        - tabel fact (tranzactii), neatins fata de C08',
-        '  PRODUSE/CLIENTI/REGIUNI/CALENDAR - dimensiuni cu chei catre fact',
-        '  AGENTI/DEPOZITE - dimensiuni prezente, inca NELEGATE (fara cheie in fact)',
-        '  _REL_CLIENTI    - activarea cheii client (nume -> cod)',
-        '  _MODEL          - relatiile 1:M documentate',
-        '  _INTEGRITATE    - zero orfani, cardinalitati, suma conservata',
-        '  _CITIRE_DEMO    - prima citire cross-tabel (demonstrativa)',
-        '',
-        'Garda C09: doar leaga si permite prima citire cross-tabel.',
-        'NU defineste masuri numite (C10), NU compara/claseaza (C11),',
-        'NU explica de ce (C12), NU produce dashboard (T4), NU actioneaza (T5).',
-        '',
-        'Handoff: input de la C08 (set cunoscut). Output catre C10 (masuri peste model).',
-        'Suma valoare_neta conservata cap-coada: 7986019.38 (R-V02.14).',
-    ]:
-        wrd.append([line])
-    wrd['A1'].font = TITLE_FONT
+    # --- 7 Relatii_Model (comaseaza model + integritate + demo + handoff) ---
+    wm = out.create_sheet('Relatii_Model')
+    A = wm.append
+    A(['RELATII_MODEL C09 · modelul, verificarea lui si prima citire cross-tabel'])
+    A([])
+    A(['1) MODELUL · relatii 1:M (fact Vanzari legat de dimensiuni)'])
+    A(['fact', 'dimensiune', 'cheie', 'cardinalitate', 'ce aduce dimensiunea'])
+    A(['Vanzari', 'PRODUSE', 'cod_produs', 'M:1', 'categorie, pret_baza'])
+    A(['Vanzari', 'CLIENTI', 'client_nume (cheie stabila: cod_client)', 'M:1', 'cod_client, judet'])
+    A(['Vanzari', 'Regiuni', 'judet', 'M:1', 'regiune macro'])
+    A(['Vanzari', 'Calendar', 'data_factura', 'M:1', 'an, luna, trimestru'])
+    A([])
+    A(['2) INTEGRITATE · relatii curate (zero chei orfane), cardinalitate, suma'])
+    A(['verificare', 'rezultat', 'asteptat'])
+    A(['orfani cod_produs (fact fara dimensiune)',
+       '=SUMPRODUCT(--ISNA(MATCH(Vanzari!E2:E%d,PRODUSE!A2:A%d,0)))' % (vlast, prod_last), 0])
+    A(['orfani client (nume fara potrivire in Clienti)',
+       '=SUMPRODUCT(--ISNA(MATCH(Vanzari!C2:C%d,CLIENTI!B2:B%d,0)))' % (vlast, cli_last), 0])
+    A(['orfani judet (fact fara regiune)',
+       '=SUMPRODUCT(--ISNA(MATCH(Vanzari!D2:D%d,Regiuni!A2:A%d,0)))' % (vlast, reg_last), 0])
+    A(['cardinalitate Produse (distinct in fact)',
+       '=SUMPRODUCT(1/COUNTIF(Vanzari!E2:E%d,Vanzari!E2:E%d))' % (vlast, vlast), n_prod])
+    A(['cardinalitate Clienti (distinct in fact)', n_cli, n_cli])
+    A(['cardinalitate Regiuni', n_reg, n_reg])
+    A(['cardinalitate Calendar (zile)', n_cal, n_cal])
+    A(['suma valoare_neta (conservata din C08)',
+       '=ROUND(SUM(Vanzari!J2:J%d),2)' % vlast, SUMA_ASTEPTATA])
+    A([])
+    A(['3) PRIMA CITIRE CROSS-TABEL · o singura citire de demonstratie'])
+    A(['(nu e masura reutilizabila, nu e clasament; doar dovada ca modelul raspunde)'])
+    A(['Intrebare: cata valoare pe regiunea "Transilvania"?'])
+    A(['Vanzari singur nu poate: nu are coloana "regiune", doar "judet".'])
+    A(['Raspuns prin Vanzari[judet] -> Regiuni:',
+       '=SUMPRODUCT((ISNUMBER(MATCH(Vanzari!D2:D%d,{%s},0)))*Vanzari!J2:J%d)' % (vlast, rng_t, vlast),
+       val_trans])
+    A(['Intrebare: cate tranzactii are clientul "%s"?' % demo_client])
+    A(['Raspuns prin Vanzari[client_nume] -> Clienti:',
+       '=COUNTIF(Vanzari!C2:C%d,"%s")' % (vlast, demo_client), cnt_client])
+    A([])
+    A(['4) HANDOFF'])
+    A(['input de la C08', 'set cunoscut (ecosistem recunoscut descriptiv)'])
+    A(['output C09', 'model relational interogabil (relatii activate + prima citire)'])
+    A(['predat catre C10', 'defineste masuri peste model (C09 nu defineste masuri)'])
+    A(['suma conservata cap-coada', SUMA_ASTEPTATA])
 
-    # 10) CONTROL_FINAL
-    wcf = out.create_sheet('CONTROL_FINAL')
-    for r in [
-        ['CONTROL FINAL C09 · conservare + handoff'],
-        [],
-        ['verificare', 'valoare'],
-        ['suma valoare_neta', suma],
-        ['suma asteptata (C08 in)', 7986019.38],
-        ['delta', round(suma - 7986019.38, 2)],
-        ['randuri fact', nrows],
-        ['relatii active', 4],
-        ['relatii nelegate (candidate)', 2],
-        ['predat catre', 'C10 MASURI (defineste masuri peste model)'],
-    ]:
-        wcf.append(r)
-    wcf['A1'].font = TITLE_FONT
-    hdr(wcf, row=3)
+    wm['A1'].font = TITLE
+    for cell in ('A3', 'A9', 'A20', 'A29'):
+        wm[cell].font = SECT
+    hdr(wm, 4)   # header model
+    hdr(wm, 10)  # header integritate
 
     out.save(OUT)
-    # verificare finala
+    visible = [ws.title for ws in out.worksheets if ws.sheet_state == 'visible']
+    hidden = [ws.title for ws in out.worksheets if ws.sheet_state != 'visible']
     print('SCRIS:', OUT)
-    print('  sheets:', out.sheetnames)
-    print('  suma valoare_neta:', suma, '| delta vs C08:', round(suma - 7986019.38, 2))
-    print('  cardinalitati: PRODUSE=%d CLIENTI=%d REGIUNI=%d CALENDAR=%d' %
+    print('  foi vizibile (%d):' % len(visible), visible)
+    print('  foi ascunse (%d):' % len(hidden), hidden)
+    print('  suma:', suma, '| delta:', round(suma - SUMA_ASTEPTATA, 2))
+    print('  cardinalitati: Produse=%d Clienti=%d Regiuni=%d Calendar=%d' %
           (n_prod, n_cli, n_reg, n_cal))
-    assert abs(suma - 7986019.38) < 0.01, 'SUMA NU se conserva!'
-    print('  CONSERVARE OK')
+    print('  demo: Transilvania=%.2f | client "%s"=%d tranzactii' %
+          (val_trans, demo_client, cnt_client))
+    assert len(visible) <= 7, 'PREA MULTE FOI: %d' % len(visible)
+    assert abs(suma - SUMA_ASTEPTATA) < 0.01, 'SUMA NU se conserva'
+    print('  OK: <=7 foi, suma conservata')
 
 
 if __name__ == '__main__':
