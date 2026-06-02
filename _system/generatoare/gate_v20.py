@@ -994,6 +994,28 @@ def run_gate(NN, livrabile_path, pilot_dir, identitate):
     else:
         files_missing.append(creativ_file)
     
+    # CLASA 7: TIER-GUARD-T3 (BRAIN-008) — activa STRICT pentru NN 09-12.
+    # Modul separat tier_guard_t3; FAIL blocant intra in all_erori (=> GATE FAIL),
+    # WARNING-urile se printeaza vizibil aici, fara sa blocheze. NN 01-08 = neatins.
+    if NN in ('09', '10', '11', '12'):
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            import tier_guard_t3
+            t3_block, t3_warn = tier_guard_t3.gate_findings(livrabile_path, NN)
+            for b in t3_block:
+                all_erori.append({
+                    'clasa': 'TIER-GUARD-T3', 'zona': b['bucket'],
+                    'fisier': b['fisier'],
+                    'detaliu': f"'{b['term']}' :: {b['ctx']}"
+                })
+            if t3_warn:
+                print(f"\n[TIER-GUARD-T3] {len(t3_warn)} avertisment(e) non-blocant(e) C{NN}:")
+                for w in t3_warn:
+                    print(f"  ~ {w['fisier']} [{w['bucket']}] '{w['term']}' :: {w['ctx']}")
+        except Exception as e:
+            # garda nu trebuie sa darame gate-ul printr-o eroare proprie; o raportam
+            print(f"\n[TIER-GUARD-T3] WARNING: garda T3 nu a putut rula ({e}).")
+
     success = len(all_erori) == 0
     return success, all_erori, files_present, files_missing
 

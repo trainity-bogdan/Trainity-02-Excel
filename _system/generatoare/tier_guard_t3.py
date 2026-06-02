@@ -200,6 +200,27 @@ def run_construction(nn_dir):
           f"({total_block} blocante, {total_warn} avertismente)")
     return total_block, total_warn
 
+# ---------------------------------------------------------------- API pentru gate_v20
+def gate_findings(nn_dir, nn):
+    """API pentru gate_v20: (blocking, warnings) ca liste de dict-uri, fara print/exit.
+    Activ DOAR pentru NN T3 (09-12); pentru orice altceva returneaza liste goale,
+    deci gate-ul T1/T2 ramane neatins. Fiecare dict: {bucket, fisier, term, ctx}."""
+    nn = str(nn).zfill(2)
+    if tier_of(nn) != 'T3':
+        return [], []
+    blocking, warnings = [], []
+    for f in sorted(glob.glob(os.path.join(nn_dir, 'HTML-*.html'))):
+        try:
+            text = open(f, encoding='utf-8', errors='ignore').read()
+        except OSError:
+            continue
+        findings, _ = scan(nn, text)
+        for bucket, sev, term, ctx in findings:
+            rec = {'bucket': bucket, 'fisier': os.path.basename(f),
+                   'term': term, 'ctx': ctx}
+            (blocking if sev == 'ERROR' else warnings).append(rec)
+    return blocking, warnings
+
 # ---------------------------------------------------------------- self-test
 def self_test():
     """Demonstreaza regulile pe fixturi inline (C09-C12 inca negenerate)."""
