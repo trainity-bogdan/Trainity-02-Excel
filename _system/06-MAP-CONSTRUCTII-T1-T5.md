@@ -94,14 +94,17 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 
 | Aspect | Conținut |
 |---|---|
-| **INTRIGA** | Auditul a arătat unde sunt contaminările. Acum aplicăm fix-ul. |
+| **TITLU (cover)** | Cum construim un flux care normalizează automat (model premium V50) |
+| **INTRIGA** | Fișierul curat nu e rezultatul. Fluxul este. (bombă Studiu) |
 | **MIZA** | Curățare manuală nu se reproduce luna viitoare. Power Query da. |
-| **MANTRA** | Înainte de orice raport, normalizarea reproductibilă. |
+| **MANTRA** | O dată construit. De fiecare dată identic. |
+| **AHA** | Munca pe care o repeți la fiecare export nu trebuia făcută de mână niciodată. |
+| **WOW** | Sursa nouă vine. Apăsăm Refresh. Totul se reconstruiește singur. |
 | **MOTTO** | Nu curățăm de mână. Construim fluxul. |
 | **FENOMENE** | 10 transformări Power Query canonice: Promoted Headers, Filtered Rows (SUBTOTAL+TOTAL), Removed Blank Rows, Removed Duplicates, Removed Other Columns, Changed Type, Trim & Clean Text, Parsed Date, Normalized Diacritics, Loaded as Excel Table |
 | **Date_MASTER** | C04 input cu contaminări, output `Vanzari_Normalizat` Excel Table |
 | **Sumă conservată** | DELTA 0 |
-| **Status** | LIVRABIL CANONIC V27 |
+| **Status** | LIVRABIL CANONIC V27 → model premium V50 (hero cockpit + arc TU + transformare-section gated) |
 
 ---
 
