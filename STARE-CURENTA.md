@@ -1,7 +1,19 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V60 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V61 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V61 — sumar (audit adversarial C08 + închidere reziduuri non-imagine):**
+
+1. **Audit adversarial C08 (production review, 10 axe A-J).** Premisa briefului (AHA „Cele mai importante date despre un rând nu sunt în rând", metodologie „localizăm nu aducem", MATCH) confirmată ca aliniată cu sistemul înghețat (06-MAP lock V58) ÎNAINTE de audit, nu coruptă (diferit de C05/L186). Structură PASS integral (6 etape / 18 pași / 5 fenomene / 8 verificări / 2 prompturi, dovedite empiric), identitate PASS (toate sloturile verbatim pe AHA, zero contradicții), garda T2 PASS (XLOOKUP/JOIN/MERGE = 0; „Data Model" 2× doar în handoff C09; întărire activă „nu am unit seturile"). GATE v20 PASS, em/en-dash = 0.
+2. **R1 ÎNCHIS — AHA lock absent din FILM (master).** FILM C08 nu avea slot AHA (doar INTRIGA/MIZA/MANTRA/WOW/MOTTO). Inserat slotul „AHA (INSIGHT)" + linia lock verbatim cu diacritice între MIZA și MANTRA (clonare stil XML din paragraful MANTRA, re-zip docx). R-V46 FILM=master respectat.
+3. **R3 ÎNCHIS — mismatch narativ/artefact (dinamic vs static).** Studiu pretindea „tabel viu / refresh → harta reflectă registrul" + mecanism COUNTIF/MATCH, dar `_ECOSISTEM`/`_CHEI` erau text static (0 formule). Adăugat recunoaștere LIVE în Date_MASTER: `randuri` prin `COUNTA`, coloană nouă `chei_recunoscute_live` prin `SUMPRODUCT(--ISNUMBER(MATCH(...)))` (recunoaștere pură, ZERO aducere de valori — garda T2 respectată). Verificat: PRODUSE 13/13, CLIENTI 15/15 recunoscute; suma `valoare_neta` conservată exact (7.986.019,38). PAS 13/14 reformulați: „tabel viu" → coloane vii care recalculează; „adaugă foaie nouă → apare automat" (imposibil cu formule legale T2, ar cere Power Query = C04) → „modifică date satelit → recalc → harta reflectă registrul". Onestitate tehnică.
+4. **R4 ÎNCHIS — hero `alt=""` gol** → alt descriptiv (standard C01-C05), Studiu + Editor-Studiu.
+5. **R2 RĂMÂNE (extern):** cele 6 exec-stage C08 sunt încă clone C01 (`R-V59.imgclone` XX). Prompturile ECOSISTEM refăcute; generarea Banana se face în altă sesiune, nu aici.
+
+**C08 = ACCEPTAT CU WARNING la închiderea auditului → reziduurile non-imagine (R1/R3/R4) închise în V61.** Singurul rămas = R2 (imaginile, extern). GATE PASS, audit fără drift nou.
+
+---
 
 **Sesiunea V60 — DOUĂ fluxuri paralele consolidate: C05 RELEASE PASS real + C06 remediere MAMUT CLASIFICARE.**
 
