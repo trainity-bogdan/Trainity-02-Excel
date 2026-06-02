@@ -33,122 +33,113 @@ Claude execută exact mandatul curent din acest fișier.
 Dacă mandatul este ambiguu, Claude oprește execuția și scrie `NEEDS DECISION` în `CLAUDE-TO-BRAIN.md`.
 
 ## MANDAT-ID
-BRAIN-001
+BRAIN-002
 
 ## MANDAT
-Audit adversarial final T1 după reparațiile FILM.
+Curățare punctuală reziduuri T1 descoperite în BRAIN-001.
 
 ## CONTEXT
-Auditul Monstruos a semnalat riscuri și FAIL-uri de formă în T1, în special pe FILM C02, C03 și C04:
+BRAIN-001 a dat verdict T1 global PASS. FAIL-urile majore din Auditul Monstruos sunt închise:
 
-- C02 și C04 aveau risc de boilerplate.
-- C03 avea risc de template / voce neutră.
-- C02 și C03 aveau risc de canibalizare conceptuală.
-- T1 trebuie să rămână clar: C01 STRUCTURARE, C02 CONTROL, C03 AUDIT, C04 NORMALIZARE / AUTOMATIZARE.
+- boilerplate corp FILM C02/C04 închis
+- voce template/neutră C03 închisă
+- canibalizare C02/C03 închisă, scor diferențiere 9/10
+- corpurile narative 6x6 C01-C04 sunt curate
 
-Acest mandat este AUDIT PUR.
-Nu modifica nimic.
-Nu rescrie nimic.
-Nu face commit-uri de conținut.
-Doar citește, verifică și raportează.
+Au rămas doar 3 reziduuri minore NON-blocante, aflate în sloturi periferice cu schelet comun, nu în corpul 6x6.
+
+Acest mandat este EXECUȚIE PUNCTUALĂ.
+Ai voie să modifici doar fișierele necesare pentru cele 3 reziduuri de mai jos.
+Nu atinge corpul narativ 6x6 dacă nu este strict necesar.
+Nu rescrie construcții.
+Nu optimiza în afara mandatului.
 
 ## OBIECTIV
-Verifică dacă FAIL-urile identificate în Auditul Monstruos pentru C02, C03 și C04 au fost închise efectiv.
+Închide cele 3 reziduuri punctuale din BRAIN-001, fără să afectezi arhitectura T1 și fără să introduci drift nou.
 
 ## FIȘIERE PERMISE
-Ai voie să citești toate artefactele necesare auditului T1, inclusiv:
+Ai voie să citești:
+- BRAIN-TO-CLAUDE.md
+- CLAUDE-TO-BRAIN.md
+- FILM C01-C04
+- HTML-Studiu C01-C04, doar dacă ai nevoie să verifici sincronizarea sloturilor afectate
+- documente de guvernanță relevante, doar pentru verificare
 
-- artefacte C01-C04
-- fișiere FILM C01-C04
-- HTML-Studiu C01-C04
-- documente de guvernanță relevante
-- STARE-CURENTA.md
-- README.md
-- CLAUDE.md
-- orice audit intern relevant existent în repo
+Ai voie să modifici DOAR fișierele care conțin reziduurile punctuale confirmate:
+- C02 FILM, dacă acolo se află linia ROLURI reziduală
+- C04 FILM, dacă acolo se află secțiunea CONTROL UMAN reziduală
+- eventual C01/C03 FILM doar dacă reziduul de SLIDE EXEC este în acele fișiere și necesită distanțare minimă
+- CLAUDE-TO-BRAIN.md pentru raport
 
 ## FIȘIERE INTERZISE
-- Nu modifica niciun fișier de conținut.
-- Nu modifica HTML.
-- Nu modifica FILM.
 - Nu modifica xlsx.
 - Nu modifica imagini.
+- Nu modifica HTML dacă nu este strict necesar pentru sincronizare cu FILM.
 - Nu modifica governance.
+- Nu modifica STARE-CURENTA.md.
+- Nu modifica README.md.
+- Nu modifica CLAUDE.md.
+- Nu modifica structura T1/T2/T3.
+- Nu modifica AHA/MANTRA/WOW/MOTTO locked fără motiv explicit și raportat.
 
-Singurul fișier pe care ai voie să îl scrii este:
+## REZIDUURI DE REPARAT
 
-- CLAUDE-TO-BRAIN.md
+### 1. Ecou de șablon în SLIDE-uri executive
+BRAIN-001 a raportat:
+- SLIDE EXEC 6 are aceeași structură la C01 și C03:
+  - C01: „Arată ca tabel. De data asta, chiar este."
+  - C03: „Pare curat. De data asta, chiar este."
+- SLIDE EXEC 2 are șablonul „AI-ul nu repară. AI-ul [verb]" la C01 și C03:
+  - C01: „AI-ul nu repară. AI-ul scoate adevărul la suprafață."
+  - C03: „AI-ul nu repară. AI-ul găsește ce nu se vede."
 
-## AUDIT CERUT
+Cerință:
+- păstrează sensul fiecărei construcții
+- modifică minim doar unde este necesar ca forma C01 vs C03 să nu mai pară clonată
+- C01 trebuie să rămână STRUCTURARE
+- C03 trebuie să rămână AUDIT forensic
+- nu schimba corpul 6x6
 
-### 1. C02 FILM
-Verifică:
-- mai există boilerplate?
-- mai există câmpuri identice între etape?
-- mai există voce generică?
-- este C02 clar CONTROL, nu AUDIT?
+### 2. C02 ROLURI, linie reziduală nepotrivită
+BRAIN-001 a raportat o linie reziduală de tip C01/C04:
+„AI (Copilot): Audit + execuție controlată. Raportează ce vede, aplică transformări cerute explicit de noi."
 
-### 2. C03 FILM
-Verifică:
-- mai există secțiuni template?
-- mai există voce neutră?
-- este diferențiat complet?
-- este C03 clar AUDIT, nu CONTROL?
+Problema:
+- limbajul „execuție / transformări" este nepotrivit pentru C02 CONTROL
+- C02 trebuie să semnalizeze și să confrunte cu realitatea, nu să transforme
 
-### 3. C04 FILM
-Verifică:
-- mai există boilerplate?
-- este specific axei NORMALIZARE / AUTOMATIZARE?
-- este clar diferit de C02/C03?
+Cerință:
+- elimină sau rescrie această linie
+- păstrează linia corectă C02 despre „Interogare + semnalizare..." dacă există
+- C02 trebuie să rămână CONTROL, nu AUDIT și nu AUTOMATIZARE
 
-### 4. Diferențiere C02 vs C03
-Răspunde explicit:
-- poate un auditor extern să distingă instant C02 de C03?
-- ce face C02 ce nu face C03?
-- ce face C03 ce nu face C02?
-- scor diferențiere 0-10
+### 3. C04 CONTROL UMAN, ecou C01
+BRAIN-001 a raportat în C04 un ecou de motto C01:
+„Nu reconstruim, doar facem controlabil"
 
-### 5. Reaudit T1
-Dă verdict separat:
+Problema:
+- motto-ul real C04 este:
+„Nu curățăm de mână. Construim fluxul."
 
-- C01: PASS / WARNING / FAIL
-- C02: PASS / WARNING / FAIL
-- C03: PASS / WARNING / FAIL
-- C04: PASS / WARNING / FAIL
-- T1 global: PASS / WARNING / FAIL
-
-### 6. Probleme sistemice rămase
-Verifică dacă mai există probleme deschise din Auditul Monstruos:
-- boilerplate
-- template drift
-- form-drift
-- canibalizare C02/C03
-- voce generică
-- contaminare cu trepte viitoare
-- lipsă diferențiere între construcții
-
-### 7. Listă finală
-Produce trei liste clare:
-
-- Probleme închise
-- Probleme rămase
-- Probleme noi descoperite
+Cerință:
+- elimină ecoul C01
+- aliniază formularea la C04 NORMALIZARE / AUTOMATIZARE
+- păstrează ideea de control uman asupra fluxului, dar cu limbaj C04: flux, refresh, pași aplicați, automatizare, repetabilitate
 
 ## REGULI
 - Lucrează doar pe main.
 - Nu crea branch nou.
 - Nu crea PR.
-- Nu modifica arhitectura locked fără mandat explicit.
-- Nu redenumi concepte locked.
-- Nu introduce termeni din trepte viitoare.
-- Nu inventa conținut în afara mandatului.
-- Raportează exact ce ai citit, ce ai verificat și ce verdict dai.
-- Nu face rescrieri.
-- Nu face reparații.
-- Nu face commit-uri de conținut.
+- Modifică strict minimul necesar.
+- Nu atinge zonele care au primit PASS în BRAIN-001.
+- Nu rescrie corpul narativ 6x6.
+- Nu introduce termeni T3 în T1: relații, măsuri, comparații, DAX, KPI.
+- Nu introduce dashboard / raportare vizuală.
+- Nu modifica arhitectura locked.
+- După modificări, rulează un re-check punctual pe cele 3 reziduuri.
 
 ## LIVRABIL
-Scrie răspunsul complet în `CLAUDE-TO-BRAIN.md`.
+Scrie raportul complet în `CLAUDE-TO-BRAIN.md`.
 
 ## FORMAT RĂSPUNS CERUT
 1. Status
@@ -156,21 +147,15 @@ Scrie răspunsul complet în `CLAUDE-TO-BRAIN.md`.
 3. Rezumat executiv
 4. Fișiere citite
 5. Fișiere modificate
-6. Schimbări efectuate
+6. Schimbări efectuate, cu înainte / după pentru fiecare reziduu
 7. Schimbări nefăcute
-8. Teste / audituri rulate
-9. Rezultate
-10. Verdict C01-C04
-11. Verdict T1 global
-12. Probleme închise
-13. Probleme rămase
-14. Probleme noi descoperite
-15. Riscuri rămase
-16. Decizii cerute de la BRAIN
-17. Commit / status Git
+8. Re-check punctual
+9. Rezultate PASS / WARNING / FAIL pentru fiecare din cele 3 reziduuri
+10. Riscuri rămase
+11. Decizii cerute de la BRAIN
+12. Commit / status Git
 
 ## MANDAT CURENT
-Execută BRAIN-001.
-Audit pur.
-Zero modificări de conținut.
+Execută BRAIN-002.
+Curățare punctuală a celor 3 reziduuri T1.
 Raport complet în `CLAUDE-TO-BRAIN.md`.
