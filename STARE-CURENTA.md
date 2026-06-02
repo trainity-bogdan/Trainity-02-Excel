@@ -1,7 +1,15 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V65 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V66 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V66 — sumar (ÎNGHEȚARE IDENTITATE C09 RELAȚII + gramatica de treaptă T3):**
+
+1. **SPEC C09 RELAȚII = LOCKED v1.0** (confirmat ARHITECT după workshop + validare adversarială). Cele 11 slotturi de identitate înghețate: HERO „Cum transform legăturile în răspunsuri?" · BOMBĂ „Ai toate datele. Și niciun răspuns." · GREȘEALA „Oamenii copiază coloane dintr-un tabel în altul. Profesioniștii le leagă o dată." · AHA (lock S5) „Fără relații ai date. Cu relații ai răspunsuri." · MANTRA „Nu mutăm datele. Le legăm." (galben: legăm) · WOW „Tabele care stăteau alături fără să se cunoască. Acum răspund împreună la o singură întrebare." · MOTTO „Întrebi o dată. Modelul răspunde." · CINE DEVII „Nu mai vezi o rețea. O interoghezi." · PAYOFF „Un set cunoscut a devenit un model care răspunde." · MIZA (director, fără jargon). Scrise în Bible §T3 + `BLUEPRINT-C09-RELATII.md` secțiunea 8.
+2. **Gramatica de treaptă T3 (LOCKED).** Două categorii de slot: SLOT DE TREAPTĂ (motto = template „Întrebi [WH]. Modelul [verb].") unde trăiește verbul generic întreb/răspund; SLOT DE CONSTRUCȚIE (hero/greșeală/mantra/WOW/cine-devii) unde fiecare construcție pune verbul-semnătură propriu. Verb-semnătură: C09 *a lega* · C10 *a măsura* · C11 *a compara* · C12 *a explica*. Regula anti-contaminare: verbul unei construcții T3 nu apare ca ancoră în slotturile alteia („compar" e al C11, interzis în C09).
+3. **Validare adversarială (7 teste) PASS** pe forma corectată: ruptura T2→T3 clară (C08 localizează vs C09 folosește), distanță față de C10/C11/C12 asigurată prin verbul-semnătură, director-test PASS, model pentru C10-C12 PASS. Două defecte prinse și reparate înainte de lock: WOW conținea „compar" (contaminare C11) + dublura mottoului; mantra era generică de treaptă. BOMBĂ + GREȘEALA lipseau din prima propunere, adăugate.
+4. **Lanț T3 LOCKED:** C09 RELAȚII · C10 MĂSURI · C11 COMPARAȚII · C12 INTERPRETARE. Întrebări de treaptă: răspunde / măsoară / compară / explică (Ce pot întreba? / Cât? / Care? / De ce?).
+5. **Următorul pas (mandat ARHITECT):** definirea C10/C11/C12 la adâncimea C09 ÎNAINTE de orice implementare (harta T3 completă + SPEC-uri propuse + audit de distanță). C10-C12 rămân PROPUNERE (nu LOCKED) până la confirmarea ARHITECT, conform ritualului propune → validează → confirmă → îngheață.
 
 **Sesiunea V65 — sumar (IMPLEMENTARE FINALĂ T1+T2 LOCK: FILM C02/C03/C04 rescris + diferențiere C02↔C03 + AUDIT MONSTRUOS V3):**
 

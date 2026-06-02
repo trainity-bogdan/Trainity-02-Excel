@@ -101,8 +101,9 @@
   cât / care e mai mare / care e mai bun".
 - **Ce NU produce T3:** vizualizare/dashboard/raport (= T4 RAPORTARE), decizie/acțiune
   automată/recomandare executată (= T5 AUTOMATIZARE).
-- **Lanț (provizoriu, rafinabil):** C09 RELAȚII · C10 MĂSURI · C11 COMPARAȚII · C12 INTERPRETARE.
-- **Întrebări:** C09 „Cum se leagă datele într-un model pe care pot să-l interoghez?" *(C10-C12 la SEED-ul lor.)*
+- **Lanț (LOCKED la îngheț C09, V66):** C09 RELAȚII · C10 MĂSURI · C11 COMPARAȚII · C12 INTERPRETARE.
+- **Întrebări (verbul de treaptă, LOCKED):** C09 răspunde · C10 măsoară · C11 compară · C12 explică.
+  Forma narativă: C09 „Ce pot întreba?" · C10 „Cât?" · C11 „Care?" · C12 „De ce?"
 - **GARDA T3/T4-T5 (lista pentru R-TIER-PARAM):**
   - **PERMIS** (competența T3, era INTERZIS în T2): join, Data Model, relații 1:M, merge,
     măsuri/agregări peste model, comparații, trend, performanță, „cel mai mare/mic",
@@ -112,6 +113,37 @@
 - **AHA locked (S5):** C09 „Fără relații ai date. Cu relații ai răspunsuri."
 - **NOTĂ inversiune:** termenii din garda §T2 (join/Data Model/trend/„cel mai mare") sunt
   AICI competență, nu contaminare. Detectorul tier-aware (R-TIER-PARAM) îi tratează corect.
+
+### §T3 · GRAMATICA DE TREAPTĂ (LOCKED la îngheț C09, V66)
+Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două categorii de slot:
+- **SLOT DE TREAPTĂ (generic, identic ca formă la toate 4):** MOTTO = template
+  „Întrebi [WH]. Modelul [verb]." → C09 „Întrebi o dată. Modelul răspunde." ·
+  C10 „Întrebi cât. Modelul măsoară." · C11 „Întrebi care. Modelul compară." ·
+  C12 „Întrebi de ce. Modelul explică." Verbul de treaptă (întreb/răspund) trăiește AICI.
+- **SLOT DE CONSTRUCȚIE (poartă diferențierea, substantiv/verb propriu axei):** HERO,
+  GREȘEALA, MANTRA, WOW, CINE DEVII. Aici verbul de treaptă e INTERZIS ca ancoră;
+  fiecare construcție își pune verbul propriu: C09 **a lega** · C10 **a măsura** ·
+  C11 **a compara** · C12 **a explica**.
+- **Regula anti-contaminare:** verbul-semnătură al unei construcții T3 NU apare ca ancoră
+  în slotturile de construcție ale alteia. „Compar" e al C11, nu intră în WOW/mantra C09;
+  „măsor/cât" e al C10; „de ce/explic" e al C12. (Detectorul tier-aware le scopează.)
+
+### §T3 · SPEC C09 RELAȚII — LOCKED v1.0 (V66, confirmat ARHITECT)
+- **HERO:** „Cum transform legăturile în răspunsuri?"
+- **BOMBĂ:** „Ai toate datele. Și niciun răspuns."
+- **GREȘEALA:** „Oamenii copiază coloane dintr-un tabel în altul. Profesioniștii le leagă o dată."
+- **AHA (lock S5):** „Fără relații ai date. Cu relații ai răspunsuri."
+- **MANTRA:** „Nu mutăm datele. Le legăm." (cuvânt-cheie galben: *legăm*)
+- **WOW:** „Tabele care stăteau alături fără să se cunoască. Acum răspund împreună la o singură întrebare."
+- **MOTTO:** „Întrebi o dată. Modelul răspunde." (slot de treaptă, vezi gramatica)
+- **CINE DEVII:** „Nu mai vezi o rețea. O interoghezi."
+- **PAYOFF:** „Un set cunoscut a devenit un model care răspunde."
+- **MIZA:** „Un director nu întreabă ce conține tabelul. Întreabă care client, ce produs, ce
+  perioadă. Răspunsul la întrebarea lui trăiește în mai multe tabele deodată. C09 este
+  momentul în care datele încep să răspundă la întrebări de business, nu doar să fie corecte
+  și ordonate."
+- **Verb-semnătură C09:** *a lega* (ancoră în hero/greșeală/mantra). Verbul de treaptă
+  (întreb/răspund) rezervat mottoului. Slotturile NU se mai redeschid: sunt LOCKED.
 
 ## §T4 — RAPORTARE · §T5 — AUTOMATIZARE
 - *Goale. Se completează prin TIER SEED la prima construcție a fiecărei trepte.*

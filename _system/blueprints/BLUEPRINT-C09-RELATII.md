@@ -61,9 +61,25 @@ zero relații circulare, zero chei orfane.
   măsuri de bază peste model.
 - **NU POATE:** dashboard/grafic (T4); decizie/alertă/acțiune (T5).
 
-## 8. SLOTURI DE IDENTITATE (copy final la implementare — NU acum)
-- obiect: RELAȚII · întrebare: (definită §0) · titlu: [slot] · mantra: [slot, tipar „Nu X. Y"]
-  · payoff: [slot] · WOW: [slot] · motto: [slot, tipar „Un X. Apoi orice Y"] · AHA: locked (§0).
+## 8. SLOTURI DE IDENTITATE — LOCKED v1.0 (V66, confirmat ARHITECT · NU se mai redeschid)
+- **HERO:** „Cum transform legăturile în răspunsuri?"
+- **BOMBĂ:** „Ai toate datele. Și niciun răspuns."
+- **GREȘEALA:** „Oamenii copiază coloane dintr-un tabel în altul. Profesioniștii le leagă o dată."
+- **AHA (lock S5):** „Fără relații ai date. Cu relații ai răspunsuri."
+- **MANTRA:** „Nu mutăm datele. Le legăm." (cuvânt-cheie galben în mantra-band: *legăm*)
+- **WOW:** „Tabele care stăteau alături fără să se cunoască. Acum răspund împreună la o singură întrebare."
+- **MOTTO:** „Întrebi o dată. Modelul răspunde." (slot de treaptă T3, template „Întrebi [WH]. Modelul [verb].")
+- **CINE DEVII:** „Nu mai vezi o rețea. O interoghezi."
+- **PAYOFF:** „Un set cunoscut a devenit un model care răspunde."
+- **MIZA BUSINESS:** „Un director nu întreabă ce conține tabelul. Întreabă care client, ce
+  produs, ce perioadă. Răspunsul la întrebarea lui trăiește în mai multe tabele deodată. C09
+  este momentul în care datele încep să răspundă la întrebări de business, nu doar să fie
+  corecte și ordonate."
+- **Verb-semnătură C09:** *a lega*. Ancorat în hero/greșeală/mantra. Verbul de treaptă
+  (întreb/răspund) e rezervat MOTTOului. Spina celor 9 slotturi: metodă (greșeală: copy vs leg)
+  → principiu (mantra: legăm) → rezultat (WOW: răspund împreună) → promisiune (AHA/motto/payoff).
+- **Distanță verificată (7 teste):** C09 ≠ C08 (folosește vs localizează), ≠ C10 (leagă vs măsoară),
+  ≠ C11 (leagă vs compară — „compar" interzis în slotturile C09), ≠ C12 (leagă vs explică).
 
 ## 9. ARTEFACTE LA IMPLEMENTARE (nu acum)
 4 HTML (Studiu/Editor-Studiu/Video/Editor-Video) · FILM · Date_MASTER-C09 (sateliți cu
