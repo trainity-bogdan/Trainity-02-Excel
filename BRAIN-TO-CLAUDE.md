@@ -3,6 +3,14 @@
 ## STATUS
 READY
 
+## CUVÂNT CHEIE
+
+SYNC
+
+Când Bogdan scrie `SYNC` către Claude Code, Claude trebuie să citească acest fișier, să execute mandatul curent și să scrie raportul complet în `CLAUDE-TO-BRAIN.md`.
+
+Când Bogdan scrie `SYNC` către BRAIN, BRAIN va citi `CLAUDE-TO-BRAIN.md`, va da verdictul și va pregăti următorul mandat în `BRAIN-TO-CLAUDE.md`, dacă este cazul.
+
 ## PROTOCOL
 Acest fișier este canalul oficial prin care BRAIN, ChatGPT / Andrei, transmite mandate către Claude Code.
 
