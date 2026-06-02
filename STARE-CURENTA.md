@@ -1,7 +1,15 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V62 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V63 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V63 — sumar (pachetul IMAGINI T2 ÎNCHIS: C08 6/6 ECOSISTEM + lecție inpaint):**
+
+1. **C08 6/6 imagini exec-stage ECOSISTEM dedicate** (generate de ARHITECT în 2 transe 5+1, procesate aici). Mapate pe CONȚINUT, nu pe ordinea trimisă: 1 SETUL SINGUR (coală izolată), 2 SATELIȚII (transaction table + 5 carduri-registru), 3 CHEILE (coduri evidențiate galben), 4 HARTA (registre radiale spre dataset central), 5 CONTEXT COMPLET (masă consiliu + bife), 6 PREDARE C09 (hartă completă pe masă). Salvate `c08/assets/exec-stage-1..6.jpg` (hash ≠ C01) + base64 resize 1200/q82 în Video+Editor-Video pe regulile `data-exec-img`.
+2. **L201 (nou) — watermark: inpaint > clonare direcțională.** `strip_watermark.py` auto-detect (luminozitate în colț) SUPRA-detectează când steluța Gemini e adiacentă conținutului luminos (hârtie/document/fascicul) → lasă casetă/pată gri (extins L179/L183). Soluția robustă universală = **inpaint OpenCV TELEA/NS cu mască DOAR pe pixelii steluței** (prag relativ la mediana locală + dilatare ușoară); pentru steluța într-un gol negru lângă un obiect luminos, **umplere cu negrul local** eșantionat din zona curată (clona direcțională ar copia obiectul vecin). Verificat colț cu colț pe toate 6. De integrat ca mod în `strip_watermark.py`.
+3. **PACHETUL IMAGINI T2 = ÎNCHIS la nivel de sistem.** `R-V59.imgclone` acum **OK pe C06, C07 ȘI C08** (C06/C07 finalizate în paralel, C08 aici) → **audit_sync ZERO DRIFT 123/144, toate PASS**. FAIL-ul de imagini din auditul MAMUT T2 (faza B punct 6) e închis; rămân doar brief-urile exec generice C05/C06/C07 (text, non-blocant). Gate v20 C08 PASS.
+
+---
 
 **Sesiunea V62 (faza B) — sumar (AUDIT MAMUT T2 nivel sistem + IMPLEMENTARE FAZA FILM):**
 
