@@ -3,7 +3,18 @@
 **Versiune sistem:** V62 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
 
-**Sesiunea V62 — sumar (C07 DATARE: remediere MAMUT + audit adversarial + închidere reziduuri T3):**
+**Sesiunea V62 (faza B) — sumar (AUDIT MAMUT T2 nivel sistem + IMPLEMENTARE FAZA FILM):**
+
+1. **Audit MAMUT T2 la nivel de treaptă (10 niveluri), nu pe construcție.** Disecție egală (L192) pe C05-C08: extras verbatim sloturile de identitate din toate 4 Studiu + FILM (184/186/186/177 paragrafe) + hash imagini + prompturi Creativ. Verdict: identitate PASS, distanță WARNING (schelă retorică identică, fill semantic distinct), test orb PASS, flux PASS, hartă/non-overlap PASS, **FILM corp = FAIL** (boilerplate clonă ×4), imagini FAIL (C06/C07/C08 exec-stage byte-identice cu C01), business SPLIT. **T2 RELEASE FAIL chirurgical** — creierul treptei e diferențiat, corpul de livrare (film + imagini) clonat.
+2. **IMPLEMENTARE FAZA FILM (mandat ARHITECT) — corp narativ rescris.** Cele 6 câmpuri narative (STARE EMOTIONALA, VOCEA TRAINERULUI, DEMONSTRATIA, INTERVENTIA AI, MOMENT DE CONTROL, REVEAL) × 6 etape × 4 filme = **144 paragrafe rescrise unic**, fiecare cu vocea + vocabularul dominant al axei: C05 inventar/dicționar/coloană, C06 reguli/clasă/taxonomie, C07 calendar/lună/perioadă, C08 satelit/cheie/context/hartă. Editare directă `word/document.xml` + re-zip.
+3. **LOCK respectat:** sloturile de identitate (AHA/MANTRA/WOW/MOTTO/BOMBA/MIZA), OBIECTIV (handoff+tehnic), TRANZITIE, structura 6 etape / 18 pași = NEATINSE. Verificat: număr paragrafe identic, 6 ETAPE/6 OBIECTIV/6 VOCEA labels intacte, sloturile identitate verbatim. ARC TRANSFORMARE C07 (back-portat de faza A) neatins.
+4. **Audit comparativ post-rescriere (PASS pe toate axele):** boilerplate vechi = 0 pe toate 4; cuvinte interzise per axă = CURAT (clasă/scor/cronologie/ecosistem absente unde trebuie); vocabular dominant net separat (C05=58, C06=74, C07=75, C08=81 ocurențe pe termenii axei); test orb pe VOCEA/STARE/REVEAL = fiecare etapă identifică instant construcția. Bonus: STARE etapa 1 face callback la handoff-ul anterior (dicționar→clasificat→datat), întărind fluxul.
+5. **L200 (nou) — corpul FILM era driftul cel mai invizibil:** gate/audit_sync verificau titlul FILM (filmname), structura, identitatea, dar NU corpul narativ pe etape, care era boilerplate generic identic byte-cu-byte la toate construcțiile (clonat din C01 la COPY+MODIFY). Un cursant auzea aceleași replici de trainer în toate filmele. **Regulă durabilă:** la finalizarea unei construcții, corpul narativ FILM (cele 6 câmpuri × 6 etape) se scrie pe vocea + vocabularul axei, nu se lasă pe template-ul moștenit; e parte din identitate, nu doar sloturile de sus.
+6. **Stare T2 după faza FILM:** FAIL-ul FILM închis (corpul diferențiat 4/4). Rămâne deschis pachetul IMAGINI (exec-stage C06/C07/C08 clone C01, R-V59 imgclone XX × 3, pending Banana) + brief-uri exec generice C05/C06/C07. audit_sync ZERO drift nou.
+
+---
+
+**Sesiunea V62 (faza A) — sumar (C07 DATARE: remediere MAMUT + audit adversarial + închidere reziduuri T3):**
 
 1. **Remediere MAMUT C07 (8 axe).** Pornit de la `R-V59.imgclone` XX (C07 încă pe imagini clone C01) + audit MAMUT. CRIT-1: Creativ era integral C05 DICȚIONAR (29 hits dicționar/cardinal/granular/countunique/taxonomy) → rescris cap-coadă pe axa DATARE (header/footer 05→07, SECȚIUNEA 2 infografic + toate 6 etape exec pe timp/calendar/timeline/cronologie/sezonalitate, lanț corectat C06→C07→C08). CRIT-3: vocabular `refresh` eliminat din 4 HTML + xlsx + FILM (conținut→recalculare/actualizare automată; funcția JS `refreshActionBtn`→`syncActionBtn`). HIGH-1: `transformare-section` randată pe Studiu+Editor-Studiu (paritate 19 secțiuni cu C01/C02). HIGH-2: ARC TRANSFORMARE back-portat în FILM. MED: 5 em-dash scoase din xlsx, `auditabil`→`trasabil`, phase-tag E3 `POWER QUERY`→`CALENDAR` (închide L195).
 2. **FAZA 4 — 3 detectoare noi în audit_sync** (`R-V60.timeline_identity`, `R-V61.refresh_contam`, `R-V62.film_arc`), **scopate STRICT pe slug-ul „Datare"** (N/A în rest): un R-V61 global ar marca fals C04 NORMALIZARE (unde `refresh`/Power Query e LECȚIA, ~72 apariții legitime), iar un R-V62 global ar marca fals C06/C08 (FILM încă fără arc back-portat). Generalizare când acele construcții se finalizează. Toate PASS pe C07.
@@ -13,8 +24,6 @@
 6. **L198 (nou) — audit adversarial: clasifică verbul, nu cuvântul.** Un termen T3 (analiză/compar/interpret/trend) NU e automat contaminare. Trei clase: (A) **negație legitimă** („fără să compari", „Nu interpretăm") = întărește garda; (B) **cadrare downstream** („Apoi orice analiză în timp", „Abia după aceea începe analiza T3") = legitimă per doc 11; (C) **contaminare reală** (verbul atribuit identității/corpului C07). Se modifică DOAR C. Verificat empiric: din 33 apariții T3 finale în C07, zero C rămase.
 
 **C07 = 7/8 axe RELEASE PASS** (STRUCTURAL/TERMINOLOGIC/METODOLOGIC/PEDAGOGIC/BUSINESS/TEHNIC/IDENTITATE). Singura axă rămasă = **CINEMATIC**: cele 6 imagini exec-stage = clone C01 (`R-V59.imgclone` XX, hash neatins), PENDING generare Banana DATARE (set fără timp / prima dată / calendar construit / timeline complet / sezonalitate / predare C08). La sosirea lor: strip watermark + base64 → RELEASE PASS complet. Dominanță semantică Studiu: calendar 28, timeline 28, perioadă 24, timp 20, sezon 19, cronologie 17, memorie 7. Gate v20 PASS, audit fără drift nou.
-
----
 
 **Sesiunea V61 — sumar (audit adversarial C08 + închidere reziduuri non-imagine):**
 
