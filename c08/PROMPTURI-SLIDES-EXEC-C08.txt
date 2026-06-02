@@ -1,0 +1,224 @@
+══════════════════════════════════════════════════════════════════════════════
+PROMPTURI SLIDES EXECUTIVE · C08 CARTOGRAFIERE (ECOSISTEM)
+Cele 6 imagini exec-stage (Executive Show, finalul HTML-Video)
+Furnizate de ARHITECT · univers ECOSISTEM dedicat (inlocuiesc clonele C01)
+══════════════════════════════════════════════════════════════════════════════
+
+CONTEXT
+Aceste sase imagini apar in EXECUTIVE SHOW la finalul HTML-VIDEO al C08.
+Fiecare e slide-ul de incheiere al unei etape. Toate sase TREBUIE sa
+traiasca in acelasi univers vizual (continuitate de serie obligatorie).
+
+LOC IN PRODUCTIE: HTML-Video, sectiunea Executive Show. Se salveaza ca
+exec-stage-1.jpg ... exec-stage-6.jpg in c08/assets/ si se integreaza base64.
+
+UNIVERS COMUN AL SERIEI C08
+- Decor recurent: workspace negru mat, document-tabel alb central, sateliti
+  (carduri document = entitati business), retea de linii amber care leaga.
+- Arc: tabel singur -> sateliti apar -> chei identificate -> harta completa
+  -> context viu -> predare catre C09 (modelul relational).
+- Paleta stricta Trainity: negru + alb document + amber #f4b400 + gri neutru.
+  ZERO dashboard, ZERO Power BI/Power Query, ZERO oameni, ZERO UI software.
+- Aspect ratio 3:2, cinematic editorial photograph, photorealistic 8K.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 1 · SETUL ESTE SINGUR
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+A large Excel-style business table printed on white paper sits isolated in the center of a matte black workspace. The table is perfectly clean and structured, but it stands completely alone. Around it, faint empty connection points and disconnected paths fade into darkness. No relationships exist yet. No surrounding entities are visible.
+
+A subtle amber glow begins to emerge from the far distance but has not reached the table.
+
+Composition emphasizes isolation.
+
+Color palette strictly follows Trainity:
+
+black background
+white document
+amber accents (#f4b400 style)
+neutral gray shadows
+
+Mood:
+
+The data exists, but its world does not.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no people, no faces, no laptops, no dashboards, no charts, no Power BI, no Power Query, no refresh icons, no arrows, no logos, no text overlays.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 2 · PRIMII SATELITI APAR
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+The central business table remains in focus. Around it appear several separate document cards floating in space.
+
+Each card represents an external business entity:
+
+customers
+products
+agents
+warehouses
+
+Thin amber guide lines begin extending from the central table toward these satellites but stop before connecting.
+
+The ecosystem is becoming visible.
+
+Color palette:
+
+Trainity black, white, amber.
+
+Mood:
+
+Discovery.
+
+The table is no longer alone.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no dashboards, no graphs, no people, no software UI, no Power Query symbols.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 3 · CHEILE SUNT IDENTIFICATE
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+A dark business workspace.
+
+The central table and surrounding satellites are visible.
+
+Specific fields on each document glow with amber highlights.
+
+These highlighted fields represent business keys.
+
+The highlighted fields visually match across documents, suggesting future linkage.
+
+Nothing is connected yet.
+
+Only the keys are recognized.
+
+Mood:
+
+Recognition.
+
+The system starts understanding how the pieces fit.
+
+Color palette:
+
+Trainity black, white, amber.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no arrows, no joins, no relationship diagrams, no dashboards.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 4 · HARTA ECOSISTEMULUI
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+The business ecosystem is now fully mapped.
+
+The central table connects to multiple surrounding entities through elegant amber relationship lines.
+
+The lines form a clean structured network.
+
+Everything is organized.
+
+Nothing overlaps.
+
+No chaos.
+
+The image should feel like a professional strategic map.
+
+Mood:
+
+Clarity.
+
+The ecosystem becomes visible.
+
+Trainity palette only:
+
+black, white, amber.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no Power BI, no UML diagrams, no software screenshots, no dashboards.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 5 · CONTEXT COMPLET
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+The mapped ecosystem is fully operational.
+
+Every business entity contains contextual information.
+
+The network feels alive and complete.
+
+A subtle amber illumination travels through the relationship paths.
+
+The viewer immediately understands that every record can now be interpreted through its context.
+
+Mood:
+
+Understanding.
+
+The data finally knows where it belongs.
+
+Trainity colors:
+
+black, white, amber.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no refresh icons, no automation symbols, no AI robots, no dashboards.
+
+──────────────────────────────────────────────────────────────────────────────
+EXEC-STAGE 6 · PREDARE CATRE C09
+──────────────────────────────────────────────────────────────────────────────
+
+Cinematic editorial photograph, ultra-detailed photorealistic 8K.
+
+The completed ecosystem map occupies most of the scene.
+
+In the distance, beyond the mapped network, a second structure begins to emerge.
+
+The new structure is formed from relationship pathways connecting entities together.
+
+The current map remains fully illuminated.
+
+The future relationship model appears only as a subtle amber outline.
+
+Mood:
+
+Transition.
+
+The ecosystem is mapped.
+
+The relationships are next.
+
+Trainity palette:
+
+black, white, amber.
+
+Aspect ratio 3:2.
+
+Negative prompt:
+
+no dashboards, no charts, no Power BI, no people, no software screenshots, no refresh symbols.

@@ -271,7 +271,7 @@ def _rfilmname(folder):
 def _rimgclone(folder):
     # O constructie PREMIUM (hero-visual-overlay) nu poate avea imagini
     # exec-stage byte-identice cu C01 (parazitare mostenite COPY-from-C01),
-    # decat cu exceptie in EXEC_CLONE_EXCEPTIONS. C01 = referinta. Legacy = N/A. L191.
+    # decat cu exceptie in EXEC_CLONE_EXCEPTIONS. C01 = referinta. Legacy = N/A. L196.
     nn = _get_nn(folder)
     if not nn or nn == '01':
         return True
