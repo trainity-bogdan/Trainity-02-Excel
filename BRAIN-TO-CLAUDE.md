@@ -4,243 +4,221 @@
 PENDING
 
 ## MANDAT-ID
-BRAIN-005
+BRAIN-006
 
 ## MANDAT
-Brainstorming arhitectural T3 cap-coadă, înainte de orice implementare C09.
+Îngheț T3 cap-coadă înainte de implementarea C09.
 
-## STOP EXECUȚIE
-Mandatul anterior BRAIN-004, despre construirea C09, este ANULAT.
-Nu implementa C09.
-Nu genera HTML.
-Nu genera FILM.
-Nu genera xlsx.
-Nu modifica artefacte C09.
-Nu modifica fișiere de conținut.
+## CONTEXT
+BRAIN-005 a confirmat că arhitectura T3 este coerentă conceptual, dar nu este complet înghețată.
 
-Suntem în faza de TIER SEED / BRAINSTORMING pentru TREAPTA 3.
+Verdict BRAIN-005:
+- C09 este complet LOCKED.
+- C10/C11/C12 sunt încă PROPUNERE.
+- C10 are WARNING, dar are o variantă revizuită bună.
+- 06-MAP conține teme vechi care contrazic lanțul locked.
+- Granițele T3/T4/T5 există ca propunere, dar nu sunt înghețate în governance.
 
-Atenție critică:
-T3 = TREAPTA 3.
-C03 = Construcția 03.
-Nu le confunda.
+Nu implementăm C09 încă.
+Mai întâi înghețăm T3 complet.
+
+## DECIZII BRAIN
+Aplică următoarele decizii:
+
+1. C10 rămâne MĂSURI ca nume de construcție.
+2. Motto-ul de treaptă C10 rămâne: „Întrebi cât. Modelul măsoară."
+3. Verbul de construcție C10 devine: „a defini".
+4. Identitatea C10 revizuită se adoptă:
+   - măsura vie
+   - define once
+   - context-aware
+   - single source of truth
+5. AHA C10 adoptat:
+   „Un număr stă în tabel. O măsură trăiește în întrebare."
+6. C12 rămâne INTERPRETARE / „de ce".
+7. Tema veche „What-if / scenarii business" se retrage din identitatea C12.
+8. Formula granițelor se adoptă:
+   - T3 produce răspunsul.
+   - T4 îl face vizibil.
+   - T5 îl pune în acțiune.
+9. Formula „Oamenii / Profesioniștii" rămâne permisă în T3 ca semnătură, dar marchează risc de saturație pentru treptele următoare.
 
 ## OBIECTIV
-Construiește arhitectura completă T3 cap-coadă înainte de orice implementare.
+Îngheață arhitectura T3 completă, cap-coadă, în documentele de sistem.
 
-Nu vrem doar SPEC C09.
-Nu vrem doar HERO / AHA / MANTRA.
-Nu vrem să construim C09 încă.
+T3 trebuie să conțină clar:
+- scopul treptei
+- problema mare rezolvată
+- transformarea cap-coadă
+- C09/C10/C11/C12
+- problema rezolvată de fiecare construcție
+- ce produce fiecare construcție
+- instrumentele fiecărei construcții
+- livrabilul fiecărei construcții
+- granițele între construcții
+- granițele T2/T3/T4/T5
+- gărzi anti-contaminare
 
-Vrem să înțelegem întreaga treaptă:
+## FIȘIERE PERMISE LA MODIFICARE
+Ai voie să modifici doar documente de arhitectură / governance:
 
-T3 = ANALIZĂ / INTERPRETARE
+- _system/governance/TRAINITY_ARCHITECTURE_BIBLE.md
+- _system/06-MAP-CONSTRUCTII-T1-T5.md
+- _system/12-ARHITECTURA-CONCEPTUALA-T3.md, dacă nu există, creează-l
+- STARE-CURENTA.md, doar pentru status scurt al înghețului T3
+- CLAUDE-TO-BRAIN.md
 
-C09 RELAȚII
-C10 MĂSURI
-C11 COMPARAȚII
-C12 INTERPRETARE
+## FIȘIERE INTERZISE LA MODIFICARE
+Nu modifica:
+- c01/** până la c12/**
+- orice HTML
+- orice FILM
+- orice xlsx
+- orice imagine
+- blueprint-uri de construcție, cu excepția cazului în care raportezi explicit că este indispensabil
+- README.md
+- CLAUDE.md
 
-## DOCUMENTE DE CITIT OBLIGATORIU
-Citește și folosește ca bază:
-
-1. _system/governance/TRAINITY_ARCHITECTURE_BIBLE.md
-   - §SHARED RULES
-   - §TIER SEED
-   - §T2
-   - §T3
-
-2. CLAUDE.md
-   - regulile blocante
-   - regula SPEC înghețat înainte de generare
-   - structura livrabilelor
-
-3. STARE-CURENTA.md
-   - starea reală a proiectului
-
-4. _system/06-MAP-CONSTRUCTII-T1-T5.md
-   - harta completă C01-C20
-
-5. _system/11-ARHITECTURA-CONCEPTUALA-T2.md
-   - ce predă T2 către T3
-
-6. c08/artefactele finale
-   - handoff C08 → C09
-
-7. _system/blueprints/BLUEPRINT-C09-RELATII.md
-   - doar ca punct de pornire C09, nu ca motiv de implementare
-
-8. WORKSHOP-C10-T3-T4-T5.md, dacă există
-   - propunerile C10-C12 și granițele T3/T4/T5
-
-## ÎNTREBĂRI DE BRAINSTORMING
-Răspunde profund, nu formal:
-
-1. Ce își propune T3 ca treaptă?
-2. Ce problemă mare rezolvă T3?
-3. Ce transformare produce T3?
-4. Ce primește T3 de la T2?
-5. Ce predă T3 către T4?
-6. Unde se termină T3?
-7. Unde începe T4?
-8. Unde începe T5?
-
-## ARHITECTURA CERUTĂ PENTRU FIECARE CONSTRUCȚIE
-Pentru fiecare:
+## CE TREBUIE ÎNGHEȚAT ÎN BIBLE §T3
+Extinde §T3 astfel încât să existe arhitectura completă pentru:
 
 C09 RELAȚII
-C10 MĂSURI
-C11 COMPARAȚII
-C12 INTERPRETARE
-
-definește:
-
-1. Problema pe care o rezolvă
-2. Ce își propune
-3. Întrebarea-mamă
-4. Ce primește de la construcția anterioară
-5. Ce produce
-6. Ce predă mai departe
-7. Instrumentele folosite
-8. Livrabilul concret
-9. Ce NU are voie să facă
-10. Riscul principal de contaminare
-11. Diferența față de construcția anterioară
-12. Diferența față de construcția următoare
-
-## INSTRUMENTE
-Clarifică instrumentele fiecărei construcții.
-
-Punct de plecare, de verificat împotriva documentelor:
-
-C09 RELAȚII
-- Data Model
-- relații 1:M
-- cardinalitate
-- chei
-- tabele conectate
+- întrebare: Ce pot întreba?
+- verb construcție: a lega
+- output: model interogabil
+- instrumente: Data Model, relații 1:M, cardinalitate, chei, tabele conectate
+- nu are voie: măsuri C10, comparații C11, explicații C12, raportare T4, acțiune T5
 
 C10 MĂSURI
-- măsuri
-- agregări
-- DAX de bază
-- context de filtrare
-- single source of truth
+- întrebare: Cât?
+- verb de treaptă în motto: măsoară
+- verb de construcție: a defini
+- output: măsură stabilă / măsură vie
+- instrumente: măsuri, agregări, DAX de bază, context de filtrare, Power Pivot, single source of truth
+- AHA: „Un număr stă în tabel. O măsură trăiește în întrebare."
+- mantra recomandată: „Nu scriem cifra. O definim."
+- nu are voie: ranking / top / bottom / comparații C11, explicații C12, dashboard T4
 
 C11 COMPARAȚII
-- ranking
-- top / bottom
-- diferențe
-- contribuții
-- sortare analitică
+- întrebare: Care?
+- verb construcție: a compara
+- output: clasament / diferență / contribuție
+- instrumente: ranking, top / bottom, diferențe, contribuții, sortare analitică, ABC/Pareto ca instrumente de comparație
+- nu are voie: explicații cauzale C12, dashboard T4, decizie T5
 
 C12 INTERPRETARE
-- drill-down
-- cauză
-- explicație
-- insight verbal
-- citire din model
+- întrebare: De ce?
+- verb construcție: a explica
+- output: insight verbal / cauză / înțeles
+- instrumente: citire din model, drill-down analitic, explicație, cauză, insight verbal
+- nu are voie: What-if ca identitate, dashboard T4, raport vizual T4, decizie / alertă / acțiune T5
 
-Corectează această listă dacă documentele din repo indică altceva.
+## SPEC 11-SLOT C10-C12
+Adaugă în Bible §T3 SPEC 11-slot pentru C10, C11, C12.
 
-## AUDIT DE LANȚ
-Testează lanțul:
+Folosește ca bază WORKSHOP-C10-T3-T4-T5.md și raportul BRAIN-005.
 
-C08 → C09 → C10 → C11 → C12 → T4
+Pentru C10 adoptă varianta revizuită, nu varianta slabă.
 
-Răspunde explicit:
+C10 trebuie să includă minimum:
+- HERO
+- BOMBĂ
+- GREȘEALA
+- AHA
+- MANTRA
+- WOW
+- MOTTO
+- CINE DEVII
+- PAYOFF
+- MIZA
+- garda de contaminare
 
-1. Se rupe T3 dacă elimin C09?
-2. Se rupe T3 dacă elimin C10?
-3. Se rupe T3 dacă elimin C11?
-4. Se rupe T3 dacă elimin C12?
-5. C09 intră prea mult în C10?
-6. C10 se confundă cu C11?
-7. C11 se confundă cu C12?
-8. C12 fuge în T4?
-9. C12 fuge în T5?
-
-## C10 WARNING
-C10 a fost identificat ca posibil punct slab.
-Analizează separat:
-
-1. Este MĂSURI suficient de puternic?
-2. Verbul corect este a măsura sau a defini?
-3. AHA actual / propus este suficient?
-4. C10 justifică o construcție separată?
-5. Ce s-ar rupe dacă eliminăm C10?
-6. Cum facem C10 memorabil fără să-l transformăm în C11?
+C11 și C12 trebuie să fie aliniate cu lanțul:
+model -> măsură -> clasament -> explicație.
 
 ## GRANIȚE T3 / T4 / T5
-Definește clar:
+Adaugă în Bible delimitarea:
 
-T3 = ?
-T4 = ?
-T5 = ?
+T3 = ANALIZĂ / INTERPRETARE
+- produce răspunsul
+- output: model, măsură, clasament, cauză / insight verbal
+- interzis: dashboard, grafic publicabil, raport vizual, alertă, acțiune, recomandare executată
 
-Pentru fiecare:
+T4 = RAPORTARE / COMUNICARE VIZUALĂ
+- face răspunsul vizibil pentru altcineva
+- output: dashboard / cockpit / scorecard / raport vizual
+- interzis: să inventeze răspunsuri noi care țin de T3
+- interzis: să acționeze automat, pentru că aceea este T5
 
-1. Întrebarea treptei
-2. Output-ul treptei
-3. Ce este permis
-4. Ce este interzis
-5. Unde începe treapta următoare
+T5 = AUTOMATIZARE / ACȚIUNE
+- pune răspunsul în acțiune sau pe pilot automat
+- output: refresh automat, alertă, flux, acțiune declanșată, sistem autonom
+- interzis: să refacă analiza T3 sau designul vizual T4 ca lecție nouă
 
-Verifică formula:
-T3 produce răspunsul.
-T4 îl face vizibil.
-T5 îl pune în acțiune.
+Notează nuanța:
+- decizia umană stă între T4 și T5
+- decizia automată / acțiunea declanșată este T5
 
-Spune dacă formula este corectă sau trebuie ajustată.
+## REALINIERE 06-MAP
+Realiniază secțiunea T3 din _system/06-MAP-CONSTRUCTII-T1-T5.md la lanțul locked:
 
-## LIVRABIL CERUT
-Scrie în CLAUDE-TO-BRAIN.md un raport amplu cu structura:
+C09 RELAȚII
+C10 MĂSURI
+C11 COMPARAȚII
+C12 INTERPRETARE
 
-1. STATUS
-2. Documente citite
-3. Ce spune sistemul existent despre TIER SEED
-4. Ce este T3
-5. Problema mare rezolvată de T3
-6. Transformarea T3 cap-coadă
-7. Harta completă C09-C12
-8. Arhitectura C09
-9. Arhitectura C10
-10. Arhitectura C11
-11. Arhitectura C12
-12. Instrumente per construcție
-13. Livrabile per construcție
-14. Granițe C09-C10-C11-C12
-15. Granițe T2-T3-T4-T5
-16. Audit de lanț
-17. Audit de redundanță
-18. Audit de contaminare
-19. C10 WARNING, analiză specială
-20. Ce trebuie înghețat înainte de C09
-21. Ce NU trebuie implementat încă
-22. Recomandare finală
-23. Decizii cerute de la BRAIN
+Elimină sau retrogradează temele vechi ca identitate principală:
+- C10 „KPI compoziti DAX" nu mai este identitate principală
+- C11 „Prioritizare ABC/Pareto" nu mai este identitate principală, ABC/Pareto pot rămâne instrumente C11
+- C12 „What-if analysis / scenarii business" nu mai este identitate principală
 
-## RESTRICȚII
-Nu modifica nimic în afară de CLAUDE-TO-BRAIN.md.
-Nu implementa C09.
-Nu genera fișiere C09.
-Nu modifica Bible.
-Nu modifica STARE.
-Nu modifica blueprint-uri.
-Nu face commit-uri de conținut.
+## DOCUMENT T3 DEDICAT
+Creează sau actualizează:
+_system/12-ARHITECTURA-CONCEPTUALA-T3.md
 
-Acesta este brainstorming arhitectural, nu execuție.
+Acest document trebuie să explice clar, pentru viitoare chat-uri:
+- ce este T3
+- ce rezolvă T3
+- lanțul C09-C12
+- arhitectura fiecărei construcții
+- instrumente
+- livrabile
+- granițe
+- riscuri
+- decizii locked
 
-## VERDICT FINAL CERUT
-La final răspunde clar:
+## TESTE / VERIFICĂRI
+După modificări, verifică:
 
-1. Avem deja arhitectură T3 completă?
-2. Ce lipsește?
-3. Este C09 gata de implementare sau nu?
-4. Ce trebuie decis de BRAIN înainte de implementare?
-5. Care ar trebui să fie următorul mandat corect?
+1. Bible §T3 conține C09-C12 complet.
+2. C10 are rezoluția corectă: motto măsoară, verb construcție definește.
+3. C12 nu mai are What-if ca identitate.
+4. 06-MAP nu mai contrazice Bible.
+5. T3/T4/T5 au granițe explicite.
+6. Nu s-a modificat niciun artefact c01-c12.
+7. Nu s-au generat fișiere C09.
+
+## LIVRABIL
+Scrie raportul complet în CLAUDE-TO-BRAIN.md.
+
+## FORMAT RĂSPUNS CERUT
+1. Status
+2. Rezumat executiv
+3. Fișiere citite
+4. Fișiere modificate / create
+5. Ce s-a înghețat în Bible §T3
+6. Ce s-a modificat în 06-MAP
+7. Ce conține documentul T3 dedicat
+8. Cum s-a rezolvat C10 WARNING
+9. Cum s-a rezolvat contaminarea C12 / What-if
+10. Granițe T3/T4/T5 rezultate
+11. Verificări rulate
+12. Rezultate PASS / WARNING / FAIL
+13. Probleme rămase
+14. Decizii cerute de la BRAIN
+15. Commit / status Git
 
 ## MANDAT CURENT
-Execută BRAIN-005.
-Brainstorming arhitectural T3 cap-coadă.
-Zero implementare.
+Execută BRAIN-006.
+Îngheț T3 cap-coadă.
+Zero implementare C09.
