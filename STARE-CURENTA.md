@@ -1,7 +1,16 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V61 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V62 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V62 — sumar (AUDIT MAMUT T2 nivel sistem + IMPLEMENTARE FAZA FILM):**
+
+1. **Audit MAMUT T2 la nivel de treaptă (10 niveluri), nu pe construcție.** Disecție egală (L192) pe C05-C08: extras verbatim sloturile de identitate din toate 4 Studiu + FILM (184/186/186/177 paragrafe) + hash imagini + prompturi Creativ. Verdict: identitate PASS, distanță WARNING (schelă retorică identică, fill semantic distinct), test orb PASS, flux PASS, hartă/non-overlap PASS, **FILM corp = FAIL** (boilerplate clonă ×4), imagini FAIL (C06/C07/C08 exec-stage byte-identice cu C01), business SPLIT. **T2 RELEASE FAIL chirurgical** — creierul treptei e diferențiat, corpul de livrare (film + imagini) clonat.
+2. **IMPLEMENTARE FAZA FILM (mandat ARHITECT) — corp narativ rescris.** Cele 6 câmpuri narative (STARE EMOTIONALA, VOCEA TRAINERULUI, DEMONSTRATIA, INTERVENTIA AI, MOMENT DE CONTROL, REVEAL) × 6 etape × 4 filme = **144 paragrafe rescrise unic**, fiecare cu vocea + vocabularul dominant al axei: C05 inventar/dicționar/coloană, C06 reguli/clasă/taxonomie, C07 calendar/lună/perioadă, C08 satelit/cheie/context/hartă. Editare directă `word/document.xml` + re-zip.
+3. **LOCK respectat:** sloturile de identitate (AHA/MANTRA/WOW/MOTTO/BOMBA/MIZA), OBIECTIV (handoff+tehnic), TRANZITIE, structura 6 etape / 18 pași = NEATINSE. Verificat: număr paragrafe identic, 6 ETAPE/6 OBIECTIV/6 VOCEA labels intacte, sloturile identitate verbatim.
+4. **Audit comparativ post-rescriere (PASS pe toate axele):** boilerplate vechi = 0 pe toate 4; cuvinte interzise per axă = CURAT (clasă/scor/cronologie/ecosistem absente unde trebuie); vocabular dominant net separat (C05=58, C06=74, C07=75, C08=81 ocurențe pe termenii axei); test orb pe VOCEA/STARE/REVEAL = fiecare etapă identifică instant construcția. Bonus: STARE etapa 1 face callback la handoff-ul anterior (dicționar→clasificat→datat), întărind fluxul.
+5. **L200 (nou) — corpul FILM era driftul cel mai invizibil:** gate/audit_sync verificau titlul FILM (filmname), structura, identitatea, dar NU corpul narativ pe etape, care era boilerplate generic identic byte-cu-byte la toate construcțiile (clonat din C01 la COPY+MODIFY). Un cursant auzea aceleași replici de trainer în toate filmele. **Regulă durabilă:** la finalizarea unei construcții, corpul narativ FILM (cele 6 câmpuri × 6 etape) se scrie pe vocea + vocabularul axei, nu se lasă pe template-ul moștenit; e parte din identitate, nu doar sloturile de sus.
+6. **Stare T2 după faza FILM:** FAIL-ul FILM închis (corpul diferențiat 4/4). Rămâne deschis pachetul IMAGINI (exec-stage C06/C07/C08 clone C01, R-V59 imgclone XX × 3, pending Banana) + brief-uri exec generice C05/C06/C07. audit_sync ZERO drift nou.
 
 **Sesiunea V61 — sumar (audit adversarial C08 + închidere reziduuri non-imagine):**
 
