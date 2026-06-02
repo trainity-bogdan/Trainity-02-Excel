@@ -1,7 +1,24 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V59 (consolidat · marker SHA în `_system/VERSIUNI.md`)
-**Ultima actualizare:** 1 iunie 2026
+**Versiune sistem:** V60 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V60 — sumar (C06 remediere MAMUT: CLASIFICARE pură, RELEASE PASS mai puțin imagini PENDING BANANA):**
+
+1. **MEGA AUDIT C06 (2 runde, AUDITOR ȘEF) → IMPLEMENTARE MAMUT.** Cauză-rădăcină: C06 finalizat ca COPY din C05 fără a duce toate artefactele la rigoarea C01-C04. Reparat cap-coadă pe 8 fișiere + detector nou.
+2. **CRIT-1 Creativ era C05 DICȚIONAR:** SECȚIUNEA 2 (infografic) + SECȚIUNEA 3 (6 prompturi exec) rescrise integral pe axa CLASIFICARE. Eliminat dicționar (×17)/profilare/cardinalitate/granularitate/COUNTUNIQUE/„taxonomy hidden"/„C05 stamp STRUCTURE OK"/refresh. Footer C05→C06.
+3. **CRIT-3 Scor = cuantificare (regresie identitate V45):** min-max `(valoare_neta-MIN)/(MAX-MIN)*100` → **punctaj pe reguli** `IFS(clasă 40/25/10)+SWITCH(segment 25/20/15/10)+cantitate(20/10/5)+regulă compusă(15)`, max 100. Propagat 4 HTML + FILM + Date_MASTER (recalculat 2000 rânduri, scor 25-100) + `_SCORURI`. Cuvântul „normalizare" eliminat.
+4. **HIGH-2 XLOOKUP reintrodus** (era dropat, înlocuit cu TEXT): coloană `eticheta_externa` + sheet `_NOMENCLATOR` (categorie→linie business) în Date_MASTER; pas/card/SCENA REALĂ/final-card în HTML; cele 3 funcții-semnătură IFS/SWITCH/XLOOKUP complete (06-MAP respectat).
+5. **HIGH-1 refresh/automatizare scos** din HTML/FILM/Creativ (recalculare automată a formulelor, fără refresh/Power Query/flux). Whitelist: comentariul editor „hard refresh cache-bust" (infrastructură partajată, nu conținut C06).
+6. **HIGH-3 transformare-section gated** (DUPĂ C06 POȚI + DE ACUM ÎNAINTE) adăugat Studiu+Editor (CSS display:none + .visible + JS reveal, ca C01/C02). **HIGH-4 FILM:** back-port ARC TRANSFORMARE/CINE DEVII/DE ACUM ÎNAINTE.
+7. **MED:** em-dash scos din Date_MASTER (CONTROL_FINAL). `_README` avea harta T2 **pre-V45** (C06=„KPI & CALCULE", C05=CLASIFICARE, T2=„CALCUL") → corectată la CUNOAȘTERE (C06=CLASIFICARE, C05=DICȚIONAR, C07=DATARE, C08=CARTOGRAFIERE). prioritate/KPI scoase (limbaj T3 interzis). **LOW:** auditabil→trasabil; „recunoaște necunoașterea"→„marchează rândurile fără clasă"; emotion „Audit"→„Verificare".
+8. **L196 (nou) — BUG CRITIC JS reparat:** ghilimele neescapate `"A_Licențe"` într-un string JS rupeau **întreg blocul `<script>` STAGES** din HTML-Video + Editor-Video (PARSE ERROR → show executiv + nav etape nu se încărcau). Reparat (`\"A_Licențe\"`). **Regulă durabilă:** orice string în array-uri JS (steps/stages) cu ghilimele interioare se validează cu `new Function(block)` — gate/audit nu prind JS rupt, doar nesting HTML.
+9. **L197 (nou) — Creativ-ul e artefact de drift de prim rang:** contaminarea C05 trăia în Creativ (brief imagini) deși HTML/xlsx fuseseră rebuild-uite pe clasificare; de aici imaginile clone. **Regulă durabilă:** la COPY+MODIFY o construcție, Creativ-ul (SECȚIUNEA 2+3) se rescrie OBLIGATORIU pe axa proprie, altfel imaginile generate sunt ale construcției-sursă.
+10. **L198 (nou) — openpyxl instalabil în container Web** (`pip install openpyxl`): deblochează editarea sigură a xlsx ȘI rularea reală a gate-ului (DATA-CONTINUITY pica pe dependență lipsă, nu pe conținut). De instalat la orice sesiune care atinge Date_MASTER.
+11. **Detector nou `_system/generatoare/detect_c06_purity.py` (D1-D7):** refresh în corp T2, scor min-max/normalizare, em-dash în xlsx, funcții-semnătură IFS/SWITCH/XLOOKUP, Creativ contaminat cu termeni C05, limbaj T3 (prioritar/strategic), exec-stage clone C01 (R-V59). Acoperă găurile pe care gate/audit_sync nu le prind (xlsx dash, JS, Creativ).
+12. **Stare:** C06 GATE PASS, audit_sync 14/15 (doar imgclone XX), detect 6/7 (doar D7), sumă conservată DELTA 0, JS parse OK ×4, render desktop+mobil OK. **PENDING BANANA (necosmetizat, fără fake fix):** cele 6 imagini exec-stage rămân clone C01 (R-V59 FAIL) până la generarea din Creativ-ul corectat → atunci C06 = RELEASE PASS complet.
+
+---
 
 **Sesiunea V59 — sumar (C03 refactor MAMUT: graniță AUDITARE/NORMALIZARE absolută, GATE PASS):**
 
