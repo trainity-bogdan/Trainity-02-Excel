@@ -277,341 +277,387 @@ SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
 CONTEXT
 Aceste sase imagini apar in EXECUTIVE SHOW la finalul HTML-VIDEO al C08.
 Fiecare imagine este slide-ul de incheiere apoteotica al unei etape.
-Toate sase trebuie sa simta din ACEEASI serie cinematica - aceeasi suprafata
-de fundal (matte black dark wood), aceeasi paleta strict negru + alb +
-amber #FFD400, aceeasi calitate editoriala. Continuitate vizuala = brand.
+Toate sase trebuie sa simta din ACEEASI serie cinematica - acelasi fundal
+negru mat, aceeasi paleta strict negru + alb + galben amber #f4b400, aceeasi
+calitate editoriala. Continuitate vizuala = brand. ZERO albastru.
 
-ETAPELE C08 (din SPEC SISTEM, R-V03.x):
-1. REALITATE      - operatorul deschide setul curat predat de C05 si
-                    recunoaste necunoasterea descriptiva.
-2. INVESTIGATIE   - activarea Copilot pe foaia Date, ruleaza Promptul 1
-                    de inventar al cifrelor, citeste si incarca
-                    dictionarul propus.
-3. TRANSFORMARE   - ruleaza Promptul 2 de profilare structurala,
-                    aplica granularitatea atomica pe set.
-4. VERIFICARE     - confrunta cardinalitatea cu COUNTUNIQUE, verifica
-                    top frecvente, marcheaza cifre rare suspecte.
-5. STABILIZARE    - leaga dictionarul la sursa ca tabel viu, testeaza
-                    refresh simulat, documenteaza regula anti-deriva.
-6. CONFIRMARE     - verifica profilul cap-coada, confirma dictionarul
-                    complet auditabil, preda catre C08.
+AXA REALA C08 (cartografierea ecosistemului):
+DATE -> SATELITI -> CHEI -> HARTA -> CONTEXT -> RELATII
+
+1. EXISTA DATE. NU EXISTA ECOSISTEM.  - setul curat predat de C05 sta singur,
+                    fara entitati conexe, fara context in jur.
+2. APAR SATELITII   - in jurul setului central apar patru carduri-document
+                    (clienti, produse, agenti, depozite), inca neconectate.
+3. CHEILE SUNT IDENTIFICATE - campurile-cheie din fiecare document se aprind
+                    amber; cheile care se potrivesc impart aceeasi lumina,
+                    dar nimic nu e inca legat.
+4. HARTA ECOSISTEMULUI - cardurile se leaga de setul central prin trasee
+                    amber elegante; o harta strategica, nu un soft.
+5. CONTEXT COMPLET  - fiecare satelit aduce sens setului central; energie
+                    amber curge prin toate conexiunile, fiecare rand are context.
+6. PREDARE CATRE C09 - ecosistemul cartografiat e complet; in fundal se
+                    intrezareste, ca schita amber, viitorul model de relatii (C09).
 
 NUME FISIERE SALVATE:
-  exec-stage-1.jpg    (REALITATE)
-  exec-stage-2.jpg    (INVESTIGATIE)
-  exec-stage-3.jpg    (TRANSFORMARE)
-  exec-stage-4.jpg    (VERIFICARE)
-  exec-stage-5.jpg    (STABILIZARE)
-  exec-stage-6.jpg    (CONFIRMARE)
+  exec-stage-1.jpg    (EXISTA DATE. NU EXISTA ECOSISTEM.)
+  exec-stage-2.jpg    (APAR SATELITII)
+  exec-stage-3.jpg    (CHEILE SUNT IDENTIFICATE)
+  exec-stage-4.jpg    (HARTA ECOSISTEMULUI)
+  exec-stage-5.jpg    (CONTEXT COMPLET)
+  exec-stage-6.jpg    (PREDARE CATRE C09 RELATII)
 
 DIMENSIUNE: 2400×1600 px (3:2 orizontal cinematic)
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 01 · REALITATE
+ETAPA 01 · EXISTĂ DATE. NU EXISTĂ ECOSISTEM.
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul deschide un fisier Excel curat (predat de C05), priveste setul
-si recunoaste ca nu stie ce contine. Imaginea trebuie sa transmita
-"tabel curat dar opac" - structura este in regula, dar continutul
-categoric ramane ascuns.
+Setul curat predat de C05 sta complet singur pe un fundal negru vast.
+Structura e perfecta, dar nu exista nicio entitate conexa, niciun context
+in jur. Imaginea transmite izolarea: datele exista, lumea lor nu.
 
 NUME FISIER: exec-stage-1.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: A printed business data table page laid on a dark wooden surface,
-photographed slightly from above. The table shows multiple rows of clean
-data with well-aligned columns - the structure is visibly perfect (clean
-header row, no chaos, no broken cells). However, all column headers are
-covered by a soft translucent gray fog, making the column meanings
-unreadable. The body data is sharp and clean, but the taxonomy is hidden.
-A small folded paper in the corner shows the C05 stamp "STRUCTURE OK"
-in faded amber ink, indicating the previous construction has handed
-over a clean set.
+A single clean white business document lies isolated on a deep matte black surface.
 
-Lighting: A single overhead spotlight illuminates the table page with
-cool neutral white light. The fog over the headers is lit with a soft
-diffuse haze. A faint amber rim accent along the right edge of the page
-suggests warmth is approaching but has not yet arrived.
+The document is perfectly structured and readable.
 
-Composition: Subject occupies center-left two-thirds of frame. The
-right third remains in deep shadow with no detail. Slight three-quarter
-angle camera position.
+It contains rows of business information but exists completely alone.
 
-Background: Matte black dark wood or brushed dark surface, slight grain
-texture visible. No other props.
+The surrounding space is vast, dark and empty.
 
-Color palette: Strictly monochromatic dark scene, white paper, black
-printed text, soft gray fog over column headers, faint amber rim accent
-on right edge.
+No related entities exist.
 
-Mood: Quiet recognition. The operator sees the page is clean but admits
-the categories are still unknown. Anticipation of investigation.
+No supporting context exists.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+No ecosystem is visible.
 
-Negative prompt: no people, no faces, no hands, no text overlays, no
-logos, no readable brand text, no other colors except subtle gray and
-amber rim, no cluttered background, no fantasy or sci-fi elements,
-no cartoon style.
+Far in the distance a very subtle amber-yellow glow begins to emerge from darkness but does not yet reach the document.
+
+Composition:
+The document occupies the center-left area of the frame.
+Large negative space surrounds it.
+
+Trainity color palette only:
+deep matte black
+clean white
+warm amber yellow
+
+Mood:
+Isolation.
+The data exists.
+Its world does not.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no dashboards
+no Power BI
+no Power Query
+no Excel screenshots
+no charts
+no people
+no laptops
+no arrows
+no software interfaces
+no blue colors
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 02 · INVESTIGATIE
+ETAPA 02 · APAR SATELIȚII
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul activeaza Copilot si ruleaza Promptul 1 de inventar al
-cifrelor. Imaginea transmite "interogarea sistemului" - lumina aurie
-emerge din paginile setului, cifrele incep sa iasa la suprafata.
+In jurul setului central apar patru carduri-document care emerg din intuneric
+(clienti, produse, agenti, depozite). Raman neconectate; doar prezenta lor
+devine vizibila. Scena se simte mai larga si mai complexa decat inainte.
 
 NUME FISIER: exec-stage-2.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: The same printed business data table from stage 1, now visibly
-"awakened" - small rectangular kraft paper labels are emerging from
-beneath the gray fog over the column headers, beginning to float upward
-above the page surface. Three labels are already clearly visible above
-the page in sharp focus: one labeled "CLIENT", one labeled "JUDET",
-one labeled "CATEGORIE". Two more are partially emerging, still
-half-covered by the fog. A faint golden circuit pattern (suggesting AI
-augmentation by Copilot) is etched onto the wooden surface beneath the
-page, glowing softly amber.
+The same central business document remains in focus.
 
-Lighting: Two-zone lighting. The table page itself is still lit by cool
-neutral light. The emerging labels are lit by warm amber glow (#FFD400)
-from above, with the brightest labels casting subtle amber reflections
-back onto the paper.
+Around it, four separate white document cards slowly emerge from darkness.
 
-Composition: Subject occupies center-left two-thirds of frame. Labels
-emerging upward creating vertical visual energy. Right third in shadow
-but with a faint amber circuit pattern visible.
+Each card represents a different business entity.
 
-Background: Matte black dark wood with subtle etched golden circuit lines
-beneath the page area.
+Customers.
+Products.
+Agents.
+Warehouses.
 
-Color palette: Cool monochrome on the page itself, warm amber yellow
-(#FFD400) on the emerging labels and circuit etching. Strictly no other
-colors.
+The cards remain disconnected.
 
-Mood: Active discovery. The categorical structure begins to reveal
-itself through the inquiry. AI augmented investigation in progress.
+No links exist yet.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+Only their presence becomes visible.
 
-Negative prompt: no people, no faces, no hands, no AI mascots or robots,
-no text overlays, no logos, no other colors except warm amber and the
-natural monochrome, no fantasy or sci-fi elements, no cartoon style.
+Soft amber rim lighting outlines the newly discovered entities.
+
+The scene feels larger and more complex than before.
+
+Composition:
+Central document in foreground.
+Four satellite cards positioned around it in a loose circular formation.
+
+Trainity palette:
+deep black
+clean white
+amber yellow
+
+Mood:
+Discovery.
+
+The data is no longer alone.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no arrows
+no relationship diagrams
+no dashboards
+no software screenshots
+no blue colors
+no people
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 03 · TRANSFORMARE
+ETAPA 03 · CHEILE SUNT IDENTIFICATE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul ruleaza Promptul 2 si aplica granularitatea atomica. Imaginea
-transmite "marcarea fiecarui rand cu identitate atomica" - randurile
-primesc fiecare o cifra vizuala mica indicand "1 RAND = 1 FACTURA".
+Campurile-cheie din fiecare document se aprind amber. Cheile care se
+potrivesc intre documente impart aceeasi iluminare. Nimic nu e inca legat;
+doar cheile au fost recunoscute. Atmosfera e investigativa si inteligenta.
 
 NUME FISIER: exec-stage-3.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: A printed business data table page, photographed close-up at
-slight angle. Each individual data row is now marked with a tiny amber
-seal or stamp at its left edge - a small circular mark with the text
-"1 RAND" inscribed in micro typography. The rows are aligned perfectly,
-each carrying its atomic identity stamp. At the top of the page floats
-a larger labeled rectangle showing "DISPERSIE" in bold black on
-amber background, asserting the granularity of the entire set. Column
-headers are now fully readable in sharp focus: "NR_FACTURA",
-"DATA_FACTURA", "CLIENT_NUME", "JUDET", "CATEGORIE", "VALOARE_NETA".
+The central document and all four satellites are visible.
 
-Lighting: Warm amber light dominates from above, with each amber row
-seal catching its own micro-highlight. The entire scene now shifts from
-cool to warm tone.
+Specific fields inside each document glow softly in amber yellow.
 
-Composition: Subject fills the frame with the data table almost edge-to-
-edge. Slight three-quarter angle. The floating "DISPERSIE" label
-hovers in upper left.
+Matching fields across documents share the same amber illumination.
 
-Background: Matte black dark wood, fully warm-toned.
+Nothing is connected yet.
 
-Color palette: Warm amber yellow (#FFD400) accents on every row seal
-and on the floating granularity label. White paper, black readable text.
-Strictly no other colors.
+Only the key fields have been recognized.
 
-Mood: Atomic precision. Every row has been identified and stamped with
-its meaning. The granularity is no longer a mystery.
+The viewer immediately understands that these highlighted elements belong together.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+The atmosphere feels investigative and intelligent.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the labels described, no logos, no other colors except amber and natural
-monochrome, no cluttered background, no fantasy or sci-fi elements,
-no cartoon style.
+Composition:
+Documents remain separated.
+Highlighted fields create visual tension across the scene.
+
+Trainity palette:
+black
+white
+amber yellow
+
+Mood:
+Recognition.
+
+The pieces begin to reveal how they fit together.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no arrows
+no joins
+no relationship lines
+no dashboards
+no software interfaces
+no coding visuals
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 04 · VERIFICARE
+ETAPA 04 · HARTA ECOSISTEMULUI
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confrunta cardinalitatea, top frecvente si cifre rare.
-Imaginea transmite "audit forensic" - se vad bare de frecventa pentru
-fiecare coloana, iar valorile rare sunt marcate cu mici fanioane galbene.
+Setul central se leaga acum de toate entitatile prin trasee amber elegante,
+intre chei care se potrivesc. Conexiunile sunt curate si ordonate, nimic nu
+se suprapune. Intregul ansamblu pare o harta strategica de business, nu un soft.
 
 NUME FISIER: exec-stage-4.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: A printed data analysis sheet on a dark wooden surface, showing
-multiple horizontal bar charts in classical editorial style. Each chart
-represents one categorical column with bars of decreasing length showing
-top-5 frequencies. Three bars on the chart for "CATEGORIE" are particularly
-prominent (Hardware longest, then Consumabile, then Software). A fourth
-much smaller bar at the bottom of that chart shows "Servicii 2.5%" and
-is marked with a small amber pin flag indicating "RARE". To the right
-of each chart, a small panel shows the count of distinct values
-(15 CLIENTI, 8 JUDETE, MEDIE vs MEDIANĂ, 12 CANTITATI). A magnifying glass
-made of brass hovers over the "Servicii" rare flag.
+The central document is now connected to all surrounding entities.
 
-Lighting: Editorial print lighting, slightly warm overall. The amber pin
-flags on the rare values catch additional warm highlights. The magnifying
-glass refracts a small amber beam.
+Elegant amber-yellow pathways link matching keys across the ecosystem.
 
-Composition: Subject fills frame centered. The charts are arranged in a
-2-column grid, top-down view, like a research paper layout.
+The connections are clean, ordered and visually understandable.
 
-Background: Matte black dark wood.
+Nothing overlaps.
 
-Color palette: White paper, black ink for bars and text, warm amber
-yellow (#FFD400) on pin flags, magnifying glass, and accent highlights.
-Strictly no other colors.
+Nothing feels technical.
 
-Mood: Forensic audit. Categories quantified, rare values flagged for
-attention.
+The entire structure resembles a strategic business map rather than software.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+The viewer can instantly understand how information travels through the ecosystem.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the labels described, no logos, no other colors except amber and natural
-monochrome, no fantasy or sci-fi elements, no cartoon style, no flat
-infographic icons - all charts must look like printed editorial graphics.
+Composition:
+Strong central structure.
+Clear radial connections.
+Balanced geometry.
+
+Trainity palette:
+deep black
+clean white
+amber yellow
+
+Mood:
+Clarity.
+
+The ecosystem becomes visible.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no UML diagrams
+no database schemas
+no Power BI
+no dashboards
+no code
+no blue colors
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 05 · STABILIZARE
+ETAPA 05 · CONTEXT COMPLET
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul leaga dictionarul la sursa si testeaza un refresh simulat.
-Imaginea transmite "regula anti-deriva" - dictionarul devine viu,
-conectat la set, si nu mai poate fi alterat fara detectie.
+Harta ecosistemului e completa. Fiecare satelit aduce sens setului central;
+energie amber subtila curge prin toate conexiunile. Ansamblul se simte coerent,
+organizat si viu. Fiecare rand are acum context, totul are un loc.
 
 NUME FISIER: exec-stage-5.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: A printed dictionary sheet on the left side of frame, connected
-via a thin glowing amber wire or filament to a printed source data table
-on the right side. The wire is taut, sharp focus, suggesting an active
-data connection. On the dictionary sheet, each row shows a column name
-and its distinct value count. A small amber lock icon stamped in the
-corner of the dictionary indicates the rule has been sealed. Between
-the two pages, a small refresh symbol (circular arrow made of amber
-light) hovers, suggesting the connection has been tested with a refresh
-operation.
+The ecosystem map is now fully completed.
 
-Lighting: Two-pool lighting. Warm amber pool on the dictionary side,
-warm amber on the source table side. The connecting filament between
-them is the brightest element. The lock and refresh symbol pulse softly.
+Every satellite contributes meaning to the central dataset.
 
-Composition: Both papers side by side, the connecting filament drawing
-a horizontal visual line across the frame at mid-height.
+Subtle amber energy flows through all connections.
 
-Background: Matte black dark wood, with very subtle warm ambient glow.
+The entire structure feels coherent, organized and alive.
 
-Color palette: White paper, black ink, warm amber yellow (#FFD400) on
-the connecting filament, lock icon, and refresh symbol. Strictly no
-other colors.
+The viewer immediately understands that every record now has context.
 
-Mood: Stabilized rule. The dictionary is live, anchored to its source,
-protected against drift.
+Everything has a place.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+Everything belongs somewhere.
 
-Negative prompt: no people, no faces, no hands, no text overlays, no
-logos, no other colors except amber and natural monochrome, no fantasy
-or sci-fi elements, no cartoon style, no flat icons.
+The ecosystem feels mature and operational.
+
+Composition:
+Full ecosystem occupies the frame.
+Perfect balance between center and satellites.
+
+Trainity palette:
+black
+white
+amber yellow
+
+Mood:
+Understanding.
+
+Nothing exists in isolation anymore.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no dashboards
+no refresh icons
+no AI robots
+no software screenshots
+no blue colors
 
 
 ─────────────────────────────────────────────────────────────────────────
-ETAPA 06 · CONFIRMARE
+ETAPA 06 · PREDARE CĂTRE C09 RELAȚII
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confirma dictionarul complet auditabil si preda catre C08.
-Imaginea transmite "predarea formala" - un dosar de profil completat,
-sigilat, gata sa fie predat treptei urmatoare. Apare un nou stamp
-"PROFIL OK" si o sageata aurie catre C08.
+Ecosistemul cartografiat domina scena, complet conectat. Dincolo de el, din
+intuneric, emerge o a doua structura - facuta nu din documente, ci din relatii.
+Traseele de relatii apar in departare ca o arhitectura viitoare (C09). Harta
+curenta ramane luminata; modelul de relatii e doar sugerat. Tranzitie clara.
 
 NUME FISIER: exec-stage-6.jpg
 
 PROMPT (copy-paste integral)
 
-Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
+Cinematic editorial photograph, ultra-detailed photorealistic 8K quality.
 
-Subject: A complete data profile dossier laid on the dark surface,
-photographed slightly from above. The cover sheet of the dossier reads
-"PROFIL SET 2026" in clean editorial typography, with smaller subtitle
-"DICTIONAR · GRANULARITATE · TIPOLOGIE · FRECVENTE". A bold amber stamp
-in the corner reads "PROFIL OK". To the right of the dossier, a single
-amber arrow points off-frame to the right, with a small label below it
-reading "C08". The arrow is made of physical amber paint on the wood
-surface, not digital. The dossier appears thick - multiple pages bound
-together with an amber ribbon.
+The completed ecosystem dominates the scene.
 
-Lighting: Warm amber dominates from above-left, casting the dossier in
-hero light. The stamp and arrow catch additional highlights. The off-
-frame area to the right is in shadow but with faint amber glow suggesting
-"continuation".
+All entities are mapped and fully connected.
 
-Composition: Dossier occupies center-left two-thirds. The amber arrow
-on the right side draws the eye out of frame, suggesting handover. Slight
-overhead angle.
+Beyond the ecosystem, a second structure slowly emerges from darkness.
 
-Background: Matte black dark wood. The painted amber arrow merges with
-the wood texture.
+This new structure is not made from documents.
 
-Color palette: White paper, black ink, warm amber yellow (#FFD400) on
-stamp, ribbon, arrow, and accent highlights. Strictly no other colors.
+It is made from relationships.
 
-Mood: Closing ceremony. The profile is complete, sealed, ready for the
-next construction. Confidence and handover.
+Elegant amber relationship pathways appear in the distance as a faint future architecture.
 
-Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
+The current ecosystem remains brightly illuminated.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the dossier title and stamp described, no logos, no other colors except
-amber and natural monochrome, no fantasy or sci-fi elements, no cartoon
-style, no flat icons.
+The future relationship model is only suggested.
+
+The scene clearly communicates transition.
+
+Composition:
+Mapped ecosystem in foreground.
+Relationship architecture emerging in background.
+
+Trainity palette:
+deep black
+clean white
+amber yellow
+
+Mood:
+Transition.
+
+The ecosystem is mapped.
+
+The relationships come next.
+
+Aspect ratio 3:2 horizontal.
+
+Negative prompt:
+no dashboards
+no charts
+no Power BI
+no software screenshots
+no coding visuals
+no blue colors
+no people
 
 
-══════════════════════════════════════════════════════════════════════════════
+
+══════════════════════════════════════
 SUMAR FIȘIERE GENERATE
 ══════════════════════════════════════════════════════════════════════════════
 

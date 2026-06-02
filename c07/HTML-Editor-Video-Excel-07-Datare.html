@@ -1649,9 +1649,9 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="dim frag" data-frag="2">Nu am rescris cronologia.</p>
       <p class="dim frag" data-frag="3">Nu am alterat tranzacțiile.</p>
       <p class="accent frag" data-frag="4">Setul nu mai plutește în timp. Fiecare rând are poziție temporală.</p>
-      <p class="frag" data-frag="5">O memorie citită. Apoi orice decizie.</p>
+      <p class="frag" data-frag="5">O memorie citită. Apoi orice analiză în timp.</p>
       <p class="frag" data-frag="6">C08 poate începe.</p>
-      <div class="final-motto frag" data-frag="7">Un set cunoscut.<br>Apoi orice decizie.</div>
+      <div class="final-motto frag" data-frag="7">Un set datat.<br>Apoi orice analiză în timp.</div>
     </div>
   </section>
 
@@ -1748,7 +1748,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 05</div>
       <div class="exec-emotion frag" data-frag="2">Memorie ancorată</div>
       <h2 class="exec-title frag" data-frag="3">STABILIZARE</h2>
-      <p class="exec-phrase frag" data-frag="4">O memorie utilă e o memorie care se reconstruiește la refresh.</p>
+      <p class="exec-phrase frag" data-frag="4">O memorie utilă e o memorie care se recalculează automat.</p>
     </div>
   </section>
 
@@ -1773,8 +1773,8 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="exec-content">
       <div class="exec-closing-prelabel frag" data-frag="1">Motto:</div>
       <h1 class="exec-closing-motto frag" data-frag="2">
-        Mai întâi structura.
-        <span class="exec-closing-motto-yellow">Apoi orice.</span>
+        Un set datat.
+        <span class="exec-closing-motto-yellow">Apoi orice analiză în timp.</span>
       </h1>
       <div class="exec-closing-divider frag" data-frag="3"></div>
       <div class="exec-closing-signature frag" data-frag="4">
@@ -1890,13 +1890,13 @@ const STAGES = [
   {
     id: 5, name: "STABILIZARE", emotion: "Ancorare la sursă",
     hook: "O memorie care nu reflectă setul nu este memorie. Este presupunere.",
-    next: "Tabel viu, refresh testat, regulă anti-derivă scrisă.",
+    next: "Tabel viu, recalculare automată testată, regulă anti-derivă scrisă.",
     steps: [
       { num: "13", title: "Legăm timeline-ul la sursă. Ca tabel viu.",
         instr: "_TIMELINE → Format as Table → tbl_Timeline. <strong>Memoria temporală nu mai este copie statică. Devine reflectare permanentă a setului.</strong>",
         excel: true },
-      { num: "14", title: "Testăm un refresh simulat. Pe timeline.",
-        instr: "Adăugăm o tranzacție într-o lună existentă. Refresh. Volumul lunii crește în tbl_Timeline. <strong>Ștergem linia. Memoria reflectă realitatea curentă. Întotdeauna.</strong>",
+      { num: "14", title: "Testăm recalcularea automată. Pe timeline.",
+        instr: "Adăugăm o tranzacție într-o lună existentă. Recalculare automată. Volumul lunii crește în tbl_Timeline. <strong>Ștergem linia. Memoria reflectă realitatea curentă. Întotdeauna.</strong>",
         excel: true },
       { num: "15", title: "Documentăm regula anti-derivă.",
         instr: "Pe foaia _TIMELINE scriem: perioada iun 2025 - mai 2026, 12 luni complete. <strong>Orice dată în afara intervalului declanșează alertă în C08. Memoria protejează cronologia.</strong>",
@@ -1911,8 +1911,8 @@ const STAGES = [
       { num: "16", title: "Verificăm memoria. Cap-coadă.",
         instr: "Pentru fiecare lună din _TIMELINE, confirmăm că volumul egalează COUNTIFS pe Vanzari. <strong>Zero discrepanțe. Memoria descrie setul real, nu o ipoteză.</strong>",
         excel: true },
-      { num: "17", title: "Confirmăm memoria temporală completă. Auditabilă.",
-        instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Profilarea temporală nu modifică valori. Citește timpul.</strong>",
+      { num: "17", title: "Confirmăm memoria temporală completă. Trasabilă.",
+        instr: "Suma valoare_neta rămâne neatinsă, conservată din setul inițial. <strong>Datarea nu modifică valori. Citește timpul.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C08.",
         instr: "Setul are memorie. Perioadă, granularitate, goluri, sezon. <strong>C08 deschide ecosistemul pe un set a cărui cronologie e deja citită.</strong>",
@@ -2069,7 +2069,7 @@ function updateNavButtons() {
     if (prevBtn) prevBtn.classList.remove("pulse-attn");
     if (nextBtn) nextBtn.classList.remove("pulse-attn");
     updateSkippedButton();
-    refreshActionBtn();
+    syncActionBtn();
     return;
   }
 
@@ -2109,7 +2109,7 @@ function updateNavButtons() {
   }
   if (prevBtn) prevBtn.classList.remove("pulse-attn");
   updateSkippedButton();
-  refreshActionBtn();
+  syncActionBtn();
 }
 
 // PAS SARIT = step/prompt nevalidat sau verify cu etapa nevalidata, INAINTE de pozitia curenta
@@ -2209,7 +2209,7 @@ function updateActionBtn(opts) {
 // R-V03.8: re-evalueaza vizibilitatea butonului de actiune pe baza
 // ultimei intentii salvate. Apelat la nextFrag/prevFrag prin
 // updateNavButtons sincron cu prev/next.
-function refreshActionBtn() {
+function syncActionBtn() {
   if (lastActionOpts) updateActionBtn(lastActionOpts);
 }
 
@@ -3153,7 +3153,7 @@ window.editorReset = function() {
       });
     }
   } catch(e) {}
-  // Hard refresh cu cache-busting: timestamp în query string → request fresh
+  // Reîncărcare forțată cu cache-busting: timestamp în query string → request fresh
   // location.replace (NU .href) - nu las entry în history, back nu re-aduce state-ul vechi
   const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
   window.location.replace(fresh);
