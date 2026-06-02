@@ -1,7 +1,20 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V61 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V62 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V62 — sumar (C07 DATARE: remediere MAMUT + audit adversarial + închidere reziduuri T3):**
+
+1. **Remediere MAMUT C07 (8 axe).** Pornit de la `R-V59.imgclone` XX (C07 încă pe imagini clone C01) + audit MAMUT. CRIT-1: Creativ era integral C05 DICȚIONAR (29 hits dicționar/cardinal/granular/countunique/taxonomy) → rescris cap-coadă pe axa DATARE (header/footer 05→07, SECȚIUNEA 2 infografic + toate 6 etape exec pe timp/calendar/timeline/cronologie/sezonalitate, lanț corectat C06→C07→C08). CRIT-3: vocabular `refresh` eliminat din 4 HTML + xlsx + FILM (conținut→recalculare/actualizare automată; funcția JS `refreshActionBtn`→`syncActionBtn`). HIGH-1: `transformare-section` randată pe Studiu+Editor-Studiu (paritate 19 secțiuni cu C01/C02). HIGH-2: ARC TRANSFORMARE back-portat în FILM. MED: 5 em-dash scoase din xlsx, `auditabil`→`trasabil`, phase-tag E3 `POWER QUERY`→`CALENDAR` (închide L195).
+2. **FAZA 4 — 3 detectoare noi în audit_sync** (`R-V60.timeline_identity`, `R-V61.refresh_contam`, `R-V62.film_arc`), **scopate STRICT pe slug-ul „Datare"** (N/A în rest): un R-V61 global ar marca fals C04 NORMALIZARE (unde `refresh`/Power Query e LECȚIA, ~72 apariții legitime), iar un R-V62 global ar marca fals C06/C08 (FILM încă fără arc back-portat). Generalizare când acele construcții se finalizează. Toate PASS pe C07.
+3. **R-V02.15 + motto drift:** scos `7.986.019,38 lei` din pas 17 Video/Editor-Video (referință generică); slide-ul exec 7 closing avea motto C01 „Mai întâi structura" → motto C07 „Un set datat. Apoi orice analiză în timp."
+4. **Audit adversarial C07 (10 axe A-J) → ACCEPTAT CU WARNING → reziduuri închise.** Garda T2 = implementată ca **negații active** („Nu interpretăm timpul", „fără să le compari", „fără să interpretezi de ce", „Gruparea, nu volumul"). Structură PASS (6/18/5/8/2 + hero + payoff), identitate PASS (AHA + mantra verbatim), handoff C06↔C08 curat, E3 zero Power Query. R1 (verb T3 „Analizezi cronologii"→„Vezi cronologii"), R2 („Vezi evoluția"→„Vezi poziția"), R3 (ecou C06 „Apoi orice decizie" + „Un set cunoscut" → axa C07 „Apoi orice analiză în timp" / „Un set datat") închise în Studiu+Editor-Studiu+Video+Editor-Video+FILM+xlsx.
+5. **L197 (nou) — contaminare în `_README`-ul xlsx (hartă de sistem pre-V45, L186 în date):** auditul T3 global a prins în `Date_MASTER-C07.xlsx` foaia `_README` harta „T2 **CALCUL** (C05-C08): construieste **KPI**", „C06 **KPI & CALCULE**", „C07 LOGICA TEMPORALA: agregari lunare, **YoY**, sezoniere" (YoY = comparație T3, încalcă garda C07). Rescris conform doc 11: T2 CUNOAȘTERE · C05 DICȚIONAR · C06 CLASIFICARE · C07 DATARE · C08 CARTOGRAFIERE. **Regulă durabilă:** scanul anti-T3 acoperă ȘI corpul xlsx (`_README`/foi-meta), nu doar HTML/FILM; cifrele business rămân legale în Excel (R-V02.15 vizează HTML/FILM). Probabil C05/C06/C08 au aceeași hartă stale în xlsx-urile lor — de verificat la finalizarea lor.
+6. **L198 (nou) — audit adversarial: clasifică verbul, nu cuvântul.** Un termen T3 (analiză/compar/interpret/trend) NU e automat contaminare. Trei clase: (A) **negație legitimă** („fără să compari", „Nu interpretăm") = întărește garda; (B) **cadrare downstream** („Apoi orice analiză în timp", „Abia după aceea începe analiza T3") = legitimă per doc 11; (C) **contaminare reală** (verbul atribuit identității/corpului C07). Se modifică DOAR C. Verificat empiric: din 33 apariții T3 finale în C07, zero C rămase.
+
+**C07 = 7/8 axe RELEASE PASS** (STRUCTURAL/TERMINOLOGIC/METODOLOGIC/PEDAGOGIC/BUSINESS/TEHNIC/IDENTITATE). Singura axă rămasă = **CINEMATIC**: cele 6 imagini exec-stage = clone C01 (`R-V59.imgclone` XX, hash neatins), PENDING generare Banana DATARE (set fără timp / prima dată / calendar construit / timeline complet / sezonalitate / predare C08). La sosirea lor: strip watermark + base64 → RELEASE PASS complet. Dominanță semantică Studiu: calendar 28, timeline 28, perioadă 24, timp 20, sezon 19, cronologie 17, memorie 7. Gate v20 PASS, audit fără drift nou.
+
+---
 
 **Sesiunea V61 — sumar (audit adversarial C08 + închidere reziduuri non-imagine):**
 
