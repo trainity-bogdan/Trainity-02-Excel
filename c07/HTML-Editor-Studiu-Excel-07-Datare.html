@@ -1552,7 +1552,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">GRANULARITATE TEMPORALĂ</b><p class="anomaly-desc">Fiecare rând primește zi, lună, trimestru, an și zi a săptămânii derivate din data_factura.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">GOLURI ÎN TIMP</b><p class="anomaly-desc">Ce luni lipsesc din secvența cronologică. Golurile pe care timeline-ul le ascunde.</p></div>
 <div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">CALENDAR OPERAȚIONAL</b><p class="anomaly-desc">Sezon calendaristic, perioadă comercială, zi lucrătoare vs weekend, derivate din dată.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">FIȘA TEMPORALĂ</b><p class="anomaly-desc">Sheet _TIMELINE cu câmpurile temporale derivate, auditabile și legate la set.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">FIȘA TEMPORALĂ</b><p class="anomaly-desc">Sheet _TIMELINE cu câmpurile temporale derivate, trasabile și legate la set.</p></div>
 </div>
       </section>
 
@@ -1704,7 +1704,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 3 · PROFILARE TEMPORALĂ</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
-      <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
+      <div class="stage-tags"><span class="phase-tag">CALENDAR</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
   <p class="stage-quote">Timeline-ul există ca fișă temporală. Acum adăugăm granularitatea, golurile și sezonul. Setul devine citibil în timp cap-coadă.</p>
@@ -1863,7 +1863,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Testează un refresh simulat pe timeline</h3>
+    <h3 class="step-title">Testează recalcularea automată pe timeline</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
@@ -1910,11 +1910,11 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="17">
   <div class="step-head" onclick="toggleStep(17)">
     <div class="step-marker">PAS 17</div>
-    <h3 class="step-title">Confirmă memoria temporală completă auditabilă</h3>
+    <h3 class="step-title">Confirmă memoria temporală completă trasabilă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmă: memoria temporală este completă, auditabilă, ancorat la sursă. Timeline-ul este sistemul tău de referință temporală.</p>
+    <p class="step-action">Confirmă: memoria temporală este completă, trasabilă, ancorată la sursă. Timeline-ul este sistemul tău de referință temporală.</p>
     
   </div>
 </div>
@@ -1965,6 +1965,22 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-line regular">C08 poate începe.</div>
         <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Dintr-o listă de tranzacții, am construit o cronologie controlabilă.</span></div>
         <div class="payoff-motto">Un set datat. Apoi orice analiză în timp.</div>
+      </section>
+      <section class="transformare-section">
+        <div class="tu-cert">
+          <div class="tu-kicker">✓ DUPĂ C07 POȚI</div>
+          <ul class="tu-list">
+            <li>identifici prima și ultima dată din set</li>
+            <li>construiești un timeline complet</li>
+            <li>recunoști perioadele lipsă</li>
+            <li>citești sezonalitatea</li>
+          </ul>
+        </div>
+        <div class="ts-block ts-identity"><div class="ts-label">DE ACUM ÎNAINTE</div>
+          <div class="ts-pair"><span class="ts-no">Nu mai privești datele ca rânduri izolate.</span><span class="ts-yes">Vezi evoluția lor în timp.</span></div>
+          <div class="ts-pair"><span class="ts-no">Nu mai ghicești perioadele.</span><span class="ts-yes">Le citești din calendar.</span></div>
+          <div class="ts-pair"><span class="ts-no">Nu mai analizezi instantanee.</span><span class="ts-yes">Analizezi cronologii.</span></div>
+        </div>
       </section>
 
       <footer class="footer">
@@ -2709,7 +2725,7 @@ window.editorReset = function() {
       });
     }
   } catch(e) {}
-  // Hard refresh cu cache-busting: timestamp în query string → request fresh
+  // Reîncărcare forțată cu cache-busting: timestamp în query string → request fresh
   const fresh = window.location.pathname + "?_=" + Date.now() + window.location.hash;
   window.location.replace(fresh);
 };

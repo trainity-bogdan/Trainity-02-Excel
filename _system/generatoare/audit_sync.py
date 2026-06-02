@@ -291,6 +291,67 @@ def _rimgclone(folder):
     return True
 
 
+# ============================================================
+# FAZA 4 (remediere C07) — DETECTOARE IDENTITATE TEMPORALĂ
+# Scopate STRICT pe constructia DATARE (slug "Datare"). N/A in rest:
+#   - un R-V61 global ar marca fals C04 NORMALIZARE (unde "refresh"/Power
+#     Query Refresh ESTE lectia, ~72 aparitii legitime);
+#   - un R-V62 global ar marca fals C06/C08 (FILM inca fara arc back-portat).
+# Generalizarea se face cand acele constructii sunt finalizate. (L194)
+# ============================================================
+
+def _strip_noise(c):
+    """Scoate base64 + <script> + <style> ca scanul lexical sa numere CORP,
+    nu zgomot (base64 aleator / nume de functii JS). L191."""
+    c = re.sub(r'data:image/[^;]+;base64,[A-Za-z0-9+/=]+', '', c)
+    c = re.sub(r'<script.*?</script>', '', c, flags=re.S | re.I)
+    c = re.sub(r'<style.*?</style>', '', c, flags=re.S | re.I)
+    return c
+
+def _is_datare(folder):
+    stud = glob.glob(os.path.join(folder, 'HTML-Studiu-Excel-*.html'))
+    if not stud:
+        return None
+    return stud[0] if 'datare' in _fold(os.path.basename(stud[0])) else None
+
+@detector('R-V60.timeline_identity', 'DATARE: identitate temporala domina (anti-drift dictionar C05)', 'folder')
+def _rtimeline(folder):
+    stud = _is_datare(folder)
+    if not stud:
+        return None
+    body = _strip_noise(open(stud, encoding='utf-8').read())
+    datare = len(re.findall(r'datare|calendar|cronolog|timeline|temporal|sezon|\btimp\b', body, re.I))
+    dictio = len(re.findall(r'dic[tț]ionar', body, re.I))
+    calendar = len(re.findall(r'calendar', body, re.I))
+    timeline = len(re.findall(r'timeline', body, re.I))
+    # FAIL daca: dictionar > datare SAU calendar == 0 SAU timeline == 0
+    return (dictio <= datare) and calendar > 0 and timeline > 0
+
+@detector('R-V61.refresh_contam', 'DATARE: zero vocabular refresh in corpul T2', 'folder')
+def _rrefresh(folder):
+    stud = _is_datare(folder)
+    if not stud:
+        return None
+    for f in glob.glob(os.path.join(folder, 'HTML-*.html')):
+        if re.search('refresh', _strip_noise(open(f, encoding='utf-8').read()), re.I):
+            return False
+    return True
+
+@detector('R-V62.film_arc', 'DATARE: FILM contine arcul (ARC TRANSFORMARE/CINE DEVII/DE ACUM INAINTE)', 'folder')
+def _rfilmarc(folder):
+    stud = _is_datare(folder)
+    if not stud:
+        return None
+    fl = glob.glob(os.path.join(folder, 'FILM-Excel-*.docx'))
+    if not fl:
+        return False
+    try:
+        x = zipfile.ZipFile(fl[0]).read('word/document.xml').decode('utf-8', 'ignore')
+    except Exception:
+        return None
+    return all(k in x for k in ('ARC TRANSFORMARE', 'CINE DEVII', 'DE ACUM ÎNAINTE'))
+
+
 def audit(root='.', json_out=False):
     zones = {}
     for c_folder in sorted(glob.glob(os.path.join(root, 'c[0-9][0-9]'))):

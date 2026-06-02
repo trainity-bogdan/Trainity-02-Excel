@@ -1,5 +1,5 @@
 ══════════════════════════════════════════════════════════════════════════════
-CREATIVE-Excel-05-Datare.txt
+CREATIVE-Excel-07-Datare.txt
 ══════════════════════════════════════════════════════════════════════════════
 Sistemul 02 · Excel · Construcția 07 · Memoria Setului
 Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
@@ -168,8 +168,8 @@ SECȚIUNEA 2 · INFOGRAFIC ÎNȚELEGERE CONSTRUCȚIE ÎN 10 SECUNDE
 CONTEXT
 Aceasta este IMAGINEA RESUMAT care apare in landing page-uri, in pitch
 deck-uri, in postari LinkedIn. Audienta trebuie sa inteleaga din priviri:
-"Ah, C07 transforma un tabel necunoscut intr-un dictionar al setului,
-profil complet, prin Copilot + Excel."
+"Ah, C07 transforma o lista de tranzactii fara ordine in timp intr-o
+cronologie completa - timeline, perioade, goluri, sezon - prin Copilot + Excel."
 
 NUME FISIER SALVAT: `infografic-excel-07-datare.jpg`
 DIMENSIUNE: 1920×1080 px (16:9 orizontal)
@@ -177,22 +177,24 @@ LOC IN PRODUCȚIE: Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
 
 
 COMPOZIȚIE CERUTĂ
-- Stanga (35% latime): TABEL NECUNOSCUT - pagina printata cu un tabel de
-  date care arata curat structural (datorita lui C01-C05 anterior), dar
-  toate cifrele coloanelor sunt vagi sau acoperite cu o ceata gri.
-  Iluminata difuz, mai rece. Operatorul vede randuri, dar nu intelege
-  taxonomia.
-- Centru (30% latime): TRANZIȚIA - o sageata aurie sub forma de fascicul
-  de cifre galbene care zboara de la stanga catre dreapta, fiecare
-  cifra clarificand o coloana ("CLIENT 15", "JUDET 8", "CATEGORIE 4",
-  "MONEDA 3", "CANTITATE 12"). Acesta este "motorul de profilare".
-- Dreapta (35% latime): DICTIONAR COMPLET - pagina printata sub forma
-  unui dictionar / fisa de profilare: lista de coloane cu cifre clare,
-  numere de cardinalitate vizibile, distributii top-3 marcate cu bare
-  galbene. Iluminata cu lumina aurie warm (#FFD400), aratand claritate.
+- Stanga (35% latime): LISTA FARA TIMP - pagina printata cu o lista de
+  tranzactii care arata curata structural (datorita lui C01-C06 anterior),
+  dar randurile par sa pluteasca fara nicio ordine cronologica; coloana
+  data_factura este adormita, acoperita cu o ceata gri rece. Operatorul
+  vede randuri, dar nu vede CAND s-a intamplat fiecare.
+- Centru (30% latime): TRANZIȚIA - o axa-calendar aurie (rigla a timpului
+  cu casute-luni) se formeaza din intuneric, iar randurile zboara de la
+  stanga catre pozitiile lor lunare, fiecare rand asezandu-se la luna lui.
+  Acesta este "motorul de datare".
+- Dreapta (35% latime): CRONOLOGIE COMPLETA - pagina printata sub forma
+  unui timeline lunar in ordine: primul si ultimul punct marcate clar,
+  cateva casute-luni GOALE (golurile in secventa), iar dedesubt o curba
+  fina de sezonalitate. Iluminata cu lumina aurie warm (#FFD400), aratand
+  o memorie temporala citibila.
 - ZERO TEXT pe imagine - infograficul este DOAR VIZUAL. Textul va fi
   adaugat in post-productie peste.
-- Atmosfera: laboratorul unui taxonomist, NU diagrama tehnica plictisitoare.
+- Atmosfera: laboratorul unui arhivar al timpului, NU diagrama tehnica
+  plictisitoare.
 
 
 PROMPT (copy-paste integral)
@@ -203,32 +205,35 @@ storytelling triptych composition.
 Subject: A three-zone visual narrative composition on a single dark
 surface, photographed from a slight overhead angle (45-degree top-down).
 
-LEFT ZONE (occupying about 35% of image width): A printed business data
-table page that appears structurally clean (no chaos, no torn elements)
-but visibly opaque - column headers are covered by a soft gray fog
-making them unreadable, suggesting columns exist but their taxonomy
-is not yet known. Lit by cool diffuse neutral light, slightly desaturated.
+LEFT ZONE (occupying about 35% of image width): A printed transaction
+list page that appears structurally clean (no chaos, no torn elements)
+but visibly without time - the rows seem to float in no chronological
+order, and the date column is dormant, covered by a soft cold gray fog,
+suggesting the records exist but WHEN each happened is not yet read.
+Lit by cool diffuse neutral light, slightly desaturated.
 
 CENTER ZONE (occupying about 30% of image width): The transition. A
-flowing stream of small rectangular paper labels in warm amber tone,
-floating from left to right across the dark surface, like a swarm of
-golden butterflies organizing themselves. Each label shows simple
-category text and a number ("CATEGORY 4", "REGION 8", "CLIENT 15",
-"QUANTITY 12"). Volumetric haze and faint dust particles catch the
-amber light. Strong directional energy.
+golden calendar axis - a ruler of time made of small month cells -
+forms out of the darkness, and the transaction rows fly from left to
+right, each row settling onto its own month cell on the timeline ruler,
+like a swarm of golden sparks finding their place in time. Volumetric
+haze and faint dust particles catch the amber light. Strong directional
+energy.
 
 RIGHT ZONE (occupying about 35% of image width): A second printed page,
-this one styled as a clean dictionary or taxonomy sheet - rows of column
-names paired with their distinct value counts in bold, small horizontal
-bar charts showing top-3 distribution percentages, the page clearly
-organized as a profile reference. Lit by warm amber light from above-
-right, the paper catching a golden glow on its edge.
+this one styled as a complete monthly timeline - month cells laid out in
+order, the first and the last covered month marked with small brass
+pointers, a couple of cells visibly EMPTY (gaps in the sequence), and
+below them a thin seasonality curve rising and falling across the year.
+The page clearly reads as a chronology. Lit by warm amber light from
+above-right, the paper catching a golden glow on its edge.
 
 Lighting: Two-zone lighting story. LEFT side: cool diffuse neutral light,
-slightly clinical and unflattering, with subtle gray fog over the headers.
-CENTER: dominant warm amber stream (#FFD400) of flying labels. RIGHT:
-warm amber accent light embracing the dictionary page from above-right.
-The lighting itself tells the story of transformation from fog to clarity.
+slightly clinical and unflattering, with subtle gray fog over the dormant
+date column. CENTER: dominant warm amber calendar axis (#FFD400) with
+flying rows. RIGHT: warm amber accent light embracing the timeline page
+from above-right. The lighting itself tells the story of transformation
+from a timeless list to a readable chronology.
 
 Composition: All three zones on a single continuous dark surface, no
 visible borders or framing between them - the transition feels organic,
@@ -244,9 +249,9 @@ cooler (very subtle blue-gray tint, almost imperceptible, with light
 gray fog), CENTER and RIGHT warmed by amber yellow (#FFD400). White
 paper, black printed text. Strictly no other colors.
 
-Mood: Operational discovery, taxonomic precision, narrative clarity.
-Like a forensic laboratory at the moment of identifying every specimen.
-Conveys: "unknown / labeling / known" without any text.
+Mood: Operational discovery, chronological precision, narrative clarity.
+Like a time archive at the moment of placing every record on the calendar.
+Conveys: "timeless list / dating / readable chronology" without any text.
 
 Style references: Editorial photography from Wired magazine science
 features, product photography for premium tools, chiaroscuro of Caravaggio.
@@ -280,19 +285,18 @@ de fundal (matte black dark wood), aceeasi paleta strict negru + alb +
 amber #FFD400, aceeasi calitate editoriala. Continuitate vizuala = brand.
 
 ETAPELE C07 (din SPEC SISTEM, R-V03.x):
-1. REALITATE      - operatorul deschide setul curat predat de C05 si
-                    recunoaste necunoasterea descriptiva.
-2. INVESTIGATIE   - activarea Copilot pe foaia Date, ruleaza Promptul 1
-                    de inventar al cifrelor, citeste si incarca
-                    dictionarul propus.
-3. TRANSFORMARE   - ruleaza Promptul 2 de profilare structurala,
-                    aplica granularitatea atomica pe set.
-4. VERIFICARE     - confrunta cardinalitatea cu COUNTUNIQUE, verifica
-                    top frecvente, marcheaza cifre rare suspecte.
-5. STABILIZARE    - leaga dictionarul la sursa ca tabel viu, testeaza
-                    refresh simulat, documenteaza regula anti-deriva.
-6. CONFIRMARE     - verifica profilul cap-coada, confirma dictionarul
-                    complet auditabil, preda catre C07.
+1. REALITATE      - operatorul deschide setul clasificat predat de C06 si
+                    recunoaste ca nu stie CAND traieste de fapt setul.
+2. INVESTIGATIE   - activarea Copilot pe foaia Vanzari, ruleaza Promptul 1
+                    de interogare temporala, gaseste prima si ultima data.
+3. TRANSFORMARE   - ruleaza Promptul 2 de calendar, deriva campurile
+                    temporale (an/luna/trimestru/zi a saptamanii) pe set.
+4. VERIFICARE     - confrunta timeline-ul lunar, confirma secventa si
+                    marcheaza lunile lipsa (golurile in cronologie).
+5. STABILIZARE    - leaga timeline-ul la sursa ca tabel viu, citeste
+                    sezonalitatea, documenteaza regula anti-deriva.
+6. CONFIRMARE     - verifica cronologia cap-coada, confirma memoria
+                    temporala completa, preda catre C08.
 
 NUME FISIERE SALVATE:
   exec-stage-1.jpg    (REALITATE)
@@ -310,10 +314,10 @@ ETAPA 01 · REALITATE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul deschide un fisier Excel curat (predat de C05), priveste setul
-si recunoaste ca nu stie ce contine. Imaginea trebuie sa transmita
-"tabel curat dar opac" - structura este in regula, dar continutul
-categoric ramane ascuns.
+Operatorul deschide un fisier Excel curat (predat de C06), priveste setul
+si recunoaste ca nu stie CAND traieste de fapt. Imaginea trebuie sa
+transmita "tabel curat dar fara timp" - structura este in regula, dar
+pozitia in timp a randurilor ramane necitita.
 
 NUME FISIER: exec-stage-1.jpg
 
@@ -321,15 +325,16 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed business data table page laid on a dark wooden surface,
-photographed slightly from above. The table shows multiple rows of clean
-data with well-aligned columns - the structure is visibly perfect (clean
-header row, no chaos, no broken cells). However, all column headers are
-covered by a soft translucent gray fog, making the column meanings
-unreadable. The body data is sharp and clean, but the taxonomy is hidden.
-A small folded paper in the corner shows the C05 stamp "STRUCTURE OK"
-in faded amber ink, indicating the previous construction has handed
-over a clean set.
+Subject: A printed business transaction table page laid on a dark wooden
+surface, photographed slightly from above. The table shows multiple rows
+of clean data with well-aligned columns - the structure is visibly perfect
+(clean header row, no chaos, no broken cells). However, the date column is
+dormant - covered by a soft translucent cold gray fog, so the moment each
+row happened cannot be read. The body data is sharp and clean, but the
+chronology is asleep; the rows seem to have no position in time. A small
+folded paper in the corner shows the C06 stamp "CLASIFICAT OK" in faded
+amber ink, indicating the previous construction has handed over a clean,
+classified set.
 
 Lighting: A single overhead spotlight illuminates the table page with
 cool neutral white light. The fog over the headers is lit with a soft
@@ -344,11 +349,11 @@ Background: Matte black dark wood or brushed dark surface, slight grain
 texture visible. No other props.
 
 Color palette: Strictly monochromatic dark scene, white paper, black
-printed text, soft gray fog over column headers, faint amber rim accent
-on right edge.
+printed text, soft gray fog over the dormant date column, faint amber rim
+accent on right edge.
 
 Mood: Quiet recognition. The operator sees the page is clean but admits
-the categories are still unknown. Anticipation of investigation.
+the timing is still unread. Anticipation of investigation.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
@@ -363,9 +368,10 @@ ETAPA 02 · INVESTIGATIE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul activeaza Copilot si ruleaza Promptul 1 de inventar al
-cifrelor. Imaginea transmite "interogarea sistemului" - lumina aurie
-emerge din paginile setului, cifrele incep sa iasa la suprafata.
+Operatorul activeaza Copilot si ruleaza Promptul 1 de interogare
+temporala. Imaginea transmite "prima si ultima data recunoscute" - din
+coloana de date adormita se ridica doua repere aurii, ancorand inceputul
+si sfarsitul perioadei acoperite de set.
 
 NUME FISIER: exec-stage-2.jpg
 
@@ -373,34 +379,33 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: The same printed business data table from stage 1, now visibly
-"awakened" - small rectangular kraft paper labels are emerging from
-beneath the gray fog over the column headers, beginning to float upward
-above the page surface. Three labels are already clearly visible above
-the page in sharp focus: one labeled "CLIENT", one labeled "JUDET",
-one labeled "CATEGORIE". Two more are partially emerging, still
-half-covered by the fog. A faint golden circuit pattern (suggesting AI
+Subject: The same printed business data table from stage 1, with the date
+column now visibly "awakened" - the gray fog lifting off it. From the
+date column, two tall glowing amber markers rise above the page surface
+in sharp focus: the EARLIEST date on the left and the LATEST date on the
+right, like two brass survey stakes anchoring the span of the set. A thin
+amber light traces the period between them, suggesting the covered timeline
+is being measured. A faint golden circuit pattern (suggesting AI
 augmentation by Copilot) is etched onto the wooden surface beneath the
 page, glowing softly amber.
 
 Lighting: Two-zone lighting. The table page itself is still lit by cool
-neutral light. The emerging labels are lit by warm amber glow (#FFD400)
-from above, with the brightest labels casting subtle amber reflections
-back onto the paper.
+neutral light. The two date markers are lit by warm amber glow (#FFD400)
+from above, casting subtle amber reflections back onto the paper.
 
-Composition: Subject occupies center-left two-thirds of frame. Labels
-emerging upward creating vertical visual energy. Right third in shadow
-but with a faint amber circuit pattern visible.
+Composition: Subject occupies center-left two-thirds of frame. The two
+date markers rising upward create vertical visual energy. Right third in
+shadow but with a faint amber circuit pattern visible.
 
 Background: Matte black dark wood with subtle etched golden circuit lines
 beneath the page area.
 
 Color palette: Cool monochrome on the page itself, warm amber yellow
-(#FFD400) on the emerging labels and circuit etching. Strictly no other
+(#FFD400) on the two date markers and circuit etching. Strictly no other
 colors.
 
-Mood: Active discovery. The categorical structure begins to reveal
-itself through the inquiry. AI augmented investigation in progress.
+Mood: Active discovery. The temporal span begins to reveal itself
+through the inquiry. AI augmented investigation in progress.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
@@ -414,9 +419,10 @@ ETAPA 03 · TRANSFORMARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul ruleaza Promptul 2 si aplica granularitatea atomica. Imaginea
-transmite "marcarea fiecarui rand cu identitate atomica" - randurile
-primesc fiecare o cifra vizuala mica indicand "1 RAND = 1 FACTURA".
+Operatorul ruleaza Promptul 2 si deriva campurile de calendar. Imaginea
+transmite "calendarul construit" - fiecare rand primeste campurile lui
+temporale (an, luna, trimestru, zi a saptamanii), iar deasupra setului
+se ridica o axa-calendar a perioadei.
 
 NUME FISIER: exec-stage-3.jpg
 
@@ -425,31 +431,31 @@ PROMPT (copy-paste integral)
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
 Subject: A printed business data table page, photographed close-up at
-slight angle. Each individual data row is now marked with a tiny amber
-seal or stamp at its left edge - a small circular mark with the text
-"1 RAND" inscribed in micro typography. The rows are aligned perfectly,
-each carrying its atomic identity stamp. At the top of the page floats
-a larger labeled rectangle showing "DISPERSIE" in bold black on
-amber background, asserting the granularity of the entire set. Column
-headers are now fully readable in sharp focus: "NR_FACTURA",
-"DATA_FACTURA", "CLIENT_NUME", "JUDET", "CATEGORIE", "VALOARE_NETA".
+slight angle. To the right of each data row, small derived temporal cells
+have now appeared in sharp focus - tiny amber-bordered boxes carrying
+"AN", "LUNA", "TRIM", "ZI" values, as if each row has just been given its
+coordinates in time. The rows are aligned perfectly, each anchored to the
+calendar. Above the page floats a long golden calendar axis - a ruler of
+twelve month cells in a row - asserting the timeline of the entire set.
+The date column "DATA_FACTURA" is highlighted with a warm amber underline,
+fully readable in sharp focus.
 
 Lighting: Warm amber light dominates from above, with each amber row
 seal catching its own micro-highlight. The entire scene now shifts from
 cool to warm tone.
 
 Composition: Subject fills the frame with the data table almost edge-to-
-edge. Slight three-quarter angle. The floating "DISPERSIE" label
-hovers in upper left.
+edge. Slight three-quarter angle. The floating calendar axis hovers
+across the upper edge.
 
 Background: Matte black dark wood, fully warm-toned.
 
-Color palette: Warm amber yellow (#FFD400) accents on every row seal
-and on the floating granularity label. White paper, black readable text.
-Strictly no other colors.
+Color palette: Warm amber yellow (#FFD400) accents on every derived
+temporal cell and on the floating calendar axis. White paper, black
+readable text. Strictly no other colors.
 
-Mood: Atomic precision. Every row has been identified and stamped with
-its meaning. The granularity is no longer a mystery.
+Mood: Chronological precision. Every row now carries its place in the
+calendar. The timing is no longer a mystery.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
@@ -464,9 +470,10 @@ ETAPA 04 · VERIFICARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confrunta cardinalitatea, top frecvente si cifre rare.
-Imaginea transmite "audit forensic" - se vad bare de frecventa pentru
-fiecare coloana, iar valorile rare sunt marcate cu mici fanioane galbene.
+Operatorul confrunta timeline-ul lunar si confirma secventa. Imaginea
+transmite "cronologie verificata" - se vede un timeline lunar complet,
+iar lunile lipsa (golurile in secventa) sunt marcate cu mici fanioane
+galbene.
 
 NUME FISIER: exec-stage-4.jpg
 
@@ -474,32 +481,33 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed data analysis sheet on a dark wooden surface, showing
-multiple horizontal bar charts in classical editorial style. Each chart
-represents one categorical column with bars of decreasing length showing
-top-5 frequencies. Three bars on the chart for "CATEGORIE" are particularly
-prominent (Hardware longest, then Consumabile, then Software). A fourth
-much smaller bar at the bottom of that chart shows "Servicii 2.5%" and
-is marked with a small amber pin flag indicating "RARE". To the right
-of each chart, a small panel shows the count of distinct values
-(15 CLIENTI, 8 JUDETE, MEDIE vs MEDIANĂ, 12 CANTITATI). A magnifying glass
-made of brass hovers over the "Servicii" rare flag.
+Subject: A printed chronology sheet on a dark wooden surface, showing a
+single monthly timeline chart in classical editorial style - a row of
+month columns with vertical bars of varying height showing the volume of
+records per month, laid out in strict chronological order from first to
+last. Most months carry a solid bar; one or two month columns are visibly
+EMPTY and are marked with a small amber pin flag reading "LUNA LIPSA"
+(missing month), exposing a gap in the sequence. To the right, a small
+panel shows the first date, the last date, and the number of months
+covered. A brass pointer made of metal hovers over one of the empty-month
+gaps.
 
 Lighting: Editorial print lighting, slightly warm overall. The amber pin
-flags on the rare values catch additional warm highlights. The magnifying
-glass refracts a small amber beam.
+flags on the missing months catch additional warm highlights. The brass
+pointer refracts a small amber beam.
 
-Composition: Subject fills frame centered. The charts are arranged in a
-2-column grid, top-down view, like a research paper layout.
+Composition: Subject fills frame centered. The monthly timeline is laid
+out as a single wide chronological row, top-down view, like a research
+paper layout.
 
 Background: Matte black dark wood.
 
 Color palette: White paper, black ink for bars and text, warm amber
-yellow (#FFD400) on pin flags, magnifying glass, and accent highlights.
+yellow (#FFD400) on pin flags, brass pointer, and accent highlights.
 Strictly no other colors.
 
-Mood: Forensic audit. Categories quantified, rare values flagged for
-attention.
+Mood: Forensic audit. The chronology verified, missing months flagged
+for attention.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
@@ -514,9 +522,10 @@ ETAPA 05 · STABILIZARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul leaga dictionarul la sursa si testeaza un refresh simulat.
-Imaginea transmite "regula anti-deriva" - dictionarul devine viu,
-conectat la set, si nu mai poate fi alterat fara detectie.
+Operatorul leaga timeline-ul la sursa si citeste sezonalitatea. Imaginea
+transmite "memorie ancorata" - cronologia devine vie, conectata la set,
+se recalculeaza automat la o data noua, si nu mai poate fi alterata fara
+detectie.
 
 NUME FISIER: exec-stage-5.jpg
 
@@ -524,19 +533,20 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed dictionary sheet on the left side of frame, connected
-via a thin glowing amber wire or filament to a printed source data table
-on the right side. The wire is taut, sharp focus, suggesting an active
-data connection. On the dictionary sheet, each row shows a column name
-and its distinct value count. A small amber lock icon stamped in the
-corner of the dictionary indicates the rule has been sealed. Between
-the two pages, a small refresh symbol (circular arrow made of amber
-light) hovers, suggesting the connection has been tested with a refresh
-operation.
+Subject: A printed seasonality timeline sheet on the left side of frame,
+connected via a thin glowing amber wire or filament to a printed source
+data table on the right side. The wire is taut, sharp focus, suggesting
+an active data connection. On the timeline sheet, a thin amber curve rises
+and falls across a row of month cells, showing the seasonality of the set
+across the year. A small amber lock icon stamped in the corner of the
+timeline sheet indicates the anti-drift rule has been sealed. Between the
+two pages, a small auto-update glyph (a tiny calendar with a soft amber
+pulse) hovers, suggesting the chronology recomputes automatically when a
+new date arrives.
 
-Lighting: Two-pool lighting. Warm amber pool on the dictionary side,
+Lighting: Two-pool lighting. Warm amber pool on the seasonality side,
 warm amber on the source table side. The connecting filament between
-them is the brightest element. The lock and refresh symbol pulse softly.
+them is the brightest element. The lock and auto-update glyph pulse softly.
 
 Composition: Both papers side by side, the connecting filament drawing
 a horizontal visual line across the frame at mid-height.
@@ -544,10 +554,10 @@ a horizontal visual line across the frame at mid-height.
 Background: Matte black dark wood, with very subtle warm ambient glow.
 
 Color palette: White paper, black ink, warm amber yellow (#FFD400) on
-the connecting filament, lock icon, and refresh symbol. Strictly no
+the connecting filament, lock icon, and auto-update glyph. Strictly no
 other colors.
 
-Mood: Stabilized rule. The dictionary is live, anchored to its source,
+Mood: Stabilized rule. The chronology is live, anchored to its source,
 protected against drift.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
@@ -562,10 +572,10 @@ ETAPA 06 · CONFIRMARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confirma dictionarul complet auditabil si preda catre C07.
-Imaginea transmite "predarea formala" - un dosar de profil completat,
+Operatorul confirma memoria temporala completa si preda catre C08.
+Imaginea transmite "predarea formala" - un dosar de cronologie completat,
 sigilat, gata sa fie predat treptei urmatoare. Apare un nou stamp
-"PROFIL OK" si o sageata aurie catre C07.
+"CRONOLOGIE OK" si o sageata aurie catre C08.
 
 NUME FISIER: exec-stage-6.jpg
 
@@ -573,15 +583,15 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A complete data profile dossier laid on the dark surface,
+Subject: A complete chronology dossier laid on the dark surface,
 photographed slightly from above. The cover sheet of the dossier reads
-"PROFIL SET 2026" in clean editorial typography, with smaller subtitle
-"DICTIONAR · GRANULARITATE · TIPOLOGIE · FRECVENTE". A bold amber stamp
-in the corner reads "PROFIL OK". To the right of the dossier, a single
-amber arrow points off-frame to the right, with a small label below it
-reading "C07". The arrow is made of physical amber paint on the wood
-surface, not digital. The dossier appears thick - multiple pages bound
-together with an amber ribbon.
+"CRONOLOGIE SET" in clean editorial typography, with smaller subtitle
+"TIMELINE · PERIOADA · GOLURI · SEZON". A bold amber stamp in the corner
+reads "CRONOLOGIE OK". To the right of the dossier, a single amber arrow
+points off-frame to the right, with a small label below it reading "C08".
+The arrow is made of physical amber paint on the wood surface, not digital.
+The dossier appears thick - multiple pages bound together with an amber
+ribbon.
 
 Lighting: Warm amber dominates from above-left, casting the dossier in
 hero light. The stamp and arrow catch additional highlights. The off-
@@ -598,7 +608,7 @@ the wood texture.
 Color palette: White paper, black ink, warm amber yellow (#FFD400) on
 stamp, ribbon, arrow, and accent highlights. Strictly no other colors.
 
-Mood: Closing ceremony. The profile is complete, sealed, ready for the
+Mood: Closing ceremony. The chronology is complete, sealed, ready for the
 next construction. Confidence and handover.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
@@ -637,5 +647,5 @@ PASUL URMĂTOR DUPĂ GENERAREA TUTUROR IMAGINILOR
 4. HTML-VIDEO devine astfel un singur fisier standalone autonom.
 
 ══════════════════════════════════════════════════════════════════════════════
-SFÂRȘIT FIȘIER CREATIVE-Excel-05-Datare.txt
+SFÂRȘIT FIȘIER CREATIVE-Excel-07-Datare.txt
 ══════════════════════════════════════════════════════════════════════════════
