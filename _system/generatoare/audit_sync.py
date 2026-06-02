@@ -14,7 +14,15 @@ Usage:
     python3 _system/generatoare/audit_sync.py --json
 """
 
-import sys, re, os, glob, json, zipfile
+import sys, re, os, glob, json, zipfile, hashlib
+
+def _md5(path):
+    with open(path, 'rb') as f:
+        return hashlib.md5(f.read()).hexdigest()
+
+# Constructii cu exceptie documentata explicit la regula anti-clona imagine
+# (pot partaja imagini exec-stage cu C01). Gol = niciuna. Adauga 'NN' + motiv.
+EXEC_CLONE_EXCEPTIONS = set()
 
 def _fold(s):
     """Pliaza diacriticele romanesti -> ASCII, lowercase (comparatii de nume
@@ -257,6 +265,30 @@ def _rfilmname(folder):
         mm = re.search(pat, h)
         parts.append(mm.group(1) if mm else '')
     return stem in _fold(' '.join(parts))
+
+
+@detector('R-V59.imgclone', 'Exec-stage NON-clona C01 (premium)', 'folder')
+def _rimgclone(folder):
+    # O constructie PREMIUM (hero-visual-overlay) nu poate avea imagini
+    # exec-stage byte-identice cu C01 (parazitare mostenite COPY-from-C01),
+    # decat cu exceptie in EXEC_CLONE_EXCEPTIONS. C01 = referinta. Legacy = N/A. L191.
+    nn = _get_nn(folder)
+    if not nn or nn == '01':
+        return True
+    stud = glob.glob(os.path.join(folder, 'HTML-Studiu-Excel-*.html'))
+    if not stud:
+        return True
+    with open(stud[0], encoding='utf-8') as fh:
+        if 'hero-visual-overlay' not in fh.read():
+            return True
+    if nn in EXEC_CLONE_EXCEPTIONS:
+        return True
+    for n in range(1, 7):
+        a = os.path.join(folder, f'assets/exec-stage-{n}.jpg')
+        b = os.path.join('c01', f'assets/exec-stage-{n}.jpg')
+        if os.path.exists(a) and os.path.exists(b) and _md5(a) == _md5(b):
+            return False
+    return True
 
 
 def audit(root='.', json_out=False):

@@ -139,10 +139,10 @@ yellow (#FFD400) accents on labels and magnifying glass. White paper,
 black printed text on the data table. No other colors. The labels
 should glow slightly warm against the cooler table beneath.
 
-Mood: Forensic investigation, surgical clarity, "you have not yet seen
+Mood: Investigative clarity, surgical precision, "you have not yet seen
 what is already here". Conveys the moment of dictionary discovery.
 
-Style references: Editorial photography from Wired magazine forensic
+Style references: Editorial photography from Wired magazine investigative
 features, product photography for premium instruments, chiaroscuro of
 Caravaggio. Investigation aesthetic.
 
@@ -244,7 +244,7 @@ gray fog), CENTER and RIGHT warmed by amber yellow (#FFD400). White
 paper, black printed text. Strictly no other colors.
 
 Mood: Operational discovery, taxonomic precision, narrative clarity.
-Like a forensic laboratory at the moment of identifying every specimen.
+Like a taxonomy laboratory at the moment of identifying every specimen.
 Conveys: "unknown / labeling / known" without any text.
 
 Style references: Editorial photography from Wired magazine science
@@ -286,12 +286,12 @@ ETAPELE C05 (din SPEC SISTEM, R-V03.x):
                     dictionarul propus.
 3. TRANSFORMARE   - ruleaza Promptul 2 de profilare structurala,
                     aplica granularitatea atomica pe set.
-4. VERIFICARE     - confrunta cardinalitatea cu COUNTUNIQUE, verifica
+4. VERIFICARE     - confrunta cardinalitatea cu COUNTA(UNIQUE()), verifica
                     top frecvente, marcheaza etichete rare suspecte.
 5. STABILIZARE    - leaga dictionarul la sursa ca tabel viu, testeaza
                     refresh simulat, documenteaza regula anti-deriva.
 6. CONFIRMARE     - verifica profilul cap-coada, confirma dictionarul
-                    complet auditabil, preda catre C06.
+                    complet verificabil, preda catre C06.
 
 NUME FISIERE SALVATE:
   exec-stage-1.jpg    (REALITATE)
@@ -464,7 +464,7 @@ ETAPA 04 · VERIFICARE
 
 CONCEPT VIZUAL
 Operatorul confrunta cardinalitatea, top frecvente si etichete rare.
-Imaginea transmite "audit forensic" - se vad bare de frecventa pentru
+Imaginea transmite "verificare riguroasă a dicționarului" - se vad bare de frecventa pentru
 fiecare coloana, iar valorile rare sunt marcate cu mici fanioane galbene.
 
 NUME FISIER: exec-stage-4.jpg
@@ -497,7 +497,7 @@ Color palette: White paper, black ink for bars and text, warm amber
 yellow (#FFD400) on pin flags, magnifying glass, and accent highlights.
 Strictly no other colors.
 
-Mood: Forensic audit. Categories quantified, rare values flagged for
+Mood: Rigorous verification. Categories enumerated, rare values flagged for
 attention.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
@@ -561,7 +561,7 @@ ETAPA 06 · CONFIRMARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confirma dictionarul complet auditabil si preda catre C06.
+Operatorul confirma dictionarul complet verificabil si preda catre C06.
 Imaginea transmite "predarea formala" - un dosar de profil completat,
 sigilat, gata sa fie predat treptei urmatoare. Apare un nou stamp
 "PROFIL OK" si o sageata aurie catre C06.

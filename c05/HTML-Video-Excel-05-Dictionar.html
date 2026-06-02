@@ -1912,7 +1912,7 @@ const STAGES = [
     ]
   },
   {
-    id: 4, name: "VERIFICARE", emotion: "Audit forensic",
+    id: 4, name: "VERIFICARE", emotion: "Confruntare cu setul",
     hook: "Nu credem dicționarul. Îl confruntăm cu setul.",
     next: "Cifrele decid. Nu opinia AI. Cardinalitate exactă, frecvențe mapate.",
     steps: [
@@ -1923,23 +1923,23 @@ const STAGES = [
         instr: "La categorie: Hardware 47.9%, Consumabile 26.1%, Software 23.6%. Top-3 acoperă 97.5% din set. <strong>Distribuția este extremă. O singură categorie aproape jumătate.</strong>",
         excel: true },
       { num: "12", title: "Marcăm etichetele rare. Cu galben.",
-        instr: "Frecvență sub 3%? Servicii (2.5%), USD (1.0%). <strong>Nu sunt erori. Sunt observații documentate. Audit forensic, nu corecție.</strong>",
+        instr: "Frecvență sub 3%? Servicii (2.5%), USD (1.0%). <strong>Nu sunt erori. Sunt observații documentate. Documentate, nu corectate.</strong>",
         excel: true }
     ]
   },
   {
     id: 5, name: "STABILIZARE", emotion: "Ancorare la sursă",
     hook: "Un dicționar care nu reflectă setul nu este dicționar. Este amintire.",
-    next: "Tabel viu, refresh testat, regulă anti-derivă scrisă.",
+    next: "Dicționar pe formule dinamice, recalculare testată, regulă anti-derivă scrisă.",
     steps: [
-      { num: "13", title: "Legăm dicționarul la sursă. Ca tabel viu.",
-        instr: "_DICTIONAR → Format as Table → tbl_Dictionar. <strong>Dicționarul nu mai este copie statică. Devine reflectare permanentă a setului.</strong>",
+      { num: "13", title: "Construim dicționarul pe formule dinamice.",
+        instr: "_DICTIONAR pe UNIQUE, COUNTA(UNIQUE()), COUNTIF. <strong>Nu o copie statică, ci recalculare permanentă din set.</strong>",
         excel: true },
-      { num: "14", title: "Testăm un refresh simulat. Pe profil.",
-        instr: "Adăugăm o categorie nouă inventată în Vanzari. Refresh. Categoria apare automat în tbl_Dictionar. <strong>Ștergem linia. Dicționarul reflectă realitatea curentă. Întotdeauna.</strong>",
+      { num: "14", title: "Testăm recalcularea automată. Pe dicționar.",
+        instr: "Adăugăm o categorie nouă inventată în Vanzari. Formulele dinamice o includ automat. <strong>Ștergem linia. Dicționarul reflectă realitatea curentă. Întotdeauna.</strong>",
         excel: true },
       { num: "15", title: "Documentăm regula anti-derivă.",
-        instr: "Pe foaia _PROFIL scriem: 15 client_nume, 8 judet, 4 categorie. <strong>Orice valoare nouă în afara acestor liste declanșează alertă în C06. Profilul protejează cifrele.</strong>",
+        instr: "Pe foaia _PROFIL scriem: 15 client_nume, 8 judet, 4 categorie. <strong>Orice valoare nouă în afara acestor liste declanșează alertă de dicționar. Profilul protejează taxonomia.</strong>",
         excel: false }
     ]
   },
@@ -1951,7 +1951,7 @@ const STAGES = [
       { num: "16", title: "Verificăm profilul. Cap-coadă.",
         instr: "Pentru fiecare etichetă din _DICTIONAR, confirmăm că apare cel puțin o dată în Vanzari. <strong>Zero discrepanțe. Dicționarul descrie setul real, nu o ipoteză.</strong>",
         excel: true },
-      { num: "17", title: "Confirmăm dicționarul complet. Auditabil.",
+      { num: "17", title: "Confirmăm dicționarul complet. Verificabil.",
         instr: "Suma valoare_neta rămâne neschimbată, conservată din Date_MASTER-initial. <strong>Profilarea nu atinge valori. Inventariază.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C06.",
