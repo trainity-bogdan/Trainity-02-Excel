@@ -1109,6 +1109,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Cartografiere',
             'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)'
         },
+        '09': {
+            'cod': 'C09', 'nume_hero_caps_rand1': 'RELAȚIILE',
+            'nume_slug': 'Relatii',
+            'meta_val_treapta': '<b>RELAȚII</b> · MĂSURI · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
+        },
     }
     return IDENTITATI.get(NN)
 
