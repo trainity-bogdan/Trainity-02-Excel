@@ -1748,7 +1748,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 05</div>
       <div class="exec-emotion frag" data-frag="2">Clase ancorate</div>
       <h2 class="exec-title frag" data-frag="3">STABILIZARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Astăzi scriu regula. Mâine setul se clasifică singur la refresh.</p>
+      <p class="exec-phrase frag" data-frag="4">Astăzi scriu regula. Mâine fiecare rând nou se clasifică singur prin ea.</p>
     </div>
   </section>
 
@@ -1860,7 +1860,7 @@ const STAGES = [
   {
     id: 3, name: "TRANSFORMARE", emotion: "Construcție de sens",
     hook: "Prima regulă există. Adăugăm segmente și scor.",
-    next: "Power Query nu intră. Doar Copilot și foi de profil.",
+    next: "Fără unelte de flux. Doar Copilot și reguli în foaie.",
     steps: [
       { num: "07", title: "Construim prima clasă. Cu IFS.",
         instr: "Construim clasa_valoare cu IFS într-o coloană nouă. <strong>Setul clasificat devine livrabil vizibil. Nu o opinie. O coloană din registru.</strong>",
@@ -1872,31 +1872,31 @@ const STAGES = [
     ]
   },
   {
-    id: 4, name: "VERIFICARE", emotion: "Audit al regulilor",
+    id: 4, name: "VERIFICARE", emotion: "Verificare a regulilor",
     hook: "Nu credem regulile. Le confruntăm cu setul.",
     next: "Regulile decid. Nu opinia AI. Clase exacte, scoruri confirmate.",
     steps: [
-      { num: "10", title: "Compunem eticheta derivată. Cu TEXT.",
-        instr: "TEXT: =clasa&\"-\"&segment, eticheta din datele rândului. (fost XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
+      { num: "10", title: "Aducem eticheta externă. Cu XLOOKUP.",
+        instr: "XLOOKUP: =XLOOKUP(categorie; _NOMENCLATOR[categorie]; _NOMENCLATOR[eticheta_business]), eticheta oficială de business din nomenclator. <strong>Sensul vine dintr-o referință externă întreținută. Cheia trebuie să existe real. Exact.</strong>",
         excel: true },
       { num: "11", title: "Construim o regulă compusă. Cu IFS.",
-        instr: "IFS din condiții multiple: clasa=A și segment=Licențe → "A_Licențe". <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",
+        instr: "IFS din condiții multiple: clasa=A și segment=Licențe → \"A_Licențe\". <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",
         excel: true },
       { num: "12", title: "Calculăm scorul. Pe fiecare rând.",
-        instr: "Scor = (valoare-MIN)/(MAX-MIN)*100. <strong>Fiecare rând capătă un scor 0-100. O etichetă, nu o decizie.</strong>",
+        instr: "Scor = punctaj pe reguli: clasă (A=40/B=25/C=10) + segment + cantitate + regulă compusă. <strong>Fiecare rând capătă un scor 0-100 din criterii. O etichetă, nu o decizie.</strong>",
         excel: true }
     ]
   },
   {
     id: 5, name: "STABILIZARE", emotion: "Ancorare la sursă",
     hook: "O clasă care nu vine din regulă nu este clasificare. Este părere.",
-    next: "Tabel viu, refresh testat, regulă anti-derivă scrisă.",
+    next: "Tabel viu, recalculare testată, regulă anti-derivă scrisă.",
     steps: [
       { num: "13", title: "Legăm coloanele derivate la sursă. Ca tabel viu.",
-        instr: "Coloanele derivate → Format as Table → tbl_Clasificat. <strong>Setul clasificat nu mai este copie statică. Devine reflectare permanentă.</strong>",
+        instr: "Coloanele derivate → Format as Table → tbl_Clasificat. <strong>Setul clasificat nu mai este copie statică. Devine reflectare actualizată la fiecare rând nou.</strong>",
         excel: true },
-      { num: "14", title: "Testăm un refresh. Pe reguli.",
-        instr: "Adăugăm o tranzacție nouă în Vanzari. Refresh. Clasa și scorul se calculează automat. <strong>Ștergem linia. Regulile reflectă realitatea curentă. Întotdeauna.</strong>",
+      { num: "14", title: "Testăm recalcularea automată. Pe reguli.",
+        instr: "Adăugăm o tranzacție nouă în Vanzari. Formulele recalculează singure: clasa și scorul apar automat. <strong>Ștergem linia. Regulile reflectă realitatea curentă. Întotdeauna.</strong>",
         excel: true },
       { num: "15", title: "Documentăm regula anti-derivă.",
         instr: "Scriem: clasele sunt derivate prin reguli, nu manual. <strong>Orice rând nou primește automat clasă. Regula protejează clasificarea în C07.</strong>",
