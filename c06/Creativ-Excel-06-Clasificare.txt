@@ -1,5 +1,5 @@
 ══════════════════════════════════════════════════════════════════════════════
-CREATIVE-Excel-05-Clasificare.txt
+CREATIVE-Excel-06-Clasificare.txt
 ══════════════════════════════════════════════════════════════════════════════
 Sistemul 02 · Excel · Construcția 06 · Clasificarea Setului
 Prompturi Nano Banana 2 (Gemini Imagen 3) pentru toate creativele vizuale
@@ -165,10 +165,10 @@ SECȚIUNEA 2 · INFOGRAFIC ÎNȚELEGERE CONSTRUCȚIE ÎN 10 SECUNDE
 ══════════════════════════════════════════════════════════════════════════════
 
 CONTEXT
-Aceasta este IMAGINEA RESUMAT care apare in landing page-uri, in pitch
+Aceasta este IMAGINEA REZUMAT care apare in landing page-uri, in pitch
 deck-uri, in postari LinkedIn. Audienta trebuie sa inteleaga din priviri:
-"Ah, C06 transforma un tabel necunoscut intr-un dictionar al setului,
-profil complet, prin Copilot + Excel."
+"Ah, C06 ia un set cu randuri anonime si le da sens prin reguli de
+clasificare, fiecare rand capata clasa, segment si scor."
 
 NUME FISIER SALVAT: `infografic-excel-06-clasificare.jpg`
 DIMENSIUNE: 1920×1080 px (16:9 orizontal)
@@ -176,22 +176,24 @@ LOC IN PRODUCȚIE: Landing page B2C/B2B, slide-uri pitch, LinkedIn posts.
 
 
 COMPOZIȚIE CERUTĂ
-- Stanga (35% latime): TABEL NECUNOSCUT - pagina printata cu un tabel de
-  date care arata curat structural (datorita lui C01-C05 anterior), dar
-  toate cifrele coloanelor sunt vagi sau acoperite cu o ceata gri.
-  Iluminata difuz, mai rece. Operatorul vede randuri, dar nu intelege
-  taxonomia.
-- Centru (30% latime): TRANZIȚIA - o sageata aurie sub forma de fascicul
-  de cifre galbene care zboara de la stanga catre dreapta, fiecare
-  cifra clarificand o coloana ("CLIENT 15", "JUDET 8", "CATEGORIE 4",
-  "MONEDA 3", "CANTITATE 12"). Acesta este "motorul de profilare".
-- Dreapta (35% latime): DICTIONAR COMPLET - pagina printata sub forma
-  unui dictionar / fisa de profilare: lista de coloane cu cifre clare,
-  numere de cardinalitate vizibile, distributii top-3 marcate cu bare
-  galbene. Iluminata cu lumina aurie warm (#FFD400), aratand claritate.
-- ZERO TEXT pe imagine - infograficul este DOAR VIZUAL. Textul va fi
-  adaugat in post-productie peste.
-- Atmosfera: laboratorul unui taxonomist, NU diagrama tehnica plictisitoare.
+- Stanga (35% latime): RANDURI ANONIME - pagina printata cu un tabel de
+  date curat structural (datorita lui C01-C05 anterior), randurile sunt
+  aliniate dar identice la culoare, fara nicio eticheta, fara grup. Toate
+  randurile arata la fel. Iluminata difuz, mai rece. Operatorul vede
+  randuri, dar niciunul nu are sens atribuit.
+- Centru (30% latime): REGULA CARE SEPARA - fascicule subtiri de lumina
+  aurie (ghidaje de clasificare) care pornesc dintr-un punct si despart
+  randurile in grupuri distincte. Liniile aurii grupeaza randuri similare
+  impreuna. Se vede cum ordinea apare din logica, nu din ghicit.
+- Dreapta (35% latime): SET CLASIFICAT - aceeasi pagina, acum cu randurile
+  grupate vizibil in trei benzi (clasa A, clasa B, clasa C), fiecare banda
+  marcata cu o eticheta aurie discreta de tip "A", "B", "C". Randurile au
+  acum culoare de grup si o mica bara de scor langa fiecare. Iluminata cu
+  lumina aurie warm (#FFD400), aratand sens construit.
+- ZERO TEXT explicativ pe imagine - infograficul este DOAR VIZUAL. Textul
+  va fi adaugat in post-productie peste.
+- Atmosfera: masa unui clasificator care impune reguli, NU diagrama
+  tehnica plictisitoare.
 
 
 PROMPT (copy-paste integral)
@@ -203,49 +205,47 @@ Subject: A three-zone visual narrative composition on a single dark
 surface, photographed from a slight overhead angle (45-degree top-down).
 
 LEFT ZONE (occupying about 35% of image width): A printed business data
-table page that appears structurally clean (no chaos, no torn elements)
-but visibly opaque - column headers are covered by a soft gray fog
-making them unreadable, suggesting columns exist but their taxonomy
-is not yet known. Lit by cool diffuse neutral light, slightly desaturated.
+table page that is structurally clean (no chaos, no torn elements) but
+visually flat, every row identical and unmarked, no groups, no labels,
+no color coding. The rows exist but none has meaning assigned. Lit by
+cool diffuse neutral light, slightly desaturated.
 
-CENTER ZONE (occupying about 30% of image width): The transition. A
-flowing stream of small rectangular paper labels in warm amber tone,
-floating from left to right across the dark surface, like a swarm of
-golden butterflies organizing themselves. Each label shows simple
-category text and a number ("CATEGORY 4", "REGION 8", "CLIENT 15",
-"QUANTITY 12"). Volumetric haze and faint dust particles catch the
-amber light. Strong directional energy.
+CENTER ZONE (occupying about 30% of image width): The rule that separates.
+Thin amber guide lines (#FFD400) fan out across the dark surface, sorting
+similar rows into distinct clusters, like invisible business rules pulling
+records into groups. Volumetric haze and faint dust particles catch the
+amber light. Strong directional energy, order emerging from logic.
 
 RIGHT ZONE (occupying about 35% of image width): A second printed page,
-this one styled as a clean dictionary or taxonomy sheet - rows of column
-names paired with their distinct value counts in bold, small horizontal
-bar charts showing top-3 distribution percentages, the page clearly
-organized as a profile reference. Lit by warm amber light from above-
-right, the paper catching a golden glow on its edge.
+the same table now visibly organized into three horizontal class bands,
+each band tinted a slightly different warm tone and marked with a small
+amber class letter tab (A, B, C). Beside each row sits a tiny amber score
+bar. The page reads as a classified set. Lit by warm amber light from
+above-right, the paper catching a golden glow on its edge.
 
 Lighting: Two-zone lighting story. LEFT side: cool diffuse neutral light,
-slightly clinical and unflattering, with subtle gray fog over the headers.
-CENTER: dominant warm amber stream (#FFD400) of flying labels. RIGHT:
-warm amber accent light embracing the dictionary page from above-right.
-The lighting itself tells the story of transformation from fog to clarity.
+slightly clinical, every row uniform. CENTER: dominant warm amber guide
+lines (#FFD400) separating rows into groups. RIGHT: warm amber accent
+light embracing the classified page from above-right. The lighting itself
+tells the story of transformation from anonymous to classified.
 
 Composition: All three zones on a single continuous dark surface, no
-visible borders or framing between them - the transition feels organic,
+visible borders or framing between them, the transition feels organic,
 like a single visual story flowing left-to-right. Both papers angled
-slightly inward toward the center stream, creating subtle visual tension
-pointing toward the labeling moment.
+slightly inward toward the center, creating subtle visual tension pointing
+toward the classification moment.
 
 Background: Matte black dark wood or brushed dark surface, identical
 texture across the entire composition. No competing elements.
 
-Color palette: Monochromatic dark scene, with the LEFT zone slightly
-cooler (very subtle blue-gray tint, almost imperceptible, with light
-gray fog), CENTER and RIGHT warmed by amber yellow (#FFD400). White
-paper, black printed text. Strictly no other colors.
+Color palette: Monochromatic dark scene, LEFT zone slightly cooler (very
+subtle gray, almost imperceptible), CENTER and RIGHT warmed by amber
+yellow (#FFD400). White paper, black printed text. Strictly no other
+colors. No blue, no green, no red.
 
-Mood: Operational discovery, taxonomic precision, narrative clarity.
-Like a forensic laboratory at the moment of identifying every specimen.
-Conveys: "unknown / labeling / known" without any text.
+Mood: Operational order, classification precision, narrative clarity.
+Like a sorting table at the moment every record receives its class.
+Conveys: "anonymous rows / rule / classified set" without any text.
 
 Style references: Editorial photography from Wired magazine science
 features, product photography for premium tools, chiaroscuro of Caravaggio.
@@ -253,18 +253,17 @@ Maintain visual continuity with the rest of the C06 series.
 
 Technical: Shot on medium format camera, 35mm lens equivalent for wider
 field, f/8 aperture for sharper depth across all three zones, top-down
-slight angle. No digital artifacts. Numbers on both papers can be
-illegible blurred figures except the labels in the center stream which
-remain readable.
+slight angle. No digital artifacts. Numbers on the papers can be
+illegible blurred figures, the class letter tabs A B C remain readable.
 
 Aspect ratio: 16:9 horizontal, 1920 by 1080 pixels.
 
 Negative prompt: no people, no faces, no hands, no text overlays added
-post-process, no arrows drawn as graphic elements (the labels stream IS
-the arrow), no logos, no readable brand text, no other colors except
-subtle cool gray and warm amber, no cluttered background, no fantasy or
-sci-fi elements, no cartoon style, no infographic-style flat icons, no
-charts or graphs drawn over.
+post-process, no dashboards, no charts, no KPIs, no Power BI, no arrows
+drawn as graphic elements (the amber guide lines ARE the rule), no logos,
+no readable brand text, no other colors except subtle gray and warm amber,
+no cluttered background, no fantasy or sci-fi elements, no cartoon style,
+no flat icons, no holograms.
 
 
 ══════════════════════════════════════════════════════════════════════════════
@@ -274,24 +273,25 @@ SECȚIUNEA 3 · IMAGINI EXECUTIVE PER ETAPĂ (6 imagini)
 CONTEXT
 Aceste sase imagini apar in EXECUTIVE SHOW la finalul HTML-VIDEO al C06.
 Fiecare imagine este slide-ul de incheiere apoteotica al unei etape.
-Toate sase trebuie sa simta din ACEEASI serie cinematica - aceeasi suprafata
-de fundal (matte black dark wood), aceeasi paleta strict negru + alb +
-amber #FFD400, aceeasi calitate editoriala. Continuitate vizuala = brand.
+Toate sase trebuie sa simta din ACEEASI serie cinematica, aceeasi
+suprafata de fundal (matte black dark wood), aceeasi paleta strict negru
++ alb + amber #FFD400, aceeasi calitate editoriala. Continuitate vizuala
+= brand. C06 = CLASIFICARE: randuri care capata clasa, segment si scor
+PRIN REGULI. Ramane strict pe clasificare, fara sa alunece spre vecini.
 
-ETAPELE C06 (din SPEC SISTEM, R-V03.x):
-1. REALITATE      - operatorul deschide setul curat predat de C05 si
-                    recunoaste necunoasterea descriptiva.
-2. INVESTIGATIE   - activarea Copilot pe foaia Date, ruleaza Promptul 1
-                    de inventar al cifrelor, citeste si incarca
-                    dictionarul propus.
-3. TRANSFORMARE   - ruleaza Promptul 2 de profilare structurala,
-                    aplica granularitatea atomica pe set.
-4. VERIFICARE     - confrunta cardinalitatea cu COUNTUNIQUE, verifica
-                    top frecvente, marcheaza cifre rare suspecte.
-5. STABILIZARE    - leaga dictionarul la sursa ca tabel viu, testeaza
-                    refresh simulat, documenteaza regula anti-deriva.
-6. CONFIRMARE     - verifica profilul cap-coada, confirma dictionarul
-                    complet auditabil, preda catre C07.
+ETAPELE C06 (axa CLASIFICARE):
+1. REALITATE      - operatorul deschide setul curat predat de C05;
+                    randurile sunt aliniate dar fara clasa, fara sens.
+2. INVESTIGATIE   - cu Copilot apar regulile de clasificare; randurile
+                    incep sa fie separate logic in grupuri.
+3. TRANSFORMARE   - se atribuie clasa A/B/C prin reguli IFS, segment prin
+                    SWITCH, eticheta externa prin XLOOKUP din nomenclator.
+4. VERIFICARE     - se confrunta regulile cu setul; niciun rand nu ramane
+                    neclasificat, scorul pe reguli e confirmat.
+5. STABILIZARE    - regula ramane stabila la randuri noi: formulele
+                    reclasifica singure, fara pas manual, fara unelte de flux.
+6. CONFIRMARE     - setul clasificat e predat catre C07 pentru masurarea
+                    impactului.
 
 NUME FISIERE SALVATE:
   exec-stage-1.jpg    (REALITATE)
@@ -309,10 +309,9 @@ ETAPA 01 · REALITATE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul deschide un fisier Excel curat (predat de C05), priveste setul
-si recunoaste ca nu stie ce contine. Imaginea trebuie sa transmita
-"tabel curat dar opac" - structura este in regula, dar continutul
-categoric ramane ascuns.
+Operatorul deschide setul curat predat de C05. Randurile sunt aliniate si
+lizibile, dar toate arata la fel: niciunul nu are clasa, segment sau scor.
+Imaginea transmite "rinduri curate dar fara sens atribuit".
 
 NUME FISIER: exec-stage-1.jpg
 
@@ -321,40 +320,38 @@ PROMPT (copy-paste integral)
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
 Subject: A printed business data table page laid on a dark wooden surface,
-photographed slightly from above. The table shows multiple rows of clean
-data with well-aligned columns - the structure is visibly perfect (clean
-header row, no chaos, no broken cells). However, all column headers are
-covered by a soft translucent gray fog, making the column meanings
-unreadable. The body data is sharp and clean, but the taxonomy is hidden.
-A small folded paper in the corner shows the C05 stamp "STRUCTURE OK"
-in faded amber ink, indicating the previous construction has handed
-over a clean set.
+photographed slightly from above. The rows are clean and well aligned,
+the structure is visibly perfect. But every single row looks identical:
+no color coding, no group, no class label, no score, completely
+undifferentiated. A small folded paper in the corner shows a faded amber
+handover note from the previous construction, indicating a clean set has
+just been received and now awaits meaning.
 
 Lighting: A single overhead spotlight illuminates the table page with
-cool neutral white light. The fog over the headers is lit with a soft
-diffuse haze. A faint amber rim accent along the right edge of the page
-suggests warmth is approaching but has not yet arrived.
+cool neutral white light, making every row look uniform and flat. A faint
+amber rim accent along the right edge of the page suggests warmth and
+classification are approaching but have not yet arrived.
 
-Composition: Subject occupies center-left two-thirds of frame. The
-right third remains in deep shadow with no detail. Slight three-quarter
-angle camera position.
+Composition: Subject occupies center-left two-thirds of frame. The right
+third remains in deep shadow with no detail. Slight three-quarter angle
+camera position.
 
 Background: Matte black dark wood or brushed dark surface, slight grain
 texture visible. No other props.
 
 Color palette: Strictly monochromatic dark scene, white paper, black
-printed text, soft gray fog over column headers, faint amber rim accent
-on right edge.
+printed text, all rows uniform, faint amber rim accent on right edge.
+No blue, no green, no red.
 
-Mood: Quiet recognition. The operator sees the page is clean but admits
-the categories are still unknown. Anticipation of investigation.
+Mood: Quiet recognition. The rows are clean but anonymous, no row has
+meaning yet. Anticipation of classification.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
 Negative prompt: no people, no faces, no hands, no text overlays, no
-logos, no readable brand text, no other colors except subtle gray and
-amber rim, no cluttered background, no fantasy or sci-fi elements,
-no cartoon style.
+dashboards, no charts, no logos, no readable brand text, no other colors
+except subtle amber rim, no cluttered background, no fantasy or sci-fi
+elements, no cartoon style.
 
 
 ─────────────────────────────────────────────────────────────────────────
@@ -362,9 +359,9 @@ ETAPA 02 · INVESTIGATIE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul activeaza Copilot si ruleaza Promptul 1 de inventar al
-cifrelor. Imaginea transmite "interogarea sistemului" - lumina aurie
-emerge din paginile setului, cifrele incep sa iasa la suprafata.
+Cu Copilot apar primele reguli de clasificare. Randurile incep sa fie
+separate logic in grupuri distincte, prin ghidaje aurii. Imaginea
+transmite "regula apare, ordinea se naste din logica".
 
 NUME FISIER: exec-stage-2.jpg
 
@@ -372,40 +369,38 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: The same printed business data table from stage 1, now visibly
-"awakened" - small rectangular kraft paper labels are emerging from
-beneath the gray fog over the column headers, beginning to float upward
-above the page surface. Three labels are already clearly visible above
-the page in sharp focus: one labeled "CLIENT", one labeled "JUDET",
-one labeled "CATEGORIE". Two more are partially emerging, still
-half-covered by the fog. A faint golden circuit pattern (suggesting AI
-augmentation by Copilot) is etched onto the wooden surface beneath the
-page, glowing softly amber.
+Subject: A large printed business dataset spread across a dark executive
+desk. The table structure is already clean and organized. Multiple rows
+are illuminated by thin amber classification guides that begin grouping
+records into distinct categories. Several rows are subtly highlighted with
+elegant floating labels such as Category A, Category B and Category C, but
+the labels are intentionally blurred and unreadable. The dataset appears
+to be organizing itself according to invisible business rules. Thin amber
+pathways connect similar records together, forming clear clusters inside
+the table. Order is emerging from logic.
 
-Lighting: Two-zone lighting. The table page itself is still lit by cool
-neutral light. The emerging labels are lit by warm amber glow (#FFD400)
-from above, with the brightest labels casting subtle amber reflections
-back onto the paper.
+Lighting: Premium cinematic lighting. Cool white spotlight from above
+illuminating the center of the table. Warm Trainity amber light begins to
+flow through the grouped records. Deep shadows around the edges.
 
-Composition: Subject occupies center-left two-thirds of frame. Labels
-emerging upward creating vertical visual energy. Right third in shadow
-but with a faint amber circuit pattern visible.
+Composition: Dataset occupies the left two-thirds of the frame.
+Classification clusters dominate the center. Right third remains dark and
+empty for cinematic tension.
 
-Background: Matte black dark wood with subtle etched golden circuit lines
-beneath the page area.
+Background: Matte black executive desk surface. No keyboards, no clutter.
 
-Color palette: Cool monochrome on the page itself, warm amber yellow
-(#FFD400) on the emerging labels and circuit etching. Strictly no other
-colors.
+Color palette: Pure black background, pure white paper, Trainity amber
+(#FFD400) as the only accent color. No blue, no green, no purple, no red.
 
-Mood: Active discovery. The categorical structure begins to reveal
-itself through the inquiry. AI augmented investigation in progress.
+Mood: Discovery. Rules are emerging. Classification is not guessing, it is
+the act of applying consistent logic.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
-Negative prompt: no people, no faces, no hands, no AI mascots or robots,
-no text overlays, no logos, no other colors except warm amber and the
-natural monochrome, no fantasy or sci-fi elements, no cartoon style.
+Negative prompt: no people, no faces, no hands, no dashboards, no charts,
+no KPIs, no Power BI, no futuristic holograms, no sci-fi effects, no
+colorful UI, no logos, no readable text, no watermarks, no blue accents,
+no green accents, no clutter, no fantasy elements, no cartoon style.
 
 
 ─────────────────────────────────────────────────────────────────────────
@@ -413,9 +408,9 @@ ETAPA 03 · TRANSFORMARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul ruleaza Promptul 2 si aplica granularitatea atomica. Imaginea
-transmite "marcarea fiecarui rand cu identitate atomica" - randurile
-primesc fiecare o cifra vizuala mica indicand "1 RAND = 1 FACTURA".
+Regulile se aplica: fiecare rand capata clasa A/B/C (IFS), un segment
+operational (SWITCH) si o eticheta externa de business (XLOOKUP din
+nomenclator). Imaginea transmite "sensul se construieste din reguli".
 
 NUME FISIER: exec-stage-3.jpg
 
@@ -423,39 +418,38 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed business data table page, photographed close-up at
-slight angle. Each individual data row is now marked with a tiny amber
-seal or stamp at its left edge - a small circular mark with the text
-"1 RAND" inscribed in micro typography. The rows are aligned perfectly,
-each carrying its atomic identity stamp. At the top of the page floats
-a larger labeled rectangle showing "DISPERSIE" in bold black on
-amber background, asserting the granularity of the entire set. Column
-headers are now fully readable in sharp focus: "NR_FACTURA",
-"DATA_FACTURA", "CLIENT_NUME", "JUDET", "CATEGORIE", "VALOARE_NETA".
+Subject: The same printed business dataset, now fully classified. The rows
+are grouped into three crisp horizontal bands, each band marked with a
+bold readable amber class tab: A, B, C. To the right of the table, three
+small kraft paper labels float above the page in sharp focus, connected to
+the rows by thin amber filaments: one reads SEGMENT, one reads ETICHETA,
+one reads SCOR. A separate small reference card at the upper corner, linked
+by a thin amber thread, suggests an external nomenclature feeding the
+business label. Meaning is visibly being assembled from rules.
 
-Lighting: Warm amber light dominates from above, with each amber row
-seal catching its own micro-highlight. The entire scene now shifts from
-cool to warm tone.
+Lighting: Warm amber key light (#FFD400) from above sculpts the three class
+bands, the brightest band catching a clean golden highlight. Cool fill on
+the unclassified margins for contrast.
 
-Composition: Subject fills the frame with the data table almost edge-to-
-edge. Slight three-quarter angle. The floating "DISPERSIE" label
-hovers in upper left.
+Composition: Table occupies center-left two-thirds. The three floating
+labels and the reference card sit in the upper-right. Right edge fades to
+deep shadow.
 
-Background: Matte black dark wood, fully warm-toned.
+Background: Matte black dark wood surface, subtle grain. No other props.
 
-Color palette: Warm amber yellow (#FFD400) accents on every row seal
-and on the floating granularity label. White paper, black readable text.
-Strictly no other colors.
+Color palette: White paper, black printed text, warm amber (#FFD400) on the
+class tabs, filaments and labels. Strictly no other colors. No blue, no
+green, no red.
 
-Mood: Atomic precision. Every row has been identified and stamped with
-its meaning. The granularity is no longer a mystery.
+Mood: Construction of meaning. Confident, deliberate, every row receiving
+its class, segment and external label through explicit rules.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the labels described, no logos, no other colors except amber and natural
-monochrome, no cluttered background, no fantasy or sci-fi elements,
-no cartoon style.
+Negative prompt: no people, no faces, no hands, no dashboards, no charts,
+no KPIs, no Power BI, no logos, no readable brand text beyond the A B C
+class tabs and the three short labels described, no other colors except
+amber, no sci-fi holograms, no cartoon style, no flat icons.
 
 
 ─────────────────────────────────────────────────────────────────────────
@@ -463,9 +457,9 @@ ETAPA 04 · VERIFICARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confrunta cardinalitatea, top frecvente si cifre rare.
-Imaginea transmite "audit forensic" - se vad bare de frecventa pentru
-fiecare coloana, iar valorile rare sunt marcate cu mici fanioane galbene.
+Regulile sunt confruntate cu setul: se verifica fiecare clasa, niciun rand
+nu ramane neclasificat, scorul pe reguli este confirmat. Imaginea transmite
+"regulile decid, nu opinia, fiecare rand are clasa".
 
 NUME FISIER: exec-stage-4.jpg
 
@@ -473,39 +467,37 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed data analysis sheet on a dark wooden surface, showing
-multiple horizontal bar charts in classical editorial style. Each chart
-represents one categorical column with bars of decreasing length showing
-top-5 frequencies. Three bars on the chart for "CATEGORIE" are particularly
-prominent (Hardware longest, then Consumabile, then Software). A fourth
-much smaller bar at the bottom of that chart shows "Servicii 2.5%" and
-is marked with a small amber pin flag indicating "RARE". To the right
-of each chart, a small panel shows the count of distinct values
-(15 CLIENTI, 8 JUDETE, MEDIE vs MEDIANĂ, 12 CANTITATI). A magnifying glass
-made of brass hovers over the "Servicii" rare flag.
+Subject: The classified business dataset under inspection. Every row now
+carries a small amber class tag (A, B or C) at its left edge, and a thin
+amber check mark appears beside each row, confirming none is left
+unclassified. A magnifier lens rests over one band, its circle of focus
+showing the class rule holding true for those rows. A tidy column of small
+amber score bars runs along the right side, each aligned to its row,
+confirming the rule-based score. Nothing is flagged, every record obeys
+the rule.
 
-Lighting: Editorial print lighting, slightly warm overall. The amber pin
-flags on the rare values catch additional warm highlights. The magnifying
-glass refracts a small amber beam.
+Lighting: Cool neutral inspection light over the full table for clarity,
+with a focused warm amber pool (#FFD400) under the magnifier and along the
+verified score column.
 
-Composition: Subject fills frame centered. The charts are arranged in a
-2-column grid, top-down view, like a research paper layout.
+Composition: Table fills the center. Magnifier sits left of center over one
+class band. Score bars align down the right third before it fades to shadow.
 
-Background: Matte black dark wood.
+Background: Matte black dark surface, subtle grain. No other props.
 
-Color palette: White paper, black ink for bars and text, warm amber
-yellow (#FFD400) on pin flags, magnifying glass, and accent highlights.
-Strictly no other colors.
+Color palette: White paper, black printed text, amber (#FFD400) on class
+tags, check marks and score bars. Strictly no other colors. No red flags,
+no blue, no green.
 
-Mood: Forensic audit. Categories quantified, rare values flagged for
-attention.
+Mood: Calm verification. Trust earned through rules, not opinion. Every row
+classified, every score confirmed.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the labels described, no logos, no other colors except amber and natural
-monochrome, no fantasy or sci-fi elements, no cartoon style, no flat
-infographic icons - all charts must look like printed editorial graphics.
+Negative prompt: no people, no faces, no hands, no dashboards, no charts,
+no KPIs, no Power BI, no red error marks, no logos, no readable brand text
+beyond the A B C tags, no other colors except amber, no sci-fi elements,
+no cartoon style, no flat icons.
 
 
 ─────────────────────────────────────────────────────────────────────────
@@ -513,9 +505,9 @@ ETAPA 05 · STABILIZARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul leaga dictionarul la sursa si testeaza un refresh simulat.
-Imaginea transmite "regula anti-deriva" - dictionarul devine viu,
-conectat la set, si nu mai poate fi alterat fara detectie.
+Regula ramane stabila la randuri noi: cand apare o tranzactie noua,
+formulele o clasifica singure, fara pas manual, fara unelte de flux. Imaginea transmite
+"regula scrisa o data se aplica mereu, automat".
 
 NUME FISIER: exec-stage-5.jpg
 
@@ -523,37 +515,36 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A printed dictionary sheet on the left side of frame, connected
-via a thin glowing amber wire or filament to a printed source data table
-on the right side. The wire is taut, sharp focus, suggesting an active
-data connection. On the dictionary sheet, each row shows a column name
-and its distinct value count. A small amber lock icon stamped in the
-corner of the dictionary indicates the rule has been sealed. Between
-the two pages, a small refresh symbol (circular arrow made of amber
-light) hovers, suggesting the connection has been tested with a refresh
-operation.
+Subject: The classified business dataset as a living structured table. A
+single new row is sliding into the bottom of the table from the dark edge,
+and as it arrives it is already glowing with its own amber class tag (B),
+its segment and a score bar, as if the rule reached out and classified it
+the instant it appeared. A small engraved amber rule plaque sits beside the
+table, like a law written once and applied forever. No circular arrows,
+no flow connectors, no pipelines, the classification simply
+happens by rule.
 
-Lighting: Two-pool lighting. Warm amber pool on the dictionary side,
-warm amber on the source table side. The connecting filament between
-them is the brightest element. The lock and refresh symbol pulse softly.
+Lighting: Warm amber key light (#FFD400) concentrates on the newly arriving
+row and the rule plaque, the brightest elements. Cool fill on the rest of
+the settled table.
 
-Composition: Both papers side by side, the connecting filament drawing
-a horizontal visual line across the frame at mid-height.
+Composition: Table occupies center-left. The new row enters from lower
+right. The rule plaque sits upper-left. Right edge fades to deep shadow.
 
-Background: Matte black dark wood, with very subtle warm ambient glow.
+Background: Matte black dark wood surface, subtle grain. No other props.
 
-Color palette: White paper, black ink, warm amber yellow (#FFD400) on
-the connecting filament, lock icon, and refresh symbol. Strictly no
-other colors.
+Color palette: White paper, black printed text, amber (#FFD400) on the new
+row tag, score bar and rule plaque. Strictly no other colors. No blue, no
+green, no red.
 
-Mood: Stabilized rule. The dictionary is live, anchored to its source,
-protected against drift.
+Mood: Quiet permanence. The rule was written once and now classifies every
+new row on its own, without any manual step.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
-Negative prompt: no people, no faces, no hands, no text overlays, no
-logos, no other colors except amber and natural monochrome, no fantasy
-or sci-fi elements, no cartoon style, no flat icons.
+Negative prompt: no people, no faces, no hands, no circular arrows, no flow diagrams, no pipelines, no dashboards, no charts,
+no Power BI, no logos, no readable brand text beyond the single class tag,
+no other colors except amber, no sci-fi elements, no cartoon style.
 
 
 ─────────────────────────────────────────────────────────────────────────
@@ -561,10 +552,9 @@ ETAPA 06 · CONFIRMARE
 ─────────────────────────────────────────────────────────────────────────
 
 CONCEPT VIZUAL
-Operatorul confirma dictionarul complet auditabil si preda catre C07.
-Imaginea transmite "predarea formala" - un dosar de profil completat,
-sigilat, gata sa fie predat treptei urmatoare. Apare un nou stamp
-"PROFIL OK" si o sageata aurie catre C07.
+Setul clasificat este predat catre C07 pentru masurarea impactului.
+Imaginea transmite "ceremonie de predare: randuri cu sens, gata de
+masurat".
 
 NUME FISIER: exec-stage-6.jpg
 
@@ -572,43 +562,40 @@ PROMPT (copy-paste integral)
 
 Cinematic editorial photograph, ultra-detailed, photorealistic 8K quality.
 
-Subject: A complete data profile dossier laid on the dark surface,
-photographed slightly from above. The cover sheet of the dossier reads
-"PROFIL SET 2026" in clean editorial typography, with smaller subtitle
-"DICTIONAR · GRANULARITATE · TIPOLOGIE · FRECVENTE". A bold amber stamp
-in the corner reads "PROFIL OK". To the right of the dossier, a single
-amber arrow points off-frame to the right, with a small label below it
-reading "C07". The arrow is made of physical amber paint on the wood
-surface, not digital. The dossier appears thick - multiple pages bound
-together with an amber ribbon.
+Subject: The fully classified business dataset presented as a finished
+dossier on a dark executive desk. The table shows its three clean class
+bands (A, B, C), each row carrying its class tag, segment and score bar. A
+bold amber wax seal sits on the cover sheet, and a thin amber ribbon arrow
+points from this classified set toward a second, still-dark page at the
+right labeled only with a small amber clock-and-arrow mark, suggesting the
+next construction (C07, time) is about to receive it. The handover of a set
+that now has meaning.
 
-Lighting: Warm amber dominates from above-left, casting the dossier in
-hero light. The stamp and arrow catch additional highlights. The off-
-frame area to the right is in shadow but with faint amber glow suggesting
-"continuation".
+Lighting: Warm amber ceremonial light (#FFD400) on the sealed classified
+dossier, the brightest element. The receiving page on the right sits in
+cooler, dimmer light, waiting.
 
-Composition: Dossier occupies center-left two-thirds. The amber arrow
-on the right side draws the eye out of frame, suggesting handover. Slight
-overhead angle.
+Composition: Classified dossier occupies center-left two-thirds. The amber
+ribbon arrow crosses toward the dim receiving page in the right third.
 
-Background: Matte black dark wood. The painted amber arrow merges with
-the wood texture.
+Background: Matte black dark wood surface, subtle grain. No other props.
 
-Color palette: White paper, black ink, warm amber yellow (#FFD400) on
-stamp, ribbon, arrow, and accent highlights. Strictly no other colors.
+Color palette: White paper, black ink, warm amber (#FFD400) on seal,
+ribbon, arrow and class tags. Strictly no other colors. No blue, no green,
+no red.
 
-Mood: Closing ceremony. The profile is complete, sealed, ready for the
-next construction. Confidence and handover.
+Mood: Closing ceremony. The set is classified, sealed, ready for the next
+construction. Confidence and handover.
 
 Aspect ratio: 3:2 horizontal, 2400 by 1600 pixels.
 
-Negative prompt: no people, no faces, no hands, no text overlays beyond
-the dossier title and stamp described, no logos, no other colors except
-amber and natural monochrome, no fantasy or sci-fi elements, no cartoon
-style, no flat icons.
+Negative prompt: no people, no faces, no hands, no text overlays beyond the
+class tags and the small clock mark described, no dashboards, no charts, no
+Power BI, no logos, no other colors except amber, no fantasy or sci-fi
+elements, no cartoon style, no flat icons.
 
 
-══════════════════════════════════════════════════════════════════════════════
+══════════════════════════════
 SUMAR FIȘIERE GENERATE
 ══════════════════════════════════════════════════════════════════════════════
 
@@ -636,5 +623,5 @@ PASUL URMĂTOR DUPĂ GENERAREA TUTUROR IMAGINILOR
 4. HTML-VIDEO devine astfel un singur fisier standalone autonom.
 
 ══════════════════════════════════════════════════════════════════════════════
-SFÂRȘIT FIȘIER CREATIVE-Excel-05-Clasificare.txt
+SFÂRȘIT FIȘIER CREATIVE-Excel-06-Clasificare.txt
 ══════════════════════════════════════════════════════════════════════════════
