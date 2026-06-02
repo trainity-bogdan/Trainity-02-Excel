@@ -122,8 +122,9 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
   C12 „Întrebi de ce. Modelul explică." Verbul de treaptă (întreb/răspund) trăiește AICI.
 - **SLOT DE CONSTRUCȚIE (poartă diferențierea, substantiv/verb propriu axei):** HERO,
   GREȘEALA, MANTRA, WOW, CINE DEVII. Aici verbul de treaptă e INTERZIS ca ancoră;
-  fiecare construcție își pune verbul propriu: C09 **a lega** · C10 **a măsura** ·
-  C11 **a compara** · C12 **a explica**.
+  fiecare construcție își pune verbul propriu: C09 **a lega** · C10 **a defini** ·
+  C11 **a compara** · C12 **a explica**. *(C10: motto = verbul de treaptă „măsoară";
+  verbul de construcție = „a defini" — BRAIN-006.)*
 - **Regula anti-contaminare:** verbul-semnătură al unei construcții T3 NU apare ca ancoră
   în slotturile de construcție ale alteia. „Compar" e al C11, nu intră în WOW/mantra C09;
   „măsor/cât" e al C10; „de ce/explic" e al C12. (Detectorul tier-aware le scopează.)
@@ -145,8 +146,79 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 - **Verb-semnătură C09:** *a lega* (ancoră în hero/greșeală/mantra). Verbul de treaptă
   (întreb/răspund) rezervat mottoului. Slotturile NU se mai redeschid: sunt LOCKED.
 
-## §T4 — RAPORTARE · §T5 — AUTOMATIZARE
-- *Goale. Se completează prin TIER SEED la prima construcție a fiecărei trepte.*
+### §T3 · SPEC C10 MĂSURI — LOCKED v1.0 (BRAIN-006, varianta revizuită)
+- **Problema:** ai un model, dar fiecare calculează altă cifră pentru aceeași întrebare; o cifră bună pentru o felie e greșită pentru alta.
+- **Output:** o măsură stabilă (măsura vie) — o cifră care înseamnă același lucru pentru toți, corectă în orice context.
+- **Instrumente:** măsuri, agregări, DAX de bază, context de filtrare, Power Pivot, single source of truth.
+- **HERO:** „Cum scriu o cifră o dată și răspunde corect oriunde?"
+- **BOMBĂ:** „O cifră bună pentru un client. Greșită pentru toți ceilalți."
+- **GREȘEALA:** „Oamenii scriu un total pentru fiecare felie. Profesioniștii scriu o măsură pentru toate."
+- **AHA (lock):** „Un număr stă în tabel. O măsură trăiește în întrebare."
+- **MANTRA:** „Nu scriem cifra. O definim." (cuvânt-cheie galben: *definim*)
+- **WOW:** „Înainte, o cifră bună pentru o singură felie. Acum, o măsură care răspunde corect pentru orice felie."
+- **MOTTO:** „Întrebi cât. Modelul măsoară." (slot de treaptă)
+- **CINE DEVII:** „Nu mai scrii un total. Definești o măsură care răspunde singură."
+- **PAYOFF:** „Un model care răspunde a devenit un model care măsoară."
+- **MIZA:** „Un director trăiește cu rapoarte care nu se potrivesc: trei oameni, trei totaluri pentru aceeași întrebare. C10 e momentul în care o cifră se definește o singură dată și răspunde corect oriunde: pentru orice client, lună sau produs. Nu mai e numărul cuiva. E măsura în care toți au încredere, fiindcă e una singură."
+- **Verb-semnătură:** *a defini* (ancoră în hero/greșeală/mantra/cine-devii). Motto = verbul de treaptă „măsoară".
+- **Identitate:** măsura vie · define once · context-aware · single source of truth.
+- **NU are voie:** ranking/top/bottom/comparații (C11), explicații cauzale (C12), dashboard (T4), acțiune (T5).
+- **Gardă anti-contaminare:** „compar/care" (C11) și „de ce/explic" (C12) INTERZISE ca ancoră în slotturile C10.
+
+### §T3 · SPEC C11 COMPARAȚII — LOCKED v1.0 (BRAIN-006)
+- **Problema:** ai măsuri corecte, dar nu știi care contează; toate arată bine.
+- **Output:** clasament / diferență / contribuție (care e mai mare, și cu cât).
+- **Instrumente:** ranking, top/bottom, diferențe, contribuții (% din total), sortare analitică, ABC/Pareto *ca instrumente de comparație* (nu ca identitate).
+- **HERO:** „Cum transform măsurile într-un clasament?"
+- **BOMBĂ:** „Zece cifre corecte. Și tot nu știi care contează."
+- **GREȘEALA:** „Oamenii privesc cifrele una câte una. Profesioniștii le compară."
+- **AHA (lock):** „Un număr nu e mare sau mic. E mare sau mic față de altul."
+- **MANTRA:** „Nu citim cifrele. Le comparăm." (cuvânt-cheie galben: *comparăm*)
+- **WOW:** „Zece rapoarte, fiecare cu cifra lui. Acum un singur clasament care spune care contează."
+- **MOTTO:** „Întrebi care. Modelul compară." (slot de treaptă)
+- **CINE DEVII:** „Nu mai citești cifre. Vezi care contează."
+- **PAYOFF:** „Un model care măsoară a devenit un model care compară."
+- **MIZA:** „Un director nu vrea o listă de cifre. Vrea să știe care client, care produs, care lună contează cel mai mult, și cu cât. C11 e momentul în care cifrele se așază într-un clasament: nu doar cât, ci care, ca să știi unde să te uiți întâi. Fără el, ai măsuri corecte și tot nu știi pe ce să te concentrezi."
+- **Verb-semnătură:** *a compara*. Motto = verbul de treaptă „compară".
+- **NU are voie:** explicații cauzale (C12), dashboard/grafic publicabil (T4), decizie automată (T5).
+- **Gardă anti-contaminare:** „de ce/explic" (C12) și „a defini/măsoară" (C10) INTERZISE ca ancoră în slotturile C11.
+
+### §T3 · SPEC C12 INTERPRETARE — LOCKED v1.0 (BRAIN-006 · închide T3)
+- **Problema:** știi care a crescut/scăzut, dar nu de ce; un clasament fără cauză nu e o decizie.
+- **Output:** insight verbal / cauză / înțeles (citit din model). ÎNCHIDE treapta T3.
+- **Instrumente:** citire din model, drill-down ANALITIC (citire, nu widget interactiv = T4), explicație, cauză, insight verbal, citire cross-tabel.
+- **HERO:** „Cum transform clasamentul în înțeles?"
+- **BOMBĂ:** „Știi care a crescut. Nu știi de ce."
+- **GREȘEALA:** „Oamenii ghicesc de ce. Profesioniștii citesc de ce, în date."
+- **AHA (lock):** „Cifrele spun ce. Numai interpretarea spune de ce."
+- **MANTRA:** „Nu ghicim de ce. Explicăm." (cuvânt-cheie galben: *Explicăm*)
+- **WOW:** „Un clasament care arăta că ceva a crescut. Acum și motivul pentru care a crescut."
+- **MOTTO:** „Întrebi de ce. Modelul explică." (slot de treaptă)
+- **CINE DEVII:** „Nu mai vezi un clasament. Înțelegi de ce arată așa."
+- **PAYOFF:** „Un model care compară a devenit un model care explică. Setul nu mai e doar cunoscut, e interpretat."
+- **MIZA:** „Un director nu se oprește la «care a scăzut». Întreabă imediat «de ce». C12 e momentul în care datele nu doar arată ce s-a întâmplat, ci explică de ce: ce client, ce produs, ce perioadă a tras cifra în jos sau în sus. E diferența dintre un raport care constată și o analiză care lămurește. Cu C12, setul a parcurs tot drumul: corect (T1), înțeles (T2), interpretat (T3)."
+- **Verb-semnătură:** *a explica*. Motto = verbul de treaptă „explică".
+- **Identitate LOCK:** INTERPRETARE / „de ce". Tema veche „What-if / scenarii business" RETRASĂ din identitate (BRAIN-006); poate rămâne, cel mult, instrument marginal, niciodată identitate.
+- **NU are voie:** dashboard / grafic / raport vizual (T4); decizie / alertă / acțiune / recomandare executată (T5). C12 explică verbal, nu vizualizează și nu acționează.
+- **Gardă anti-contaminare:** „a compara/care" (C11) INTERZIS ca ancoră; orice fugă spre vizual = T4, orice fugă spre acțiune = T5.
+
+## §T4 — RAPORTARE · §T5 — AUTOMATIZARE (granițe LOCKED BRAIN-006; identitatea completă se seedează la C13/C17)
+**Formula de treaptă (LOCKED):** T3 produce răspunsul · T4 îl face vizibil · T5 îl pune în acțiune.
+
+### §T4 — RAPORTARE / COMUNICARE VIZUALĂ
+- **Întrebarea treptei:** „Cum vede altcineva, dintr-o privire?"
+- **Output:** interfața vizuală — dashboard / cockpit / scorecard / narrative BI / raport vizual.
+- **Permis:** a face răspunsul (produs de T3) vizibil pentru o audiență; ierarhie vizuală, slicere, charturi.
+- **Interzis:** a inventa răspunsuri/măsuri/cauze NOI (= T3, se consumă, nu se nasc la T4); a acționa automat (= T5).
+- **Unde începe T5:** când interfața nu mai e citită de un om care apoi decide, ci sistemul declanșează singur.
+
+### §T5 — AUTOMATIZARE / ACȚIUNE
+- **Întrebarea treptei:** „Cum se întâmplă fără mine?"
+- **Output:** sistemul autonom — refresh automat, alertă, flux recurent, acțiune declanșată, sistem end-to-end.
+- **Permis:** a pune răspunsul pe pilot automat / a declanșa acțiuni la prag.
+- **Interzis:** a reface analiza T3 sau designul vizual T4 ca lecție nouă; T5 orchestrează ce există.
+
+**Nuanța deciziei (LOCKED):** decizia UMANĂ stă între T4 și T5 (omul citește raportul T4 și hotărăște = consumatorul pachetului, în afara construcțiilor). Decizia AUTOMATĂ / acțiunea declanșată = T5.
 
 ---
 

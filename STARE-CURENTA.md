@@ -1,7 +1,21 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V66 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Versiune sistem:** V67 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
+
+**Sesiunea V67 — sumar (ÎNGHEȚ T3 CAP-COADĂ · BRAIN-006, sub protocolul BRAIN<->CLAUDE):**
+
+1. **T3 ANALIZĂ înghețată complet** în governance, conform deciziilor BRAIN-006. Lanț LOCKED: C09 RELAȚII (a lega/Ce pot întreba) · C10 MĂSURI (a defini, motto „măsoară"/Cât) · C11 COMPARAȚII (a compara/Care) · C12 INTERPRETARE (a explica/De ce). Transformare cap-coadă: model -> măsură -> clasament -> explicație.
+2. **Bible §T3 extins** cu SPEC 11-slot LOCKED pentru C10, C11, C12 (pe lângă C09 deja locked în V66), fiecare cu problema/output/instrumente/gardă anti-contaminare. C10 adoptat în varianta REVIZUITĂ (măsura vie / define once / context-aware / single source of truth), AHA „Un număr stă în tabel. O măsură trăiește în întrebare.", verb de construcție „a defini" (motto rămâne „măsoară"). C12 = INTERPRETARE, tema veche „What-if/scenarii" RETRASĂ din identitate.
+3. **Bible §T4/§T5 completate cu granițele LOCKED** (erau goale): formula „T3 produce răspunsul · T4 îl face vizibil · T5 îl pune în acțiune"; decizia umană între T4 și T5, decizia automată = T5.
+4. **06-MAP realiniat** la lanțul locked: temele vechi (C10 „KPI compoziti", C11 „Prioritizare ABC/Pareto", C12 „What-if") retrogradate din identitate la instrumente; tabelul T3 rescris cu identitate/verb/întrebare.
+5. **Document nou `_system/12-ARHITECTURA-CONCEPTUALA-T3.md`** (autoritate conceptuală T3, oglinda doc 11 pentru T2): ce e T3, ce rezolvă, lanțul C09-C12, arhitectura fiecărei construcții, instrumente, livrabile, granițe, riscuri, decizii locked.
+6. **C10 WARNING închis** prin adoptarea variantei revizuite. **Contaminarea de documente (06-MAP stale) închisă.** C09 rămâne gata de implementare (blueprint dedicat); C10/C11/C12 au SPEC locked, blueprint-urile dedicate se fac la SEED-ul fiecăreia.
+7. **Protocol BRAIN<->CLAUDE activ:** mandatele vin în `BRAIN-TO-CLAUDE.md`, rapoartele în `CLAUDE-TO-BRAIN.md`. BRAIN-001/002 (audit+fix T1), BRAIN-003/005 (audit+brainstorming T3), BRAIN-006 (acest îngheț) executate.
+8. **T1 status:** PASS (BRAIN-001 audit + BRAIN-002 cele 3 reziduuri FILM închise). Saturația „Oamenii/Profesioniștii" rămâne semnătură permisă, risc de saturație notat pentru trepte viitoare.
+
+**Versiune sistem (istoric):** V66 (consolidat · marker SHA în `_system/VERSIUNI.md`)
+**Ultima actualizare V66:** 2 iunie 2026
 
 **Sesiunea V66 — sumar (ÎNGHEȚARE IDENTITATE C09 RELAȚII + gramatica de treaptă T3):**
 

@@ -189,16 +189,20 @@ teritoriu C09. C08 doar recunoaște ecosistemul; C09 îl activează.
 
 ## TREAPTA 3 · ANALIZARE (C09-C12)
 
-**Promisia pedagogică:** transformă datele, cunoașterea, în insight, prioritizare, decizie. Datele încep să spună povestea business-ului.
+**Promisia pedagogică:** transformă cunoașterea (T2) în răspunsuri: model interogabil, măsuri, clasamente, explicații. Datele încep să răspundă la întrebări de business.
 
-**Tehnologie dominantă:** Power Pivot + Data Model (Pivot Tables, DAX measures, relații).
+**Tehnologie dominantă:** Power Pivot + Data Model (relații, DAX measures, citire cross-tabel).
 
-| Construcție | Tema posibilă | Status |
-|---|---|---|
-| C09 | Relații între seturi — ACTIVAREA ecosistemului recunoscut în C08 (merge/1:M/Data Model) | NESTAR |
-| C10 | KPI-uri compozite cu DAX | NESTAR |
-| C11 | Prioritizare (ABC analysis, Pareto avansat) | NESTAR |
-| C12 | What-if analysis (scenarii business) | NESTAR |
+**Lanț LOCKED (BRAIN-006, autoritate = Bible §T3):** model -> măsură -> clasament -> explicație.
+
+| Construcție | Identitate LOCKED | Verb-semnătură | Întrebare | Status |
+|---|---|---|---|---|
+| C09 | RELAȚII — activează ecosistemul recunoscut în C08 (merge/1:M/Data Model), model interogabil | a lega | Ce pot întreba? | NESTAR |
+| C10 | MĂSURI — definește o măsură vie, repetabilă, context-aware (single source of truth) | a defini (motto: măsoară) | Cât? | NESTAR |
+| C11 | COMPARAȚII — așază măsurile în clasament/diferență/contribuție (ABC/Pareto = instrumente) | a compara | Care? | NESTAR |
+| C12 | INTERPRETARE — explică „de ce", insight verbal/cauză citită din model | a explica | De ce? | NESTAR |
+
+> **Realiniere BRAIN-006:** temele vechi „C10 KPI compoziti DAX", „C11 Prioritizare ABC/Pareto", „C12 What-if/scenarii business" NU mai sunt identități principale. C10 = MĂSURI (DAX e instrument), C11 = COMPARAȚII (ABC/Pareto sunt instrumente de comparație), C12 = INTERPRETARE (What-if retras, trăgea spre T5). SPEC complet 11-slot = Bible §T3.
 
 **T3 e închidere treaptă:** la C12 se închide blocul ANALIZA cu vocabular pedagogic ("am completat analiza setului, treapta T3 finalizată") conform R-V02.7.
 
