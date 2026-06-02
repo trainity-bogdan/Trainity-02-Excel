@@ -92,13 +92,6 @@ body {
 .side-nav::-webkit-scrollbar-track { background: transparent; }
 .side-nav::-webkit-scrollbar-thumb { background: #333; }
 
-.nav-brand {
-  padding: 18px 18px 14px;
-  border-bottom: 1px solid #222;
-}
-.nav-brand-label { font-size: 10px; letter-spacing: 2px; font-weight: 700; color: var(--grey-3); margin-bottom: 6px; }
-.nav-brand-title { font-size: 15px; font-weight: 700; color: var(--y); line-height: 1.15; }
-
 .nav-progress {
   padding: 14px 18px;
   border-bottom: 1px solid #222;
@@ -282,9 +275,6 @@ body.has-continue .stage-toast { bottom: 88px; }
     height: calc(100vh - 110px);
     max-height: calc(100vh - 110px);
   }
-  .nav-brand { padding: 12px 18px 9px; }
-  .nav-brand-label { margin-bottom: 4px; font-size: 9px; }
-  .nav-brand-title { font-size: 13px; }
   .nav-progress { padding: 9px 18px; }
   .nav-progress-row { margin-bottom: 5px; }
   .nav-progress-num { font-size: 19px; }
@@ -403,24 +393,28 @@ body.has-continue .stage-toast { bottom: 88px; }
 /* ============ MANTRA ============ */
 .mantra-band {
   text-align: center;
-  padding: 48px 24px;
+  padding: clamp(48px, 9vw, 84px) 16px;
   margin: 48px 0;
   border-top: 1px solid var(--grey-5);
   border-bottom: 1px solid var(--grey-5);
 }
 .mantra-band-sub {
-  font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
-  color: var(--grey-3); margin-bottom: 12px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  color: var(--grey-3); margin-bottom: 22px;
   text-transform: uppercase;
 }
 .mantra-band-main {
-  font-size: clamp(20px, 2.6vw, 28px);
-  font-weight: 800; letter-spacing: -0.5px;
-  line-height: 1.25;
+  font-size: clamp(30px, 7vw, 64px);
+  font-weight: 900; letter-spacing: -1.5px;
+  line-height: 1.02;
+  color: #a6a6a6;
+  max-width: 16ch; margin: 0 auto;
 }
 .mantra-band-main mark {
   background: var(--y); color: var(--k);
-  padding: 2px 8px;
+  padding: 0 .12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* ============ SECTION MARKERS ============ */
@@ -678,10 +672,10 @@ body.has-continue .stage-toast { bottom: 88px; }
 .stage.visible .stage-quote { display: block; }
 
 /* HERO + anomaly-grid + mantra + exec-hero raman vizibile mereu (sunt cadru, nu pasi) */
-.final-section, .next-section, .payoff-section {
+.final-section, .next-section, .payoff-section, .transformare-section {
   display: none;
 }
-.final-section.visible, .next-section.visible, .payoff-section.visible {
+.final-section.visible, .next-section.visible, .payoff-section.visible, .transformare-section.visible {
   display: block;
 }
 @keyframes stepBodyIn {
@@ -1320,9 +1314,6 @@ body.has-continue .scroll-top { bottom: 88px; }
     height: calc(100vh - 92px);
     max-height: calc(100vh - 92px);
   }
-  .nav-brand { padding: 8px 16px 6px; }
-  .nav-brand-label { font-size: 8px; margin-bottom: 2px; letter-spacing: 1.5px; }
-  .nav-brand-title { font-size: 12px; }
   .nav-progress { padding: 6px 16px; border-bottom: 1px solid #1a1a1a; }
   .nav-progress-row { margin-bottom: 3px; }
   .nav-progress-num { font-size: 16px; }
@@ -1512,7 +1503,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       </section>
 
       <section class="intriga-bomb">
-        <p class="cover-subtitle"><span class="ib-1">Arată curat.</span> <span class="ib-2">Nu este.</span></p>
+        <p class="cover-subtitle"><span class="ib-1">Invizibil cu ochiul.</span> <span class="ib-2">Vizibil sub audit.</span></p>
       </section>
 
       <!-- ARC TU: recunoastere -> greseala -> aha -> cine devii -->
@@ -1711,35 +1702,35 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">03</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 3 · CURĂȚARE DEMONSTRATĂ</div>
+      <div class="stage-label">ETAPA 3 · DEMONSTRAȚIA RECUPERABILITĂȚII</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
-      <div class="stage-tags"><span class="phase-tag">POWER QUERY</span><span class="type-tag">Promptul 2</span></div>
+      <div class="stage-tags"><span class="phase-tag">FORMULE</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Cu contaminările identificate, demonstrăm neutralizarea: fiecare categorie poate fi curățată fără să atingem valoarea reală. Mecanismul permanent îl construiește C04.</p>
+  <p class="stage-quote">Cu contaminările identificate, dovedim recuperabilitatea: fiecare categorie poate fi recuperată printr-o coloană martor cu formulă, fără să atingem datele reale. Nu curățăm masterul, dovedim că valoarea poate fi recuperată. Mecanismul permanent îl construiește C04.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
-    <h3 class="step-title">Încarcă foaia Vanzari în Power Query</h3>
+    <h3 class="step-title">Construiește coloanele martor de recuperare</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Date > Obține date > Din tabel/interval. Foaia Vanzari intră ca sursă în editorul Power Query. Sursa contaminată rămâne intactă pentru trasabilitate.</p>
+    <p class="step-action">Lângă fiecare coloană contaminată adaugi o coloană martor cu o formulă care recuperează valoarea reală: TRIM și CLEAN pentru spații și caractere de control, SUBSTITUTE pentru zero-width și soft hyphen, VALUE pentru numere ca text, DATEVALUE pentru date ca șir. Coloana sursă rămâne neatinsă.</p>
     
   </div>
 </div>
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Rulează Promptul 2 de neutralizare</h3>
+    <h3 class="step-title">Rulează Promptul 2 de recuperare forensic</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Lipești promptul pentru pașii M de curățare. Fiecare categorie primește un pas dedicat: Text.Trim, Text.Replace pe zero-width, Number.From, Date.From.</p>
+    <p class="step-action">Lipești promptul. AI arată, pentru fiecare categorie, formula martor care recuperează valoarea reală. Nu modifică nicio celulă sursă, doar dovedește recuperabilitatea.</p>
     <div class="prompt-box">
-      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE NEUTRALIZARE TEHNICĂ</div>
-      <div class="prompt-text">Construiește în Power Query o neutralizare demonstrativă a celor cinci categorii de contaminare invizibilă, fără să modifice valoarea reală. Aplică Text.Trim pe client_nume și produs_nume; Text.Replace pe caractere zero-width și soft hyphen în client_nume; Text.Replace pe caractere de rând nou în produs_nume; conversie Number.From și tip Number pe valoare_neta; conversie Date.From și tip Date pe data_factura. Scopul e să dovedești că fiecare contaminare poate fi neutralizată fără pierdere de valoare. Mecanismul permanent, refreshabil la fiecare export, îl construiești în C04.</div>
+      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE RECUPERARE FORENSIC</div>
+      <div class="prompt-text">Pentru fiecare din cele cinci categorii de contaminare invizibilă, arată într-o coloană martor formula care recuperează valoarea reală fără să modifice coloana sursă: TRIM și CLEAN pe client_nume și produs_nume; SUBSTITUTE pe caractere zero-width și soft hyphen în client_nume; SUBSTITUTE pe caractere de rând nou în produs_nume; VALUE pe valoare_neta stocată ca text; DATEVALUE pe data_factura stocată ca șir. Scopul e să dovedești că fiecare contaminare e recuperabilă, nu să cureți datele. Masterul rămâne intact. Mecanismul permanent de curățare, aplicat la fiecare export nou, este construit în construcția următoare.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -1747,19 +1738,19 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="step" data-step="9">
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
-    <h3 class="step-title">Aplică și încarcă foaia auditată</h3>
+    <h3 class="step-title">Confruntă martorul cu sursa contaminată</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Power Query execută pașii. Contaminările dispar tehnic, valoarea semantică rămâne. Închide și încarcă rezultatul pe foaia Vanzari_AUDIT.</p>
-    <div class="section-sublabel">DOVADA NEUTRALIZĂRII</div>
+    <p class="step-action">Pui față în față coloana contaminată și coloana martor. Un VLOOKUP care acum găsește, o sumă care acum se calculează, o dată care acum se sortează: dovada că valoarea era acolo, doar ascunsă. Masterul nu s-a modificat, recuperabilitatea e demonstrată.</p>
+    <div class="section-sublabel">DOVADA RECUPERABILITĂȚII</div>
     <ul class="ba-list">
 <li class="ba-item">
       <div class="ba-item-indicator">Spații ascunse</div>
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">spații la final de text invizibile</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">Text.Trim aplicat, zero spații parazite</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">TRIM și CLEAN recuperează textul, zero spații parazite</span></div>
       </div>
     </li>
 <li class="ba-item">
@@ -1767,7 +1758,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">zero-width și soft hyphen între litere</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">Text.Replace pe codepoint, text curat</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">SUBSTITUTE pe codepoint, text curat</span></div>
       </div>
     </li>
 <li class="ba-item">
@@ -1775,7 +1766,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">șiruri excluse din SUM clasic</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">Number.From plus tip Number, numeric pur</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">VALUE recuperează numărul, devine calculabil</span></div>
       </div>
     </li>
 <li class="ba-item">
@@ -1783,15 +1774,15 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">șiruri DD.MM.YYYY fără tip dată</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">Date.From plus tip Date, dată reală</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">DATEVALUE recuperează data, devine sortabilă</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Re-export luna viitoare</div>
+      <div class="ba-item-indicator">Valoarea reală</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">audit manual de la zero</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ascunsă sub contaminare invizibilă</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">un singur Refresh All</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">recuperată prin formulă, master intact</span></div>
       </div>
     </li>
     </ul>
@@ -1804,21 +1795,21 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">04</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 4 · CONSERVARE DEMONSTRATĂ</div>
+      <div class="stage-label">ETAPA 4 · VERIFICAREA DOVEZII</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Conservare semantică</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Reconciliere</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în neutralizare. Demonstrăm numeric că valoarea reală a datelor a fost păstrată.</p>
+  <p class="stage-quote">Nu avem încredere oarbă în dovadă. Verificăm că fiecare contaminare detectată e explicată, reconciliată cu numărul real, și că valoarea se conservă cap-coadă.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
-    <h3 class="step-title">Confirmă numărul pe fiecare categorie</h3>
+    <h3 class="step-title">Reconciliază detectat cu explicat</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Aplică pe foaia Vanzari_AUDIT verificările forensic: zero spații la final, zero zero-width, zero soft hyphen, zero trailing newline, zero numere ca text, zero date ca șir. Toate cele cinci categorii la zero.</p>
+    <p class="step-action">Fiecare din cele cinci categorii are un număr de celule afectate și o cauză tehnică explicată. Numărul detectat de AI în Etapa 2 se potrivește cu numărul confirmat de formulele martor. Zero contaminare neexplicată, zero fals pozitiv.</p>
     
   </div>
 </div>
@@ -1829,18 +1820,18 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">SUM pe valoare_neta în Vanzari_AUDIT. Compară cu martorul fixat în Etapa 1 prin SUMPRODUCT cu VALUE. Sumele trebuie să fie identice. Conservarea semantică este dovedită.</p>
+    <p class="step-action">SUM pe coloana martor de recuperare a lui valoare_neta. Compară cu martorul fixat în Etapa 1 prin SUMPRODUCT cu VALUE. Sumele sunt identice. Valoarea reală se conservă, deși masterul nu a fost atins.</p>
     
   </div>
 </div>
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Verifică tipul fiecărei coloane</h3>
+    <h3 class="step-title">Confirmă recuperabilitatea pe tip</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">valoare_neta este tip Number, data_factura este tip Date, client_nume și produs_nume sunt tip Text fără caractere parazite. Tipologia coloanelor este stabilizată, gata pentru orice analiză.</p>
+    <p class="step-action">Fiecare coloană martor arată tipul recuperabil: Number pentru valoare_neta, Date pentru data_factura, Text curat pentru nume. Dovada că datele pot redeveni corecte e completă. Construirea efectivă a coloanelor curate rămâne C04.</p>
     
   </div>
 </div>
@@ -1853,30 +1844,30 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · AUDIT REPETABIL</div>
       <h2 class="stage-name">STABILIZARE</h2>
-      <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Power Query Refresh</span></div>
+      <div class="stage-tags"><span class="phase-tag">METODĂ</span><span class="type-tag">Audit repetabil</span></div>
     </div>
   </header>
-  <p class="stage-quote">Auditul rămâne repetabil ca verificare: îl rulezi pe orice export nou ca să confirmi dacă datele sunt curate. Curățarea permanentă o construiește C04.</p>
+  <p class="stage-quote">Auditul nu e o coincidență: aceeași metodă, pe orice export nou, produce aceeași dovadă. Verificăm că metoda se repetă, nu că un mecanism transformă. Mecanismul de curățare permanent îl construiește C04.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Păstrează auditul ca verificare repetabilă</h3>
+    <h3 class="step-title">Păstrează auditul ca metodă repetabilă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pașii de detecție din audit rămân documentați, gata de re-rulat pe orice export nou cu aceeași schemă. Nu automatizezi curățarea aici, o dovedești repetabilă ca verificare.</p>
+    <p class="step-action">Prompturile de detecție și formulele martor de recuperare rămân documentate, gata de re-aplicat pe orice export nou cu aceeași schemă. Nu construiești un mecanism aici, păstrezi o metodă.</p>
     
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Re-rulează auditul pe un export nou</h3>
+    <h3 class="step-title">Re-aplică auditul pe un export nou</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Înlocuiește sursa cu un export nou contaminat similar și rulează din nou auditul. Dacă găsește aceleași categorii, dovada ține. Curățarea permanentă, refreshabilă, o construiește C04.</p>
+    <p class="step-action">Pe un export nou contaminat similar, aceeași metodă găsește aceleași categorii și aceeași dovadă de recuperabilitate. Dacă rezultatul se repetă, dovada ține: aceeași metodă, aceeași dovadă. Mecanismul permanent de curățare îl construiește C04.</p>
     
   </div>
 </div>
@@ -1887,7 +1878,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notează în fișier cele cinci categorii de contaminare și pașii M de neutralizare. O contaminare nouă neacoperită apare ca abatere observabilă, nu trece neauditată.</p>
+    <p class="step-action">Notezi cele cinci categorii de contaminare, formulele martor de recuperare și sumele reconciliate. O contaminare nouă neacoperită apare ca abatere observabilă, nu trece neauditată.</p>
     
   </div>
 </div>
@@ -1903,7 +1894,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Auditul este validat operațional. Baza demonstrabilă este predată către C04 pentru normalizare.</p>
+  <p class="stage-quote">Auditul este validat. Baza demonstrabilă, cu recuperabilitatea dovedită, este predată către C04 pentru normalizare.</p>
   <div class="stage-body">
 <div class="step" data-step="16">
   <div class="step-head" onclick="toggleStep(16)">
@@ -1912,7 +1903,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Datele aparent curate devin date demonstrabil curate. Cele cinci categorii de contaminare au fost neutralizate tehnic, valoarea reală este conservată. Foaia Vanzari_AUDIT trece toate verificările forensic.</p>
+    <p class="step-action">Datele aparent curate devin date demonstrabil auditate. Cele cinci categorii sunt detectate, explicate și reconciliate; recuperabilitatea e dovedită prin formule martor; valoarea reală e conservată. Masterul nu a fost modificat.</p>
     
   </div>
 </div>
@@ -1923,7 +1914,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Vanzari_AUDIT poate intra direct în orice analiză sau dashboard, fără să propage contaminări invizibile. Datele nu mai ascund defecte, au fost demonstrate.</p>
+    <p class="step-action">Știi că datele sunt contaminate, știi unde, știi cât și știi că valoarea poate fi recuperată. Baza demonstrabilă poate fi predată mai departe fără să propage contaminări nedovedite. Datele nu mai ascund defecte, au fost demonstrate.</p>
     
   </div>
 </div>
@@ -1934,7 +1925,7 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Baza auditată este pregătită pentru C04 Normalizarea datelor: transformarea curățării ad-hoc în mecanism refreshabil documentat.</p>
+    <p class="step-action">Baza auditată, cu dovada recuperabilității, este pregătită pentru C04 Normalizarea datelor: acolo se construiește mecanismul permanent de curățare, documentat și re-aplicabil la fiecare export.</p>
     
   </div>
 </div>
@@ -1962,7 +1953,7 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="next-section">
         <div class="next-label">TREAPTA 1 · CONSTRUCȚIA URMĂTOARE</div>
         <h3 class="next-title">C04 · Normalizarea datelor</h3>
-        <p class="next-desc">Auditul a demonstrat ce era ascuns. C04 transformă curățarea ad-hoc într-un mecanism refreshabil documentat, cu pași PQ versionați și sumă conservată.</p>
+        <p class="next-desc">Auditul a demonstrat ce era ascuns și că valoarea poate fi recuperată. C04 transformă curățarea ad-hoc într-un mecanism permanent documentat, cu pași versionați și sumă conservată.</p>
       </section>
 
       <section class="payoff-section">
@@ -1976,6 +1967,18 @@ body.has-continue .scroll-top { bottom: 88px; }
         <div class="payoff-motto">Audităm ce nu se vede.</div>
       </section>
 
+      <section class="transformare-section">
+        <div class="tu-cert">
+          <div class="tu-kicker">✓ DUPĂ C03 POȚI</div>
+          <p class="tu-statement-sm">Auditezi în câteva minute dacă un export ascunde contaminări invizibile: știi unde sunt, câte sunt și că valoarea reală poate fi recuperată, fără să fi atins datele.</p>
+        </div>
+        <div class="ts-block ts-identity"><div class="ts-label">DE ACUM ÎNAINTE</div>
+          <div class="ts-pair"><span class="ts-no">Nu mai crezi aparența curată.</span><span class="ts-yes">Ceri dovada.</span></div>
+          <div class="ts-pair"><span class="ts-no">Nu mai cureți ce se vede.</span><span class="ts-yes">Auditezi ce nu se vede.</span></div>
+          <div class="ts-pair"><span class="ts-no">Nu mai întrebi „pare curat?".</span><span class="ts-yes">Întrebi „rezistă la audit?".</span></div>
+        </div>
+      </section>
+
       <footer class="footer">
         TRAINITY · C03 AUDITARE · Cockpit operațional
       </footer>
@@ -1983,10 +1986,6 @@ body.has-continue .scroll-top { bottom: 88px; }
     </main>
 
     <nav class="side-nav" id="sideNav">
-      <div class="nav-brand">
-        <div class="nav-brand-label">PACK 02 EXCEL · C03</div>
-        <div class="nav-brand-title">AUDITARE</div>
-      </div>
 
       <div class="nav-progress">
         <div class="nav-progress-row">
@@ -2000,8 +1999,8 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
 <a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
 <a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · AGGREGATE</span></span></a>
-<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Power Query Refresh</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · Reconciliere</span></span></a>
+<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Audit repetabil</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
       <div class="nav-section-label">8 VERIFICĂRI FINALE</div>
@@ -2280,7 +2279,7 @@ function applyState() {
   if (allStepsDone) {
     document.querySelectorAll(".stage[data-stage]").forEach(s => s.classList.add("visible"));
   }
-  ["final-section", "next-section", "payoff-section"].forEach(cls => {
+  ["final-section", "next-section", "payoff-section", "transformare-section"].forEach(cls => {
     document.querySelectorAll("." + cls).forEach(el => {
       el.classList.toggle("visible", allStepsDone);
     });

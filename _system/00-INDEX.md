@@ -40,6 +40,7 @@ Dacă ești **Claude** (motor) la primul chat → citește în ordine:
 | **05** | `05-WORKFLOW-PER-SCENARIU.md` | Cele 5 scenarii reale, pas cu pas. | ~13 KB |
 | **06** | `06-MAP-CONSTRUCTII-T1-T5.md` | Cele 20 construcții mapate pe 5 trepte. | ~11 KB |
 | **07** | `07-BRAND-OPERATIONAL.md` | Cum se exprimă brand-ul în fișiere. | ~11 KB |
+| **11** | `11-ARHITECTURA-CONCEPTUALA-T2.md` | **AUTORITATE conceptuală T2** (axe C05-C08, ce face/NU face, garda T2/T3, prioritate peste istoric pre-V45). Citește înainte de orice C05-C08. | ~6 KB |
 
 Plus `COMENZI.yaml` (catalog machine-readable) + `INDEX-CAUTARE.md` (search alphabetic).
 

@@ -1673,7 +1673,7 @@ body.exec-mode .hud-bar { display: none !important; }
   <section class="screen" data-screen="hero" data-frag-total="2">
     <div class="hero-prelabel">Construcția 05 Excel</div>
     <h1 class="hero-title">DICȚIONARUL<br>DATELOR</h1>
-    <p class="hero-hook frag" data-frag="1">Setul are un dicționar.<br><span class="hero-hook-twist">Excel îl știe. Tu nu.</span></p>
+    <p class="hero-hook frag" data-frag="1">Tabelul este curat.<br><span class="hero-hook-twist">Dar știm ce conține?</span></p>
     <p class="hero-sub frag" data-frag="2">Înainte să măsurăm, învățăm din ce este făcut setul.</p>
   </section>
 
@@ -1724,7 +1724,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 01</div>
       <div class="exec-emotion frag" data-frag="2">Setul necunoscut</div>
       <h2 class="exec-title frag" data-frag="3">REALITATE</h2>
-      <p class="exec-phrase frag" data-frag="4">Te uiți la un tabel. Astăzi am aflat din ce categorii e de fapt făcut.</p>
+      <p class="exec-phrase frag" data-frag="4">Te uitai la un tabel. Acum vezi universul lui.</p>
     </div>
   </section>
 
@@ -1772,7 +1772,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 04</div>
       <div class="exec-emotion frag" data-frag="2">Etichete confirmate</div>
       <h2 class="exec-title frag" data-frag="3">VERIFICARE</h2>
-      <p class="exec-phrase frag" data-frag="4">O etichetă presupusă nu este o etichetă confirmată. COUNTUNIQUE și COUNTIF decid.</p>
+      <p class="exec-phrase frag" data-frag="4">O categorie presupusă nu este una confirmată. Sistemul decide.</p>
     </div>
   </section>
 
@@ -1804,7 +1804,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 06</div>
       <div class="exec-emotion frag" data-frag="2">Predarea dicționarului</div>
       <h2 class="exec-title frag" data-frag="3">CONFIRMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Era o coloană de text. De data asta, știu fiecare categorie din ea.</p>
+      <p class="exec-phrase frag" data-frag="4">Datele au încetat să fie text. Au devenit cunoaștere.</p>
     </div>
   </section>
 
@@ -1869,7 +1869,7 @@ body.exec-mode .hud-bar { display: none !important; }
 const STAGES = [
   {
     id: 1, name: "REALITATE", emotion: "Recunoaștere descriptivă",
-    hook: "Setul are un dicționar. Excel îl știe. Tu nu.",
+    hook: "Tabelul este curat. Dar știm ce conține?",
     next: "Astăzi îl inventariem cap-coadă.",
     steps: [
       { num: "01", title: "Deschidem setul. Cel curat de la C04.",
@@ -1916,7 +1916,7 @@ const STAGES = [
     hook: "Nu credem dicționarul. Îl confruntăm cu setul.",
     next: "Cifrele decid. Nu opinia AI. Cardinalitate exactă, frecvențe mapate.",
     steps: [
-      { num: "10", title: "Confruntăm cardinalitatea. Cu COUNTUNIQUE.",
+      { num: "10", title: "Confruntăm cardinalitatea. Cu COUNTA și UNIQUE.",
         instr: "=COUNTA(UNIQUE(C2:C2001)) pentru client_nume → 15. Repetăm pentru fiecare coloană categorială. <strong>Numerele din dicționar trebuie să corespundă exact cu setul. Nu apropiat. Exact.</strong>",
         excel: true },
       { num: "11", title: "Verificăm top frecvențele. Coloană cu coloană.",
@@ -1952,10 +1952,10 @@ const STAGES = [
         instr: "Pentru fiecare etichetă din _DICTIONAR, confirmăm că apare cel puțin o dată în Vanzari. <strong>Zero discrepanțe. Dicționarul descrie setul real, nu o ipoteză.</strong>",
         excel: true },
       { num: "17", title: "Confirmăm dicționarul complet. Auditabil.",
-        instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Profilarea nu modifică valori. Inventariază.</strong>",
+        instr: "Suma valoare_neta rămâne neschimbată, conservată din Date_MASTER-initial. <strong>Profilarea nu atinge valori. Inventariază.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C06.",
-        instr: "Setul are dicționar. Granularitate stabilită. Top frecvențe mapate. <strong>C06 deschide axa cantitativă pe un set ale cărui etichete sunt deja cunoscute.</strong>",
+        instr: "Setul are dicționar. Granularitate stabilită. Top frecvențe mapate. <strong>C06 dă sens fiecărui rând prin reguli, pe un set ale cărui etichete sunt deja cunoscute.</strong>",
         excel: false }
     ]
   }

@@ -1634,7 +1634,7 @@ body.exec-mode .hud-bar { display: none !important; }
     <div class="hero-prelabel">Construcția 07 Excel</div>
     <h1 class="hero-title">MEMORIA<br>DATELOR</h1>
     <p class="hero-hook frag" data-frag="1">Setul are cifre.<br><span class="hero-hook-twist">Excel o ține minte. Tu nu.</span></p>
-    <p class="hero-sub frag" data-frag="2">Înainte de orice analiză, citim când s-a întâmplat setul și cu ce ritm.</p>
+    <p class="hero-sub frag" data-frag="2">Înainte de orice analiză, citim când s-a întâmplat setul și ce perioadă acoperă.</p>
   </section>
 
   <!-- DINAMIC SCREENS injected here -->
@@ -1648,7 +1648,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <p class="dim frag" data-frag="1">Nu am modificat valori.</p>
       <p class="dim frag" data-frag="2">Nu am rescris cronologia.</p>
       <p class="dim frag" data-frag="3">Nu am alterat tranzacțiile.</p>
-      <p class="accent frag" data-frag="4">Pentru prima dată, setul are un început, un ritm și o direcție.</p>
+      <p class="accent frag" data-frag="4">Setul nu mai plutește în timp. Fiecare rând are poziție temporală.</p>
       <p class="frag" data-frag="5">O memorie citită. Apoi orice decizie.</p>
       <p class="frag" data-frag="6">C08 poate începe.</p>
       <div class="final-motto frag" data-frag="7">Un set cunoscut.<br>Apoi orice decizie.</div>
@@ -1764,7 +1764,7 @@ body.exec-mode .hud-bar { display: none !important; }
       <div class="exec-label frag" data-frag="1">Etapa 06</div>
       <div class="exec-emotion frag" data-frag="2">Predarea memoriei</div>
       <h2 class="exec-title frag" data-frag="3">CONFIRMARE</h2>
-      <p class="exec-phrase frag" data-frag="4">Era o listă de date. Acum are început, ritm și direcție.</p>
+      <p class="exec-phrase frag" data-frag="4">Era o listă de date. Acum are început, secvență și calendar.</p>
     </div>
   </section>
 
@@ -1832,11 +1832,11 @@ const STAGES = [
     hook: "Setul are memorie. Excel o ține minte. Tu nu.",
     next: "Astăzi îl inventariem cap-coadă.",
     steps: [
-      { num: "01", title: "Deschidem setul. Cel profilat de la C06.",
-        instr: "Date_MASTER-C07.xlsx, foaia Vanzari. 2.000 rânduri, 15 coloane. <strong>Setul este profilat numeric. Dar nu îi cunoaștem timpul.</strong>",
+      { num: "01", title: "Deschidem setul. Cel clasificat de la C06.",
+        instr: "Date_MASTER-C07.xlsx, foaia Vanzari. 2.000 rânduri, 15 coloane. <strong>Setul este clasificat. Dar nu îi cunoaștem timpul.</strong>",
         excel: true },
       { num: "02", title: "Privim coloana de timp. Și recunoaștem necunoașterea.",
-        instr: "Pe ce perioadă? Cu ce ritm? Lipsește vreo lună? <strong>Setul are o memorie pe care încă nu am citit-o.</strong>",
+        instr: "Pe ce perioadă? Ce luni acoperă? Lipsește vreo lună? <strong>Setul are o cronologie pe care încă nu am citit-o.</strong>",
         excel: true },
       { num: "03", title: "Fixăm coloana data_factura.",
         instr: "Coloana de timp: data_factura. <strong>Pe ea construim memoria temporală. Ecosistemul rămâne pentru C08.</strong>",
@@ -1858,32 +1858,32 @@ const STAGES = [
     ]
   },
   {
-    id: 3, name: "TRANSFORMARE", emotion: "Profilare a ritmului",
-    hook: "Timeline-ul există. Adăugăm trendul și sezonul.",
-    next: "Power Query nu intră. Doar Copilot și foi de profil.",
+    id: 3, name: "TRANSFORMARE", emotion: "Profilare a calendarului",
+    hook: "Timeline-ul există. Adăugăm granularitatea și sezonul.",
+    next: "Fără transformări de flux. Doar Copilot și fișe temporale.",
     steps: [
-      { num: "07", title: "Încărcăm timeline-ul. Ca foaie de profil.",
+      { num: "07", title: "Încărcăm timeline-ul. Ca fișă temporală.",
         instr: "Copiem tabelul răspuns pe sheet nou _TIMELINE. <strong>Timeline-ul devine livrabil vizibil. Nu o opinie a Copilot. O foaie din registru.</strong>",
         excel: true },
-      { num: "08", title: "Profilăm ritmul. Promptul 2.", instr: "", prompt: 2 },
-      { num: "09", title: "Adăugăm trendul și sezonul.",
-        instr: "Pe _TREND citim direcția: toamna urcă, începutul de an coboară. <strong>Setul accelerează sau încetinește. Asta dictează tot ce urmează.</strong>",
+      { num: "08", title: "Profilăm calendarul. Promptul 2.", instr: "", prompt: 2 },
+      { num: "09", title: "Adăugăm granularitatea și sezonul.",
+        instr: "Pe _CALENDAR citim granularitatea (zi/trimestru/sezon); pe _SEZON gruparea pe sezoane. <strong>Setul capătă calendar, fără să interpretăm de ce.</strong>",
         excel: true }
     ]
   },
   {
     id: 4, name: "VERIFICARE", emotion: "Audit al cronologiei",
     hook: "Nu credem timeline-ul. Îl confruntăm cu setul.",
-    next: "Datele decid. Nu opinia AI. Perioadă exactă, ritm confirmat.",
+    next: "Datele decid. Nu opinia AI. Perioadă exactă, calendar confirmat.",
     steps: [
       { num: "10", title: "Confruntăm perioada. Cu MIN și MAX.",
         instr: "=MIN și =MAX pe data_factura → perioada. =COUNTIFS pe fiecare lună → volumul. <strong>Datele din timeline trebuie să corespundă exact cu setul. Nu apropiat. Exact.</strong>",
         excel: true },
-      { num: "11", title: "Verificăm ritmul lunar. Lună cu lună.",
-        instr: "Volumul lunar: vârf toamna, minim la început de an. Timeline complet, 12 din 12 luni. <strong>Setul are un ritm clar. Nicio lună lipsă.</strong>",
+      { num: "11", title: "Verificăm acoperirea lunară. Lună cu lună.",
+        instr: "Volumul lunar: câte tranzacții în fiecare lună. Timeline complet, 12 din 12 luni. <strong>Setul are calendar complet. Nicio lună lipsă.</strong>",
         excel: true },
-      { num: "12", title: "Marcăm lunile-vârf. Și golurile.",
-        instr: "Luna-vârf și luna-minim marcate. Goluri în secvență? Niciunul. <strong>Nu sunt erori. Sunt forma memoriei. Audit al cronologiei, nu corecție.</strong>",
+      { num: "12", title: "Marcăm golurile din secvență.",
+        instr: "Golurile din secvență marcate. Lipsă? Niciuna. <strong>Nu sunt erori. Sunt forma cronologiei. Audit al cronologiei, nu corecție.</strong>",
         excel: true }
     ]
   },
@@ -1905,7 +1905,7 @@ const STAGES = [
   },
   {
     id: 6, name: "CONFIRMARE", emotion: "Predarea memoriei",
-    hook: "Setul are perioadă. Are ritm. Are direcție.",
+    hook: "Setul are perioadă. Are granularitate. Are calendar.",
     next: "Memoria devine fundație. C08 leagă ecosistemul deasupra.",
     steps: [
       { num: "16", title: "Verificăm memoria. Cap-coadă.",
@@ -1915,7 +1915,7 @@ const STAGES = [
         instr: "Suma valoare_neta = 7.986.019,38 lei. Conservată din Date_MASTER-initial. <strong>Profilarea temporală nu modifică valori. Citește timpul.</strong>",
         excel: true },
       { num: "18", title: "Predăm către C08.",
-        instr: "Setul are memorie. Perioadă, ritm, trend, sezon. <strong>C08 deschide ecosistemul pe un set a cărui cronologie e deja citită.</strong>",
+        instr: "Setul are memorie. Perioadă, granularitate, goluri, sezon. <strong>C08 deschide ecosistemul pe un set a cărui cronologie e deja citită.</strong>",
         excel: false }
     ]
   }
@@ -1923,14 +1923,14 @@ const STAGES = [
 
 const PROMPTS = {
   1: {
-    label: "Prompt 01 · Inventar cifre",
-    text: "Analizează acest set de date. Pentru coloana valoare_neta calculează suma totală, media, mediana, minimul și maximul. Apoi calculează suma pe fiecare categorie de produs. Returnează rezultatul ca timeline lunar al setului.",
+    label: "Prompt 01 · Inventar temporal",
+    text: "Pentru coloana data_factura, spune-mi prima și ultima dată, câte luni acoperă setul și dacă lipsește vreo lună din secvență. Apoi numără câte tranzacții apar în fiecare lună. Returnează rezultatul ca timeline lunar al setului.",
     meta: "Copilot inventariază. Nu interpretează. Nu decide. Descrie."
   },
   2: {
-    label: "Prompt 02 · Profilare a ritmului",
+    label: "Prompt 02 · Profilare a calendarului",
     text: "Pentru același set, descrie cum se distribuie valoarea. Calculează ce procent din total aduce fiecare categorie și ordonează categoriile descrescător. Listează primele și ultimele facturi după valoare_neta și estimează abaterea standard. Marchează separat extremele numerice care se îndepărtează mult de medie.",
-    meta: "Perioadă, ritm, trend, sezon. Memoria temporală completă."
+    meta: "Perioadă, granularitate, goluri, sezon. Memoria temporală completă."
   }
 };
 

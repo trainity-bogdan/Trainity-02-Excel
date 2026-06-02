@@ -86,6 +86,7 @@ Pentru format machine-readable: `_system/COMENZI.yaml`.
 | Schema livrabile | `_system/04-ARHITECTURA-LIVRABILE.md` |
 | Workflow pas cu pas | `_system/05-WORKFLOW-PER-SCENARIU.md` |
 | Construcțiile T1-T5 | `_system/06-MAP-CONSTRUCTII-T1-T5.md` |
+| **Arhitectura conceptuală T2 (AUTORITATE)** | `_system/11-ARHITECTURA-CONCEPTUALA-T2.md` — citește OBLIGATORIU înainte de orice C05-C08 |
 | Brand, voce, colors | `_system/07-BRAND-OPERATIONAL.md` |
 | Istoric V01-V38 | `_system/arhiva/` (NU pentru referință zilnică) |
 
@@ -185,7 +186,8 @@ Dacă propui ceva care încalcă una, OPREȘTE-TE și raportează.
 - **NU inventa silentios** — flaghezi conflicte înainte de a genera.
 - **Întrebări scrise în text liber**, NU în grile A/B/C cu AskUserQuestion. ARHITECT preferă răspunsuri narative.
 - **Filtrul SIGUR/CONFLICT** la feedback extern (vezi `_system/09-FILTRU-G06-SIGUR-CONFLICT.md`). Se aplică AUTOMAT, cu format „FILTRU G-06 aplicat:".
-- **Limbaj** românesc cu diacritice.
+- **LIMBA ROMÂNĂ MEREU (REGULĂ DURABILĂ).** TOATE mesajele către ARHITECT sunt în limba română cu diacritice. NICIODATĂ în engleză. Singura excepție: conținut tehnic care e intrinsec englez (cod, prompturi Banana în engleză, nume de funcții Excel, comenzi git). Comentariul, explicația, raportul, întrebarea — mereu română.
+- **LIVRARE HTML = ULTIMA ACȚIUNE OBLIGATORIE (REGULĂ DURABILĂ, FĂRĂ EXCEPȚII).** De fiecare dată când ating un `HTML-Studiu` (orice edit, fix, propagare, redenumire), **ULTIMUL lucru pe care îl fac în acel mesaj este `SendUserFile` cu fișierul `HTML-Studiu` actual**, ca ARHITECT să-l poată descărca și trimite la feedback. NU aștept să mi-l ceară. NU îl uit pentru că „e doar un fix mic". Checklist mental la finalul oricărei implementări pe Studiu: (1) commit, (2) merge main, (3) push, (4) **livrez fișierul HTML-Studiu** — pasul 4 e parte din „gata", nu opțional. Dacă am modificat mai multe construcții, livrez HTML-Studiu pentru fiecare. Trimit versiunea de pe `main` (cea pe care o vede ARHITECT live), nu una intermediară.
 - **IMAGINI DE LA ARHITECT = le procesez singur, FĂRĂ să întreb.** Când ARHITECT lipește/atașează o imagine în chat (poză generată Banana etc.), o salvez automat ca fișier în locația corectă (`cNN/assets/` cu numele din Creativ) ȘI elimin watermark-ul (steluța Gemini din colț) FĂRĂ să-i cer lui să o pună sau să confirme. NU spun „nu pot accesa imaginea" — POT. Procedeu: extrag base64-ul din transcriptul sesiunii `~/.claude/projects/.../<session>.jsonl` (content block `type:"image"`, `source.data`) → decode → procesez cu PIL (watermark-ul Gemini e în colțul dreapta-jos pe fundal întunecat: îl acopăr cu un patch de fundal adiacent, păstrând textura) → salvez JPEG quality 90 în assets. Apoi integrez base64 în HTML dacă e cazul.
 
 ---

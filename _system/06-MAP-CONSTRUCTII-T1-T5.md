@@ -36,18 +36,42 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Sumă conservată** | 7.986.019,38 lei |
 | **Status** | LIVRABIL CANONIC V12 (matriță pentru toate celelalte) |
 
-### C02 · MARCARE ✓
+### C02 · CONTROL — CORESPONDENȚA CU REALITATEA (IDENTITATE LOCK V58)
 
 | Aspect | Conținut |
 |---|---|
-| **INTRIGA** | Tabelul cu date pare curat. Datele însă mint. |
-| **MIZA** | Datele predate ca "curate structural" încă mint operațional. |
+| **TEMA** | CORESPONDENȚA CU REALITATEA |
+| **AHA (lock)** | Valid nu înseamnă corect. |
+| **Regula oficială** | Excel acceptă valoarea. Business-ul trebuie să o investigheze. *(Reclamantul = omul → C02; reclamantul = motorul Excel → C03.)* |
+| **Competență** | Identific valori pe care Excel le acceptă, dar care încalcă reguli ale lumii reale. |
+| **Filozofia** | C02 NU repară / NU șterge / NU modifică / NU decide / NU previne. Semnalează și construiește dovezi pentru o decizie de business. |
 | **MANTRA** | Înainte de orice raport, controlul. |
 | **MOTTO** | Nu reconstruim tabelul. Îl facem controlabil. |
-| **FENOMENE** | 5 categorii anomalii: facturi datate în viitor (5), coduri client inexistente (8), duplicate exacte (10), vânzări sâmbătă pe filiala L-V (6), câmpuri obligatorii goale (7). Total: 36 anomalii. |
-| **Date_MASTER** | C02 input cu cele 36 anomalii planted, output cu coloana STATUS + MOTIV |
-| **Sumă conservată** | 8.018.087,99 lei (suma input cu duplicate planted) |
-| **Status** | LIVRABIL CANONIC V26 |
+| **FENOMENE (5 anomalii LOCK)** | 1. Orașe nealiniate (nomenclator) · 2. CNP invalid (ICONIC) · 3. TVA greșit (regulă fiscală) · 4. Dată în viitor (regulă temporală) · 5. Vânzare în zi închisă (regulă operațională) |
+| **Instrumente** | Advanced Filter = DESCOPERIRE (valori unice, excepții, nomenclatoare) · Conditional Formatting = SEMNALIZARE · Data Validation = FORMALIZARE (marginală, DOAR după decizia business; NU e competența, NU e tema). |
+| **Delimitare C02↔C03** | C02 = greșit față de REALITATE (Excel acceptă, omul contestă). C03 = greșit față de MOTORUL Excel (omul acceptă, Excel contestă). Criteriu: *cine reclamă eroarea.* |
+| **Status** | **IDENTITATE LOCK V58.** Implementare HTML + Date_MASTER: **PENDING** — corpul actual al c02/ e încă versiunea veche „MARCARE" (36 anomalii structurale). Numele de fișier (`02-Marcare`) + identitatea HTML se aliniază la implementare. |
+
+> **C02.02 · CNP = EXEMPLUL ICONIC AL CONSTRUCȚIEI (decizie ARHITECT V58).**
+> Statut special: nu o simplă anomalie, ci demonstrația principală a principiului „valid ≠ corect". Ales nu pentru că există în Date_MASTER (setul e B2B, fără CNP), ci pentru că permite verificarea simultană a mai multor reguli ale realității pe un singur identificator.
+>
+> **Structura de lucru:** CNP + Sex + Județ + Data_Nașterii. Fiecare valoare pare validă separat; Excel nu reclamă nimic. Scopul = descoperirea **contradicțiilor dintre informații**.
+>
+> **Cele 4 verificări (toate de CORESPONDENȚĂ, nu de format):**
+> 1. **Data** derivată din CNP vs data declarată (dată imposibilă: 30 feb / 31 apr, sau diferită de cea declarată).
+> 2. **Sexul** derivat din prima cifră CNP vs sexul declarat.
+> 3. **Județul** derivat din codul CNP vs județul declarat (via nomenclator cod→județ).
+> 4. **Cifra de control** (algoritmul oficial) — totul pare corect, dar controlul e invalid.
+>
+> **REGULĂ ANTI-DRIFT CNP:** NU se validează formatul. NU lungime≠13, NU „doar cifre", NU caractere/spații — acelea sunt **C03-adjacent**. Se verifică dacă informațiile **descriu aceeași persoană reală**. CNP rămâne în registrul „mai multe informații par corecte separat și împreună se contrazic". NU se mută în C03. NU devine exercițiu de validare tehnică.
+>
+> **Instrumente:** Conditional Formatting = SEMNALIZARE (marchează sex/județ/dată/control inconsistente) · Formule = DEMONSTRAREA CONTRADICȚIILOR (extrag componentele CNP, interpretează sex/județ/dată, validează controlul) · Nomenclatoare = REFERINȚĂ OFICIALĂ (cod județ → județ oficial).
+>
+> **AHA (adâncit):** nu doar „un CNP poate fi fals", ci **„mai multe informații pot părea corecte separat și totuși să se contrazică între ele."**
+>
+> **Rezultat C02.02:** *„Excel acceptă toate valorile. Dar realitatea nu acceptă combinația lor."* — ancora de memorabilitate a întregii construcții C02.
+
+> **Notă arhitecturală:** C02.02 e locul unde **dimensiunea relațională / de corespondență între câmpuri** (semnalată în auditul de teritoriu ca margine a lui C02) primește casă concretă — CNP-ul o încapsulează natural, fiindcă encodează sex/dată/județ. Rămâne C02 pur: nu o valoare greșită izolat, ci **combinația de valori valide care se contrazice cu realitatea.**
 
 ### C03 · AUDITARE ✓
 
@@ -97,13 +121,16 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | Aspect | Conținut |
 |---|---|
 | **AXA** | DICȚIONAR — ce reprezintă datele (inventar categorii, cardinalități, granularitate) |
-| **INTRIGA** | Setul are un dicționar. Excel îl știe. Tu nu. |
-| **MIZA** | Decizii pe categorii pe care nu le cunoști exhaustiv. |
+| **INTRIGA** | Tabelul este curat. Dar știm ce conține? |
+| **MIZA** | Transformă tabelul curat într-un teritoriu pe care îl poți enumera. |
 | **MANTRA** | Nu privim tabelul. Îl interogăm. |
 | **MOTTO** | Un set cunoscut. Apoi orice decizie. |
+| **WOW** | Setul nu mai este o masă de date. Acum are hartă. |
 | **FENOMENE** | 5 fenomene calitative (inventar dicționar): cardinalitate clienți, categorii, cantități, top frecvențe (Pareto), granularitate atomică |
 | **Sumă conservată** | DELTA 0 |
-| **Status** | LIVRABIL V44 (rename din CLASIFICARE; conținut = inventar) |
+| **Status** | LIVRABIL V53 (rename din CLASIFICARE; conținut = inventar; copy ascuțit G-06) |
+
+**Poziționare (graniță valoare narativă):** C01-C04 răspund la „pot avea încredere în set?" (structură, control, audit, normalizare). C05 răspunde la o întrebare fundamental diferită: „știu ce există în set?". Nu descoperă etichete izolate, ci universul setului — îl transformă dintr-o masă de date într-un teritoriu cartografiat, enumerabil. C05 = poarta către T2 (Cunoaștere).
 
 ### C06 · CLASIFICARE ✓
 
@@ -119,31 +146,38 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | **Garda T2/T3** | atribuie etichete descriptiv; prioritizarea strategică pe segmente = C11/T3 |
 | **Status** | LIVRABIL V44 (rebuild din CUANTIFICARE) |
 
-### C07 · DATARE — MEMORIA SETULUI (PROPUS, AXĂ LOCK V43)
+> **NOTĂ ANTI-REDRIFT (lock V58, după L186 repetat de 3x).** C06 **ESTE CLASIFICARE**, decizie definitivă confirmată de ARHITECT. NU este „profil numeric / KPI / sume-medii-distribuții" — aceea era harta T2 **pre-V45** (C06 = CUANTIFICARE), abandonată la rebuild-ul V45 tocmai ca să elimine suprapunerea cu C05. Orice feedback extern care cere „C06 = profil numeric" lucrează pe harta veche și se RESPINGE (G-06 CONFLICT). C06 produce **etichete operaționale prin reguli** (clasă/segment/scor), NU decizii business. Limbaj INTERZIS în C06 (mută în T3/C11): „prioritar", „critic", „strategic", „irelevant", „valoros", „important pentru business". **Formula de control:** C05 = ce există · C06 = ce înseamnă fiecare rând · C07 = când se întâmplă · C08 = cu cine se leagă.
+
+### C07 · DATARE ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | TEMPORALĂ (unică pe treaptă) — „cum se mișcă setul în timp" |
-| **OBIECT** | memoria |
-| **ÎNTREBARE-MAMĂ** | Cum se comportă setul în timp? |
-| **INTRIGA propusă** | Setul are memorie. Excel o ține minte. Tu nu. |
-| **MARKER** | memorie |
-| **FENOMENE propuse** | perioada reală acoperită (prima→ultima lună), goluri în timp (luni lipsă), ritmul/volumul pe lună, luna dominantă, accelerare/încetinire (trend), sezonalitate (recurență), săptămâna tipică |
-| **LIVRABIL** | Fișa temporală a setului (Memoria setului) |
-| **Status** | LIVRABIL V44 |
+| **AXA** | TEMPORALĂ DESCRIPTIVĂ — „când se întâmplă fiecare rând" (atașarea timpului, NU analiza lui) |
+| **OBIECT** | calendarul setului |
+| **ÎNTREBARE-MAMĂ** | Când se întâmplă fiecare rând? |
+| **INTRIGA** | Setul are memorie. Excel o ține minte. Tu nu i-ai citit-o. |
+| **MARKER** | calendar / poziție temporală |
+| **FENOMENE** | perioada reală (prima→ultima dată, MIN/MAX), granularitate temporală (zi/lună/trimestru/an/zi a săptămânii derivate), acoperire temporală (luni prezente/lipsă, goluri), calendar operațional (sezon, perioadă comercială, weekend vs zi lucrătoare), fișa temporală (_TIMELINE auditabil) |
+| **Garda T2/T3** | C07 ATAȘEAZĂ timpul (descriptiv); interpretarea lui = T3. INTERZIS în C07: trend, direcție, accelerare, încetinire, delta, evoluție, creștere/scădere, comparație lună-la-lună, lună-vârf/minim, zi dominantă/predilectă, săptămână tipică, performanță temporală. Acestea migrează în T3. |
+| **LIVRABIL** | Calendarul setului (fișa temporală) |
+| **Status** | LIVRABIL V44 · DATARE PURĂ (lock V58: trend/direcție/accelerare scoase în T3, decizie fermă ARHITECT) |
 
-### C08 · TIPIZARE — HARTA ECOSISTEMULUI (PROPUS, AXĂ LOCK V43)
+> **NOTĂ ANTI-REDRIFT C07 (lock V58).** C07 răspunde EXCLUSIV la „când se întâmplă fiecare rând", NU la „ce se întâmplă în timp / cum evoluează". Regula de aur: C07 atașează timpul, T3 interpretează timpul. C07 = calendarul setului; T3 = analiza calendarului. „Ritm" se folosește doar reformulat ca „granularitate" / „frecvență calendaristică", fără dominantă/comparație. Sheet `_TREND` (delta+direcție) a fost ELIMINAT din Date_MASTER; rămân `_TIMELINE` / `_CALENDAR` / `_SEZON` (datare pură).
+
+### C08 · CARTOGRAFIERE ✓
 
 | Aspect | Conținut |
 |---|---|
-| **AXA** | RELAȚIONALĂ DESCRIPTIVĂ — „cu cine vorbește setul" (RECUNOAȘTERE, nu modelare) |
-| **OBIECT** | ecosistemul |
-| **ÎNTREBARE-MAMĂ** | Cu cine vorbește setul? |
-| **INTRIGA propusă** | Setul are un ecosistem. Excel îl vede. Tu nu. |
-| **MARKER** | ecosistem / satelit / cheie / rol / câmp extern |
-| **FENOMENE propuse** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei par comune (cod_client, cod_produs), ce câmpuri lipsesc din setul principal dar există în sateliți, ce convenții diferă și trebuie aliniate înainte de modelare |
-| **LIVRABIL** | Harta ecosistemului de date |
-| **Status** | LIVRABIL V44 (închide T2) |
+| **AXA** | RELAȚIONALĂ DESCRIPTIVĂ — „cu cine se leagă fiecare rând / unde trăiește contextul" (RECUNOAȘTERE, nu modelare) |
+| **OBIECT** | contextul / harta surselor |
+| **ÎNTREBARE-MAMĂ** | Cu cine se leagă fiecare rând? |
+| **INTRIGA** | Te uiți la un tabel întreg. Jumătate din el e în altă parte. |
+| **MARKER** | hartă / satelit / cheie / rol / câmp extern |
+| **AHA oficial (lock V58)** | Cele mai importante date despre un rând nu sunt în rând. |
+| **FENOMENE** | ce seturi-satelit există în jur (CLIENTI/PRODUSE/AGENTI/DEPOZITE), rolul fiecăruia (fapt vs descriere), ce chei sunt comune, ce câmpuri externe trăiesc doar în sateliți, ce convenții diferă (limbi diferite) |
+| **Garda T2/T3** | C08 LOCALIZEAZĂ contextul (descriptiv), NU îl aduce. INTERZIS în C08: XLOOKUP/LOOKUP/join/aducere de valori, Data Model, relații activate, măsuri, conectat/conexiune, BI-ready. Acestea = C09/T3/T4. |
+| **LIVRABIL** | Harta ecosistemului de date (`_ECOSISTEM`) |
+| **Status** | LIVRABIL · CARTOGRAFIERE (nume LOCK V58). Premium + identitate rafinată + hero dedicat. Închide T2. |
 
 **Delimitare obsesivă C08 ↔ C09 (T2 vs T3):**
 C08 **cartografiază**, NU unește. C08 = *vezi relațiile posibile* (recunoaștere

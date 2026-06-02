@@ -74,6 +74,14 @@ C03/C04: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45),
 
 C05-C08: încă NEsincronizate (FILM↔HTML drift vechi posibil); de procesat la primirea FILM-urilor rafinate sau la cerere.
 
+### ARC TRANSFORMARE · BOMBĂ (model premium V47+) — sync V56
+
+Modelul premium a adăugat în HTML-Studiu stratul pedagogic „arcul TU" (`tu-section`): **BOMBA** (`cover-subtitle`, idee dominantă) · **SUNĂ CUNOSCUT** (`tu-recunoastere` = lead + bullets) · **GREȘEALA CLASICĂ** (`tu-greseala`) · **AHA** (`tu-aha`) · **CINE DEVII** (`tu-promise`). Acesta se back-portează în FILM ca secțiune `ARC TRANSFORMARE · CINE DEVINE CURSANTUL` (după IDENTITATE, înainte de SLIDES EXECUTIVE). FILM rămâne master.
+
+**Atenție la mapare:** la construcțiile premium `cover-subtitle` ține **BOMBA**, NU INTRIGA. INTRIGA (hook de scenă) rămâne element FILM separat și alimentează `hero-hook` din Video.
+
+**V56:** back-portat arcul complet din Studiu în FILM la **C02 + C03** (lipsea integral) și completat fraza a 2-a din MIZA C04 („Orice raport construit deasupra pornește de pe o bază care se reface singură."). C04 avea deja arcul; C01 îl are în format Biblia v2.0. **C01-C04 acum sincrone FILM↔Studiu** pe INTRIGA/BOMBĂ · MIZA · MANTRA · WOW · MOTTO · ARC. Singura diferență rămasă, intenționată: C03 MIZA în FILM e la persoana „noi" („Demonstrăm/dovedim"), Studiu la „C03 demonstrează/dovedește" — aceeași informație, voce diferită.
+
 ---
 
 ## SPEC v2.0 — FILM = „Biblia construcției" (4 secțiuni)

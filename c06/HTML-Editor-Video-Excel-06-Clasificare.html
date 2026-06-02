@@ -1836,7 +1836,7 @@ const STAGES = [
         instr: "Date_MASTER-C06.xlsx, foaia Vanzari. 2.000 rânduri, 14 coloane. <strong>Setul are dicționarul. Dar niciun rând nu are clasă.</strong>",
         excel: true },
       { num: "02", title: "Privim coloanele. Și recunoaștem necunoașterea.",
-        instr: "Care rând e mare? Care e prioritar? Ce segment? <strong>Setul are clase ascunse pe care încă nu le-am scris.</strong>",
+        instr: "Ce clasă? Ce segment? Ce scor? <strong>Setul are clase ascunse pe care încă nu le-am scris.</strong>",
         excel: true },
       { num: "03", title: "Fixăm coloanele pe care construim sens.",
         instr: "Coloanele pe care construim sens: valoare_neta, categorie. <strong>Pe ele scriem reguli. Rândurile capătă clasă, segment, scor.</strong>",
@@ -1845,7 +1845,7 @@ const STAGES = [
   },
   {
     id: 2, name: "INVESTIGAȚIE", emotion: "Interogarea regulilor",
-    hook: "Nu privim tabelul. Îl interogăm.",
+    hook: "Nu citim rândurile. Le clasificăm prin reguli.",
     next: "Copilot răspunde cu regulile. Apoi le confruntăm cu setul.",
     steps: [
       { num: "04", title: "Activăm Copilot. Pe foaia Vanzari.",
@@ -1853,7 +1853,7 @@ const STAGES = [
         excel: true },
       { num: "05", title: "Cerem regulile de clasificare. Promptul 1.", instr: "", prompt: 1 },
       { num: "06", title: "Citim regulile propuse de sistem.",
-        instr: "Verificăm pragurile propuse: A = top 20%, C = jos 50%. <strong>Dacă regulile Copilot nu se potrivesc cu setul, repetăm întrebarea. Nu trecem mai departe.</strong>",
+        instr: "Verificăm pragurile propuse: praguri valorice explicite (prag_A, prag_B). <strong>Dacă regulile Copilot nu se potrivesc cu setul, repetăm întrebarea. Nu trecem mai departe.</strong>",
         excel: true }
     ]
   },
@@ -1867,7 +1867,7 @@ const STAGES = [
         excel: true },
       { num: "08", title: "Cerem scoring și segmente. Promptul 2.", instr: "", prompt: 2 },
       { num: "09", title: "Construim segmentul cu SWITCH.",
-        instr: "SWITCH pe categorie → segment de business. <strong>Hardware devine Echipamente, Software devine Licențe. Asta dictează tot ce urmează.</strong>",
+        instr: "SWITCH pe categorie → segment operațional. <strong>Hardware devine Echipamente, Software devine Licențe. Asta dictează tot ce urmează.</strong>",
         excel: true }
     ]
   },
@@ -1876,11 +1876,11 @@ const STAGES = [
     hook: "Nu credem regulile. Le confruntăm cu setul.",
     next: "Regulile decid. Nu opinia AI. Clase exacte, scoruri confirmate.",
     steps: [
-      { num: "10", title: "Aducem etichete externe. Cu XLOOKUP.",
-        instr: "XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
+      { num: "10", title: "Compunem eticheta derivată. Cu TEXT.",
+        instr: "TEXT: =clasa&\"-\"&segment, eticheta din datele rândului. (fost XLOOKUP(client_nume; CLIENTI[nume_client]; CLIENTI[judet]) → etichetă externă. <strong>Sensul vine și din nomenclatoare. Cheia trebuie să existe real. Exact.</strong>",
         excel: true },
       { num: "11", title: "Construim o regulă compusă. Cu IFS.",
-        instr: "IFS din condiții multiple: clasa=A și segment=Licențe → strategic. <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",
+        instr: "IFS din condiții multiple: clasa=A și segment=Licențe → "A_Licențe". <strong>Sensul se naște din reguli combinate, nu dintr-o singură coloană.</strong>",
         excel: true },
       { num: "12", title: "Calculăm scorul. Pe fiecare rând.",
         instr: "Scor = (valoare-MIN)/(MAX-MIN)*100. <strong>Fiecare rând capătă un scor 0-100. O etichetă, nu o decizie.</strong>",

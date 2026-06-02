@@ -307,6 +307,47 @@ Butonul "RESETEAZĂ PROGRES" din nav-controls e lipit imediat sub meniu, fără 
 
 **Detector empiric:** regex pe `.nav-controls { ... }` → absența `margin-top: auto`.
 
+## R-V03.73 · MENIU MOBIL FĂRĂ BANDĂ nav-brand (referință C01)
+**Status:** ACTIVĂ permanentă (V58) · introdusă după bug descoperit la C02-C07
+
+Side-nav-ul (meniul slide-out pe mobil + coloana pe desktop) începe DIRECT cu
+`.nav-progress` („0/18 · PAȘI"), exact ca în `c01/HTML-Studiu`. NU conține blocul
+`<div class="nav-brand">` (banda „PACK 02 EXCEL · C0X" + titlul construcției).
+
+**De ce:** banda nav-brand e redundantă (slug-ul + titlul apar deja în
+`mobile-topbar` și în hero) și pe mobil împinge meniul în jos, ascunzând butonul
+„RESETEAZĂ PROGRES" sub fold. C01 = REFERINȚA corectă (n-a avut niciodată banda).
+
+**Regula la generare CNN (COPY+MODIFY din c01):** c01 nu are nav-brand, deci o
+construcție nouă pornită corect din c01 nu o moștenește. Dacă o construcție o are
+(moștenită dintr-o sursă veche), se elimină blocul HTML + cele 9 reguli CSS
+`.nav-brand` / `.nav-brand-label` / `.nav-brand-title` (bază + 2 breakpoint-uri).
+
+**Detector empiric:** regex pe HTML-Studiu + Editor-Studiu → absența
+`<div class="nav-brand">` și a `.nav-brand {`. Prezența = drift, se repară.
+
+## R-V03.74 · TESTUL CURSANTULUI + AUDIT CA LANȚ (non-confuzie inter-construcție)
+**Status:** ACTIVĂ permanentă (V58) · introdusă din feedback arhitectură ARHITECT
+
+Riscul dominant nu mai e tehnic (drift/sync/gate), ci conceptual: suprapuneri de
+identitate între construcții. La fiecare audit de construcție și la fiecare
+generare CNN se rulează OBLIGATORIU **testul cursantului ca lanț**:
+
+1. Extrage din construcția nouă ȘI din vecinele ei (N-1, N+1) doar: **obiect,
+   întrebare, titlu, mantra, payoff, WOW, motto**.
+2. Verifică: un cursant care vede DOAR aceste elemente distinge instant
+   construcțiile? Sau două sună la fel (același tipar sintactic, payoff care
+   spune același lucru, deschidere WOW identică)?
+3. Criteriul: construcția nu trebuie doar să fie bună — trebuie **imposibil de
+   confundat** cu vecinele. Tipare repetate („Setul nu mai X. Fiecare rând are
+   Y." la două construcții) = risc, se semnalează și se diversifică.
+
+Referință axă: ADN-ul T2 din `_system/11` (C05 vocabular · C06 sens · C07 calendar
+· C08 context). Vezi doc 11 pentru cele 5 lecții de arhitectură.
+
+**Detector:** semi-empiric (necesită judecată). Heuristic: payoff-uri/WOW-uri ale
+construcțiilor vecine cu același prefix/tipar de >4 cuvinte = flag de revizuit.
+
 ## R-V03.63 · AUDIT EMPIRIC PERMANENT
 **Status:** ACTIVĂ · STRUCTURĂ MAJORĂ V38
 La fiecare consolidare brain / commit major, motorul rulează `_system/generatoare/audit_sync.py` care:

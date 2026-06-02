@@ -388,9 +388,10 @@ same mood."
 NUME FISIER SALVAT: `executive-c03-03-transformare.jpg`
 DIMENSIUNE: 1920x1280 px (3:2 orizontal)
 
-CONCEPT: Power Query ca audit engine. O succesiune vizibila de pasi PQ
-documentati pe o pagina alaturata, fiecare pas neutralizand o categorie
-de contaminare. Datele raman aceleasi, doar invelisul lor devine curat.
+CONCEPT: coloana martor de recuperare. Langa sursa contaminata, o coloana
+martor cu formule (TRIM, SUBSTITUTE, VALUE, DATEVALUE) care recupereaza
+valoarea reala. Nu se curata masterul, se dovedeste ca valoarea e
+recuperabila. Mecanismul permanent apartine constructiei urmatoare.
 
 
 PROMPT COMPLET:
@@ -404,12 +405,11 @@ fluorescent yellow markings still visible on problem cells - trailing
 space dots, ghost characters, left-aligned numbers, string-formatted
 dates.
 
-RIGHT page, 45 percent width: a documented audit recipe page, showing
-a list of forensic neutralization steps in structured format. Each line
-implies a Power Query transformation step, visually rendered as
-monospaced text blocks never readable as real words, each with a small
-warm yellow checkmark beside it. The neutralization is demonstrated, each
-contamination removed without touching the real value.
+RIGHT page, 45 percent width: a witness column of recovery formulas
+placed next to the contaminated source, visually rendered as monospaced
+text blocks never readable as real words, each with a small warm yellow
+checkmark beside it. The recoverability is demonstrated, each contamination
+proven reversible by a formula without touching the real value.
 
 Between the two pages, 10 percent center width: a soft warm yellow light
 gradient suggesting flow from contamination to clean, but no arrow,

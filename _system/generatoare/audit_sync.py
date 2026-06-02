@@ -14,7 +14,12 @@ Usage:
     python3 _system/generatoare/audit_sync.py --json
 """
 
-import sys, re, os, glob, json
+import sys, re, os, glob, json, zipfile
+
+def _fold(s):
+    """Pliaza diacriticele romanesti -> ASCII, lowercase (comparatii de nume
+    modulo diacritice). Slug ASCII din filename vs display cu diacritice."""
+    return s.translate(str.maketrans('ăâîșțĂÂÎȘȚşţ', 'aaistAAISTst')).lower()
 
 DETECTORS = {}
 
@@ -190,6 +195,68 @@ def _r0371(folder):
                 # Identitate literala a zonei de continut cu alt cNN
                 return False
     return True
+
+
+@detector('R-V03.73', 'Meniu mobil fara banda nav-brand (referinta C01)', 'studiu')
+def _rnavbrand(c):
+    # Side-nav-ul incepe direct cu .nav-progress, ca in c01. Banda nav-brand
+    # (PACK 02 EXCEL + titlu) e redundanta si pe mobil ascunde butonul Reset
+    # sub fold. Bug descoperit empiric la C02-C07 (V58). Prezenta blocului HTML
+    # sau a regulii CSS = drift. L191.
+    return '<div class="nav-brand">' not in c and '.nav-brand {' not in c
+
+
+@detector('R-V57.parity', 'Paritate semnatura premium (mantra V56 + miza card)', 'studiu')
+def _rparity(c):
+    # Se aplica DOAR constructiilor PREMIUM (hero-visual-overlay). Legacy
+    # (inca pe model vechi) = N/A pana primesc premium. Prinde cazul cand o
+    # propagare de componenta-semnatura (ex. mantra V56, miza card V53) ajunge
+    # la unele constructii premium dar NU la altele (drift de paritate vizuala
+    # pe care structura/anti-clona/dash NU il prind). L189.
+    if 'hero-visual-overlay' not in c:
+        return True  # legacy (nepremium) = N/A, pass vacuos (harness 'studiu' face all(), None devine False)
+    m = re.search(r'\.mantra-band-main\s*\{[^}]*\}', c)
+    if not m:
+        return False
+    mantra_scale = 'clamp(30px, 7vw, 64px)' in m.group(0) and 'font-weight: 900' in m.group(0)
+    mantra_clone = 'box-decoration-break: clone' in c
+    miza_card = re.search(r'\.cover-miza\s*\{[^}]*box-shadow[^}]*\}', c) is not None
+    return mantra_scale and mantra_clone and miza_card
+
+
+@detector('R-V58.filmname', 'Nume FILM == identitate HTML (anti-rename-stale)', 'folder')
+def _rfilmname(folder):
+    # Dupa un rename de constructie (ex. C05 CLASIFICARE->DICTIONAR in V44),
+    # filename-ul FILM + HTML se actualizeaza, dar titlul DIN .docx poate ramane
+    # cu numele vechi (care acum apartine altei constructii). audit/gate nu
+    # prind (nu citesc continutul FILM). Verifica: stem-ul numelui din titlul
+    # FILM (".docx") apare in identitatea HTML (topbar + footer + cover-title),
+    # modulo diacritice. Numele narativ (C07 MEMORIA, C08 ECOSISTEM) trec, ca
+    # apar si in cover-title HTML. L190.
+    films = glob.glob(os.path.join(folder, 'FILM-Excel-*.docx'))
+    studs = glob.glob(os.path.join(folder, 'HTML-Studiu-Excel-*.html'))
+    if not films or not studs:
+        return True  # N/A
+    try:
+        with zipfile.ZipFile(films[0]) as z:
+            xml = z.read('word/document.xml').decode('utf-8', 'ignore')
+    except Exception:
+        return True  # nu pot citi .docx (ex. lipsa) -> nu blochez
+    wt = re.findall(r'<w:t[^>]*>([^<]*)</w:t>', xml)
+    title = wt[0] if wt else ''
+    m = re.search(r'C\d+\s+(\w+)', title, re.U)
+    if not m:
+        return True
+    stem = _fold(m.group(1))[:5]
+    if len(stem) < 4:
+        return True
+    with open(studs[0], encoding='utf-8') as fh:
+        h = fh.read()
+    parts = []
+    for pat in (r'mobile-topbar-title">([^<]*)', r'class="footer">\s*([^<]*)', r'cover-title">([^<]*)'):
+        mm = re.search(pat, h)
+        parts.append(mm.group(1) if mm else '')
+    return stem in _fold(' '.join(parts))
 
 
 def audit(root='.', json_out=False):
