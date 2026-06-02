@@ -4,176 +4,163 @@
 PENDING
 
 ## MANDAT-ID
-BRAIN-009
+BRAIN-010
 
 ## MANDAT
-AUDIT T3 FINAL înainte de implementarea C09.
+IMPLEMENTARE C09 RELAȚII din SPEC LOCKED.
 
 ## CONTEXT
-BRAIN-008 este DONE. Garda T3 a fost cuplată în gate_v20, guarded strict pe NN 09-12.
+BRAIN-009 a făcut auditul final T3.
 
-Starea curentă:
-- T3 arhitectură = LOCK
-- T3 governance = LOCK
-- T3 detector = LOCK
-- T3 gate = LOCK
-- C09 nu este implementată încă
+Verdict:
+- T3 = PASS CU WARNING-uri
+- Zero FAIL blocant
+- C09 = gata de implementare
+- warning-urile vizează C10-C12, nu blochează C09
 
-Înainte de implementarea C09 vrem un audit final, ostil, al întregii trepte T3.
+C09 este prima construcție din T3.
+
+T3 lanț:
+C08 hartă descriptivă → C09 model interogabil → C10 măsură stabilă → C11 clasament / diferență → C12 cauză / insight verbal → T4 raportare vizuală
+
+C09 rol:
+- leagă sursele
+- activează Data Model
+- face prima citire cross-tabel
+- NU definește măsuri numite / reutilizabile
+- NU face clasament
+- NU explică de ce
+- NU produce dashboard
+- NU intră în acțiuni / recomandări
 
 ## OBIECTIV
-Audit arhitectural final pentru T3, cap-coadă.
+Implementează complet C09 RELAȚII pe baza SPEC LOCKED și BLUEPRINT-C09-RELATII.md.
 
-Nu implementa C09.
-Nu genera HTML.
-Nu genera FILM.
-Nu genera xlsx.
-Nu modifica artefacte.
-Nu modifica governance.
-Nu modifica detector.
-Nu modifica gate.
+C09 trebuie să fie o construcție reală, livrabilă, memorabilă, coerentă cu T3 și validată prin gate.
 
-Audit numai.
-
-## DOCUMENTE DE CITIT
-Citește și folosește ca surse:
+## DOCUMENTE DE CITIT ÎNAINTE
+Citește obligatoriu:
 - _system/governance/TRAINITY_ARCHITECTURE_BIBLE.md
 - _system/12-ARHITECTURA-CONCEPTUALA-T3.md
 - _system/06-MAP-CONSTRUCTII-T1-T5.md
 - _system/blueprints/BLUEPRINT-C09-RELATII.md
-- CLAUDE-TO-BRAIN.md, rapoartele BRAIN-005, BRAIN-006, BRAIN-007, BRAIN-008 dacă sunt disponibile în istoric/git
-- _system/generatoare/tier_guard_t3.py
+- CLAUDE-TO-BRAIN.md, raportul BRAIN-009
+- c08 artefacte relevante pentru handoff
 - _system/generatoare/gate_v20.py
+- _system/generatoare/tier_guard_t3.py
+- _system/generatoare/audit_sync.py
 
-## AUDIT OBLIGATORIU
-Atacă T3 ca auditor ostil.
+## REGULI CRITICE C09
 
-Nu presupune că arhitectura este corectă.
-Încearcă să o spargi.
-Caută:
-- redundanțe
-- suprapuneri
-- contaminări
-- verbe greșite
-- handoff-uri slabe
-- construcții care pot fi eliminate
-- zone în care cursantul nu percepe diferența
-- zone în care un director non-Excel nu înțelege de ce există 4 construcții separate
+### Identitate C09
+C09 = RELAȚII.
 
-## TREAPTA AUDITATĂ
-T3 = ANALIZĂ / INTERPRETARE
+Verb: a lega.
+Obiect: sursele / tabelele / modelul.
+Promisiune: pot întreba peste mai multe tabele.
+AHA: Fără relații ai date. Cu relații ai răspunsuri.
 
-C09 RELAȚII
-C10 MĂSURI
-C11 COMPARAȚII
-C12 INTERPRETARE
+### Graniță C09 / C10
+C09 are voie să facă doar citire demonstrativă cross-tabel.
 
-Lanțul declarat:
-C08 hartă descriptivă → C09 model interogabil → C10 măsură stabilă → C11 clasament / diferență → C12 cauză / insight verbal → T4 raportare vizuală
+C09 NU are voie să:
+- definească măsuri numite
+- creeze măsuri reutilizabile
+- explice conceptul de măsură vie
+- folosească identitatea C10
+- transforme citirea demonstrativă în lecție despre măsurare
 
-## TESTE SPECIFICE
+C10 este despre a defini măsuri.
+C09 este despre a lega modelul ca să poți întreba.
 
-### 1. TEST IDENTITATE
-Pentru fiecare C09-C12, verifică dacă identitatea este clară, memorabilă și imposibil de confundat.
+### Graniță C09 / C11
+C09 NU face:
+- ranking
+- top/bottom
+- clasament
+- Pareto
+- comparații sistematice
 
-Întrebări:
-- Care este verbul real al construcției?
-- Care este obiectul real al construcției?
-- Care este promisiunea concretă?
-- Poate fi explicată în 30 secunde?
+### Graniță C09 / C12
+C09 NU explică de ce.
+Nu caută cauze.
+Nu face insight final.
 
-### 2. TEST MEMORABILITATE
-Verifică dacă fiecare construcție are o formulă memorabilă, nu doar corectă tehnic.
+### Graniță C09 / T4
+C09 NU produce dashboard.
+C09 NU produce raport vizual publicabil.
+C09 NU construiește cockpit / scorecard.
 
-Caută formule slabe, prea academice, prea tehnice, prea apropiate între ele.
+### Graniță C09 / T5
+C09 NU recomandă acțiuni.
+C09 NU generează decizii.
+C09 NU automatizează fluxuri.
 
-### 3. TEST HANDOFF
-Verifică fiecare trecere:
-- C08 → C09
-- C09 → C10
-- C10 → C11
-- C11 → C12
-- C12 → T4
+## TASKURI OBLIGATORII
 
-Pentru fiecare răspunde:
-- ce predă construcția anterioară?
-- ce primește construcția următoare?
-- ce se rupe dacă handoff-ul este slab?
+### 1. Adaugă C09 în gate config
+Adaugă intrarea C09 în load_identitate sau mecanismul echivalent din gate_v20, astfel încât C09 să poată fi validată oficial de gate.
 
-### 4. TEST CONTAMINARE
-Verifică:
-- C09 intră în C10?
-- C10 intră în C11?
-- C11 intră în C12?
-- C12 intră în T4?
-- C12 intră în T5?
-- T3 reia T2?
+Aceasta a fost problema rămasă din BRAIN-008 și BRAIN-009.
 
-### 5. TEST ELIMINARE CONSTRUCȚIE
-Pentru fiecare construcție, simulează eliminarea:
-- dacă elimin C09, ce se rupe?
-- dacă elimin C10, ce se rupe?
-- dacă elimin C11, ce se rupe?
-- dacă elimin C12, ce se rupe?
+### 2. Implementează artefactele C09
+Implementează pachetul complet C09 conform structurii repo și standardului C01-C08.
 
-Dacă o construcție poate fi eliminată fără pierdere majoră, marchează FAIL.
+Respectă naming-ul și arhitectura existentă.
+Nu inventa structură nouă dacă există deja convenție.
 
-### 6. TEST DIRECTOR NON-EXCEL
-Imaginează-ți că explici T3 unui director non-Excel.
+### 3. Integrează handoff C08 → C09
+C09 trebuie să pornească natural din C08.
 
-Poate înțelege diferența dintre:
-- relații
-- măsuri
-- comparații
-- interpretare
+C08 predă harta descriptivă / ecosistemul.
+C09 activează relațiile și transformă sursele în model interogabil.
 
-fără jargon Excel?
+### 4. Pregătește handoff C09 → C10
+La final C09 trebuie să predea către C10:
+- modelul legat
+- prima citire cross-tabel
+- nevoia de cifră stabilă
 
-Dacă nu, marchează WARNING și propune o formulare mai bună.
+Dar fără să definească încă măsuri numite.
 
-### 7. TEST SCALARE T4/T5
-Verifică dacă T3 se oprește unde trebuie:
-- T3 produce răspunsul
-- T4 îl face vizibil
-- T5 îl pune în acțiune
+### 5. Rulează validări
+Rulează obligatoriu:
+- gate_v20 pentru C09
+- tier_guard_t3 pentru C09, direct sau prin gate
+- audit_sync
+- orice verificare standard folosită pentru C01-C08
 
-Caută orice element din T3 care forțează prea devreme vizualizarea, raportarea, decizia sau automatizarea.
+## FIȘIERE PERMISE LA MODIFICARE
+Ai voie să modifici:
+- fișierele C09 necesare
+- index / registry / mapări necesare pentru C09
+- gate_v20.py doar pentru intrarea C09 în load_identitate sau config echivalent
+- CLAUDE-TO-BRAIN.md
+- STARE-CURENTA.md doar dacă este standard în fluxul de finalizare
 
-## AXE DE AUDIT DETALIAT
+## FIȘIERE INTERZISE LA MODIFICARE
+Nu modifica:
+- C01-C08 artefacte existente
+- C10-C12 artefacte, dacă există doar ca blueprint/spec
+- governance / Bible
+- _system/12-ARHITECTURA-CONCEPTUALA-T3.md
+- _system/06-MAP-CONSTRUCTII-T1-T5.md
+- detectorul tier_guard_t3.py, decât dacă descoperi bug real și îl explici clar
+- README.md
+- CLAUDE.md
 
-### C09 vs C10
-- C09 este clar despre relații?
-- C10 este clar despre măsuri?
-- C09 intră prea mult în măsurare?
-- C10 începe prea târziu?
-- Granița model vs măsură este suficient de clară?
+## CRITERII DE PASS
+Mandatul trece doar dacă:
 
-### C10 vs C11
-- C10 este suficient de puternic separat?
-- Sau este doar o etapă tehnică înainte de comparații?
-- C10 are miză de business suficientă?
-- Diferența dintre măsură și clasament este clară?
-
-### C11 vs C12
-- C11 spune „care".
-- C12 spune „de ce".
-- Este linia suficient de dură?
-- C12 poate deveni prea ușor raportare sau recomandare?
-
-### T3 vs T4
-- Există dashboard / raport / vizualizare publicabilă infiltrată în T3?
-- Dacă da, unde?
-
-### T3 vs T5
-- Există alertă / acțiune / recomandare executată / decizie automată infiltrată în T3?
-- Dacă da, unde?
-
-## VERIFICARE DETECTOR / GATE
-Verifică logic, fără să modifici codul:
-- dacă tier_guard_t3 acoperă riscurile reale identificate
-- dacă gate_v20 activează garda la momentul potrivit
-- dacă există riscuri care nu sunt prinse mecanic
-- dacă sunt reguli prea dure care ar putea bloca inutil C09
+1. C09 este implementată complet.
+2. C09 este aliniată cu SPEC LOCKED.
+3. C09 nu contaminează C10/C11/C12/T4/T5.
+4. C09 are intrare în gate config.
+5. gate_v20 rulează pe C09.
+6. tier_guard_t3 verifică C09.
+7. audit_sync nu introduce drift nejustificat.
+8. raportul explică orice warning rămas.
+9. zero modificări nepermise în C01-C08 și governance.
 
 ## LIVRABIL
 Scrie raport complet în CLAUDE-TO-BRAIN.md.
@@ -182,42 +169,19 @@ Scrie raport complet în CLAUDE-TO-BRAIN.md.
 1. Status
 2. Rezumat executiv
 3. Fișiere citite
-4. Verdict global T3: PASS / WARNING / FAIL
-5. Audit identitate C09-C12
-6. Audit memorabilitate C09-C12
-7. Audit handoff C08 → C09 → C10 → C11 → C12 → T4
-8. Audit contaminare T2/T3/T4/T5
-9. Audit eliminare construcții
-10. Audit director non-Excel
-11. Audit detector / gate
-12. Probleme critice
-13. Probleme warning
-14. Ce trebuie schimbat înainte de C09
-15. Este T3 gata de implementare?
-16. Următorul mandat recomandat
-17. Commit / status Git
-
-## RESTRICȚII
-Poți modifica doar CLAUDE-TO-BRAIN.md.
-
-Nu modifica:
-- BRAIN-TO-CLAUDE.md
-- c01/** până la c12/**
-- orice HTML
-- orice FILM
-- orice xlsx
-- orice imagine
-- governance / Bible
-- 06-MAP
-- doc 12 T3
-- detector
-- gate
-- README.md
-- CLAUDE.md
-- STARE-CURENTA.md
+4. Fișiere modificate
+5. Ce ai implementat în C09
+6. Cum ai respectat granița C09/C10
+7. Cum ai respectat granița C09/C11/C12/T4/T5
+8. Cum ai integrat C09 în gate config
+9. Teste rulate
+10. Rezultate PASS / WARNING / FAIL
+11. Probleme rămase
+12. Decizii cerute de la BRAIN
+13. Commit / status Git
 
 ## MANDAT CURENT
-Execută BRAIN-009.
-AUDIT T3 FINAL.
-Audit numai.
-Zero implementare C09.
+Execută BRAIN-010.
+Implementează C09 RELAȚII.
+Respectă strict SPEC LOCKED.
+Zero implementare C10-C12.
