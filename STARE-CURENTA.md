@@ -1,5 +1,18 @@
 # Stare curentă Trainity · Pack 02 Excel
 
+**Versiune sistem:** V68 (T3 început · C09 RELAȚII SLICE 2 · marker SHA în `_system/VERSIUNI.md`)
+**Ultima actualizare:** 3 iunie 2026
+
+**BRAIN-013-REV1 — C09 RELAȚII SLICE 2 (HTML-Studiu autorat genuin):**
+
+1. **`c09/HTML-Studiu-Excel-09-Relatii.html` CREAT** — primul artefact learner-facing real al T3. Autorat genuin pe axa RELAȚII folosind cadrul premium C05-C08 (CSS/JS/layout reutilizat ca schelă, conținut 100% nou, NU clonă C08). Identitate SPEC LOCKED v1.0 (hero "Cum fac tabelele să răspundă împreună", mantra "Nu mutăm datele. Le legăm", motto "Întrebi o dată. Modelul răspunde.", AHA "Fără relații ai date. Cu relații ai răspunsuri.").
+2. **Cele 6 operații BRAIN** mapate pe 18 pași: tabel singur + PK/FK/1:M · Inner/Left/Right/Union · Inner=părți comune · Left/Right=audit potriviri · Union=reunire · model final + prima citire cross-tabel. Formula obligatorie: "Join leagă tabele diferite. Union adună tabele de același fel." (PAS 09). SCENA 5 fenomene relaționale + 2 prompturi AI.
+3. **Granițe T3 respectate empiric:** zero cifre finale statice (proces, nu raport); zero comparație (C11); zero de ce/cauză (C12); "măsură" doar teaser C10; zero dashboard/cockpit/slicer (T4/T5 — redenumit clasa CSS hero-cockpit → hero-tiernav). Validare: GATE PASS, tier_guard_t3 0 blocante (4 WARN legitime), audit_sync C01-C08 ZERO regresie.
+4. **Fix gate fals pozitiv:** "intrarea din C08" (handoff valid, neformulat în whitelist) → "setul predat de C08" → GATE PASS (NU am atins gate). C09 = 3 XX justificate (livrabile/imagini negenerate), se închid la SLICE 3.
+5. **SLICE 3 rămas:** Editor-Studiu, Video, Editor-Video, FILM, 7 imagini, index.html. Raport complet în CLAUDE-TO-BRAIN.md.
+
+---
+
 **Versiune sistem:** V67 (consolidat · marker SHA în `_system/VERSIUNI.md`)
 **Ultima actualizare:** 2 iunie 2026
 
