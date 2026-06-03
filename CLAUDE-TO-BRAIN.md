@@ -1,93 +1,107 @@
 # CLAUDE → BRAIN
 
 ## 1. STATUS
-DONE — BRAIN-013-REV1 (C09 RELAȚII, SLICE 2). `c09/HTML-Studiu-Excel-09-Relatii.html` autorat genuin pe axa RELAȚII, validat (GATE PASS, tier_guard 0 blocante, audit_sync C01-C08 zero regresie). Zero Editor/Video/FILM/imagini/index (conform mandat).
+DONE — BRAIN-015-REV1 (AUDIT COMPLET SISTEMIC C09 HTML-Studiu). Mod auditor pur: HTML NEatins (git diff gol). Validări automate + audit conceptual/pedagogic/tehnic pe 16 zone. Decizie: **PASS CU FIXURI PUNCTUALE** (2 MAJOR, 2 MINOR, 0 BLOCKER). Niciun fix aplicat (niciun bug tehnic critic care să împiedice auditul).
 
 ## 2. REZUMAT EXECUTIV
-Am construit primul artefact learner-facing real al C09: HTML-Studiu pe axa RELAȚII, folosind cadrul premium C05-C08 (CSS/JS/layout reutilizat ca schelă), dar cu CONȚINUT 100% autorat genuin, nu clonă C08. Am pornit dintr-o copie structurală C08 și am înlocuit tot conținutul textual (cover, mantra, scenă, 6 etape, 18 pași, 2 prompturi, 8 verificări, payoff, handoff-uri). Cele 6 operații C09 stabilite de BRAIN sunt coloana vertebrală a celor 18 pași. Formula obligatorie "Join leagă tabele diferite. Union adună tabele de același fel." e prezentă (PAS 09). Identitatea respectă SPEC-ul LOCKED v1.0 din blueprint. Granițele C09/C10/C11/C12 și T4/T5 respectate strict (verificat empiric). Zero cifre finale statice ca raport. Ancorat pe workbook-ul simplificat (7 foi vizibile + Relatii_Model).
+HTML-Studiu C09 are scheletul conceptual SOLID: identitate corectă (toate sloturile LOCKED verbatim), cele 6 operații acoperite, Join vs Union explicat exemplar, granițele C09/C10/C11/C12 și T4/T5 ținute strict, zero cifre business statice, prompturi AI sănătoase. Două probleme MAJOR de remediat înainte de companioni: (1) inconsistența de model pedagogic „patru tabele" vs „un fact și patru dimensiuni" (confirmă semnalul BRAIN, în 4 locuri), (2) — DESCOPERIRE NOUĂ nesemnalată — hero-ul vizual base64 este CLONĂ BYTE-IDENTICĂ cu hero-ul C08 (cursantul vede imaginea de cartografiere pe pagina de relații). Suspiciunea BRAIN despre „Regiuni lipsă din enumerări" este NECONFIRMATĂ empiric: Regiuni apare în toate enumerările complete (PAS 01, 04, 07, Raport AI, Prompt 1). Niciuna nu blochează auditul; recomand fixuri punctuale, nu reconstrucție.
 
 ## 3. FIȘIERE CITITE
-- BRAIN-TO-CLAUDE.md (BRAIN-013-REV1), CLAUDE-TO-BRAIN.md (raport BRAIN-012-REV1)
-- _system/12-ARHITECTURA-CONCEPTUALA-T3.md (autoritate T3)
-- _system/blueprints/BLUEPRINT-C09-RELATII.md (SPEC LOCKED, sloturi identitate)
-- c09/Creativ-Excel-09-Relatii.txt (axa vizuală, cele 6 etape)
-- c09/Date_MASTER-C09.xlsx (START + Vanzari + 4 dimensiuni + Relatii_Model: 4 relații M:1, integritate, prima citire cross-tabel)
-- c08/HTML-Studiu (extras DOAR scheletul tehnic premium: CSS/JS/clase, NU conținut narativ)
-- _system/generatoare/tier_guard_t3.py, gate_v20.py, audit_sync.py (constrângeri validare)
+BRAIN-TO-CLAUDE.md (BRAIN-015-REV1), CLAUDE-TO-BRAIN.md (raport BRAIN-013-REV1), CLAUDE.md, STARE-CURENTA.md, c09/HTML-Studiu-Excel-09-Relatii.html (integral, text vizibil extras fără base64/CSS/JS), c09/Date_MASTER-C09.xlsx (7 foi vizibile + Relatii_Model), c09/Creativ-Excel-09-Relatii.txt, _system/12-ARHITECTURA-CONCEPTUALA-T3.md, _system/blueprints/BLUEPRINT-C09-RELATII.md (sloturi LOCKED), gate_v20.py / tier_guard_t3.py / audit_sync.py (constrângeri).
 
-## 4. FIȘIERE CREATE / MODIFICATE
-- c09/HTML-Studiu-Excel-09-Relatii.html (CREAT — autorat genuin)
-- CLAUDE-TO-BRAIN.md (acest raport)
-- STARE-CURENTA.md (actualizare flux standard)
-- NEATINSE (interzise): C01-C08, C10-C12, Date_MASTER-C09, Creativ, generatoare, Editor/Video/FILM C09, imagini, index.html, governance, 06-MAP, doc 12, tier_guard, gate.
+## 4. VALIDĂRI AUTOMATE RULATE
+1. **git diff HEAD -- HTML:** gol (HTML neatins în acest mandat). ✓
+2. **gate_v20 09 c09 c01:** GATE PASS.
+3. **tier_guard_t3 c09:** 0 blocante, 4 WARN (1× „clasament" în breadcrumb de treaptă; 3× „top" = nume clase CSS top-progress/scroll-top/study-intro-top — fals pozitiv).
+4. **audit_sync:** C01-C08 toate OK (zero regresie); C09 = 3 XX (R-V03.47 livrabile, R-V03.33 imagini Video, V39.assets) — așteptate pentru slice fără Video/imagini.
+5. **Căutare termeni C10-C12/T4/T5:** doar în base64 (KPI/361) = fals pozitiv; în text vizibil ZERO (verificat prin strip base64).
+6. **Căutare cifre business statice:** ZERO în text vizibil (361/2.953.798/7.986.019 doar în hero base64).
+7. **Căutare „patru tabele":** 4 apariții (L1501, L1534, L1751, L1917). „un fact"/„dimensiuni" prezent la L1577, L1664, L1719. Regiuni prezent în toate enumerările.
+8. **Structură HTML:** 6 stages / 18 steps / 8 finals / 5 anomaly-card / 2 prompt-box — exact. Balans <style> 8/8, <script> 1/1. localStorage key „trainity_c09_study_v1". em/en-dash: 0.
 
-## 5. STRUCTURA HTML-STUDIU C09
-Cadru premium (cover → mantra → scenă 5 fenomene → 6 etape/18 pași → 8 verificări finale → next C10 → payoff → footer), nav lateral cu 6 etape + 8 verificări, breadcrumb de treaptă T3 (CARTOGRAFIERE → RELAȚII activ → MĂSURI → CLASAMENT, ca hartă de orientare). Identitate (toate LOCKED): hero "Cum fac tabelele să răspundă împreună"; cover-title idem; mantra "Nu mutăm datele. Le LEGĂM"; motto "Întrebi o dată. Modelul răspunde."; WOW "Tabele care stăteau alături... acum răspund împreună la o singură întrebare."; bombă "Ai toate datele. Și niciun răspuns."; greșeala "Oamenii copiază coloane... Profesioniștii le leagă o dată."; AHA "Fără relații ai date. Cu relații ai răspunsuri."
+## 5. AUDIT IDENTITATE C09 — PASS (1 MINOR)
+Toate sloturile LOCKED v1.0 prezente verbatim: BOMBĂ „Ai toate datele. Și niciun răspuns."; GREȘEALA „Oamenii copiază coloane... Profesioniștii le leagă o dată."; AHA „Fără relații ai date. Cu relații ai răspunsuri."; MANTRA „Nu mutăm datele. Le legăm." (mark galben pe „legăm"); WOW, MOTTO „Întrebi o dată. Modelul răspunde."; CINE DEVII „Nu mai vezi o rețea. O interoghezi."; MIZA business completă. **MINOR-1:** hero-question și cover-title folosesc „Cum fac tabelele să răspundă împreună?", dar blueprint pct.8 LOCKED are HERO „Cum transform legăturile în răspunsuri?". Reformulare apropiată semantic, dar nu verbatim slotul LOCKED. De aliniat sau de confirmat de BRAIN.
 
-## 6. CUM AM CONSTRUIT CELE 6 OPERAȚII
-Mapate pe cei 18 pași, nu izolate:
-- **Op.1 (tabel singur + PK/FK/1:M):** PAS 02 (Vanzari nu poate răspunde singur la "cât pe regiune") + PAS 03 (cod_produs = PK în Produse, FK în Vanzari; "Cheia este podul. Fără cheie, tabelul rămâne izolat.") + PAS 05 (cardinalitate 1:M).
-- **Op.2 (alegi Inner/Left/Right/Union):** PAS 08 (cele patru operații explicate simplu, alegi după întrebare).
-- **Op.3 (Inner = părți comune):** PAS 09 + fenomen 03 ("Inner îți arată ce se potrivește, ascunde ce lipsește").
-- **Op.4 (Left/Right = audit potriviri lipsă):** PAS 10 ("Ce nu se potrivește e uneori mai important") + fenomen 04.
-- **Op.5 (Union = reunire):** PAS 09 + fenomen 05, cu formula obligatorie verbatim.
-- **Op.6 (model final):** PAS 16-17 (prima citire cross-tabel + tabelele lucrează împreună) + PAS 18 (predare C10).
+## 6. AUDIT MODEL DATE — MAJOR-1 (confirmă semnalul BRAIN)
+Modelul CORECT (1 fact + 4 dimensiuni) apare în: PAS 01 („un tabel fact (Vanzari) și patru dimensiuni: Produse, Clienți, Regiuni, Calendar"), PAS 07 („un fact central și dimensiuni în jur"), Raport AI (FACT · Vanzari / DIMENSIUNI · Produse, Clienți, Regiuni, Calendar). DAR formularea INCONSISTENTĂ „patru tabele" apare în 4 locuri:
+- **L1501 cover-subtitle:** „Ai patru tabele corecte, cunoscute, datate." — numără 4, maschează rolul fact/dimensiune; „datate" se aplică impropriu (doar prin Calendar).
+- **L1534 before/after ÎNAINTE:** „patru tabele separate".
+- **L1751 DOVADA TRANSFORMĂRII:** „patru tabele separate".
+- **L1917 PAS 17:** „nu patru tabele alăturate" (folosit negativ, dar tot numără 4 ignorând fact-ul = 5 tabele).
+Formula cerută de BRAIN („Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni.") NU e prezentă explicit. **Regiuni: NU lipsește din nicio enumerare** (suspiciune BRAIN neconfirmată). Confuzie foi/model: HTML nu confundă START/Relatii_Model cu tabele de model (PAS 11 tratează corect Relatii_Model ca foaie de control), dar lipsa formulei explicite „foi vs model" lasă loc ambiguității pe care „patru tabele" o amplifică.
 
-## 7. CUM AM CONSTRUIT SCENA 5 FENOMENE
-Pe relații, nu pe analiză finală (cele 5 din mandat): 01 TABEL ORB (singur nu răspunde la întrebarea corectă), 02 CHEIA NEVERIFICATĂ (există dar trebuie validată PK/FK), 03 INNER ASCUNDE (partea comună ascunde lipsurile), 04 CE NU SE POTRIVEȘTE (Left/Right scot orfanii), 05 UNION NU E RELAȚIE (adună seturi compatibile, nu leagă tabele).
+## 7. AUDIT OPERAȚII C09 — PASS
+Toate 6 operațiile acoperite: (1) tabel singur nu răspunde + PK/FK/1:M → PAS 02/03/05; (2) alegi Inner/Left/Right/Union → PAS 08; (3) Inner = părți comune → PAS 09 + fenomen 03; (4) Left/Right ca audit → PAS 10 + fenomen 04 („Ce nu se potrivește e uneori mai important"); (5) Union reunire → PAS 09 + fenomen 05; (6) model final → PAS 16/17/18. PK/FK/1:M explicate clar („Cheia este podul").
 
-## 8. CUM AM EXPLICAT PK/FK/CARDINALITATE
-PK = cheia unică din dimensiune (cod_produs apare o dată în Produse). FK = cheia din fact care trimite spre dimensiune (cod_produs se repetă pe mii de rânduri în Vanzari). 1:M = un rând în dimensiune, multe în fact; dimensiunea e "unul", fact-ul e "mulții". Metafora ancoră: "Cheia este podul." Granularitatea (PAS 06) = la ce nivel poți întreba (rând/lună/client/regiune).
+## 8. AUDIT JOIN vs UNION — PASS (exemplar)
+Formula obligatorie „Join leagă tabele diferite. Union adună tabele de același fel." prezentă verbatim în PAS 09 + Raport AI + fenomen 05. Union poziționat corect ca reunire, NU relație clasică: „nu creează nicio relație: lipește rânduri, nu leagă tabele" (fenomen 05), „Union e altceva: lipește pe rânduri" (PAS 09).
 
-## 9. CUM AM EXPLICAT INNER / LEFT / RIGHT / UNION
-Inner = doar ce există în ambele. Left = tot din stânga + ce se potrivește din dreapta. Right = invers. Union = rânduri lipite unul sub altul. Distincția-cheie (PAS 09): Inner/Left/Right = join-uri (combină tabele diferite pe coloane, prin chei); Union = lipire pe rânduri a tabelelor de același fel. Formula obligatorie prezentă: "Join leagă tabele diferite. Union adună tabele de același fel." Left/Right poziționate și ca instrument de AUDIT (PAS 10), nu doar combinare.
+## 9. AUDIT SCENA 5 FENOMENE — PASS
+01 TABEL ORB, 02 CHEIA NEVERIFICATĂ, 03 INNER ASCUNDE, 04 CE NU SE POTRIVEȘTE, 05 UNION NU E RELAȚIE. Reale, clare, memorabile, pe axa relații. Zero alunecare spre C10/C11/C12 (niciun „cât/care/de ce" ca rezultat).
 
-## 10. CUM AM FOLOSIT DATE_MASTER-C09 FĂRĂ RAPORT STATIC
-HTML-ul explică PROCESUL, nu rezultatul. Am folosit întrebarea-demo ("câtă valoare pe regiunea Transilvania?") ca TIP de citire cross-tabel, FĂRĂ să afișez cifra finală (2.953.798 sau 361 NU apar nicăieri — verificat empiric). Suma de control e menționată generic ("suma conservată", "valorile sursă neatinse"), niciodată ca rezultat de analiză. Modelul (4 relații M:1, chei, orfani 0) e descris ca mecanism, cifrele se citesc/validează live în workbook.
+## 10. AUDIT PROMPTURI AI — PASS
+2 prompturi: P1 IDENTIFICAREA RELAȚIILOR (PK/FK/cardinalitate/coloană legătură, „Nu modifica datele"), P2 ALEGEREA ȘI VERIFICAREA OPERAȚIEI (Inner/Left/Right/Union + riscuri: orfani, cardinalitate greșită, chei duplicate, relații inactive). Accelerează verificarea, nu înlocuiesc gândirea, nu cer cifre finale, nu sar în măsuri/rank/interpretare.
 
-## 11. CUM AM RESPECTAT GRANIȚA C09/C10
-C09 se oprește la MODEL + prima citire cross-tabel demonstrativă. Nu definește nicio măsură numită. Cuvântul "măsură" apare DOAR în PAS 18 + next-section + payoff, mereu ca teaser explicit către C10 ("ca măsură stabilă definită o dată, începe la C10"). Verbul "a defini" apare doar în acel context teaser. Verificat: tier_guard_t3 nu raportează nicio ancoră C10 în sloturile de identitate C09.
+## 11. AUDIT GRANIȚĂ C09/C10 — PASS
+Zero măsuri numite, zero măsură vie, zero filter context dezvoltat, zero KPI dezvoltat. „Măsură" apare DOAR în PAS 18 + next-section + payoff, mereu ca teaser explicit C10 („ca măsură stabilă definită o dată, începe la C10"). C09 se oprește la model + prima citire cross-tabel.
 
-## 12. CUM AM RESPECTAT GRANIȚA C09/C11/C12/T4/T5
-- C11 (compară/clasament): zero "comparație/compari" în fișier (verificat). "Clasament" apare DOAR în breadcrumb-ul de treaptă ca pas viitor inactiv (hartă de orientare, WARN non-blocant).
-- C12 (de ce/cauză/explic): zero în text vizibil ("de ce" = fals pozitiv din "decide ce").
-- T4 (dashboard/grafic/cockpit/scorecard/slicer): zero (am redenumit chiar clasa CSS hero-cockpit → hero-tiernav ca să elimin cuvântul din cadru).
-- T5 (alertă/acțiune/refresh automat/buton acțiune): zero.
+## 12. AUDIT GRANIȚĂ C09/C11 — PASS
+Zero rank/top/bottom/comparație de performanță predată. „Comparație/compari" = absent total. „Clasament" apare DOAR în breadcrumbul de treaptă (CARTOGRAFIERE · RELAȚII · MĂSURI · CLASAMENT) ca orientare/pas viitor inactiv, NU ca predare. Generează 1 WARN tier_guard (non-blocant).
 
-## 13. VALIDĂRI RULATE
-1. gate_v20 09 c09 c01: GATE PASS (cross-contamination rezolvat — vezi pct.14).
-2. tier_guard_t3 c09: 0 erori blocante, 4 WARN non-blocante.
-3. audit_sync: C01-C08 toate OK (zero regresie); C09 = 3 XX justificate.
-4. Anti-clonă narativă vs C08: gate CROSS-CONTAMINATION PASS + cuvinte C08 (cartografi/ecosistem/satelit) absente ca conținut (rămân doar 2 mențiuni handoff legitime + breadcrumb treaptă).
-5. Contaminări C10/C11/C12/T4/T5: zero (pct.11-12).
-6. Cifre finale statice: zero (pct.10).
-7. index.html nemodificat: confirmat (nu e în git diff).
-8. em/en-dash: 0. Balans <style> 8/8, <script> 1/1. Structură 6 stages/18 steps/8 finals/5 anomaly/2 prompt — exact.
+## 13. AUDIT GRANIȚĂ C09/C12 — PASS
+Zero cauze, zero „de ce" interpretativ (singura potrivire „de ce" = fals pozitiv din „decide ce"), zero verdict business, zero interpretare finală.
 
-## 14. REZULTATE PASS / WARNING / FAIL
-- HTML-Studiu C09 autorat genuin: PASS.
-- Cele 6 operații + SCENA 5 + 2 prompturi + handoff-uri: PASS.
-- Join vs Union (formula obligatorie): PASS.
-- Granițe C09/C10/C11/C12/T4/T5: PASS.
-- GATE: PASS (initial 1 FAIL CROSS-CONTAMINATION pe "ca la intrarea din C08" — handoff valid dar neformulat în whitelist-ul gate; reformulat "ca la setul predat de C08" → PASS. NU am atins gate.)
-- audit_sync regresie C01-C08: ZERO (PASS).
-- tier_guard: WARNING (4 avertismente non-blocante: 1× "clasament" în breadcrumbul de treaptă = teaser pas viitor; 3× "top" = nume de clase CSS top-progress/scroll-top/study-intro-top, nu text vizibil). Niciunul nu e contaminare de conținut.
+## 14. AUDIT T4/T5 — PASS
+Zero dashboard/grafic publicabil/raport vizual/cockpit/scorecard/slicer (clasa CSS hero-cockpit a fost redenumită hero-tiernav la construcție). Zero alertă/acțiune automată/refresh automat/buton acțiune/recomandare.
 
-## 15. CE RĂMÂNE PENTRU SLICE 3
-- Editor-Studiu C09 (companion).
-- Video + Editor-Video C09 (cu cele 6 exec-stage + JSON STAGES pe axa RELAȚII).
-- FILM C09 (corp narativ pe vocea RELAȚII, nu boilerplate — lecția L200).
-- 7 imagini (hero + 6 exec-stage) generate de ARHITECT din Creativ, procesate aici (watermark + base64 în Video).
-- Adăugare C09 în index.html (DOAR după release complet sau decizie de preview parțial).
-- Cele 3 XX din audit_sync (R-V03.47 livrabile, R-V03.33 imagini Video, V39.assets) se închid când Video + imagini există.
+## 15. AUDIT CIFRE BUSINESS — PASS
+Zero cifre exacte din Excel ca rezultat static în text vizibil. Permise prezente: „orfani = 0", „1:M", numere de pași/etape/verificări (18/6/8). Întrebarea-demo („valoarea pe regiunea Transilvania") e folosită ca TIP de citire, fără cifra finală. Cifrele 361/2.953.798/7.986.019 apar DOAR în hero base64 (date binare, fals pozitiv).
 
-## 16. DECIZII CERUTE DE LA BRAIN
-1. Confirmi breadcrumbul de treaptă T3 (CARTOGRAFIERE → RELAȚII → MĂSURI → CLASAMENT) ca element de orientare? Afișează pașii viitori (MĂSURI/CLASAMENT) inactiv, ca hartă — generează 1 WARN tier_guard pe "clasament", dar e teaser, nu conținut. Alternativă: ascund pașii viitori și afișez doar treapta curentă.
-2. Confirmi că SLICE 3 = Video + Editor-Video + Editor-Studiu + FILM + imagini, în acest mandat sau separate pe sub-slice-uri?
-3. Generezi cele 7 imagini C09 din Creativ când ai timp (pentru integrarea în Video la SLICE 3)?
+## 16. AUDIT UX / PROGRESIE PEDAGOGICĂ — PASS
+6 etape (REALITATE → INVESTIGAȚIE → TRANSFORMARE → VERIFICARE → STABILIZARE → CONFIRMARE), 18 pași (3/etapă), 8 verificări finale. Progresie logică: deschizi model → interoghezi relațiile cu AI → construiești → verifici integritatea → ancorezi la sursă → predai. Etapa 5 STABILIZARE = ancorare la sursă (model viu, anti-derivă) — coerentă. Accordion + nav + breadcrumb. Fără repetiții parazite în conținut (structura e cadrul comun C05-C08, conținutul e propriu).
 
-## 17. COMMIT / STATUS GIT
-- Branch: main
-- Commit: BRAIN-013-REV1 (c09 HTML-Studiu autorat genuin + raport + STARE-CURENTA)
-- Push: origin/main
-- GATE 09 PASS · tier_guard 0 blocante · audit_sync C01-C08 zero regresie · zero fișiere interzise modificate
+## 17. AUDIT LIMBAJ — PASS (cu nota MAJOR-1)
+Română cu diacritice integral. Zero em-dash/en-dash. Fără fraze generice. Singura contradicție de limbaj = inconsistența „patru tabele" vs „un fact și patru dimensiuni" (raportată la MAJOR-1, pct.6).
+
+## 18. AUDIT TEHNIC HTML — PASS (cu nota MAJOR-2)
+Structură 6/18/8/5/2 exactă. Tag-uri închise (balans style 8/8, script 1/1). localStorage key C09 corect. 18 pași + 8 verificări prezente. Responsive (CSS premium moștenit, mobile-topbar/drawer). **MAJOR-2 (vezi pct.19):** hero base64 prezent dar = clonă C08.
+
+## 19. AUDIT ANTI-CLONĂ C08 — MAJOR-2 (descoperire nouă)
+- **Hero vizual base64 = IDENTIC BYTE-CU-BYTE cu C08** (md5 b05f939ad609c0cfc92577ac1727f530, 171119 bytes, ambele construcții). Cursantul care deschide C09 vede imaginea hero a C08 (harta ecosistemului/cartografiere). Overlay-ul text spune corect „OBIECTUL CONSTRUCȚIEI · C09 RELAȚII", dar imaginea de sub e C08. Cauză: copy structural din C08 a cărat hero-ul base64; c09/assets/ nu există (imaginile C09 negenerate, conform BRAIN-013). audit_sync NU prinde (R-V59.imgclone scanează exec-stage din Video, nu hero din Studiu).
+- **Text:** „cartografiere/ecosistem/satelit" = 2 mențiuni rămase, AMBELE handoff legitim (breadcrumb „CARTOGRAFIERE" = treapta anterioară; stage-quote E1 „harta ecosistemului predată de C08"). NU clonă conceptuală.
+- **CSS/JS reutilizat** = permis (cadru). Concluzie: conținut text curat, hero vizual = clonă MAJOR de remediat.
+
+## 20. LISTA COMPLETĂ DE PROBLEME (cu severitate)
+- **MAJOR-1** — Inconsistență model „patru tabele" (L1501 cover-subtitle, L1534 before/after, L1751 dovada, L1917 PAS 17) vs „un fact și patru dimensiuni". Lipsește formula BRAIN „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni."
+- **MAJOR-2** — Hero vizual base64 = clonă byte-identică C08 (imaginea cartografiere pe pagina relații).
+- **MINOR-1** — Hero-question / cover-title „Cum fac tabelele să răspundă împreună?" ≠ slot blueprint LOCKED „Cum transform legăturile în răspunsuri?".
+- **MINOR-2** — cover-subtitle „patru tabele corecte, cunoscute, datate": „datate" se aplică impropriu la 4 tabele (doar fact-ul e datat prin Calendar).
+- **WARN-1** — Breadcrumb „CLASAMENT"/„MĂSURI" → WARN tier_guard (orientare legitimă de treaptă, non-blocant). Decizie BRAIN cerută (pct.16 raport anterior).
+- **WARN-2** — „top" × 3 = nume clase CSS (top-progress/scroll-top/study-intro-top), fals pozitiv tier_guard.
+- **INFO** — 3 XX audit_sync (livrabile/imagini negenerate) = așteptat pentru slice fără Video/imagini.
+
+## 21. FIXURI RECOMANDATE (NU aplicate)
+1. **MAJOR-1:** Înlocuiește „patru tabele" cu modelul corect în cele 4 locuri. Sugestie: cover-subtitle → „Ai un tabel de vânzări și mai multe tabele de context. Și niciun răspuns care să le traverseze."; before/after + dovada → „tabele separate" (fără numărul 4) sau „un fact și patru dimensiuni, încă nelegate"; PAS 17 → „nu mai multe tabele alăturate". Adaugă o frază-ancoră (ex. în PAS 01 sau RAPORT AI): „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni."
+2. **MAJOR-2:** Scoate hero-ul base64 clonă C08 — fie placeholder neutru (fundal grafit fără imagine), fie elimină `<img hero-visual-img>` până ARHITECT generează hero-poster-excel-09-relatii.jpg (din Creativ SECȚIUNEA 1). Recomand placeholder neutru până la SLICE imagini.
+3. **MINOR-1:** Aliniază hero-question la slotul LOCKED sau cere BRAIN confirmarea reformulării.
+4. **MINOR-2:** cover-subtitle — scoate „datate" sau reformulează ca să nu atribuie temporalitate tuturor tabelelor.
+Toate sunt fixuri de TEXT + 1 înlocuire de asset; NU ating arhitectura, operațiile, granițele. Companionul Editor-Studiu se face DUPĂ aceste fixuri (regula permanentă nouă: companion sincronizat cu baza stabilizată).
+
+## 22. DECIZIE
+**PASS CU FIXURI PUNCTUALE.** Nu reparație majoră, nu reconstrucție. Scheletul conceptual (identitate, 6 operații, Join/Union, granițe, SCENA, prompturi, progresie) este corect și solid. Cele 2 MAJOR sunt remedieri de text + 1 asset, izolate, fără impact asupra arhitecturii. După fixuri → baza e stabilă pentru companioni (Editor-Studiu, apoi Video/Editor-Video/FILM/imagini).
+
+## 23. CE NU AM MODIFICAT
+HTML-Studiu C09 (git diff gol — neatins). Niciun companion creat (Editor-Studiu/Video/Editor-Video/FILM). Zero imagini. index.html neatins în acest mandat. Date_MASTER, Creativ, generatoare, governance, 06-MAP, doc 12, gate, tier_guard — neatinse.
+
+## 24. CE RĂMÂNE DE FĂCUT DUPĂ AUDIT
+1. (la decizia BRAIN) Aplică fixurile MAJOR-1 + MAJOR-2 + MINOR pe HTML-Studiu.
+2. După stabilizarea bazei: generează HTML-Editor-Studiu C09 sincronizat (regula permanentă nouă).
+3. SLICE următor: Video + Editor-Video + FILM C09 pe axa RELAȚII (corp narativ propriu, nu boilerplate — L200).
+4. ARHITECT generează 7 imagini C09 (hero + 6 exec-stage din Creativ) → procesare watermark + base64 → înlocuiește hero-ul clonă C08.
+5. Cele 3 XX audit_sync se închid când Video + imagini există.
+
+## 25. COMMIT / STATUS GIT
+- Branch: main.
+- Commit: BRAIN-015-REV1 audit (CLAUDE-TO-BRAIN.md raport + STARE-CURENTA actualizare).
+- HTML neatins (git diff gol confirmat).
+- GATE PASS · tier_guard 0 blocante · audit_sync C01-C08 zero regresie · zero fișiere interzise modificate.
