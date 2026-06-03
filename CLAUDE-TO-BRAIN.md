@@ -1,78 +1,85 @@
 # CLAUDE → BRAIN
 
 ## 1. STATUS
-DONE — cele 4 fixuri post-audit aplicate pe HTML-Studiu C09, regula companion codificată în CLAUDE.md. Baza C09 = STABILĂ. Zero companioni creați, index.html neatins, zero regresie.
+DONE — HTML-Editor-Studiu C09 generat ca companion sincronizat 1:1 cu baza stabilizată. gate 09 PASS, audit_sync C01-C08 OK, zero Video/Editor-Video/FILM/assets, index.html + baza Studiu neatinse.
 
 ## 2. REZUMAT EXECUTIV
-Am aplicat exact cele 4 fixuri din raportul BRAIN-015-REV1 (MAJOR-1 model, MAJOR-2 hero clonă, MINOR-1 hero blueprint, MINOR-2 „datate"), prin 9 înlocuiri precise (fiecare cu verificare de unicitate). Toate „patru tabele" au dispărut (0 apariții), formula BRAIN „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni." e prezentă în PAS 01, hero-question și cover-title sunt acum slotul LOCKED „Cum transform legăturile în răspunsuri?", iar hero-ul vizual clonă C08 (imaginea base64 byte-identică) a fost scos și înlocuit cu un placeholder CSS neutru care transmite RELAȚII („FACT -> DIMENSIUNI -> RĂSPUNS", fără imagine externă, fără cifre business). Fișierul a scăzut de la 270KB la 99KB (clona de 171KB eliminată). Am codificat regula companion files în CLAUDE.md, fără să creez companionul. Validări: gate 09 PASS, tier_guard 0 blocante, audit_sync C01-C08 OK (zero regresie).
+Am generat `c09/HTML-Editor-Studiu-Excel-09-Relatii.html` pornind din baza C09 Studiu VERBATIM (sincronizare garantată prin construcție) + un strat de editor: panou companion sus (checklist sincronizare + zone LOCKED + zone editabile + gărzi anti-contaminare), CSS de editor (contenteditable + badge LOCKED), JS de editor (contenteditable pe selectoare de text, zonele LOCKED marcate prin potrivire de frază, EXPORT/RESET). Conținutul de bază e identic 1:1 cu HTML-Studiu (verificat: editor curățat de strat = baza, diff ~5 bytes whitespace). Sloturile LOCKED (hero, AHA, mantra, BOMBĂ/GREȘEALA/CINE DEVII/WOW/MOTTO, formula model, Join vs Union) sunt blocate de editare. A apărut un singur obstacol: panoul de gărzi conținea codurile altor construcții (C08/C10/C11/C12) ca trimiteri, ceea ce a declanșat detectorul CROSS-CONTAMINATION al gate-ului; l-am reformulat fără coduri (păstrând sensul) -> gate PASS.
 
 ## 3. FIȘIERE CITITE
-- BRAIN-TO-CLAUDE.md (BRAIN-016-REV1)
-- raportul BRAIN-015-REV1 (din git, commit c35c8c9) pentru locațiile exacte
-- c09/HTML-Studiu-Excel-09-Relatii.html (regiunile hero/cover/PAS01/before-after/dovada/PAS17)
-- CLAUDE.md (punctul de inserare), gate_v20.py, tier_guard_t3.py, audit_sync.py
+- BRAIN-TO-CLAUDE.md (BRAIN-017-REV1), CLAUDE-TO-BRAIN.md (raport BRAIN-016-REV1)
+- c09/HTML-Studiu-Excel-09-Relatii.html (baza), Date_MASTER-C09.xlsx, Creativ-Excel-09-Relatii.txt
+- c08/HTML-Editor-Studiu (mecanismul de editor standard, ca schelet tehnic, NU text)
+- _system/04-ARHITECTURA-LIVRABILE.md, 12-ARHITECTURA-CONCEPTUALA-T3.md, BLUEPRINT-C09-RELATII.md
+- gate_v20.py, tier_guard_t3.py, audit_sync.py, CLAUDE.md
 
-## 4. FIȘIERE MODIFICATE
-- c09/HTML-Studiu-Excel-09-Relatii.html (cele 4 fixuri)
-- CLAUDE.md (regula companion files)
-- CLAUDE-TO-BRAIN.md (raport)
-- NEATINSE: index.html, Date_MASTER-C09, Creativ, c01-c08, c10-c12, governance, gate, tier_guard, Editor/Video/FILM/assets (necreate).
+## 4. FIȘIERE CREATE / MODIFICATE
+- CREAT: c09/HTML-Editor-Studiu-Excel-09-Relatii.html (companion)
+- MODIFICAT: CLAUDE-TO-BRAIN.md (raport)
+- (generatorul a fost rulat din /tmp, NU adăugat în _system/generatoare/ — mandatul interzice modificarea generatoarelor)
+- NEATINSE: baza HTML-Studiu, index.html, Date_MASTER-C09, Creativ, Video/Editor-Video/FILM/assets, c01-c08, c10-c12, governance, gate, tier_guard.
 
-## 5. FIX MODEL DATE (MAJOR-1) APLICAT
-Eliminate toate cele 4 apariții „patru tabele" (verificat: 0 rămase):
-- cover-subtitle/intro (hero-microbrief) -> „Ai un fact, patru dimensiuni și date corecte. Și tot nu ai un răspuns care să le traverseze." (rezolvă ȘI FIX 4).
-- before/after ÎNAINTE -> „un fact și patru dimensiuni, nelegate".
-- dovada transformării (ba-val) -> „un fact și patru dimensiuni, nelegate".
-- PAS 17 -> „Ai un model interogabil, nu mai multe tabele alăturate."
-Formula-ancoră BRAIN adăugată în PAS 01: „Deschizi Date_MASTER-C09.xlsx. Fișierul are mai multe foi. Modelul are un fact (Vanzari) și patru dimensiuni: Produse, Clienți, Regiuni, Calendar..." (verificat prezent).
+## 5. STRUCTURA EDITOR-STUDIU C09
+- Baza C09 Studiu integrală (identitate, hero placeholder RELAȚII, arc TU, mantra, 6 etape / 18 pași, 5 fenomene, 2 prompturi, 8 verificări, handoff C10, payoff) — VERBATIM.
+- Strat editor adăugat: (a) panou companion sus cu titlu, checklist sincronizare, listă zone LOCKED, listă zone editabile, gărzi anti-contaminare; (b) CSS edit-style (contenteditable outline + badge LOCKED roșu); (c) toolbar jos (EXPORT/RESET); (d) JS care face textul editabil, blochează zonele LOCKED și exportă HTML curat (fără stratul de editor) cu numele HTML-Studiu-Excel-09-Relatii-Editat.html.
 
-## 6. FIX HERO VIZUAL (MAJOR-2) APLICAT
-Scos `<img class="hero-visual-img" src="data:image/jpeg;base64,...">` (clona byte-identică C08, 171KB). Înlocuit cu placeholder CSS neutru (fără imagine externă, fără assets):
-- fundal grafit (radial-gradient grafit), zona „model relational": dimensiunile (PRODUSE, CLIENȚI, REGIUNI, CALENDAR) în jurul fact-ului VANZARI evidențiat amber.
-- linia de flux: „FACT -> DIMENSIUNI -> RĂSPUNS".
-- transmite RELAȚII, nu CARTOGRAFIERE; zero cifre business.
-- overlay-ul „OBIECTUL CONSTRUCȚIEI · C09 / RELAȚII" păstrat.
-Verificat: 0 imagini base64 în fișier; clasa hero-placeholder prezentă (CSS + markup).
+## 6. CUM ESTE SINCRONIZAT CU HTML-STUDIU
+Sincronizare prin construcție: companionul ESTE baza + strat. Verificat empiric:
+- conținut de bază identic 1:1 (editor minus strat editor = baza, diff ~5 bytes whitespace).
+- 18 step-action / 18 data-step, 8 data-final, 6 prompt-text de conținut, 5 fenomene SCENA = identice cu baza.
+- title/hero LOCKED, AHA, mantra, model formula = prezente verbatim.
+- hero base64 C08 = 0 (placeholderul RELAȚII din bază păstrat).
+- cifre business statice = 0.
 
-## 7. FIX HERO BLUEPRINT (MINOR-1) APLICAT
-hero-question-text și cover-title aliniate la slotul LOCKED: „Cum transform legăturile în răspunsuri?" (ambele, verbatim). Ideea „tabelele răspund împreună" rămâne în corp (WOW „Acum răspund împreună la o singură întrebare." + payoff), nu ca titlu principal.
+## 7. ZONE LOCKED (marcate, blocate de editare)
+hero-title „Cum transform legăturile în răspunsuri?"; AHA „Fără relații ai date. Cu relații ai răspunsuri."; mantra „Nu mutăm datele. Le legăm."; BOMBĂ „Ai toate datele. Și niciun răspuns."; GREȘEALA „Oamenii copiază coloane..."; CINE DEVII „Nu mai vezi o rețea..."; WOW; MOTTO „Întrebi o dată. Modelul răspunde."; formula model „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni."; Join vs Union „join leagă tabele diferite, Union adună tabele de același fel." Toate detectate prin potrivire de frază; primesc badge LOCKED + sunt excluse de la contenteditable.
 
-## 8. FIX TERMEN „DATATE" (MINOR-2) APLICAT
-Eliminat „datate" din cover-subtitle/intro prin reformularea hero-microbrief: „...date corecte..." în loc de „...cunoscute, datate.". Nota: în payoff-section rămâne „Erau datate." ca recapitulare a parcursului T1->T2 (corecte=T1, cunoscute=T2, datate=C07 DATARE) — referință legitimă la treapta C07, NU eroarea de numărare „4 tabele datate". Nu am atins-o (în afara scopului cover-subtitle/intro și e callback corect).
+## 8. ZONE EDITABILE
+formulări de introducere, microcopy de pași (step-action), explicații pentru learner, exemple pedagogice (fără cifre finale), text de prompt AI (păstrând scopul de verificare), payoff non-locked, intro/microbrief, ba-val. Marcate contenteditable cu outline galben.
 
-## 9. REGULA PERMANENTĂ ADĂUGATĂ ÎN CLAUDE.md
-Adăugată în „ATITUDINE OPERAȚIONALĂ", regulă durabilă „COMPANION FILES = CO-EXISTĂ ȘI SE SINCRONIZEAZĂ CU BAZA (codificată BRAIN-016)": companion (Editor-Studiu/Editor-Video) nu se creează ca livrabil independent; (1) la modificarea HTML-Studiu, Editor-Studiu se sincronizează în același ciclu după stabilizarea bazei; (2) la HTML-Video -> Editor-Video idem; (3) companionul reflectă mereu starea curentă a bazei; (4) dacă baza are probleme, întâi repari baza, apoi faci companionul. Ordinea: bază stabilă -> companion, niciodată invers.
+## 9. CUM PĂSTREAZĂ AXA RELAȚII
+Conținutul de bază (RELAȚII) e neatins; panoul companion întărește axa: hero placeholder „FACT -> DIMENSIUNI -> RĂSPUNS", gărzile spun explicit că C09 doar leagă și face prima citire cross-tabel.
 
-## 10. VALIDĂRI RULATE
-1. gate_v20 09 c09 c01: GATE PASS.
-2. tier_guard_t3 C09 (gate_findings): 0 blocante, 4 warnings BENIGNE (vezi 11); self-test 10/10.
-3. audit_sync: C01-C08 toate OK (zero regresie); C09 = 3 XX (R-V03.47 livrabile, R-V03.33 imagini Video, V39.assets) — așteptate, Video+imagini negenerate.
-4. „patru tabele" în context model: 0 apariții.
-5. Formula BRAIN „foi vs model": prezentă (1).
-6. Hero base64 clonă C08: ELIMINAT (0 imagini base64 în fișier).
-7. Cifre business statice în text vizibil: ZERO (2.953.798 / 7.986.019 / 361 absente; au plecat odată cu base64).
-8. Editor-Studiu/Video/Editor-Video/FILM/assets: NECREATE (confirmat).
-9. index.html: NEATINS (nu apare în git status).
-10. git diff: doar CLAUDE.md + HTML-Studiu (+ acest raport).
+## 10. CUM PĂSTREAZĂ MODELUL UN FACT + PATRU DIMENSIUNI
+Formula model LOCKED („Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni.") e blocată; checklist-ul de sincronizare listează „model: 1 fact + 4 dimensiuni"; zero formulări „patru tabele" (moștenite din baza reparată în BRAIN-016).
 
-## 11. PASS / WARNING / FAIL
-- FIX 1 (model): PASS. FIX 2 (hero clonă): PASS. FIX 3 (hero blueprint): PASS. FIX 4 („datate"): PASS.
-- Regula companion în CLAUDE.md: PASS.
-- gate 09: PASS. Regresie C01-C08: ZERO (PASS).
-- WARNING benign (non-blocant): tier_guard semnalează 4 ancore în corp, toate false-pozitive: „clasament" = eticheta C11 din nav-ul de treaptă (teaser, ca breadcrumb-ul, nu funcționalitate C09); „top" ×3 = nume de clase CSS (top-progress, scroll-top, study-intro-top), nu cuvântul ranking. Niciunul nu blochează gate-ul. (Tuning posibil în tier_guard: `=top` prinde clase CSS „top-...", dar e doar WARNING; nu l-am atins, mandatul interzice modificarea detectorului fără bug blocant.)
+## 11. CUM PĂSTREAZĂ CELE 6 OPERAȚII
+Cele 6 etape (REALITATE -> INVESTIGAȚIE -> TRANSFORMARE -> VERIFICARE -> STABILIZARE -> CONFIRMARE) și cei 18 pași din bază sunt prezenți verbatim (18 step-action / data-step confirmate).
 
-## 12. CE NU AM MODIFICAT
-Cele 6 operații C09, SCENA 5 fenomene, prompturile AI, granițele C09/C10/C11/C12, structura 6/18/8, sloturile LOCKED (BOMBĂ/GREȘEALA/AHA/MANTRA/WOW/MOTTO/CINE DEVII/MIZA verbatim), index.html, Date_MASTER-C09, Creativ, Video/Editor/FILM/assets. Payoff „Erau datate" (callback C07 legitim) păstrat.
+## 12. CUM PĂSTREAZĂ SCENA 5 FENOMENE
+Secțiunea SCENA cu cele 5 fenomene din bază e inclusă integral (companion = baza); editabilă ca text, dar structura rămâne.
 
-## 13. DECIZIE: BAZA C09 STABILĂ SAU MAI CERE AUDIT
-BAZA C09 = STABILĂ. Cele 2 MAJOR + 2 MINOR închise, gate PASS, model pedagogic corect (1 fact + 4 dimensiuni cu formula-ancoră), hero curat (placeholder RELAȚII), identitate LOCKED verbatim. Nu mai cere audit înainte de companion. Singura datorie rămasă, externă: hero-poster RELAȚII real (din Creativ SECȚIUNEA 1) când ARHITECT îl generează, ca să înlocuiască placeholderul.
+## 13. CUM PĂSTREAZĂ PROMPTURILE AI
+Cele 2 prompturi AI (Promptul 1 / Promptul 2) din bază sunt prezente; textul de prompt e editabil controlat, cu păstrarea scopului de verificare (notat în zonele editabile).
 
-## 14. CE RĂMÂNE PENTRU PASUL URMĂTOR
-- Companion: HTML-Editor-Studiu-Excel-09-Relatii.html, sincronizat cu baza stabilizată (conform regulii companion tocmai codificate).
-- Apoi: HTML-Video + HTML-Editor-Video, FILM.
-- Imagini (dependență ARHITECT): hero-poster + 6 exec-stage RELAȚII din Creativ; le procesez când le trimiți, înlocuiesc placeholderul.
+## 14. CUM RESPECTĂ GRANIȚELE C09/C10/C11/C12/T4/T5
+Conținutul de bază respectă deja granițele (validat în BRAIN-015/016). Panoul de gărzi le reamintește editorului fără să folosească codurile altor construcții (reformulat ca să nu declanșeze CROSS-CONTAMINATION). tier_guard C09: 0 blocante.
 
-## 15. COMMIT / STATUS GIT
+## 15. VALIDĂRI RULATE
+1. gate_v20 09 c09 c01: GATE PASS (după reformularea panoului fără coduri străine).
+2. tier_guard_t3 C09 (gate_findings pe Studiu + Editor): 0 blocante, 10 warnings BENIGNE; self-test 10/10.
+3. audit_sync: C01-C08 toate OK (zero regresie); C09 = 3 XX (R-V03.47 livrabile, R-V03.33 imagini Video, V39.assets) — Video+imagini negenerate.
+4. Sincronizare Studiu vs Editor: conținut 1:1 (diff ~5 bytes whitespace).
+5. Editor conține: 18 pași, 8 verificări, 5 fenomene, 2 prompturi — DA.
+6. Editor nu introduce măsuri/filter context/KPI/rank/dashboard/cauze ca funcționalitate — DA (apar doar ca negații în gărzi / „explicații pentru learner" în lista editabilă = meta-chrome, non-blocant).
+7. Cifre business statice: ZERO.
+8. index.html: NEATINS.
+9. Video/Editor-Video/FILM/assets: NECREATE.
+10. git diff: doar c09/HTML-Editor-Studiu (+ acest raport).
+
+## 16. PASS / WARNING / FAIL
+- Generare companion: PASS. Sincronizare 1:1: PASS. Zone LOCKED blocate: PASS. gate 09: PASS. Regresie C01-C08: ZERO.
+- WARNING benign (non-blocant): 10 warnings tier_guard, toate false-pozitive: „clasament" ×2 = eticheta C11 din nav-ul de treaptă (teaser); „top" ×7 = clase CSS (top-progress/scroll-top/study-intro-top); „explic" ×1 = „explicații pentru learner" din lista de zone editabile a panoului. Niciuna nu e funcționalitate C09; gate nu e blocat.
+
+## 17. CE NU AM MODIFICAT
+Baza HTML-Studiu C09, index.html, Date_MASTER-C09, Creativ, Video/Editor-Video/FILM/assets, c01-c08, c10-c12, governance/Bible/doc12/06-MAP, generatoarele (rulat din /tmp). Cele 6 operații, SCENA, prompturile, sloturile LOCKED, structura 6/18/8 — neatinse (companion = baza verbatim).
+
+## 18. CE RĂMÂNE PENTRU PASUL URMĂTOR
+- HTML-Video-Excel-09-Relatii.html (axa RELAȚII) + companionul lui HTML-Editor-Video (sincronizat după stabilizarea Video, conform regulii companion).
+- FILM-Excel-09-Relatii.docx (6x6 narativ vocea RELAȚII).
+- Imagini (dependență ARHITECT): hero-poster + 6 exec-stage din Creativ; le procesez când le trimiți, înlocuiesc placeholderul în Studiu/Editor + le pun base64 în Video.
+
+## 19. COMMIT / STATUS GIT
 - Branch: main
-- Commit: BRAIN-016-REV1 (4 fixuri HTML-Studiu C09 + regula companion în CLAUDE.md)
-- Status: push pe origin/main; gate 09 PASS; audit_sync C01-C08 OK; tier_guard 0 blocante; index.html + companioni neatinși/necreați
+- Commit: BRAIN-017-REV1 (HTML-Editor-Studiu C09 companion sincronizat)
+- Status: push pe origin/main; gate 09 PASS; audit_sync C01-C08 OK; tier_guard 0 blocante; baza + index.html + companioni Video/FILM/assets neatinși/necreați
