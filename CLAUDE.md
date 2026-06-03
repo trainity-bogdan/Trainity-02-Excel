@@ -57,6 +57,7 @@ După orice modificare la livrabile, rulează `_system/generatoare/audit_sync.py
 
 | Comandă | Acțiune | Detaliu |
 |---|---|---|
+| `sync` | Sincronizez repo + execut mandatul BRAIN | pull main, citesc BRAIN-TO-CLAUDE.md, execut mandatul curent, raportez în CLAUDE-TO-BRAIN.md, commit + push |
 | `status` | Raportez stare + audit | citește STARE-CURENTA + rulează audit_sync |
 | `genereaza CNN` | Prima generare construcție | `_system/COMENZI.yaml` → genereaza_constructie |
 | `regenereaza CNN de la zero` | Suprascrie versiunea (cu confirmare) | branch dedicat `regen/cNN-AAAALLZZ` + commit înainte de suprascriere |
@@ -66,6 +67,23 @@ După orice modificare la livrabile, rulează `_system/generatoare/audit_sync.py
 | `regula noua R-V03.X: [desc]` | Codific regulă nouă | adaug în 01-REGULI + detector + rețetă patch |
 | `consolideaza brain` | Sumarizare sesiune | update STARE-CURENTA + commit + merge în main + push (FĂRĂ tag-uri, vezi G3) |
 | `help` | Listă comenzi disponibile | citesc COMENZI.yaml |
+
+### REGULĂ DURABILĂ PENTRU `sync`
+
+Când ARHITECT scrie doar `sync`, NU este doar sincronizare Git.
+
+`sync` înseamnă obligatoriu:
+1. `git fetch` / `git pull` ca să aliniez localul cu `origin/main`.
+2. Citesc integral `BRAIN-TO-CLAUDE.md`.
+3. Identific `MANDAT-ID` curent.
+4. Execut mandatul curent din `BRAIN-TO-CLAUDE.md`.
+5. Respect strict fișierele permise și interzise din mandat.
+6. Rulez validările cerute în mandat.
+7. Scriu raport complet în `CLAUDE-TO-BRAIN.md`.
+8. Commit descriptiv pe `main` + push pe `origin/main`.
+9. Dacă nu pot executa mandatul, raportez blocajul concret în `CLAUDE-TO-BRAIN.md`, nu mă opresc după `git status`.
+
+Interdicție explicită: la comanda `sync`, NU te oprești niciodată după mesaj de tip "local la zi / working tree curat". Acesta este doar pasul 1. Execuția mandatului este obligatorie.
 
 Pentru lista exhaustivă: `_system/03-COMENZI-OPERATIONALE.md`.
 Pentru format machine-readable: `_system/COMENZI.yaml`.
