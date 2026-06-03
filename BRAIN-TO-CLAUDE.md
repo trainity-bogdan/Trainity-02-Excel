@@ -4,10 +4,10 @@
 PENDING
 
 ## MANDAT-ID
-BRAIN-013
+BRAIN-013-REV1
 
 ## MANDAT
-C09 RELAȚII, SLICE 2: HTML-Studiu-Excel-09-Relatii.html autorat genuin.
+C09 RELAȚII, SLICE 2: HTML-Studiu-Excel-09-Relatii.html autorat genuin, cu operațiile C09 stabilite de BRAIN.
 
 ## DECIZII BRAIN
 Confirm explicit:
@@ -15,11 +15,12 @@ Confirm explicit:
 1. Accept soluția cu 7 foi vizibile + 2 foi hidden pentru contractul DATA-CONTINUITY.
 2. Accept numele canonice PRODUSE / CLIENTI în workbook, pentru compatibilitate cu gate.
 3. Accept Date_MASTER-C09 simplificat.
-4. Continuăm acum cu HTML-Studiu C09 autorat complet.
+4. Continuăm cu HTML-Studiu C09 autorat complet.
 5. Nu generăm încă imagini.
 6. Nu propagăm încă Editor-Studiu, Video, Editor-Video.
 7. Nu implementăm încă FILM.
 8. Nu adăugăm C09 în index.html încă, pentru că pagina nu este release complet.
+9. Ajustăm direcția C09: C09 trebuie să explice operațional relațiile prin chei și tipuri de join/reunire, fără să devină curs SQL/Power Query.
 
 ## CONTEXT
 BRAIN-012-REV1 a reparat workbook-ul C09.
@@ -34,8 +35,7 @@ Rezultat:
 - tier_guard_t3 = 10/10 PASS
 - zero regresie
 
-Acum workbook-ul este suficient de simplu pentru cursant.
-Putem reveni la HTML-Studiu.
+Acum construim HTML-Studiu C09, dar cu operațiile clarificate de BRAIN.
 
 ## OBIECTIV
 Creează `c09/HTML-Studiu-Excel-09-Relatii.html`, autorat genuin pe axa RELAȚII.
@@ -46,6 +46,27 @@ Nu trebuie să fie clonă C08.
 Nu trebuie să fie raport static.
 Nu trebuie să afișeze cifrele din Excel ca rezultat final.
 Trebuie să construiască experiența pedagogică a relațiilor.
+
+## DIRECȚIA OPERAȚIONALĂ C09, DECIZIE BRAIN
+C09 trebuie să fie construită în jurul acestor operații:
+
+1. Tabelul singur nu poate răspunde + identificarea cheilor corecte, inclusiv PK, FK, 1:M.
+2. Diferența dintre Left, Inner, Right și Union.
+3. Inner Join = părțile comune.
+4. Left / Right = părțile necomune, folosite ca audit al potrivirilor lipsă.
+5. Union = reunirea seturilor compatibile.
+6. Modelul final = tabelele nu mai stau separat, lucrează împreună.
+
+## IMPORTANT, UNION
+Union trebuie inclus, dar poziționat corect:
+
+- Inner / Left / Right = combinare pe coloane prin chei.
+- Union = lipire pe rânduri a unor tabele compatibile.
+- Union NU este relație clasică între tabele.
+- Union este reunire, nu relație.
+
+Formula obligatorie:
+"Join leagă tabele diferite. Union adună tabele de același fel."
 
 ## DOCUMENTE DE CITIT
 Citește obligatoriu:
@@ -105,7 +126,7 @@ HTML-ul trebuie să includă:
 1. HERO C09 puternic.
 2. Problemă reală de business.
 3. Reframe C09.
-4. Cele 6 etape C09 din blueprint.
+4. Cele 6 operații C09 stabilite de BRAIN.
 5. SCENA cu 5 fenomene reale de relații.
 6. 2 prompturi AI / Copilot, strict ca accelerator, nu ca substitut.
 7. Arc TU, cursantul trece de la tabele separate la model interogabil.
@@ -113,39 +134,65 @@ HTML-ul trebuie să includă:
 9. Handoff C09 -> C10.
 10. Final memorabil, cu AHA-ul C09.
 
-## CELE 6 ETAPE C09
-Folosește etapele locked din BLUEPRINT-C09-RELATII.md.
+## CELE 6 OPERAȚII C09, OBLIGATORII
+Folosește această structură operațională în HTML:
 
-Conform raportului BRAIN-012-REV1, etapele sunt:
-1. DESCHIDERE RELAȚIONALĂ
-2. INTEROGARE AI
-3. CONSTRUIREA MODELULUI
-4. VERIFICAREA RELAȚIILOR
-5. ANCORARE LA SURSĂ
-6. PREDAREA MODELULUI
+### 1. Tabelul singur nu poate răspunde + PK/FK
+Explică de ce Vanzari singur nu poate răspunde la întrebări care cer Produse, Clienti, Regiuni sau Calendar.
 
-Fiecare etapă trebuie să aibă:
-- intenție
-- acțiune în workbook
-- verificare
-- rezultat pedagogic
-- ce NU facem încă
+Introduce clar:
+- PK = cheia unică din dimensiune
+- FK = cheia din fact care trimite spre dimensiune
+- 1:M = un rând în dimensiune, multe rânduri în fact
+
+AHA secundar:
+"Cheia este podul. Fără cheie, tabelul rămâne izolat."
+
+### 2. Alegi operația corectă: Inner, Left, Right, Union
+Explică diferența simplu:
+- Inner = doar ce există în ambele tabele
+- Left = tot ce am în stânga + ce se potrivește din dreapta
+- Right = tot ce am în dreapta + ce se potrivește din stânga
+- Union = pun rânduri similare unul sub altul
+
+### 3. Inner Join, părțile comune
+Explică Inner ca zonă sigură:
+"Inner îți arată ce se potrivește. Dar ascunde ce lipsește."
+
+### 4. Left / Right, părțile necomune
+Explică Left / Right ca instrument de audit:
+"Ce nu se potrivește este uneori mai important decât ce se potrivește."
+
+### 5. Union, reunirea seturilor
+Explică Union ca append / reunire:
+"Union nu caută relații între tabele. Union construiește un set mai mare."
+
+Formula obligatorie:
+"Join leagă tabele diferite. Union adună tabele de același fel."
+
+### 6. Modelul final, tabelele lucrează împreună
+Închide C09 cu modelul interogabil:
+- tabelele sunt legate
+- cheile sunt clare
+- potrivirile sunt verificate
+- modelul permite prima citire cross-tabel
+- următorul pas este C10, unde cifra devine măsură stabilă
 
 ## SCENA 5 FENOMENE
 Construiește scena C09 pe relații, nu pe analiză finală.
 
-Fenomene recomandate:
+Fenomene obligatorii:
 1. Tabelul singur pare complet, dar nu poate răspunde la întrebarea corectă.
-2. Cheia există, dar nu este activată ca relație.
-3. Relația greșită produce citiri greșite sau imposibile.
-4. O dimensiune fără cheie activă rămâne mută.
-5. Modelul legat permite prima citire cross-tabel, fără să devină măsură numită.
+2. Cheia există, dar trebuie validată ca PK/FK.
+3. Inner arată partea comună, dar ascunde lipsurile.
+4. Left / Right scot la suprafață ce nu se potrivește.
+5. Union adună seturi compatibile, dar nu creează relații între tabele.
 
 ## PROMPTURI AI
 Include 2 prompturi utile pentru cursant:
 
-1. Prompt de identificare relații posibile între tabele.
-2. Prompt de verificare a riscurilor relaționale: orfani, cardinalitate, chei duplicate, relații inactive.
+1. Prompt de identificare relații posibile între tabele: PK, FK, cardinalitate, 1:M.
+2. Prompt de alegere și verificare operație: Inner / Left / Right / Union, plus riscuri relaționale, orfani, cardinalitate, chei duplicate, relații inactive.
 
 Prompturile trebuie să fie instrumente de verificare și accelerare.
 Nu trebuie să înlocuiască gândirea cursantului.
@@ -167,6 +214,8 @@ C09 NU are voie să:
 
 C09 are voie doar:
 - să lege tabele
+- să explice PK/FK/cardinalitate
+- să compare tipuri de join/reunire ca operații de relaționare
 - să documenteze relații
 - să verifice integritatea relațiilor
 - să facă o citire demonstrativă cross-tabel
@@ -245,12 +294,13 @@ Mandatul trece doar dacă:
 5. Nu hardcodează cifre exacte ca raport static.
 6. Respectă granița C09/C10.
 7. Respectă granița C09/C11/C12/T4/T5.
-8. Are 6 etape coerente.
+8. Are cele 6 operații C09 stabilite de BRAIN.
 9. Are SCENA 5 fenomene.
 10. Are 2 prompturi AI utile.
 11. Are handoff C08 -> C09 și C09 -> C10.
-12. index.html rămâne nemodificat.
-13. Raportul explică ce rămâne pentru SLICE 3.
+12. Explică clar diferența Join vs Union.
+13. index.html rămâne nemodificat.
+14. Raportul explică ce rămâne pentru SLICE 3.
 
 ## LIVRABIL
 Scrie raport complet în CLAUDE-TO-BRAIN.md.
@@ -261,21 +311,24 @@ Scrie raport complet în CLAUDE-TO-BRAIN.md.
 3. Fișiere citite
 4. Fișiere create / modificate
 5. Structura HTML-Studiu C09
-6. Cum ai construit cele 6 etape
+6. Cum ai construit cele 6 operații
 7. Cum ai construit SCENA 5 fenomene
-8. Cum ai folosit Date_MASTER-C09 fără să faci raport static
-9. Cum ai respectat granița C09/C10
-10. Cum ai respectat granița C09/C11/C12/T4/T5
-11. Validări rulate
-12. Rezultate PASS / WARNING / FAIL
-13. Ce rămâne pentru SLICE 3
-14. Decizii cerute de la BRAIN
-15. Commit / status Git
+8. Cum ai explicat PK/FK/cardinalitate
+9. Cum ai explicat Inner / Left / Right / Union
+10. Cum ai folosit Date_MASTER-C09 fără să faci raport static
+11. Cum ai respectat granița C09/C10
+12. Cum ai respectat granița C09/C11/C12/T4/T5
+13. Validări rulate
+14. Rezultate PASS / WARNING / FAIL
+15. Ce rămâne pentru SLICE 3
+16. Decizii cerute de la BRAIN
+17. Commit / status Git
 
 ## MANDAT CURENT
-Execută BRAIN-013.
+Execută BRAIN-013-REV1.
 C09 RELAȚII, SLICE 2.
 Livrează HTML-Studiu-Excel-09-Relatii.html autorat genuin.
+Folosește cele 6 operații stabilite de BRAIN.
 Zero Editor-Studiu.
 Zero Video.
 Zero Editor-Video.
