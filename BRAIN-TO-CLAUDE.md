@@ -4,148 +4,182 @@
 PENDING
 
 ## MANDAT-ID
-BRAIN-016-REV1
+BRAIN-017-REV1
 
 ## MANDAT
-C09 RELAȚII, fixuri punctuale după auditul sistemic.
-
-Aplică doar corecțiile stabilite de raportul BRAIN-015-REV1 pe `c09/HTML-Studiu-Excel-09-Relatii.html`.
-
-Nu crea încă Editor-Studiu.
-Nu crea Video.
-Nu crea Editor-Video.
-Nu crea FILM.
-Nu crea imagini noi.
-Nu modifica index.html.
+C09 RELAȚII, generează `HTML-Editor-Studiu-Excel-09-Relatii.html`, sincronizat perfect cu HTML-Studiu C09 stabilizat.
 
 ## CONTEXT
-Am citit raportul `CLAUDE-TO-BRAIN.md` pentru BRAIN-015-REV1.
+Am citit raportul `CLAUDE-TO-BRAIN.md` pentru BRAIN-016-REV1.
 
 Decizia BRAIN:
-- Accept decizia auditului: PASS CU FIXURI PUNCTUALE.
-- Nu reconstruim C09.
-- Nu mergem la companion înainte de stabilizarea HTML-ului de bază.
-- Aplicăm fixurile punctuale MAJOR-1, MAJOR-2, MINOR-1, MINOR-2.
+- Baza C09 este stabilă.
+- Cele 4 fixuri post-audit sunt acceptate.
+- Regula companion files a fost codificată în CLAUDE.md.
+- Acum este permis să generezi companionul Editor-Studiu, pentru că baza este stabilizată.
 
-## REGULĂ DURABILĂ DE CODIFICAT ȘI ÎN CLAUDE.md
-Actualizează `CLAUDE.md` cu regula durabilă despre companion files:
+## REGULĂ CRITICĂ
+Acest Editor-Studiu nu este un livrabil făcut la cerere.
 
-Fișierele de editare nu se creează la cerere ca livrabile independente. Ele co-există cu fișierul de bază și trebuie să fie sincronizate cu el.
+Este companion sincronizat cu baza stabilă:
+`c09/HTML-Studiu-Excel-09-Relatii.html`.
 
-Regula:
-1. Dacă se modifică `HTML-Studiu`, atunci `HTML-Editor-Studiu` se regenerează sau se sincronizează în același ciclu de lucru, după stabilizarea bazei.
-2. Dacă se modifică `HTML-Video`, atunci `HTML-Editor-Video` se regenerează sau se sincronizează în același ciclu de lucru, după stabilizarea bazei.
-3. Companionul reflectă starea curentă a fișierului de bază.
-4. Dacă HTML-ul de bază are probleme, întâi se auditează și se repară baza, apoi se face companionul.
+Companionul trebuie să reflecte starea curentă a bazei după BRAIN-016-REV1, inclusiv:
+- hero-title LOCKED: "Cum transform legăturile în răspunsuri?".
+- model corect: un fact și patru dimensiuni.
+- formula: "Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni.".
+- placeholder hero RELAȚII, fără base64 C08.
+- zero formulări incorecte "patru tabele" în contexte de model complet.
 
-Important: în acest mandat nu crea companionul C09. Doar codifici regula în `CLAUDE.md` și repari baza.
+## OBIECTIV
+Creează:
+`c09/HTML-Editor-Studiu-Excel-09-Relatii.html`
 
-## FIXURI OBLIGATORII
+Scop:
+- companion de editare și control pentru HTML-Studiu C09.
+- reflectă exact structura, identitatea, pașii, verificările și granițele HTML-Studiu C09.
+- permite revizuirea textelor C09 fără să rupă arhitectura.
+- marchează clar zonele editabile și zonele LOCKED.
+- include controale de sincronizare cu baza.
 
-### FIX 1, model DATE
-Elimină formulările incorecte de tip "patru tabele" când se referă la modelul complet.
+## DOCUMENTE DE CITIT OBLIGATORIU
+Citește:
+- CLAUDE.md.
+- STARE-CURENTA.md.
+- BRAIN-TO-CLAUDE.md.
+- CLAUDE-TO-BRAIN.md, raport BRAIN-016-REV1.
+- c09/HTML-Studiu-Excel-09-Relatii.html.
+- c09/Date_MASTER-C09.xlsx.
+- c09/Creativ-Excel-09-Relatii.txt.
+- companioni Editor-Studiu existenți C05-C08, ca schelet tehnic și standard UX, nu ca text de copiat.
+- _system/04-ARHITECTURA-LIVRABILE.md.
+- _system/12-ARHITECTURA-CONCEPTUALA-T3.md.
+- _system/blueprints/BLUEPRINT-C09-RELATII.md.
+- _system/generatoare/gate_v20.py.
+- _system/generatoare/tier_guard_t3.py.
+- _system/generatoare/audit_sync.py.
 
-Modelul corect este:
-- un fact: Vanzari.
-- patru dimensiuni: PRODUSE, CLIENTI, Regiuni, Calendar.
+## CE TREBUIE SĂ CONȚINĂ EDITOR-STUDIU C09
+Include cel puțin:
 
-Corectează aparițiile semnalate de audit:
-- cover-subtitle / intro.
-- before / after.
-- dovada transformării.
-- PAS 17.
+1. Meta construcție C09.
+2. Identitate C09.
+3. Hero locked: "Cum transform legăturile în răspunsuri?".
+4. AHA locked: "Fără relații ai date. Cu relații ai răspunsuri.".
+5. Mantra: "Nu mutăm datele. Le legăm.".
+6. Model DATE: un fact, Vanzari, și patru dimensiuni, PRODUSE, CLIENTI, Regiuni, Calendar.
+7. Formula locked: "Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni.".
+8. Cele 6 operații C09.
+9. SCENA 5 fenomene.
+10. Cele 2 prompturi AI.
+11. Cele 6 etape și 18 pași.
+12. Cele 8 verificări finale.
+13. Handoff C09 -> C10.
+14. Controale anti-contaminare C10/C11/C12/T4/T5.
+15. Controale anti-cifre business statice.
+16. Controale anti-clonă C08, inclusiv verificare hero vizual.
+17. Zone editabile.
+18. Zone LOCKED.
+19. Checklist de sincronizare cu HTML-Studiu.
 
-Formulări recomandate:
-- "Ai un fact și patru dimensiuni.".
-- "Vanzari plus patru dimensiuni.".
-- "tabele separate" dacă numărul nu este necesar.
-- "un fact și patru dimensiuni, încă nelegate".
-- "nu mai multe tabele alăturate".
+## ZONE LOCKED
+Marchează clar ca LOCKED:
+- Hero-title: "Cum transform legăturile în răspunsuri?".
+- AHA: "Fără relații ai date. Cu relații ai răspunsuri.".
+- Formula model: "Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni.".
+- Formula Join vs Union: "Join leagă tabele diferite. Union adună tabele de același fel.".
+- C09 nu definește măsuri.
+- C09 nu predă filter context.
+- C09 nu dezvoltă KPI.
+- C09 nu face rank.
+- C09 nu face top / bottom.
+- C09 nu interpretează cauze.
+- C09 nu produce dashboard.
+- C09 nu dă acțiuni.
 
-Adaugă explicit formula BRAIN într-un loc potrivit, preferabil PAS 01 sau Raport AI:
-"Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni."
+## ZONE EDITABILE
+Permite editare controlată pentru:
+- formulări de introducere.
+- microcopy de pași.
+- exemple pedagogice fără cifre finale.
+- text de prompt AI, păstrând scopul de verificare.
+- explicații scurte pentru learner.
+- formulări de payoff, dacă nu rup locked slots.
 
-### FIX 2, hero vizual
-Auditul a descoperit că hero-ul vizual din C09 este copiat din C08.
+## SINCRONIZARE CU BAZA
+Editor-Studiu trebuie să fie sincronizat cu baza stabilizată.
 
-În acest mandat nu genera imagine nouă și nu crea assets.
-
-Soluția cerută:
-- elimină imaginea base64 copiată din C08 din HTML-Studiu C09.
-- înlocuiește temporar cu placeholder vizual neutru, fără imagine externă, bazat pe CSS / fundal grafit / model relațional abstract simplu.
-- placeholderul trebuie să transmită RELAȚII, nu CARTOGRAFIERE.
-- nu introduce cifre business.
-
-Placeholderul poate conține text vizual scurt:
-"FACT → DIMENSIUNI → RĂSPUNS".
-
-### FIX 3, hero blueprint
-Aliniază hero-question și cover-title la slotul LOCKED:
-"Cum transform legăturile în răspunsuri?"
-
-Poți păstra ideea "tabelele răspund împreună" în corp, dar nu ca titlu principal.
-
-### FIX 4, termenul "datate"
-Elimină sau reformulează "datate" din cover-subtitle / intro.
-
-Reformulare recomandată:
-"Ai un fact, patru dimensiuni și date corecte. Și tot nu ai un răspuns care să le traverseze."
-
-## CE NU SE MODIFICĂ
-Nu schimba:
-- cele 6 operații C09.
-- SCENA 5 fenomene, decât dacă o formulare depinde de fixurile de mai sus.
-- prompturile AI, decât dacă apar formulări contaminate.
-- granițele C09/C10/C11/C12.
-- structura 6 stages / 18 steps / 8 finals.
-- index.html.
-- Date_MASTER-C09.xlsx.
-- Creativ-Excel-09-Relatii.txt.
-- Video / Editor-Video / FILM / assets.
+Verifică explicit:
+- titlul din Editor = titlul din HTML-Studiu.
+- AHA din Editor = AHA din HTML-Studiu.
+- lista celor 18 pași = lista din HTML-Studiu.
+- cele 8 verificări finale = lista din HTML-Studiu.
+- cele 5 fenomene = lista din HTML-Studiu.
+- cele 2 prompturi AI = prompturile din HTML-Studiu.
+- modelul DATE = formula corectă.
+- nu apare hero base64 C08.
 
 ## FIȘIERE PERMISE
-Ai voie să modifici doar:
-- `c09/HTML-Studiu-Excel-09-Relatii.html`.
-- `CLAUDE.md`, pentru regula durabilă despre companion files.
+Ai voie să modifici / creezi doar:
+- `c09/HTML-Editor-Studiu-Excel-09-Relatii.html`.
 - `CLAUDE-TO-BRAIN.md`.
 - `STARE-CURENTA.md`, doar dacă fluxul standard cere actualizare.
 
-Nu crea `HTML-Editor-Studiu` în acest mandat.
+Nu modifica `c09/HTML-Studiu-Excel-09-Relatii.html` în acest mandat, decât dacă descoperi o eroare critică de sincronizare și o explici explicit.
+
+Nu modifica:
+- index.html.
+- Date_MASTER-C09.xlsx.
+- Creativ-Excel-09-Relatii.txt.
+- Video C09.
+- Editor-Video C09.
+- FILM C09.
+- assets / imagini.
+- C01-C08.
+- C10-C12.
+- generatoare.
+- governance / Bible / doc 12 / 06-MAP.
 
 ## VALIDĂRI CERUTE
 Rulează:
 1. `gate_v20 09 c09 c01`.
 2. `tier_guard_t3` pentru C09.
 3. `audit_sync`.
-4. verificare că nu mai există formulările incorecte "patru tabele" în contexte de model complet.
-5. verificare că formula BRAIN despre fișier vs model există.
-6. verificare că hero-ul C09 nu mai folosește imaginea copiată din C08.
-7. verificare că nu există cifre business statice în text vizibil.
-8. verificare că nu ai creat Editor-Studiu / Video / Editor-Video / FILM / assets.
-9. verificare că index.html este neatins.
-10. git diff sumar pentru fișiere modificate.
+4. verificare sincronizare HTML-Studiu vs HTML-Editor-Studiu.
+5. verificare că Editor-Studiu conține 18 pași, 8 verificări, 5 fenomene, 2 prompturi.
+6. verificare că Editor-Studiu nu introduce măsuri / filter context / KPI / rank / dashboard / cauze.
+7. verificare că Editor-Studiu nu conține cifre business statice.
+8. verificare că index.html este neatins.
+9. verificare că nu ai creat Video / Editor-Video / FILM / assets.
+10. git diff sumar.
 
 ## RAPORT CERUT ÎN CLAUDE-TO-BRAIN.md
 Scrie raport complet:
 1. Status.
 2. Rezumat executiv.
 3. Fișiere citite.
-4. Fișiere modificate.
-5. Fix model DATE aplicat.
-6. Fix hero vizual aplicat.
-7. Fix hero blueprint aplicat.
-8. Fix termen "datate" aplicat.
-9. Regula permanentă adăugată în CLAUDE.md.
-10. Validări rulate.
-11. PASS / WARNING / FAIL.
-12. Ce nu ai modificat.
-13. Decizie: baza C09 este stabilă sau mai cere audit.
-14. Ce rămâne pentru pasul următor.
-15. Commit / status Git.
+4. Fișiere create / modificate.
+5. Structura Editor-Studiu C09.
+6. Cum este sincronizat cu HTML-Studiu.
+7. Zone LOCKED.
+8. Zone editabile.
+9. Cum păstrează axa RELAȚII.
+10. Cum păstrează modelul un fact + patru dimensiuni.
+11. Cum păstrează cele 6 operații.
+12. Cum păstrează SCENA 5 fenomene.
+13. Cum păstrează prompturile AI.
+14. Cum respectă granițele C09/C10/C11/C12/T4/T5.
+15. Validări rulate.
+16. PASS / WARNING / FAIL.
+17. Ce nu ai modificat.
+18. Ce rămâne pentru pasul următor.
+19. Commit / status Git.
 
 ## MANDAT CURENT
-Execută BRAIN-016-REV1.
-Aplică fixurile punctuale post-audit pe HTML-Studiu C09.
-Codifică regula companion files în CLAUDE.md.
-Nu crea companionul încă.
-Nu trece la alte fișiere C09.
+Execută BRAIN-017-REV1.
+Generează doar HTML-Editor-Studiu C09, sincronizat cu HTML-Studiu stabilizat.
+Zero Video.
+Zero Editor-Video.
+Zero FILM.
+Zero imagini.
+Zero index.html.
