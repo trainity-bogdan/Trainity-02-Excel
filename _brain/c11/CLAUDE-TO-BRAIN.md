@@ -1,6 +1,51 @@
 # CLAUDE → BRAIN · C11 COMPARAȚII / RANK
 
 ## STATUS
+MONSTER AUDIT C11 · PASS pe 7 verificări hard · 1 finding R-V03.74 (hook clonează tipar C10)
+
+## MONSTER AUDIT C11 (2026-06-04) — la cererea ARHITECT
+
+Audit complet read-only, verificat pe repo (`origin/main`), nu pe raport.
+
+### 7 VERIFICĂRI HARD — TOATE TREC
+| # | Verificare | Rezultat |
+|---|---|---|
+| 1 | Existență fizică pe `origin/main` (R-V03.75) | 7/7 artefacte, conținut real (Studiu 202008 / Editor-Studiu 213063 / Video 804687 / Editor-Video 815613 / xlsx 192054 / FILM 43864 / assets 7 jpg) |
+| 2 | `gate_v20.py 11 c11/ c01/` canonic | ✓✓✓ GATE PASS |
+| 3 | `audit_sync` rândul C11 | ZERO DRIFT (toate detectoarele OK) |
+| 4 | Vocabular interzis + adresare | CLEAN (zero `cursant`/`participant`/`elev`/`student`, zero `utilizatorul`/`persoana`) |
+| 5 | Delimitări C10/C12 + axă „de ce" | legitime (refC10=3 input, refC12=8 handoff — whitelisted de gate; „de ce/cauză"=2, delimitate explicit spre C12) |
+| 6 | Elemente SPEC + step-titles | complete (MANTRA, MOTTO, INTRIGA, MIZA, WOW, fenomen Pareto/ABC, contribuție, RANKX) + 18/18 step-titles |
+| 7 | Sumă conservată (R-V02.14) + foaia Comparatii | C09=C10=C11=7.986.019,38; clasament închis la 100% și la martor |
+
+### FOAIA Comparatii (clasament real per categorie)
+Hardware 48,54% (A) → Software 30,07% (A, cumulat 78,62) → Consumabile 20,59% (C, cumulat 99,21) → Servicii 0,79% (C, cumulat 100). Σcontribuție=100%, Σvaloare=martorul.
+
+### ⚠️ 1 FINDING REAL · R-V03.74 (test cursantului ca lanț)
+Hook-ul de cover (INTRIGA) al C11 CLONEAZĂ tiparul sintactic al C10:
+- C10: „Ai toate cifrele. Și nicio decizie."
+- C11: „Ai toate măsurile. Și nicio ierarhie."
+Același șablon „Ai toate X. Și nicio Y." la două construcții vecine = risc de confuzie
+(R-V03.74). Nu e prins de gate/audit (verifică structură/clonă-literală, nu tipar).
+Restul semnăturilor sunt distincte (WOW C11 „Lista nu mai pare ordonată. Arată cine
+conduce." ≠ C10/C12). DECIZIE ARHITECT: diversificare hook NU s-a aplicat (opțiunea b
+aleasă = persistare audit; opțiunea a = fix hook, ne-aleasă). Propuneri de hook pe masă:
+„O listă lungă. Zero ierarhie." / „Patru sute de rânduri. Niciun câștigător." /
+„Le-ai măsurat pe toate. Tot nu știi cine conduce."
+
+### NOTĂ MINORĂ (date)
+ABC grosier pe doar 4 categorii (Consumabile 20,59% cade în C pentru cumulat >95%).
+Corect mecanic; un rank pe `PRODUSE` ar da mai mulți actori și A/B/C mai nuanțat.
+Refinare opțională, nu defect.
+
+### CONCLUZIE
+C11 e LIVRABIL solid — trece toate verificările tehnice hard. Singurul punct deschis
+(opțional, decizie ARHITECT) e diversificarea hook-ului (finding R-V03.74).
+Nicio modificare de artefact făcută în acest audit (read-only).
+
+---
+
+## (istoric) STATUS anterior
 REGULĂ R-V03.75 SALVATĂ · C11 TRECE VERIFICAREA FIZICĂ REPO (7/7 artefacte prezente)
 
 ## RAPORT MANDAT C11-07 · SYSTEM RULE VERIFICARE FIZICĂ REPO (2026-06-04)
