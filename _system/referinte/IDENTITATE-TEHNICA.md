@@ -231,17 +231,36 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c08_study_v1
 - localStorage_video: trainity_c08_video_v1
 
+## IDENTITATE_TEHNICA C10 — MĂSURA POTRIVITĂ
+
+- cod: C10
+- treapta_nr: 3
+- treapta_nume: ANALIZA
+- treapta_pozitie: 2 din 4 (Relații, Măsuri, Comparații, Interpretare)
+- nume_hero_caps_rand1: MĂSURA
+- nume_hero_caps_rand2: POTRIVITĂ
+- nume_hero_caps: MĂSURA POTRIVITĂ
+- nume_title_case: Definirea măsurilor
+- nume_slug: Masuri
+- input_filename: Date_MASTER-C09.xlsx
+- output_filename: Date_MASTER-C10.xlsx
+- meta_val_treapta: RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZA)
+- next_cod: C11
+- next_nume_title: Comparații
+- next_label: TREAPTA 3 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C10 MĂSURA POTRIVITĂ · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C10 · Măsura potrivită
+- mobile_topbar: C10 · Măsura potrivită
+- nav_brand_label: PACK 02 EXCEL · C10
+- nav_brand_title: MĂSURA POTRIVITĂ
+- title_studiu: C10 · Măsuri · Trainity
+- title_video: C10 · MĂSURI · BROADCAST
+- localStorage_studiu: trainity_c10_study_v1
+- localStorage_video: trainity_c10_video_v1
+
 
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination
-4. Daca un camp lipseste / e gol → motorul OPRESTE generarea cu eroare
-   explicita, NU continua cu approximare
-
-## Reguli de extensie
-
-Adaugarea unei constructii noi (de exemplu C05 cand T2 va fi
-inghetata) NU se face direct in livrare; se face PRIMUL in
-acest fisier, in chat BRAIN, prin update separat, INAINTE de a
-incepe chat-ul CHECKIN CONSTRUCTIE NN.
+4. Daca un camp lipseste / e gol → motorul OPRESTE generarea si cere completarea in BRAIN.
