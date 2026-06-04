@@ -1,7 +1,58 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-C12_STUDIU_GENERAT · B2_BLOCAT (artefacte lipsă + dependență C11)
+C12_GENERATED · GATE_V20_PASS (rămâne doar dependența de imagini ARHITECT)
+
+## MANDAT EXECUTAT (curent) · C12-04 GENERARE — COMPLET
+Dependența C11 s-a ridicat (`c11/Date_MASTER-C11.xlsx` există). Am eliminat blocajul B2 și
+am generat C12 COMPLET. **gate_v20.py 12 → PASS (5/5 livrabile, toate 6 clasele).**
+
+### VERIFICARE EXPLICITĂ DEPENDENȚĂ (cerută)
+- `git fetch origin main` + `git merge origin/main` → C11 complet intrat pe main.
+- Path: `/home/user/Trainity-02-Excel/c11/Date_MASTER-C11.xlsx` → `test -f` = **EXISTĂ** (192054 bytes, tracked).
+
+### ARTEFACTE GENERATE (c12/)
+- `Date_MASTER-C12.xlsx` — construit din `Date_MASTER-C11.xlsx`; toate foile C11 păstrate
+  intacte + foaie nouă **`Interpretare`**. Suma Vanzari = 7986019.38 (conservată, delta 0.0, R-V02.14).
+- `HTML-Studiu-Excel-12-Interpretare.html` — baza (corp narativ INTERPRETARE).
+- `HTML-Editor-Studiu-Excel-12-Interpretare.html` — companion 1:1 (BRAIN-016/019).
+- `HTML-Video-Excel-12-Interpretare.html` — broadcast (6 etape × 18 pași, 7 slide-uri exec).
+- `HTML-Editor-Video-Excel-12-Interpretare.html` — companion video 1:1.
+- `FILM-Excel-12-Interpretare.docx` — script video procedural (6 etape HOOK→DEMO→CONTROL→REVEAL).
+- Scripturi de build reproductibile în `_brain/c12/build_*.py`.
+
+### CE EXPLICĂ FOAIA INTERPRETARE (cauză citită din model, verificabilă)
+- Întrebare: de ce conduce categoria lider clasamentul C11?
+- Cauză citită din model (drill sub total, formule live pe Vanzari): două produse-cheie duc
+  ~71% din categorie; factori principali (produse + clienți concentrați), nu o cauză unică.
+- Coincidență vs cauză: categoria lider are și cele mai multe tranzacții, dar valoarea
+  medie/tranzacție cea mai mare e la ALTĂ categorie → conduce prin mix, nu prin preț mediu.
+- Cauză ascunsă de agregare: la nivel de total vezi doar „cine conduce"; cauza reală apare sub total.
+- Insight verbal verificabil + handoff care închide T3.
+
+### GĂRZI RESPECTATE
+- Clasamentul = INPUT citit (zero re-ierarhizare = C11). Zero dashboard/grafic (T4),
+  zero what-if/scenarii/predicție/recomandare (T5). Zero cifre business în HTML/FILM (R-V02.15).
+- Zero token rezidual C09/C10 vizibil. Vocabular de închidere T3 (R-V02.7) prezent.
+
+### VALIDĂRI
+1. `pre_generation_check.py 12` → EXIT 0 (B1 PASS).
+2. `gate_v20.py 12 c12 c01` → **GATE PASS** (5/5 livrabile, 6 clase).
+3. `audit_sync.py` → C01-C11 OK (zero regresie). C12: o singură celulă XX = **`V39.assets`**
+   (cele 6 imagini exec + hero). FILM acum prezent (R-V03.58 OK). Restul OK.
+
+### SINGURA DEPENDENȚĂ RĂMASĂ
+**Imaginile** (hero-poster + 6 exec-stage) = dependență ARHITECT extern (ca la C09). HTML-urile
+folosesc acum placeholder SVG. Când îmi dai imaginile, le integrez (base64 în Video, jpg în
+`c12/assets/`) și `V39.assets` trece pe OK. Restul construcției e livrabil acum.
+
+### ISTORIC BLOCAJ (rezolvat)
+Anterior B2 era blocat fiindcă `Date_MASTER-C11` nu exista; acum C11 e generat, deci B2 PASS.
+
+---
+
+## ISTORIC · C12-04 (raport initial, inainte de deblocarea C11)
+Status anterior: C12_STUDIU_GENERAT · B2_BLOCAT (artefacte lipsă + dependență C11)
 
 ## MANDAT EXECUTAT (curent) · C12-04 GENERARE
 Am pornit generarea C12. **HTML-Studiu generat și curat la conținut.** Gate-ul B2 NU poate trece
