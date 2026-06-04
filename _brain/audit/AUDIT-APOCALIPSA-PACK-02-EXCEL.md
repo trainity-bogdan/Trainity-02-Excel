@@ -2,7 +2,11 @@
 
 > Audit total, adversarial, empiric (L192: adâncime egală) pe toate construcțiile existente din repo.
 > Mod auditor pur: ZERO reparații în această rundă. Doar raport.
-> Data: 4 iunie 2026 · Scope: C01-C09 (C10-C12 inexistente) · Branch: main.
+> Data: 4 iunie 2026 · Scope la rulare: C01-C09 (C10-C12 inexistente) · Branch: main.
+>
+> ⚠️ **ADDENDUM POST-REBASE (citește întâi §14-bis).** Auditul a rulat pe un snapshot; sesiuni paralele
+> au avansat repo-ul în timpul rulării (au rezolvat 2 constatări C09 și au livrat C10). Corpul raportului
+> reflectă starea de la rulare; §14-bis reconciliază cu starea actuală a `main`.
 
 ---
 
@@ -221,6 +225,25 @@ MEDIE C01-C08: TEH 9.6 · PED 7.8 · NAR 7.4 · VIZ 8.8 · TRA 8.4 = 8.4 (pachet
 - Garda terminologică (cockpit/dashboard/KPI) aplicată cross-tier, nu doar T3.
 - Convenție vizuală pentru breadcrumb de preview parțial (pas neactivat).
 - Prag de calitate pe sloturile narative (WOW/AHA) în gate — azi se verifică PREZENȚA, nu FORȚA.
+
+---
+
+## 14-bis. ADDENDUM POST-REBASE (reconciliere cu main actual)
+
+Auditul a rulat ca snapshot. La integrarea raportului pe `main`, sesiuni paralele avansaseră repo-ul. Reverificat empiric DUPĂ rebase:
+
+**Constatări ÎNCHISE între timp (rezolvate de sesiuni paralele, NU de acest audit):**
+- **C09 MAJOR-1 „patru tabele"** → REZOLVAT. 0 apariții acum; BRAIN-019 a introdus formula canonică „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni." (exact fixul recomandat la §10).
+- **C09 MAJOR-2 hero clonă C08** → REZOLVAT. Hero C09 acum md5 `e4787e6cb29b` ≠ C08 `e1fb15270fa7`. Nu mai e clonă.
+- **C09** a primit și Editor-Studiu (BRAIN-019, lock-by-attribute), deci nu mai e doar Studiu. Scorurile C09 din §4 (vizual 3, Trainity 6) sunt acum sub-evaluate; reauditare C09 recomandată pe starea nouă.
+- **C10 Măsuri** → LIVRAT (4 HTML + FILM + Date_MASTER, status APPROVED_BRAIN). „C10-C12 inexistente" din corp e depășit pentru C10; C10 necesită audit dedicat (nu a fost în scope la rulare).
+
+**Constatări care PERSISTĂ pe main actual (încă valabile, nereparate):**
+- **C02 Video↔Editor-Video desync 46%** (reverificat: Video 1.381.634b, EdVid 744.812b) — MAJOR local NEATINS. Singura desincronizare reală rămasă.
+- **Toate cele 10 probleme SISTEMICE (§6)** rămân valide — în special: WOW uniform descriptiv, T2 paralel-vs-secvențial, formule retorice 9/9, „cockpit" C01-C08, și **gaura din detectoarele anti-clonă** (R-NOUĂ-1/2). Faptul că hero C09 a fost reparat MANUAL, dar C02 desync a scăpat tuturor, CONFIRMĂ că detectoarele automate lipsesc — regulile noi rămân necesare.
+- Restul minorelor locale (typo breadcrumb C02, AHA abstracte etc.) — neatinse.
+
+**Concluzie addendum:** reparațiile punctuale C09 validează direcția fixurilor recomandate, dar problemele de SISTEM (detectoare + calitate WOW + model T2) și C02 desync rămân deschise. Acest audit rămâne valid ca hartă sistemică; instanțele C09 sunt deja închise.
 
 ---
 
