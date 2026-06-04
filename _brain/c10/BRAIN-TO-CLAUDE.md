@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C10 MĂSURI
 
 ## STATUS
-AUDIT_BRAIN_REFINEMENT_REQUIRED
+AUDIT_BRAIN_REFINEMENT_REQUIRED_WITH_VISUAL_FIX
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C10.
@@ -15,6 +15,27 @@ Nu crea branch-uri.
 
 ---
 
+# PRIORITATE 0 · PROBLEMĂ VIZUALĂ OBSERVATĂ ÎN PAGINA PUBLICATĂ
+
+În `c10/HTML-Studiu-Excel-10-Masuri.html`, hero-ul este dublat vizual.
+
+Titlul:
+"Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?"
+
+apare o dată în header-ul principal și apoi se repetă imediat mai jos în zona intro.
+
+Corecție obligatorie:
+- păstrează titlul mare de sus, din header-ul principal
+- elimină al doilea H1 duplicat din zona `study-intro-top`
+- păstrează microbrief-ul și miza
+- dacă este nevoie, transformă al doilea H1 într-un kicker scurt, dar recomandarea BRAIN este eliminare completă
+- aplică aceeași corecție în companion/editor dacă există duplicare
+- verifică să nu apară aceeași problemă în HTML-Video
+
+Aceasta este prima corecție de făcut înaintea polish-ului pedagogic.
+
+---
+
 # AUDIT BRAIN C10
 
 C10 este aprobat structural. Setul este generat complet și toate gate-urile trec.
@@ -24,7 +45,7 @@ Nu schimbăm SPEC-ul.
 Nu schimbăm cele 6 fenomene.
 Nu introducem ranking, contribuție, comparație contextuală, ABC, Pareto, cauză sau dashboard.
 
-Se cere doar polish pedagogic și operațional.
+Se cere doar polish pedagogic, operațional și vizual.
 
 ## VERDICT
 
@@ -145,9 +166,10 @@ După rafinare:
 - rulează gate_v20 pentru C10
 - rulează audit_sync
 - rulează tier_guard_t3
+- verifică vizual că hero-ul nu mai este dublat
 - confirmă zero drift față de SPEC
 - actualizează CLAUDE-TO-BRAIN.md cu raportul de rafinare
 
 ## STATUS AȘTEPTAT ÎN CLAUDE-TO-BRAIN
 
-REFINED_AFTER_BRAIN_AUDIT · PASS
+REFINED_AFTER_BRAIN_AUDIT_AND_VISUAL_FIX · PASS
