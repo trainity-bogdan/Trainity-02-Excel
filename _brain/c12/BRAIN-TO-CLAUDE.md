@@ -1,58 +1,104 @@
-# BRAIN → CLAUDE · C12 INTERPRETARE
+# BRAIN → CLAUDE · T3 REPARAȚII POST-AUDIT
 
 ## STATUS
-MANDAT_AUDIT_T3_COMPLET
+MANDAT_T3_REPARATII_POST_AUDIT
 
-## CONTEXT CHAT
-Acest fișier este folosit de Chat Claude C12 pentru audit transversal T3.
+## CONTEXT
+Acest mandat vine după auditul transversal T3 cu status:
+`T3_AUDIT_COMPLET_DONE`
 
-La comanda `sync`, citește:
-- `_brain/c12/CHAT-CONTEXT.md`
-- `_brain/c12/BRAIN-TO-CLAUDE.md`
+Auditul a confirmat:
+- Technical: PASS
+- Data Continuity: PASS
+- Pedagogical: PASS
+- Content: PASS cu o excepție
+- Release Readiness: PASS cu rezerve
 
-Execută pe `main`.
-Nu crea branch-uri.
+Treapta T3:
+- C09 = RELAȚII, Ce pot întreba?
+- C10 = MĂSURI, Cât?
+- C11 = COMPARAȚII, Care?
+- C12 = INTERPRETARE, De ce?
 
-## STARE CURENTĂ T3
-Treapta T3 ANALIZA include:
-- C09 = RELAȚII, întrebarea „Ce pot întreba?”
-- C10 = MĂSURI, întrebarea „Cât?”
-- C11 = COMPARAȚII, întrebarea „Care?”
-- C12 = INTERPRETARE, întrebarea „De ce?”
-
-Lanțul conceptual T3 este:
+Lanț T3:
 model -> măsură -> clasament -> explicație
 
-C12 închide T3.
+## MANDAT T3-02 · REPARAȚII POST-AUDIT
 
-## MANDAT T3-01 · AUDIT TRANSVERSAL COMPLET C09-C12
+Claude, lucrează pe main.
 
-Claude, fă audit complet pe toată treapta T3, adică C09, C10, C11, C12.
-
-Scop: verificare transversală, nu reparații automate.
-Nu modifica fișiere. Nu face patch-uri fără mandat separat.
+Fă doar reparațiile aprobate mai jos. Nu modifica altceva.
 Nu modifica Bible §T3.
 Nu modifica index.html.
+Nu modifica HTML-urile C09-C12 dacă nu este necesar.
+Nu modifica Date_MASTER.
+Nu integra imaginile C12 acum, pentru că depind de ARHITECT.
 
-Rulează și raportează explicit:
+### REPARAȚIA 1 · HIGH · C11 FILM R-V02.15
 
-1. Sincronizare repo
-- `git fetch`
-- `git pull` sau echivalent sigur pe main
-- status clean/dirty înainte de audit
+Auditul a găsit în:
+`c11/FILM-Excel-11-Comparatii.docx`
 
-2. Artefacte pe fiecare construcție
-Pentru fiecare dintre `c09`, `c10`, `c11`, `c12`, verifică existența:
-- `Date_MASTER-Cxx.xlsx`
-- `HTML-Studiu-Excel-xx-*.html`
-- `HTML-Editor-Studiu-Excel-xx-*.html`
-- `HTML-Video-Excel-xx-*.html`
-- `HTML-Editor-Video-Excel-xx-*.html`
-- `FILM-Excel-xx-*.docx`
-- `assets/`
+problemă HIGH:
+- conține suma business explicită `7.986.019,38 lei`
+- apare și scrisă în litere
+- încalcă R-V02.15, fără cifre business în FILM
 
-3. Checks sistem
-Rulează:
+Repară doar FILM-ul C11:
+- elimină suma explicită
+- elimină forma scrisă în litere a sumei
+- înlocuiește cu formulări generice de tip:
+  - „suma de control”
+  - „valoarea totală verificată”
+  - „totalul de control”
+- păstrează sensul pedagogic
+- nu introduce alte cifre business
+- nu schimba identitatea C11
+
+După reparare, verifică FILM C11 pentru:
+- zero `lei`
+- zero sumă explicită
+- zero cifre business hardcodate
+- zero em-dash/en-dash
+
+### REPARAȚIA 2 · MEDIUM · C09 SPEC REGISTRY
+
+Auditul a găsit:
+`pre_generation_check.py 9` FAIL pentru că SPEC C09 este încă `NEGENERAT` în registrul de sistem.
+
+C09 este livrat și `gate_v20.py 9 c09 c01` este PASS.
+Trebuie doar sincronizare retroactivă de registru, ca la C10/C11/C12.
+
+Ai mandat direct de sistem, limitat strict la C09, pentru:
+- înscriere SPEC C09 ca INGHETAT în registrul de sistem
+- înscriere sau completare IDENTITATE_TEHNICA C09 dacă lipsește sau este incompletă
+- strict cât este necesar ca `pre_generation_check.py 9` să treacă
+
+Nu schimba identitatea C09.
+C09 rămâne:
+- RELAȚII
+- verb: a lega
+- întrebare: Ce pot întreba?
+- rol: model interogabil, relații corecte, activarea întrebărilor pe model
+
+Folosește conținutul existent C09 din sistem și artefacte, nu inventa o identitate nouă.
+
+### REPARAȚIA 3 · LOW · CHAT-CONTEXT C12
+
+Actualizează cosmetic:
+`_brain/c12/CHAT-CONTEXT.md`
+
+Înlocuiește identitatea veche:
+`KPI / FILTER CONTEXT`
+
+cu identitatea corectă:
+`INTERPRETARE`
+
+Păstrează regulile utile ale chatului. Nu adăuga istoric inutil.
+
+### VERIFICĂRI DUPĂ REPARAȚII
+
+Rulează și raportează:
 - `python3 _system/generatoare/pre_generation_check.py 9`
 - `python3 _system/generatoare/pre_generation_check.py 10`
 - `python3 _system/generatoare/pre_generation_check.py 11`
@@ -63,83 +109,18 @@ Rulează:
 - `python3 _system/generatoare/gate_v20.py 12 c12 c01`
 - `python3 _system/generatoare/audit_sync.py`
 
-4. Audit continuitate Date_MASTER
-Verifică lanțul:
-- C09 pornește corect din C08
-- C10 pornește corect din C09
-- C11 pornește corect din C10
-- C12 pornește corect din C11
+### RAPORT
 
-Pentru fiecare trecere raportează:
-- foi păstrate
-- foaie nouă adăugată
-- sumă Vanzari conservată
-- delta
-- dacă există pierderi sau drift workbook
-
-5. Audit conceptual T3
-Verifică dacă fiecare construcție are identitate distinctă:
-- C09 construiește model interogabil, nu măsuri
-- C10 definește măsuri, nu clasamente
-- C11 compară și produce/folosește clasamente, nu interpretează cauzal
-- C12 explică de ce, nu re-ierarhizează și nu recomandă acțiuni
-
-6. Audit granițe T3/T4/T5
-Verifică pentru toate C09-C12:
-- fără dashboard
-- fără cockpit
-- fără raportare vizuală T4
-- fără what-if
-- fără scenarii
-- fără predicție
-- fără recomandare de acțiune
-- fără tranziție prematură spre T4/T5
-
-7. Audit HTML + FILM transversal
-Pentru toate HTML-urile și FILM-urile T3 verifică:
-- identitatea corectă pe construcție
-- hero corect pe construcție
-- lipsă contaminare între C09/C10/C11/C12
-- lipsă tokeni vechi sau abandonați
-- zero cifre business în HTML/FILM conform R-V02.15
-- zero em-dash/en-dash
-- consistență între Studiu, Editor-Studiu, Video, Editor-Video, FILM
-
-8. Audit pedagogic lanț T3
-Verifică dacă experiența cursantului construiește progresiv:
-- după C09 poate întreba modelul
-- după C10 poate calcula controlat
-- după C11 poate compara corect
-- după C12 poate explica rezultatul
-
-Raportează dacă există salturi, repetiții, redundanțe sau goluri pedagogice.
-
-9. Audit assets T3
-Pentru fiecare construcție raportează:
-- existență `assets/`
-- hero image prezentă/lipsă
-- exec-stage images prezente/lipsă
-- dacă lipsa imaginilor este singurul drift rămas
-
-10. Verdict final T3
-Dă verdict în 5 niveluri:
-- TECHNICAL PASS/FAIL
-- DATA CONTINUITY PASS/FAIL
-- CONTENT PASS/FAIL
-- PEDAGOGICAL PASS/FAIL
-- RELEASE READINESS PASS/FAIL
-
-La final listează:
-- Critical issues
-- High issues
-- Medium issues
-- Low issues
-- Recomandări de reparație, dar fără să le aplici
-- Ce depinde de ARHITECT
-- Ce poate fi reparat de Claude prin mandat separat
+Raportează:
+- fișiere modificate exact
+- ce ai reparat
+- PASS/FAIL pentru fiecare verificare
+- dacă H-1 este rezolvat
+- dacă M-2 este rezolvat
+- ce rămâne doar pe ARHITECT, adică imaginile C12
 
 Scrie raportul în:
 `_brain/c12/CLAUDE-TO-BRAIN.md`
 
 Status așteptat:
-`T3_AUDIT_COMPLET_DONE`
+`T3_REPARATII_POST_AUDIT_DONE`
