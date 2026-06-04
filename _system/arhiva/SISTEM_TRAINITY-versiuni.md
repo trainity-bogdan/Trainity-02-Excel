@@ -2384,7 +2384,63 @@ Coloane reale folosite: cod_produs, produs_nume, client_nume, judet, categorie.
 
 ---
 
-## SPEC C09 - EXPLORAREA DATELOR   [Status: NEGENERAT]
+## SPEC C09 - RELAȚII   [Status: INGHETAT 04.06.2026]
+
+> Sincronizare retroactivă registru (mandat T3-02, reparația M-2). C09 e livrat integral
+> (gate_v20 PASS); registrul era stale (nume vechi „EXPLORAREA DATELOR", status NEGENERAT).
+> Identitate neschimbată. Autoritate conceptuală: Bible §T3 (C09 RELAȚII LOCKED v1.0).
+
+- Identitate: RELAȚII · verb-semnătură `a lega` · întrebare-mamă „Ce pot întreba?"
+- Hero: RELAȚIILE DINTRE DATE
+- Rol: activează ecosistemul recunoscut în C08 (merge / 1:M / Data Model); model interogabil.
+
+### 1. SLUG
+relatii
+
+### 2. INTRIGA
+Ai cinci tabele corecte. Și niciun răspuns care să le traverseze. Datele sunt ordonate, dar
+stau separate: fiecare tabel răspunde doar despre el însuși. Intriga C09 este trecerea de la
+date corecte la un model care răspunde la o întrebare ce trăiește în mai multe tabele deodată.
+
+### 3. PROBLEMELE
+- un tabel singur nu poate răspunde la o întrebare care traversează setul
+- se copiază coloane dintr-un tabel în altul în loc să se lege o dată
+- cheile nu sunt verificate: rămân orfani care strică răspunsul
+- un Inner Join ascunde tăcut rândurile care nu se potrivesc
+- se confundă unirea tabelelor diferite (join) cu adunarea tabelelor de același fel (union)
+- relații greșite produc concluzii false, care par corecte
+
+### 4. MIZA
+Cursantul transformă un set cunoscut într-un model interogabil: relații corecte, verificate,
+care răspund împreună la o întrebare de business. Un set cunoscut devine un model care răspunde.
+
+### 5. MANTRA
+Nu mutăm datele. Le legăm.
+
+### 6. WOW
+Tabele care stăteau alături fără să se cunoască. Acum răspund împreună la o singură întrebare.
+
+### 7. MOTTO
+Un model care răspunde. Apoi măsura stabilă.
+
+### 8. FENOMENE C09 (5)
+1. TABEL ORB — un tabel singur nu duce o întrebare care traversează setul.
+2. CHEIA NEVERIFICATĂ — o legătură pe o cheie cu orfani dă răspunsuri incomplete.
+3. INNER ASCUNDE — Inner Join elimină tăcut ce nu se potrivește.
+4. CE NU SE POTRIVEȘTE — Left/Right ca audit al orfanilor, înainte de analiză.
+5. UNION NU E RELAȚIE — a adăuga tabele de același fel nu e tot una cu a lega tabele diferite.
+
+### 9. STEP-TITLES (6 etape)
+1. Pornești de la setul cunoscut și întrebarea pe care un tabel nu o duce singur
+2. Identifici relațiile cu AI (Promptul 1)
+3. Activezi relațiile 1:M și alegi operația (Join vs Union, Promptul 2)
+4. Verifici cu Left/Right ca audit al orfanilor (zero chei orfane)
+5. Ancorezi la sursă, regula anti-derivă
+6. Faci prima citire cross-tabel și predai modelul către C10
+
+### AHA
+Fără relații ai date. Cu relații ai răspunsuri.
+
 ## SPEC C10 - MĂSURI   [Status: FROZEN]
 
 ### 1. SLUG

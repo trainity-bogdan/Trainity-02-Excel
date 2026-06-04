@@ -231,6 +231,33 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c08_study_v1
 - localStorage_video: trainity_c08_video_v1
 
+## IDENTITATE_TEHNICA C09 — RELAȚIILE DINTRE DATE
+
+- cod: C09
+- treapta_nr: 3
+- treapta_nume: ANALIZA
+- treapta_pozitie: 1 din 4 (Relații, Măsuri, Comparații, Interpretare)
+- nume_hero_caps_rand1: RELAȚIILE
+- nume_hero_caps_rand2: DINTRE DATE
+- nume_hero_caps: RELAȚIILE DINTRE DATE
+- nume_title_case: Relații
+- nume_slug: Relatii
+- input_filename: Date_MASTER-C08.xlsx
+- output_filename: Date_MASTER-C09.xlsx
+- meta_val_treapta: <b>RELAȚII</b> · MĂSURI · COMPARAȚII · INTERPRETARE (ANALIZA)
+- next_cod: C10
+- next_nume_title: Măsuri
+- next_label: TREAPTA 3 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C09 RELAȚII · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C09 · Relații
+- mobile_topbar: C09 · Relații
+- nav_brand_label: PACK 02 EXCEL · C09
+- nav_brand_title: RELAȚIILE DINTRE DATE
+- title_studiu: C09 · Relații · Trainity
+- title_video: C09 · RELAȚII · BROADCAST
+- localStorage_studiu: trainity_c09_study_v1
+- localStorage_video: trainity_c09_video_v1
+
 ## IDENTITATE_TEHNICA C10 — MĂSURA POTRIVITĂ
 
 - cod: C10

@@ -1,7 +1,59 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-T3_AUDIT_COMPLET_DONE
+T3_REPARATII_POST_AUDIT_DONE
+
+## MANDAT T3-02 · REPARAȚII POST-AUDIT — RAPORT
+Am aplicat cele 3 reparații aprobate. Nimic în plus. Bible §T3, index.html, HTML-urile C09-C12,
+Date_MASTER = neatinse. Imaginile C12 NU integrate (depind de ARHITECT, conform mandatului).
+
+### FIȘIERE MODIFICATE (exact)
+1. `c11/FILM-Excel-11-Comparatii.docx` (R1 · H-1)
+2. `_system/arhiva/SISTEM_TRAINITY-versiuni.md` (R2 · M-2, registru SPEC C09)
+3. `_system/referinte/IDENTITATE-TEHNICA.md` (R2 · M-2, bloc IDENTITATE_TEHNICA C09)
+4. `_brain/c12/CHAT-CONTEXT.md` (R3 · L-3)
+
+### R1 · HIGH · C11 FILM R-V02.15 — REZOLVAT
+Am eliminat suma business explicită din 5 paragrafe ale FILM-ului C11:
+- „7.986.019,38 lei" și forma în litere („șapte milioane ... nouăsprezece lei") →
+  înlocuite cu „suma de control" / „suma de control verificată" / „suma de control rămâne neschimbată".
+- Sensul pedagogic păstrat; identitatea C11 neschimbată; nicio altă cifră introdusă.
+- Verificare FILM C11: **0 „lei", 0 sumă explicită, 0 formă în litere, 0 cifre 4+, 0 em/en-dash.** ✓
+
+### R2 · MEDIUM · C09 SPEC REGISTRY — REZOLVAT
+Permisiune directă de sistem (limitată la C09). Identitate C09 neschimbată (RELAȚII · `a lega` ·
+„Ce pot întreba?"), valori preluate din artefacte + Bible §T3, fără identitate nouă inventată.
+- Registru: `## SPEC C09 - EXPLORAREA DATELOR [NEGENERAT]` → `## SPEC C09 - RELAȚII [INGHETAT]`
+  + corp complet 9 elemente (din valorile livrate C09).
+- Identitate: adăugat bloc `## IDENTITATE_TEHNICA C09 — RELAȚIILE DINTRE DATE` cu toate câmpurile
+  obligatorii (input Date_MASTER-C08 → output C09, next C10).
+- `pre_generation_check.py 9` → **PASS** (era FAIL). ✓
+
+### R3 · LOW · CHAT-CONTEXT C12 — REZOLVAT
+`_brain/c12/CHAT-CONTEXT.md`: „KPI / FILTER CONTEXT" → „INTERPRETARE" (2 ocurențe). Regulile chatului păstrate.
+
+### VERIFICĂRI DUPĂ REPARAȚII
+| Check | C09 | C10 | C11 | C12 |
+|---|---|---|---|---|
+| pre_generation_check | **PASS** | PASS | PASS | PASS |
+| gate_v20 | PASS | PASS | PASS | PASS |
+- `audit_sync.py`: C09/C10/C11 **OK complet**; C12 = o singură celulă XX (`V39.assets`). Drift global = 1 celulă, 0 ERR.
+
+### STARE ISSUES (din auditul T3)
+- **H-1 (C11 FILM R-V02.15): REZOLVAT.**
+- **M-2 (C09 SPEC registry / pre_gen 9): REZOLVAT.**
+- **L-3 (CHAT-CONTEXT C12): REZOLVAT.**
+- **M-1 (imagini C12): RĂMÂNE PE ARHITECT** — hero-poster + 6 exec-stage. Singurul drift rămas pe tot T3.
+- L-1 (foaia Relatii_Model lăsată în urmă la C09→C10) și L-2 („KPI" în base64 inert) — cosmetice, neatinse.
+
+### CE RĂMÂNE
+- **Doar imaginile C12** (M-1), dependență ARHITECT. La integrarea lor, `V39.assets` trece pe OK
+  și T3 e 100% verde. Restul treptei T3 e acum curat (zero alte issues tehnice/content).
+
+---
+
+## ISTORIC · T3-01 AUDIT TRANSVERSAL
+Status anterior: T3_AUDIT_COMPLET_DONE
 
 ## MANDAT T3-01 · AUDIT TRANSVERSAL C09-C12 — RAPORT (read-only, zero patch-uri)
 Audit complet pe toată treapta T3. Nu am modificat niciun fișier (mandatul cere doar raportare).
