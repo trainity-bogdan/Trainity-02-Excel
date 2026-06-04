@@ -258,7 +258,32 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c10_study_v1
 - localStorage_video: trainity_c10_video_v1
 
+## IDENTITATE_TEHNICA C12 — DE CE-UL DIN DATE
 
+- cod: C12
+- treapta_nr: 3
+- treapta_nume: ANALIZA
+- treapta_pozitie: 4 din 4 (Relații, Măsuri, Comparații, Interpretare)
+- nume_hero_caps_rand1: DE CE-UL
+- nume_hero_caps_rand2: DIN DATE
+- nume_hero_caps: DE CE-UL DIN DATE
+- nume_title_case: Interpretarea rezultatelor
+- nume_slug: Interpretare
+- input_filename: Date_MASTER-C11.xlsx
+- output_filename: Date_MASTER-C12.xlsx
+- meta_val_treapta: RELAȚII · MĂSURI · COMPARAȚII · <b>INTERPRETARE</b> (ANALIZA)
+- next_cod: C13
+- next_nume_title: Vizualizare executivă
+- next_label: TREAPTA 4 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C12 DE CE-UL DIN DATE · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C12 · Interpretare
+- mobile_topbar: C12 · Interpretare
+- nav_brand_label: PACK 02 EXCEL · C12
+- nav_brand_title: DE CE-UL DIN DATE
+- title_studiu: C12 · Interpretare · Trainity
+- title_video: C12 · INTERPRETARE · BROADCAST
+- localStorage_studiu: trainity_c12_study_v1
+- localStorage_video: trainity_c12_video_v1
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md

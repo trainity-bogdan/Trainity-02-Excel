@@ -2461,7 +2461,80 @@ La următorul `sync`, Claude C10 trebuie să:
 6. nu modifice alte construcții,
 7. raporteze rezultatul în `_brain/c10/CLAUDE-TO-BRAIN.md`.
 ## SPEC C11 - DATA MODEL   [Status: NEGENERAT]
-## SPEC C12 - PRIORITIZARE EXECUTIVA   [Status: NEGENERAT]
+## SPEC C12 - INTERPRETARE   [Status: INGHETAT 04.06.2026]
+
+> Realiniere BRAIN-006 + îngheț construcție (mandat C12-02). Identitatea veche
+> „PRIORITIZARE EXECUTIVA" abandonată. Sursa canonică: `_brain/c12/CLAUDE-TO-BRAIN.md`
+> (SPEC_FROZEN). Autoritate conceptuală: Bible §T3 (C12 INTERPRETARE LOCKED).
+
+- Identitate: INTERPRETARE · verb-semnătură `a explica` · întrebare-mamă „De ce?"
+- Hero: DE CE-UL DIN DATE
+- Rol: explică insight-ul verbal, cauza citită din model, interpretarea rezultatului
+  după relații, măsuri și comparații. ÎNCHIDE treapta T3 ANALIZA.
+
+### 1. SLUG
+interpretare
+
+### 2. INTRIGA
+Modelul răspunde, măsurile sunt definite, clasamentul este clar. Știm cine conduce și
+cu cât diferă. Și totuși rămâne întrebarea care contează cel mai mult pentru decizie:
+de ce? Un clasament arată CARE, dar nu spune DE CE. Intriga C12 este trecerea de la
+rezultatul numeric corect la explicația verbală pe care un om o poate înțelege, contesta
+și folosi.
+
+### 3. PROBLEMELE
+- se citește clasamentul, dar nu se explică ce îl produce
+- se confundă ce apare împreună cu ce produce rezultatul
+- se construiește o poveste plauzibilă pe care datele nu o susțin
+- rezultatul se atribuie unei singure cauze când lucrează mai mulți factori
+- aceeași cifră primește explicații diferite de la oameni diferiți
+- un total ascunde cauza reală care apare doar pe tăietură
+- explicația nu poate fi verificată înapoi în model
+- insight-ul rămâne în capul analistului, netranscris într-o frază clară
+
+### 4. MIZA
+Cursantul transformă rezultatul numeric în explicație verbală ancorată în model, pe care
+o poate apăra și verifica. O explicație bună spune de ce, nu doar cât.
+
+### 5. MANTRA
+Cifra spune cât. Explicația spune de ce.
+
+### 6. WOW
+Același clasament poate avea două explicații opuse, și doar una se verifică în date.
+Diferența dintre un analist și un povestitor nu este cifra, ci capacitatea de a arăta în
+model de unde vine cifra.
+
+### 7. MOTTO
+Nu citi rezultatul. Explică-l.
+
+### 8. FENOMENE C12 (6)
+1. Insight-ul verbal, traducerea rezultatului numeric într-o frază pe care un decident o înțelege.
+2. Cauza citită din model, explicația ancorată în relații, măsuri și comparații, nu în presupunere.
+3. Ce apare împreună nu explică automat ce produce rezultatul, coincidență vs cauză efectivă.
+4. Cauza multiplă, rezultatul rar are o singură cauză; identifici factorii principali, nu forțezi o explicație unică.
+5. Cauza ascunsă de agregare, explicația reală apare doar când cobori sub total, pe tăietura potrivită.
+6. Explicația verificabilă, orice „de ce" trebuie arătat înapoi în model; povestea pe care datele nu o susțin se respinge.
+
+### 9. STEP-TITLES (8)
+1. Confirmă că ai model, măsuri și clasament
+2. Formulează întrebarea de business, „De ce?"
+3. Citește cauza din model, nu din presupunere
+4. Verifică dacă ce apare împreună chiar produce rezultatul
+5. Identifică factorii principali, nu o cauză unică
+6. Coboară sub total ca să găsești cauza ascunsă
+7. Scrie insight-ul într-o frază verificabilă
+8. Închide analiza: treapta T3 finalizată
+
+### DELIMITĂRI (gardă de treaptă)
+C12 NU face: dashboard (T4), what-if, scenarii, predicție, recomandare de acțiune (T5),
+re-ierarhizare (C11). C12 explică ce s-a întâmplat și de ce, pe baza modelului. Închide T3 (R-V02.7).
+
+### AHA
+Nu rezultatul contează. Contează de ce apare rezultatul.
+
+### FORMULA FINALĂ
+Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
+
 ## SPEC C13 - VIZUALIZARE EXECUTIVA   [Status: NEGENERAT]
 ## SPEC C14 - DASHBOARD EXECUTIV   [Status: NEGENERAT]
 ## SPEC C15 - POVESTEA DATELOR   [Status: NEGENERAT]
