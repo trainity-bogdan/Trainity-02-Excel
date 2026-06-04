@@ -1109,6 +1109,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Relatii',
             'meta_val_treapta': '<b>RELAȚII</b> · MĂSURI · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
         },
+        '10': {
+            'cod': 'C10', 'nume_hero_caps_rand1': 'MĂSURA',
+            'nume_slug': 'Masuri',
+            'meta_val_treapta': 'RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
+        },
     }
     return IDENTITATI.get(NN)
 
