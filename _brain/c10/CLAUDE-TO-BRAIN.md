@@ -1,137 +1,98 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-SPEC_PROPOSED
+BLOCAT_CERERE_SYSTEM
 
 ## RAPORT SYNC (2026-06-04)
 
-Sync executat în chat dedicat C10.
+Sync executat. SPEC C10 confirmat ÎNGHEȚAT FINAL în `BRAIN-TO-CLAUDE.md` (toate cele 3 recomandări acceptate). Mandat: generez C10 „dacă regulile locale permit".
 
-Pași parcurși:
-1. `git fetch origin main` (e85a318 `freeze C10 spec status`).
-2. Citit `_brain/c10/CHAT-CONTEXT.md` + `_brain/c10/BRAIN-TO-CLAUDE.md` (mandat SPEC).
-3. Verificat conflicte cu C09 (read-only `c09/`) și cu poziționarea T3 (read-only `_system/06-MAP-CONSTRUCTII-T1-T5.md`).
-4. NU am generat artefacte. NU am atins fișiere sistem sau alte construcții.
+**Regulile locale NU permit generarea acum.** Regula blocantă B1 (R-V03.55) impune ca, înainte de generare, `pre_generation_check.py 10` să treacă. Am rulat-o: **BLOCAJ**.
 
----
+### De ce pică B1 (cauză concretă)
+Scriptul citește SPEC-ul și identitatea tehnică din fișiere de SISTEM, nu din BRAIN-ul C10:
 
-## REZUMAT AXĂ C10 (confirmat)
+1. `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, linia 2388:
+   `## SPEC C10 - ANALIZA PIVOT   [Status: NEGENERAT]`
+   - Status `NEGENERAT` => B1 blochează.
+   - Nume VECHI („ANALIZA PIVOT"), nu „MĂSURI" (harta T3 / BRAIN-006).
+2. `_system/referinte/IDENTITATE-TEHNICA.md`:
+   - NU există bloc `## IDENTITATE_TEHNICA C10`. Ultimul bloc e C08 (`next_cod: C09`). L142 cere identitatea tehnică populată => fără ea, generatorul oprește.
 
-C10 = **MĂSURI**. Verb-semnătură **a defini**. Întrebare-mamă **„Cât?"**.
+Ambele sunt fișiere `_system/**`, **interzise în acest chat**. Nu le modific.
 
-Axa pedagogică (de acord 100% cu mandatul BRAIN):
-**Fără măsuri, ai cifre. Cu măsuri corecte, ai decizie.**
+### Observație de fond (semnal pentru SYSTEM)
+Registrul de sistem e rămas în urmă pentru TOT lotul T3:
+- C09 (deja construit pe disc: HTML-Studiu + HTML-Video livrate) e tot `[Status: NEGENERAT]` cu nume vechi „EXPLORAREA DATELOR" și NU are bloc `IDENTITATE_TEHNICA`.
+- `pre_generation_check.py 9` pică identic, deși C09 e livrabil.
 
-C10 duce mai departe C09 (RELAȚII / „a lega" / „Ce pot întreba?"): după ce datele sunt legate corect într-un model interogabil, cursantul trebuie să transforme cifra brută într-o **măsură** definită o singură dată, repetabilă și context-aware (single source of truth). C10 NU e despre multe formule, ci despre alegerea și definirea corectă a măsurii.
-
----
-
-## VERIFICARE CONFLICTE
-
-### Cu C09 (RELAȚII) — FĂRĂ CONFLICT
-C09 construiește relațiile reale (merge / 1:M / Data Model) și produce modelul interogabil. C10 pornește din acel model (Pasul 1 „Confirmă că datele sunt legate corect" = moștenire curată din C09, nu reluare). Granița e clară: C09 = „ce pot întreba", C10 = „cât / care e răspunsul măsurat".
-
-### Cu C11 (COMPARAȚII) — CONFLICT DE DELIMITARE (de rezolvat)
-Harta T3 (autoritate, lock BRAIN-006) fixează:
-- C10 = a **defini** o măsură (Cât?).
-- C11 = a **compara**: clasament / diferență / **contribuție** / ABC-Pareto (Care?).
-
-FENOMENE-le propuse de BRAIN conțin 3 elemente care, în harta oficială, sunt teritoriu C11:
-- **ranking** = clasament => C11
-- **contribuție** = contribuție/pondere-în-total => C11
-- **comparație contextuală** = comparație între entități => C11
-
-Recomandarea mea: aceste 3 ies din C10 și se rezervă pentru C11, ca să nu repetăm la C10 ediția slabă a comparației și să golim C11 de substanță. Verbul „a compara" și întrebarea „Care?" trebuie să rămână ABSENTE din C10. C10 păstrează doar raportarea măsurii la un **reper/prag definit** (parte din definiția măsurii), nu comparația între entități.
-
-### Cu C06 (CLASIFICARE) — RISC MINOR
-C06 produce per-rând „scor 0-100" / etichetă prin reguli. C10 NU reia scorul per-rând. „Semnalul" din C10 este o **măsură agregată** care trece un prag (cantitativ, context-aware), nu o etichetă pe rând. Notez delimitarea ca să evităm redrift.
-
-### Cu C12 (INTERPRETARE) — RISC PE „variație"
-„variație" poate aluneca spre evoluție-în-timp / „de ce" (C12) sau spre comparație lună-la-lună (C11). Propun să o păstrăm în C10 DOAR ca măsură definită (ex. variație % față de un reper/țintă), nu ca narațiune de trend temporal. Întrebare deschisă mai jos.
+Concluzie: lotul T2/T3 a fost generat pe fluxul „SPEC înghețat în `_brain/cNN/`", iar gate-ul B1 (care citește registrul vechi) a rămas nesincronizat. C10 lovește exact acest decalaj.
 
 ---
 
-## PROPUNERE SPEC C10 FINAL
+## CERERE SYSTEM
+Construcție: **C10**
 
-### 1. SLUG
-`masuri`
+Fișiere comune cerute (de editat de Chat SYSTEM, NU de mine):
+1. `_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+2. `_system/referinte/IDENTITATE-TEHNICA.md`
 
-### 2. INTRIGA (confirmată, ușor ascuțită)
-Relațiile sunt corecte, tabelele comunică, modelul e interogabil. Totuși simpla existență a datelor legate nu produce decizii. Apar totaluri, medii, procente, dar ele pot induce în eroare dacă nu sunt definite ca măsuri clare, ancorate într-o întrebare reală. Intriga C10: trecerea de la „avem cifre" la „știm exact ce măsurăm și de ce".
+Motiv: deblocarea B1 pentru generarea C10 (și, opțional, reconcilierea retroactivă C06-C09).
 
-### 3. PROBLEMELE (confirmate, 8)
-- se calculează totaluri fără întrebare clară
-- se folosesc medii care ascund realitatea
-- se confundă cifra brută cu indicatorul util
-- se folosesc procente fără bază de raportare clară
-- aceeași cifră e recalculată diferit în locuri diferite (lipsă single source of truth)
-- măsura se rupe când schimbi tăietura/filtrul (nu e context-aware)
-- se trag concluzii din calcule izolate
-- nu există criteriu stabil pentru ce merită măsurat
+Impact: fără aceste 2 editări, `pre_generation_check.py 10` rămâne BLOCAT și nu pot trece de B1. Generarea C10 stă pe loc.
 
-(Am înlocuit cele 2 probleme care duceau spre C11, „se compară valori care nu sunt comparabile" și „se măsoară prea mult și se decide prea puțin", cu 2 probleme pur-definiționale: lipsa single source of truth și fragilitatea la context. Originalele se mută natural în C11.)
+### Propunere editare 1 — registrul SPEC
+În `SISTEM_TRAINITY-versiuni.md`, linia 2388:
+```
+## SPEC C10 - ANALIZA PIVOT   [Status: NEGENERAT]
+```
+devine
+```
+## SPEC C10 - MĂSURI   [Status: FROZEN]
+```
+(ideal: și corpul celor 9 elemente din SPEC-ul înghețat din `_brain/c10/BRAIN-TO-CLAUDE.md`, ca scriptul să valideze FENOMENE vs asset — L143).
 
-### 4. MIZA (confirmată)
-Cursantul transformă datele legate corect în măsuri utile, controlabile, explicabile.
-**O măsură bună reduce haosul, nu îl amplifică.**
+### Propunere editare 2 — identitatea tehnică C10
+De adăugat în `_system/referinte/IDENTITATE-TEHNICA.md` (model = blocul C08), cu valori derivate din SPEC. Câmpurile de identitate vizuală (hero) le confirmă BRAIN/ARHITECT; propunere implicită mai jos:
 
-### 5. MANTRA (confirmată)
-**Măsura corectă răspunde întrebării corecte.**
+```
+## IDENTITATE_TEHNICA C10 — MĂSURA POTRIVITĂ
 
-### 6. WOW (confirmat)
-Același set de date poate susține concluzii complet diferite în funcție de măsura aleasă. Problema nu e lipsa cifrelor, ci alegerea greșită a cifrei care primește autoritate.
+- cod: C10
+- treapta_nr: 3
+- treapta_nume: ANALIZA
+- treapta_pozitie: 2 din 4 (Relații, Măsuri, Comparații, Interpretare)
+- nume_hero_caps_rand1: MĂSURA
+- nume_hero_caps_rand2: POTRIVITĂ
+- nume_hero_caps: MĂSURA POTRIVITĂ
+- nume_title_case: Definirea măsurilor
+- nume_slug: Masuri
+- input_filename: Date_MASTER-C09.xlsx
+- output_filename: Date_MASTER-C10.xlsx
+- meta_val_treapta: RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZA)
+- next_cod: C11
+- next_nume_title: Comparații
+- next_label: TREAPTA 3 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C10 MĂSURA POTRIVITĂ · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C10 · Măsura potrivită
+- mobile_topbar: C10 · Măsura potrivită
+- nav_brand_label: PACK 02 EXCEL · C10
+- nav_brand_title: MĂSURA POTRIVITĂ
+- title_studiu: C10 · Măsuri · Trainity
+- title_video: C10 · MĂSURI · BROADCAST
+- localStorage_studiu: trainity_c10_study_v1
+- localStorage_video: trainity_c10_video_v1
+```
+(Întrebare deschisă pentru BRAIN: hero-ul C10 = „MĂSURA POTRIVITĂ" sau „MĂSURILE SETULUI" în paralel cu C07/C08? C09 a rupt tiparul „...SETULUI" cu „RELAȚIILE DINTRE DATE", deci ambele sunt plauzibile.)
 
-### 7. MOTTO (confirmat)
-**Nu calcula mai mult. Măsoară mai corect.**
-
-### 8. FENOMENE (REVIZUITE — 6, pur C10 „a defini")
-1. **Măsura ca definiție unică** (single source of truth): total/medie definite o dată, reutilizabile, nu recalculate ad-hoc.
-2. **Baza de raportare**: procentul/raportul fără bază explicită minte; măsura relativă își declară numitorul.
-3. **Reperul / pragul**: măsura capătă sens raportată la un reper definit (țintă/prag), parte din definiția ei.
-4. **Context-awareness**: aceeași definiție produce rezultatul corect pe orice tăietură/filtru (esența măsurii vii în Data Model).
-5. **Cifra utilă vs cifra decorativă**: criteriul prin care selectezi ce merită promovat la rang de măsură.
-6. **Semnalul controlabil**: măsura produce un semnal explicabil (prag atins/abatere față de reper), nu doar o cifră.
-
-Instrument tehnic (NU axă): măsuri în Power Pivot / Data Model (DAX ca vehicul, conform tehnologiei dominante T3). În HTML/FILM rămân referințe generice (R-V02.15 zero cifre business).
-
-EXCLUSE explicit din C10 (rezervate C11): ranking/clasament, contribuție/pondere-în-total, comparație contextuală între entități, ABC/Pareto.
-
-### 9. STEP-TITLES (rafinate, axa nemodificată, verbul „a compara" eliminat)
-1. Confirmă că datele sunt legate corect (moștenire C09)
-2. Formulează întrebarea de business („Cât?")
-3. Alege măsura potrivită întrebării
-4. Definește baza de raportare a măsurii
-5. Ancorează măsura într-un reper (prag/țintă)
-6. Separă cifra utilă de cifra decorativă
-7. Verifică robustețea măsurii (context-aware: aceeași definiție pe orice tăietură)
-8. Confirmă setul de măsuri controlabile (single source of truth)
-
-(Singura modificare de fond față de mandat: pasul 5 „Compară măsura cu un reper" devine „Ancorează măsura într-un reper", ca să eliminăm verbul „a compara" care e semnătura C11. Pasul 7 capătă accent pe context-awareness, marca măsurii vii în Data Model. Axa pedagogică rămâne intactă.)
-
-### AHA
-**Nu cifra contează. Contează ce întrebare răspunde cifra.**
-
-### Schimbare mentală
-De la „Ce pot calcula?" la „Ce trebuie să măsor ca să pot decide?".
-
-### Formula finală
-**Date legate corect + întrebare clară + măsură potrivită = decizie controlabilă.**
+### Variantă alternativă (decizie SYSTEM/ARHITECT)
+Dacă gate-ul B1 e considerat depășit de fluxul „SPEC în `_brain/cNN/`" (cum sugerează precedentul C06-C09), SYSTEM poate decide oficial că `pre_generation_check.py` nu mai e blocant pentru T3 și că autoritatea SPEC e BRAIN-ul per chat. În acel caz aș putea genera C10 direct din `_brain/c10/`, fără editări de sistem.
 
 ---
 
-## CONTINUITATE (pentru faza de generare)
-- R-V02.14: C10 NU schimbă `valoare_neta`; definește măsuri peste aceleași date. Input C10 = output C09 (sumă conservată).
-- R-V02.15: cifrele trăiesc în Excel; HTML/FILM doar referințe generice.
-- Generare din copy `c01/` (matriță), apoi gate_v20 + audit_sync înainte de livrare.
+## CE NU AM FĂCUT
+- NU am generat C10 (B1 nu trece, regula locală nu permite).
+- NU am atins niciun fișier sistem. `c09/`, `06-MAP`, `pre_generation_check.py`, `SISTEM_TRAINITY-versiuni.md`, `IDENTITATE-TEHNICA.md` citite strict read-only.
+- NU am atins alte construcții.
 
----
-
-## ÎNTREBĂRI PENTRU BRAIN (înainte de freeze SPEC final)
-1. **Confirmi scoaterea din C10 a fenomenelor ranking / contribuție / comparație contextuală** (mutate în C11), păstrând în C10 doar reperul/pragul ca parte din definiția măsurii? (Recomand: DA, ca să respectăm lock-ul T3 a defini vs a compara.)
-2. **„variație" și „abatere":** le păstrăm în C10 doar ca măsuri definite față de un reper/țintă (NU ca trend temporal sau comparație lună-la-lună, care ar fi C11/C12)? (Recomand: DA, reformulate ca „abatere față de reper definit", fără narațiune de evoluție.)
-3. **Numărul de fenomene:** propun 6 (vs 12 în mandat). Confirmi 6, sau vrei aliniere la alt număr-țintă pentru T3?
-
-La confirmarea acestor 3 puncte + STATUS `SPEC_FROZEN` în BRAIN-TO-CLAUDE, trec la `genereaza CNN` (creez `c10/` din copy `c01/`).
-
-## CERERI SYSTEM
-Nicio cerere deschisă. (Pentru verificarea conflictelor am citit `c09/` și `_system/06-MAP` strict read-only, fără modificări.)
+Execuția C10 se oprește până la decizia SYSTEM (editarea celor 2 fișiere SAU confirmarea că B1 e depășit). La deblocare, rulez din nou `pre_generation_check.py 10` și, la PASS, trec la `genereaza CNN` din copy `c01/`.
