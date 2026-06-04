@@ -26,7 +26,7 @@ Rolul slotului e dat de eticheta proprie din HTML (`mantra-band-sub` = „MANTRA
 | **INTRIGA (HOOK)** | `cover-subtitle` (text integral) | `hero-hook` (split pe cele 2 propoziții: prop.1 + `<span class="hero-hook-twist">`prop.2`</span>`) | — |
 | **MIZA** | `cover-miza` | — | doar Studiu |
 | **MANTRA · TRAINITY** | `mantra-band-main` (cuvânt-cheie în `<mark>`) | — | doar Studiu |
-| **WOW (PAYOFF FINAL)** | linie-climax `[data-wow="1"]` (`.payoff-line.accent`) chiar înainte de `payoff-motto` | frag `[data-wow="1"]` (`.accent`) chiar înainte de `final-motto` (renumerotează motto + bump `data-frag-total`) | vârful fluxului emoţional, înainte de semnătură |
+| **WOW (PAYOFF FINAL)** | linie-climax `[data-wow="1"]` (`.payoff-line.accent`) chiar înainte de `payoff-motto` | frag `[data-wow="1"]` (`.accent`) chiar înainte de `final-motto` (renumerotează motto + bump `data-frag-total`) | vârful fluxului emoțional, înainte de semnătură |
 | **MOTTO (SEMNĂTURĂ)** | `payoff-motto` | `final-motto` (ultimul frag) + `exec-closing-motto` (ultima parte în `<span class="exec-closing-motto-yellow">`) | apare 3 locuri |
 | **CONTRACT (DESTINAȚIE)** *(element nou)* | bloc `<section class="exec-hero" data-contract="1">` în cusătura SCENA REALĂ → primul pas | (Studiu only; în Video rolul e jucat de `hero-sub`) | promisiune privită înainte; copy DRAFT, de formalizat în FILM după ce ARHITECT fixează wording-ul |
 
@@ -39,13 +39,13 @@ Rolul slotului e dat de eticheta proprie din HTML (`mantra-band-sub` = „MANTRA
 
 ---
 
-## WOW (rezolvat — opţiunea B)
+## WOW (rezolvat — opțiunea B)
 
-WOW are acum slot dedicat: linie-climax verbatim chiar înainte de motto, ca vârf al fluxului emoţional. Vizual: highlight **verde** (`.payoff-wow`, `#18843e`) cu etichetă `WOW:` (`.wow-tag`). Structură: `<span class="wow-tag">WOW:</span><span data-wow="1">FRAZĂ</span>` — sync-ul atinge DOAR `[data-wow]` (fraza), eticheta + culoarea rămân. În Video e frag propriu (renumerotează motto-ul + creşte `data-frag-total` cu 1).
+WOW are acum slot dedicat: linie-climax verbatim chiar înainte de motto, ca vârf al fluxului emoțional. Vizual: highlight **verde** (`.payoff-wow`, `#18843e`) cu etichetă `WOW:` (`.wow-tag`). Structură: `<span class="wow-tag">WOW:</span><span data-wow="1">FRAZĂ</span>` — sync-ul atinge DOAR `[data-wow]` (fraza), eticheta + culoarea rămân. În Video e frag propriu (renumerotează motto-ul + crește `data-frag-total` cu 1).
 
 ## CONTRACT (element nou — copy DRAFT)
 
-Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": o promisiune privită înainte de călătorie (timp prezent-viitor). Bloc `exec-hero` ancorat `[data-contract="1"]`, Studiu only. Copy-ul curent e DRAFT, scris de motor; se formalizează ca element SPEC în FILM după ce ARHITECT fixează wording-ul, apoi se masterizează ca restul.
+Cusătura SCENA REALĂ → primul pas primește un „contract de destinație": o promisiune privită înainte de călătorie (timp prezent-viitor). Bloc `exec-hero` ancorat `[data-contract="1"]`, Studiu only. Copy-ul curent e DRAFT, scris de motor; se formalizează ca element SPEC în FILM după ce ARHITECT fixează wording-ul, apoi se masterizează ca restul.
 
 ---
 
@@ -53,13 +53,13 @@ Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": 
 
 1. Citește valorile de identitate + SLIDES EXECUTIVE din FILM (.docx).
 2. Pentru fiecare câmp, suprascrie slotul HTML corespunzător în toate cele 4 machete (Studiu + Editor-Studiu pentru sloturile Studiu; Video + Editor-Video pentru sloturile Video).
-3. Split-uri: INTRIGA → hero-hook pe 2 propoziţii; MOTTO → final-motto / exec-closing-motto (ultima parte highlight).
+3. Split-uri: INTRIGA → hero-hook pe 2 propoziții; MOTTO → final-motto / exec-closing-motto (ultima parte highlight).
 4. Rulează `audit_sync.py` (ZERO DRIFT) + verifică vizual sloturile.
 5. Commit + push.
 
 ---
 
-## Status sincronizare per construcţie
+## Status sincronizare per construcție
 
 | Cod | INTRIGA | MIZA | MANTRA | MOTTO | exec slides | WOW | CONTRACT |
 |---|---|---|---|---|---|---|---|
@@ -68,7 +68,7 @@ Cusătura SCENA REALĂ → primul pas primeşte un „contract de destinaţie": 
 | C03 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 | C04 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ slot nou | ✓ draft |
 
-C01: rezolvat prin sync HTML←FILM (repo). A reparat şi confuzia de rol (mantra-band ţinea textul MOTTO). Liniile HTML vechi înlocuite: cover-miza „O decizie corectă…", payoff-motto „Mai întâi structura. Apoi orice." → dacă ARHITECT le vrea înapoi, se pun în FILM şi se re-sincronizează.
+C01: rezolvat prin sync HTML←FILM (repo). A reparat și confuzia de rol (mantra-band ținea textul MOTTO). Liniile HTML vechi înlocuite: cover-miza „O decizie corectă…", payoff-motto „Mai întâi structura. Apoi orice." → dacă ARHITECT le vrea înapoi, se pun în FILM și se re-sincronizează.
 
 C03/C04: FILM-ul din repo = docx-ul reparat (voce „noi", fără conflict V45), sincronizat complet.
 

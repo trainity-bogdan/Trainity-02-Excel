@@ -25,7 +25,7 @@ Post-check: B2 gate_v20 PASS 5/5 · B3 audit_sync C10 ZERO DRIFT · tier_guard_t
 
 BRAIN a aprobat final C10 · MĂSURI (`APPROVED_BRAIN`). Confirm arhivarea statusului final.
 
-Stare livrabile C10 (îngheţate, nu se mai modifică fără mandat nou):
+Stare livrabile C10 (înghețate, nu se mai modifică fără mandat nou):
 - 4 HTML (Studiu, Editor-Studiu, Video, Editor-Video) + Date_MASTER-C10.xlsx + FILM-Excel-10-Masuri.docx + assets/ (hero + 6 exec-stage placeholdere).
 - Axă: MĂSURI · verb „a defini" · întrebare „Cât?" · hero „MĂSURA POTRIVITĂ".
 - Fără ranking/contribuție/comparație contextuală/ABC/Pareto/cauză/dashboard. Predare către C11 corectă.
