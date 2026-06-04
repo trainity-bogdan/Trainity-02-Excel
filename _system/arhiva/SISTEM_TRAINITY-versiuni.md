@@ -2460,7 +2460,85 @@ La următorul `sync`, Claude C10 trebuie să:
 5. nu modifice fișiere sistem,
 6. nu modifice alte construcții,
 7. raporteze rezultatul în `_brain/c10/CLAUDE-TO-BRAIN.md`.
-## SPEC C11 - DATA MODEL   [Status: NEGENERAT]
+## SPEC C11 - COMPARATII / RANK   [Status: INGHETAT 04.06.2026]
+
+> Realiniere BRAIN-006 + îngheț construcție (mandat C11-02). Identitatea veche
+> „DATA MODEL" abandonată (acum teritoriu C09 RELAȚII). Sursa canonică:
+> `_brain/c11/BRAIN-TO-CLAUDE.md` (SPEC_FROZEN). Autoritate conceptuală:
+> Bible §T3 (C11 COMPARAȚII LOCKED). Înscriere sistem prin mandat C11-04.
+
+- Identitate: COMPARAȚII / RANK · verb-semnătură `a compara` · întrebare-mamă „Care?"
+- Hero: COMPARAȚII
+- Rol: așază măsurile definite în clasament, diferență, contribuție și concentrare;
+  transformă lista plată în ierarhie decizională. Vine DUPĂ C10 MĂSURI și ÎNAINTEA
+  C12 INTERPRETARE în lanțul T3 (model -> măsură -> clasament -> explicație).
+
+### 1. SLUG
+comparatii
+
+### 2. INTRIGA
+Datele sunt legate corect și măsurate corect. Totuși o listă de măsuri, oricât de
+corectă, rămâne o masă plată. Ochiul nu poate ierarhiza singur o coloană lungă de
+numere, iar „mare în listă" este confundat cu „important pentru rezultat". C11 face
+trecerea de la „avem măsuri corecte" la „știm cine contează", de la listă plată la
+ierarhie clară.
+
+### 3. PROBLEMELE
+- citești lista fără să vezi cine conduce rezultatul
+- compari valori care nu sunt comparabile
+- confunzi „mare în listă" cu „important pentru rezultat"
+- tratezi toate elementele ca egale, fără ierarhie
+- reacționezi la diferențe minuscule, unde zgomotul pare semnal
+- nu vezi concentrarea, adică puțini actori duc majoritatea rezultatului
+- ignori contribuția în total
+- decizi pe baza ordinii brute, fără reper relativ
+
+### 4. MIZA
+Transformi măsurile corecte într-o ierarhie decizională. Vezi cine duce rezultatul și
+cine doar apare în listă. Fără comparație, analiza rămâne plată. Cu comparație, datele
+capătă ierarhie.
+
+### 5. MANTRA
+Nu toate valorile sunt egale. Unele conduc rezultatul.
+
+### 6. WOW
+Într-un set cu multe elemente, de obicei o mână duce majoritatea rezultatului.
+Comparația corectă arată că „mult" și „important" nu sunt același lucru. Lista plată
+ascunde o ierarhie dură, în care câțiva actori decid totul.
+
+### 7. MOTTO
+Nu citi lista. Citește ierarhia.
+
+### 8. FENOMENE C11 (6)
+1. Clasamentul, ordonarea actorilor după o măsură; cine e sus, cine e jos, instant.
+2. Diferența reală vs zgomotul, contează gap-ul dintre poziții, nu doar ordinea.
+3. Contribuția / ponderea în total, cât duce fiecare actor din rezultatul global.
+4. Concentrarea Pareto / ABC, puțini actori duc majoritatea rezultatului.
+5. Comparabilitatea, compari doar ce are aceeași bază, unitate, perioadă și numitor.
+6. Reperul relativ, poziția capătă sens raportată la lider, mediană sau grup.
+
+### 9. STEP-TITLES (8)
+1. Confirmă măsura pe care compari
+2. Asigură comparabilitatea
+3. Așază actorii în clasament
+4. Citește diferențele reale
+5. Calculează contribuția în total
+6. Identifică concentrarea
+7. Raportează poziția la reper
+8. Confirmă ierarhia decizională
+
+### DELIMITĂRI (gardă de treaptă)
+C11 NU redefinește măsura (vine din C10). C11 NU explică de ce apare ierarhia (cauza =
+C12). C11 NU construiește dashboard (raportarea = T4). C11 compară actori agregați, nu
+etichetează rânduri individuale (vs C06). R-V02.14 sumă conservată (input C11 = output
+C10); R-V02.15 zero cifre business în HTML/FILM.
+
+### AHA
+Nu volumul contează, ci ierarhia. Puțini actori duc rezultatul.
+
+### FORMULA FINALĂ
+Măsuri comparabile + clasament + contribuție = ierarhie decizională.
+
 ## SPEC C12 - INTERPRETARE   [Status: INGHETAT 04.06.2026]
 
 > Realiniere BRAIN-006 + îngheț construcție (mandat C12-02). Identitatea veche

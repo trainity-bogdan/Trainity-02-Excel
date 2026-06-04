@@ -258,6 +258,36 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c10_study_v1
 - localStorage_video: trainity_c10_video_v1
 
+## IDENTITATE_TEHNICA C11 — COMPARAȚII   [Status: INGHETAT 04.06.2026]
+
+- cod: C11
+- treapta_nr: 3
+- treapta_nume: ANALIZA
+- treapta_pozitie: 3 din 4 (Relații, Măsuri, Comparații, Interpretare)
+- nume_hero_caps_rand1: COMPARAȚII
+- nume_hero_caps_rand2: 
+- nume_hero_caps: COMPARAȚII
+- nume_title_case: Comparații
+- nume_slug: Comparatii
+- motto: Nu citi lista. Citește ierarhia.
+- input_filename: Date_MASTER-C10.xlsx
+- output_filename: Date_MASTER-C11.xlsx
+- meta_val_treapta: RELAȚII · MĂSURI · <b>COMPARAȚII</b> · INTERPRETARE (ANALIZA)
+- next_cod: C12
+- next_nume_title: Interpretare
+- next_label: TREAPTA 3 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C11 COMPARAȚII · Cockpit operațional
+- topbar_text: Sistemul 02 - Excel · C11 · Comparații
+- mobile_topbar: C11 · Comparații
+- nav_brand_label: PACK 02 EXCEL · C11
+- nav_brand_title: COMPARAȚII
+- title_studiu: C11 · Comparații · Trainity
+- title_video: C11 · COMPARAȚII · BROADCAST
+- localStorage_studiu: trainity_c11_study_v1
+- localStorage_video: trainity_c11_video_v1
+- prompt_label_1: PROMPT 1 · INSTRUMENT DE CLASAMENT
+- prompt_label_2: PROMPT 2 · INSTRUMENT DE CONTRIBUȚIE ȘI CONCENTRARE
+
 ## IDENTITATE_TEHNICA C12 — DE CE-UL DIN DATE
 
 - cod: C12
