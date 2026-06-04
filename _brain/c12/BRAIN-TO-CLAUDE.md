@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C12 INTERPRETARE
 
 ## STATUS
-MANDAT_SPEC_REALINIERE
+MANDAT_SPEC_FREEZE
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C12.
@@ -32,39 +32,69 @@ Rol C12: explică insight-ul verbal, cauza citită din model, interpretarea rezu
 
 Nu porni C12 ca „KPI / FILTER CONTEXT”. Aceasta nu mai este identitatea principală.
 
-## MANDAT C12-01 · REALINIERE SPEC
+## MANDAT C12-02 · ÎNGHEȚARE SPEC
 
 Claude, lucrează exclusiv pe C12.
 
-Te rog să propui SPEC C12 complet, aliniat la identitatea:
+Am analizat SPEC C12 propus. Direcția este confirmată:
 
-INTERPRETARE · a explica · De ce?
+C12 = INTERPRETARE
+Verb-semnătură = a explica
+Întrebare-mamă = De ce?
 
-C12 trebuie să închidă T3 ANALIZA prin trecerea de la rezultat numeric la explicație verbală:
-- nu doar vedem diferența,
-- nu doar vedem clasamentul,
-- ci explicăm de ce apare rezultatul.
+Te rog să îngheți SPEC C12 cu următoarele decizii BRAIN:
+
+### 1. Număr fenomene
+Confirm 6 fenomene.
+
+### 2. Număr STEP-TITLES
+Confirm 8 step-titles.
+
+### 3. Hero vizual
+Hero name confirmat:
+DE CE-UL DIN DATE
+
+### 4. Corelație vs cauză
+Nu păstra formularea tehnică „corelație vs cauză” ca titlu principal de fenomen.
+Reformulează operațional:
+„Ce apare împreună nu explică automat ce produce rezultatul.”
+
+### 5. Cauză multiplă
+Introdu explicit fenomenul „cauză multiplă”:
+în business, rezultatul rar are o singură cauză; interpretarea bună identifică factorii principali și nu forțează o explicație unică.
+
+### 6. Elemente confirmate
+Păstrează:
+
+MANTRA:
+Cifra spune cât. Explicația spune de ce.
+
+MOTTO:
+Nu citi rezultatul. Explică-l.
+
+AHA:
+Nu rezultatul contează. Contează de ce apare rezultatul.
+
+FORMULA FINALĂ:
+Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
+
+### 7. Delimitări obligatorii
+C12 nu face dashboard.
+C12 nu face what-if.
+C12 nu face scenarii.
+C12 nu face predicție.
+C12 nu recomandă acțiuni.
+C12 explică ce s-a întâmplat și de ce, pe baza modelului.
 
 Nu genera artefacte.
 Nu modifica fișiere sistem.
 Nu modifica alte construcții.
 
-SPEC trebuie să includă:
-1. SLUG
-2. INTRIGA
-3. PROBLEMELE
-4. MIZA
-5. MANTRA
-6. WOW
-7. MOTTO
-8. FENOMENE
-9. STEP-TITLES
-
-Scrie răspunsul în:
+Scrie SPEC final înghețat în:
 `_brain/c12/CLAUDE-TO-BRAIN.md`
 
 Status așteptat:
-`SPEC_PROPOSED`
+`SPEC_FROZEN`
 
 ## REGULĂ SYSTEM
 Dacă ai nevoie de fișier comun, NU îl modifica.
