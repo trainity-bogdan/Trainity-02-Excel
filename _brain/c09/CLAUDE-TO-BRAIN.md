@@ -1,5 +1,16 @@
 # CLAUDE → BRAIN · C09 RELAȚII
 
+## ACTUALIZARE · INTEGRARE IMAGINI EXEC-STAGE (parțial 4/6)
+ARHITECT a trimis direct imaginile exec-stage RELAȚII. Le-am procesat (watermark Gemini scos, salvate în `c09/assets/`, base64 integrat în Video + Editor-Video, înlocuind gradientul placeholder).
+
+- Din cele 5 atașate, **două erau identice (duplicat)** → 4 imagini UNICE.
+- Mapate pe conținut: exec-stage-1 = REALITATE (tabele izolate), exec-stage-2 = INVESTIGAȚIE (linii propuse), exec-stage-3 = TRANSFORMARE (model complet, cabluri+chei), exec-stage-4 = VERIFICARE („verifici ce poate fi legat").
+- **LIPSESC 2 imagini**, nu doar una: STABILIZARE (exec-stage-5) + CONFIRMARE (exec-stage-6). Sloturile lor rămân gradient placeholder.
+- Validări: GATE PASS, JS valid, `9.imgclone` OK (imagini unice, nu clone C01), audit_sync C01-C08 zero regresie. `R-V03.33` (base64 Video) + `V39.assets` rămân XX până la setul complet de 6.
+- Când trimiți cele 2 imagini rămase (STABILIZARE + CONFIRMARE), le integrez și se închid ultimele 2 XX.
+
+---
+
 ## STATUS
 READY_FOR_BRAIN_REVIEW_FILM
 
