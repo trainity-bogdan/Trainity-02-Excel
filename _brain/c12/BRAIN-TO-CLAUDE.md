@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C12 INTERPRETARE
 
 ## STATUS
-MANDAT_SPEC_FREEZE
+MANDAT_SYSTEM_SPEC_REGISTER
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C12.
@@ -10,13 +10,8 @@ La comanda `sync`, citește:
 - `_brain/c12/CHAT-CONTEXT.md`
 - `_brain/c12/BRAIN-TO-CLAUDE.md`
 
-Execută doar în:
-- `c12/**`
-- `_brain/c12/**`
-
-Lucrează exclusiv pe `main`.
+Execută pe `main`.
 Nu crea branch-uri.
-Nu modifica fișiere sistem.
 
 ## STARE CURENTĂ C12
 C12 este construcția INTERPRETARE.
@@ -32,70 +27,80 @@ Rol C12: explică insight-ul verbal, cauza citită din model, interpretarea rezu
 
 Nu porni C12 ca „KPI / FILTER CONTEXT”. Aceasta nu mai este identitatea principală.
 
-## MANDAT C12-02 · ÎNGHEȚARE SPEC
+## MANDAT C12-03 · SISTEM DIRECT · ÎNSCRIERE SPEC C12
 
-Claude, lucrează exclusiv pe C12.
+Claude, lucrează pe main.
 
-Am analizat SPEC C12 propus. Direcția este confirmată:
+SPEC C12 este înghețat cu status `SPEC_FROZEN` în `_brain/c12/CLAUDE-TO-BRAIN.md`.
 
-C12 = INTERPRETARE
-Verb-semnătură = a explica
-Întrebare-mamă = De ce?
+Procedura actuală nu mai folosește Chat Andrei SYSTEM.
+Ai mandat direct de sistem pentru înscrierea SPEC C12 în fișierele necesare ale sistemului, strict cât este necesar pentru a permite generarea C12.
 
-Te rog să îngheți SPEC C12 cu următoarele decizii BRAIN:
+Ai voie să modifici doar fișierele sistem strict necesare pentru:
+- registru SPEC C12
+- identitate C12
+- aliniere C12 în harta oficială dacă este necesar
+- eliminarea/neutralizarea identității vechi KPI / FILTER CONTEXT acolo unde blochează generarea
 
-### 1. Număr fenomene
-Confirm 6 fenomene.
+Nu modifica:
+- C09
+- C10
+- C11
+- alte construcții
+- fișiere HTML existente
+- Date_MASTER existente
+- index.html
 
-### 2. Număr STEP-TITLES
-Confirm 8 step-titles.
+Folosește SPEC-ul înghețat din `_brain/c12/CLAUDE-TO-BRAIN.md`.
 
-### 3. Hero vizual
-Hero name confirmat:
-DE CE-UL DIN DATE
+Înscrie în sistem:
 
-### 4. Corelație vs cauză
-Nu păstra formularea tehnică „corelație vs cauză” ca titlu principal de fenomen.
-Reformulează operațional:
-„Ce apare împreună nu explică automat ce produce rezultatul.”
+Identitate:
+- C12 = INTERPRETARE
+- Verb-semnătură = a explica
+- Întrebare-mamă = De ce?
+- Hero vizual = DE CE-UL DIN DATE
+- Rol = explică insight-ul verbal, cauza citită din model, interpretarea rezultatului după relații, măsuri și comparații.
+- C12 închide T3 ANALIZA.
 
-### 5. Cauză multiplă
-Introdu explicit fenomenul „cauză multiplă”:
-în business, rezultatul rar are o singură cauză; interpretarea bună identifică factorii principali și nu forțează o explicație unică.
+Cele 9 elemente SPEC:
+1. SLUG: interpretare
+2. INTRIGA: conform SPEC_FROZEN
+3. PROBLEMELE: conform SPEC_FROZEN
+4. MIZA: conform SPEC_FROZEN
+5. MANTRA: Cifra spune cât. Explicația spune de ce.
+6. WOW: conform SPEC_FROZEN
+7. MOTTO: Nu citi rezultatul. Explică-l.
+8. FENOMENE C12: cele 6 fenomene finale
+9. STEP-TITLES: cele 8 step-titles finale
 
-### 6. Elemente confirmate
-Păstrează:
+Delimitări obligatorii:
+- C12 nu face dashboard
+- C12 nu face what-if
+- C12 nu face scenarii
+- C12 nu face predicție
+- C12 nu recomandă acțiuni
+- C12 nu re-ierarhizează
+- C12 explică ce s-a întâmplat și de ce, pe baza modelului
+- C12 închide T3 ANALIZA
 
-MANTRA:
-Cifra spune cât. Explicația spune de ce.
+Identitatea veche:
+„KPI / FILTER CONTEXT” este abandonată ca identitate principală C12.
+Dacă apare în context C12 și poate crea drift, înlocuiește cu INTERPRETARE.
 
-MOTTO:
-Nu citi rezultatul. Explică-l.
+După modificări:
+- raportează exact fișierele modificate
+- nu genera artefacte C12 încă
+- nu porni HTML
+- nu porni Date_MASTER
+- nu porni FILM
+- nu porni audit global dacă nu este necesar în această etapă
 
-AHA:
-Nu rezultatul contează. Contează de ce apare rezultatul.
-
-FORMULA FINALĂ:
-Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
-
-### 7. Delimitări obligatorii
-C12 nu face dashboard.
-C12 nu face what-if.
-C12 nu face scenarii.
-C12 nu face predicție.
-C12 nu recomandă acțiuni.
-C12 explică ce s-a întâmplat și de ce, pe baza modelului.
-
-Nu genera artefacte.
-Nu modifica fișiere sistem.
-Nu modifica alte construcții.
-
-Scrie SPEC final înghețat în:
+Scrie raportul în:
 `_brain/c12/CLAUDE-TO-BRAIN.md`
 
 Status așteptat:
-`SPEC_FROZEN`
+`SYSTEM_SPEC_REGISTERED`
 
 ## REGULĂ SYSTEM
-Dacă ai nevoie de fișier comun, NU îl modifica.
-Scrie `CERERE SYSTEM` în `_brain/c12/CLAUDE-TO-BRAIN.md`.
+Pentru acest mandat, ai permisiune explicită de sistem direct, limitată strict la înscrierea SPEC C12 în fișierele necesare pentru generare.
