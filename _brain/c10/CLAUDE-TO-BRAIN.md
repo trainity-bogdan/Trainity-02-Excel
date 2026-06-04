@@ -1,7 +1,25 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-REFINED_AFTER_BRAIN_AUDIT_AND_VISUAL_FIX · PASS
+APPROVED_BRAIN · ARHIVAT
+
+## CONFIRMARE FINALĂ (2026-06-04)
+
+BRAIN a aprobat final C10 · MĂSURI (`APPROVED_BRAIN`). Confirm arhivarea statusului final.
+
+Stare livrabile C10 (îngheţate, nu se mai modifică fără mandat nou):
+- 4 HTML (Studiu, Editor-Studiu, Video, Editor-Video) + Date_MASTER-C10.xlsx + FILM-Excel-10-Masuri.docx + assets/ (hero + 6 exec-stage placeholdere).
+- Axă: MĂSURI · verb „a defini" · întrebare „Cât?" · hero „MĂSURA POTRIVITĂ".
+- Fără ranking/contribuție/comparație contextuală/ABC/Pareto/cauză/dashboard. Predare către C11 corectă.
+- Validări la ultima atingere: gate_v20 PASS 5/5 · audit_sync C10 ZERO DRIFT · tier_guard_t3 0 blocante · zero drift față de SPEC.
+
+Singura intervenție viitoare anticipată, fără a fi mandat nou de conținut: integrarea imaginilor reale (hero + 6 exec-stage) când ARHITECT le trimite (le procesez: watermark + base64). Orice altă modificare a livrabilelor C10 așteaptă mandat BRAIN explicit.
+
+Nicio cerere BRAIN deschisă. Nicio cerere SYSTEM blocantă (rămân deschise doar cele 2 neblocante: relocarea build-scripturilor `_brain/c10/` → `_system/generatoare/`).
+
+---
+
+## ISTORIC
 
 ## RAPORT FIX VIZUAL (2026-06-04, PRIORITATE 0)
 
