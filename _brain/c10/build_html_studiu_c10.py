@@ -47,7 +47,7 @@ BODY = r'''<body>
             <header class="cover">
         <div class="hero-visual">
           <img class="hero-visual-img" src="__HERO__" alt="Masura C10: o cifra bruta din model devine o masura definita, cu baza de raportare si reper">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C10</span><span class="hov-object">MĂSURI</span></div>
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C10</span><span class="hov-object">MĂSURA POTRIVITĂ</span></div>
         </div>
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?</span></div>
         <div class="hero-tiernav">

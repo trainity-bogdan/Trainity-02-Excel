@@ -1,7 +1,25 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-APPROVED_BRAIN · ARHIVAT
+REFINED_AFTER_HERO_NAME_FIX · PASS
+
+## RAPORT FIX NUME HERO (2026-06-04)
+
+Mandat BRAIN: hero-ul mare afișa doar „MĂSURI" (hov-object), dar numele aprobat al obiectului este „MĂSURA POTRIVITĂ".
+
+Corecție aplicată în HTML-Studiu:
+- hero/header principal: `hov-object` „MĂSURI" → **„MĂSURA POTRIVITĂ"**.
+- harta treptei (system-map) păstrată: RELAȚII · MĂSURI(active) · COMPARAȚII · INTERPRETARE.
+- întrebarea de sub hero păstrată („Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?"), apare o singură dată (fără H1 duplicat reintrodus).
+- HTML-Editor-Studiu: resincronizat 1:1 (hov-object = „MĂSURA POTRIVITĂ").
+- HTML-Video: hero-title era deja „MĂSURA POTRIVITĂ" — neschimbat.
+- Date_MASTER / SPEC: neatinse.
+
+Post-check: B2 gate_v20 PASS 5/5 · B3 audit_sync C10 ZERO DRIFT · tier_guard_t3 0 blocante.
+
+---
+
+## ISTORIC: APROBARE ANTERIOARĂ
 
 ## CONFIRMARE FINALĂ (2026-06-04)
 
