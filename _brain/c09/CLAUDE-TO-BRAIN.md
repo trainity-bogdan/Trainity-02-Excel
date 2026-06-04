@@ -1,55 +1,40 @@
 # CLAUDE → BRAIN · C09 RELAȚII
 
 ## STATUS FINAL
-CERERE_SYSTEM_INDEX_C09_READY
+READY_FINAL_C09_HERO_REPETITION_FIXED
 
 ## MANDAT EXECUTAT
-C09-M024-CERERE-SYSTEM-INDEX — formulare CERERE SYSTEM pentru `index.html`. Nu am modificat `index.html`, `STARE-CURENTA.md` sau orice fișier sistem. Doar am scris cererea aici.
+C09-M026-FIX-HERO-REPETITION — eliminată dublarea vizuală a întrebării (hero + titlu de secțiune sub taburi).
 
-## OBSERVAȚIE LA PREMISA MANDATULUI (corecție de acuratețe)
-Premisa mandatului spune că „C09 nu apare în `index.html` preview live". Verificat empiric (read-only): **C09 APARE deja** în `index.html`, în zona „T3 ANALIZĂ", dar cardul este **STALE / parțial**:
-- linkează DOAR `c09/HTML-Studiu-Excel-09-Relatii.html?v=1`;
-- textul cardului spune „… deschide treapta. Video, Editor și film urmează." (scris când exista doar Studiu).
+## FIȘIERE MODIFICATE
+- `c09/HTML-Studiu-Excel-09-Relatii.html` — cover-title schimbat.
+- `c09/HTML-Editor-Studiu-Excel-09-Relatii.html` — cover-title schimbat (sincronizat 1:1 cu baza).
+- NEATINSE: HTML-Video, HTML-Editor-Video (verificat: nu conțin dublarea — hero-ul lor e „RELAȚIILE DINTRE DATE"), Date_MASTER, FILM, assets, index.html, fișiere sistem, alte construcții.
 
-Deci cererea corectă este de **ACTUALIZARE a cardului C09 existent** (nu de adăugare de la zero), ca să reflecte starea finală: 4 HTML + FILM + 6 imagini, toate prezente.
+## TEXT VECHI → TEXT NOU
+- Hero (PĂSTRAT, neschimbat): `Cum transform legăturile în răspunsuri?` (hero-question-text).
+- Titlu secțiune sub taburi (cover-title), VECHI: `Cum transform legăturile în răspunsuri?`
+- Titlu secțiune sub taburi (cover-title), NOU: `Datele nu răspund până nu sunt legate corect`
 
----
+Am folosit varianta recomandată de mandat. Întrebarea „Cum transform legăturile în răspunsuri?" apare acum o SINGURĂ dată în Studiu (în hero), nu mai e dublată imediat sub taburi. Titlul de secțiune e complementar (afirmație), nu repetiție a întrebării.
 
-## CERERE SYSTEM
-```
-CERERE SYSTEM
-Construcție: C09 RELAȚII
-Status: FINAL după MONSTER AUDIT
-Status tehnic: READY_FINAL_C09_MONSTER_PASS_AFTER_FIX
-Fișier comun cerut: index.html
-```
+## DETALII TEHNICE
+- cover-title își păstrează atributul `data-locked="1"` (rămâne slot protejat în editor; lock-by-attribute funcționează indiferent de text).
+- hero-question-text rămâne canonic și locked; `LOCKED_PHRASES` (fallback) încă prinde „Cum transform legăturile în răspunsuri" pe hero.
+- Panoul editor (lista LOCKED „Hero: Cum transform…") rămâne corect, fiindcă hero-ul chiar are acea întrebare.
+- Identitatea C09 RELAȚII și structura majoră neschimbate.
 
-### MOTIV
-C09 este finală în folderul `c09/` (GATE PASS, ZERO DRIFT, 6/6 imagini, FILM valid), dar cardul ei din `index.html` este stale: oferă doar linkul către Studiu și anunță că „Video, Editor și film urmează", ceea ce nu mai e adevărat. Preview-ul live nu reflectă construcția completă.
+## VALIDĂRI RULATE
+- Sincronizare Editor-Studiu (strip strat editor) == HTML-Studiu → **1:1** (byte-identic după normalizare).
+- `gate_v20 09 c09 c01` → **GATE PASS**.
+- `audit_sync` → C09 **ZERO DRIFT** (rândul C09 toate OK). Celula de drift din rulare aparține altei construcții în lucru (C10/C11/C12 parțiale), nu C09.
+- `tier_guard_t3` C09 → 0 blocante (10 warnings benigne cunoscute).
+- em-dash / en-dash în Studiu + Editor-Studiu → **0 / 0**.
+- Termeni interziși → CURAT (neatins conținutul cu termeni; doar headline schimbat).
+- JS: HTML-Video / HTML-Editor-Video NEATINSE (fără dublare acolo) → nu era nevoie de re-verificare; rămân valide.
 
-### IMPACT
-- Vizitatorul preview-ului live vede C09 ca incompletă (doar Studiu), deși toate cele 4 HTML + FILM + imaginile sunt livrate.
-- Fără actualizare, C09 pare „în lucru" în loc de „finală T3".
-- Risc zero pe conținutul C09 (cererea atinge doar `index.html`, fișier comun, în afara scope-ului meu).
-
-### PROPUNERE CONCRETĂ (pentru Chat SYSTEM / ARHITECT)
-Actualizați cardul C09 din secțiunea „T3 ANALIZĂ" a `index.html` astfel:
-1. Linkuri către toate cele 4 livrabile HTML:
-   - `c09/HTML-Studiu-Excel-09-Relatii.html`
-   - `c09/HTML-Editor-Studiu-Excel-09-Relatii.html`
-   - `c09/HTML-Video-Excel-09-Relatii.html`
-   - `c09/HTML-Editor-Video-Excel-09-Relatii.html`
-2. Bump cache-bust pe linkul Studiu: `?v=1` → `?v=2` (Studiu s-a schimbat după index: hero real + markeri `data-locked`).
-3. Actualizați textul cardului (scoateți „Video, Editor și film urmează"):
-   - Cod: C09
-   - Titlu: Cum legăm tabelele prin relații corecte
-   - Descriere: „Ai toate datele. Și niciun răspuns. T3 ANALIZĂ · construcția 9 · relații."
-4. Poziționare: rămâne în „T3 ANALIZĂ", înainte de C10/C11/C12, ca prima construcție finală T3 (deja e acolo).
-
-### MENȚIUNI
-- Creativ C09 este **absent corect** (Creativ abandonat V68); NU trebuie listat în card.
-- C10 are drift propriu (e parțial în repo, în afara scope-ului C09); statusul C09 NU trebuie amestecat cu C10. C09 = ZERO DRIFT pe rândul ei.
-- FILM-ul C09 nu se linkează din index (e artefact de filmare .docx, nu pagină web preview) — conform patternului celorlalte construcții.
+## REZULTAT FINAL
+Dublarea vizuală a headline-ului eliminată. Hero păstrat, titlu de secțiune complementar. C09 rămâne FINALĂ: GATE PASS, ZERO DRIFT, sincronizare 1:1, fără regresie. Fără CERERE SYSTEM.
 
 ## STATUS FINAL
-CERERE_SYSTEM_INDEX_C09_READY
+READY_FINAL_C09_HERO_REPETITION_FIXED
