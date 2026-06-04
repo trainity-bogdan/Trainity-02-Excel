@@ -17,6 +17,7 @@ ChatGPT prin GitHub connector poate scrie fișiere, dar pentru fișiere mari exi
 - primește cererea SYSTEM de la chatul construcției,
 - analizează dacă modificarea este permisă,
 - formulează mandatul pentru Claude Code,
+- scrie mandatul în repo, nu îl dă lui Bogdan ca text de copiat,
 - poate crea scripturi de patch mici, idempotente și verificabile,
 - nu execută overwrite pe fișiere SYSTEM mari,
 - nu face commit direct pe registrul mare.
@@ -24,6 +25,7 @@ ChatGPT prin GitHub connector poate scrie fișiere, dar pentru fișiere mari exi
 ### Claude Code EXECUTOR al construcției
 
 - rulează local în repo,
+- la `sync`, citește mandatul din repo,
 - aplică patch-ul sau scriptul primit,
 - rezolvă conflicte mecanice,
 - rulează verificări,
@@ -32,6 +34,8 @@ ChatGPT prin GitHub connector poate scrie fișiere, dar pentru fișiere mari exi
 
 ### Bogdan / Arhitect
 
+- nu transportă manual mandate prin copy-paste,
+- dă doar `sync` în Claude Code după ce mandatul există în repo,
 - se asigură că nu rulează simultan două sesiuni Claude Code care scriu în fișiere SYSTEM comune,
 - decide conflictele conceptuale,
 - secvențializează modificările SYSTEM.
@@ -39,6 +43,8 @@ ChatGPT prin GitHub connector poate scrie fișiere, dar pentru fișiere mari exi
 ## Regula hard pentru toate chat-urile
 
 Dacă o construcție cere modificarea unui fișier comun SYSTEM, executorul se oprește și cere mandat.
+
+Mandatul SYSTEM este fișier în repo, nu copy-paste manual.
 
 Fișiere SYSTEM comune:
 
@@ -52,15 +58,17 @@ Fișiere SYSTEM comune:
 - `_system/**`
 - `_brain/system/**`
 
-## Flux obligatoriu
+## Flux obligatoriu prin sync
 
 1. Claude Code construcție întâlnește nevoia de scriere SYSTEM.
-2. Claude Code se oprește și formulează `CERERE SYSTEM`.
+2. Claude Code se oprește și formulează `CERERE SYSTEM` în raportul său.
 3. Bogdan aduce cererea în ChatGPT BRAIN al construcției.
-4. ChatGPT BRAIN produce `PROMPT PENTRU CLAUDE CODE EXECUTOR`.
-5. Bogdan dă promptul în Claude Code.
-6. Claude Code execută local, cu `git status`, patch, verificări, `git diff`, commit, push.
-7. Claude Code raportează rezultatul.
+4. ChatGPT BRAIN creează sau actualizează un mandat în repo:
+   - `_brain/system/MANDAT-*.md`, pentru schimbări comune,
+   - `_brain/cXX/BRAIN-TO-CLAUDE.md`, pentru mandat specific construcției.
+5. Bogdan dă doar `sync` în Claude Code.
+6. Claude Code citește mandatul din repo și execută local, cu `git status`, patch, verificări, `git diff`, commit, push.
+7. Claude Code scrie raport în repo.
 8. ChatGPT BRAIN poate audita raportul.
 
 ## Reguli conflict
@@ -87,6 +95,7 @@ Claude Code NU decide singur conflicte conceptuale:
 - Nu se rezolvă conflict prin `accept current` sau `accept incoming` orb.
 - Nu se șterg blocuri ale altor construcții pentru a trece conflictul.
 - Nu se execută overwrite complet pe fișiere SYSTEM mari prin connector.
+- Nu se cere lui Bogdan să ducă manual mandate prin copy-paste între ChatGPT și Claude Code.
 
 ## Verificări minime Claude Code
 
