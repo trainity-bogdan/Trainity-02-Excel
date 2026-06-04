@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C12 INTERPRETARE
 
 ## STATUS
-MANDAT_SYSTEM_SPEC_REGISTER
+MANDAT_GENERARE_C12
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C12.
@@ -27,80 +27,61 @@ Rol C12: explică insight-ul verbal, cauza citită din model, interpretarea rezu
 
 Nu porni C12 ca „KPI / FILTER CONTEXT”. Aceasta nu mai este identitatea principală.
 
-## MANDAT C12-03 · SISTEM DIRECT · ÎNSCRIERE SPEC C12
+## MANDAT C12-04 · GENERARE C12
 
 Claude, lucrează pe main.
 
-SPEC C12 este înghețat cu status `SPEC_FROZEN` în `_brain/c12/CLAUDE-TO-BRAIN.md`.
+Confirm raportul C12-03:
+- `SYSTEM_SPEC_REGISTERED`
+- SPEC C12 înscris în sistem
+- `IDENTITATE_TEHNICA C12` înscrisă
+- `pre_generation_check.py 12` PASS
+- C12 este gata de generare
 
-Procedura actuală nu mai folosește Chat Andrei SYSTEM.
-Ai mandat direct de sistem pentru înscrierea SPEC C12 în fișierele necesare ale sistemului, strict cât este necesar pentru a permite generarea C12.
+Nu alinia Bible §T3 acum.
+Bible rămâne v1.0 în această etapă, deoarece nu blochează generarea.
+Wording-ul operațional oficial pentru generare este cel din `SPEC_FROZEN` + registrul SPEC activ.
 
-Ai voie să modifici doar fișierele sistem strict necesare pentru:
-- registru SPEC C12
-- identitate C12
-- aliniere C12 în harta oficială dacă este necesar
-- eliminarea/neutralizarea identității vechi KPI / FILTER CONTEXT acolo unde blochează generarea
+Generează C12 complet, conform sistemului activ și SPEC C12 înghețat.
 
-Nu modifica:
-- C09
-- C10
-- C11
-- alte construcții
-- fișiere HTML existente
-- Date_MASTER existente
-- index.html
-
-Folosește SPEC-ul înghețat din `_brain/c12/CLAUDE-TO-BRAIN.md`.
-
-Înscrie în sistem:
-
-Identitate:
+Respectă:
 - C12 = INTERPRETARE
+- Hero vizual = DE CE-UL DIN DATE
 - Verb-semnătură = a explica
 - Întrebare-mamă = De ce?
-- Hero vizual = DE CE-UL DIN DATE
-- Rol = explică insight-ul verbal, cauza citită din model, interpretarea rezultatului după relații, măsuri și comparații.
-- C12 închide T3 ANALIZA.
-
-Cele 9 elemente SPEC:
-1. SLUG: interpretare
-2. INTRIGA: conform SPEC_FROZEN
-3. PROBLEMELE: conform SPEC_FROZEN
-4. MIZA: conform SPEC_FROZEN
-5. MANTRA: Cifra spune cât. Explicația spune de ce.
-6. WOW: conform SPEC_FROZEN
-7. MOTTO: Nu citi rezultatul. Explică-l.
-8. FENOMENE C12: cele 6 fenomene finale
-9. STEP-TITLES: cele 8 step-titles finale
+- Mantra = Cifra spune cât. Explicația spune de ce.
+- Motto = Nu citi rezultatul. Explică-l.
+- AHA = Nu rezultatul contează. Contează de ce apare rezultatul.
+- Formula finală = Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
 
 Delimitări obligatorii:
-- C12 nu face dashboard
-- C12 nu face what-if
-- C12 nu face scenarii
-- C12 nu face predicție
-- C12 nu recomandă acțiuni
-- C12 nu re-ierarhizează
+- fără dashboard
+- fără what-if
+- fără scenarii
+- fără predicție
+- fără recomandări de acțiune
+- fără re-ierarhizare C11
 - C12 explică ce s-a întâmplat și de ce, pe baza modelului
 - C12 închide T3 ANALIZA
 
-Identitatea veche:
-„KPI / FILTER CONTEXT” este abandonată ca identitate principală C12.
-Dacă apare în context C12 și poate crea drift, înlocuiește cu INTERPRETARE.
+Rulează procedurile obligatorii:
+1. `pre_generation_check.py 12`
+2. generare artefacte C12
+3. `gate_v20.py` pentru C12
+4. `audit_sync.py` dacă este cerut de sistem după generare
 
-După modificări:
-- raportează exact fișierele modificate
-- nu genera artefacte C12 încă
-- nu porni HTML
-- nu porni Date_MASTER
-- nu porni FILM
-- nu porni audit global dacă nu este necesar în această etapă
+Raportează:
+- fișiere generate/modificate
+- PASS/FAIL pentru checks
+- eventuale blocaje
+- status final
 
 Scrie raportul în:
 `_brain/c12/CLAUDE-TO-BRAIN.md`
 
 Status așteptat:
-`SYSTEM_SPEC_REGISTERED`
+`C12_GENERATED`
 
 ## REGULĂ SYSTEM
-Pentru acest mandat, ai permisiune explicită de sistem direct, limitată strict la înscrierea SPEC C12 în fișierele necesare pentru generare.
+Pentru acest mandat, ai permisiune explicită de generare C12 conform sistemului activ.
+Nu modifica Bible §T3 în această etapă.
