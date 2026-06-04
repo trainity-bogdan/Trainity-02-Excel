@@ -1,7 +1,107 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-C12_GENERATED · GATE_V20_PASS (rămâne doar dependența de imagini ARHITECT)
+C12_AUDIT_MAMUT_DONE
+
+## MANDAT C12-06 · AUDIT MAMUT — RAPORT (doar verificare, zero patch-uri)
+Audit exhaustiv pe C12. Nu am modificat niciun fișier C12 (mandatul cere doar raportare).
+Nu am atins C09/C10/C11, Bible §T3, index.html.
+
+### 1. SINCRONIZARE REPO
+- `git fetch` + `git merge origin/main` → la zi. Branch `claude/practical-wozniak-ZUVhs`,
+  HEAD = origin/main = `7255dbd`. Working tree **CLEAN** înainte de audit.
+
+### 2. EXISTENȚĂ ARTEFACTE (c12/)
+| Artefact | Stare |
+|---|---|
+| Date_MASTER-C12.xlsx | OK (194 KB) |
+| HTML-Studiu-Excel-12-Interpretare.html | OK (103 KB) |
+| HTML-Editor-Studiu-Excel-12-Interpretare.html | OK (115 KB) |
+| HTML-Video-Excel-12-Interpretare.html | OK (211 KB) |
+| HTML-Editor-Video-Excel-12-Interpretare.html | OK (222 KB) |
+| FILM-Excel-12-Interpretare.docx | OK (40 KB) |
+| assets/ | **LIPSĂ** (dependență ARHITECT) |
+
+### 3. CHECKS SISTEM
+- `pre_generation_check.py 12` → **PASS** (B1: SPEC INGHETAT + IDENTITATE_TEHNICA + FENOMENE).
+- `gate_v20.py 12 c12 c01` → **GATE PASS** (5/5 livrabile, toate 6 clasele).
+- `audit_sync.py` → C01-C11 OK (zero regresie); C12 = **o singură celulă XX (`V39.assets`)**.
+
+### 4. AUDIT WORKBOOK
+- Foi (12): START, Vanzari, PRODUSE, CLIENTI, Calendar, AGENTI, DEPOZITE, Regiuni, Masuri,
+  Masuri_Context, Comparatii, **Interpretare**.
+- `Interpretare` = singura foaie nouă vs C11; **zero foi pierdute** (continuitate integrală).
+- Sumă Vanzari: C11 = C12 = **7986019.38**, **delta 0.00** (R-V02.14 conservată).
+- Foaia Interpretare susține C12: are CAUZA CITITĂ DIN MODEL, FACTORI PRINCIPALI (cauză multiplă),
+  COINCIDENȚĂ vs CAUZĂ, CAUZA ASCUNSĂ DE AGREGARE, EXPLICAȚIE VERIFICABILĂ, HANDOFF.
+  **5 formule live `=ROUND(SUMIFS(...))`** pe Vanzari (cauza e citită din model, nu hardcodată).
+
+### 5. AUDIT HTML CONȚINUT (4 fișiere)
+- Identitate INTERPRETARE: prezentă în toate 4. Hero **DE CE-UL DIN DATE**: în toate 4.
+- Mantra „Cifra spune cât. Explicația spune de ce.": prezentă în Studiu (spartă vizual de `<mark>`)
+  + Editor-Studiu + FILM.
+- Motto „Nu citi rezultatul. Explică-l.": prezent în Studiu, Editor-Studiu, Video (spart de `<br>`), FILM.
+- AHA „Nu rezultatul contează...": în Studiu + Editor-Studiu.
+- Întrebare „De ce?": Studiu + Editor-Studiu (sloturi de identitate); Video/Editor-Video o poartă în
+  formă broadcast (hero + motto + conținut STAGES), nu ca slot static — normal pentru formatul video.
+- **em-dash / en-dash: 0 / 0** în toate 4 + FILM.
+- **Cifre business: 0** (zero numere 4+, zero „lei", zero „%") în toate 4 + FILM (R-V02.15 respectată).
+- Tokeni vechi (KPI / FILTER CONTEXT / PRIORITIZARE / dashboard / cockpit etc.) în **text vizibil: 0**.
+  (Vezi LOW-1 pentru „KPI" în base64.)
+
+### 6. GRANIȚE T3/T4/T5
+- Fără dashboard / raportare vizuală T4: confirmat (tier_guard_t3 în gate = 0 erori; zero termeni
+  T4T5_FORBIDDEN în text vizibil).
+- Fără what-if / scenarii / predicție / recomandare acțiune: confirmat (apar doar ca **negații**
+  de gardă în prompturi, reformulate să nu declanșeze tier-guard).
+- Fără re-ierarhizare C11: clasamentul e citit ca INPUT (foaia Comparatii + drill), nu reprodus.
+  C12 explică, nu compară din nou.
+- Închide T3: „Am completat analiza setului: treapta T3 este finalizată." (Studiu pas 18 + Video final + FILM).
+
+### 7. AUDIT VIDEO + FILM
+- Video: **6 etape** (REALITATE, INVESTIGAȚIE, TRANSFORMARE, VERIFICARE, STABILIZARE, CONFIRMARE),
+  **18 pași**, **7 slide-uri exec**, 6 imagini exec = placeholder SVG, **0 base64 jpeg reziduale**,
+  **0 cifre business**.
+- FILM: 175 paragrafe, 6 etape, 6 slide-uri exec, mantra+motto prezente, închide T3, aliniat cu
+  HTML-Video (aceeași axă, aceleași etape/emoții/fraze exec), 0 cifre business, 0 tokeni interziși.
+
+### 8. AUDIT ASSETS
+- `c12/assets/` = **inexistent**. Ce lipsește: `hero-poster-excel-12-interpretare.jpg` + `exec-stage-1..6.jpg`.
+- `V39.assets` este **SINGURA** celulă XX din audit_sync (drift global = 1 celulă, 0 ERR).
+- **Lipsa imaginilor este singurul drift rămas.** Identic cu starea C09 înainte de integrarea imaginilor.
+
+### 9. VERDICT FINAL
+- **TECHNICAL: PASS** (pre_gen PASS, gate PASS, sumă conservată, audit_sync curat exceptând imaginile).
+- **CONTENT: PASS** (identitate corectă, zero tokeni vizibili interziși, zero em/en-dash, zero cifre business).
+- **PEDAGOGICAL: PASS** (cauză citită din model, cauză multiplă, cauză ascunsă de agregare, coincidență
+  vs cauză, insight verificabil, granițe T3/T4/T5 respectate, închide T3).
+- **RELEASE READINESS: PASS CU REZERVĂ** (livrabil acum; vizualul hero + 6 exec sunt placeholder
+  până la imaginile ARHITECT).
+
+#### Issues
+- **Critical:** niciuna.
+- **High:** niciuna.
+- **Medium:** [M-1] `c12/assets/` lipsește (hero + 6 exec). Dependență ARHITECT cunoscută, nu defect
+  de generare; ține release-ul în „PASS cu rezervă".
+- **Low:**
+  - [L-1] „KPI" apare 2x în Video și 2x în Editor-Video, **exclusiv în blob-uri base64** moștenite din
+    head-ul generic (apare identic în c09/c11 video). Invizibil, ignorat de gate (sare peste base64).
+    Dispare automat când base64-ul hero/exec e înlocuit cu imaginile reale.
+  - [L-2] Mantra/AHA nu apar ca sloturi statice literale în Video/Editor-Video (le poartă în formă
+    broadcast). Prin design, nu defect.
+  - [L-3] `_brain/c12/CHAT-CONTEXT.md` încă scrie identitatea veche „KPI / FILTER CONTEXT" (doc BRAIN).
+
+#### Ce se poate repara imediat (la mandat separat — NU am atins nimic acum)
+- Integrarea imaginilor în assets + base64 (rezolvă M-1 și L-1) — depinde de imaginile ARHITECT.
+- Alinierea `CHAT-CONTEXT.md` la INTERPRETARE (L-3) — cosmetic.
+
+#### Ce necesită input ARHITECT
+- **Cele 6 imagini exec-stage + hero-poster** pentru C12 (singurul blocaj de la 100% release).
+
+---
+
+## ISTORIC · C12-04 GENERARE
+Status anterior: C12_GENERATED · GATE_V20_PASS
 
 ## MANDAT EXECUTAT (curent) · C12-04 GENERARE — COMPLET
 Dependența C11 s-a ridicat (`c11/Date_MASTER-C11.xlsx` există). Am eliminat blocajul B2 și
