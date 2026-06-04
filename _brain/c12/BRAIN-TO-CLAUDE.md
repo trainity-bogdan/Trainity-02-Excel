@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C12 INTERPRETARE
 
 ## STATUS
-MANDAT_GENERARE_C12
+MANDAT_AUDIT_MAMUT_C12
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C12.
@@ -16,72 +16,117 @@ Nu crea branch-uri.
 ## STARE CURENTĂ C12
 C12 este construcția INTERPRETARE.
 
-Conform hărții oficiale T3:
-- C09 = RELAȚII, model interogabil, întrebarea „Ce pot întreba?”
-- C10 = MĂSURI, întrebarea „Cât?”
-- C11 = COMPARAȚII, întrebarea „Care?”
-- C12 = INTERPRETARE, întrebarea „De ce?”
+Lanț T3:
+- C09 = RELAȚII, Ce pot întreba?
+- C10 = MĂSURI, Cât?
+- C11 = COMPARAȚII, Care?
+- C12 = INTERPRETARE, De ce?
 
-Verb-semnătură C12: a explica.
-Rol C12: explică insight-ul verbal, cauza citită din model, interpretarea rezultatului după relații, măsuri și comparații.
+C12 este generată cu status raportat anterior:
+`C12_GENERATED · GATE_V20_PASS`
 
-Nu porni C12 ca „KPI / FILTER CONTEXT”. Aceasta nu mai este identitatea principală.
+Rămâne cunoscută dependența de imagini ARHITECT:
+`V39.assets` poate fi încă XX până la integrarea hero + exec-stage.
 
-## MANDAT C12-04 · GENERARE C12
+## MANDAT C12-06 · AUDIT MAMUT C12
 
-Claude, lucrează pe main.
+Claude, fă audit mamut pe C12.
 
-Confirm raportul C12-03:
-- `SYSTEM_SPEC_REGISTERED`
-- SPEC C12 înscris în sistem
-- `IDENTITATE_TEHNICA C12` înscrisă
-- `pre_generation_check.py 12` PASS
-- C12 este gata de generare
+Scop: verificare exhaustivă, nu reparații automate.
 
-Nu alinia Bible §T3 acum.
-Bible rămâne v1.0 în această etapă, deoarece nu blochează generarea.
-Wording-ul operațional oficial pentru generare este cel din `SPEC_FROZEN` + registrul SPEC activ.
+Nu modifica fișierele C12 decât dacă auditul cere doar raportare. Nu face patch-uri fără mandat separat.
+Nu modifica C09, C10, C11.
+Nu modifica Bible §T3.
+Nu modifica index.html.
 
-Generează C12 complet, conform sistemului activ și SPEC C12 înghețat.
+Rulează și raportează explicit:
 
-Respectă:
-- C12 = INTERPRETARE
-- Hero vizual = DE CE-UL DIN DATE
-- Verb-semnătură = a explica
-- Întrebare-mamă = De ce?
-- Mantra = Cifra spune cât. Explicația spune de ce.
-- Motto = Nu citi rezultatul. Explică-l.
+1. Sincronizare repo
+- `git fetch`
+- `git pull` sau echivalent sigur pe main
+- status clean/dirty înainte de audit
+
+2. Existență artefacte C12
+Verifică în `c12/` existența:
+- `Date_MASTER-C12.xlsx`
+- `HTML-Studiu-Excel-12-Interpretare.html`
+- `HTML-Editor-Studiu-Excel-12-Interpretare.html`
+- `HTML-Video-Excel-12-Interpretare.html`
+- `HTML-Editor-Video-Excel-12-Interpretare.html`
+- `FILM-Excel-12-Interpretare.docx`
+- `assets/`
+
+3. Checks sistem
+Rulează:
+- `python3 _system/generatoare/pre_generation_check.py 12`
+- `python3 _system/generatoare/gate_v20.py 12 c12 c01`
+- `python3 _system/generatoare/audit_sync.py`
+
+4. Audit workbook C12
+Inspectează `Date_MASTER-C12.xlsx` și raportează:
+- foi existente
+- existența foii `Interpretare`
+- continuitate față de C11
+- sumă conservată
+- delta față de C11
+- dacă foaia Interpretare chiar susține C12: cauză citită din model, cauză multiplă, cauză ascunsă sub total, insight verificabil
+
+5. Audit HTML conținut
+Pentru toate cele 4 HTML-uri C12 verifică:
+- identitate C12 = INTERPRETARE
+- hero = DE CE-UL DIN DATE
+- întrebare = De ce?
+- mantra = Cifra spune cât. Explicația spune de ce.
+- motto = Nu citi rezultatul. Explică-l.
 - AHA = Nu rezultatul contează. Contează de ce apare rezultatul.
-- Formula finală = Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
-
-Delimitări obligatorii:
-- fără dashboard
-- fără what-if
-- fără scenarii
-- fără predicție
-- fără recomandări de acțiune
+- fără tokeni vechi: KPI / FILTER CONTEXT, PRIORITIZARE EXECUTIVA, What-if, scenarii, dashboard, predicție, recomandare acțiune
+- fără em-dash și en-dash
+- fără cifre business în HTML/FILM, conform R-V02.15
 - fără re-ierarhizare C11
-- C12 explică ce s-a întâmplat și de ce, pe baza modelului
+- C12 explică, nu compară din nou
+
+6. Audit T3/T4/T5 granițe
+Verifică explicit că:
+- C12 nu face dashboard
+- C12 nu face raportare vizuală T4
+- C12 nu face what-if
+- C12 nu face scenarii
+- C12 nu face predicție
+- C12 nu recomandă acțiuni
 - C12 închide T3 ANALIZA
 
-Rulează procedurile obligatorii:
-1. `pre_generation_check.py 12`
-2. generare artefacte C12
-3. `gate_v20.py` pentru C12
-4. `audit_sync.py` dacă este cerut de sistem după generare
+7. Audit Video + FILM
+Verifică:
+- 6 etape video prezente
+- 18 pași prezenți
+- cele 7 slide-uri exec există sau sunt corect placeholder dacă imaginile lipsesc
+- FILM este aliniat cu HTML-Video
+- Video nu conține cifre business hardcodate
 
-Raportează:
-- fișiere generate/modificate
-- PASS/FAIL pentru checks
-- eventuale blocaje
-- status final
+8. Audit assets
+Raportează exact:
+- ce există în `c12/assets/`
+- ce lipsește
+- dacă `V39.assets` este singura celulă XX în audit_sync
+- dacă lipsa imaginilor este singurul drift rămas
+
+9. Verdict final
+Dă verdict în 4 niveluri:
+- TECHNICAL PASS/FAIL
+- CONTENT PASS/FAIL
+- PEDAGOGICAL PASS/FAIL
+- RELEASE READINESS PASS/FAIL
+
+La final, listează:
+- Critical issues
+- High issues
+- Medium issues
+- Low issues
+- Ce se poate repara imediat
+- Ce necesită input ARHITECT
 
 Scrie raportul în:
 `_brain/c12/CLAUDE-TO-BRAIN.md`
 
 Status așteptat:
-`C12_GENERATED`
-
-## REGULĂ SYSTEM
-Pentru acest mandat, ai permisiune explicită de generare C12 conform sistemului activ.
-Nu modifica Bible §T3 în această etapă.
+`C12_AUDIT_MAMUT_DONE`
