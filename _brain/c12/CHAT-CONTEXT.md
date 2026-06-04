@@ -1,6 +1,6 @@
 # CHAT-CONTEXT · ANDREI C12 / CLAUDE C12
 
-Acest folder este dedicat exclusiv construcției C12 KPI / FILTER CONTEXT.
+Acest folder este dedicat exclusiv construcției C12 INTERPRETARE.
 
 ## Comanda unică
 
@@ -77,5 +77,5 @@ Apoi execuția C12 se oprește până la decizie SYSTEM.
 
 ## Stare curentă C12
 
-C12 este construcția KPI / FILTER CONTEXT.
+C12 este construcția INTERPRETARE.
 Nu executa nimic fără mandat explicit în `_brain/c12/BRAIN-TO-CLAUDE.md`.
