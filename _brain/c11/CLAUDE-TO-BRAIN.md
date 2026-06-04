@@ -1,6 +1,56 @@
 # CLAUDE → BRAIN · C11 COMPARAȚII / RANK
 
 ## STATUS
+REGULĂ R-V03.75 SALVATĂ · C11 TRECE VERIFICAREA FIZICĂ REPO (7/7 artefacte prezente)
+
+## RAPORT MANDAT C11-07 · SYSTEM RULE VERIFICARE FIZICĂ REPO (2026-06-04)
+
+### FIȘIERE SISTEM MODIFICATE (autorizate de mandat)
+- `_system/01-REGULI-ACTIVE.md` — regulă nouă adăugată
+- `_system/INDEX-CAUTARE.md` — pointer de indexare la regulă (§V)
+
+### REGULA INTRODUSĂ
+**R-V03.75 · VERIFICARE FIZICĂ REPO OBLIGATORIE (repo = sursa de adevăr)**
+Status: ACTIVĂ permanentă. Conținut: niciun status de închidere
+(`GENERAT`/`PASS`/`CLEAN`/`ZERO DRIFT`/`LIVRABIL`/`ÎNCHISĂ`) nu se acordă doar pe
+baza raportului Claude; toate cele 7 artefacte se verifică fizic pe `origin/main`
+prin comenzi git (`ls-files`, `ls-tree origin/main`, `cat-file -s`, `check-ignore`).
+Dependențe cap-coadă: C(N) nu se închide până input-ul pentru C(N+1) nu există fizic
+pe `origin/main`. Artefact lipsă → `LIVRABIL INVALIDAT · ARTEFACT LIPSĂ`.
+**Regula este salvată permanent în specificațiile sistemului.**
+
+### APLICARE IMEDIATĂ R-V03.75 LA C11 (verificare fizică pe origin/main, nu raport)
+Rulat pe `origin/main` (`git cat-file -s origin/main:c11/<artefact>`):
+
+| Artefact | Stare fizică pe origin/main |
+|---|---|
+| HTML-Studiu-Excel-11-Comparatii.html | PREZENT · 202008 bytes |
+| HTML-Editor-Studiu-Excel-11-Comparatii.html | PREZENT · 213063 bytes |
+| HTML-Video-Excel-11-Comparatii.html | PREZENT · 804687 bytes |
+| HTML-Editor-Video-Excel-11-Comparatii.html | PREZENT · 815613 bytes |
+| **Date_MASTER-C11.xlsx** | **PREZENT · 192054 bytes** |
+| FILM-Excel-11-Comparatii.docx | PREZENT · 43864 bytes |
+| assets/ | PREZENT · 7 jpg (hero + 6 exec-stage) |
+
+**Rezultat: C11 TRECE R-V03.75. 7/7 artefacte prezente fizic pe `origin/main`.**
+C11 NU este `LIVRABIL INVALIDAT · ARTEFACT LIPSĂ` — nu există artefact lipsă de reparat.
+
+### RECONCILIERE DISCREPANȚĂ C11 ↔ C12
+Premisa mandatului („`Date_MASTER-C11.xlsx` nu există fizic") NU corespunde stării
+repo-ului. Fișierul există pe `origin/main`: blob `0c9f21c8…`, 192054 bytes, introdus
+în commit `462b309` (mandat C11-05), prezent neîntrerupt până la HEAD curent. Nu e
+ignorat de `.gitignore`. Aplicând chiar regula R-V03.75 (repo = sursa de adevăr),
+artefactul EXISTĂ. Cauza probabilă a blocajului C12: chat-ul C12 lucrează pe un local
+în urmă (fără `git fetch`/`pull origin main`), deci nu vede commit-urile `462b309+`.
+Recomandare pentru C12: `git fetch origin main && git pull origin main` (sau rebase),
+apoi re-verifică `git cat-file -s origin/main:c11/Date_MASTER-C11.xlsx` → 192054.
+
+Nu am reparat nimic la `Date_MASTER-C11.xlsx` (nu e nimic de reparat; conform
+mandatului oricum nu se repară în acest mandat). Artefactele C11 nu au fost atinse.
+
+---
+
+## (istoric) STATUS anterior
 LIVRABIL · GATE CANONIC PASS · ZERO DRIFT · CLEAN
 
 ## RAPORT MANDAT C11-06 · SYSTEM FIX GATE V20 (2026-06-04)

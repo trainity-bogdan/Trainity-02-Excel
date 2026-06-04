@@ -410,6 +410,12 @@ Toți termenii, conceptele, regulile, comenzile și scripturile sortate alfabeti
 - Curent: V40 (vezi `STARE-CURENTA.md`)
 - Snapshot oficial per V: `_system/snapshots/V{N}_AAAALLZZ/`
 
+**verificare fizică repo (repo = sursa de adevăr)**
+- R-V03.75 în `_system/01-REGULI-ACTIVE.md`
+- Niciun status de închidere (GENERAT/PASS/CLEAN/ZERO DRIFT/LIVRABIL) doar pe raport
+- Cele 7 artefacte trebuie verificate fizic pe `origin/main` (git ls-tree / cat-file)
+- Artefact lipsă → `LIVRABIL INVALIDAT · ARTEFACT LIPSĂ`
+
 **voce trainer (plural)**
 - `_system/02-GLOSAR.md` "Voce trainer (plural)"
 - R-V03.4 în `_system/01-REGULI-ACTIVE.md` §C

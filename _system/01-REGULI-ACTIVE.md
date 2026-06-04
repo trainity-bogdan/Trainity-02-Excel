@@ -348,6 +348,42 @@ Referință axă: ADN-ul T2 din `_system/11` (C05 vocabular · C06 sens · C07 c
 **Detector:** semi-empiric (necesită judecată). Heuristic: payoff-uri/WOW-uri ale
 construcțiilor vecine cu același prefix/tipar de >4 cuvinte = flag de revizuit.
 
+## R-V03.75 · VERIFICARE FIZICĂ REPO OBLIGATORIE (repo = sursa de adevăr)
+**Status:** ACTIVĂ permanentă (V60) · introdusă din blocaj C11 ↔ C12 (mandat C11-07)
+
+Nicio construcție nu poate fi declarată `GENERAT`, `PASS`, `CLEAN`, `ZERO DRIFT`,
+`LIVRABIL` sau `ÎNCHISĂ` doar pe baza raportului Claude. **Raportul NU constituie
+dovadă suficientă. Repo-ul (`origin/main`) este sursa de adevăr.**
+
+Înainte de validarea finală a oricărei construcții, se verifică existența FIZICĂ
+în repo (tracked ȘI prezent pe `origin/main` — nu doar în working tree, nu doar
+menționat în text) a TUTUROR celor 7 artefacte obligatorii:
+- `HTML-Studiu-Excel-NN-{slug}.html`
+- `HTML-Editor-Studiu-Excel-NN-{slug}.html`
+- `HTML-Video-Excel-NN-{slug}.html`
+- `HTML-Editor-Video-Excel-NN-{slug}.html`
+- `Date_MASTER-CNN.xlsx`
+- `FILM-Excel-NN-{slug}.docx`
+- `assets/` (hero + cele 6 exec-stage)
+
+**Dependențe cap-coadă:** dacă `C(N)` produce un fișier consumat de `C(N+1)`
+(ex. `Date_MASTER-CNN.xlsx` = input pentru C(N+1)), atunci `C(N)` NU poate fi
+închisă până când acel fișier nu există fizic pe `origin/main`.
+
+**Verificare obligatorie prin comenzi git (nu prin raport):**
+- `git ls-files cNN/<artefact>` → confirmă tracked
+- `git ls-tree origin/main cNN/` → confirmă prezența în tree-ul remote
+- `git cat-file -s origin/main:cNN/<artefact>` → dimensiune > 0 (conținut real, nu gol)
+- `git check-ignore -v cNN/<artefact>` → confirmă că NU e exclus de `.gitignore`
+
+**Regulă de status:** dacă raportul declară un artefact creat dar fișierul NU
+există fizic pe `origin/main`, statusul devine:
+`LIVRABIL INVALIDAT · ARTEFACT LIPSĂ`
+și construcția se redeschide punctual pentru repararea artefactului lipsă.
+
+**Detector:** operațional (comenzile git de mai sus, rulate OBLIGATORIU înainte de
+declararea oricărui status de închidere a unei construcții).
+
 ## R-V03.63 · AUDIT EMPIRIC PERMANENT
 **Status:** ACTIVĂ · STRUCTURĂ MAJORĂ V38
 La fiecare consolidare brain / commit major, motorul rulează `_system/generatoare/audit_sync.py` care:
