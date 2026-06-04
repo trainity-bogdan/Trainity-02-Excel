@@ -27,7 +27,7 @@ Scanate 274 fisiere; 502 semnale brute triate atomic. **Dupa de-zgomotare: 8 pro
 | Strat | Ce verifica | Scope |
 |---|---|---|
 | 0 | Octeti invizibili (BOM, NBSP, ZWSP, CRLF, trailing) | 166 fisiere text |
-| 1 | Diacritice cedila gresita (ş/ţ U+015F/0163 vs ș/ț) | toate text |
+| 1 | Diacritice cedila gresita ([s-cedila]/[t-cedila] U+015F/0163 vs ș/ț) | toate text |
 | 2 | Tipografie (em/en-dash, ghilimele, ellipsis) | toate text |
 | 3 | Matrice identitate (cuvant cheie/breadcrumb/LS/footer/title/kicker) | 12 Studiu |
 | 4 | Structura HTML (id unic, base64, referinte id, taguri, cover-title) | 48 HTML |
@@ -78,7 +78,7 @@ Niciuna confirmata. (Cele 2 auto-marcate la L6 = "delta sub 0,01 lei", reclasate
 ### LOW (igiena / consistenta)
 - **L-1 (NOU). C04 Studiu + Editor-Studiu: "delta sub 0,01 lei"** in final-label SUMA. Zona gri R-V02.15. Sugestie: "delta sub un ban" / "delta neglijabila".
 - **L-2 (NOU). Inconsistenta ghilimele pe pachet:** C05-C09 drepte ("), C11 majoritar romanesti („"), C10/C12 mixt. Tipografic, C11 e mai corect; restul ar trebui aliniate la un singur stil.
-- **L-3 (NOU). Diacritice cedila in docs active:** `_system/10-MAP-FILM-HTML.md` (11x ş/ţ), `STARE-CURENTA.md` (2x). In livrabilele HTML = 0. (Cedila din gate_v20/tier_guard/audit_sync e in tabelele de pliere = legitim.)
+- **L-3 (NOU). Diacritice cedila in docs active:** `_system/10-MAP-FILM-HTML.md` (11x [s-cedila]/[t-cedila]), `STARE-CURENTA.md` (2x). In livrabilele HTML = 0. (Cedila din gate_v20/tier_guard/audit_sync e in tabelele de pliere = legitim.)
 - **L-4 (NOU). 1 `.pyc` trackat in git:** `_system/generatoare/__pycache__/audit_sync.cpython-314.pyc` (ar trebui in .gitignore).
 - **L-5 (NOU). ~6 referinte rupte in docs ACTIVE:** `PROMPTURI-SLIDES-EXEC-C02.txt`/`C03.txt`, `R-V03.66-...yaml`, `cross_consistency.py`, `SISTEM_TRAINITY.md`, naming vechi `...-Editat.html`. (Restul ~25 sunt in `_system/arhiva/**` = istoric, stale asteptat.)
 - **L-6. FILM fara arc complet** (ARC/CINE DEVII/DE ACUM) la C08, C09, C10, C12.
@@ -101,7 +101,7 @@ Niciuna confirmata. (Cele 2 auto-marcate la L6 = "delta sub 0,01 lei", reclasate
 Atomic-ul a evitat 4 capcane care la un audit superficial ar fi parut bug-uri:
 1. **216 referinte HTML "rupte"** -> de fapt feature HUD dormant gardat `const hud=getElementById("hud"); if(!hud) return;` (comentariu "skip silent") + navigare prin `onclick="navigateFinal()"` + `data-final`. Identice in C01 (referinta validata). NU sunt bug-uri.
 2. **248 referinte "rupte" in docs** -> fisiere mentionate pe nume scurt care EXISTA in alta parte (ex. `audit_sync.py` la `_system/generatoare/`). Doar 31 sunt absente real, din care ~25 in arhiva istorica.
-3. **22 diacritice cedila** -> 13 sunt in tabelele de pliere diacritice ale validatoarelor (`'...șțşţ'`), legitim by design.
+3. **22 diacritice cedila** -> 13 sunt in tabelele de pliere diacritice ale validatoarelor (`'...șț[s-cedila][t-cedila]'`), legitim by design.
 4. **2 "CRITICAL lei"** -> prag de precizie "0,01 lei", nu valoare business.
 
 ---
@@ -113,7 +113,7 @@ Atomic-ul a evitat 4 capcane care la un audit superficial ar fi parut bug-uri:
 2. C11 cuvant cheie hero "IERARHIE" -> "COMPARATII" (M-2, cu confirmare).
 3. C04 "delta sub 0,01 lei" -> "delta sub un ban" (L-1).
 4. Aliniere stil ghilimele la unul singur (L-2).
-5. Cedila ş/ţ -> ș/ț in docs active (L-3).
+5. Cedila [s-cedila]/[t-cedila] -> ș/ț in docs active (L-3).
 6. `.gitignore` += `__pycache__/` si scoatere `.pyc` trackat (L-4).
 7. Curatare referinte rupte in docs active (L-5).
 
@@ -133,6 +133,46 @@ La nivel de **octet, infrastructura este foarte solida**: conservarea sumei e ex
 
 **Reguli noi propuse (detectoare):** (a) dash/cedila in `.docx` FILM; (b) cuvant cheie `hov-object` == identitatea treptei; (c) cover-title negol + distinct de hero-question; (d) `.pyc`/`__pycache__` interzise in git; (e) stil ghilimele unic.
 
-Nicio reparatie aplicata in aceasta runda (audit pur). 502 semnale brute -> 8 reale HIGH/MEDIUM + LOW de igiena.
+502 semnale brute -> 8 reale HIGH/MEDIUM + LOW de igiena (la momentul rundei de baza).
 
-AUDIT_ATOMIC_DONE
+---
+
+## 9. ADDENDUM FAZA F (aprofundare + reparatii aplicate)
+
+### 9.1 Reparatii aplicate intre timp (commit 47a582a, aprobate ARHITECT)
+INCHISE: M-1 (C02/C04 FILM 30 em-dash -> virgula), M-2 (C11 cuvant cheie IERARHIE -> COMPARATII),
+L-1 (C04 "delta sub 0,01 lei" -> "delta sub un ban"), L-3 (cedila [s-cedila]/[t-cedila] -> ș/ț in 10-MAP 11x,
+STARE-CURENTA 2x, _brain/c10 1x), L-4 (.pyc scos din git). Regresie zero (gate 12/12 PASS).
+RAMASE: M-3 (C10 "MASURA POTRIVITA", decizie BRAIN), stil ghilimele (fara canon), imagini reale T3 (ARHITECT).
+
+### 9.2 Constatari NOI Faza F (straturi rulate in adancime)
+- **C02 + C03: step-action pasul 4 difera intre Studiu si Editor-Studiu** (1 pas fiecare; formulare
+  mai scurta in Editor, ex. "Doar interoghezi." vs "Interoghezi valori fata de..."). Drift companion
+  (BRAIN-016: companionul reflecta baza). LOW. REPARABIL (aliniere Editor->Studiu).
+- **Raport de aspect imagini INCONSISTENT** (convenția "3:2 cinematic" incalcata). Empiric: 53 imagini
+  la ~3:2 (1.5), dar 25 la 16:9 (1376x768=1.79 / 1408x768=1.83). **C01 (referinta) e integral 16:9**,
+  C08 integral 16:9, C09 6/7; c02/c05/c06/c07 cate 1 imagine mixta. LOW-MEDIUM. DECIZIE: care e
+  standardul real, 3:2 sau 16:9? (Acum nici macar pilotul C01 nu respecta "3:2" din README.)
+- **Accesibilitate:** 3 fisiere cu `<img>` fara `alt`, 5 cu `alt=""` (unele pot fi decorative legitime). LOW.
+- **C03/C05/C06 xlsx: 0 formule** (rezultate materializate ca valori; C02 are 12.384 formule de
+  control). INFO, pare by design (livrabilul arata starea-rezultat, formulele se predau in HTML/FILM).
+
+### 9.3 Confirmat CURAT in Faza F (PASS atomic)
+- Excel: **0 celule cu eroare** (#REF/#DIV/#N/A/#VALUE) in toate 12.
+- Prompturi AI: **0 clone** cross-constructie (zone prompt-text unice).
+- Video <-> Editor-Video: texte JS (title/instr) **sincronizate 12/12**.
+- Studiu <-> Editor-Studiu: zone de continut sincronizate (singura exceptie: 1 step-action C02/C03).
+- Clase CSS "orfane" = doar containere de layout (final-body, inv-item-body, study-intro-top), fara impact vizual.
+
+### 9.4 Reguli noi suplimentare propuse (din Faza F)
+- (f) sync companion pe TOATE zonele de continut (nu doar step-title), inclusiv step-action.
+- (g) raport de aspect uniform pe assets (3:2 SAU 16:9, ales o data, verificat cu PIL).
+- (h) `alt` obligatoriu si nenul pe `<img>` learner-facing (sau marcaj explicit decorativ).
+
+### 9.5 Tally final
+519 semnale brute. Dupa triere + reparatiile 47a582a: **6 HIGH** (toate ARHITECT-dependent: C12 fara
+assets + placeholdere SVG T3), restul MEDIUM/LOW (decizii BRAIN sau igiena). Stratul tehnic-dur ramane
+curat la nivel de octet; problemele deschise sunt fie de imagine reala (ARHITECT), fie de decizie
+(C10 nume, stil ghilimele, standard aspect imagine).
+
+AUDIT_ATOMIC_DONE · FAZA_F_DONE
