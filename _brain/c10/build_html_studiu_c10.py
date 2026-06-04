@@ -277,10 +277,10 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Lansezi Promptul 2. Scrii definiția măsurii o singură dată, în foaia Masuri: ce agreg și pe ce model. <span data-locked="1">Aceasta devine sursa unică de adevăr.</span> Oriunde apare măsura, trimite la aceeași definiție, nu la un calcul refăcut de mână.</p>
+    <p class="step-action">Lansezi Promptul 2. Scrii definiția măsurii o singură dată, în foaia Masuri: ce agreg și pe ce model. <span data-locked="1">Aceasta devine sursa unică de adevăr.</span> Oriunde apare măsura, trimite la aceeași definiție, nu la un calcul refăcut de mână. Concret: deschizi foaia Masuri, în secțiunea MĂSURILE identifici rândul măsurii (de la M1 la M5) și completezi coloana „definiție" cu ce agregi și pe ce model.</p>
     <div class="prompt-box">
       <div class="prompt-label">PROMPT 2 · DEFINIREA MĂSURII</div>
-      <div class="prompt-text">Vreau să definesc măsura o singură dată, ca sursă unică de adevăr. Spune-mi definiția clară (ce agreg și pe ce bază), cum o ancorez într-un reper sau prag, ce semnal produce față de reper și cum mă asigur că aceeași definiție dă rezultat corect pe orice tăietură (categorie, client, perioadă). Distinge clar definirea măsurii de compararea ei: clasamentul și diferențele între felii vin separat, nu acum.</div>
+      <div class="prompt-text">Vreau să definesc măsura o singură dată, ca sursă unică de adevăr. Spune-mi definiția clară (ce agreg și pe ce bază), cum o ancorez într-un reper sau prag, ce semnal produce față de reper și cum mă asigur că aceeași definiție dă rezultat corect pe orice tăietură (categorie, client, perioadă). Nu interpreta diferențele dintre felii. În această etapă verific doar definiția măsurii, baza, reperul și robustețea ei.</div>
       <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
     </div>
   </div>
@@ -292,7 +292,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Orice măsură relativă își declară numitorul. O medie e total împărțit la ceva: per tranzacție, per client, per zi activă. Baza de raportare nu e un detaliu, e jumătate din măsură. Schimbi baza, schimbi măsura, chiar dacă numărătorul rămâne.</p>
+    <p class="step-action">Orice măsură relativă își declară numitorul. O medie e total împărțit la ceva: per tranzacție, per client, per zi activă. Baza de raportare nu e un detaliu, e jumătate din măsură. Schimbi baza, schimbi măsura, chiar dacă numărătorul rămâne. Concret: pe rândul măsurii din foaia Masuri completezi coloana „baza de raportare" cu numitorul declarat. Dacă numitorul nu e scris, măsura nu trece.</p>
 
   </div>
 </div>
@@ -303,7 +303,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">O măsură citită în gol nu spune nimic. O ancorezi într-un reper definit: o țintă sau un prag. Față de reper, măsura produce un semnal clar, peste sau sub. <span data-locked="1">Reperul transformă cifra în sens.</span></p>
+    <p class="step-action">O măsură citită în gol nu spune nimic. O ancorezi într-un reper definit: o țintă sau un prag. Față de reper, măsura produce un semnal clar, peste sau sub. <span data-locked="1">Reperul transformă cifra în sens.</span> Concret: în secțiunea REPER/PRAG din foaia Masuri completezi reperul (ținta) și verifici coloana „semnal", care compară măsura cu reperul și întoarce peste sau sub.</p>
     <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
@@ -358,7 +358,7 @@ BODY = r'''<body>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 4 · VERIFICAREA MĂSURII</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Funcții de validare</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Controlul măsurii</span></div>
     </div>
   </header>
   <p class="stage-quote">O măsură de încredere dă același rezultat pe orice felie și un semnal clar față de reper. Verifici fiecare.</p>
@@ -370,7 +370,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În foaia Masuri_Context recalculezi aceeași măsură pe tăieturi diferite: tot setul, o categorie, un client, o perioadă. Valorile diferă pentru că tăietura diferă, nu pentru că măsura e alta. Definiția rămâne identică. Asta e o măsură robustă.</p>
+    <p class="step-action">În foaia Masuri_Context recalculezi aceeași măsură pe tăieturi diferite: tot setul, o categorie, un client, o perioadă. Valorile diferă pentru că tăietura diferă, nu pentru că măsura e alta. Definiția rămâne identică. Asta e o măsură robustă. Concret: rulezi pe rând fiecare tăietură și confirmi că formula definiției e aceeași în toate. Nu verificăm care felie este mai bună. Verificăm dacă aceeași măsură funcționează pe orice felie.</p>
 
   </div>
 </div>
@@ -381,7 +381,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pentru fiecare măsură confirmi că baza de raportare e declarată explicit și că reperul e definit. O rată fără numitor vizibil sau o măsură fără reper nu trece verificarea: o cifră de care nu poți răspunde nu poate susține o decizie.</p>
+    <p class="step-action">Pentru fiecare măsură confirmi că baza de raportare e declarată explicit și că reperul e definit. O rată fără numitor vizibil sau o măsură fără reper nu trece verificarea: o cifră de care nu poți răspunde nu poate susține o decizie. Concret: înapoi în foaia Masuri, parcurgi fiecare rând de măsură și confirmi două lucruri: are numitorul scris în „baza de raportare" și are un reper definit. Dacă lipsește unul, îl completezi.</p>
 
   </div>
 </div>
@@ -392,7 +392,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Măsura raportată la reper produce un semnal: peste sau sub. Semnalul e explicabil, nu o alarmă oarbă: știi exact ce măsură l-a aprins și față de ce reper. Un semnal pe care îl poți explica e un semnal controlabil.</p>
+    <p class="step-action">Măsura raportată la reper produce un semnal: peste sau sub. Semnalul e explicabil, nu o alarmă oarbă: știi exact ce măsură l-a aprins și față de ce reper. Un semnal pe care îl poți explica e un semnal controlabil. Concret: citești coloana „semnal" de pe rândul măsurii și confirmi că știi ce măsură l-a aprins și față de ce reper. Semnalul nu spune încă de ce s-a întâmplat ceva. Semnalul spune doar că măsura este citibilă, explicabilă și pregătită pentru interpretare.</p>
 
   </div>
 </div>
@@ -405,7 +405,7 @@ BODY = r'''<body>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · ANCORARE LA SURSĂ</div>
       <h2 class="stage-name">STABILIZARE</h2>
-      <div class="stage-tags"><span class="phase-tag">RECALCUL</span><span class="type-tag">Tabel structurat</span></div>
+      <div class="stage-tags"><span class="phase-tag">RECALCUL</span><span class="type-tag">Definiție stabilă</span></div>
     </div>
   </header>
   <p class="stage-quote">O măsură bună nu se redefinește la fiecare felie sau sursă nouă. Se definește o dată și rămâne.</p>
@@ -417,7 +417,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Definiția trăiește într-un singur loc, peste model, nu copiată în zeci de celule. Când o ceri pe altă felie, trimiți la aceeași definiție. O singură sursă de adevăr înseamnă o singură definiție de întreținut.</p>
+    <p class="step-action">Înainte: măsura trăia într-un calcul ad-hoc, pe un interval fix sau în celule copiate manual. După: o definești o singură dată, peste model, în foaia Masuri. Muți definiția dintr-o celulă-capcană într-o sursă unică. Când o ceri pe altă felie, trimiți la aceeași definiție, nu la un calcul refăcut.</p>
 
   </div>
 </div>
@@ -428,7 +428,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugi o tranzacție nouă în fact. Măsura se recalculează singură: definiția agregă peste model, nu peste un interval fix. Nu rescrii nimic, măsura absoarbe rândul nou exact ca pe celelalte.</p>
+    <p class="step-action">Test: adaugi o tranzacție nouă în foaia Vanzari. Măsura se recalculează singură, fără nicio rescriere: definiția agregă peste model, nu peste un interval fix. Rândul nou intră în măsură exact ca celelalte.</p>
 
   </div>
 </div>
@@ -439,7 +439,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">O măsură bună supraviețuiește sursei noi. Vine exportul de luna viitoare: definiția, baza și reperul rămân valabile, iar măsura dă un rezultat comparabil. Măsura nu derivează: e ancorată la o definiție, nu la o stare de moment.</p>
+    <p class="step-action">Test: vine exportul de luna viitoare. Definiția, baza și reperul rămân neschimbate, iar măsura dă un rezultat pe noile date fără să fie redefinită. Măsura nu derivează: aceeași definiție, date noi.</p>
 
   </div>
 </div>

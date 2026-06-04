@@ -1,7 +1,37 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-GENERAT_COMPLET · TOATE GATE-URILE PASS
+REFINED_AFTER_BRAIN_AUDIT · PASS
+
+## RAPORT RAFINARE (2026-06-04, post-audit BRAIN 8.6→țintă 9.2)
+
+Aplicate toate cele 6 corecții cerute, fără atingerea arhitecturii/SPEC/celor 6 fenomene.
+
+1. **Pași 7-12 operaționali**: fiecare pas (7-12) are acum o instrucțiune concretă „Concret: ..." de lucru în foaia Masuri/Masuri_Context (identifici rândul, completezi definiția/baza/reperul, verifici semnalul, rulezi tăieturile). Zero cifre business.
+2. **Etapa 5 întărită**: pașii 13-15 rescriși ca mini-demonstrație: P13 înainte/după (calcul ad-hoc → definiție unică peste model), P14 test rând nou (intră fără rescriere), P15 test lună nouă (definiția/baza/reperul nu se schimbă).
+3. **Etichete curățate**: Etapa 4 „Funcții de validare" → „Controlul măsurii"; Etapa 5 „Tabel structurat" → „Definiție stabilă".
+4. **Prompt 2 curățat de drift C11**: scos „clasamentul și diferențele între felii"; pus „Nu interpreta diferențele dintre felii. În această etapă verific doar definiția măsurii, baza, reperul și robustețea ei." (aplicat și în Video).
+5. **Delimitare C10-C11 în Pasul 10**: adăugat „Nu verificăm care felie este mai bună. Verificăm dacă aceeași măsură funcționează pe orice felie."
+6. **Delimitare C10-C12 în Pasul 12**: adăugat „Semnalul nu spune încă de ce s-a întâmplat ceva. Semnalul spune doar că măsura este citibilă, explicabilă și pregătită pentru interpretare."
+
+### Propagare
+- HTML-Editor-Studiu: resincronizat 1:1 din baza stabilizată (auto).
+- HTML-Video + HTML-Editor-Video: Promptul 2 aliniat (curățat de „compararea ei").
+- FILM: NEschimbat — nu conține niciuna dintre formulările afectate (verificat).
+- Date_MASTER: neschimbat (BRAIN: validat).
+
+### Post-check (obligatoriu)
+- B2 gate_v20 10 c10/ c01/: **GATE PASS 5/5**
+- B3 audit_sync: **C10 ZERO DRIFT** (toate coloanele OK). Notă: auditul global semnalează 3 drift-uri, dar TOATE în **C12** (lipsă FILM/assets, construcție în lucru de alt chat) — în afara scope-ului C10, nu le ating.
+- tier_guard_t3 c10: **0 blocante** (38 avertismente benigne).
+- Zero drift față de SPEC C10: confirmat (axă, fenomene, mantra/motto/hero/intriga neschimbate).
+
+### Rămâne de la ARHITECT
+- Imaginile reale (hero + 6 exec-stage) → le procesez la primire.
+
+---
+
+## ISTORIC anterior
 
 ## RAPORT FINAL GENERARE C10 (2026-06-04)
 
