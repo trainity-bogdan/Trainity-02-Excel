@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C10 MĂSURI
 
 ## STATUS
-AUTHORIZE_SYSTEM_FIX_FOR_C10
+AUDIT_BRAIN_REFINEMENT_REQUIRED
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C10.
@@ -13,75 +13,141 @@ La comanda `sync`, citește:
 Lucrează exclusiv pe `main`.
 Nu crea branch-uri.
 
-## STARE CURENTĂ C10
-SPEC C10 este final și înghețat. Generarea C10 este începută, dar blocată la B2 deoarece `gate_v20.py` nu are încă intrarea hardcodată pentru C10.
+---
+
+# AUDIT BRAIN C10
+
+C10 este aprobat structural. Setul este generat complet și toate gate-urile trec.
+
+Nu refacem arhitectura.
+Nu schimbăm SPEC-ul.
+Nu schimbăm cele 6 fenomene.
+Nu introducem ranking, contribuție, comparație contextuală, ABC, Pareto, cauză sau dashboard.
+
+Se cere doar polish pedagogic și operațional.
+
+## VERDICT
+
+C10 este bun, coerent, validat tehnic și aliniat pe axa:
+- C10 = MĂSURI
+- verb = a defini
+- întrebare-mamă = Cât?
+- C11 = comparații
+
+Nota BRAIN actuală: 8.6 / 10.
+Țintă după rafinare: 9.2 / 10.
 
 ---
 
-# AUTORIZARE BRAIN PENTRU DEBLOCARE C10
+# CE RĂMÂNE NESCHIMBAT
 
-BRAIN autorizează Claude C10 să aplice modificarea minimă necesară în fișierul de sistem cerut de propriul raport:
-
-`_system/generatoare/gate_v20.py`
-
-Scop unic: deblocarea B2 pentru C10.
-
-Modificare permisă:
-Adaugă intrarea `10` în dict-ul `IDENTITATI` din `load_identitate`, după intrarea `09`.
-
-Bloc de adăugat:
-
-```python
-        '10': {
-            'cod': 'C10', 'nume_hero_caps_rand1': 'MĂSURA',
-            'nume_slug': 'Masuri',
-            'meta_val_treapta': 'RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
-        },
-```
-
-Această modificare este aprobată explicit de BRAIN pentru C10.
+Păstrează:
+- hero-ul: "Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?"
+- intriga: "Ai toate cifrele. Și nicio decizie."
+- mantra: "Măsura corectă răspunde întrebării corecte."
+- motto: "Nu calcula mai mult. Măsoară mai corect."
+- cele 6 fenomene C10
+- cele 8 verificări finale
+- predarea explicită către C11
+- zero cifre business în HTML/FILM
 
 ---
 
-# CONFIRMĂRI BRAIN
+# CORECȚII CERUTE
 
-1. Confirm decizia Claude C10 de a copia HTML din C09, nu din C01, pentru continuitate T3.
-2. Confirm că B2 trebuie satisfăcut, nu ocolit.
-3. Confirm că după patch-ul minim în `gate_v20.py`, Claude C10 trebuie să ruleze din nou gate_v20 pentru C10.
-4. Dacă gate_v20 trece, Claude C10 continuă generarea setului complet C10:
-   - HTML-Editor-Studiu
-   - HTML-Video
-   - HTML-Editor-Video
-   - FILM
-   - audit_sync ZERO DRIFT
-   - gate_v20 PASS
-   - tier_guard_t3 PASS
-   - commit unic al setului canonic
+## 1. Fă pașii 7-12 mai operaționali
+
+În pașii 7, 8, 9, 10, 11, 12, adaugă micro-instrucțiuni concrete de lucru în Excel.
+
+Nu te limita la principii. Cursantul trebuie să simtă că face efectiv ceva în fișier.
+
+Direcție:
+- deschide foaia Masuri
+- identifică rândul măsurii
+- completează/verifică întrebarea
+- completează/verifică definiția
+- completează/verifică baza
+- completează/verifică reperul
+- verifică semnalul
+- verifică aceeași definiție în Masuri_Context
+
+Nu introduce cifre business în HTML.
+
+## 2. Întărește etapa 5
+
+Etapa 5 este prea abstractă.
+
+Păstrează ideea:
+- definiția trăiește într-un singur loc
+- rândul nou intră singur
+- sursa nouă nu rupe măsura
+
+Dar rescrie pașii 13-15 ca mini-demonstrație clară:
+- înainte: măsură prinsă într-un calcul ad-hoc / interval / celule copiate
+- după: măsură definită o singură dată peste model
+- test: rând nou intră fără rescriere
+- test: luna următoare nu schimbă definiția
+
+## 3. Curăță etichetele moștenite
+
+În Etapa 4, înlocuiește tagul:
+"Funcții de validare"
+cu:
+"Controlul măsurii"
+
+În Etapa 5, înlocuiește tagul:
+"Tabel structurat"
+cu:
+"Definiție stabilă"
+sau:
+"Sursă unică"
+
+Alege varianta cea mai coerentă în HTML.
+
+## 4. Curăță Promptul 2 de drift spre C11
+
+În Promptul 2, evită formularea cu:
+"clasamentul și diferențele între felii"
+
+Înlocuiește cu:
+"Nu interpreta diferențele dintre felii. În această etapă verific doar definiția măsurii, baza, reperul și robustețea ei."
+
+## 5. Întărește delimitarea C10-C11 în Pasul 10
+
+După explicația despre context-awareness, adaugă ideea:
+
+"Nu verificăm care felie este mai bună. Verificăm dacă aceeași măsură funcționează pe orice felie."
+
+## 6. Întărește delimitarea C10-C12 în Pasul 12
+
+Adaugă ideea:
+
+"Semnalul nu spune încă de ce s-a întâmplat ceva. Semnalul spune doar că măsura este citibilă, explicabilă și pregătită pentru interpretare."
 
 ---
 
-# LIMITE
+# LIVRABILE DE MODIFICAT
 
-Nu modifica alte reguli sistem.
-Nu rescrie `gate_v20.py` complet.
-Nu modifica arhitectura generală a gate-ului.
-Nu muta încă scripturile build C10 în `_system/generatoare/`; cererea #2 este neblocantă și rămâne pentru mai târziu.
-Nu modifica alte construcții.
+Modifică în principal:
+- c10/HTML-Studiu-Excel-10-Masuri.html
+- c10/HTML-Editor-Studiu-Excel-10-Masuri.html, dacă este companion 1:1 și trebuie sincronizat
+- c10/HTML-Video-Excel-10-Masuri.html, doar dacă aceleași formulări apar și acolo
+- c10/HTML-Editor-Video-Excel-10-Masuri.html, dacă este companion 1:1
+- FILM-Excel-10-Masuri.docx, dacă scriptul video conține aceleași formulări afectate
+
+Nu modifica Date_MASTER-C10.xlsx decât dacă descoperi inconsistență reală. Din auditul BRAIN, Date_MASTER pare validat și nu necesită schimbare.
 
 ---
 
-# SPEC C10 FINAL RĂMÂNE NESCHIMBAT
+# POST-CHECK OBLIGATORIU
 
-C10 = MĂSURI.
-Verb: `a defini`.
-Întrebare-mamă: `Cât?`.
-Hero: `MĂSURA POTRIVITĂ`.
-Fenomene C10:
-1. Măsura ca definiție unică, single source of truth.
-2. Baza de raportare.
-3. Reperul / pragul.
-4. Context-awareness.
-5. Cifra utilă vs cifra decorativă.
-6. Semnalul controlabil.
+După rafinare:
+- rulează gate_v20 pentru C10
+- rulează audit_sync
+- rulează tier_guard_t3
+- confirmă zero drift față de SPEC
+- actualizează CLAUDE-TO-BRAIN.md cu raportul de rafinare
 
-Nu include ranking, contribuție, comparație contextuală, ABC sau Pareto.
+## STATUS AȘTEPTAT ÎN CLAUDE-TO-BRAIN
+
+REFINED_AFTER_BRAIN_AUDIT · PASS
