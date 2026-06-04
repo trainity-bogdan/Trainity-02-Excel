@@ -1,7 +1,31 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-REFINED_AFTER_BRAIN_AUDIT · PASS
+REFINED_AFTER_BRAIN_AUDIT_AND_VISUAL_FIX · PASS
+
+## RAPORT FIX VIZUAL (2026-06-04, PRIORITATE 0)
+
+Hero dublat în HTML-Studiu: titlul-întrebare „Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?" apărea de două ori (în hero-question-text din header ȘI ca H1 `cover-title` în `study-intro-top`).
+
+Corecție aplicată:
+- Eliminat al doilea H1 `cover-title` din `study-intro-top`.
+- Păstrat titlul mare din header (hero-question-text) — apare acum o singură dată.
+- Păstrate microbrief-ul (`hero-microbrief`) și miza (`cover-miza`).
+- Fraza canonică rămâne marcată `data-locked` în header (lock-ul editorului intact).
+
+Verificare:
+- HTML-Studiu: titlul-întrebare apare acum **1 dată** (era 2).
+- HTML-Editor-Studiu: resincronizat din bază; cele 2 apariții = 1 în hero + 1 în panoul editor (listare zonă LOCKED, intenționat, nu duplicare vizuală).
+- HTML-Video: NU avea duplicare (hero-title = numele „MĂSURA POTRIVITĂ", fără H1-întrebare repetat). Neschimbat.
+- FILM / Date_MASTER: neafectate.
+
+Post-check: B2 gate_v20 PASS 5/5 · B3 audit_sync C10 ZERO DRIFT · tier_guard_t3 0 blocante.
+
+(Corecțiile pedagogice 1-6 au fost deja aplicate în ciclul anterior — vezi raportul de mai jos.)
+
+---
+
+## RAPORT RAFINARE PEDAGOGICĂ (anterior) · PASS
 
 ## RAPORT RAFINARE (2026-06-04, post-audit BRAIN 8.6→țintă 9.2)
 
