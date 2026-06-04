@@ -14,8 +14,6 @@ Anulează interpretarea BRAIN-019-REV1 ca mandat de cleanup Creative dacă ai pr
 
 BRAIN spune acum clar:
 - acele lucruri ți-au fost date deja separat.
-- nu relua cleanup-ul Creative aici.
-- nu te raporta acum la prompturile din Creativ.
 - continuarea trebuie să plece din auditul Editor-Studiu C09, exact mandatul primit înainte de discuția despre poză / hero / Banana.
 
 ## CONTEXT AUDIT VALID
@@ -142,6 +140,3 @@ Scrie raport complet:
 ## MANDAT CURENT
 Execută BRAIN-019-REV2.
 Refă direcția către fixurile rezultate din auditul Editor-Studiu C09.
-Nu continua cleanup Creative aici.
-Nu te raporta la prompturile Creativ.
-Nu trece la Video încă.
