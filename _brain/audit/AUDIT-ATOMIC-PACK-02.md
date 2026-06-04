@@ -12,7 +12,7 @@
 Scanate 274 fisiere; 502 semnale brute triate atomic. **Dupa de-zgomotare: 8 probleme reale HIGH/MEDIUM si un strat de LOW (igiena/consistenta).** Stratul tehnic-dur e curat la nivel de octet: conservare suma la banut, identitate corecta, cod care compileaza, base64 valid, zero id duplicat, companion sincronizat.
 
 **Probleme reale (de-zgomotate):**
-- **NOU - C02 FILM (13) si C04 FILM (17) au em-dash** (`—`, U+2014) in narativ -> incalca regula brand "fara em/en-dash". Nici audit_sync, nici gate nu citesc `.docx` pentru dash, deci au scapat la V2.
+- **NOU - C02 FILM (13) si C04 FILM (17) au em-dash** (caracterul U+2014) in narativ -> incalca regula brand "fara em/en-dash". Nici audit_sync, nici gate nu citesc `.docx` pentru dash, deci au scapat la V2.
 - **NOU - C04 Studiu + Editor-Studiu: "delta sub 0,01 lei"** in final-label (learner-facing). Zona gri R-V02.15: e un PRAG de precizie (un ban), nu o valoare business -> sever mic, dar mentioneaza "lei" + cifra.
 - **C10 cuvant cheie "MASURA POTRIVITA" != "MASURI"** (decizie BRAIN explicita, commit e75c243) si **C11 cuvant cheie "IERARHIE" != "COMPARATII"** (pare bug: e singura constructie care nu foloseste cuvantul identitatii treptei).
 - **C12 fara folder `assets`** + **C10/C11/C12 imagini placeholder SVG** (ne-reale) -> dependenta ARHITECT.
@@ -70,7 +70,7 @@ Niciuna confirmata. (Cele 2 auto-marcate la L6 = "delta sub 0,01 lei", reclasate
 - **H-2. C10/C12 imagini placeholder SVG** (hero + 6 exec-stage fiecare) si **C11 hero placeholder SVG** (pus de reparatia anterioara, in locul clonei C01). Ne-reale, marcate temporar. RAMANE ARHITECT (imagini reale).
 
 ### MEDIUM
-- **M-1 (NOU). C02 FILM = 13 em-dash, C04 FILM = 17 em-dash** (`—` U+2014). Ex.: "nomenclatoare — LOCALITATI", "ordinea — Promoted Headers". Incalca regula brand. C01/C03/C05-C12 FILM = 0. REPARABIL automat (-> ", " sau ": ").
+- **M-1 (NOU). C02 FILM = 13 em-dash, C04 FILM = 17 em-dash** (caracterul U+2014). Ex.: "nomenclatoare [U+2014] LOCALITATI", "ordinea [U+2014] Promoted Headers". Incalca regula brand. C01/C03/C05-C12 FILM = 0. REPARABIL automat (inlocuire cu virgula sau doua puncte).
 - **M-2. C11 cuvant cheie hero = "IERARHIE"** in loc de "COMPARATII". Singura constructie unde `hov-object` != cuvantul identitatii treptei. Pare bug de generare. REPARABIL (cu confirmare).
 - **M-3. C10 cuvant cheie hero = "MASURA POTRIVITA"** in loc de "MASURI". Decizie BRAIN explicita (commit `e75c243`), rupe tiparul cuvant-unic. DECIZIE BRAIN.
 - **M-4. c10/assets == c11/assets byte-identice (7/7)** inclusiv hero. Clona; nefolosite de HTML (orfane). RAMANE ARHITECT (imagini reale per constructie).
