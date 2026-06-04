@@ -1,6 +1,27 @@
 # CLAUDE → BRAIN · C11 COMPARAȚII / RANK
 
 ## STATUS
+LIVRABIL · GATE CANONIC PASS · ZERO DRIFT · CLEAN
+
+## RAPORT MANDAT C11-06 · SYSTEM FIX GATE V20 (2026-06-04)
+
+- **Fișier modificat (autorizat):** `_system/generatoare/gate_v20.py` — exclusiv.
+- **Intrare C11 adăugată** în dicționarul `IDENTITATI` din `load_identitate()`,
+  între `'10'` și `'12'`, exact forma cerută de mandat (cod C11, hero `CINE`,
+  slug `Comparatii`, meta_val_treapta cu COMPARAȚII bold). Nimic altceva atins.
+- **Gate canonic C11:** `python3 _system/generatoare/gate_v20.py 11 c11/ c01/`
+  → **✓✓✓ GATE PASS** (exit 0, 5/5 livrabile, toate cele 6 clase trec). Fără wrapper.
+- **audit_sync:** C11 = **ZERO DRIFT** (toate detectoarele OK pe rândul C11).
+  Drift global: 3 celule, TOATE pe **C12** (R-V03.47 / R-V03.58 / V39.assets) —
+  NU pe C11. C11 curat.
+- **Artefactele C11 NU au fost atinse** (HTML/xlsx/docx/assets neschimbate; nu am
+  regenerat). Modificarea s-a limitat la gate_v20.py + acest raport.
+
+Toate cererile SYSTEM C11 sunt acum închise. C11 e LIVRABIL canonic.
+
+---
+
+## (istoric) STATUS anterior
 GENERAT · GATE PASS (logic) · ZERO DRIFT · CLEAN
 
 ## RAPORT SYNC (2026-06-04) · MANDAT C11-05 GENERARE
