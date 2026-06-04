@@ -1,86 +1,56 @@
 # CLAUDE → BRAIN · C09 RELAȚII
 
-## ACTUALIZARE · IMAGINI EXEC-STAGE COMPLETE (6/6) · ZERO DRIFT
-Toate cele 6 imagini exec-stage RELAȚII sunt integrate (base64 în Video + Editor-Video + jpg în assets). exec-stage-5 STABILIZARE primită și integrată (tabel-fact central ancorat la 4 tabele PK + săgeată de inserare rând nou). Watermark scos pe toate.
-
-Maparea finală 6/6:
-- 1 REALITATE (tabele izolate) · 2 INVESTIGAȚIE (linii propuse) · 3 TRANSFORMARE (cheia în lăcaș + Union) · 4 VERIFICARE (verifici ce poate fi legat) · 5 STABILIZARE (ancorare la sursă, PK + rând nou) · 6 CONFIRMARE (model complet livrat).
-
-**audit_sync C09 = ZERO DRIFT** (toate detectoarele OK, inclusiv R-V03.33 base64 Video, V39.assets 6 jpg, 9.imgclone). GATE PASS, JS valid. C09 este complet pe imagini.
-
-Notă: ARHITECT a trimis imaginile în multe batch-uri cu duplicate repetate (modelul re-trimis de mai multe ori); maparea s-a făcut pe md5 + conținut, nu pe ordinea atașării.
-
----
-
-## ACTUALIZARE · INTEGRARE IMAGINI EXEC-STAGE (5/6 — istoric)
-ARHITECT a trimis imaginile exec-stage RELAȚII (în mai multe batch-uri, cu duplicate repetate). Procesate (watermark Gemini scos, base64 în Video + Editor-Video).
-
-Maparea finală pe conținut (5 imagini unice integrate):
-- exec-stage-1 REALITATE = tabele izolate, împrăștiate.
-- exec-stage-2 INVESTIGAȚIE = tabel central cu linii propuse spre celelalte.
-- exec-stage-3 TRANSFORMARE = cheia intră în lăcaș + Y-merge (Union) — „Cheile intră în lăcaș".
-- exec-stage-4 VERIFICARE = „Înainte să legi, verifici ce poate fi legat".
-- exec-stage-6 CONFIRMARE = modelul complet livrat (centru + 4 sateliți, cabluri+chei).
-- exec-stage-5 STABILIZARE = **LIPSEȘTE** (slot pe gradient placeholder).
-
-Re-mapare față de prima integrare: modelul complet a fost mutat de la TRANSFORMARE la CONFIRMARE (e shot-ul „model livrat"), iar TRANSFORMARE a primit imaginea key+Y-merge (concept-corect). Batch-urile ARHITECT au conținut duplicate, deci efectiv s-a primit 5 imagini unice, nu 6.
-
-Validări: GATE PASS, JS valid, `9.imgclone` OK, `R-V03.33` (base64 Video) acum OK. Rămâne 1 XX: `V39.assets` (necesită 6 jpg; există 5, lipsește exec-stage-5).
-
-Mai trebuie 1 imagine: STABILIZARE (ancorare la sursă / rândul nou își găsește singur dimensiunea / regula anti-derivă). La primire, se închide ultima XX.
-
----
-
-## STATUS
-READY_FOR_BRAIN_REVIEW_FILM
+## STATUS FINAL
+READY_FOR_FINAL_REVIEW_C09
 
 ## MANDAT EXECUTAT
-C09-M021-FILM — generat `c09/FILM-Excel-09-Relatii.docx`.
+C09-M022-FINAL-REVIEW — review empiric final + raport de închidere C09. Nicio reparație necesară (zero defecte găsite). Nu am generat conținut nou.
 
-## REZUMAT EXECUTIV
-Am creat companionul de filmare FILM C09 RELAȚII, coerent cu Studiu, Editor-Studiu, HTML-Video și Editor-Video. Am folosit FILM-ul conform al unei construcții (c08) doar ca SCHELET structural (titlu/meta, identitate cinematică, slide-uri executive, roluri, scenă cu fenomene, 6 etape cu cele 7 câmpuri de filmare, final). Am rescris INTEGRAL narativul pe axa RELAȚII: 82 din 177 de paragrafe modificate (toate paragrafele de conținut), restul fiind etichete structurale (OBIECTIV, STARE EMOTIONALA, VOCEA TRAINERULUI, DEMONSTRATIA, INTERVENTIA AI, MOMENT DE CONTROL, REVEAL, TRANZITIE) care rămân neschimbate prin definiție. Zero clonă narativă C06-C08.
+## 1. LIVRABILE C09 PREZENTE
+- `HTML-Studiu-Excel-09-Relatii.html` — prezent.
+- `HTML-Editor-Studiu-Excel-09-Relatii.html` — prezent (companion sincronizat 1:1, lock-by-attribute, BRAIN-019).
+- `HTML-Video-Excel-09-Relatii.html` — prezent (6 imagini base64).
+- `HTML-Editor-Video-Excel-09-Relatii.html` — prezent (companion + strat editor).
+- `Date_MASTER-C09.xlsx` — prezent.
+- `FILM-Excel-09-Relatii.docx` — prezent.
+- `c09/assets/` — hero-poster + 6 exec-stage jpg (exec-stage-1..6) = **6/6**.
+- Creativ C09 — **absent, corect** (Creativ abandonat V68; nu mai e în schema construcției).
 
-## FIȘIERE CREATE / MODIFICATE
-- CREAT: `c09/FILM-Excel-09-Relatii.docx` (~41 KB, 177 paragrafe, structură Word conformă).
-- SCRIS: `_brain/c09/CLAUDE-TO-BRAIN.md` (acest raport).
-- NEATINSE: toate celelalte fișiere C09 (Studiu, Editor-Studiu, Video, Editor-Video, Date_MASTER, assets), fișiere sistem, alte construcții.
-- Builder rulat din `/tmp` (python-docx); nu am adăugat scripturi în repo.
+## 2. VALIDĂRI RULATE ȘI REZULTAT
+- `gate_v20 09 c09 c01` → **GATE PASS** (toate clasele, 5/5 livrabile gate + FILM + assets).
+- `audit_sync` → **C09 = ZERO DRIFT** (toate cele 15 detectoare OK pe rândul C09). Notă: cele 3 celule de drift din rulare aparțin lui **C10** (nou adăugat de BRAIN, parțial: doar Studiu + Date_MASTER), NU lui C09 și în afara scope-ului meu.
+- `tier_guard_t3` C09 → **0 blocante**, 10 avertismente benigne (top/clasament/explic = clase CSS + eticheta nav de treaptă + text panou editor; false-pozitive cunoscute, nu funcționalitate).
+- Termeni interziși (Power BI / DAX / Power Pivot / dashboard / BI-ready / Power Query) în corpul vizibil HTML + FILM → **CURAT**. „DAX" semnalat inițial = fals pozitiv din base64 (L191); 0 apariții ca cuvânt în conținut vizibil.
+- em-dash / en-dash în HTML (×4) + FILM → **0 / 0**.
+- Cifre business concrete în HTML + FILM → **0** (zero numere lungi, zero „lei", zero „%").
+- JS pentru HTML-Video + HTML-Editor-Video → **valid** (`node --check` PASS pe toate blocurile).
+- Cross-contamination → GATE PASS. Codurile C08 (handoff-from) și C10 (handoff-to) apar doar în context legitim de handoff. Vocabularul C08 (cartograf/ecosistem) apare DOAR în narațiunea de handoff care descrie ce a livrat C08 ca input („Setul predat de C08 are harta ecosistemului…" / „C08 a cartografiat ecosistemul…") — permis explicit de mandat. Identitatea C09 rămâne RELAȚII.
 
-## SURSA STRUCTURALĂ FOLOSITĂ
-`c08/FILM-Excel-08-Cartografiere.docx` — DOAR ca schelet (structura de paragrafe, stiluri, ordinea secțiunilor). Citit pentru context, neatins. Narativul a fost rescris cap-coadă pe RELAȚII; vocabularul CARTOGRAFIERE (satelit, cartografiem) a fost eliminat din corp. Singura apariție „cartografiat ecosistemul" rămasă este în propoziția de DESCHIDERE care descrie corect ce a livrat C08 ca input (handoff-from), la fel ca în Studiu/Video „predat de C08".
+## 3. REPARAȚII MINORE APLICATE
+Niciuna. C09 a trecut toate verificările fără defecte.
 
-## CE AM PĂSTRAT DIN IDENTITATEA C09
-- INTRIGA: „Ai cinci tabele corecte. Și niciun răspuns care să le traverseze."
-- AHA: „Fără relații ai date. Cu relații ai răspunsuri."
-- MANTRA: „Nu mutăm datele. Le legăm."
-- WOW: „Tabele care stăteau alături fără să se cunoască. Acum răspund împreună la o singură întrebare."
-- MOTTO: „Un model care răspunde. Apoi măsura stabilă."
-- Cele 6 slide-uri executive (STARE + frază) identice cu HTML-Video C09.
-- SCENA cu 5 fenomene relaționale: TABEL ORB, CHEIA NEVERIFICATĂ, INNER ASCUNDE, CE NU SE POTRIVEȘTE, UNION NU E RELAȚIE.
-- 6 etape de filmare pe relații: deschidere și întrebarea pe care un tabel nu o duce singur → identificarea relațiilor cu AI (Promptul 1) → activarea relațiilor 1:M și alegerea operației, distincția Join vs Union (Promptul 2) → verificare cu Left/Right ca audit al orfanilor, zero chei orfane → ancorare la sursă, regula anti-derivă → prima citire cross-tabel și predarea către C10.
-- Progresia narativă obligatorie respectată: seturi corecte separat → la unire apar rupturile → relații greșite produc concluzii false → verifici legătura înainte de analiză → analiza continuă doar după validarea relațiilor.
-- Indicații de filmare reale per etapă: ce se demonstrează pe ecran, ce spune trainerul, momentul de control, AHA-ul, accentul pe Join vs Union (etapa 3) și pe Left/Right ca audit (etapa 4), confirmarea trecerii la C10 (etapa 6).
+## 4. IDENTITATE C09 CONFIRMATĂ
+C09 rămâne despre: relații între tabele · chei (PK/FK) · potriviri · orfani · cardinalitate (1:1, 1:M) · integritate logică · Join vs Union · Left/Right ca audit al potrivirilor lipsă · stabilizarea legăturii înainte de analiză.
 
-## CE AM EVITAT EXPLICIT
-- Fără măsuri, ranking, top, Pareto, interpretare de cauze, raportare finală.
-- Fără Power BI, DAX, Power Pivot, dashboard, BI-ready (scan: CURAT).
-- Fără Power Query în corp (rolul tehnic rescris „EXCEL · RELAȚII", nu „EXCEL / POWER QUERY").
-- Fără em-dash / en-dash (scan: 0 / 0).
-- Fără cifre business concrete (scan: zero numere de 4+ cifre, zero „lei", zero „%").
-- Fără transformarea C09 în modelare BI.
+C09 NU devine: Power BI · dashboard · modelare completă BI · DAX · raportare finală · ranking/top/Pareto · interpretare de cauze. (Confirmat empiric: zero termeni de acest fel în conținut.)
 
-## VALIDĂRI RULATE
-1. Existență FILM: `c09/FILM-Excel-09-Relatii.docx` prezent.
-2. `gate_v20 09 c09 c01` → GATE PASS (toate livrabilele prezente; detector nume FILM `8.filmname` OK).
-3. `audit_sync` → C01-C08 OK (ZERO regresie). C09: `R-V03.58` (FILM prezent) acum OK; rămân 2 XX = dependențe externe de imagini (vezi RISCURI).
-4. Termeni interziși: CURAT. em/en-dash: 0. Cifre business: 0.
+## 5. IMAGINI EXEC-STAGE 6/6 (mapare finală)
+1 REALITATE (tabele izolate) · 2 INVESTIGAȚIE (linii propuse) · 3 TRANSFORMARE (cheia în lăcaș + Union) · 4 VERIFICARE („verifici ce poate fi legat") · 5 STABILIZARE (ancorare la sursă, fact central + 4 tabele PK + inserare rând nou) · 6 CONFIRMARE (model complet livrat). Toate cu watermark scos, unice (imgclone OK, nu clone C01), base64 în Video + Editor-Video.
 
-## RISCURI RĂMASE
-1. Cele 6 imagini exec-stage RELAȚII rămân dependență ARHITECT (mandat separat). De aceea `audit_sync` arată încă 2 XX pe C09: `R-V03.33` (base64 inline în Video) și `V39.assets` (6 jpg în assets/). FILM-ul nu integrează imagini, conform mandatului.
-2. FILM-ul descrie acțiuni de filmare; eventualele ajustări de ritm/voce se pot rafina la review.
+## 6. RISCURI RĂMASE
+Niciunul pentru C09. (Observație în afara scope: C10 e parțial în repo, cu 3 XX proprii — nu e responsabilitatea acestui mandat.)
 
-## CERERE SYSTEM
+## 7. CONFIRMĂRI DE ACCEPTARE
+- Toate livrabilele prezente: **DA**.
+- ZERO DRIFT C09: **DA**.
+- GATE PASS: **DA**.
+- Imagini exec-stage 6/6: **DA**.
+- FILM prezent: **DA**.
+- CERERE SYSTEM: **NU există**.
+- Blocante pedagogice: **niciunul**.
+
+## 8. CERERE SYSTEM
 Niciuna.
 
 ## STATUS FINAL
-READY_FOR_BRAIN_REVIEW_FILM
+READY_FOR_FINAL_REVIEW_C09
