@@ -1,12 +1,62 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-SPEC_FROZEN
+SYSTEM_SPEC_REGISTERED
 
-## MANDAT EXECUTAT
-C12-02 · ÎNGHEȚARE SPEC — am aplicat toate cele 7 decizii BRAIN și am înghețat SPEC-ul
-C12 pentru identitatea INTERPRETARE · verb `a explica` · întrebarea-mamă `De ce?`.
-Nu am generat artefacte, nu am atins fișiere sistem, nu am atins alte construcții.
+## MANDAT EXECUTAT (curent)
+C12-03 · SISTEM DIRECT · ÎNSCRIERE SPEC C12 — am folosit permisiunea directă de sistem
+acordată în mandat și am înscris SPEC + identitatea C12 în fișierele de sistem strict necesare
+pentru deblocarea generării (B1). Nu am generat artefacte (fără HTML / Date_MASTER / FILM),
+nu am atins alte construcții.
+
+### NOTĂ DE GUVERNANȚĂ (override de regulă a chat-ului)
+Regula de pornire a acestui chat interzicea orice scriere în `_system/**` (doar `CERERE SYSTEM`).
+Mandatul C12-03 a anulat explicit acea procedură („nu mai folosește Chat Andrei SYSTEM") și a
+acordat permisiune directă de sistem, limitată la înscrierea SPEC C12. Am acționat strict în acel
+scop. Protocolul `_system/protocols/SYSTEM-WRITE-HANDOFF.md` confirmă rolul Claude Code ca executor SYSTEM.
+
+### FIȘIERE SISTEM MODIFICATE (exact 2, append/chirurgical)
+1. `_system/arhiva/SISTEM_TRAINITY-versiuni.md` (registru SPEC):
+   - linia `## SPEC C12 - PRIORITIZARE EXECUTIVA   [Status: NEGENERAT]`
+   - devine `## SPEC C12 - INTERPRETARE   [Status: INGHETAT 04.06.2026]` + corp complet 9 elemente
+     (SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO, 6 FENOMENE, 8 STEP-TITLES) + delimitări + AHA + formulă.
+2. `_system/referinte/IDENTITATE-TEHNICA.md`:
+   - adăugat bloc nou `## IDENTITATE_TEHNICA C12 — DE CE-UL DIN DATE` cu toate câmpurile obligatorii
+     (cod, treapta_nr, nume_slug, nume_hero_caps_rand1/2, meta_val_treapta, footer/topbar, localStorage_*, next_cod/next_nume_title).
+   - hero split: rand1 `DE CE-UL` · rand2 `DIN DATE`; input `Date_MASTER-C11.xlsx` → output `Date_MASTER-C12.xlsx`; next_cod `C13`.
+
+`git diff --stat`: 2 fișiere, +99 / -1. `git diff --check`: curat. Doar blocuri C12 noi/țintite; NU am atins blocurile C10 (scrise concurent de alt chat).
+
+### VERIFICARE DEBLOCAJ (B1)
+`python3 _system/generatoare/pre_generation_check.py 12` → **EXIT 0**:
+- ✓ CHECK 1 (R-V03.55): SPEC C12 (INTERPRETARE) INGHETAT narativ
+- ✓ CHECK 2 (L142): IDENTITATE_TEHNICA C12 POPULATA
+- ✓ CHECK 3 (L143): FENOMENE C12 vs asset fizic ALINIAT
+- „TOATE CHECK-URILE PASS. Motorul poate proceda la generare C12."
+
+### CE NU AM ATINS (intenționat)
+- Bible `_system/governance/TRAINITY_ARCHITECTURE_BIBLE.md` (deja are C12 INTERPRETARE LOCKED — vezi mai jos).
+- C09 / C10 / C11 / alte construcții, HTML existente, Date_MASTER existente, `index.html`.
+- Secțiuni ISTORICE de arhivă care mai conțin „C12 PRIORITIZARE EXECUTIVA" (linii 569/598/999 din registru, brain-evolutia) — text istoric, NU citit de gate, NU blochează generarea. Lăsate ca atare.
+
+### DECIZIE BRAIN NECESARĂ (nu o rezolv singur — conflict conceptual, per handoff protocol)
+Bible §T3 are deja `SPEC C12 INTERPRETARE — LOCKED v1.0` cu wording PARȚIAL DIFERIT de SPEC-ul înghețat de tine:
+- Bible MANTRA: „Nu ghicim de ce. Explicăm." vs SPEC_FROZEN: „Cifra spune cât. Explicația spune de ce."
+- Bible MOTTO: „Întrebi de ce. Modelul explică." vs SPEC_FROZEN: „Nu citi rezultatul. Explică-l."
+- Bible AHA: „Cifrele spun ce. Numai interpretarea spune de ce." vs SPEC_FROZEN: „Nu rezultatul contează. Contează de ce apare rezultatul."
+- Bible HERO: „Cum transform clasamentul în înțeles?" vs SPEC_FROZEN hero vizual: „DE CE-UL DIN DATE".
+
+Identitatea e IDENTICĂ (INTERPRETARE · a explica · De ce? · închide T3); doar formulările diferă. Conform mandatului C12-03 am înscris în registru wording-ul tău (SPEC_FROZEN). NU am modificat Bible-ul (e LOCKED, schimbarea lui = decizie transversală de guvernanță). **Întrebare:** vrei să aliniez și Bible §T3 C12 la wording-ul SPEC_FROZEN (mandat separat de guvernanță), sau Bible rămâne v1.0 și registrul C12 poartă wording-ul construcției? Până la decizia ta, las Bible neatins.
+
+### OBSERVAȚIE (non-blocantă)
+`_brain/c12/CHAT-CONTEXT.md` încă scrie „KPI / FILTER CONTEXT" (identitate veche). Nu am editat-o
+(doc deținut de tine). De aliniat la INTERPRETARE la o actualizare viitoare.
+
+---
+
+## ISTORIC · C12-02 ÎNGHEȚARE SPEC
+Am aplicat toate cele 7 decizii BRAIN și am înghețat SPEC-ul C12 (INTERPRETARE · `a explica` · `De ce?`).
+Nu am generat artefacte. SPEC-ul final rămâne mai jos ca sursă canonică.
 
 ## DECIZII BRAIN APLICATE
 1. Fenomene: **6** (confirmat).
