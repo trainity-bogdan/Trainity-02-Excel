@@ -1,54 +1,113 @@
 # CLAUDE → BRAIN · C11 COMPARAȚII / RANK
 
 ## STATUS
-SPEC_FROZEN_ACK
+BLOCAT_PRECONDITII_SISTEM (MANDAT C11-03 nu poate rula fără CERERE SYSTEM)
 
-## RAPORT SYNC (2026-06-04) · MANDAT C11-02
+## RAPORT SYNC (2026-06-04) · MANDAT C11-03 GENERARE
 
-Sync executat în chat dedicat C11.
+Sync executat în chat dedicat C11. Am preluat mandatul de generare și am rulat
+verificările pre-generare permise. Generarea NU a pornit: există 3 precondiții
+de sistem neîndeplinite care impun modificări în fișiere sistem interzise mie.
 
-Pași:
-1. `git fetch origin main` + rebase local pe `origin/main` (origin avansase cu C09 + freeze C11 + commit-uri system).
-2. Citit `_brain/c11/CHAT-CONTEXT.md` + `_brain/c11/BRAIN-TO-CLAUDE.md` (MANDAT C11-02).
-3. NU am generat artefacte. NU am atins fișiere sistem sau alte construcții.
+### STATUS GENERARE
+NEÎNCEPUTĂ — blocată la pre-flight (B1) + lipsă IDENTITATE_TEHNICA C11.
 
----
+### LISTA FIȘIERE C11 CREATE / MODIFICATE
+- Niciun fișier `c11/` creat (R-V01.2 interzice livrarea parțială; nu pornesc o generare care nu poate trece gate-urile).
+- Modificat doar acest raport: `_brain/c11/CLAUDE-TO-BRAIN.md`.
 
-## CONFIRMARE PRELUARE SPEC_FROZEN
+### REZULTAT SCAN VOCABULAR INTERZIS
+N/A — nu există încă artefacte C11 de scanat. Regula de adresare directă `tu` +
+lista interzisă (`cursant`, `participant`, `elev`, `student`) rămâne pregătită
+ca post-pass obligatoriu la generare (matrița `c01/` e T1 veche, va trebui
+curățată de persoana a III-a).
 
-Am preluat SPEC C11 ÎNGHEȚAT, integral. Confirm cele 5 decizii BRAIN:
-1. SLUG `comparatii` — preluat.
-2. 6 fenomene — preluat (clasament, diferență reală vs zgomot, contribuție/pondere, concentrare Pareto/ABC, comparabilitate, reper relativ).
-3. Pareto/ABC rămâne în C11 ca fenomen de ierarhie și concentrare — preluat.
-4. C12 primește doar cauza / „de ce" — delimitare acceptată.
-5. MOTTO `Nu citi lista. Citește ierarhia.` — preluat.
+### REZULTAT DELIMITĂRI C10 / C12 / T4
+Confirmate ca direcție (clasament/contribuție/concentrare = C11; cauza „de ce" =
+C12; dashboard = T4; actori agregați, nu rânduri). Nu pot fi validate empiric
+fără artefacte.
 
-Cele 9 elemente narrative + DELIMITĂRILE HARD + REGULA VOCABULAR/ADRESARE sunt înregistrate ca referință pentru faza de generare. Nu am modificat SPEC-ul înghețat.
-
----
-
-## RISCURI DE VOCABULAR (de gestionat la generare)
-
-Regula de adresare directă cu `tu` + lista de cuvinte interzise (`cursant`, `cursantul`, `participant`, `participantul`, `elev`, `student`) introduce un punct de atenție la `genereaza CNN`:
-
-1. **Matrița `c01/`** (sursa de copy) e construcție T1 mai veche; poate conține formulări la persoana a III-a sau termenul `cursant` în HTML/FILM. La generarea C11 din copy, trebuie scanat și reformulat tot textul de experiență în adresare directă (`vezi`, `compari`, `confirmi`, `identifici`, `citești ierarhia`) ÎNAINTE de gate_v20. Notez asta ca pas obligatoriu de post-copy, nu las moștenirea de voce a lui C01.
-2. **FILM:** `noi` permis punctual doar pentru ghidarea demonstrației, nu ca ton general. Voi păstra tonul business/operațional, nu școlar.
-3. **Coerență cu SPEC-ul deja înghețat:** MIZA și PROBLEMELE din SPEC sunt deja la adresarea `tu` — voi propaga același registru în toate textele generate, fără să reintroduc persoana a III-a.
-
-Nu e un blocaj, e o checklist de aplicat la mandatul de generare.
+### REZULTAT VALIDĂRI
+- `python3 _system/generatoare/pre_generation_check.py 11` → **BLOCAJ B1**: „SPEC C11 ESTE NEGENERAT". Checker-ul citește registrul `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, unde C11 figurează ca `SPEC C11 - DATA MODEL [Status: NEGENERAT]`.
+- `gate_v20.py` și `audit_sync.py` NU au fost rulate (nu există artefacte C11). Ele nu depind de registrul SPEC, vor putea rula după generare.
 
 ---
 
-## DELIMITĂRI HARD (înregistrate pentru generare)
-- C11 NU redefinește măsura (vine din C10).
-- C11 NU explică „de ce" apare ierarhia (cauza = C12).
-- C11 NU construiește dashboard (raportarea = T4).
-- C11 compară actori agregați, NU etichetează rânduri individuale (vs C06).
-- R-V02.14 sumă conservată (input C11 = output C10); R-V02.15 zero cifre business în HTML/FILM.
+## CAUZA BLOCAJULUI (3 impedimente de sistem)
+
+### 1. SPEC C11 neînghețat în REGISTRUL SISTEM (B1 hard)
+SPEC-ul C11 e înghețat în `_brain/c11/BRAIN-TO-CLAUDE.md` (workflow per-construcție),
+dar `pre_generation_check.py` citește `_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+(linia ~2463), unde apare: `## SPEC C11 - DATA MODEL [Status: NEGENERAT]`.
+Cât timp registrul sistem zice NEGENERAT, B1 blochează generarea. R-V01.2 +
+regula B1 din CLAUDE.md sunt absolute, nu le pot ocoli.
+
+### 2. CONFLICT DE IDENTITATE: legacy „DATA MODEL" vs BRAIN „COMPARAȚII"
+Registrul legacy descrie C11 = **DATA MODEL** (relationships, measures,
+dimensions, DAX) — vezi `SISTEM_TRAINITY-versiuni.md:568, 997, 1003, 2463`.
+Aceasta e identitatea VECHE. Re-arhitectura T3 (BRAIN-006) a mutat:
+C09 = RELAȚII/model, C10 = MĂSURI, **C11 = COMPARAȚII/RANK**, C12 = INTERPRETARE.
+„DATA MODEL" e acum teritoriu C09. Dacă nu se reconciliază registrul, pre-check
+și gate operează pe identitatea greșită → drift garantat.
+
+### 3. LIPSEȘTE IDENTITATE_TEHNICA pentru C11
+`_system/referinte/IDENTITATE-TEHNICA.md` conține acum blocul tehnic pentru
+**C10** (hero „MĂSURA POTRIVITĂ", `nume_slug: Masuri`, input `Date_MASTER-C09`,
+output `Date_MASTER-C10`), cu doar `next_cod: C11` ca pointer. NU există bloc
+IDENTITATE_TEHNICA C11 (nume hero, slug `comparatii`, input/output, titluri,
+localStorage keys, prompt-label specific). Procedura de generare (aceeași
+referință) spune explicit: „Daca un camp lipseste → motorul OPRESTE generarea
+si cere completarea in BRAIN." Plus R-V03.40/L142: prompt-label specific, NU clonă.
 
 ---
 
-## CERERI SYSTEM
-Nicio cerere SYSTEM deschisă.
+## DEPENDENȚĂ DE SECVENȚĂ (decizie BRAIN, nu strict SYSTEM)
 
-Aștept mandat explicit separat de generare (`genereaza CNN`) ca să creez `c11/` din copy `c01/`. Nu generez artefacte până atunci.
+### C10 nu este construit
+Construcțiile livrate fizic: `c01/`-`c09/`. **`c10/` NU există** (chat-ul C10 e
+la SPEC). Pipeline-ul de identitate tehnică e single-slot și e setat acum pe C10
+(`next_cod: C11`). Două consecințe:
+- Lanțul T3 LOCKED este model→măsură→**clasament**→explicație: C11 (clasament) vine DUPĂ C10 (măsură). Generarea C11 înaintea C10 inversează secvența.
+- R-V02.14 (sumă conservată cap-coadă) cere input C11 = output C10 (`Date_MASTER-C10.xlsx`), care nu există. Cea mai recentă verigă reală e `Date_MASTER-C09.xlsx`.
+
+**Întrebare BRAIN:** generez C11 cu baseline de date `Date_MASTER-C09` (ultima
+verigă reală) și notez lacuna C10, SAU se construiește întâi C10 și abia apoi C11
+(recomandat, respectă lanțul LOCKED și pipeline-ul de identitate single-slot)?
+
+---
+
+## CERERE SYSTEM
+Construcție: C11
+Fișiere comune cerute (NU le-am atins):
+1. `_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+2. `_system/referinte/IDENTITATE-TEHNICA.md`
+
+Motiv: generarea C11 nu poate porni B1/B2/B3-compliant fără aceste actualizări.
+
+Impact: fără ele, `pre_generation_check.py 11` dă BLOCAJ și generatorul se
+oprește la lipsa IDENTITATE_TEHNICA C11.
+
+Propunere (pentru Chat SYSTEM):
+1. În `SISTEM_TRAINITY-versiuni.md`: reconciliază identitatea C11 (DATA MODEL →
+   COMPARAȚII/RANK, conform BRAIN-006), inserează cele 9 elemente SPEC înghețate
+   din `_brain/c11/BRAIN-TO-CLAUDE.md` și treci `[Status: NEGENERAT]` →
+   `[Status: INGHETAT]`.
+2. În `IDENTITATE-TEHNICA.md`: definește blocul IDENTITATE_TEHNICA C11 (hero
+   caps, `nume_slug: comparatii`, title_studiu/video, footer/topbar, localStorage
+   `trainity_c11_*`, input/output Date_MASTER, prompt-label specific C11 — nu clonă).
+3. Confirmă decizia de secvență C10↔C11 (vezi întrebarea de mai sus).
+4. Confirmă că la prima generare imaginile C11 (hero + 6 exec-stage) sunt
+   placeholdere `c01/` până le produce ARHITECT extern (Creativ abandonat V68).
+
+Execuția C11 se oprește până la decizia SYSTEM + BRAIN pe punctele de mai sus.
+
+---
+
+## CE E PREGĂTIT DE PARTEA MEA (pot porni imediat ce se deblochează)
+- SPEC C11 înghețat și internalizat (9 elemente, 6 fenomene, 8 step narrative).
+- Matrița `c01/` analizată: 18 step-titles + 18 step-actions + 2 prompturi +
+  8 final-labels + 7 payoff + 6 stage-quotes (Studiu); perechea Video/BROADCAST
+  separată. Plan COPY+MODIFY clar.
+- Post-pass de vocabular (`tu`, fără termeni școlari) pregătit ca pas obligatoriu.
+- Strategie de propagare uniformă a textului în Studiu + Editor-Studiu (string-uri
+  comune) și tratare separată a perechii Video.
