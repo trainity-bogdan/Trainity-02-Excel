@@ -25,6 +25,22 @@ Raportul spune:
 
 BRAIN acceptă direcția, dar NU trecem la Video până nu audităm companionul Editor-Studiu.
 
+## OBSERVAȚIE BRAIN DUPĂ VIZUALIZARE SCREENSHOT
+BRAIN a verificat vizual partea de sus din C09 și a semnalat o problemă de UX / consistență vizuală:
+
+Hero-ul actual nu seamănă sub nicio formă cu hero-ul din Studiu de la celelalte construcții.
+Partea de sus pare o imagine / poster, dar de fapt este un placeholder CSS introdus după eliminarea clonei C08.
+BRAIN nu a dat încă un prompt Banana / Gemini pentru generarea creativului real de hero HTML-Studiu C09.
+
+Prin urmare:
+- Nu trata placeholderul actual ca soluție finală.
+- Tratează-l ca placeholder temporar anti-clonă.
+- În audit, verifică explicit dacă placeholderul rupe consistența vizuală față de celelalte construcții.
+- Dacă rupe standardul de hero Studiu, raportează MAJOR UX, nu PASS curat.
+- Nu genera imagine nouă în acest mandat.
+- Nu modifica hero-ul în acest mandat.
+- Recomandă ce trebuie făcut: prompt Banana / Gemini pentru hero C09 sau hero CSS standardizat care respectă layout-ul celorlalte construcții.
+
 ## OBIECTIV
 Auditează complet:
 `c09/HTML-Editor-Studiu-Excel-09-Relatii.html`
@@ -37,6 +53,7 @@ Scop:
 - confirmă că exportul scoate stratul editor și livrează HTML curat.
 - confirmă că nu introduce contaminări C10/C11/C12/T4/T5.
 - confirmă că nu reintroduce hero C08 / base64 / clonă vizuală.
+- confirmă dacă hero-ul placeholder actual este acceptabil doar temporar sau produce datorie UX majoră.
 
 ## DOCUMENTE DE CITIT OBLIGATORIU
 Citește:
@@ -129,18 +146,21 @@ Verifică dacă Editor-Studiu păstrează:
 - formula fișier vs model.
 - zero formulări incorecte de tip "patru tabele" în sensul greșit.
 
-### H. Hero / anti-clonă C08
+### H. Hero / anti-clonă C08 / UX vizual
 Verifică:
 - zero base64 C08.
 - placeholder RELAȚII prezent.
 - nu există imagine externă.
 - nu există asset nou.
 - nu există contaminare vizuală C08.
+- dacă placeholderul actual rupe consistența cu hero-ul din Studiu de la celelalte construcții.
+- dacă lipsa unui prompt Banana / Gemini pentru hero C09 blochează livrarea finală vizuală.
 
 ### I. UX editor
 Verifică dacă panoul sus este util, clar și nu ocupă excesiv experiența.
 Verifică dacă toolbarul jos nu rupe experiența pe mobil.
 Verifică dacă locked badges sunt vizibile, dar nu distrug layout-ul.
+Verifică separat UX-ul hero placeholder, pentru că BRAIN l-a semnalat vizual ca fiind în afara standardului celorlalte construcții.
 
 ### J. Tehnic HTML / JS
 Verifică:
@@ -182,6 +202,7 @@ Rulează:
 8. verificare export curat, prin analiză cod.
 9. verificare că nu există base64 C08.
 10. verificare că nu ai modificat fișiere interzise.
+11. verificare hero placeholder vs standard hero Studiu C05-C08, raportată ca UX.
 
 ## RAPORT CERUT ÎN CLAUDE-TO-BRAIN.md
 Scrie raport complet:
@@ -196,7 +217,7 @@ Scrie raport complet:
 9. Audit reset.
 10. Audit granițe C09/C10/C11/C12/T4/T5.
 11. Audit model DATE.
-12. Audit hero / anti-clonă C08.
+12. Audit hero / anti-clonă C08 / UX vizual.
 13. Audit UX editor.
 14. Audit tehnic HTML / JS.
 15. Probleme găsite, cu severitate: BLOCKER / MAJOR / MINOR / WARN.
