@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C11 COMPARAȚII / RANK
 
 ## STATUS
-MANDAT_SYSTEM_GATE_ACTIV
+MANDAT_SYSTEM_REGULA_REPO_ACTIV
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C11.
@@ -14,59 +14,77 @@ Lucrează exclusiv pe `main`.
 Nu crea branch-uri.
 
 ## STARE CURENTĂ C11
-C11 este generată complet.
-Raport Claude: `GENERAT · GATE PASS (logic) · ZERO DRIFT · CLEAN`.
-A rămas o singură cerere SYSTEM: adăugarea identității C11 în `gate_v20.py`, ca invocarea canonică a gate-ului să funcționeze fără wrapper.
+C11 a fost raportată ca livrabilă, dar verificarea externă BRAIN a arătat că `c11/Date_MASTER-C11.xlsx` nu există fizic în repo.
+Raportul Claude nu mai este acceptat ca dovadă suficientă pentru închiderea unei construcții.
+Repo-ul este sursa de adevăr.
 
-## MANDAT C11-06 · SYSTEM FIX GATE V20 IDENTITATE C11
+## MANDAT C11-07 · SYSTEM RULE · VERIFICARE FIZICĂ REPO OBLIGATORIE
 
 ### STATUS
-MANDAT_SYSTEM_GATE_ACTIV
+MANDAT_SYSTEM_REGULA_REPO_ACTIV
 
 ### OBIECTIV
-Adaugă identitatea C11 în dicționarul hardcodat `IDENTITATI` din `_system/generatoare/gate_v20.py`, fără să modifici altceva.
+Introdu o regulă permanentă în specificațiile sistemului: nicio construcție nu poate fi declarată PASS / CLEAN / ZERO DRIFT / LIVRABIL / ÎNCHISĂ doar pe baza raportului Claude.
 
-### FIȘIER AUTORIZAT
-Ai voie să modifici strict:
-- `_system/generatoare/gate_v20.py`
+Înainte de închiderea unei construcții, trebuie verificată existența fizică în repo a tuturor artefactelor obligatorii.
+
+### MOTIV
+C11 a fost raportată ca generată complet, inclusiv cu `c11/Date_MASTER-C11.xlsx`, dar verificarea externă în GitHub a găsit doar mențiuni text, nu fișierul fizic.
+Această situație a blocat C12, care are nevoie de `Date_MASTER-C11.xlsx` ca input.
+
+### FIȘIERE SYSTEM AUTORIZATE
+Ai voie să modifici strict fișierele sistem unde sunt definite regulile operaționale active, preferabil:
+- `_system/01-REGULI-ACTIVE.md`
+- `_system/03-COMENZI-OPERATIONALE.md`, dacă este necesar pentru workflow
+- `_system/INDEX-CAUTARE.md`, dacă este necesar pentru indexarea regulii
 
 Nu modifica:
-- `CLAUDE.md`
-- `README.md`
-- `STARE-CURENTA.md`
-- `index.html`
-- alte fișiere `_system/**`
+- artefacte C11
 - alte construcții
-- fișiere din `c11/**`, cu excepția cazului în care rulezi validări care nu modifică fișiere
+- `index.html`
+- fișiere HTML / xlsx / docx / assets
 
-### MODIFICARE CERUTĂ
-În `load_identitate()`, în dicționarul `IDENTITATI`, adaugă intrarea pentru C11 între `'10'` și `'12'`:
+### REGULĂ NOUĂ DE INTRODUS
+Adaugă o regulă permanentă, cu număr nou conform convenției existente, cu sensul următor:
 
-```python
-'11': {
-    'cod': 'C11', 'nume_hero_caps_rand1': 'CINE',
-    'nume_slug': 'Comparatii',
-    'meta_val_treapta': 'RELAȚII · MĂSURI · <b>COMPARAȚII</b> · INTERPRETARE (ANALIZĂ)'
-},
-```
+`VERIFICARE FIZICĂ REPO OBLIGATORIE`
 
-### VALIDARE CERUTĂ
-După modificare:
-1. Rulează invocarea canonică:
-   `python3 _system/generatoare/gate_v20.py 11 c11/ c01/`
-2. Confirmă PASS.
-3. Rulează `audit_sync.py` dacă este permis.
-4. Confirmă că C11 rămâne ZERO DRIFT.
+Text obligatoriu de inclus conceptual:
+
+Un artefact nu poate fi declarat `GENERAT`, `PASS`, `CLEAN`, `ZERO DRIFT`, `LIVRABIL` sau `ÎNCHIS` doar pe baza raportului Claude.
+
+Înainte de validarea finală a oricărei construcții, trebuie verificată existența fizică în repo a tuturor artefactelor obligatorii:
+- `HTML-Studiu`
+- `HTML-Editor-Studiu`
+- `HTML-Video`
+- `HTML-Editor-Video`
+- `Date_MASTER-CNN.xlsx`
+- `FILM-Excel-NN-{slug}.docx`
+- `assets/`
+
+Pentru construcțiile cu dependențe, dacă `C(N)` produce un fișier consumat de `C(N+1)`, atunci `C(N)` nu poate fi închisă până când acel fișier nu există fizic în repo.
+
+Raportul Claude nu constituie dovadă suficientă.
+Repo-ul este sursa de adevăr.
+
+### REGULĂ DE STATUS
+Dacă raportul declară un artefact creat, dar fișierul nu există fizic în repo, statusul devine:
+
+`LIVRABIL INVALIDAT · ARTEFACT LIPSĂ`
+
+și construcția trebuie redeschisă punctual pentru repararea artefactului lipsă.
+
+### APLICARE IMEDIATĂ C11
+După introducerea regulii, C11 trebuie considerată redeschisă punctual până când:
+- `c11/Date_MASTER-C11.xlsx` există fizic în repo
+- existența lui este verificată explicit
+- C12 poate consuma fișierul
 
 ### LIVRARE CERUTĂ
 Actualizează `_brain/c11/CLAUDE-TO-BRAIN.md` cu:
-- fișierul modificat
-- confirmarea că intrarea C11 a fost adăugată în `gate_v20.py`
-- rezultat gate canonic C11
-- rezultat audit C11 / audit global, cu mențiune explicită dacă există drift pe alte construcții
-- confirmarea că nu ai modificat artefactele C11
+- fișiere sistem modificate
+- numărul / numele regulii introduse
+- confirmarea că regula repo-check este salvată permanent
+- confirmarea că C11 rămâne redeschisă punctual pentru artefact lipsă
 
-### RESTRICȚII
-Nu regenera C11.
-Nu modifica HTML, xlsx, docx sau assets C11.
-Nu modifica alte construcții.
+Nu repara încă `Date_MASTER-C11.xlsx` în acest mandat. Acest mandat este doar pentru salvarea regulii în specificațiile sistemului.
