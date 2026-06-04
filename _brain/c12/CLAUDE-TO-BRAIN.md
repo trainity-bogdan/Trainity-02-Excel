@@ -1,10 +1,68 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-SYSTEM_SPEC_REGISTERED
+C12_STUDIU_GENERAT · B2_BLOCAT (artefacte lipsă + dependență C11)
 
-## MANDAT EXECUTAT (curent)
-C12-03 · SISTEM DIRECT · ÎNSCRIERE SPEC C12 — am folosit permisiunea directă de sistem
+## MANDAT EXECUTAT (curent) · C12-04 GENERARE
+Am pornit generarea C12. **HTML-Studiu generat și curat la conținut.** Gate-ul B2 NU poate trece
+încă: 3 artefacte HTML rămase + `Date_MASTER-C12.xlsx` care e **blocat în amonte de C11** (negenerat).
+Raportez blocajul, conform mandatului (nu fabric un Date_MASTER fără input C11 valid — R-V02.14 sumă conservată).
+
+### CE AM GENERAT
+- `c12/HTML-Studiu-Excel-12-Interpretare.html` (2436 linii) — COPY+MODIFY din `c10/HTML-Studiu`
+  (cap CSS/JS generic păstrat), corp narativ INTEGRAL rescris pe axa INTERPRETARE.
+- `_brain/c12/build_html_studiu_c12.py` — scriptul de build reproductibil (nu în `_system`).
+
+### IDENTITATE & NARATIV (conform SPEC_FROZEN + mandat C12-04)
+- Hero: DE CE-UL DIN DATE · întrebare „De ce?" · system-map activ = INTERPRETARE.
+- Mantra „Cifra spune cât. Explicația spune de ce." · Motto „Nu citi rezultatul. Explică-l."
+  · AHA „Nu rezultatul contează. Contează de ce apare rezultatul." · WOW + payoff = închidere T3.
+- 6 etape (REALITATE → INVESTIGAȚIE → TRANSFORMARE → VERIFICARE → STABILIZARE → CONFIRMARE),
+  18 pași pe cele 8 step-titles, 2 prompturi Copilot (citirea cauzei din model / de la rezultat la explicație verificabilă).
+- Cele 6 fenomene integrate (insight verbal, cauză citită din model, coincidență vs cauză, cauză multiplă, cauză ascunsă de agregare, explicație verificabilă).
+- Pasul 18 + completion: „Am completat analiza setului: treapta T3 este finalizată." (R-V02.7).
+- next-section → C13 (treapta T4), pentru că C12 închide T3.
+
+### GĂRZI RESPECTATE (verificat)
+- Clasamentul = INPUT citit, NU produs (zero re-ierarhizare = C11).
+- Zero dashboard/grafic (T4), zero what-if/scenarii/predicție/recomandare acțiune (T5) — reformulate
+  ca să nu declanșeze nici tier_guard_t3 (0 avertismente).
+- Zero cifre business (R-V02.15). Zero em-dash/en-dash. Zero token rezidual C10/Date_MASTER-C10.
+- Cross-contamination: 0 (referințele la construcțiile anterioare rescrise fără coduri).
+
+### VALIDĂRI RULATE
+1. `pre_generation_check.py 12` → EXIT 0 (B1 PASS: SPEC INGHETAT + IDENTITATE_TEHNICA + FENOMENE).
+2. `gate_v20.py 12 c12 c01` → GATE FAIL, dar **singura clasă de eroare = artefacte lipsă**
+   (DATA-CONTINUITY: Date_MASTER-C12 lipsă). Zero erori de identitate / cross-contaminare /
+   tier-guard / cifre pe HTML-Studiu. Livrabile prezente 1/5.
+
+### FIȘIER SISTEM ATINS (autorizat, mandat C12-03 „identitate C12" + precedent C10)
+- `_system/generatoare/gate_v20.py`: adăugat intrarea de identitate `'12'` în dicționarul intern
+  `IDENTITATI` (cod C12, slug Interpretare, meta_val_treapta). Fără ea, `gate_v20 12` dă „EROARE:
+  IDENTITATE_TEHNICA pentru C12 nu e definita" și nu rulează. Mirror exact al intrării C10 (pe care
+  BRAIN a autorizat-o explicit la C10). Append, nu am atins alte intrări.
+
+### BLOCAJE (raportate, nu forțate)
+1. **DEPENDENȚĂ C11 (critică):** `Date_MASTER-C12.xlsx` se construiește din `Date_MASTER-C11.xlsx`,
+   care NU există (C11 e la SPEC_FROZEN, încă negenerat). Nu pot produce un Date_MASTER-C12 valid
+   fără input C11 (lanțul T3 conservă suma cap-coadă, R-V02.14). **C12 nu poate fi complet până nu
+   există Date_MASTER-C11.**
+2. **Artefacte HTML rămase:** Editor-Studiu, Video, Editor-Video. Per BRAIN-016, companionii se
+   sincronizează DUPĂ stabilizarea bazei (review-ul tău pe narativul HTML-Studiu). Le generez la
+   confirmarea narativului, ca să nu le refac după feedback.
+3. **Imagini (hero + 6 exec-stage):** dependență ARHITECT extern (ca la C09). HTML-Studiu folosește
+   acum un hero placeholder SVG; îl înlocuiesc când îmi dai imaginile.
+
+### CE PROPUN (decide tu)
+- (a) Îmi confirmi/ajustezi narativul HTML-Studiu, apoi generez companionul Editor-Studiu + Video +
+  Editor-Video pe baza stabilizată; SAU
+- (b) deblochezi întâi C11 (generare → Date_MASTER-C11), ca să pot face Date_MASTER-C12 și să închid B2.
+- Recomandare: (a) în paralel cu (b). Narativul poate fi revizuit acum; Date_MASTER stă pe C11.
+
+---
+
+## ISTORIC · C12-03 SISTEM DIRECT · ÎNSCRIERE SPEC C12
+Am folosit permisiunea directă de sistem
 acordată în mandat și am înscris SPEC + identitatea C12 în fișierele de sistem strict necesare
 pentru deblocarea generării (B1). Nu am generat artefacte (fără HTML / Date_MASTER / FILM),
 nu am atins alte construcții.
