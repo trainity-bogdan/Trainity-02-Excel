@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C10 MĂSURI
 
 ## STATUS
-APPROVED_BRAIN
+HERO_NAME_FIX_REQUIRED
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C10.
@@ -15,53 +15,44 @@ Nu crea branch-uri.
 
 ---
 
-# APROBARE FINALĂ BRAIN C10
+# MANDAT BRAIN · FIX HERO NAME C10
 
-BRAIN aprobă final construcția C10 · MĂSURI.
+C10 a fost aprobat structural, dar după fixul de eliminare a H1 duplicat a apărut o problemă vizuală nouă în pagina publicată.
 
-Raportul Claude confirmă:
-- `REFINED_AFTER_BRAIN_AUDIT_AND_VISUAL_FIX · PASS`
-- hero-ul dublat a fost reparat
-- HTML-Studiu afișează titlul-întrebare o singură dată
-- HTML-Editor-Studiu este resincronizat
-- HTML-Video nu avea duplicare
-- pașii 7-12 au fost operaționalizați
-- etapa 5 a fost întărită
-- Promptul 2 a fost curățat de drift spre C11
-- delimitările C10-C11 și C10-C12 au fost întărite
-- gate_v20 PASS 5/5
-- audit_sync C10 ZERO DRIFT
-- tier_guard_t3 0 blocante
-- zero drift față de SPEC C10
+## PROBLEMĂ
 
----
+În header-ul principal / banda neagră de sus apare doar:
 
-# DECIZIE BRAIN
+**MĂSURI**
 
-C10 este aprobat ca structură, conținut, delimitare pedagogică și execuție.
+Dar numele complet al obiectului construcției, stabilit și aprobat de BRAIN, este:
 
-C10 rămâne strict pe:
-- MĂSURI
-- verb: `a defini`
-- întrebare-mamă: `Cât?`
-- hero: `MĂSURA POTRIVITĂ`
+**MĂSURA POTRIVITĂ**
 
-C10 nu include:
-- ranking
-- contribuție
-- comparație contextuală
-- ABC/Pareto
-- cauză
-- dashboard
+Această formulare trebuie să fie hero-ul vizual principal al construcției C10.
 
-Predarea către C11 este corectă.
+## CORECȚIE CERUTĂ
 
----
+În `c10/HTML-Studiu-Excel-10-Masuri.html`:
 
-# STATUS FINAL
+1. în hero/header-ul principal, înlocuiește titlul mare `MĂSURI` cu `MĂSURA POTRIVITĂ`;
+2. păstrează harta treptei cu `RELAȚII · MĂSURI · COMPARAȚII · INTERPRETARE`;
+3. păstrează întrebarea de sub hero: `Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?`;
+4. nu reintroduce H1 duplicat;
+5. aplică aceeași identitate în `HTML-Editor-Studiu`, dacă este companion 1:1;
+6. verifică `HTML-Video`: acolo hero-title trebuie să rămână `MĂSURA POTRIVITĂ`;
+7. nu modifica Date_MASTER;
+8. nu modifica SPEC-ul.
 
-APPROVED_BRAIN
+## POST-CHECK
 
-Nu mai sunt cereri BRAIN deschise pentru C10.
+După corecție:
+- rulează gate_v20 pentru C10;
+- rulează audit_sync;
+- rulează tier_guard_t3;
+- confirmă vizual că hero-ul principal este `MĂSURA POTRIVITĂ` și că titlul-întrebare nu este dublat;
+- actualizează `CLAUDE-TO-BRAIN.md`.
 
-La următorul sync, Claude C10 trebuie doar să confirme arhivarea statusului final în `CLAUDE-TO-BRAIN.md` și să nu mai modifice livrabilele C10 fără mandat nou.
+## STATUS AȘTEPTAT ÎN CLAUDE-TO-BRAIN
+
+REFINED_AFTER_HERO_NAME_FIX · PASS
