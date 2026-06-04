@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C11 COMPARAȚII / RANK
 
 ## STATUS
-MANDAT_GENERARE_ACTIV
+MANDAT_SYSTEM_ACTIV
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C11.
@@ -16,67 +16,125 @@ Execută doar în:
 
 Lucrează exclusiv pe `main`.
 Nu crea branch-uri.
-Nu modifica fișiere sistem.
 
 ## STARE CURENTĂ C11
 C11 este construcția COMPARAȚII / RANK.
 SPEC C11 este înghețat.
-Este activ mandatul de generare C11.
+Generarea C11 este blocată de precondiții sistem.
+Este activ mandatul SYSTEM pentru deblocarea precondițiilor C11.
 
-## MANDAT C11-03 · GENERARE C11
+## MANDAT C11-04 · SYSTEM FIX PENTRU DEBLOCARE C11
 
 ### STATUS
-MANDAT_GENERARE_ACTIV
+MANDAT_SYSTEM_ACTIV
 
 ### OBIECTIV
-Generează construcția C11 COMPARAȚII / RANK pe baza SPEC C11 înghețat.
+Deblochează precondițiile sistem pentru C11, fără să generezi încă artefactele C11.
 
-C11 trebuie să livreze ideea centrală:
-`Nu citi lista. Citește ierarhia.`
+Acest mandat autorizează intervenții strict necesare în fișierele sistem indicate mai jos, pentru ca C11 să fie recunoscut corect ca SPEC înghețat în arhitectura actuală.
 
-### SPEC C11 ÎNGHEȚAT
+### CONTEXT
+În raportul tău anterior ai blocat corect generarea C11 din cauza următoarelor probleme:
+1. Registrul sistem păstrează identitatea legacy `DATA MODEL` pentru C11.
+2. Registrul sistem marchează C11 ca `NEGENERAT`, deși SPEC C11 este înghețat în BRAIN.
+3. Lipsește blocul `IDENTITATE_TEHNICA` pentru C11.
+4. C10 nu este încă generat fizic, deci C11 nu trebuie generat înainte de C10.
 
-#### 1. SLUG
-`comparatii`
+### DECIZIE BRAIN
+Nu generăm C11 înainte de C10.
 
-#### 2. INTRIGA
-Datele sunt legate corect și măsurate corect. Totuși o listă de măsuri, oricât de corectă, rămâne o masă plată. Ochiul nu poate ierarhiza singur o coloană lungă de numere, iar `mare în listă` este confundat cu `important pentru rezultat`.
+C11 trebuie doar pregătit sistemic, astfel încât după livrarea C10 să poată fi generat corect.
 
-C11 face trecerea de la `avem măsuri corecte` la `știm cine contează`, de la listă plată la ierarhie clară.
+### FIȘIERE SYSTEM AUTORIZATE
+Ai voie să modifici strict următoarele fișiere:
+- `_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+- `_system/referinte/IDENTITATE-TEHNICA.md`
 
-#### 3. PROBLEMELE
-- citești lista fără să vezi cine conduce rezultatul
-- compari valori care nu sunt comparabile
-- confunzi `mare în listă` cu `important pentru rezultat`
-- tratezi toate elementele ca egale, fără ierarhie
-- reacționezi la diferențe minuscule, unde zgomotul pare semnal
-- nu vezi concentrarea, adică puțini actori duc majoritatea rezultatului
-- ignori contribuția în total
-- decizi pe baza ordinii brute, fără reper relativ
+Nu modifica alte fișiere sistem.
+Nu modifica `CLAUDE.md`.
+Nu modifica `README.md`.
+Nu modifica `STARE-CURENTA.md`.
+Nu modifica `index.html`.
+Nu modifica `_system/generatoare/**`.
+Nu modifica construcții existente.
+Nu crea `c11/` încă.
 
-#### 4. MIZA
-Transformi măsurile corecte într-o ierarhie decizională. Vezi cine duce rezultatul și cine doar apare în listă.
+### CERINȚE PENTRU `_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+Reconciliază C11 cu arhitectura actuală T3:
+- C11 nu mai este `DATA MODEL`.
+- C11 este `COMPARAȚII / RANK`.
+- C11 are verb-semnătură `a compara`.
+- C11 răspunde la întrebarea `Care?`.
+- C11 vine după C10 MĂSURI și înainte de C12 INTERPRETARE.
 
-Fără comparație, analiza rămâne plată. Cu comparație, datele capătă ierarhie.
+Inserează sau actualizează SPEC C11 cu cele 9 elemente înghețate:
+1. SLUG: `comparatii`
+2. INTRIGA: trecerea de la listă plată la ierarhie clară
+3. PROBLEMELE: lista din SPEC_FROZEN
+4. MIZA: transformi măsurile corecte într-o ierarhie decizională
+5. MANTRA: `Nu toate valorile sunt egale. Unele conduc rezultatul.`
+6. WOW: puțini actori duc majoritatea rezultatului
+7. MOTTO: `Nu citi lista. Citește ierarhia.`
+8. FENOMENE: cele 6 fenomene confirmate
+9. STEP-TITLES: cei 8 pași confirmați
 
-#### 5. MANTRA
-Nu toate valorile sunt egale. Unele conduc rezultatul.
+Marchează C11 ca SPEC înghețat / `INGHETAT`, nu ca generat.
 
-#### 6. WOW
-Într-un set cu multe elemente, de obicei o mână duce majoritatea rezultatului. Comparația corectă arată că `mult` și `important` nu sunt același lucru. Lista plată ascunde o ierarhie dură, în care câțiva actori decid totul.
+### CERINȚE PENTRU `_system/referinte/IDENTITATE-TEHNICA.md`
+Adaugă sau actualizează blocul tehnic C11.
 
-#### 7. MOTTO
-Nu citi lista. Citește ierarhia.
+Identitate minimă obligatorie:
+- cod: `C11`
+- nume: `COMPARAȚII / RANK`
+- slug: `comparatii`
+- hero: `COMPARAȚII`
+- motto: `Nu citi lista. Citește ierarhia.`
+- input: `Date_MASTER-C10.xlsx`
+- output: `Date_MASTER-C11.xlsx`
+- localStorage prefix: `trainity_c11_`
+- title studiu/video/editor adaptat pentru C11
+- prompt-label specific C11, nu clonă din C10
 
-#### 8. FENOMENE
-1. Clasamentul: ordonarea actorilor după o măsură.
-2. Diferența reală vs zgomotul: contează gap-ul dintre poziții, nu doar ordinea.
-3. Contribuția / ponderea în total: vezi cât duce fiecare actor din rezultatul global.
-4. Concentrarea Pareto / ABC: puțini actori duc majoritatea rezultatului.
-5. Comparabilitatea: compari doar ce are aceeași bază, unitate, perioadă și numitor.
-6. Reperul relativ: poziția capătă sens raportată la lider, mediană sau grup.
+Dacă formatul fișierului cere câmpuri suplimentare, completează-le coerent cu C11 și raportează exact ce ai adăugat.
 
-#### 9. STEP-TITLES
+### REGULĂ VOCABULAR ȘI ADRESARE C11
+În orice text C11 introdus în sistem, respectă:
+- adresare directă cu `tu` în textele de experiență
+- fără `cursant`
+- fără `cursantul`
+- fără `participant`
+- fără `participantul`
+- fără `elev`
+- fără `student`
+
+### DELIMITĂRI HARD
+C11 NU redefinește măsura. Măsura vine din C10.
+C11 NU explică de ce apare ierarhia. Cauza rămâne pentru C12.
+C11 NU construiește dashboard. Raportarea rămâne pentru T4.
+C11 compară actori agregați, nu etichetează rânduri individuale.
+
+### VALIDARE CERUTĂ
+După modificările SYSTEM:
+1. Rulează `pre_generation_check.py 11`, dacă este permis.
+2. Confirmă că B1 nu mai blochează SPEC C11.
+3. NU genera C11, chiar dacă pre-check trece.
+4. Actualizează `_brain/c11/CLAUDE-TO-BRAIN.md` cu raport complet.
+
+### LIVRARE CERUTĂ
+În `_brain/c11/CLAUDE-TO-BRAIN.md`, raportează:
+- fișiere sistem modificate
+- ce ai modificat în registrul sistem
+- ce ai modificat în IDENTITATE-TEHNICA
+- rezultat pre_generation_check.py 11
+- confirmarea că NU ai generat C11
+- eventuale blocaje rămase
+
+## SPEC C11 ÎNGHEȚAT, REFERINȚĂ SCURTĂ
+Slug: `comparatii`
+Motto: `Nu citi lista. Citește ierarhia.`
+Mantra: `Nu toate valorile sunt egale. Unele conduc rezultatul.`
+Fenomene: clasament, diferență reală vs zgomot, contribuție/pondere, concentrare Pareto/ABC, comparabilitate, reper relativ.
+Step titles:
 1. Confirmă măsura pe care compari
 2. Asigură comparabilitatea
 3. Așază actorii în clasament
@@ -85,91 +143,3 @@ Nu citi lista. Citește ierarhia.
 6. Identifică concentrarea
 7. Raportează poziția la reper
 8. Confirmă ierarhia decizională
-
-### REGULĂ VOCABULAR ȘI ADRESARE C11
-În HTML-Studiu și în textele de experiență se folosește adresarea directă cu `tu`.
-
-Cuvinte interzise:
-- `cursant`
-- `cursantul`
-- `participant`
-- `participantul`
-- `elev`
-- `student`
-
-Nu se folosesc formule de tip:
-- `cursantul vede`
-- `participantul înțelege`
-- `utilizatorul descoperă`
-
-Se reformulează direct:
-- `vezi`
-- `compari`
-- `confirmi`
-- `construiești`
-- `identifici`
-- `citești ierarhia`
-
-În FILM se poate folosi punctual `noi`, doar pentru ghidarea demonstrației, dar nu ca ton general de training.
-
-C11 trebuie să sune business, operațional, direct, nu școlar.
-
-### DELIMITĂRI HARD
-C11 NU redefinește măsura. Măsura vine din C10.
-C11 NU explică de ce apare ierarhia. Cauza rămâne pentru C12.
-C11 NU construiește dashboard. Raportarea rămâne pentru T4.
-C11 compară actori agregați, nu etichetează rânduri individuale.
-
-### INSTRUCȚIUNI DE GENERARE
-Generează `c11/` respectând arhitectura curentă a construcțiilor.
-Folosește matrița permisă de sistemul curent, fără să modifici matrița și fără să modifici alte construcții.
-
-După generare, aplică obligatoriu un post-copy/post-generation pass pentru:
-- eliminarea completă a cuvintelor interzise
-- adresare directă cu `tu` în HTML-Studiu și textele de experiență
-- folosirea controlată a lui `noi` doar în FILM
-- eliminarea oricărei formulări școlare
-- păstrarea delimitării C11 față de C10 și C12
-
-### VALIDĂRI OBLIGATORII
-După generare:
-1. Scanează toate fișierele C11 pentru cuvintele interzise:
-   - `cursant`
-   - `cursantul`
-   - `participant`
-   - `participantul`
-   - `elev`
-   - `student`
-2. Scanează pentru adresare indirectă de tip `utilizatorul`, `persoana`, `cel care` și reformulează direct cu `tu`, unde apare în text de experiență.
-3. Verifică să nu existe `de ce`, `explică`, `cauză`, `motiv` ca axă narativă C11. Acestea aparțin C12.
-4. Verifică să nu existe dashboard sau raportare T4 ca livrare C11.
-5. Rulează validările permise de sistem pentru C11, fără să modifici fișiere sistem.
-
-### RESTRICȚII
-Nu modifica fișiere sistem.
-Nu modifica `CLAUDE.md`.
-Nu modifica `README.md`.
-Nu modifica `STARE-CURENTA.md`.
-Nu modifica `index.html`.
-Nu modifica `_system/**`.
-Nu modifica `gate_v20.py`.
-Nu modifica `audit_sync.py`.
-Nu modifica alte construcții.
-Nu executa nimic în afara:
-- `c11/**`
-- `_brain/c11/**`
-
-Dacă apare nevoie de sistem, scrie CERERE SYSTEM în `_brain/c11/CLAUDE-TO-BRAIN.md` și oprește acea parte.
-
-### LIVRARE CERUTĂ
-Actualizează `_brain/c11/CLAUDE-TO-BRAIN.md` cu:
-- status generare
-- lista fișierelor C11 create/modificate
-- rezultat scan vocabular interzis
-- rezultat delimitări C10/C12/T4
-- rezultat validări
-- eventuale CERERI SYSTEM
-
-## REGULĂ SYSTEM
-Dacă ai nevoie de fișier comun, NU îl modifica.
-Scrie `CERERE SYSTEM` în `_brain/c11/CLAUDE-TO-BRAIN.md`.
