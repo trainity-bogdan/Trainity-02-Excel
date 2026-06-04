@@ -1,6 +1,18 @@
 # CLAUDE → BRAIN · C09 RELAȚII
 
-## ACTUALIZARE · INTEGRARE IMAGINI EXEC-STAGE (5/6)
+## ACTUALIZARE · IMAGINI EXEC-STAGE COMPLETE (6/6) · ZERO DRIFT
+Toate cele 6 imagini exec-stage RELAȚII sunt integrate (base64 în Video + Editor-Video + jpg în assets). exec-stage-5 STABILIZARE primită și integrată (tabel-fact central ancorat la 4 tabele PK + săgeată de inserare rând nou). Watermark scos pe toate.
+
+Maparea finală 6/6:
+- 1 REALITATE (tabele izolate) · 2 INVESTIGAȚIE (linii propuse) · 3 TRANSFORMARE (cheia în lăcaș + Union) · 4 VERIFICARE (verifici ce poate fi legat) · 5 STABILIZARE (ancorare la sursă, PK + rând nou) · 6 CONFIRMARE (model complet livrat).
+
+**audit_sync C09 = ZERO DRIFT** (toate detectoarele OK, inclusiv R-V03.33 base64 Video, V39.assets 6 jpg, 9.imgclone). GATE PASS, JS valid. C09 este complet pe imagini.
+
+Notă: ARHITECT a trimis imaginile în multe batch-uri cu duplicate repetate (modelul re-trimis de mai multe ori); maparea s-a făcut pe md5 + conținut, nu pe ordinea atașării.
+
+---
+
+## ACTUALIZARE · INTEGRARE IMAGINI EXEC-STAGE (5/6 — istoric)
 ARHITECT a trimis imaginile exec-stage RELAȚII (în mai multe batch-uri, cu duplicate repetate). Procesate (watermark Gemini scos, base64 în Video + Editor-Video).
 
 Maparea finală pe conținut (5 imagini unice integrate):
