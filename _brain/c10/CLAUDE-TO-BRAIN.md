@@ -1,7 +1,46 @@
 # CLAUDE → BRAIN · C10 MĂSURI
 
 ## STATUS
-GENERARE_IN_CURS · BLOCAT_B2_GATE_V20 (Date_MASTER + HTML-Studiu gata; restul setului așteaptă deblocarea gate_v20)
+GENERAT_COMPLET · TOATE GATE-URILE PASS
+
+## RAPORT FINAL GENERARE C10 (2026-06-04)
+
+Setul canonic C10 MĂSURI complet generat și validat. Toate cele 3 reguli blocante trec.
+
+### Livrabile (c10/)
+- HTML-Studiu-Excel-10-Masuri.html
+- HTML-Editor-Studiu-Excel-10-Masuri.html (companion 1:1 cu baza, BRAIN-016/019)
+- HTML-Video-Excel-10-Masuri.html (broadcast, 6 etape/18 pași)
+- HTML-Editor-Video-Excel-10-Masuri.html (companion 1:1 cu Video)
+- Date_MASTER-C10.xlsx (sumă conservată 7.986.019,38, delta 0)
+- FILM-Excel-10-Masuri.docx (script video, 6 etape HOOK→DEMO→CONTROL→REVEAL)
+- assets/ : hero-poster-excel-10-masuri.jpg + exec-stage-1..6.jpg (PLACEHOLDERE; imaginile reale = ARHITECT extern, le base64-ez la primire)
+
+### Validări (toate PASS)
+- B1 pre_generation_check 10: TOATE CHECK-URILE PASS
+- B2 gate_v20 10 c10/ c01/: GATE PASS 5/5
+- B3 audit_sync: ZERO DRIFT (C10 toate coloanele OK)
+- tier_guard_t3 c10: 0 blocante (36 avertismente benigne: clase CSS top-*, „clasament"/„explicabil" în context de predare/SPEC, false-positive „de ce")
+
+### Decizii respectate
+- Bază HTML = c09 (frate T3), confirmat de BRAIN.
+- C10 strict „a defini" (Cât?): zero ranking/contribuție/comparație contextuală (rezervate C11), zero cauză (C12), zero dashboard (T4).
+- Cele 6 fenomene SPEC mapate; predare explicită către C11.
+- R-V02.15: zero cifre business în HTML/FILM; cifrele trăiesc în Date_MASTER.
+- Hero + exec = placeholdere distincte (ne-identice cu c01, trec imgclone).
+
+### Build scripts reproductibile (în _brain/c10/, cerere relocare în #2)
+build_date_master_c10.py, build_html_studiu_c10.py, build_html_editor_studiu_c10.py,
+build_html_video_c10.py, build_html_editor_video_c10.py, build_assets_c10.py, build_film_c10.py.
+
+### Rămâne de la ARHITECT
+- Imaginile reale (hero + 6 exec-stage) pentru c10/assets/ → le procesez (watermark + base64) la primire.
+- Feedback pe conținut HTML-Studiu (livrat în chat).
+
+---
+
+## ISTORIC: BLOCAJ B2 (rezolvat)
+A fost: `gate_v20.py` dict identitate hardcodat fără C10. BRAIN a autorizat editarea minimă; am adăugat intrarea C10. B2 deblocat.
 
 ## RAPORT GENERARE C10 (2026-06-04, post-deblocare B1)
 
