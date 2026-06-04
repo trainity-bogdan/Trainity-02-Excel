@@ -907,8 +907,7 @@ def run_gate(NN, livrabile_path, pilot_dir, identitate):
         f"HTML-Editor-Video-Excel-{NN}-{nume_slug}.html",
     ]
     
-    # CELE 2 LIVRABILE NON-HTML (V19)
-    creativ_file = f"Creativ-Excel-{NN}-{nume_slug}.txt"
+    # LIVRABIL NON-HTML (V19; Creativ ABANDONAT V68: prompturile nu se mai stocheaza)
     excel_file = f"Date_MASTER-C{NN}.xlsx"  # V19: NUME NOU (era Date_MASTER-dupa-C{NN} in V18)
     
     pilot_studiu = os.path.join(pilot_dir, "HTML-Studiu-Excel-01-Structurare.html")
@@ -987,13 +986,9 @@ def run_gate(NN, livrabile_path, pilot_dir, identitate):
             'detaliu': f"Livrabilul Date_MASTER-C{NN}.xlsx OBLIGATORIU lipseste."
         })
     
-    # Verificare Creativ existent (Excel + HTML + 1 Creativ = 6 livrabile)
-    creativ_path = os.path.join(livrabile_path, creativ_file)
-    if os.path.exists(creativ_path):
-        files_present.append(creativ_file)
-    else:
-        files_missing.append(creativ_file)
-    
+    # Creativ ABANDONAT (V68): prompturile imaginilor se fac extern (ARHITECT + ChatGPT),
+    # nu se mai stocheaza in repo. Imaginile raman obligatorii in assets/ + base64 in HTML.
+
     # CLASA 7: TIER-GUARD-T3 (BRAIN-008) — activa STRICT pentru NN 09-12.
     # Modul separat tier_guard_t3; FAIL blocant intra in all_erori (=> GATE FAIL),
     # WARNING-urile se printeaza vizibil aici, fara sa blocheze. NN 01-08 = neatins.
@@ -1028,7 +1023,7 @@ def print_report(success, erori, NN, files_present, files_missing, pilot_hash=No
         print(f"Pilot C01 V12 hash: {pilot_hash}")
     print("=" * 80)
     
-    print(f"\nLivrabile prezente ({len(files_present)}/6):")
+    print(f"\nLivrabile prezente ({len(files_present)}/5):")
     for f in files_present:
         print(f"  ✓ {f}")
     if files_missing:
@@ -1131,7 +1126,7 @@ if __name__ == '__main__':
         print("Daca pilot_path lipseste, se cauta in ../pilot_C01_V12/")
         print("")
         print("V18: 6 clase verificare (cls 6 NOU: DATA-CONTINUITY).")
-        print("Livrabile asteptate: 4 HTML + 1 Creativ + 1 Date_MASTER-dupa-C{NN}.xlsx")
+        print("Livrabile asteptate: 4 HTML + 1 Date_MASTER-C{NN}.xlsx (Creativ abandonat V68)")
         sys.exit(1)
     
     NN = sys.argv[1].zfill(2)

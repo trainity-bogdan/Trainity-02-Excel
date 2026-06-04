@@ -25,8 +25,8 @@ trainity-pack-02-excel/
 ├── .gitignore
 │
 │   ├── HTML × 4
-│   ├── Date_MASTER + Creativ + FILM
-│   └── assets/                       imagini placeholder
+│   ├── Date_MASTER + FILM
+│   └── assets/                       hero + 6 imagini exec-stage
 │
 ├── _system/                          SISTEMUL
 │   ├── 00-INDEX.md ... 07-BRAND-OPERATIONAL.md
@@ -39,8 +39,8 @@ trainity-pack-02-excel/
 ├── c01/                              CONSTRUCȚIE (o singură versiune)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
 │   ├── Date_MASTER-C01.xlsx
-│   ├── Creativ + FILM
-│   └── assets/                       cele 6 imagini exec-stage ALE C01
+│   ├── FILM
+│   └── assets/                       hero + cele 6 imagini exec-stage ALE C01
 │
 ├── c02/  c03/  c04/  c05/            idem (fiecare cu assets/ proprii)
 └── (c06-c20: queue)
@@ -65,17 +65,18 @@ Fiecare construcție are **un singur set** de fișiere în `cNN/`. NU mai exist�
 
 ---
 
-## Cele 7 artefacte per construcție
+## Cele 6 artefacte per construcție
 
 1. HTML-Studiu
 2. HTML-Editor-Studiu
 3. HTML-Video (base64 inline)
 4. HTML-Editor-Video
 5. Date_MASTER-CNN.xlsx
-6. Creativ-Excel-NN-{slug}.txt
-7. FILM-Excel-NN-{slug}.docx
+6. FILM-Excel-NN-{slug}.docx
 
-Plus folder `assets/` cu cele 6 fișiere imagine exec-stage (jpg, 3:2 cinematic).
+Plus folder `assets/` cu hero-poster + cele 6 fișiere imagine exec-stage (jpg, 3:2 cinematic).
+
+**Creativ abandonat (V68):** fișierul cu prompturi de imagine nu se mai stochează. Prompturile le face ARHITECT extern (cu ChatGPT); motorul integrează doar imaginile primite în `assets/` + base64.
 
 ---
 

@@ -8,8 +8,7 @@ Acopera gaurile gasite la MEGA AUDIT C06 pe care audit_sync/gate nu le prind:
   D2. scor min-max (rescalare numerica = cuantificare C07, nu clasificare)
   D3. em/en-dash in xlsx (audit_sync scaneaza doar HTML)
   D4. XLOOKUP prezent (cele 3 functii-semnatura 06-MAP: IFS/SWITCH/XLOOKUP)
-  D5. Creativ contaminat cu termeni C05 DICTIONAR (dictionar/profilare/
-      cardinalitate/granularitate/COUNTUNIQUE)
+  D5. (RETRAS V68 - Creativ abandonat: prompturile nu se mai stocheaza)
   D6. cuvinte INTERZIS T3 in C06 (prioritar/strategic/critic/valoros)
   D7. imagini exec-stage clone byte-identice C01 (R-V59)
 
@@ -37,7 +36,6 @@ def strip_noise(t):
 
 
 html_files = sorted(glob.glob(f'{NN_DIR}/HTML-*.html'))
-creativ = glob.glob(f'{NN_DIR}/Creativ-*.txt')
 xlsx = glob.glob(f'{NN_DIR}/Date_MASTER-*.xlsx')
 
 
@@ -62,7 +60,7 @@ add('D1 refresh/flux in corp HTML', not d1bad, '; '.join(f"{a}:{b}" for a, b in 
 # whitelist: .normalize() = DOM JS, nu normalizare de date
 d2bad = []
 pat = re.compile(r'MAX\([^)]*\)\s*[-=].*?MIN\(|/\s*\(\s*MAX\(|\bnormaliz(?!e\(\))', re.I)
-for f in html_files + creativ:
+for f in html_files:
     t = read(f)
     t = re.sub(r'\.normalize\(\)', '', t)
     if pat.search(t):
@@ -90,20 +88,12 @@ missing = [k for k, v in d4.items() if v == 0]
 add('D4 functii-semnatura IFS/SWITCH/XLOOKUP', not missing,
     f"prezente={d4}" if not missing else f"LIPSA={missing} ({d4})")
 
-# --- D5. Creativ contaminat cu termeni C05 DICTIONAR ---
-c05terms = ['dictionar', 'dicționar', 'profilare', 'cardinalit', 'granularit', 'COUNTUNIQUE']
-d5bad = []
-for f in creativ:
-    t = read(f)
-    for term in c05terms:
-        if re.search('(?i)' + re.escape(term), t):
-            d5bad.append(term)
-add('D5 Creativ fara termeni C05', not d5bad, ', '.join(sorted(set(d5bad))))
+# --- D5. RETRAS V68 (Creativ abandonat: prompturile nu se mai stocheaza) ---
 
 # --- D6. cuvinte INTERZIS T3 (06-MAP anti-redrift) ---
 t3words = ['prioritar', 'prioritate', 'strategic', 'critic', 'valoros', 'irelevant']
 d6bad = []
-for f in html_files + creativ + xlsx:
+for f in html_files + xlsx:
     if f.endswith('.xlsx'):
         z = zipfile.ZipFile(f)
         t = ' '.join(z.read(n).decode('utf-8', errors='ignore')

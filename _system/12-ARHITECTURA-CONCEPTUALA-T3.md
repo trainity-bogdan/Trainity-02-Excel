@@ -48,7 +48,7 @@ Fiecare construcție CONSUMĂ output-ul precedentei. Cursantul intră cu un set 
 - **Problema:** date cunoscute dar izolate; un răspuns trăiește în mai multe tabele care nu se caută.
 - **Produce:** modelul relațional (relații 1:M active, Data Model coerent, prima citire cross-tabel).
 - **Instrumente:** Data Model, relații 1:M, cardinalitate, chei, tabele conectate, merge/join.
-- **Livrabil:** Date_MASTER-C09 (_MODEL/relații active) + 4 HTML + FILM + hero + 6 exec-stage + Creativ.
+- **Livrabil:** Date_MASTER-C09 (_MODEL/relații active) + 4 HTML + FILM + hero + 6 exec-stage. (Creativ abandonat V68: prompturile imaginilor le face ARHITECT extern.)
 - **NU are voie:** măsuri (C10), comparații (C11), explicații (C12), raportare (T4), acțiune (T5).
 - **AHA:** „Fără relații ai date. Cu relații ai răspunsuri."
 

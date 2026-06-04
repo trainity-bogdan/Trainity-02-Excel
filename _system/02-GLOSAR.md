@@ -135,13 +135,12 @@ Prima frază a construcției. Sub R-V03.X, INTRIGA a înlocuit HOOK în SPEC-uri
 Învățătură codificată numeric (L129-L155). Distilare a unei decizii arhitecturale sau a unei probleme rezolvate. Stocate în arhivă, marcate când influențează o regulă R-V03.
 
 **Livrabil canonic**
-Una dintre cele 6 piese livrate per construcție conform R-V03.47:
+Una dintre cele 5 piese livrate per construcție conform R-V03.47 (+ FILM.docx prin R-V03.58 = 6 artefacte; Creativ abandonat V68):
 1. HTML-Studiu
 2. HTML-Editor-Studiu
 3. HTML-Video
 4. HTML-Editor-Video
 5. Date_MASTER-CNN.xlsx
-6. Creativ-Excel-NN-{slug}.txt
 
 Plus 1 artefact arhivare (R-V03.58): FILM-Excel-NN.docx. Total = 7 artefacte.
 

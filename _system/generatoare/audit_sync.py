@@ -6,8 +6,8 @@ Audit empiric de sincronizare. Structura noua:
   cNN/                  o singura versiune (fara canonic/editat)
     HTML-* x4
     Date_MASTER-CNN.xlsx
-    Creativ + FILM
-    assets/             cele 6 imagini exec-stage (jpg)
+    FILM
+    assets/             cele 6 imagini exec-stage (jpg) + hero (Creativ abandonat V68)
 
 Usage:
     python3 _system/generatoare/audit_sync.py
@@ -87,7 +87,6 @@ def _r0347(folder):
         f'HTML-Video-Excel-{nn}-*.html',
         f'HTML-Editor-Video-Excel-{nn}-*.html',
         f'Date_MASTER-C{nn}.xlsx',
-        f'Creativ-Excel-{nn}-*.txt',
     ]
     return all(glob.glob(os.path.join(folder, p)) for p in patterns)
 

@@ -63,8 +63,9 @@ LIVRABILE GENERATE AUTOMAT (6):
 4. HTML-Editor-Studiu-Excel-NN-Nume.html
 5. HTML-Video-Excel-NN-Nume.html (base64 inline)
 6. HTML-Editor-Video-Excel-NN-Nume.html (base64 inline)
-7. Creativ-Excel-NN-Nume.txt (prompturi Banana 2 pentru imaginile
-   exec-stage)
+
+(Creativ abandonat V68: prompturile imaginilor exec-stage le face ARHITECT
+ extern, cu ChatGPT; nu se mai generează/stochează ca fișier.)
 
 LIVRABIL EXTERN (1, produs cu OBS):
 - FILM-Excel-NN-Nume.mp4

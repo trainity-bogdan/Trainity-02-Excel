@@ -38,7 +38,7 @@ Termenii canonici care **trebuie** folosiți peste tot în sistem:
 
 ### Vocabular INTERZIS
 
-Termenii care **NU pot apărea** în HTML, FILM, Creativ, prompturi:
+Termenii care **NU pot apărea** în HTML, FILM, prompturi:
 
 | Termen | De ce interzis |
 |---|---|
@@ -83,12 +83,6 @@ Termenii care **NU pot apărea** în HTML, FILM, Creativ, prompturi:
   > "Nu reconstruiesc. Fac controlabil."
 
 **Diferență canonică (R-V03.4):** Studiu = cockpit operativ → tu execuți. Video = broadcast narativ → noi observăm împreună.
-
-### În Creativ.txt
-
-- **Voce**: rețetă creativă pentru Bogdan
-- **Conține**: HOOK, MIZA, MANTRA, WOW, MOTTO, schemă scenă, ritm cinematic
-- **Funcție**: ghid pentru recordare voice-over
 
 ### În FILM.docx
 

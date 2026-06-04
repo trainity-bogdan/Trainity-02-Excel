@@ -57,8 +57,8 @@ Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bog
 ├── .gitignore                        config git
 │
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
-│   ├── Date_MASTER + Creativ + FILM
-│   └── assets/                       imagini placeholder
+│   ├── Date_MASTER + FILM
+│   └── assets/                       hero + 6 imagini exec-stage
 │
 ├── _system/                          SISTEMUL
 │   ├── 00-INDEX.md                   (acest fișier)
@@ -105,8 +105,8 @@ Trainity-02-Excel/                    (git repo, remote: github.com/trainity-bog
 ├── c01/                              CONSTRUCȚIE (o singură versiune V39+)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
 │   ├── Date_MASTER-C01.xlsx
-│   ├── Creativ + FILM
-│   └── assets/                       6 imagini exec-stage SPECIFICE C01 (jpg, 3:2 cinematic)
+│   ├── FILM
+│   └── assets/                       hero + 6 imagini exec-stage SPECIFICE C01 (jpg, 3:2 cinematic)
 │
 ├── c02/  c03/  c04/  c05/            idem (fiecare cu assets/ proprii)
 └── (c06-c20: queue)

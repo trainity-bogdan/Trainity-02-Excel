@@ -83,7 +83,7 @@ Setul actual (`Vanzari`) are: `judet`, `cota_tva`, `data_factura`, `client_nume`
 - Anomalii plantate per fenomen, în proporții realiste; `status_validare` + `motiv_anomalie` ca output.
 
 ## 11. ARTEFACTE LA IMPLEMENTARE (nu acum)
-4 HTML (Studiu/Editor-Studiu/Video/Editor-Video) · FILM · Date_MASTER-C02 (rescris cu cele 5 anomalii) · hero dedicat (prompt Banana) · 6 exec-stage · Creativ.
+4 HTML (Studiu/Editor-Studiu/Video/Editor-Video) · FILM · Date_MASTER-C02 (rescris cu cele 5 anomalii) · hero dedicat + 6 exec-stage (prompturi făcute extern de ARHITECT; Creativ abandonat V68).
 
 ---
 

@@ -264,12 +264,13 @@ Chat-ul CONSTRUCȚIE NN livrează **câte un fișier per mesaj** în
 ordinea fixă (de la mic la mare ca size context):
 
 1. `Date_MASTER-C{NN}.xlsx` (~170 KB)
-2. `Creativ-Excel-{NN}-{slug}.txt` (~25 KB)
-3. `HTML-Studiu-Excel-{NN}-{slug}.html` (~80 KB)
-4. `HTML-Editor-Studiu-Excel-{NN}-{slug}.html` (~90 KB)
-5. `HTML-Video-Excel-{NN}-{slug}.html` (~800 KB)
-6. `HTML-Editor-Video-Excel-{NN}-{slug}.html` (~800 KB)
-7. Gate v20 rulat + verdict + offer `checkout constructie`
+2. `HTML-Studiu-Excel-{NN}-{slug}.html` (~80 KB)
+3. `HTML-Editor-Studiu-Excel-{NN}-{slug}.html` (~90 KB)
+4. `HTML-Video-Excel-{NN}-{slug}.html` (~800 KB)
+5. `HTML-Editor-Video-Excel-{NN}-{slug}.html` (~800 KB)
+6. Gate v20 rulat + verdict + offer `checkout constructie`
+
+(Creativ abandonat V68: prompturile imaginilor le face ARHITECT extern, nu se mai livrează ca fișier.)
 
 După fiecare livrare, motor confirmă scurt:
 > *"Livrat: {nume_fisier}. Continui cu {N+1}/6 ({urmator})."*

@@ -21,7 +21,6 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - nume_slug: Structurare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C01.xlsx
-- creativ_filename: Creativ-Excel-01-Structurare.txt
 - meta_val_treapta: <b>STRUCTURARE</b> · MARCARE · AUDITARE · NORMALIZARE (SCANARE)
 - next_cod: C02
 - next_nume_title: Marcare
@@ -49,7 +48,6 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - nume_slug: Marcare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C02.xlsx
-- creativ_filename: Creativ-Excel-02-Marcare.txt
 - meta_val_treapta: STRUCTURARE · <b>MARCARE</b> · AUDITARE · NORMALIZARE (SCANARE)
 - next_cod: C03
 - next_nume_title: Auditarea datelor
@@ -77,7 +75,6 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - nume_slug: Auditare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C03.xlsx
-- creativ_filename: Creativ-Excel-03-Auditare.txt
 - meta_val_treapta: STRUCTURARE · MARCARE · <b>AUDITARE</b> · NORMALIZARE (SCANARE)
 - next_cod: C04
 - next_nume_title: Normalizarea datelor
@@ -105,7 +102,6 @@ pentru toate construc,tiile, NU Date-Input/Date-Output separate).
 - nume_slug: Normalizare
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C04.xlsx
-- creativ_filename: Creativ-Excel-04-Normalizare.txt
 - meta_val_treapta: STRUCTURARE · MARCARE · AUDITARE · <b>NORMALIZARE</b> (SCANARE)
 - next_cod: C05
 - next_nume_title: (per SPEC C05, T2)
@@ -140,7 +136,6 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nume_slug: Dictionar
 - input_filename: Date_MASTER-initial.xlsx
 - output_filename: Date_MASTER-C05.xlsx
-- creativ_filename: Creativ-Excel-05-Dictionar.txt
 - meta_val_treapta: <b>DICȚIONAR</b> · CLASIFICARE · DATARE · CARTOGRAFIERE (CUNOAȘTERE)
 - next_cod: C06
 - next_nume_title: Clasificare
@@ -168,7 +163,6 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nume_slug: Clasificare
 - input_filename: Date_MASTER-C05.xlsx
 - output_filename: Date_MASTER-C06.xlsx
-- creativ_filename: Creativ-Excel-06-Clasificare.txt
 - meta_val_treapta: DICȚIONAR · <b>CLASIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)
 - next_cod: C07
 - next_nume_title: Datare
@@ -196,7 +190,6 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nume_slug: Datare
 - input_filename: Date_MASTER-C06.xlsx
 - output_filename: Date_MASTER-C07.xlsx
-- creativ_filename: Creativ-Excel-07-Datare.txt
 - meta_val_treapta: CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · TIPIZARE (CUNOAȘTERE)
 - next_cod: C08
 - next_nume_title: Tipizare
@@ -224,7 +217,6 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nume_slug: Cartografiere
 - input_filename: Date_MASTER-C07.xlsx
 - output_filename: Date_MASTER-C08.xlsx
-- creativ_filename: Creativ-Excel-08-Cartografiere.txt
 - meta_val_treapta: CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)
 - next_cod: C09
 - next_nume_title: Relații

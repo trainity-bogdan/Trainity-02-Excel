@@ -120,9 +120,9 @@ Toți termenii, conceptele, regulile, comenzile și scripturile sortate alfabeti
 - `_system/07-BRAND-OPERATIONAL.md` secțiune "Cover-header"
 - Detector empiric: audit_sync.py `_r0360`
 
-**Creativ.txt**
-- `_system/04-ARHITECTURA-LIVRABILE.md` (livrabil #6)
-- Format: narativă creativă per construcție
+**Creativ.txt** — ABANDONAT (V68)
+- Nu mai e artefact stocat. Prompturile imaginilor le face ARHITECT extern (cu ChatGPT); motorul nu mai stochează prompturi, doar integrează imaginile primite în `assets/` + base64.
+- Vezi `_system/04-ARHITECTURA-LIVRABILE.md` (secțiunea „Creativ ABANDONAT").
 
 **cuvinte interzise**
 - R-V02.11 în `_system/01-REGULI-ACTIVE.md` §B

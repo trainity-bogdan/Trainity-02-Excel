@@ -25,8 +25,8 @@ Motorul face:
 3. Citește `c01/` ca referință (cobai)
 4. Aplică COPY+MODIFY pe cele 4 HTML-uri
 5. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx`
-6. Generează Creativ-Excel-NN-{slug}.txt + FILM-Excel-NN-{slug}.docx
-7. Copiază 6 imagini jpg placeholder în `cNN/assets/`
+6. Generează FILM-Excel-NN-{slug}.docx (Creativ abandonat V68: prompturile imaginilor le face ARHITECT extern, nu se stochează)
+7. Integrează imaginile (hero + 6 exec-stage) primite de la ARHITECT în `cNN/assets/` + base64
 8. Scrie totul în `cNN/`
 9. Rulează `audit_sync.py` → confirmă zero drift
 10. Rulează `gate_v20.py NN cNN c01` → PASS

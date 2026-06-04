@@ -6,9 +6,9 @@ Schema canonică a artefactelor per construcție. Sursă: R-V03.47 + R-V03.58 + 
 
 ---
 
-## Cele 7 artefacte canonice per construcție
+## Cele 6 artefacte canonice per construcție
 
-Fiecare folder `cNN/` conține următoarele 7 fișiere + folderul `assets/`:
+Fiecare folder `cNN/` conține următoarele 6 fișiere + folderul `assets/`:
 
 | # | Fișier | Rol funcțional | Format |
 |---|---|---|---|
@@ -17,10 +17,11 @@ Fiecare folder `cNN/` conține următoarele 7 fișiere + folderul `assets/`:
 | 3 | `HTML-Video-Excel-NN-{slug}.html` | Film cinematic — 6 etape, prompturi, slide-uri, imagini base64 inline | HTML self-contained ~800KB |
 | 4 | `HTML-Editor-Video-Excel-NN-{slug}.html` | Variantă editabilă a filmului — toolbar EXPORT | HTML self-contained ~810KB |
 | 5 | `Date_MASTER-CNN.xlsx` | Fișier Excel unificat — sheet-uri input (cu fenomene) + output (curățate) + dicționar | XLSX |
-| 6 | `Creativ-Excel-NN-{slug}.txt` | Narativa creativă a construcției — voce trainer, identitate cinematică | TXT |
-| 7 | `FILM-Excel-NN-{slug}.docx` | Script video procedural cinematic ~150 paragrafe pentru OBS recording | DOCX |
+| 6 | `FILM-Excel-NN-{slug}.docx` | Script video procedural cinematic ~150 paragrafe pentru OBS recording | DOCX |
 
-Plus folderul `cNN/assets/` cu 6 imagini exec-stage (jpg, 3:2 cinematic), **specifice axei construcției**.
+Plus folderul `cNN/assets/` cu hero-poster + 6 imagini exec-stage (jpg, 3:2 cinematic), **specifice axei construcției**.
+
+**Creativ ABANDONAT (V68):** fișierul `Creativ-Excel-*.txt` (narativa + prompturile de imagine) nu mai e artefact stocat. Prompturile pentru imagini le face ARHITECT extern (cu ChatGPT). Motorul **NU mai stochează prompturi**; știe doar că imaginile (hero + 6 exec-stage) trebuie produse, primite de la ARHITECT, curățate de watermark și integrate în `assets/` + base64 în HTML.
 
 ---
 
@@ -33,7 +34,6 @@ cNN/
 ├── HTML-Video-Excel-NN-{slug}.html
 ├── HTML-Editor-Video-Excel-NN-{slug}.html
 ├── Date_MASTER-CNN.xlsx
-├── Creativ-Excel-NN-{slug}.txt
 ├── FILM-Excel-NN-{slug}.docx
 └── assets/
     ├── exec-stage-1.jpg
@@ -63,7 +63,6 @@ c01/   (construcția de referință / cobai)
 ├── HTML-Video-Excel-01-Structurare.html
 ├── HTML-Editor-Video-Excel-01-Structurare.html
 ├── Date_MASTER-C01.xlsx
-├── Creativ-Excel-01-Structurare.txt
 ├── FILM-Excel-01-Structurare.docx
 └── assets/                                   ← 6 imagini exec-stage jpg
 ```
@@ -72,7 +71,7 @@ c01/   (construcția de referință / cobai)
 1. Citește `c01/` ca referință
 2. Aplică COPY+MODIFY (text/identitate per CNN, păstrează CSS/JS/structura)
 3. Generează Date_MASTER-CNN.xlsx pornind de la `_system/referinte/Date_MASTER-initial.xlsx`
-4. Generează Creativ + FILM pe SPEC CNN
+4. Generează FILM pe SPEC CNN (imaginile: prompturi făcute extern de ARHITECT, nu se stochează)
 5. Scrie în `cNN/`
 6. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
 7. Gate v20 → confirmare PASS
@@ -166,10 +165,9 @@ La comanda `genereaza CNN`:
 1. Motor citește `c01/` (referință/cobai)
 2. Aplică COPY+MODIFY pe HTML-Studiu, HTML-Editor-Studiu, HTML-Video, HTML-Editor-Video → conținut specific CNN
 3. Generează Date_MASTER-CNN.xlsx din `_system/referinte/Date_MASTER-initial.xlsx` + SPEC CNN (schema sheet-uri input/output)
-4. Generează Creativ-Excel-NN-{slug}.txt din SPEC narativ
-5. Generează FILM-Excel-NN-{slug}.docx prin sablon + completare cu specificul CNN
-6. Copiază/generează 6 imagini exec-stage jpg în `cNN/assets/` (placeholder din c01/assets inițial; ARHITECT regenerează cu Banana 2 specifice axei)
-7. Scrie în `cNN/` (un singur folder)
-8. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
-9. Gate v20 → confirmare PASS
-10. Commit Git unic cu mesaj clar
+4. Generează FILM-Excel-NN-{slug}.docx prin sablon + completare cu specificul CNN
+5. Integrează imaginile (hero + 6 exec-stage) în `cNN/assets/` + base64 în HTML — primite de la ARHITECT (prompturile le face el extern cu ChatGPT; motorul nu stochează prompturi)
+6. Scrie în `cNN/` (un singur folder)
+7. Audit empiric (audit_sync.py) → confirmare ZERO DRIFT
+8. Gate v20 → confirmare PASS
+9. Commit Git unic cu mesaj clar

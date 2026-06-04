@@ -41,12 +41,12 @@ La `consolideaza brain` / incrementare V, motor creează tag git anotat `v{N}` c
 **Istoric:** pre-V40 arhive zip OUT-V{N}.zip; V40 a încercat folder snapshots `_system/snapshots/V{N}_AAAALLZZ/` bazat pe presupunerea greșită OneDrive; V41 revine la git tag (idiomatic).
 
 ## R-V01.2 · LIVRARE TOATE ODATĂ
-**Status:** ACTIVĂ permanentă (EXTINSĂ V04 la 7 artefacte, V30 la includere FILM+assets)
-La livrarea unei construcții, toate cele 7 artefacte trebuie generate și verificate înainte de present_files. Niciodată parțial.
+**Status:** ACTIVĂ permanentă (EXTINSĂ V04 la 7 artefacte, V30 FILM+assets; REDUSĂ V68 la 6 artefacte — Creativ abandonat)
+La livrarea unei construcții, toate cele 6 artefacte trebuie generate și verificate înainte de present_files. Niciodată parțial. (Creativ-Excel-*.txt nu mai e artefact: prompturile imaginilor se fac extern de ARHITECT, nu se stochează.)
 
 ## R-V01.3 · EDITABIL = LIVRABIL CANONIC AUTOMAT
 **Status:** ACTIVĂ permanentă
-HTML-Editor-Studiu și HTML-Editor-Video sunt parte din cele 7 livrabile canonice, nu accesorii.
+HTML-Editor-Studiu și HTML-Editor-Video sunt parte din cele 6 livrabile canonice, nu accesorii.
 
 ## R-V01.5 · CHECK-IN CONSTRUCȚIE SIMULTAN
 **Status:** ABSORBITĂ în R-V03.51 (acceptarea check-in implicit la generare directă)
@@ -88,8 +88,8 @@ Generatoarele pentru C02-C20 sunt clone-modificate ale generatorului pilot C01 V
 La ultima construcție din fiecare treaptă (C04, C08, C12, C16, C20), HTML-ul include vocabular care închide pedagogic treapta ("am completat treapta SCAN", "am cunoscut setul cap-coadă", etc.).
 
 ## R-V02.9 · NUMĂR PROMPTURI COPILOT = COUNT FIZIC
-**Status:** ACTIVĂ permanentă
-Gate v20 verifică: `count(.prompt-box) în HTML-Studiu == count în Creativ.txt`. Niciodată un prompt nu poate fi inventat sau pierdut.
+**Status:** ACTIVĂ permanentă (REFORMULATĂ V68 — Creativ abandonat)
+Gate v20 verifică consistența prompturilor AI direct în livrabilele HTML (prompt-text toleranță zero, prompt-label cu schelet comun). Niciodată un prompt nu poate fi inventat sau pierdut. (Referința la Creativ.txt a fost retrasă: prompturile nu se mai stochează separat.)
 
 ## R-V02.11 · CUVINTE INTERZISE CU CONTEXT AWARENESS
 **Status:** ACTIVĂ permanentă
@@ -113,11 +113,11 @@ NICIODATĂ cifre absolute de business în HTML-Studiu, HTML-Video, FILM.docx. To
 
 ## R-V03.1 · HTML-VIDEO = LIVRABIL CANONIC AL 3-LEA
 **Status:** ABSORBITĂ în R-V03.47 (schema unificată)
-HTML-Video este unul dintre cele 7 artefacte canonice (nu accesoriu).
+HTML-Video este unul dintre cele 6 artefacte canonice (nu accesoriu).
 
-## R-V03.2 · GENERATORUL PRODUCE 7 LIVRABILE
-**Status:** ABSORBITĂ în R-V03.47 (extinsă V05 → 8 → V30 → 7+1 = 7 canonice + FILM)
-La final cifra canonică e 7 (din care 1 e FILM.docx adăugat prin R-V03.58).
+## R-V03.2 · GENERATORUL PRODUCE 6 LIVRABILE
+**Status:** ABSORBITĂ în R-V03.47 (extinsă V05 → 8 → V30 → 7; REDUSĂ V68 → 6, Creativ abandonat)
+La final cifra canonică e 6 (4 HTML + Date_MASTER + FILM.docx prin R-V03.58).
 
 ## R-V03.3 · HTML-VIDEO-EDITABIL = LIVRABIL CANONIC AL 4-LEA
 **Status:** ABSORBITĂ în R-V03.47
@@ -272,8 +272,8 @@ Rezumat:
 
 ## R-V03.58 · ARHIVARE EXTINSĂ — FILM + ASSETS
 **Status:** ACTIVĂ permanentă (V30, retroactiv aplicat V38)
-Cele 7 artefacte includ:
-- 6 livrabile cursant (R-V03.47: HTML × 4 + Date_MASTER + Creativ)
+Cele 6 artefacte includ (V68, Creativ abandonat):
+- 5 livrabile cursant (R-V03.47: HTML × 4 + Date_MASTER)
 - 1 artefact arhivare: `FILM-Excel-NN-{slug}.docx`
 
 Asset-urile cinematic (6 imagini exec-stage jpg per construcție, V39+) sunt în `cNN/assets/`, **diferite per axă** (regula R-V39.assets). Schema veche `_system/referinte/assets_canonice/` cu poze partajate — eliminată V39.

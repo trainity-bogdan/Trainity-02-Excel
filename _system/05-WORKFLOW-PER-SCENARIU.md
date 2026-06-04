@@ -67,9 +67,9 @@ Procedeul SPEC FREEZING (R-V03.56) cu format grilă A/B/C per element. Confirmar
 
 6. **Generez `Date_MASTER-C06.xlsx`** din `_system/referinte/Date_MASTER-initial.xlsx`
 
-7. **Generez `Creativ-Excel-06-{slug}.txt`** și **`FILM-Excel-06-{slug}.docx`**
+7. **Generez `FILM-Excel-06-{slug}.docx`** (Creativ abandonat V68: prompturile imaginilor le face ARHITECT extern, nu se stochează)
 
-8. **Copiez 6 imagini jpg placeholder** din `c01/assets/` în `c06/assets/`
+8. **Integrez imaginile (hero + 6 exec-stage)** primite de la ARHITECT în `c06/assets/` + base64 în HTML
 
 9. **Scriu toate în `c06/`** (un singur folder, fără canonic/editat)
 

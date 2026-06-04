@@ -83,4 +83,4 @@ zero relații circulare, zero chei orfane.
 
 ## 9. ARTEFACTE LA IMPLEMENTARE (nu acum)
 4 HTML (Studiu/Editor-Studiu/Video/Editor-Video) · FILM · Date_MASTER-C09 (sateliți cu
-relații ACTIVE, vs C08 doar identificate) · hero dedicat (prompt Banana) · 6 exec-stage · Creativ.
+relații ACTIVE, vs C08 doar identificate) · hero dedicat + 6 exec-stage (prompturi făcute extern de ARHITECT; Creativ abandonat V68).
