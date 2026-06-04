@@ -1,7 +1,109 @@
 # CLAUDE → BRAIN · C12 INTERPRETARE
 
 ## STATUS
-C12_AUDIT_MAMUT_DONE
+T3_AUDIT_COMPLET_DONE
+
+## MANDAT T3-01 · AUDIT TRANSVERSAL C09-C12 — RAPORT (read-only, zero patch-uri)
+Audit complet pe toată treapta T3. Nu am modificat niciun fișier (mandatul cere doar raportare).
+Nu am atins Bible §T3, index.html, nicio construcție.
+
+### 1. SINCRONIZARE
+Repo la zi, working tree **CLEAN**. HEAD = origin/main = `4c4b883`.
+
+### 2. ARTEFACTE (6 livrabile + assets per construcție)
+| | DM | Studiu | Ed-Studiu | Video | Ed-Video | FILM | assets |
+|---|---|---|---|---|---|---|---|
+| C09 | OK | OK | OK | OK | OK | OK | 7 (hero+6) |
+| C10 | OK | OK | OK | OK | OK | OK | 7 (hero+6) |
+| C11 | OK | OK | OK | OK | OK | OK | 7 (hero+6) |
+| C12 | OK | OK | OK | OK | OK | OK | **0 (lipsă)** |
+
+### 3. CHECKS SISTEM
+- `gate_v20`: C09 **PASS** · C10 **PASS** · C11 **PASS** · C12 **PASS** (toate 5/5 livrabile).
+- `pre_generation_check`: C10/C11/C12 **PASS**; **C09 FAIL** → „R-V03.55 BLOCAJ: SPEC C09 ESTE NEGENERAT"
+  (registrul SPEC C09 e stale; vezi M-2). C09 e totuși construit integral + gate PASS.
+- `audit_sync`: C09/C10/C11 **OK complet**; C12 = **o singură celulă XX (`V39.assets`)**. Drift global = 1 celulă, 0 ERR.
+
+### 4. CONTINUITATE DATE_MASTER (C08 → C12)
+Suma Vanzari = **7.986.019,38 conservată la fiecare trecere, delta 0.00** (R-V02.14 integrală):
+| Trecere | Foi noi | Foi pierdute | Δ sumă |
+|---|---|---|---|
+| C08→C09 | START, Regiuni, Calendar, Relatii_Model | foile descriptive C08 (_README/_ECOSISTEM/_CHEI/_ROLURI/_CAMPURI_EXTERNE/CONTROL_FINAL) | 0.00 |
+| C09→C10 | Masuri, Masuri_Context | Relatii_Model (vezi L-1) | 0.00 |
+| C10→C11 | Comparatii | — | 0.00 |
+| C11→C12 | Interpretare | — | 0.00 |
+Fără pierderi de date, fără drift de sumă. Tranziția C08→C09 = restructurare normală T2→T3.
+
+### 5. IDENTITATE CONCEPTUALĂ (distinctă, fără suprapunere)
+- C09 RELAȚII · `a lega` · „Ce pot întreba?" — model interogabil, NU măsuri. OK
+- C10 MĂSURI · `a defini` · „Cât?" — definește măsuri, NU clasamente. OK
+- C11 COMPARAȚII · `a compara` · „Care?" — clasament/ABC, NU cauză. OK
+- C12 INTERPRETARE · `a explica` · „De ce?" — explică, NU re-ierarhizează, NU recomandă. OK
+Fiecare hero distinct; verbele de treaptă nu se contaminează (validat și de tier_guard_t3 în gate, 0 erori).
+
+### 6. GRANIȚE T3/T4/T5
+Pe toate C09-C12, în text vizibil: **fără dashboard / cockpit / raport vizual / grafic publicabil
+(T4); fără what-if / scenarii / predicție / recomandare acțiune (T5)**. C12 închide T3 explicit.
+(Termenii T5 apar doar ca negații de gardă în prompturile C12, reformulate să nu declanșeze tier-guard.)
+
+### 7. HTML + FILM TRANSVERSAL
+- **em-dash / en-dash: 0 / 0** pe toate HTML-urile și FILM-urile T3.
+- **Cifre business în HTML: 0** peste tot (R-V02.15 respectată în toate cele 16 HTML-uri).
+- Tokeni vechi/abandonați (KPI/FILTER CONTEXT/PRIORITIZARE/EXPLORAREA DATELOR) în text vizibil: **0**.
+- Consistență Studiu↔Editor↔Video↔FILM: OK pe fiecare construcție.
+- **EXCEPȚIE (vezi H-1): `c11/FILM-Excel-11-Comparatii.docx` conține suma business explicită
+  „7.986.019,38 lei" (și scrisă în litere) — încalcă R-V02.15.** Gate_v20 nu auditează FILM-ul,
+  de aceea a trecut neobservat. C09/C10/C12 FILM = curate.
+
+### 8. PEDAGOGIC (lanț progresiv)
+- după C09 → cursantul poate **întreba** modelul (relații activate). OK
+- după C10 → poate **calcula controlat** (măsuri cu bază + reper). OK
+- după C11 → poate **compara** corect (clasament/contribuție/ABC). OK
+- după C12 → poate **explica** rezultatul (cauză citită din model). OK
+Progresie curată model→măsură→clasament→explicație. Fără salturi, fără redundanțe, fără goluri.
+C12 ancorează corect input-ul (model+măsuri+clasament) înainte de a explica.
+
+### 9. ASSETS T3
+- C09, C10, C11: `assets/` complet (hero-poster + exec-stage-1..6 = 7 fișiere fiecare).
+- C12: `assets/` **inexistent** (hero + 6 exec lipsesc).
+- **Lipsa imaginilor C12 este SINGURUL drift din audit_sync pe toată treapta T3.**
+
+### 10. VERDICT FINAL T3
+- **TECHNICAL: PASS** (4/4 gate PASS, toate artefactele prezente; C09 pre_gen FAIL = lag registru, non-blocant pentru livrabilul existent).
+- **DATA CONTINUITY: PASS** (sumă conservată cap-coadă C08→C12, delta 0.0, zero pierderi de date).
+- **CONTENT: PASS CU O EXCEPȚIE** (totul curat, mai puțin H-1: suma business în FILM C11).
+- **PEDAGOGICAL: PASS** (lanț progresiv coerent, identități distincte).
+- **RELEASE READINESS: PASS CU REZERVE** (C12 fără imagini; C11 FILM necesită curățare R-V02.15).
+
+#### Issues
+- **Critical:** niciuna.
+- **High:** [H-1] `c11/FILM-Excel-11-Comparatii.docx` conține „7.986.019,38 lei" (cifră business explicită,
+  inclusiv în litere) → încalcă invariantul R-V02.15. Izolat la FILM-ul C11 (HTML-urile C11 sunt curate).
+- **Medium:**
+  - [M-1] `c12/assets/` lipsește (hero + 6 exec). Dependență ARHITECT.
+  - [M-2] SPEC C09 în registrul de sistem = `NEGENERAT` (pre_gen 9 FAIL). Lag retroactiv: C09 e livrat
+    + gate PASS, dar B1/regenerarea ar bloca. Aceeași sincronizare retroactivă ca la C10/C11.
+- **Low:**
+  - [L-1] C09→C10 a renunțat la foaia `Relatii_Model` (relațiile trăiesc în Data Model, nu ca foaie vizibilă) — de confirmat că e intenționat.
+  - [L-2] „KPI" apare în blob-uri base64 inerte din Video C09/C11/C12 (invizibil, ignorat de gate).
+  - [L-3] `_brain/c12/CHAT-CONTEXT.md` încă scrie identitatea veche „KPI / FILTER CONTEXT".
+
+#### Recomandări de reparație (NU aplicate)
+- H-1: rescrie pasajele din FILM C11 fără suma explicită (referință generică „suma de control", fără cifră/„lei").
+- M-2: înscrie SPEC C09 + IDENTITATE_TEHNICA C09 în registrul de sistem (ca la C10/C11).
+
+#### Ce depinde de ARHITECT
+- Cele 6 imagini exec + hero-poster C12 (M-1).
+
+#### Ce poate repara Claude prin mandat separat
+- H-1 (FILM C11) — dar e construcția C11, necesită mandat în chat-ul C11 (nu C12).
+- M-2 (registru C09) — fișier sistem, necesită mandat explicit.
+- L-3 (CHAT-CONTEXT C12) — cosmetic, în scopul C12.
+
+---
+
+## ISTORIC · C12-06 AUDIT MAMUT C12
+Status anterior: C12_AUDIT_MAMUT_DONE
 
 ## MANDAT C12-06 · AUDIT MAMUT — RAPORT (doar verificare, zero patch-uri)
 Audit exhaustiv pe C12. Nu am modificat niciun fișier C12 (mandatul cere doar raportare).
