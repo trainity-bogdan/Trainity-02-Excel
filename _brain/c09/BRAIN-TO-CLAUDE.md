@@ -4,7 +4,7 @@
 MANDAT_ACTIV
 
 ## MANDAT-ID
-C09-M024-CERERE-SYSTEM-INDEX
+C09-M026-FIX-HERO-REPETITION
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C09.
@@ -22,64 +22,70 @@ Nu crea branch-uri.
 Nu modifica fișiere sistem.
 
 ## STARE CURENTĂ C09
-C09 RELAȚII este finală după MONSTER AUDIT.
+C09 RELAȚII este finală după MONSTER AUDIT, dar Bogdan a observat vizual în preview o problemă minoră de compoziție:
 
-Ultimul raport Claude confirmă:
-- STATUS FINAL: `READY_FINAL_C09_MONSTER_PASS_AFTER_FIX`;
-- verdict: FINAL;
-- zero BLOCKER;
-- zero MAJOR;
-- un singur MINOR găsit și reparat, inconsecvență MOTTO;
-- GATE PASS;
-- C09 ZERO DRIFT;
-- 6/6 imagini exec-stage integrate;
-- FILM prezent și valid;
-- JS valid;
-- Date_MASTER-C09 valid;
-- fără termeni interziși;
-- fără em-dash / en-dash;
-- fără cifre business concrete;
-- fără CERERE SYSTEM;
-- identitate RELAȚII curată.
+Aceeași întrebare apare de două ori foarte aproape:
+- în hero: `Cum transform legăturile în răspunsuri?`
+- imediat sub taburi, ca titlu de secțiune: `Cum transform legăturile în răspunsuri?`
+
+Aceasta creează dublare vizuală și impresie de repetiție neintenționată.
 
 ## MANDAT ACTIV
-Scrie CERERE SYSTEM pentru actualizarea `index.html` și, dacă fluxul curent o cere, a statusului central.
+Repară dublarea headline-ului în C09.
 
-## IMPORTANT
-Nu modifica `index.html` din acest chat C09.
-Nu modifica `STARE-CURENTA.md`.
+## OBIECTIV
+Păstrează hero-ul:
+`Cum transform legăturile în răspunsuri?`
+
+Schimbă titlul secțiunii imediat următoare într-o formulare complementară, nu repetitivă.
+
+Variantă recomandată:
+`Datele nu răspund până nu sunt legate corect`
+
+## SCOPE
+Verifică și repară dublarea acolo unde apare în livrabilele C09:
+- `c09/HTML-Studiu-Excel-09-Relatii.html`
+- `c09/HTML-Editor-Studiu-Excel-09-Relatii.html`
+- `c09/HTML-Video-Excel-09-Relatii.html`
+- `c09/HTML-Editor-Video-Excel-09-Relatii.html`
+
+Nu modifica `index.html`.
 Nu modifica fișiere sistem.
+Nu modifica alte construcții.
+Nu modifica Date_MASTER sau FILM decât dacă aceeași dublare apare explicit și afectează coerența.
 
-Doar scrie cererea în `_brain/c09/CLAUDE-TO-BRAIN.md`.
+## REGULI
+- păstrează identitatea C09 RELAȚII;
+- nu schimba structura majoră;
+- nu schimba hero-ul;
+- repară doar titlul repetat de sub taburi;
+- menține limbajul clar, Trainity, filmabil;
+- fără em-dash;
+- fără en-dash;
+- fără termeni BI interziși;
+- fără cifre business concrete.
 
-## CERERE SYSTEM DE SCRIS
-Formulează în `_brain/c09/CLAUDE-TO-BRAIN.md` o cerere clară cu următoarele informații:
-
-- Construcție: C09 RELAȚII.
-- Status: FINAL după MONSTER AUDIT.
-- Status tehnic: `READY_FINAL_C09_MONSTER_PASS_AFTER_FIX`.
-- Motiv: C09 este finală în folderul ei, dar nu apare în `index.html` preview live.
-- Fișier comun cerut: `index.html`.
-- Acțiune cerută: adăugare C09 în preview live cu linkuri către:
-  - `c09/HTML-Studiu-Excel-09-Relatii.html`
-  - `c09/HTML-Editor-Studiu-Excel-09-Relatii.html`
-  - `c09/HTML-Video-Excel-09-Relatii.html`
-  - `c09/HTML-Editor-Video-Excel-09-Relatii.html`
-- Recomandare poziționare: în zona T3 ANALIZĂ, înainte de C10/C11/C12, ca primă construcție finală T3.
-- Text card propus:
-  - Cod: C09
-  - Titlu: Cum legăm tabelele prin relații corecte
-  - Descriere: Ai toate datele. Și niciun răspuns. T3 ANALIZĂ · construcția 9 · relații.
-- Mențiune: Creativ C09 este absent corect, conform V68, nu trebuie listat.
-- Mențiune: C10 are drift propriu în afara scope-ului C09, să nu fie amestecat cu statusul C09.
+## VALIDARE
+După fix:
+- verifică faptul că întrebarea nu mai apare duplicat vizual în aceeași zonă;
+- rulează validările disponibile pentru C09;
+- confirmă GATE PASS;
+- confirmă C09 ZERO DRIFT sau explică dacă apare un false positive;
+- confirmă JS valid dacă ai atins HTML-Video / HTML-Editor-Video;
+- confirmă 0 em-dash / en-dash;
+- confirmă 0 termeni interziși.
 
 ## OUTPUT AȘTEPTAT
-După execuție, `_brain/c09/CLAUDE-TO-BRAIN.md` trebuie să conțină:
-- CERERE SYSTEM;
-- motiv;
-- impact;
-- propunere concretă;
+Scrie raport în:
+`_brain/c09/CLAUDE-TO-BRAIN.md`
+
+Raportul trebuie să includă:
+- fișiere modificate;
+- text vechi;
+- text nou;
+- validări rulate;
+- rezultat final;
 - status final.
 
 ## STATUS AȘTEPTAT
-CERERE_SYSTEM_INDEX_C09_READY
+READY_FINAL_C09_HERO_REPETITION_FIXED
