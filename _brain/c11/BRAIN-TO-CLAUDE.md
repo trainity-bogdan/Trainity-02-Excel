@@ -1,7 +1,7 @@
 # BRAIN → CLAUDE · C11 COMPARAȚII / RANK
 
 ## STATUS
-SPEC_FROZEN
+MANDAT_GENERARE_ACTIV
 
 ## CONTEXT CHAT
 Acest fișier este folosit exclusiv de Chat Claude C11.
@@ -21,19 +21,18 @@ Nu modifica fișiere sistem.
 ## STARE CURENTĂ C11
 C11 este construcția COMPARAȚII / RANK.
 SPEC C11 este înghețat.
-Nu executa generare completă fără mandat explicit separat.
+Este activ mandatul de generare C11.
 
-## MANDAT C11-02 · FREEZE SPEC C11
+## MANDAT C11-03 · GENERARE C11
 
 ### STATUS
-SPEC_FROZEN
+MANDAT_GENERARE_ACTIV
 
-### CONFIRMĂRI BRAIN
-1. SLUG confirmat: `comparatii`
-2. Număr fenomene confirmat: 6
-3. Pareto / ABC rămâne în C11 ca fenomen de ierarhie și concentrare.
-4. C12 primește doar partea de cauză, interpretare și răspuns la întrebarea `de ce`.
-5. Motto confirmat: `Nu citi lista. Citește ierarhia.`
+### OBIECTIV
+Generează construcția C11 COMPARAȚII / RANK pe baza SPEC C11 înghețat.
+
+C11 trebuie să livreze ideea centrală:
+`Nu citi lista. Citește ierarhia.`
 
 ### SPEC C11 ÎNGHEȚAT
 
@@ -121,24 +120,55 @@ C11 NU explică de ce apare ierarhia. Cauza rămâne pentru C12.
 C11 NU construiește dashboard. Raportarea rămâne pentru T4.
 C11 compară actori agregați, nu etichetează rânduri individuale.
 
+### INSTRUCȚIUNI DE GENERARE
+Generează `c11/` respectând arhitectura curentă a construcțiilor.
+Folosește matrița permisă de sistemul curent, fără să modifici matrița și fără să modifici alte construcții.
+
+După generare, aplică obligatoriu un post-copy/post-generation pass pentru:
+- eliminarea completă a cuvintelor interzise
+- adresare directă cu `tu` în HTML-Studiu și textele de experiență
+- folosirea controlată a lui `noi` doar în FILM
+- eliminarea oricărei formulări școlare
+- păstrarea delimitării C11 față de C10 și C12
+
+### VALIDĂRI OBLIGATORII
+După generare:
+1. Scanează toate fișierele C11 pentru cuvintele interzise:
+   - `cursant`
+   - `cursantul`
+   - `participant`
+   - `participantul`
+   - `elev`
+   - `student`
+2. Scanează pentru adresare indirectă de tip `utilizatorul`, `persoana`, `cel care` și reformulează direct cu `tu`, unde apare în text de experiență.
+3. Verifică să nu existe `de ce`, `explică`, `cauză`, `motiv` ca axă narativă C11. Acestea aparțin C12.
+4. Verifică să nu existe dashboard sau raportare T4 ca livrare C11.
+5. Rulează validările permise de sistem pentru C11, fără să modifici fișiere sistem.
+
 ### RESTRICȚII
-Nu genera HTML fără mandat explicit separat.
 Nu modifica fișiere sistem.
-Nu modifica index.html.
-Nu modifica gate_v20.py.
-Nu modifica audit_sync.py.
-Nu modifica fișiere din alte construcții.
+Nu modifica `CLAUDE.md`.
+Nu modifica `README.md`.
+Nu modifica `STARE-CURENTA.md`.
+Nu modifica `index.html`.
+Nu modifica `_system/**`.
+Nu modifica `gate_v20.py`.
+Nu modifica `audit_sync.py`.
+Nu modifica alte construcții.
 Nu executa nimic în afara:
 - `c11/**`
 - `_brain/c11/**`
 
+Dacă apare nevoie de sistem, scrie CERERE SYSTEM în `_brain/c11/CLAUDE-TO-BRAIN.md` și oprește acea parte.
+
 ### LIVRARE CERUTĂ
 Actualizează `_brain/c11/CLAUDE-TO-BRAIN.md` cu:
-- confirmarea că ai preluat SPEC_FROZEN
-- eventuale riscuri de vocabular
-- eventuale CERERI SYSTEM, doar dacă sunt absolut necesare
-
-Nu genera artefacte C11 încă.
+- status generare
+- lista fișierelor C11 create/modificate
+- rezultat scan vocabular interzis
+- rezultat delimitări C10/C12/T4
+- rezultat validări
+- eventuale CERERI SYSTEM
 
 ## REGULĂ SYSTEM
 Dacă ai nevoie de fișier comun, NU îl modifica.
