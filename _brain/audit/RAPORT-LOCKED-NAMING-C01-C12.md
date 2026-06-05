@@ -2,7 +2,7 @@
 
 ## STATUS
 
-**C01-C12_NAMING_LOCKED** — aplicat pe suprafețele PRIMARE learner-facing (hero keyword,
+**C01-C12_NAMING_LOCKED** - aplicat pe suprafețele PRIMARE learner-facing (hero keyword,
 cover-title, breadcrumb/system-map, index). NU integral: 4 suprafețe rămân blocate de validatoare
 hardcodate sau sunt strat separat (vezi §Conflicte + §Reziduuri). Nimic ocolit, totul raportat.
 
@@ -36,9 +36,9 @@ stilizarea h1 existentă; semantica e identică cu numele LOCKED (scrise cu maju
 ## Ce a fost schimbat (25 fișiere)
 
 Per construcție, în HTML-Studiu + HTML-Editor-Studiu (24 fișiere):
-1. **HERO KEYWORD** — text `<span class="hov-object">` -> keyword nou.
-2. **COVER TITLE** — text `<h1 class="cover-title">` -> nume extins (atributele, ex. data-locked, păstrate).
-3. **BREADCRUMB / SYSTEM MAP** — cele 4 `<span class="sm-step">` (harta treptei) -> tokenii noi ai treptei.
+1. **HERO KEYWORD** - text `<span class="hov-object">` -> keyword nou.
+2. **COVER TITLE** - text `<h1 class="cover-title">` -> nume extins (atributele, ex. data-locked, păstrate).
+3. **BREADCRUMB / SYSTEM MAP** - cele 4 `<span class="sm-step">` (harta treptei) -> tokenii noi ai treptei.
 
 Plus **index.html**: cele 12 `card-title` -> numele extinse noi.
 
@@ -65,7 +65,7 @@ premium), iar `mobile-topbar-title` (singurul verificat, pe `nume_slug`) a fost 
 
 ## Conflicte cu validatoare hardcodate (NU ocolite, raportate)
 
-**`_system/generatoare/gate_v20.py` — TOP NAV blocat.**
+**`_system/generatoare/gate_v20.py` - TOP NAV blocat.**
 - `check_identity` (calea premium) cere: `fold_diac(nume_slug)` să fie substring în
   `mobile-topbar-title`.
 - `IDENTITATI` (dict hardcodat, ~liniile 1066-1127) ține `nume_slug`: Structurare, Control, Auditare,
@@ -83,14 +83,14 @@ premium), iar `mobile-topbar-title` (singurul verificat, pe `nume_slug`) a fost 
 
 ## Reziduuri (suprafețe neatinse în acest pas)
 
-1. **HTML-Video + HTML-Editor-Video (24 fișiere)** — structură de identitate DIFERITĂ: folosesc
+1. **HTML-Video + HTML-Editor-Video (24 fișiere)** - structură de identitate DIFERITĂ: folosesc
    hero-title cinematic (ex. „DICȚIONARUL DATELOR", „MĂSURA POTRIVITĂ", „CINE CONDUCE",
    „DE CE-UL DIN DATE", „RELAȚIILE DINTRE DATE"), NU keyword/cover-title/breadcrumb. Schimbarea lor =
    rescriere de titlu cinematic (graniță cu „conținut", pe care mandatul îl păstrează). Necesită
    decizie separată ARHITECT/regie video.
-2. **TOP NAV (mobile-topbar-title)** — blocat de gate (vezi Conflicte).
+2. **TOP NAV (mobile-topbar-title)** - blocat de gate (vezi Conflicte).
 3. **README.md, STARE-CURENTA.md, IDENTITATE-TEHNICA.md, system maps doc, documentație activă,
-   registre/SPEC** — referințe narative/structurate. IDENTITATE-TEHNICA.md ține câmpuri tehnice
+   registre/SPEC** - referințe narative/structurate. IDENTITATE-TEHNICA.md ține câmpuri tehnice
    (pre_generation_check verifică doar PREZENȚA câmpurilor, nu valorile, deci nu pică), dar e doc de
    sistem, nu display learner-facing. README/STARE narrative mari. Neatinse aici; de aliniat într-un
    pas de documentație dedicat.
