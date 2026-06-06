@@ -282,7 +282,7 @@ def check_identity(content, identitate, fisier_nume):
                     'detaliu': f"Premium: nu am gasit 'OBIECTUL CONSTRUCȚIEI · {cod}' in hero-overlay"
                 })
             m = re.search(r'mobile-topbar-title">([^<]+)<', content)
-            if m and fold_diac(identitate['nume_slug']) not in fold_diac(m.group(1)):
+            if m and fold_diac(identitate['nume_slug']) not in fold_diac(m.group(1)) and fold_diac(identitate.get('nume_hero_caps_rand1', '_')) not in fold_diac(m.group(1)):
                 erori.append({
                     'clasa': 'IDENTITY',
                     'zona': 'mobile-topbar',
