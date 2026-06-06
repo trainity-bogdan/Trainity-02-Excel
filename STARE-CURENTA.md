@@ -1,7 +1,12 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V68 (T3 început · C09 RELAȚII SLICE 2 · marker SHA în `_system/VERSIUNI.md`)
-**Ultima actualizare:** 3 iunie 2026
+**Versiune sistem:** V69 (FREEZE NOMENCLATURĂ SCARA · C01-C20 · două straturi LOCKED)
+**Ultima actualizare:** 6 iunie 2026
+
+**V69 — FREEZE NOMENCLATURĂ SCARA (decizie ARHITECT, `freeze(scara)`, LOCKED):** îngheț oficial al nomenclaturii Pack 02 Excel. Sursă unică de adevăr: `_system/NOMENCLATURA-LOCKED-SCARA.md` (oglindit în `constructii.xlsx`). Conține: cele 5 trepte (SCANARE, CUNOAȘTERE, ANALIZĂ, RAPORTARE, AUTONOMIE); arhitectura pe două straturi (STRAT 1 = CUVÂNT pentru copertă/index/nume fișier/branding; STRAT 2 = MIZĂ HERO, descriptor metodologic în Hero); pentru fiecare C01-C20: CUVÂNT, MIZĂ HERO, nume construcție, verb. Contradicțiile vechi rezolvate (canonic = registrul): C02/C03/C04/C05 nume aliniate la rădăcina CUVÂNT/verb (CONFRUNTAREA / AUDITAREA ERORILOR / NORMALIZAREA / INVENTARIEREA), formele vechi superSEDate. **Domeniu freeze: EXCLUSIV nomenclatura.** NU sunt înghețate: Hook, AHA, Payoff, stări, instrumente, SPEC, HTML, FILM. **Datorie de propagare (separată, neîncepută, mandat „NU modifici HTML"):** cover-title C02-C05 si maparea hov-object → CUVÂNT în HTML-ul C01-C12 se aliniază într-un pas dedicat de HTML. Context: nomenclatura verb/proces fusese deja aplicată pe HTML de un flux paralel (`411370d` pe main); acest task închide pasul de documentație lăsat deschis acolo.
+
+**Versiune sistem (istoric):** V68 (T3 început · C09 RELAȚII SLICE 2 · marker SHA în `_system/VERSIUNI.md`)
+**Ultima actualizare V68:** 3 iunie 2026
 
 **BRAIN-015-REV1 — AUDIT SISTEMIC C09 HTML-Studiu (auditor pur, HTML neatins):** decizie **PASS CU FIXURI PUNCTUALE** (2 MAJOR, 2 MINOR, 0 BLOCKER). Scheletul conceptual solid (identitate LOCKED verbatim, 6 operații, Join/Union exemplar, granițe C09/C10/C11/C12 + T4/T5 ținute, zero cifre statice, prompturi sănătoase). **MAJOR-1:** inconsistență model „patru tabele" (4 locuri: cover-subtitle, before/after, dovadă, PAS 17) vs „un fact și patru dimensiuni" — confirmă semnalul BRAIN; lipsește formula „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni." **MAJOR-2 (descoperire nouă):** hero-ul base64 = clonă byte-identică C08 (md5 b05f939…, imaginea cartografiere pe pagina relații; c09/assets/ inexistent). audit_sync nu prinde (R-V59 scanează exec-stage Video, nu hero Studiu). Suspiciunea BRAIN „Regiuni lipsă" = neconfirmată (Regiuni prezent în toate enumerările). Raport complet (25 pct) în CLAUDE-TO-BRAIN.md. Fixuri NEaplicate (mod auditor). gate PASS, tier_guard 0 blocante, audit_sync C01-C08 zero regresie. **L202 (nou):** copy structural dintr-o construcție soră cară hero-ul base64 al sursei — de scos/placeholder la autorarea unei construcții noi până la generarea imaginilor proprii; R-V59 nu acoperă hero-ul din Studiu.
 

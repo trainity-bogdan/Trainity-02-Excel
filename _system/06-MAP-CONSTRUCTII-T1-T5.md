@@ -2,17 +2,19 @@
 
 Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identitate.
 
+> **NOMENCLATURĂ LOCKED (6 iunie 2026).** Treptele, arhitectura pe două straturi (CUVÂNT + MIZĂ HERO), numele construcțiilor si verbele sunt ÎNGHEȚATE. Sursă unică = `_system/NOMENCLATURA-LOCKED-SCARA.md` (oglindit în `constructii.xlsx`). Tabelul-overview de mai jos e aliniat la lock. Secțiunile detaliate C01-C12 din acest document păstrează numele-obiect istorice si se aliniază separat. Freeze-ul NU acoperă Hook/AHA/Payoff/SPEC/HTML/FILM/instrumente.
+
 ---
 
 ## Privire generală — SCARA cele 5 trepte
 
 | Treapta | Cod | Nume | Construcții | Tehnologie dominantă | Status |
 |---|---|---|---|---|---|
-| T1 | **SCAN** | STRUCTURA | C01-C04 | Excel basic + AGGREGATE + Power Query (Promoted Headers, Filtered Rows) | ✓ COMPLET LIVRABIL |
+| T1 | **SCANARE** | SCANARE | C01-C04 | Excel basic + AGGREGATE + Power Query (Promoted Headers, Filtered Rows) | ✓ COMPLET LIVRABIL |
 | T2 | **CUNOAȘTERE** | CUNOAȘTERE | C05-C08 | Excel (UNIQUE, IFS/SWITCH/XLOOKUP, funcții dată, lookup) + Power Query | ✓ COMPLET LIVRABIL |
-| T3 | **ANALIZA** | ANALIZA | C09-C12 | Power Pivot + Data Model | NESTAR |
+| T3 | **ANALIZĂ** | ANALIZĂ | C09-C12 | Power Pivot + Data Model | NESTAR |
 | T4 | **RAPORTARE** | RAPORTARE | C13-C16 | Dashboards + BI UX | NESTAR |
-| T5 | **AUTOMATIZARE** | AUTOMATIZARE | C17-C20 | Power Query Refresh + Operational Flows | NESTAR |
+| T5 | **AUTONOMIE** | AUTONOMIE | C17-C20 | Power Query Refresh + Operational Flows | NESTAR |
 
 ---
 

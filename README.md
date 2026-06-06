@@ -6,7 +6,7 @@ Sistem de construcții educaționale Excel augmentate cu AI · Bogdan Târlă ·
 
 ## Status la zi
 
-**Versiune sistem:** V68 (iunie 2026)
+**Versiune sistem:** V69 (iunie 2026 · nomenclatură SCARA C01-C20 LOCKED)
 **Construcții existente în repo:** C01-C12 (din 20 planificate)
 
 **Maturitate pe trepte:**
@@ -21,6 +21,41 @@ Sistem de construcții educaționale Excel augmentate cu AI · Bogdan Târlă ·
 (C09 a lega · C10 a defini · C11 a compara · C12 a explica).
 
 Pentru status detaliat -> `STARE-CURENTA.md`.
+
+---
+
+## Nomenclatura SCARA (LOCKED · 6 iunie 2026)
+
+Cele 5 trepte: **SCANARE · CUNOAȘTERE · ANALIZĂ · RAPORTARE · AUTONOMIE** (S-C-A-R-A).
+
+Fiecare construcție are două straturi de identitate:
+- **STRAT 1 = CUVÂNT** (un cuvânt, majuscule): copertă, index, nume fișier, branding.
+- **STRAT 2 = MIZĂ HERO**: descriptor metodologic afișat în Hero, derivat din nomenclatura oficială.
+
+Sursă unică de adevăr: `_system/NOMENCLATURA-LOCKED-SCARA.md` (oglindit în `constructii.xlsx`).
+
+| Cod | CUVÂNT | MIZĂ HERO | Verb |
+|---|---|---|---|
+| C01 | STRUCTURĂ | STRUCTURAREA TABELELOR | STRUCTUREZ |
+| C02 | ADEVĂR | CONFRUNTAREA CU REALITATEA | CONFRUNT |
+| C03 | AUDIT | AUDITAREA ERORILOR ASCUNSE | AUDITEZ |
+| C04 | FLUX | NORMALIZAREA DATELOR | NORMALIZEZ |
+| C05 | INVENTAR | INVENTARIEREA SETULUI DE DATE | INVENTARIEZ |
+| C06 | REGULI | CLASIFICAREA RÂNDURILOR | CLASIFIC |
+| C07 | TIMP | DATAREA TRANZACȚIILOR | DATEZ |
+| C08 | HARTĂ | MAPAREA TABELELOR | MAPEZ |
+| C09 | RELAȚII | LEGAREA TABELELOR | LEG |
+| C10 | MĂSURĂ | DEFINIREA MĂSURILOR | MĂSOR |
+| C11 | CLASAMENT | CONSTRUIREA CLASAMENTELOR | COMPAR |
+| C12 | CAUZĂ | INTERPRETAREA REZULTATELOR | INTERPRETEZ |
+| C13 | VIZUAL | VIZUALIZAREA REZULTATELOR | VIZUALIZEZ |
+| C14 | DASHBOARD | COMPUNEREA DASHBOARD-ULUI | COMPUN |
+| C15 | MESAJ | SINTETIZAREA MESAJULUI | SINTETIZEZ |
+| C16 | DECIZIE | LIVRAREA RAPORTULUI | LIVREZ |
+| C17 | CLOUD | DISTRIBUIREA ÎN CLOUD | DISTRIBUI |
+| C18 | SINCRONIZARE | SINCRONIZAREA CU DATELE | SINCRONIZEZ |
+| C19 | CONTROL | MONITORIZAREA SERVICIULUI | MONITORIZEZ |
+| C20 | AUTONOMIE | DELEGAREA CĂTRE SISTEM | DELEG |
 
 ---
 
