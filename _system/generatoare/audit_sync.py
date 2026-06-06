@@ -237,9 +237,11 @@ def _rfilmname(folder):
     # filename-ul FILM + HTML se actualizeaza, dar titlul DIN .docx poate ramane
     # cu numele vechi (care acum apartine altei constructii). audit/gate nu
     # prind (nu citesc continutul FILM). Verifica: stem-ul numelui din titlul
-    # FILM (".docx") apare in identitatea HTML (topbar + footer + cover-title),
-    # modulo diacritice. Numele narativ (C07 MEMORIA, C08 ECOSISTEM) trec, ca
-    # apar si in cover-title HTML. L190.
+    # FILM (".docx") apare in identitatea HTML, modulo diacritice. Dupa freeze-ul
+    # SCARA (LOT 2), antetul FILM = MIZA HERO = hov-object din Studiu; prioritatea
+    # corecta e FILM header <-> hov-object (ambele reprezinta MIZA HERO). Verifica
+    # deci stem-ul in suprafetele canonice: hov-object (MIZA HERO) + topbar + footer
+    # + cover-title. NU forta potrivirea doar cu CUVANTUL/slug-ul. L190 + L203.
     films = glob.glob(os.path.join(folder, 'FILM-Excel-*.docx'))
     studs = glob.glob(os.path.join(folder, 'HTML-Studiu-Excel-*.html'))
     if not films or not studs:
@@ -260,7 +262,7 @@ def _rfilmname(folder):
     with open(studs[0], encoding='utf-8') as fh:
         h = fh.read()
     parts = []
-    for pat in (r'mobile-topbar-title">([^<]*)', r'class="footer">\s*([^<]*)', r'cover-title">([^<]*)'):
+    for pat in (r'class="hov-object"[^>]*>([^<]*)', r'mobile-topbar-title">([^<]*)', r'class="footer">\s*([^<]*)', r'cover-title">([^<]*)'):
         mm = re.search(pat, h)
         parts.append(mm.group(1) if mm else '')
     return stem in _fold(' '.join(parts))
