@@ -13,8 +13,8 @@ Cele 20 de construcții mapate pe 5 trepte SCARA. Status actual + axă + identit
 | T1 | **SCANARE** | SCANARE | C01-C04 | Excel basic + AGGREGATE + Power Query (Promoted Headers, Filtered Rows) | ✓ COMPLET LIVRABIL |
 | T2 | **CUNOAȘTERE** | CUNOAȘTERE | C05-C08 | Excel (UNIQUE, IFS/SWITCH/XLOOKUP, funcții dată, lookup) + Power Query | ✓ COMPLET LIVRABIL |
 | T3 | **ANALIZĂ** | ANALIZĂ | C09-C12 | Power Pivot + Data Model | NESTAR |
-| T4 | **RAPORTARE** | RAPORTARE | C13-C16 | Dashboards + BI UX | NESTAR |
-| T5 | **AUTONOMIE** | AUTONOMIE | C17-C20 | Power Query Refresh + Operational Flows | NESTAR |
+| T4 | **RAPORTARE** | RAPORTARE | C13-C16 | instrumente (NU identitate): charturi, pagină, slicere | NESTAR |
+| T5 | **AUTONOMIE** | AUTONOMIE | C17-C20 | instrumente (NU identitate): flux recurent, reguli, predare | NESTAR |
 
 ---
 
@@ -189,7 +189,7 @@ teritoriu C09. C08 doar recunoaște ecosistemul; C09 îl activează.
 
 ---
 
-## TREAPTA 3 · ANALIZARE (C09-C12)
+## TREAPTA 3 · ANALIZĂ (C09-C12)
 
 **Promisia pedagogică:** transformă cunoașterea (T2) în răspunsuri: model interogabil, măsuri, clasamente, explicații. Datele încep să răspundă la întrebări de business.
 
@@ -212,33 +212,37 @@ teritoriu C09. C08 doar recunoaște ecosistemul; C09 îl activează.
 
 ## TREAPTA 4 · RAPORTARE (C13-C16)
 
-**Promisia pedagogică:** transformă analiza în dashboard-uri executive, cockpit-uri, control vizual.
+**Promisia pedagogică:** transformă răspunsul (T3) într-un mesaj pe care altcineva îl înțelege dintr-o privire. Competențe, nu produse: vizualizezi, compui, sintetizezi, livrezi.
 
-**Tehnologie dominantă:** Dashboards, BI UX (charts, slicers, scorecards, narrative BI, visual hierarchy).
+**Lanț nomenclatură (LOCKED V70):** C13 VIZUALIZARE · C14 COMPUNERE · C15 SINTETIZARE · C16 LIVRARE.
 
-| Construcție | Tema posibilă | Status |
-|---|---|---|
-| C13 | Dashboard executiv 1-page | NESTAR |
-| C14 | Cockpit operațional cu drill-down | NESTAR |
-| C15 | Narrative BI (storytelling cu date) | NESTAR |
-| C16 | Scorecard ierarhic + alerte | NESTAR |
+| Construcție | Identitate (competență) | Verb | Status |
+|---|---|---|---|
+| C13 | VIZUALIZARE — faci rezultatul vizibil și corect | VIZUALIZEZ | NESTAR |
+| C14 | COMPUNERE — așezi rezultatele într-o pagină coerentă | COMPUN | NESTAR |
+| C15 | SINTETIZARE — distilezi mesajul care contează | SINTETIZEZ | NESTAR |
+| C16 | LIVRARE — predai raportul pregătit pentru decizie | LIVREZ | NESTAR |
+
+> Identitatea T4 NU e „dashboard / cockpit / scorecard" (acelea sunt instrumente). Alertele NU sunt T4; orice declanșare automată = T5.
 
 **T4 e închidere treaptă** la C16.
 
 ---
 
-## TREAPTA 5 · AUTOMATIZARE (C17-C20)
+## TREAPTA 5 · AUTONOMIE (C17-C20)
 
-**Promisia pedagogică:** transformă raportarea într-un sistem autonom, repetabil, predictibil, scalabil.
+**Promisia pedagogică:** transformă o livrare unică într-un sistem care funcționează fără autor. Competențe de autonomie operațională, nu mecanisme: sistematizezi, automatizezi, guvernezi, delegi. Arcul: raport → sistem → rulează singur → se autoguvernează → funcționează fără autor.
 
-**Tehnologie dominantă:** Power Query Refresh Architecture + Operational Flows.
+**Lanț nomenclatură (LOCKED V70):** C17 SISTEMATIZARE · C18 AUTOMATIZARE · C19 GUVERNARE · C20 DELEGARE.
 
-| Construcție | Tema posibilă | Status |
-|---|---|---|
-| C17 | Refresh All architecture | NESTAR |
-| C18 | Operational flows recurente | NESTAR |
-| C19 | Sistem de alerte automate | NESTAR |
-| C20 | Sistem complet end-to-end | NESTAR (CONSTRUCȚIA SEMNĂTURĂ) |
+| Construcție | Identitate (competență) | Verb | Status |
+|---|---|---|---|
+| C17 | SISTEMATIZARE — faci dintr-o livrare unică un sistem repetabil | SISTEMATIZEZ | NESTAR |
+| C18 | AUTOMATIZARE — decizi ce rulează fără tine și te scoți din buclă | AUTOMATIZEZ | NESTAR |
+| C19 | GUVERNARE — dai sistemului reguli care îl țin corect fără supraveghere | GUVERNEZ | NESTAR |
+| C20 | DELEGARE — predai sistemul ca să lucreze fără tine | DELEG | NESTAR (CONSTRUCȚIA SEMNĂTURĂ) |
+
+> **Delimitare C18 vs C04:** C04 NORMALIZARE = automatizarea curățării/refacerii unui SET prin flux („Apăs Refresh" = teritoriu C04). C18 AUTOMATIZARE = automatizarea LANȚULUI operațional end-to-end, ca sistemul să ruleze fără autor. Alertele, dacă apar, sunt T5 (instrument de guvernare), nu T4. Identitatea T5 NU e „cloud / sincronizare / monitorizare".
 
 **T5 e închidere PACK** la C20 cu sumarul pedagogic complet.
 
@@ -280,12 +284,12 @@ Date_MASTER-initial  →  C01  →  C02  →  C03  →  C04  →  C05  →  C06 
 - Voce: "decizia stă în relații, nu în volum"
 
 **T4 RAPORTARE — voce executive**:
-- Raportul devine interfață
-- Voce: "dashboard-ul nu e document, e cockpit"
+- Răspunsul devine mesaj înțeles dintr-o privire
+- Voce: "nu arăt tot. Arăt ce contează."
 
-**T5 AUTOMATIZARE — voce sistemică**:
-- Refresh devine ritual
-- Voce: "nu rebuild luna viitoare. Apăs Refresh."
+**T5 AUTONOMIE — voce sistemică**:
+- Munca devine sistem care funcționează fără autor
+- Voce: "nu mai fac eu. Sistemul face, și se ține singur."
 
 ---
 

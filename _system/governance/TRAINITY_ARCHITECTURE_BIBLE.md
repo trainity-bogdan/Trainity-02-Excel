@@ -99,8 +99,8 @@
 - **Axă:** setul cunoscut (T2) devine INTERPRETAT. T3 = ANALIZĂ.
 - **Ce produce T3:** relații reale, măsuri, comparații, interpretare; răspuns la „de ce /
   cât / care e mai mare / care e mai bun".
-- **Ce NU produce T3:** vizualizare/dashboard/raport (= T4 RAPORTARE), decizie/acțiune
-  automată/recomandare executată (= T5 AUTOMATIZARE).
+- **Ce NU produce T3:** vizualizare/dashboard/raport (= T4 RAPORTARE), sistem care rulează
+  și se autoguvernează fără autor (= T5 AUTONOMIE).
 - **Lanț (LOCKED la îngheț C09, V66):** C09 RELAȚII · C10 MĂSURI · C11 COMPARAȚII · C12 INTERPRETARE.
 - **Întrebări (verbul de treaptă, LOCKED):** C09 răspunde · C10 măsoară · C11 compară · C12 explică.
   Forma narativă: C09 „Ce pot întreba?" · C10 „Cât?" · C11 „Care?" · C12 „De ce?"
@@ -202,23 +202,27 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 - **NU are voie:** dashboard / grafic / raport vizual (T4); decizie / alertă / acțiune / recomandare executată (T5). C12 explică verbal, nu vizualizează și nu acționează.
 - **Gardă anti-contaminare:** „a compara/care" (C11) INTERZIS ca ancoră; orice fugă spre vizual = T4, orice fugă spre acțiune = T5.
 
-## §T4 — RAPORTARE · §T5 — AUTOMATIZARE (granițe LOCKED BRAIN-006; identitatea completă se seedează la C13/C17)
-**Formula de treaptă (LOCKED):** T3 produce răspunsul · T4 îl face vizibil · T5 îl pune în acțiune.
+## §T4 — RAPORTARE · §T5 — AUTONOMIE (granițe LOCKED; identitatea completă se seedează la C13/C17)
+**Formula de treaptă (LOCKED):** T3 produce răspunsul · T4 îl face vizibil · T5 îl face să funcționeze fără autor.
 
 ### §T4 — RAPORTARE / COMUNICARE VIZUALĂ
 - **Întrebarea treptei:** „Cum vede altcineva, dintr-o privire?"
-- **Output:** interfața vizuală — dashboard / cockpit / scorecard / narrative BI / raport vizual.
-- **Permis:** a face răspunsul (produs de T3) vizibil pentru o audiență; ierarhie vizuală, slicere, charturi.
-- **Interzis:** a inventa răspunsuri/măsuri/cauze NOI (= T3, se consumă, nu se nasc la T4); a acționa automat (= T5).
-- **Unde începe T5:** când interfața nu mai e citită de un om care apoi decide, ci sistemul declanșează singur.
+- **Output:** interfața vizuală — vizualizare / compoziție de pagină / sinteză de mesaj / raport livrat pentru decizie.
+- **Lanț (LOCKED V70):** C13 VIZUALIZARE · C14 COMPUNERE · C15 SINTETIZARE · C16 LIVRARE.
+- **Permis:** a face răspunsul (produs de T3) vizibil și comunicabil pentru o audiență; ierarhie vizuală, compunere de pagină, distilarea mesajului, predarea raportului pentru decizie.
+- **Interzis:** a inventa răspunsuri/măsuri/cauze NOI (= T3, se consumă, nu se nasc la T4); a transforma munca într-un sistem care rulează fără autor (= T5).
+- **Unde începe T5:** când livrarea nu mai e un act unic al autorului, ci devine un sistem care se reface, rulează și se ține singur, fără autor.
 
-### §T5 — AUTOMATIZARE / ACȚIUNE
-- **Întrebarea treptei:** „Cum se întâmplă fără mine?"
-- **Output:** sistemul autonom — refresh automat, alertă, flux recurent, acțiune declanșată, sistem end-to-end.
-- **Permis:** a pune răspunsul pe pilot automat / a declanșa acțiuni la prag.
-- **Interzis:** a reface analiza T3 sau designul vizual T4 ca lecție nouă; T5 orchestrează ce există.
+### §T5 — AUTONOMIE / FUNCȚIONARE FĂRĂ AUTOR
+- **Întrebarea treptei:** „Cum funcționează fără mine?"
+- **Output:** sistemul autonom — o livrare unică devine un lanț operațional end-to-end care rulează, se autocorectează prin reguli și funcționează fără autor.
+- **Lanț (LOCKED V70):** C17 SISTEMATIZARE · C18 AUTOMATIZARE · C19 GUVERNARE · C20 DELEGARE.
+- **Verbe de treaptă:** sistematizez · automatizez · guvernez · deleg.
+- **Permis:** a transforma o livrare unică într-un sistem repetabil (C17); a-l face să ruleze fără efortul autorului (C18); a-i da reguli care îl țin corect fără supraveghere (C19); a preda responsabilitatea ca sistemul să lucreze fără autor (C20).
+- **Interzis:** a reface analiza T3 sau designul vizual T4 ca lecție nouă; T5 industrializează ce există, nu naște conținut nou.
+- **Delimitare C18 vs C04 (LOCKED):** C04 NORMALIZARE = automatizarea curățării/refacerii unui SET de date prin flux (teritoriul „Apăs Refresh"). C18 AUTOMATIZARE = automatizarea LANȚULUI operațional end-to-end, ca întregul sistem să ruleze fără autor. „Apăs Refresh" NU e identitate T5; e teritoriu C04.
 
-**Nuanța deciziei (LOCKED):** decizia UMANĂ stă între T4 și T5 (omul citește raportul T4 și hotărăște = consumatorul pachetului, în afara construcțiilor). Decizia AUTOMATĂ / acțiunea declanșată = T5.
+**Nuanța deciziei (LOCKED):** decizia UMANĂ stă între T4 și T5 (omul citește raportul T4 și hotărăște = consumatorul pachetului, în afara construcțiilor). Sistemul care rulează și se autoguvernează fără autor = T5 AUTONOMIE.
 
 ---
 

@@ -1,7 +1,14 @@
 # Stare curentă Trainity · Pack 02 Excel
 
-**Versiune sistem:** V69 (FREEZE NOMENCLATURĂ SCARA · C01-C20 · două straturi LOCKED)
+**Versiune sistem:** V70 (LOCK T4-T5 · nomenclatură competențe · AUTONOMIE)
 **Ultima actualizare:** 6 iunie 2026
+
+**V70 — LOCK T4-T5 (decizie de arhitectură ARHITECT, deblocare explicită + supersedare):** intrările vechi T4-T5 din `NOMENCLATURA-LOCKED-SCARA.md` au fost DEBLOCATE și SUPERSEDATE; noua nomenclatură T4-T5 e acum LOCKED ca standard final. **T4 RAPORTARE:** C13 VIZUALIZAREA/VIZUAL/VIZUALIZEZ · C14 COMPUNEREA/COMPOZIȚIE/COMPUN · C15 SINTETIZAREA/SINTEZĂ/SINTETIZEZ · C16 LIVRAREA/LIVRARE/LIVREZ. **T5 AUTONOMIE:** C17 SISTEMATIZAREA/SISTEM/SISTEMATIZEZ · C18 AUTOMATIZAREA/MOTOR/AUTOMATIZEZ · C19 GUVERNAREA/CONTROL/GUVERNEZ · C20 DELEGAREA/AUTONOMIE/DELEG. Vechile cuvinte (CLOUD/DISTRIBUIRE, SINCRONIZARE, MONITORIZARE; DASHBOARD/MESAJ/DECIZIE) erau mecanisme/infrastructură, nu competențe; noul T5 = competențe de autonomie operațională (raport → sistem → rulează singur → se autoguvernează → funcționează fără autor). Tranzacție atomică executată pe toate oglinzile: registru + `constructii.xlsx` + Bible (§T4/§T5 rescris, formulă „T5 îl face să funcționeze fără autor", treaptă redenumită AUTONOMIE) + doc 12 (tabel granițe + formulă) + 06-MAP (secțiuni T4/T5 realiniate la competențe, fără dashboard/cloud ca identitate, fără „Apăs Refresh", alerte mutate la T5, ANALIZARE→ANALIZĂ, AUTOMATIZARE→AUTONOMIE). Delimitare LOCKED C18 vs C04: C04 = automatizarea curățării unui set prin flux; C18 = automatizarea lanțului end-to-end ca sistemul să ruleze fără autor. Datorie de SPEC la seed C13/C17: C18 se autorează ca judecată (nu mecanism); intrarea în T5 își asumă narativ maturizarea de rol analist → constructor de sisteme. **Întregul arc C01-C20 e acum LOCKED.**
+
+---
+
+**Versiune sistem (istoric):** V69 (FREEZE NOMENCLATURĂ SCARA · C01-C20 · două straturi LOCKED)
+**Ultima actualizare V69:** 6 iunie 2026
 
 **Model de afișare hero (freeze C01, iunie 2026):** hero principal (`hov-object`) = numele complet al construcției (MIZA HERO: ex. „STRUCTURAREA TABELELOR"). Hero Word-ul mare în centru e ABANDONAT. CUVÂNTUL (ex. STRUCTURĂ) rămâne în topbar (`C{NN} · CUVÂNT`), navigare/system-map, indexare si mapările T1-T5. Documentat în `_system/NOMENCLATURA-LOCKED-SCARA.md` („Model de afișare în construcție"), `04-ARHITECTURA-LIVRABILE.md` si `referinte/COVER-CHECKLIST.md`. C01 = pilot aplicat; C02-C12 încă pe tiparul vechi (propagare la cerere); C13-C20 se generează direct cu modelul nou.
 

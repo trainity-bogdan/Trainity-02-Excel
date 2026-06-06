@@ -81,18 +81,20 @@ La generarea C13-C20 (COPY+MODIFY din c01) si la orice regenerare se folosește 
 ### T4 · RAPORTARE
 | Cod | CUVÂNT | MIZĂ HERO | Nume construcție | Verb |
 |---|---|---|---|---|
-| C13 | VIZUAL | VIZUALIZAREA REZULTATELOR | VIZUALIZAREA REZULTATELOR | VIZUALIZEZ |
-| C14 | DASHBOARD | COMPUNEREA DASHBOARD-ULUI | COMPUNEREA DASHBOARD-ULUI EXECUTIV | COMPUN |
-| C15 | MESAJ | SINTETIZAREA MESAJULUI | SINTETIZAREA MESAJULUI DIN DATE | SINTETIZEZ |
-| C16 | DECIZIE | LIVRAREA RAPORTULUI | LIVRAREA RAPORTULUI DE DECIZIE | LIVREZ |
+| C13 | VIZUAL | VIZUALIZAREA | VIZUALIZAREA | VIZUALIZEZ |
+| C14 | COMPOZIȚIE | COMPUNEREA | COMPUNEREA | COMPUN |
+| C15 | SINTEZĂ | SINTETIZAREA | SINTETIZAREA | SINTETIZEZ |
+| C16 | LIVRARE | LIVRAREA | LIVRAREA | LIVREZ |
 
 ### T5 · AUTONOMIE
 | Cod | CUVÂNT | MIZĂ HERO | Nume construcție | Verb |
 |---|---|---|---|---|
-| C17 | CLOUD | DISTRIBUIREA ÎN CLOUD | DISTRIBUIREA ÎN CLOUD | DISTRIBUI |
-| C18 | SINCRONIZARE | SINCRONIZAREA CU DATELE | SINCRONIZAREA CU DATELE | SINCRONIZEZ |
-| C19 | CONTROL | MONITORIZAREA SERVICIULUI | MONITORIZAREA SERVICIULUI | MONITORIZEZ |
-| C20 | AUTONOMIE | DELEGAREA CĂTRE SISTEM | DELEGAREA CĂTRE SISTEMUL AUTONOM | DELEG |
+| C17 | SISTEM | SISTEMATIZAREA | SISTEMATIZAREA | SISTEMATIZEZ |
+| C18 | MOTOR | AUTOMATIZAREA | AUTOMATIZAREA | AUTOMATIZEZ |
+| C19 | CONTROL | GUVERNAREA | GUVERNAREA | GUVERNEZ |
+| C20 | AUTONOMIE | DELEGAREA | DELEGAREA | DELEG |
+
+> **MIZĂ HERO completă (descriptorul extins de hero) se seedează la C13/C17;** registrul îngheață gerunziul canonic + CUVÂNTUL de brand + verbul. T5 = AUTONOMIE (NU „AUTOMATIZARE" ca treaptă; AUTOMATIZAREA e construcția C18).
 
 ---
 
@@ -102,7 +104,7 @@ STRUCTUREZ · CONFRUNT · AUDITEZ · NORMALIZEZ
 INVENTARIEZ · CLASIFIC · DATEZ · MAPEZ
 LEG · MĂSOR · COMPAR · INTERPRETEZ
 VIZUALIZEZ · COMPUN · SINTETIZEZ · LIVREZ
-DISTRIBUI · SINCRONIZEZ · MONITORIZEZ · DELEG
+SISTEMATIZEZ · AUTOMATIZEZ · GUVERNEZ · DELEG
 
 ---
 
@@ -122,6 +124,11 @@ Orice propunere ulterioară de redenumire este respinsă implicit si necesită o
 
 La C02, C03, C04, C05 numele construcției s-a aliniat la rădăcina CUVÂNT/verb (CONFRUNTAREA, AUDITAREA ERORILOR, NORMALIZAREA, INVENTARIEREA). Formele vechi (TESTAREA DATELOR CU REALITATEA, AUDITAREA PROBLEMELOR ASCUNSE, CURĂȚAREA AUTOMATĂ A DATELOR, CUNOAȘTEREA SETULUI DE DATE) sunt SUPERSEDATE.
 
+**Supersedare T4-T5 (decizie de arhitectură, LOCK T4-T5):** intrările vechi T4-T5 au fost DEBLOCATE explicit de ARHITECT și SUPERSEDATE. Formele vechi sunt moarte:
+- T4: C14 DASHBOARD / „COMPUNEREA DASHBOARD-ULUI", C15 MESAJ, C16 DECIZIE → înlocuite cu COMPOZIȚIE/COMPUNEREA, SINTEZĂ/SINTETIZAREA, LIVRARE/LIVRAREA.
+- T5: C17 CLOUD / „DISTRIBUIREA ÎN CLOUD" (DISTRIBUI), C18 SINCRONIZARE / „SINCRONIZAREA CU DATELE" (SINCRONIZEZ), C19 „MONITORIZAREA SERVICIULUI" (MONITORIZEZ) → înlocuite cu SISTEM/SISTEMATIZAREA, MOTOR/AUTOMATIZAREA, GUVERNAREA. C20 rămâne AUTONOMIE/DELEG (gerunziul scurtat la DELEGAREA).
+- Motivul: vechile cuvinte erau mecanisme/infrastructură (cloud, sincronizare, monitorizare), nu competențe. Noul T5 = competențe de autonomie operațională (raport → sistem → rulează singur → se autoguvernează → funcționează fără autor).
+
 ---
 
 ## Datorie de propagare (separată, NU se face în acest freeze de documentație)
@@ -132,4 +139,4 @@ La C02, C03, C04, C05 numele construcției s-a aliniat la rădăcina CUVÂNT/ver
 
 ---
 
-Versiune document: V69 · 6 iunie 2026 · LOCKED · sursă oglindită în `constructii.xlsx`
+Versiune document: V70 · LOCK T4-T5 · LOCKED · sursă oglindită în `constructii.xlsx`

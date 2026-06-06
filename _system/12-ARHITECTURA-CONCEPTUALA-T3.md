@@ -84,16 +84,16 @@ Fiecare construcție CONSUMĂ output-ul precedentei. Cursantul intră cu un set 
 - **C11|C12:** C11 = CARE (mărime); C12 = DE CE (cauză). (a compara vs a explica)
 
 ## GRANIȚE T2 / T3 / T4 / T5 (formula LOCKED)
-**T3 produce răspunsul · T4 îl face vizibil · T5 îl pune în acțiune.**
+**T3 produce răspunsul · T4 îl face vizibil · T5 îl face să funcționeze fără autor.**
 
 | Treaptă | Întrebare | Output | Interzis |
 |---|---|---|---|
 | T2 CUNOAȘTERE | Ce există/înseamnă/când/cu cine? | set cunoscut | interpretare, comparație, join, Data Model, KPI (= T3+) |
-| T3 ANALIZĂ | Pot obține răspunsuri? | model/măsură/clasament/cauză | dashboard/grafic publicabil (T4); alertă/acțiune (T5) |
-| T4 RAPORTARE | Cum vede altcineva, dintr-o privire? | dashboard/cockpit/scorecard | a inventa răspunsuri noi (T3); acțiune automată (T5) |
-| T5 AUTOMATIZARE | Cum se întâmplă fără mine? | refresh/alertă/flux/sistem | a re-analiza (T3) sau re-designa raportul (T4) ca lecție nouă |
+| T3 ANALIZĂ | Pot obține răspunsuri? | model/măsură/clasament/cauză | dashboard/grafic publicabil (T4); sistem care rulează fără autor (T5) |
+| T4 RAPORTARE | Cum vede altcineva, dintr-o privire? | vizualizare/compoziție/sinteză/raport livrat | a inventa răspunsuri noi (T3); a transforma munca în sistem fără autor (T5) |
+| T5 AUTONOMIE | Cum funcționează fără mine? | sistem repetabil, autonom, care se autoguvernează fără autor | a re-analiza (T3) sau a re-designa raportul (T4) ca lecție nouă |
 
-**Nuanță:** decizia UMANĂ stă între T4 și T5 (consumatorul pachetului). Decizia AUTOMATĂ = T5.
+**Nuanță:** decizia UMANĂ stă între T4 și T5 (consumatorul pachetului). Sistemul care rulează și se ține singur fără autor = T5 AUTONOMIE.
 **Inversiunea T2->T3:** termenii interziși în T2 (join, Data Model, comparație, trend, KPI) devin COMPETENȚĂ în T3 (R-TIER-PARAM, tier-aware).
 
 ---
@@ -105,7 +105,7 @@ Fiecare construcție CONSUMĂ output-ul precedentei. Cursantul intră cu un set 
 - **Saturația „Oamenii/Profesioniștii":** permisă în T3 ca semnătură (BRAIN-006), dar marcată ca risc de saturație pentru treptele următoare (diversificare la T4/T5).
 
 ## DECIZII LOCKED (BRAIN-006)
-1. C10 = MĂSURI (nume). 2. Motto C10 = „Întrebi cât. Modelul măsoară." 3. Verb construcție C10 = „a defini". 4. Identitate C10 = măsura vie / define once / context-aware / single source of truth. 5. AHA C10 = „Un număr stă în tabel. O măsură trăiește în întrebare." 6. C12 = INTERPRETARE / „de ce". 7. „What-if/scenarii" retras din identitatea C12. 8. Formula granițelor: T3 produce / T4 vizibil / T5 acțiune. 9. „Oamenii/Profesioniștii" permisă în T3, risc de saturație notat.
+1. C10 = MĂSURI (nume). 2. Motto C10 = „Întrebi cât. Modelul măsoară." 3. Verb construcție C10 = „a defini". 4. Identitate C10 = măsura vie / define once / context-aware / single source of truth. 5. AHA C10 = „Un număr stă în tabel. O măsură trăiește în întrebare." 6. C12 = INTERPRETARE / „de ce". 7. „What-if/scenarii" retras din identitatea C12. 8. Formula granițelor: T3 produce / T4 vizibil / T5 funcționează fără autor (T5 = AUTONOMIE, nu „AUTOMATIZARE" ca treaptă). 9. „Oamenii/Profesioniștii" permisă în T3, risc de saturație notat.
 
 ## STARE DE IMPLEMENTARE
 - Arhitectură T3 = ÎNGHEȚATĂ cap-coadă (Bible §T3 + acest document + 06-MAP realiniat).
