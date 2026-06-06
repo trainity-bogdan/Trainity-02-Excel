@@ -1070,57 +1070,57 @@ def load_identitate(NN, identitate_path):
             'meta_val_treapta': '<b>STRUCTURA</b> · CONTROL · AUDIT · NORMALIZARE (SCAN)'
         },
         '02': {
-            'cod': 'C02', 'nume_hero_caps_rand1': 'CONTROLUL',
+            'cod': 'C02', 'nume_hero_caps_rand1': 'ADEVAR',
             'nume_slug': 'Confruntare',
             'meta_val_treapta': 'STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)'
         },
         '03': {
-            'cod': 'C03', 'nume_hero_caps_rand1': 'AUDITAREA',
+            'cod': 'C03', 'nume_hero_caps_rand1': 'AUDIT',
             'nume_slug': 'Auditare',
             'meta_val_treapta': 'STRUCTURA · CONTROL · <b>AUDIT</b> · NORMALIZARE (SCAN)'
         },
         '04': {
-            'cod': 'C04', 'nume_hero_caps_rand1': 'NORMALIZAREA',
+            'cod': 'C04', 'nume_hero_caps_rand1': 'FLUX',
             'nume_slug': 'Normalizare',
             'meta_val_treapta': 'STRUCTURA · CONTROL · AUDIT · <b>NORMALIZARE</b> (SCAN)'
         },
         '05': {
-            'cod': 'C05', 'nume_hero_caps_rand1': 'DICȚIONARUL',
+            'cod': 'C05', 'nume_hero_caps_rand1': 'INVENTAR',
             'nume_slug': 'Inventariere',
             'meta_val_treapta': '<b>DICȚIONAR</b> · CLASIFICARE · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '06': {
-            'cod': 'C06', 'nume_hero_caps_rand1': 'CLASIFICAREA',
+            'cod': 'C06', 'nume_hero_caps_rand1': 'REGULI',
             'nume_slug': 'Clasificare',
             'meta_val_treapta': 'DICȚIONAR · <b>CLASIFICARE</b> · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '07': {
-            'cod': 'C07', 'nume_hero_caps_rand1': 'MEMORIA',
+            'cod': 'C07', 'nume_hero_caps_rand1': 'TIMP',
             'nume_slug': 'Datare',
             'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · <b>DATARE</b> · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '08': {
-            'cod': 'C08', 'nume_hero_caps_rand1': 'ECOSISTEMUL',
+            'cod': 'C08', 'nume_hero_caps_rand1': 'HARTA',
             'nume_slug': 'Mapare',
             'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)'
         },
         '09': {
-            'cod': 'C09', 'nume_hero_caps_rand1': 'RELAȚIILE',
+            'cod': 'C09', 'nume_hero_caps_rand1': 'RELATII',
             'nume_slug': 'Legare',
             'meta_val_treapta': '<b>RELAȚII</b> · MĂSURI · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
         },
         '10': {
-            'cod': 'C10', 'nume_hero_caps_rand1': 'MĂSURA',
+            'cod': 'C10', 'nume_hero_caps_rand1': 'MASURA',
             'nume_slug': 'Masurare',
             'meta_val_treapta': 'RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
         },
         '11': {
-            'cod': 'C11', 'nume_hero_caps_rand1': 'CINE',
+            'cod': 'C11', 'nume_hero_caps_rand1': 'CLASAMENT',
             'nume_slug': 'Comparare',
             'meta_val_treapta': 'RELAȚII · MĂSURI · <b>COMPARAȚII</b> · INTERPRETARE (ANALIZĂ)'
         },
         '12': {
-            'cod': 'C12', 'nume_hero_caps_rand1': 'DE CE-UL',
+            'cod': 'C12', 'nume_hero_caps_rand1': 'CAUZA',
             'nume_slug': 'Interpretare',
             'meta_val_treapta': 'RELAȚII · MĂSURI · COMPARAȚII · <b>INTERPRETARE</b> (ANALIZĂ)'
         },
