@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C09 · Relații · Trainity</title>
+<title>C09 · Legare · Trainity</title>
 <style>
 /* ============ DESIGN TOKENS ============ */
 :root {
@@ -1473,116 +1473,13 @@ body.has-continue .scroll-top { bottom: 88px; }
 .tu-recunoastere{ padding-top:clamp(22px,4vw,34px); padding-bottom:clamp(22px,4vw,34px); }
 .tu-recunoastere .tu-lead{ font-size:15px; }
 </style>
-
-<style id="edit-style">
-/* === STRAT EDITOR C09 (companion) === */
-#editor-companion-head{ background:#0a0a0a; color:#fff; padding:18px clamp(16px,4vw,30px); border-bottom:4px solid #FFD400; font-family:-apple-system,"SF Pro Display",Arial,sans-serif; }
-#editor-companion-head .ech-title{ font-size:clamp(15px,2.4vw,20px); font-weight:900; letter-spacing:.4px; }
-#editor-companion-head .ech-title b{ color:#FFD400; }
-#editor-companion-head .ech-sub{ font-size:12px; color:#bdbdbd; margin-top:4px; }
-#editor-companion-head .ech-cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
-#editor-companion-head .ech-box{ background:#141414; border:1px solid #2a2a2a; padding:10px 12px; }
-#editor-companion-head .ech-h{ font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
-#editor-companion-head .ech-lock .ech-h{ color:#ff8a8a; }
-#editor-companion-head .ech-edit .ech-h{ color:#FFD400; }
-#editor-companion-head .ech-guard .ech-h{ color:#8ab4ff; }
-#editor-companion-head ul{ list-style:none; padding:0; margin:0; }
-#editor-companion-head li{ font-size:12px; line-height:1.55; color:#e6e6e6; padding-left:14px; position:relative; }
-#editor-companion-head li::before{ content:"\2022"; position:absolute; left:0; color:#FFD400; }
-#editor-companion-head .ech-sync{ margin-top:14px; background:#141414; border:1px solid #2a2a2a; padding:10px 12px; }
-#editor-companion-head .ech-sync-grid{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
-#editor-companion-head .ech-sync-grid span{ font-size:11px; font-weight:700; color:#0a0a0a; background:#7CFC9A; padding:4px 8px; }
-#editor-companion-head .ech-sync-note{ font-size:11px; color:#9a9a9a; margin-top:8px; }
-#editor-companion-head .ech-bar{ display:flex; align-items:flex-start; gap:12px; }
-#editor-companion-head .ech-toggle{ margin-left:auto; flex:0 0 auto; background:#1a1a1a; color:#FFD400; border:1px solid #FFD400; font:800 11px -apple-system,Arial,sans-serif; padding:4px 10px; cursor:pointer; letter-spacing:.5px; white-space:nowrap; }
-#editor-companion-head .ech-toggle:hover{ background:#FFD400; color:#0a0a0a; }
-#editor-companion-head.collapsed .ech-body{ display:none; }
-#editor-companion-head.collapsed .ech-toggle .ech-tg-txt::before{ content:"EXTINDE \25BC"; }
-#editor-companion-head .ech-toggle .ech-tg-txt::before{ content:"RESTRÂNGE \25B2"; }
-@media(max-width:760px){ #editor-companion-head .ech-cols{ grid-template-columns:1fr; } #editor-companion-head{ padding:12px 16px; } }
-
-/* zone LOCKED in corp */
-.locked-slot{ position:relative; outline:2px solid #ff5a5a; outline-offset:3px; }
-.locked-slot::after{ content:"\1F512 LOCKED"; position:absolute; top:-9px; right:0; background:#ff5a5a; color:#0a0a0a; font:800 9px -apple-system,Arial,sans-serif; letter-spacing:1px; padding:1px 6px; z-index:5; }
-/* span LOCKED inline (fraza canonica intr-un pas editabil): badge inline, nu coltar */
-span.locked-slot{ outline:1px solid #ff5a5a; outline-offset:1px; background:rgba(255,90,90,.10); border-radius:2px; }
-span.locked-slot::after{ content:"\1F512"; position:static; background:none; color:#ff5a5a; font-size:10px; margin-left:4px; padding:0; letter-spacing:0; }
-
-/* contenteditable */
-[contenteditable="true"]{ outline:1px dashed rgba(255,212,0,.45); outline-offset:2px; cursor:text; }
-[contenteditable="true"]:hover{ outline-color:rgba(255,212,0,.9); }
-[contenteditable="true"]:focus{ outline:2px solid #FFD400; outline-offset:2px; }
-
-/* toolbar slim jos */
-#edit-toolbar{ position:fixed; bottom:0; left:0; right:0; background:#FFD400; color:#000; padding:6px 18px; z-index:99999; font-family:-apple-system,Arial,sans-serif; font-size:11px; font-weight:700; display:flex; align-items:center; gap:12px; border-top:2px solid #000; box-shadow:0 -2px 8px rgba(0,0,0,.3); min-height:36px; }
-#edit-toolbar button{ background:#000; color:#FFD400; border:none; padding:6px 12px; font-family:inherit; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; cursor:pointer; }
-#edit-toolbar button:hover{ background:#1a1a1a; }
-#edit-toolbar .hint{ margin-left:auto; font-size:10px; font-weight:500; color:#000; opacity:.75; }
-body{ padding-bottom:42px !important; }
-</style>
-
 </head>
 <body>
-
-<div id="editor-companion-head">
-  <div class="ech-bar">
-    <div class="ech-title">EDITOR-STUDIU · <b>C09 RELAȚII</b> · companion sincronizat cu HTML-Studiu (BRAIN-019)</div>
-    <button type="button" class="ech-toggle" onclick="editorTogglePanel()" aria-label="Restrange sau extinde panoul"><span class="ech-tg-txt"></span></button>
-  </div>
-  <div class="ech-body">
-  <div class="ech-sub">Editezi textul direct (click pe text). Zonele cu chenar rosu si lacat sunt LOCKED (nu se ating). Frazele canonice din pasi sunt blocate punctual, restul microcopy-ului ramane editabil. La final apesi EXPORT (bara de jos) ca sa descarci versiunea editata.</div>
-  <div class="ech-cols">
-    <div class="ech-box ech-lock">
-      <div class="ech-h">Zone LOCKED (nu edita)</div>
-      <ul>
-        <li>Hero: „Cum transform legăturile în răspunsuri?"</li>
-        <li>AHA: „Fără relații ai date. Cu relații ai răspunsuri."</li>
-        <li>Mantra: „Nu mutăm datele. Le legăm."</li>
-        <li>BOMBĂ / GREȘEALA / CINE DEVII / WOW / MOTTO</li>
-        <li>Formula model: „Fișierul are mai multe foi. Modelul are un fact și patru dimensiuni."</li>
-        <li>Join vs Union: „Join leagă tabele diferite. Union adună tabele de același fel."</li>
-      </ul>
-    </div>
-    <div class="ech-box ech-edit">
-      <div class="ech-h">Zone editabile</div>
-      <ul>
-        <li>formulări de introducere</li>
-        <li>microcopy de pași, explicații pentru learner</li>
-        <li>exemple pedagogice (fără cifre finale)</li>
-        <li>text de prompt AI (păstrând scopul de verificare)</li>
-        <li>payoff (fără să rupă sloturile LOCKED)</li>
-      </ul>
-    </div>
-    <div class="ech-box ech-guard">
-      <div class="ech-h">C09 rămâne la RELAȚII (anti-contaminare)</div>
-      <ul>
-        <li>doar leagă tabele și face prima citire cross-tabel</li>
-        <li>nu calculează cifre stabile reutilizabile (treapta următoare)</li>
-        <li>fără ordonări sau clasări</li>
-        <li>fără interpretarea motivelor</li>
-        <li>fără tablou vizual sau acțiuni automate</li>
-        <li>zero cifre business statice în text</li>
-        <li>hero RELAȚII dedicat (fără clonă vizuală din treapta anterioară)</li>
-      </ul>
-    </div>
-  </div>
-  <div class="ech-sync">
-    <div class="ech-h">Checklist sincronizare cu baza (HTML-Studiu C09 stabilizat)</div>
-    <div class="ech-sync-grid">
-      <span>title LOCKED</span><span>AHA verbatim</span><span>18 pași</span>
-      <span>8 verificări</span><span>5 fenomene</span><span>2 prompturi AI</span>
-      <span>model: 1 fact + 4 dimensiuni</span><span>lock-by-attribute</span>
-    </div>
-    <div class="ech-sync-note">Companion generat din baza C09 VERBATIM + strat editor. Continut identic 1:1 cu HTML-Studiu. Lock principal prin atribut „data-locked" (fraza canonica), fallback prin potrivire de fraza. EXPORT scoate stratul de editor si livreaza HTML curat.</div>
-  </div>
-  </div>
-</div>
-
 
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C09 · Relații</div>
+  <div class="mobile-topbar-title">C09 · Legare</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -1601,7 +1498,7 @@ body{ padding-bottom:42px !important; }
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cum transform legăturile în răspunsuri?</span></div>
         <div class="hero-tiernav">
           <div class="system-map" aria-label="harta treptei 3">
-            <span class="sm-step active">LEGAREA</span><span class="sm-arrow">·</span><span class="sm-step">MĂSURAREA</span><span class="sm-arrow">·</span><span class="sm-step">COMPARAREA</span><span class="sm-arrow">·</span><span class="sm-step">INTERPRETAREA</span>
+            <span class="sm-step active">RELAȚII</span><span class="sm-arrow">·</span><span class="sm-step">MĂSURĂ</span><span class="sm-arrow">·</span><span class="sm-step">CLASAMENT</span><span class="sm-arrow">·</span><span class="sm-step">CAUZĂ</span>
           </div>
         </div>
       </header>
@@ -2535,87 +2432,5 @@ setTimeout(() => {
 }, 700);
 
 </script>
-
-<div id="edit-toolbar">
-  <span class="label">EDITOR PAGINA VIE · C09</span>
-  <button onclick="editorExport()">EXPORT</button>
-  <button onclick="editorReset()">RESET</button>
-  <span class="hint">Click pe text = editezi. Sloturile cu lacat (data-locked) sunt blocate; frazele canonice din pasi blocate punctual. Ctrl+Z = Undo.</span>
-</div>
-<script id="edit-script">
-(function blockKbd(){ document.addEventListener("keydown",function(e){ var a=document.activeElement; if(a&&(a.isContentEditable||a.tagName==="INPUT"||a.tagName==="TEXTAREA")) e.stopPropagation(); }, true); })();
-
-/* Lock-by-attribute (data-locked) = mecanism PRINCIPAL. Lock-by-phrase = FALLBACK (forma canonica). */
-var LOCKED_PHRASES = [
-  "Cum transform legăturile în răspunsuri",
-  "Fără relații ai date. Cu relații ai răspunsuri",
-  "Nu mutăm datele",
-  "Ai toate datele",
-  "Oamenii copiază coloane",
-  "Nu mai vezi o rețea",
-  "Tabele care stăteau alături fără să se cunoască",
-  "Întrebi o dată. Modelul răspunde",
-  "Fișierul are mai multe foi. Modelul are un fact",
-  "Join leagă tabele diferite. Union adună tabele de același fel"
-];
-function isLocked(t){ t=(t||"").replace(/\s+/g," ").trim(); for(var i=0;i<LOCKED_PHRASES.length;i++){ if(t.indexOf(LOCKED_PHRASES[i])!==-1) return true; } return false; }
-function lockEl(el){ el.classList.add("locked-slot"); el.setAttribute("contenteditable","false"); el.dataset.editorReady="1"; }
-
-(function setupEditor(){
-  var EDITABLE = ["h1","h2","h3","h4",".cover-miza",".hero-microbrief",".mantra-band-sub",
-    ".section-marker",".section-sublabel",".stage-label",".stage-name",".stage-emotion",".stage-quote",
-    ".step-title",".step-action",".verify-title",".verify-sub",".final-text",".final-label",".final-intro",
-    ".prompt-label",".prompt-text",".next-label",".next-title",".next-desc",".payoff-line",
-    ".ba-val",".ba-label",".outcomes-label",".hov-kicker",".tu-kicker",".tu-lead",".tu-list li","p","li"];
-  function mark(root){
-    // PRIMAR: orice [data-locked] = blocat + badge (block sau span inline)
-    root.querySelectorAll("[data-locked]").forEach(function(el){ lockEl(el); });
-    EDITABLE.forEach(function(sel){
-      try{ root.querySelectorAll(sel).forEach(function(el){
-        if(el.dataset.editorReady) return;
-        if(el.closest("#edit-toolbar")||el.closest("#editor-companion-head")) return;
-        if(el.tagName==="BUTTON"||el.tagName==="SCRIPT"||el.tagName==="STYLE") return;
-        if(!el.textContent.trim()) return;
-        // e blocat prin atribut sau e in interiorul unui slot blocat
-        if(el.hasAttribute("data-locked")||el.closest("[data-locked]")){ el.dataset.editorReady="1"; return; }
-        if(el.closest(".locked-slot")){ el.dataset.editorReady="1"; return; }
-        el.dataset.editorReady="1";
-        // GRANULAR: contine o fraza canonica marcata -> ramane editabil (spanul intern e blocat separat)
-        if(el.querySelector("[data-locked]")){ el.setAttribute("contenteditable","true"); el.setAttribute("spellcheck","true"); return; }
-        // FALLBACK lock-by-phrase (cand lipseste marcajul de atribut)
-        if(isLocked(el.textContent)){ lockEl(el); return; }
-        el.setAttribute("contenteditable","true");
-        el.setAttribute("spellcheck","true");
-      }); }catch(e){}
-    });
-  }
-  mark(document);
-  var obs=new MutationObserver(function(m){ var n=false; m.forEach(function(x){ if(x.addedNodes.length) n=true; }); if(n) setTimeout(function(){ mark(document); },30); });
-  obs.observe(document.body,{childList:true,subtree:true});
-})();
-
-window.editorTogglePanel=function(){ var p=document.getElementById("editor-companion-head"); if(p) p.classList.toggle("collapsed"); };
-(function initPanel(){ if(window.innerWidth<=760){ var p=document.getElementById("editor-companion-head"); if(p) p.classList.add("collapsed"); } })();
-
-window.editorExport=function(){
-  var clone=document.documentElement.cloneNode(true);
-  ["#edit-toolbar","#edit-style","#edit-script","#editor-companion-head"].forEach(function(s){ clone.querySelectorAll(s).forEach(function(e){ e.remove(); }); });
-  clone.querySelectorAll(".locked-slot").forEach(function(e){ e.classList.remove("locked-slot"); });
-  clone.querySelectorAll("[contenteditable]").forEach(function(e){ e.removeAttribute("contenteditable"); });
-  clone.querySelectorAll("[spellcheck]").forEach(function(e){ e.removeAttribute("spellcheck"); });
-  clone.querySelectorAll("[data-editor-ready]").forEach(function(e){ e.removeAttribute("data-editor-ready"); });
-  // data-locked = marcaj de continut al bazei -> RAMANE in export (companionul curat == baza)
-  var html="<!DOCTYPE html>\n"+clone.outerHTML;
-  var blob=new Blob([html],{type:"text/html"});
-  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
-  a.download="HTML-Studiu-Excel-09-Relatii-Editat.html"; a.click(); URL.revokeObjectURL(a.href);
-};
-window.editorReset=function(){
-  if(!confirm("Anulezi TOATE modificarile + curatesti progresul + reincarci de la 0?")) return;
-  try{ Object.keys(localStorage).forEach(function(k){ if(k.indexOf("trainity_")===0) localStorage.removeItem(k); }); }catch(e){}
-  window.location.replace(window.location.pathname+"?_="+Date.now()+window.location.hash);
-};
-</script>
-
 </body>
 </html>

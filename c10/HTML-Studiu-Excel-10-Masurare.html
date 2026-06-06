@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C11 · Comparații · Trainity</title>
+<title>C10 · Măsurare · Trainity</title>
 <style>
 /* ============ DESIGN TOKENS ============ */
 :root {
@@ -297,6 +297,23 @@ body.has-continue .stage-toast { bottom: 88px; }
   margin-bottom: 48px;
   position: relative;
 }
+.cover-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.2px;
+  color: var(--grey-2); text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--y-soft);
+  border: 1px solid var(--y-border);
+  margin-bottom: 28px;
+}
+.cover-label::before {
+  content: ""; display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--y);
+  margin-right: 10px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
 .cover-title {
   font-size: clamp(40px, 7vw, 84px);
   font-weight: 900; line-height: 0.98;
@@ -316,6 +333,62 @@ body.has-continue .stage-toast { bottom: 88px; }
   max-width: 600px;
   margin-bottom: 32px;
 }
+.cover-miza {
+  font-size: 16px; font-weight: 600;
+  color: #fff; padding: 18px 22px;
+  background: var(--red); border-left: 6px solid var(--k);
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  box-shadow: 4px 4px 0 0 var(--k);
+  letter-spacing: 0.1px;
+}
+.cover-meta {
+  display: grid; grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--grey-5);
+}
+.cover-meta-row {
+  display: grid; grid-template-columns: 200px 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey-5);
+  font-size: 13px;
+  gap: 16px;
+}
+.cover-meta-key { font-weight: 700; color: var(--grey-3); letter-spacing: 0.5px; text-transform: uppercase; font-size: 11px; }
+.cover-meta-val { color: var(--k); }
+.cover-meta-val a { color: var(--k); text-decoration: underline; text-decoration-color: var(--y); text-decoration-thickness: 2px; text-underline-offset: 3px; padding: 8px 0; display: inline-block; min-height: 36px; box-sizing: content-box; }
+.cover-meta-val a:hover { background: var(--y); }
+
+/* ============ EXEC HERO ============ */
+.exec-hero {
+  background: var(--k); color: #fff;
+  padding: 48px 40px;
+  margin: 48px 0;
+  position: relative;
+}
+.exec-hero::before {
+  content: ""; position: absolute;
+  top: 0; left: 0; width: 100%; height: 6px;
+  background: var(--y);
+}
+.exec-hero-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.2px;
+  color: var(--y); margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.exec-hero h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800; line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.exec-hero-sharp {
+  font-size: 18px; font-weight: 600;
+  color: var(--y); margin-bottom: 16px;
+  line-height: 1.4;
+}
+.exec-hero p { font-size: 15px; line-height: 1.7; color: var(--grey-4); max-width: 680px; }
 
 /* ============ MANTRA ============ */
 .mantra-band {
@@ -588,7 +661,7 @@ body.has-continue .stage-toast { bottom: 88px; }
 }
 .step.done .step-body { border-top-color: var(--y-border); }
 
-/* === STAGE PROGRESIVE: stage e vizibil daca current step e in stage SAU stage e in done (a fost parcurs) === */
+/* === STAGE PROGRESIVE: stage e vizibil daca current step e in stage SAU stage e in done (cursantul a trecut prin el) === */
 .stage {
   display: none;
 }
@@ -599,10 +672,10 @@ body.has-continue .stage-toast { bottom: 88px; }
 .stage.visible .stage-quote { display: block; }
 
 /* HERO + anomaly-grid + mantra + exec-hero raman vizibile mereu (sunt cadru, nu pasi) */
-.final-section, .next-section, .payoff-section, .transformare-section {
+.final-section, .next-section, .payoff-section {
   display: none;
 }
-.final-section.visible, .next-section.visible, .payoff-section.visible, .transformare-section.visible {
+.final-section.visible, .next-section.visible, .payoff-section.visible {
   display: block;
 }
 @keyframes stepBodyIn {
@@ -906,7 +979,7 @@ body.has-continue .stage-toast { bottom: 88px; }
   font-size: 14px; color: #fff; line-height: 1.5;
 }
 
-/* ============ NEXT (C12) ============ */
+/* ============ NEXT (C10) ============ */
 .next-section {
   margin: 64px 0;
   padding: 40px 32px;
@@ -980,6 +1053,7 @@ body.has-continue .stage-toast { bottom: 88px; }
   text-transform: uppercase;
   margin-top: 48px;
 }
+.footer-brand { color: var(--k); font-weight: 800; }
 
 /* ============ SCROLL TOP ============ */
 .scroll-top {
@@ -1257,7 +1331,7 @@ body.has-continue .scroll-top { bottom: 88px; }
   .nav-ctrl-btn { padding: 5px 8px; min-height: 24px; font-size: 9px; letter-spacing: 1px; }
 }
 </style>
-<style>
+<style id="c08-premium-graft">
 .hero-visual{position:relative;margin:18px 0 8px;border-radius:8px;overflow:hidden}
 .hero-visual-img{display:block;width:100%;height:200px;object-fit:cover;filter:grayscale(.1)}
 .hero-question{margin:22px 0 10px}
@@ -1292,7 +1366,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 </style>
 <style id="hero-v2-premium">
 :root{ --tr-y:#FFD400; }
-/* ===== HERO v2 PREMIUM (Trainity · poster + system row) ===== */
+/* ===== HERO v2 PREMIUM (Trainity · poster + harta treptei) ===== */
 .cover{ padding:6px 0 8px; }
 /* A. Identitate: imagine dominanta + obiect */
 .hero-visual{ position:relative; margin:16px 0 22px; border-radius:0; overflow:hidden; border:2px solid #0a0a0a; }
@@ -1336,6 +1410,13 @@ body.has-continue .scroll-top { bottom: 88px; }
 /* gigantic STRUCTURA pe imagine */
 .hero-visual{ position:relative; border:2px solid #0a0a0a; }
 .hero-visual-img{ height:clamp(230px,46vw,400px); }
+.hero-placeholder{ background:radial-gradient(circle at 50% 38%, #2a2f3a 0%, #1a1d24 62%, #0f1116 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; }
+.hp-model{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center; }
+.hp-fact{ font-weight:900; font-size:clamp(13px,2vw,18px); letter-spacing:1px; color:#0a0a0a; background:var(--tr-y,#FFD400); padding:8px 14px; border:2px solid #0a0a0a; }
+.hp-dim{ font-weight:700; font-size:clamp(10px,1.5vw,13px); letter-spacing:.5px; color:#cfd6e2; padding:6px 10px; border:1px solid #4a5160; background:rgba(255,255,255,.03); }
+.hp-flow{ font-weight:800; font-size:clamp(12px,2vw,16px); letter-spacing:2px; color:#9aa3b2; }
+.hp-arrow{ color:var(--tr-y,#FFD400); }
+
 .hero-visual-overlay{ position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:20px; background:linear-gradient(to top, rgba(0,0,0,.80) 0%, rgba(0,0,0,.20) 50%, rgba(0,0,0,0) 100%); }
 .hov-kicker{ font-size:11px; letter-spacing:3px; color:var(--tr-y); font-weight:800; text-transform:uppercase; }
 .hov-object{ font-size:clamp(34px,10vw,104px); font-weight:900; letter-spacing:-1.5px; color:#fff; line-height:.92; margin-top:2px; word-break:keep-all; }
@@ -1351,13 +1432,13 @@ body.has-continue .scroll-top { bottom: 88px; }
 .hero-beforeafter .ba-after li::before{ content:"\2713"; position:absolute; left:0; color:var(--tr-y); font-weight:900; }
 @media(max-width:720px){ .system-map{ gap:5px; } }
 </style>
-<style id="hero-systemrow-v4">
+<style id="hero-tiernav-v4">
 .cover-title{ font-size:clamp(24px,3.4vw,34px); font-weight:800; line-height:1.12; letter-spacing:-.5px; margin:6px 0 14px; }
-.hero-systemrow{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin:18px 0 2px; padding-top:14px; border-top:1px solid #ececec; }
-.hero-systemrow .system-map{ margin:0; }
+.hero-tiernav{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin:18px 0 2px; padding-top:14px; border-top:1px solid #ececec; }
+.hero-tiernav .system-map{ margin:0; }
 .study-intro{ margin:18px 0 8px; }
 .study-result{ margin:26px 0 8px; }
-@media(max-width:720px){ .hero-systemrow{ flex-direction:column; align-items:stretch; gap:12px; } }
+@media(max-width:720px){ .hero-tiernav{ flex-direction:column; align-items:stretch; gap:12px; } }
 </style>
 <style id="arc-tu-v1">
 .tu-section{ background:#0a0a0a; color:#fff; border-radius:0; padding:clamp(26px,5.5vw,46px) clamp(20px,4vw,32px); margin:16px 0; }
@@ -1398,7 +1479,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C11 · Comparații</div>
+  <div class="mobile-topbar-title">C10 · Măsurare</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -1409,120 +1490,121 @@ body.has-continue .scroll-top { bottom: 88px; }
 
     <main class="main-content">
 
-      <header class="cover">
+            <header class="cover">
         <div class="hero-visual">
-          <img class="hero-visual-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231F2A44'/><stop offset='1' stop-color='%230B1020'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='60' y='420' fill='%23FFD400' font-family='Georgia' font-size='64' font-weight='bold'>COMPARATII</text><text x='62' y='470' fill='%23ffffff' font-family='Arial' font-size='24' opacity='0.7'>C11 · COMPARAȚII · hero temporar</text></svg>" alt="Trepte metalice ascendente pe fundal întunecat, cu câteva bare luminate cald care urcă spre vârf, sugerând un clasament">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C11</span><span class="hov-object">CLASAMENT</span></div>
+          <img class="hero-visual-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231F2A44'/><stop offset='1' stop-color='%230B1020'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='60' y='420' fill='%23FFD400' font-family='Georgia' font-size='64' font-weight='bold'>MASURA POTRIVITA</text><text x='62' y='470' fill='%23ffffff' font-family='Arial' font-size='24' opacity='0.7'>C10 · placeholder hero</text></svg>" alt="Masura C10: o cifra bruta din model devine o masura definita, cu baza de raportare si reper">
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C10</span><span class="hov-object">MĂSURĂ</span></div>
         </div>
-        <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text">Care contează cu adevărat?</span></div>
-        <div class="hero-systemrow">
+        <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cât? Și cum definesc o măsură care răspunde corect de fiecare dată?</span></div>
+        <div class="hero-tiernav">
           <div class="system-map" aria-label="harta treptei 3">
-            <span class="sm-step">LEGAREA</span><span class="sm-arrow">·</span><span class="sm-step">MĂSURAREA</span><span class="sm-arrow">·</span><span class="sm-step active">COMPARAREA</span><span class="sm-arrow">·</span><span class="sm-step">INTERPRETAREA</span>
+            <span class="sm-step">RELAȚII</span><span class="sm-arrow">·</span><span class="sm-step active">MĂSURĂ</span><span class="sm-arrow">·</span><span class="sm-step">CLASAMENT</span><span class="sm-arrow">·</span><span class="sm-step">CAUZĂ</span>
           </div>
-          </div>
+        </div>
       </header>
 
       <section class="study-intro-top">
-        <h1 class="cover-title">Construirea clasamentelor</h1>
-        <p class="hero-microbrief">O listă de măsuri corecte poate ascunde cine duce de fapt rezultatul. În această construcție așezi actorii în ierarhie: clasament pe o măsură comparabilă, diferențe reale, contribuție în total și concentrare.</p>
-        <div class="cover-miza">Aceeași listă de măsuri poate ascunde cine duce de fapt rezultatul. C11 este momentul în care lista plată devine ierarhie decizională: actori așezați în clasament, diferențe reale separate de zgomot, contribuția fiecăruia în total și concentrarea care arată că puțini duc majoritatea. Cu comparație, datele capătă ierarhie.</div>
+        <h1 class="cover-title">Definirea măsurilor</h1>
+        <p class="hero-microbrief">Ai un model care răspunde la întrebări. Dar răspunsul vine ca o cifră brută: un total, o medie, un procent. Un director nu vrea o cifră, vrea o măsură în care poate avea încredere de fiecare dată, pe orice felie. O cifră calculată o dată nu este încă o măsură.</p>
+        <div class="cover-miza">Aceeași întrebare poate primi trei cifre diferite, calculate în trei locuri. C10 este momentul în care cifrele brute devin măsuri definite o singură dată: cu o bază de raportare clară, ancorate într-un reper, robuste la orice tăietură. O măsură bună reduce haosul, nu îl amplifică.</div>
       </section>
 
       <section class="intriga-bomb">
-        <p class="cover-subtitle"><span class="ib-1">Ai lista.</span> <span class="ib-2">Dar nu știi cine duce rezultatul.</span></p>
+        <p class="cover-subtitle" data-locked="1"><span class="ib-1">Ai cifra.</span> <span class="ib-2">Dar nu și încrederea în ea.</span></p>
       </section>
 
       <!-- ARC TU: recunoastere -> greseala -> aha -> cine devii -->
       <section class="tu-section tu-recunoastere">
         <div class="tu-kicker">SUNĂ CUNOSCUT?</div>
-        <p class="tu-lead">Lucrezi cu măsuri corecte, deja definite. Și totuși:</p>
+        <p class="tu-lead">Ai un model legat corect și ceri o cifră simplă: "cât?". Și totuși:</p>
         <ul class="tu-list">
-          <li>același set susține clasamente diferite, după cum sortezi</li>
-          <li>compari valori care nu sunt comparabile</li>
-          <li>decizi pe ordinea brută, fără să vezi cine duce rezultatul</li>
+          <li>apar totaluri, medii și procente, dar fiecare loc dă altă valoare</li>
+          <li>nu știi care e numitorul unui procent sau față de ce se raportează</li>
+          <li>nicio cifră nu are un reper care să-i dea sens</li>
         </ul>
       </section>
       <section class="tu-section tu-greseala">
         <div class="tu-kicker">GREȘEALA CLASICĂ</div>
-        <p class="tu-statement">Oamenii se uită la cine e mare.<br><span class="tu-hl">Profesioniștii se uită la cine duce rezultatul.</span></p>
+        <p class="tu-statement" data-locked="1">Oamenii calculează tot ce se poate calcula.<br><span class="tu-hl">Profesioniștii definesc măsura o singură dată.</span></p>
       </section>
       <section class="tu-section tu-aha">
         <div class="tu-kicker">AHA</div>
-        <p class="tu-statement">O valoare singură nu spune nimic. Lângă celelalte, spune cine conduce.</p>
+        <p class="tu-statement" data-locked="1">Un număr stă în tabel. O măsură trăiește în întrebare.</p>
       </section>
       <section class="tu-section tu-promise">
         <div class="tu-kicker">CINE DEVII</div>
-        <p class="tu-statement">Nu mai citești liste. <span class="tu-hl">Citești ierarhii.</span></p>
+        <p class="tu-statement" data-locked="1">Nu mai aduni cifre. <span class="tu-hl">Definești măsuri.</span></p>
       </section>
 
       <section class="study-intro">
         <div class="hero-beforeafter">
-          <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>listă plată de măsuri</li><li>valori necomparabile</li><li>ordine brută, fără sens</li><li>fără reper de comparație</li></ul></div>
+          <div class="ba-col ba-before"><div class="ba-label">ÎNAINTE</div><ul><li>cifre brute fără o întrebare clară</li><li>aceeași cifră calculată diferit în locuri diferite</li><li>procente fără bază de raportare</li><li>niciun reper care să dea sens cifrei</li></ul></div>
           <div class="ba-arrow">→</div>
-          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>clasament clar</li><li>contribuție în total</li><li>concentrare vizibilă</li><li>reper relativ</li></ul></div>
+          <div class="ba-col ba-after"><div class="ba-label">DUPĂ</div><ul><li>măsuri definite o singură dată</li><li>o singură sursă de adevăr per măsură</li><li>bază de raportare declarată</li><li>reper și semnal controlabil</li></ul></div>
         </div>
       </section>
       <section class="study-result">
-        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>clasament repetabil</li><li>contribuție în total</li><li>concentrare identificată</li><li>ierarhie pentru pasul următor</li></ul></div>
+        <div class="hero-outcomes"><div class="outcomes-label">CE VEI OBȚINE</div><ul class="outcomes-list"><li>măsuri definite ca sursă unică de adevăr</li><li>bază de raportare clară pentru fiecare rată</li><li>reper definit și semnal explicabil</li><li>măsură robustă: aceeași definiție pe orice tăietură</li></ul></div>
       </section>
 
       <div class="mantra-band">
         <div class="mantra-band-sub">MANTRA · TRAINITY</div>
-        <div class="mantra-band-main">Nu toate valorile sunt egale, <mark>unele conduc rezultatul</mark>.</div>
+        <div class="mantra-band-main" data-locked="1">Măsura corectă răspunde <mark>întrebării corecte</mark>.</div>
       </div>
 
       <section>
-        <div class="section-marker">SCENA REALĂ · CE PARE CLASAMENT DAR E DOAR O LISTĂ</div>
-        <div class="anomaly-grid"><div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">ORDINE BRUTĂ</b><p class="anomaly-desc">Rânduri afișate într-o ordine oarecare, confundată cu un clasament real.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">NECOMPARABIL</b><p class="anomaly-desc">Valori puse cap la cap deși au unități, perioade sau baze de raportare diferite.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">MARE NU E IMPORTANT</b><p class="anomaly-desc">Un actor mare în listă tratat ca important, fără să vezi cât duce din total.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">COADĂ LUNGĂ</b><p class="anomaly-desc">Zeci de actori mici care par să conteze, deși împreună duc puțin din rezultat.</p></div>
-<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">FĂRĂ REPER</b><p class="anomaly-desc">Poziții citite în absolut, fără lider, mediană sau grup la care să le raportezi.</p></div></div>
+        <div class="section-marker">SCENA REALĂ · CE SE ÎNTÂMPLĂ CÂND CIFRELE NU SUNT MĂSURI</div>
+        <div class="anomaly-grid">
+<div class="anomaly-card"><span class="anomaly-num">01</span><b class="anomaly-title">TOTAL FĂRĂ ÎNTREBARE</b><p class="anomaly-desc">Se adună o coloană pentru că se poate aduna. Dar fără o întrebare clară în spate, totalul nu răspunde la nimic: e o cifră, nu o măsură.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">02</span><b class="anomaly-title">MEDIA CARE ASCUNDE</b><p class="anomaly-desc">O medie pe tot setul pare obiectivă. Dar amestecă lucruri diferite și ascunde realitatea: aceeași medie poate descrie situații complet opuse.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">03</span><b class="anomaly-title">PROCENT FĂRĂ BAZĂ</b><p class="anomaly-desc">Un procent fără numitor declarat poate spune orice. "Procent din ce?" Fără baza de raportare clară, cifra pare precisă și este goală.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">04</span><b class="anomaly-title">TREI CIFRE PENTRU O ÎNTREBARE</b><p class="anomaly-desc">Aceeași măsură e recalculată în trei locuri și dă trei valori. Lipsește sursa unică de adevăr: nimeni nu știe care cifră e cea oficială.</p></div>
+<div class="anomaly-card"><span class="anomaly-num">05</span><b class="anomaly-title">MĂSURA FRAGILĂ</b><p class="anomaly-desc">Pui un filtru sau schimbi tăietura și măsura se rupe sau dă un rezultat absurd. O măsură care nu rezistă la context nu e o măsură, e o coincidență.</p></div>
+</div>
       </section>
-
 
       <section class="stage" id="stage-1" data-stage="1" data-stage-ghost="01">
   <header class="stage-header">
     <div class="stage-number">01</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 1 · DESCHIDERE COMPARATIVĂ</div>
+      <div class="stage-label">ETAPA 1 · DESCHIDERE CANTITATIVĂ</div>
       <h2 class="stage-name">REALITATE</h2>
       <div class="stage-tags"><span class="phase-tag">INPUT</span><span class="type-tag">Manual</span></div>
     </div>
   </header>
-  <p class="stage-quote">Deschizi setul de măsuri predat de C10. Pare o listă ordonată. Confirmi măsura înainte să compari.</p>
+  <p class="stage-quote">Modelul predat de C09 răspunde deja la întrebări. Acum nu mai întrebi dacă poate răspunde, ci cât: și transformi răspunsul într-o măsură.</p>
   <div class="stage-body">
 <div class="step" data-step="1">
   <div class="step-head" onclick="toggleStep(1)">
     <div class="step-marker">PAS 01</div>
-    <h3 class="step-title">Confirmi măsurile pe care le compari</h3>
+    <h3 class="step-title">Confirmi că datele sunt legate corect</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(1)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Deschizi setul de măsuri predat de C10 (Date_MASTER-C10.xlsx), foaia Masuri. Confirmi că pe ele compari, nu pe cifre brute.</p>
-    
+    <p class="step-action">Deschizi Date_MASTER-C10.xlsx. <span data-locked="1">Modelul vine de la C09: un fact (Vanzari) legat prin chei de dimensiuni.</span> Înainte de orice măsură, confirmi că relațiile țin. O măsură construită peste un model rupt este o cifră falsă, oricât de elegantă.</p>
+
   </div>
 </div>
 <div class="step" data-step="2">
   <div class="step-head" onclick="toggleStep(2)">
     <div class="step-marker">PAS 02</div>
-    <h3 class="step-title">Formulezi întrebarea de business: „Care?”</h3>
+    <h3 class="step-title">Formulezi întrebarea de business: "Cât?"</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(2)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Înainte de orice clasament scrii întrebarea de business. Nu „cât a făcut fiecare”, ci „care conduce rezultatul”. Întrebarea „Care?” decide după ce măsură compari.</p>
-    
+    <p class="step-action">O măsură fără întrebare e o cifră decorativă. Pornești de la întrebarea reală: "cât?". Cât în total, cât în medie, cât pe o felie. Întrebarea decide măsura, nu invers. Mai întâi întrebarea, abia apoi calculul.</p>
+
   </div>
 </div>
 <div class="step" data-step="3">
   <div class="step-head" onclick="toggleStep(3)">
     <div class="step-marker">PAS 03</div>
-    <h3 class="step-title">Vezi că o listă lungă nu e încă o ierarhie</h3>
+    <h3 class="step-title">Vezi că o cifră brută nu e încă o măsură</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(3)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Privești coloana de măsuri pe zeci de actori. Ochiul nu poate ierarhiza singur o listă lungă. Ordinea în care apar rândurile nu spune cine contează.</p>
-    
+    <p class="step-action">Poți aduna o coloană în trei secunde. Dar o cifră calculată ad-hoc nu are bază declarată, nici reper, nici garanția că dă același rezultat data viitoare. O măsură este o definiție, nu un calcul de moment.</p>
+
   </div>
 </div>
   </div>
@@ -1537,84 +1619,84 @@ body.has-continue .scroll-top { bottom: 88px; }
       <div class="stage-tags"><span class="phase-tag">AI</span><span class="type-tag">Copilot · Promptul 1</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu clasăm încă. Întâi verificăm comparabilitatea. Promptul natural e instrument de comparație, nu de execuție.</p>
+  <p class="stage-quote">Înainte să definești măsura, întrebi modelul ce măsură răspunde corect la întrebare și ce cifre nu merită promovate.</p>
   <div class="stage-body">
 <div class="step" data-step="4">
   <div class="step-head" onclick="toggleStep(4)">
     <div class="step-marker">PAS 04</div>
-    <h3 class="step-title">Ceri AI-ului cum să compari corect actorii</h3>
+    <h3 class="step-title">Ceri AI-ului ce măsură răspunde întrebării</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(4)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Deschizi Copilot pe foaia de măsuri. Nu ceri încă un clasament. Întrebi cum să compari corect actorii și ce te-ar putea induce în eroare. Doar investighezi.</p>
-    
+    <p class="step-action">Lansezi Promptul 1. Pentru întrebarea ta de business, AI-ul propune măsura potrivită (total, medie sau rată), ce coloană agreg și care ar fi baza de raportare. Nu definești încă; afli ce măsură răspunde corect.</p>
+    <div class="prompt-box">
+      <div class="prompt-label">PROMPT 1 · IDENTIFICAREA MĂSURII</div>
+      <div class="prompt-text">Am un model cu un fact (Vanzari) legat de dimensiuni. Pentru întrebarea de business pe care o pun, spune-mi ce măsură răspunde corect (total, medie sau rată), ce coloană se agregă, care este baza de raportare (numitorul) și ce cifre din set nu merită transformate în măsuri pentru că nu răspund la nicio întrebare reală. Nu modifica datele.</div>
+      <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
+    </div>
   </div>
 </div>
 <div class="step" data-step="5">
   <div class="step-head" onclick="toggleStep(5)">
     <div class="step-marker">PAS 05</div>
-    <h3 class="step-title">Verifici că valorile sunt comparabile</h3>
+    <h3 class="step-title">Distingi cifra utilă de cifra decorativă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(5)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">AI semnalează unde compari mere cu pere: unități diferite, perioade diferite, baze de raportare diferite. Aliniezi numitorul înainte de clasament. Comparabilitatea vine prima.</p>
-    <div class="prompt-box">
-      <div class="prompt-label">PROMPT 1 · INSTRUMENT DE CLASAMENT</div>
-      <div class="prompt-text">Am un set de măsuri definite pe actori, categorii, produse sau regiuni. Spune-mi după ce măsură ar trebui să fac clasamentul ca să răspund la întrebarea „care conduce”, dacă valorile sunt comparabile între ele și ce m-ar putea induce în eroare. Nu modifica nimic, doar analizează și raportează.</div>
-      <button class="copy-btn" onclick="copyPrompt(this, 1)">COPIAZĂ PROMPTUL</button>
-    </div>
+    <p class="step-action">Nu orice cifră merită rang de măsură. Suma valorii răspunde la o întrebare; suma numerelor de factură nu răspunde la nimic. Criteriul e simplu: dacă cifra nu răspunde la o întrebare de decizie, rămâne decorativă.</p>
+
   </div>
 </div>
 <div class="step" data-step="6">
   <div class="step-head" onclick="toggleStep(6)">
     <div class="step-marker">PAS 06</div>
-    <h3 class="step-title">Alegi măsura după care faci clasamentul</h3>
+    <h3 class="step-title">Alegi măsura potrivită întrebării</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(6)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Dintre măsurile definite alegi una singură pentru ordonare. Clasamentul are sens doar pe o măsură coerentă cu întrebarea „Care?”. O măsură, un clasament.</p>
-    <div class="section-sublabel">RAPORT AI · LISTA INVESTIGATĂ</div>
+    <p class="step-action">Cu raportul AI în față, alegi măsura care răspunde la întrebarea ta și îi reții baza de raportare. Aceeași felie de date poate susține măsuri diferite: alegi una, conștient, nu pe toate la grămadă.</p>
+    <div class="section-sublabel">RAPORT AI · MĂSURĂ IDENTIFICATĂ</div>
     <ul class="inv-list">
 <li class="inv-item">
-      <div class="inv-item-status status-bad">zgomot</div>
+      <div class="inv-item-status status-good">date</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">ORDINE BRUTĂ</div>
-        <div class="inv-item-desc">Rânduri într-o ordine oarecare, fără ierarhie reală.</div>
+        <div class="inv-item-label">ÎNTREBAREA · "CÂT?"</div>
+        <div class="inv-item-desc">Întrebarea de business e ancora măsurii: fără ea, cifra nu are sens.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-good">date</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">MĂSURĂ CANDIDAT · TOTAL / MEDIE / RATĂ</div>
+        <div class="inv-item-desc">Tipul măsurii decurge din întrebare: cât în total, cât în medie, cât raportat la o bază.</div>
+      </div>
+    </li>
+<li class="inv-item">
+      <div class="inv-item-status status-good">date</div>
+      <div class="inv-item-body">
+        <div class="inv-item-label">BAZA DE RAPORTARE · NUMITORUL</div>
+        <div class="inv-item-desc">Orice rată își declară numitorul: per tranzacție, per client, per zi activă.</div>
       </div>
     </li>
 <li class="inv-item">
       <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">MĂSURA DE COMPARAȚIE</div>
-        <div class="inv-item-desc">Singura măsură pe care ordonezi. Punctul din care citești ierarhia.</div>
+        <div class="inv-item-label">REPER · ȚINTĂ SAU PRAG</div>
+        <div class="inv-item-desc">Măsura capătă sens raportată la un reper definit, nu citită în gol.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-bad">zgomot</div>
+      <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">VALORI NECOMPARABILE</div>
-        <div class="inv-item-desc">Măsuri cu unități sau baze diferite, puse greșit cap la cap.</div>
+        <div class="inv-item-label">CONTEXT · ACEEAȘI DEFINIȚIE PE ORICE TĂIETURĂ</div>
+        <div class="inv-item-desc">O măsură bună dă rezultat corect pe categorie, client sau perioadă, fără să se rescrie.</div>
       </div>
     </li>
 <li class="inv-item">
-      <div class="inv-item-status status-bad">zgomot</div>
+      <div class="inv-item-status status-neutral">reper</div>
       <div class="inv-item-body">
-        <div class="inv-item-label">DIFERENȚE COSMETICE</div>
-        <div class="inv-item-desc">Gap-uri minuscule între poziții, luate drept semnal.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-bad">zgomot</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">COADA LUNGĂ</div>
-        <div class="inv-item-desc">Mulți actori mici care împreună duc puțin din rezultat.</div>
-      </div>
-    </li>
-<li class="inv-item">
-      <div class="inv-item-status status-good">semnal</div>
-      <div class="inv-item-body">
-        <div class="inv-item-label">ACTORII CARE CONDUC</div>
-        <div class="inv-item-desc">Puținii care duc majoritatea rezultatului. Ce trebuie urmărit.</div>
+        <div class="inv-item-label">CIFRĂ DECORATIVĂ · CE NU DEVINE MĂSURĂ</div>
+        <div class="inv-item-desc">Suma numerelor de factură sau media unei constante fiscale: cifre care nu răspund la nicio întrebare.</div>
       </div>
     </li>
     </ul>
@@ -1627,87 +1709,87 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">03</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 3 · CONSTRUCȚIA CLASAMENTULUI</div>
+      <div class="stage-label">ETAPA 3 · DEFINIREA MĂSURII</div>
       <h2 class="stage-name">TRANSFORMARE</h2>
-      <div class="stage-tags"><span class="phase-tag">POWER PIVOT</span><span class="type-tag">Promptul 2</span></div>
+      <div class="stage-tags"><span class="phase-tag">DEFINIRE</span><span class="type-tag">Promptul 2</span></div>
     </div>
   </header>
-  <p class="stage-quote">Cu măsura confirmată, construim clasamentul. Power Pivot ca motor de ierarhie, nu ca trick.</p>
+  <p class="stage-quote">Aici cifra brută devine măsură: o definești o singură dată, îi declari baza și o ancorezi într-un reper.</p>
   <div class="stage-body">
 <div class="step" data-step="7">
   <div class="step-head" onclick="toggleStep(7)">
     <div class="step-marker">PAS 07</div>
-    <h3 class="step-title">Așezi actorii în clasament</h3>
+    <h3 class="step-title">Definești măsura o singură dată</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(7)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În Power Pivot, RANKX ordonează actorii după măsura aleasă. Lista plată devine clasament: cine e sus, cine e jos, instant, fără sortare manuală reluată luna viitoare.</p>
-    
+    <p class="step-action">Lansezi Promptul 2. Scrii definiția măsurii o singură dată, în foaia Masuri: ce agreg și pe ce model. <span data-locked="1">Aceasta devine sursa unică de adevăr.</span> Oriunde apare măsura, trimite la aceeași definiție, nu la un calcul refăcut de mână. Concret: deschizi foaia Masuri, în secțiunea MĂSURILE identifici rândul măsurii (de la M1 la M5) și completezi coloana „definiție" cu ce agregi și pe ce model.</p>
+    <div class="prompt-box">
+      <div class="prompt-label">PROMPT 2 · DEFINIREA MĂSURII</div>
+      <div class="prompt-text">Vreau să definesc măsura o singură dată, ca sursă unică de adevăr. Spune-mi definiția clară (ce agreg și pe ce bază), cum o ancorez într-un reper sau prag, ce semnal produce față de reper și cum mă asigur că aceeași definiție dă rezultat corect pe orice tăietură (categorie, client, perioadă). Nu interpreta diferențele dintre felii. În această etapă verific doar definiția măsurii, baza, reperul și robustețea ei.</div>
+      <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
+    </div>
   </div>
 </div>
 <div class="step" data-step="8">
   <div class="step-head" onclick="toggleStep(8)">
     <div class="step-marker">PAS 08</div>
-    <h3 class="step-title">Citești diferențele reale, nu zgomotul</h3>
+    <h3 class="step-title">Declari baza de raportare</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(8)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Te uiți la gap-ul dintre poziții, nu doar la ordine. Diferența dintre locul 1 și locul 2 poate fi uriașă sau cosmetică. Reacționezi la diferența reală, nu la zgomot.</p>
-    <div class="prompt-box">
-      <div class="prompt-label">PROMPT 2 · INSTRUMENT DE CONTRIBUȚIE ȘI CONCENTRARE</div>
-      <div class="prompt-text">Acum că știu după ce compar, ajută-mă să construiesc clasamentul cu contribuția fiecărui actor în total și să identific concentrarea, cine duce majoritatea rezultatului. Vreau să pot reaplica aceeași logică luna viitoare pe alt set. Folosește Power Pivot.</div>
-      <button class="copy-btn" onclick="copyPrompt(this, 2)">COPIAZĂ PROMPTUL</button>
-    </div>
+    <p class="step-action">Orice măsură relativă își declară numitorul. O medie e total împărțit la ceva: per tranzacție, per client, per zi activă. Baza de raportare nu e un detaliu, e jumătate din măsură. Schimbi baza, schimbi măsura, chiar dacă numărătorul rămâne. Concret: pe rândul măsurii din foaia Masuri completezi coloana „baza de raportare" cu numitorul declarat. Dacă numitorul nu e scris, măsura nu trece.</p>
+
   </div>
 </div>
 <div class="step" data-step="9">
   <div class="step-head" onclick="toggleStep(9)">
     <div class="step-marker">PAS 09</div>
-    <h3 class="step-title">Calculezi contribuția fiecăruia în total</h3>
+    <h3 class="step-title">Ancorezi măsura într-un reper</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(9)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugi măsura de contribuție: cât duce fiecare actor din rezultatul global, ca pondere în total. Vezi că „mare în listă” și „important pentru rezultat” nu sunt același lucru.</p>
-    <div class="section-sublabel">DOVADA IERARHIEI</div>
+    <p class="step-action">O măsură citită în gol nu spune nimic. O ancorezi într-un reper definit: o țintă sau un prag. Față de reper, măsura produce un semnal clar, peste sau sub. <span data-locked="1">Reperul transformă cifra în sens.</span> Concret: în secțiunea REPER/PRAG din foaia Masuri completezi reperul (ținta) și verifici coloana „semnal", care compară măsura cu reperul și întoarce peste sau sub.</p>
+    <div class="section-sublabel">DOVADA TRANSFORMĂRII</div>
     <ul class="ba-list">
 <li class="ba-item">
-      <div class="ba-item-indicator">Ordine</div>
+      <div class="ba-item-indicator">Cifra</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">ordine brută, fără ierarhie</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">cifră brută calculată ad-hoc</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">clasament pe măsură</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">măsură definită explicit</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Comparabilitate</div>
+      <div class="ba-item-indicator">Definiția</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">valori necomparabile</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">recalculată în mai multe locuri</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">aceeași bază și unitate</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">o singură sursă de adevăr</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Reper</div>
+      <div class="ba-item-indicator">Baza</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">poziții citite în absolut</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">numitor neclar</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">poziții raportate la reper</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">bază de raportare declarată</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Contribuție</div>
+      <div class="ba-item-indicator">Reperul</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">mare în listă, fără pondere</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">nicio țintă, citire în gol</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">contribuție reală în total</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">reper definit + semnal</span></div>
       </div>
     </li>
 <li class="ba-item">
-      <div class="ba-item-indicator">Refresh model</div>
+      <div class="ba-item-indicator">Contextul</div>
       <div class="ba-pair">
-        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">re-sortare manuală</span></div>
+        <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">se rupe la primul filtru</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">un singur Refresh</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">aceeași definiție pe orice tăietură</span></div>
       </div>
     </li>
     </ul>
@@ -1720,44 +1802,44 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">04</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 4 · VERIFICAREA IERARHIEI</div>
+      <div class="stage-label">ETAPA 4 · VERIFICAREA MĂSURII</div>
       <h2 class="stage-name">VERIFICARE</h2>
-      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Contribuție</span></div>
+      <div class="stage-tags"><span class="phase-tag">CONTROL</span><span class="type-tag">Controlul măsurii</span></div>
     </div>
   </header>
-  <p class="stage-quote">Nu avem încredere oarbă în ordine. Verificăm diferența reală, contribuția și concentrarea, nu doar poziția.</p>
+  <p class="stage-quote">O măsură de încredere dă același rezultat pe orice felie și un semnal clar față de reper. Verifici fiecare.</p>
   <div class="stage-body">
 <div class="step" data-step="10">
   <div class="step-head" onclick="toggleStep(10)">
     <div class="step-marker">PAS 10</div>
-    <h3 class="step-title">Identifici concentrarea</h3>
+    <h3 class="step-title">Verifici că măsura e context-aware</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(10)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Cumulezi contribuțiile în ordine descrescătoare. Apare concentrarea: o mână de actori duc majoritatea rezultatului. ABC și Pareto separă puținii care contează de coada lungă.</p>
-    
+    <p class="step-action">În foaia Masuri_Context recalculezi aceeași măsură pe tăieturi diferite: tot setul, o categorie, un client, o perioadă. Valorile diferă pentru că tăietura diferă, nu pentru că măsura e alta. Definiția rămâne identică. Asta e o măsură robustă. Concret: rulezi pe rând fiecare tăietură și confirmi că formula definiției e aceeași în toate. Nu verificăm care felie este mai bună. Verificăm dacă aceeași măsură funcționează pe orice felie.</p>
+
   </div>
 </div>
 <div class="step" data-step="11">
   <div class="step-head" onclick="toggleStep(11)">
     <div class="step-marker">PAS 11</div>
-    <h3 class="step-title">Verifici clasamentul și contribuția în foaia Comparatii</h3>
+    <h3 class="step-title">Verifici baza și reperul în foaia Masuri</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(11)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Pe foaia Comparatii confirmi că ierarhia se ține: suma contribuțiilor dă întregul, iar pozițiile corespund măsurii. Clasamentul e coerent, nu inventat.</p>
-    
+    <p class="step-action">Pentru fiecare măsură confirmi că baza de raportare e declarată explicit și că reperul e definit. O rată fără numitor vizibil sau o măsură fără reper nu trece verificarea: o cifră de care nu poți răspunde nu poate susține o decizie. Concret: înapoi în foaia Masuri, parcurgi fiecare rând de măsură și confirmi două lucruri: are numitorul scris în „baza de raportare" și are un reper definit. Dacă lipsește unul, îl completezi.</p>
+
   </div>
 </div>
 <div class="step" data-step="12">
   <div class="step-head" onclick="toggleStep(12)">
     <div class="step-marker">PAS 12</div>
-    <h3 class="step-title">Raportezi poziția la un reper relativ</h3>
+    <h3 class="step-title">Confirmi semnalul controlabil</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Fiecare poziție capătă sens raportată la un reper: liderul, mediana sau media grupului. „Sub mediană” spune mai mult decât locul 14 în absolut.</p>
-    
+    <p class="step-action">Măsura raportată la reper produce un semnal: peste sau sub. Semnalul e explicabil, nu o alarmă oarbă: știi exact ce măsură l-a aprins și față de ce reper. Un semnal pe care îl poți explica e un semnal controlabil. Concret: citești coloana „semnal" de pe rândul măsurii și confirmi că știi ce măsură l-a aprins și față de ce reper. Semnalul nu spune încă de ce s-a întâmplat ceva. Semnalul spune doar că măsura este citibilă, explicabilă și pregătită pentru interpretare.</p>
+
   </div>
 </div>
   </div>
@@ -1769,42 +1851,42 @@ body.has-continue .scroll-top { bottom: 88px; }
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · ANCORARE LA SURSĂ</div>
       <h2 class="stage-name">STABILIZARE</h2>
-      <div class="stage-tags"><span class="phase-tag">REFRESH</span><span class="type-tag">Refresh în Power Pivot</span></div>
+      <div class="stage-tags"><span class="phase-tag">RECALCUL</span><span class="type-tag">Definiție stabilă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Comparația nu e o privire unică. O facem repetabilă, ca să nu reașezăm clasamentul manual luna viitoare.</p>
+  <p class="stage-quote">O măsură bună nu se redefinește la fiecare felie sau sursă nouă. Se definește o dată și rămâne.</p>
   <div class="stage-body">
 <div class="step" data-step="13">
   <div class="step-head" onclick="toggleStep(13)">
     <div class="step-marker">PAS 13</div>
-    <h3 class="step-title">Ancorezi definiția clasamentului</h3>
+    <h3 class="step-title">Ancorezi definiția măsurii</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(13)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Fixezi clasamentul ca măsură în Data Model, nu ca sortare ad-hoc pe o coloană. Definit o singură dată, se reașază singur la orice tăietură sau filtru.</p>
-    
+    <p class="step-action">Înainte: măsura trăia într-un calcul ad-hoc, pe un interval fix sau în celule copiate manual. După: o definești o singură dată, peste model, în foaia Masuri. Muți definiția dintr-o celulă-capcană într-o sursă unică. Când o ceri pe altă felie, trimiți la aceeași definiție, nu la un calcul refăcut.</p>
+
   </div>
 </div>
 <div class="step" data-step="14">
   <div class="step-head" onclick="toggleStep(14)">
     <div class="step-marker">PAS 14</div>
-    <h3 class="step-title">Un rând nou se reașază singur în clasament</h3>
+    <h3 class="step-title">Un rând nou se include singur în măsură</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(14)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Adaugi un actor nou în set și reîmprospătezi. Clasamentul, contribuția și concentrarea se recalculează singure. Zero re-sortare manuală.</p>
-    
+    <p class="step-action">Test: adaugi o tranzacție nouă în foaia Vanzari. Măsura se recalculează singură, fără nicio rescriere: definiția agregă peste model, nu peste un interval fix. Rândul nou intră în măsură exact ca celelalte.</p>
+
   </div>
 </div>
 <div class="step" data-step="15">
   <div class="step-head" onclick="toggleStep(15)">
     <div class="step-marker">PAS 15</div>
-    <h3 class="step-title">Aplici regula anti-derivă a comparabilității</h3>
+    <h3 class="step-title">Aplici regula anti-derivă</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(15)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Notezi regula: nu intră în clasament ce nu e comparabil, altă unitate, altă perioadă, altă bază. O abatere de comparabilitate oprește clasamentul vizibil, nu silențios.</p>
-    
+    <p class="step-action">Test: vine exportul de luna viitoare. Definiția, baza și reperul rămân neschimbate, iar măsura dă un rezultat pe noile date fără să fie redefinită. Măsura nu derivează: aceeași definiție, date noi.</p>
+
   </div>
 </div>
   </div>
@@ -1814,44 +1896,44 @@ body.has-continue .scroll-top { bottom: 88px; }
   <header class="stage-header">
     <div class="stage-number">06</div>
     <div class="stage-meta">
-      <div class="stage-label">ETAPA 6 · PREDAREA IERARHIEI</div>
+      <div class="stage-label">ETAPA 6 · PREDAREA MĂSURILOR</div>
       <h2 class="stage-name">CONFIRMARE</h2>
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Cap-coadă</span></div>
     </div>
   </header>
-  <p class="stage-quote">Ierarhia e validată operațional. Confirmăm cine conduce cap-coadă și predăm către C12.</p>
+  <p class="stage-quote">Pui întrebarea "cât?". Măsura definită răspunde la fel de fiecare dată. Apoi o predai mai departe.</p>
   <div class="stage-body">
 <div class="step" data-step="16">
   <div class="step-head" onclick="toggleStep(16)">
     <div class="step-marker">PAS 16</div>
-    <h3 class="step-title">Faci prima citire a ierarhiei</h3>
+    <h3 class="step-title">Faci prima citire a măsurii</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(16)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Citești ierarhia cu voce de decizie: cine conduce, cu cât, cât duce din total, câți actori fac majoritatea. Lista plată a devenit hartă a importanței.</p>
-    
+    <p class="step-action">Ceri măsura definită și primești un răspuns: o valoare, baza ei și semnalul față de reper. Aceeași întrebare pusă din nou dă același răspuns. Cifra nu mai depinde de cine o calculează sau unde.</p>
+
   </div>
 </div>
 <div class="step" data-step="17">
   <div class="step-head" onclick="toggleStep(17)">
     <div class="step-marker">PAS 17</div>
-    <h3 class="step-title">Confirmi ierarhia decizională</h3>
+    <h3 class="step-title">Confirmi setul de măsuri controlabile</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(17)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Confirmi că ierarhia răspunde la „Care?”: clasament pe măsură comparabilă, diferențe reale, contribuție și concentrare. Ierarhia e controlabilă și repetabilă.</p>
-    
+    <p class="step-action">Treci în revistă măsurile: fiecare are o întrebare, o definiție unică, o bază declarată și un reper. Niciuna nu e o cifră orfană. Ai un set de măsuri controlabile, nu o grămadă de calcule.</p>
+
   </div>
 </div>
 <div class="step" data-step="18">
   <div class="step-head" onclick="toggleStep(18)">
     <div class="step-marker">PAS 18</div>
-    <h3 class="step-title">Predai ierarhia către C12</h3>
+    <h3 class="step-title">Predai măsurile către C11</h3>
     <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">Ierarhia e pregătită pentru C12 Interpretare: de la „care conduce” la „de ce conduce”, insight verbal citit din model.</p>
-    
+    <p class="step-action">C10 definește măsuri. Atât. Care măsură e mai mare, care contribuie mai mult, ce loc ocupă fiecare felie, începe la C11. Predai un set de măsuri definite, cu valorile sursă neatinse și suma conservată.</p>
+
   </div>
 </div>
   </div>
@@ -1860,57 +1942,42 @@ body.has-continue .scroll-top { bottom: 88px; }
       <section class="final-section" id="final-section">
         <div class="section-marker">RITUAL TRAINITY · CONTROL FINAL</div>
         <h2 class="final-title">8 verificări finale canonice</h2>
-        <p class="final-intro">Înainte de a preda ierarhia către C12, sistemul confirmă fiecare invariant. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
-        <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Setul de măsuri predat (Date_MASTER) există și se deschide.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">ÎNTREBARE</div><div class="final-text">Întrebarea de business „Care?” este formulată.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">CLASAMENT</div><div class="final-text">Actorii sunt așezați în clasament pe măsura aleasă.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">DIFERENȚĂ</div><div class="final-text">Diferențele reale sunt separate de zgomot.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">CONTRIBUȚIE</div><div class="final-text">Contribuția fiecărui actor în total este calculată.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">CONCENTRARE</div><div class="final-text">Concentrarea identificată: puținii care duc rezultatul.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">CONSERVARE</div><div class="final-text">Suma valoare_neta conservată de la INPUT la OUTPUT.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
-<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">IERARHIE</div><div class="final-text">Ierarhia confirmată, zero poziții lipsă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
+        <p class="final-intro">Înainte de a preda măsurile către C11, confirmi fiecare invariant al măsurii. Aceleași verificări, aceeași zonă, la fiecare construcție.</p>
+        <div class="final-grid"><div class="final-card" data-final="1"><div class="final-num">1</div><div class="final-body"><div class="final-label">CONTROL</div><div class="final-text">Date_MASTER-C10.xlsx deschis. Modelul legat corect, suma de control fixată la intrare.</div><button class="final-check-btn" onclick="confirmFinal(1)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="2"><div class="final-num">2</div><div class="final-body"><div class="final-label">ÎNTREBARE</div><div class="final-text">Fiecare măsură răspunde la o întrebare clară de tip "cât?". Nicio cifră fără întrebare.</div><button class="final-check-btn" onclick="confirmFinal(2)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="3"><div class="final-num">3</div><div class="final-body"><div class="final-label">SURSĂ UNICĂ</div><div class="final-text">Fiecare măsură e definită o singură dată, reutilizabilă. Zero cifre recalculate diferit.</div><button class="final-check-btn" onclick="confirmFinal(3)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="4"><div class="final-num">4</div><div class="final-body"><div class="final-label">BAZĂ DE RAPORTARE</div><div class="final-text">Fiecare rată sau procent își declară numitorul: per tranzacție, per client, per zi activă.</div><button class="final-check-btn" onclick="confirmFinal(4)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="5"><div class="final-num">5</div><div class="final-body"><div class="final-label">REPER</div><div class="final-text">Fiecare măsură de decizie e ancorată într-un reper definit: o țintă sau un prag.</div><button class="final-check-btn" onclick="confirmFinal(5)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="6"><div class="final-num">6</div><div class="final-body"><div class="final-label">SEMNAL</div><div class="final-text">Măsura produce un semnal explicabil față de reper: știi ce măsură și față de ce prag.</div><button class="final-check-btn" onclick="confirmFinal(6)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="7"><div class="final-num">7</div><div class="final-body"><div class="final-label">CONTEXT</div><div class="final-text">Aceeași definiție dă rezultat corect pe orice tăietură: categorie, client, perioadă.</div><button class="final-check-btn" onclick="confirmFinal(7)">VERIFICĂ</button></div></div>
+<div class="final-card" data-final="8"><div class="final-num">8</div><div class="final-body"><div class="final-label">PREDARE</div><div class="final-text">Set de măsuri controlabile predat către C11. Valori sursă neatinse, suma conservată cap-coadă.</div><button class="final-check-btn" onclick="confirmFinal(8)">VERIFICĂ</button></div></div></div>
         <div class="completion-badge" id="completion">
-          <div class="completion-title">Ierarhie decizională validată.</div>
-          <div class="completion-subtitle">Toate cele 8 verificări finale confirmate. C11 e pregătit pentru C12 Interpretare.</div>
+          <div class="completion-title">Set de măsuri validat.</div>
+          <div class="completion-subtitle">Fiecare măsură definită, cu bază și reper. Predat către C11.</div>
         </div>
       </section>
 
       <section class="next-section">
         <div class="next-label">TREAPTA 3 · CONSTRUCȚIA URMĂTOARE</div>
-        <h3 class="next-title">C12 · Interpretare</h3>
-        <p class="next-desc">Ierarhia arată CARE conduce, dar nu și de ce. C12 citește insight-ul din model: explicația din spatele clasamentului, într-o frază verificabilă.</p>
+        <h3 class="next-title">C11 · Comparații</h3>
+        <p class="next-desc">Ai măsuri definite, fiecare cu bază și reper. Dar care e mai mare, care contribuie mai mult, ce loc ocupă fiecare felie? Compararea măsurilor, clasamentul și diferențele încep la C11.</p>
       </section>
 
       <section class="payoff-section">
-        <div class="payoff-line dim">Nu am redefinit măsura.</div>
-        <div class="payoff-line dim">Nu am inventat cifre.</div>
-        <div class="payoff-line dim">Nu am atins datele.</div>
-        <div class="payoff-line accent">Am așezat actorii în ierarhie.</div>
-        <div class="payoff-line regular">Ierarhia este clară.</div>
-        <div class="payoff-line regular">C12 poate începe.</div>
-        <div class="payoff-line payoff-wow"><span class="wow-tag">WOW:</span><span data-wow="1">Lista nu mai pare ordonată. Arată cine conduce rezultatul.</span></div>
-        <div class="payoff-motto">Nu citi lista. Citește ierarhia.</div>
-      </section>
-      <section class="transformare-section">
-        <div class="tu-cert">
-          <div class="tu-kicker">✓ DUPĂ C11 POȚI</div>
-          <p class="tu-statement-sm">Identifici în mai puțin de 30 de secunde cine duce rezultatul într-un set, nu doar cine apare mare în listă.</p>
-        </div>
-        <div class="ts-block ts-identity"><div class="ts-label">DE ACUM ÎNAINTE</div>
-          <div class="ts-pair"><span class="ts-no">Nu mai citești liste.</span><span class="ts-yes">Citești ierarhii.</span></div>
-          <div class="ts-pair"><span class="ts-no">Nu mai cauți cine e mare.</span><span class="ts-yes">Cauți cine duce rezultatul.</span></div>
-          <div class="ts-pair"><span class="ts-no">Nu mai întrebi „cine e cel mai mare?".</span><span class="ts-yes">Întrebi „cine conduce rezultatul?".</span></div>
-        </div>
+        <div class="payoff-line dim">Modelul răspundea deja la întrebări.</div>
+        <div class="payoff-line accent">Dar fiecare cifră venea brută: fără definiție, fără bază, fără reper.</div>
+        <div class="payoff-line regular">Acum fiecare măsură e definită o dată, are o bază și un reper. O ceri pe orice felie și rămâne aceeași.</div>
+        <div class="payoff-line payoff-wow" data-locked="1"><span class="wow-tag">WOW:</span><span data-wow="1">Același set de date putea susține concluzii opuse. Acum cifra care primește autoritate este o măsură definită, și nu mai minte.</span></div>
+        <div class="payoff-motto" data-locked="1">Nu calcula mai mult. Măsoară mai corect.</div>
       </section>
 
       <footer class="footer">
-        TRAINITY · C11 COMPARAȚII · clasament, contribuție, ierarhie
+        TRAINITY · C10 MĂSURI · măsuri definite, controlabile
       </footer>
 
     </main>
 
     <nav class="side-nav" id="sideNav">
-
 
       <div class="nav-progress">
         <div class="nav-progress-row">
@@ -1922,10 +1989,10 @@ body.has-continue .scroll-top { bottom: 88px; }
 
       <div class="nav-section-label">6 ETAPE</div>
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
-<a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot · Promptul 1</span></span></a>
-<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Promptul 2</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · Contribuție</span></span></a>
-<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Refresh în Power Pivot</span></span></a>
+<a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot</span></span></a>
+<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Definire</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · Control</span></span></a>
+<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Recalcul</span></span></a>
 <a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Cap-coadă</span></span></a></div>
 
       <div class="nav-section-label">8 VERIFICĂRI FINALE</div>
@@ -1961,7 +2028,7 @@ body.has-continue .scroll-top { bottom: 88px; }
 <script>
 "use strict";
 
-const STORAGE_KEY = "trainity_c11_study_v1";
+const STORAGE_KEY = "trainity_c10_study_v1";
 const TOTAL_STEPS = 18;
 const TOTAL_FINALS = 8;
 
@@ -2204,7 +2271,7 @@ function applyState() {
   if (allStepsDone) {
     document.querySelectorAll(".stage[data-stage]").forEach(s => s.classList.add("visible"));
   }
-  ["final-section", "next-section", "payoff-section", "transformare-section"].forEach(cls => {
+  ["final-section", "next-section", "payoff-section"].forEach(cls => {
     document.querySelectorAll("." + cls).forEach(el => {
       el.classList.toggle("visible", allStepsDone);
     });

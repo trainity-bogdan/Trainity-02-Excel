@@ -1071,7 +1071,7 @@ def load_identitate(NN, identitate_path):
         },
         '02': {
             'cod': 'C02', 'nume_hero_caps_rand1': 'CONTROLUL',
-            'nume_slug': 'Control',
+            'nume_slug': 'Confruntare',
             'meta_val_treapta': 'STRUCTURA · <b>CONTROL</b> · AUDIT · NORMALIZARE (SCAN)'
         },
         '03': {
@@ -1086,7 +1086,7 @@ def load_identitate(NN, identitate_path):
         },
         '05': {
             'cod': 'C05', 'nume_hero_caps_rand1': 'DICȚIONARUL',
-            'nume_slug': 'Dictionar',
+            'nume_slug': 'Inventariere',
             'meta_val_treapta': '<b>DICȚIONAR</b> · CLASIFICARE · DATARE · CARTOGRAFIERE (CUNOAȘTERE)'
         },
         '06': {
@@ -1101,22 +1101,22 @@ def load_identitate(NN, identitate_path):
         },
         '08': {
             'cod': 'C08', 'nume_hero_caps_rand1': 'ECOSISTEMUL',
-            'nume_slug': 'Cartografiere',
+            'nume_slug': 'Mapare',
             'meta_val_treapta': 'CLASIFICARE · CUANTIFICARE · DATARE · <b>CARTOGRAFIERE</b> (CUNOAȘTERE)'
         },
         '09': {
             'cod': 'C09', 'nume_hero_caps_rand1': 'RELAȚIILE',
-            'nume_slug': 'Relatii',
+            'nume_slug': 'Legare',
             'meta_val_treapta': '<b>RELAȚII</b> · MĂSURI · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
         },
         '10': {
             'cod': 'C10', 'nume_hero_caps_rand1': 'MĂSURA',
-            'nume_slug': 'Masuri',
+            'nume_slug': 'Masurare',
             'meta_val_treapta': 'RELAȚII · <b>MĂSURI</b> · COMPARAȚII · INTERPRETARE (ANALIZĂ)'
         },
         '11': {
             'cod': 'C11', 'nume_hero_caps_rand1': 'CINE',
-            'nume_slug': 'Comparatii',
+            'nume_slug': 'Comparare',
             'meta_val_treapta': 'RELAȚII · MĂSURI · <b>COMPARAȚII</b> · INTERPRETARE (ANALIZĂ)'
         },
         '12': {
