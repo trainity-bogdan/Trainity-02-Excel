@@ -2,6 +2,8 @@
 
 Versiune V15, inghetat in chat BRAIN la 25.05.2026.
 
+> **ACTUALIZARE · FREEZE C01 (iunie 2026) — MODEL DE HERO SCHIMBAT.** Hero principal (`hov-object`) = **numele complet al construcției** (MIZA HERO), NU cuvântul-cheie mare în centru. Modelul vechi cu Hero Word mare e ABANDONAT. CUVÂNTUL trăiește în topbar (`C{NN} · CUVÂNT`), navigare/system-map, indexare si mapările T1-T5. Sursa canonică = `_system/NOMENCLATURA-LOCKED-SCARA.md`, secțiunea „Model de afișare în construcție". Punctele de mai jos (structură cover legacy) se citesc prin acest model; la generare/regenerare NU se reface Hero Word-ul mare în centru.
+
 ## Scop
 
 Documentatia explicita a celor ~15 puncte vulnerabile la COPY-MODIFY

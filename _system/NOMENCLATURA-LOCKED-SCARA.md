@@ -18,6 +18,28 @@ Cele două straturi NU sunt concurente. Pe aceeași construcție, CUVÂNT (de ex
 
 ---
 
+## Model de afișare în construcție (LOCKED · freeze C01, iunie 2026)
+
+Decizie de arhitectură validată pe pilotul C01. Modelul de afișare al celor două straturi:
+
+- **HERO PRINCIPAL** (textul mare din header, elementul `hov-object`) = **MIZA HERO** = numele complet al construcției. C01: „STRUCTURAREA TABELELOR".
+- **HERO WORD / CUVÂNTUL NU mai este element vizual obligatoriu în hero.** NU se mai pune cuvântul-cheie mare în centrul hero-ului. Modelul vechi (Hero Word mare în centru) este ABANDONAT.
+- **CUVÂNTUL** rămâne folosit exclusiv în: **topbar** (`C{NN} · CUVÂNT`), **navigare / system-map** (cuvintele treptei), **indexare internă**, **mapările T1-T5**. C01: topbar „C01 · STRUCTURĂ", navigare „STRUCTURĂ · ADEVĂR · AUDIT · FLUX".
+- **TITLU ARTICOL** (`cover-title` H1) = titlu de tip „Cum să…", separat de hero. C01: „Cum să verifici dacă un export este cu adevărat un tabel".
+
+Referință C01 (model final):
+
+| Suprafață | Conținut | Strat |
+|---|---|---|
+| Topbar | C01 · STRUCTURĂ | CUVÂNT |
+| Hero principal | STRUCTURAREA TABELELOR | MIZĂ HERO |
+| Navigare | STRUCTURĂ · ADEVĂR · AUDIT · FLUX | CUVINTE |
+| Titlu articol | Cum să verifici dacă un export este cu adevărat un tabel | TITLU |
+
+La generarea C13-C20 (COPY+MODIFY din c01) si la orice regenerare se folosește ACEST model. NU se reface modelul vechi cu Hero Word mare în centru. `_system/referinte/COVER-CHECKLIST.md` (V15, structură legacy) se citește prin acest model.
+
+---
+
 ## Lanțul SCARA (LOCKED)
 
 | Literă | Treaptă | Construcții |

@@ -4,6 +4,8 @@ Schema canonică a artefactelor per construcție. Sursă: R-V03.47 + R-V03.58 + 
 
 **Versiune doc: V40 (28 mai 2026)** — actualizat la colapsul canonic/editat (V39).
 
+> **MODEL DE HERO (freeze C01, iunie 2026):** hero principal (`hov-object`) = numele complet al construcției (MIZA HERO), NU cuvântul-cheie mare. CUVÂNTUL trăiește în topbar/navigare/index/mapări. Sursa canonică: `_system/NOMENCLATURA-LOCKED-SCARA.md` → „Model de afișare în construcție".
+
 ---
 
 ## Cele 6 artefacte canonice per construcție
