@@ -213,6 +213,23 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 - **Interzis:** a inventa răspunsuri/măsuri/cauze NOI (= T3, se consumă, nu se nasc la T4); a transforma munca într-un sistem care rulează fără autor (= T5).
 - **Unde începe T5:** când livrarea nu mai e un act unic al autorului, ci devine un sistem care se reface, rulează și se ține singur, fără autor.
 
+**FREEZE T4 RAPORTARE (decizie de arhitectură, LOCKED).** După audit comparativ adversarial cap-coadă (V70 vs varianta Message-First), nomenclatura V70 se confirmă ca standard oficial T4. Varianta Message-First (C13 MESAJUL/DISTILEZ · C14 FORMA/ARĂT · C15 TRASEUL/COMPUN · C16 CONCLUZIA/CONCHID) e RESPINSĂ ca nomenclatură de sistem. Motivul NU e lipsa de valoare: Message-First câștigă pe ordinea expertului (answer-first), memorabilitate și rezistență 2030, și expune corect trei slăbiciuni reale ale T4 actual. Pierde însă pe criteriile care decid un freeze de 5-10 ani: (1) compatibilitatea cu gramatica gerunziu-act a întregii scări C01-C20 (Message-First numește artefacte: mesaj/formă/traseu/concluzie, nu competențe); (2) modelul LOCKED gerunziu+cuvânt+verb; (3) protejarea graniței C12 INTERPRETAREA (CONCLUZIA ≈ a interpreta = contaminare T3); (4) cuplajul cu T5 (LIVRAREA curge lexical în SISTEMATIZAREA); (5) stabilitatea arhitecturală. Orice propunere viitoare de înlocuire cu MESAJUL/FORMA/TRASEUL/CONCLUZIA sau orice derivat Message-First se respinge IMPLICIT, fără nouă analiză, cu excepția unei decizii explicite de arhitectură care redeschide freeze-ul T4.
+
+**Definiții LOCKED per construcție (identitate de treaptă; SPEC 11-slot complet la seed):**
+- **C13 VIZUALIZAREA · VIZUAL · VIZUALIZEZ:** faci rezultatul vizibil și CORECT (forma vizuală onestă a unui răspuns produs de T3).
+- **C14 COMPUNEREA · COMPOZIȚIE · COMPUN:** organizarea SPAȚIALĂ a elementelor vizuale (așezare pe pagină, ierarhie, flux). NU distilarea mesajului (= C15).
+- **C15 SINTETIZAREA · SINTEZĂ · SINTETIZEZ:** extragerea și formularea mesajului ESENȚIAL (ce contează). NU organizarea paginii (= C14).
+- **C16 LIVRAREA · LIVRARE · LIVREZ:** raport pregătit pentru decizie (DECISION-READY). NU transmitere logistică / distribuție (aceea atinge T5).
+
+**Principiu de autorare T4 (LOCKED):** „nu arăt tot, arăt ce contează." Se aplică pe toate cele 4 construcții.
+
+**Datorii deschise în SPEC (NU în nomenclatură; nomenclatura e înghețată):**
+1. T4 autorat după principiul „nu arăt tot, arăt ce contează".
+2. C14 definit explicit ca organizarea spațială a elementelor vizuale (graniță față de C15).
+3. C15 definit explicit ca extragerea și formularea mesajului esențial (graniță față de C14).
+4. C16 definit explicit ca raport decision-ready, nu transmitere logistică (graniță față de T5).
+5. Seed-ul C13 închide contradicția dintre ordinea conceptuală message-first (ce contează conduce) și ordinea pedagogică build-up (cursantul începe de la vizual). Rezolvarea trăiește în voce/SPEC/ordine de predare, NU în nume.
+
 ### §T5 — AUTONOMIE / FUNCȚIONARE FĂRĂ AUTOR
 - **Întrebarea treptei:** „Cum funcționează fără mine?"
 - **Output:** sistemul autonom — o livrare unică devine un lanț operațional end-to-end care rulează, se autocorectează prin reguli și funcționează fără autor.
