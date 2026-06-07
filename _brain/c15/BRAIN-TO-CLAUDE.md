@@ -1,0 +1,13 @@
+# BRAIN -> CLAUDE C15
+
+## STATUS
+READY_FOR_BRAIN_MANDATE
+
+## CONTEXT
+C15 SINTETIZAREA. T4 RAPORTARE. CUVANT SINTEZA. VERB SINTETIZEZ.
+
+## MANDAT
+Asteapta mandat BRAIN. Nu executa nimic fara mandat explicit.
+
+## RAPORT
+Scrie raportul in _brain/c15/CLAUDE-TO-BRAIN.md.
