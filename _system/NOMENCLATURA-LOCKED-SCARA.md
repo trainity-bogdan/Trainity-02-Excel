@@ -129,6 +129,8 @@ La C02, C03, C04, C05 numele construcției s-a aliniat la rădăcina CUVÂNT/ver
 - T5: C17 CLOUD / „DISTRIBUIREA ÎN CLOUD" (DISTRIBUI), C18 SINCRONIZARE / „SINCRONIZAREA CU DATELE" (SINCRONIZEZ), C19 „MONITORIZAREA SERVICIULUI" (MONITORIZEZ) → înlocuite cu SISTEM/SISTEMATIZAREA, MOTOR/AUTOMATIZAREA, GUVERNAREA. C20 rămâne AUTONOMIE/DELEG (gerunziul scurtat la DELEGAREA).
 - Motivul: vechile cuvinte erau mecanisme/infrastructură (cloud, sincronizare, monitorizare), nu competențe. Noul T5 = competențe de autonomie operațională (raport → sistem → rulează singur → se autoguvernează → funcționează fără autor).
 
+**Confirmare FREEZE T4 (audit adversarial V70 vs Message-First).** Varianta Message-First (C13 MESAJUL/DISTILEZ · C14 FORMA/ARĂT · C15 TRASEUL/COMPUN · C16 CONCLUZIA/CONCHID) a fost auditată comparativ cap-coadă și RESPINSĂ ca nomenclatură de sistem. Motivul respingerii NU e lipsa de valoare (Message-First câștigă pe ordinea expertului, memorabilitate, rezistență 2030 și expune trei slăbiciuni reale ale T4), ci incompatibilitatea cu criteriile de freeze pe 5-10 ani: rupe gramatica gerunziu-act a scării (numește artefacte: mesaj/formă/traseu/concluzie, nu competențe), încalcă modelul LOCKED gerunziu+cuvânt+verb, contaminează granița C12 INTERPRETAREA (concluzia ≈ a interpreta) și nu cuplează cu T5. **T4 rămâne V70: VIZUALIZAREA · COMPUNEREA · SINTETIZAREA · LIVRAREA.** Orice derivat Message-First se respinge implicit (vezi regula de mai jos), fără nouă analiză, până la o decizie explicită de redeschidere a freeze-ului T4. Datoriile rămase sunt de SPEC, nu de nomenclatură (vezi Bible §T4).
+
 ---
 
 ## Datorie de propagare (separată, NU se face în acest freeze de documentație)

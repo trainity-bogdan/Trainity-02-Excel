@@ -218,14 +218,16 @@ teritoriu C09. C08 doar recunoaște ecosistemul; C09 îl activează.
 
 | Construcție | Identitate (competență) | Verb | Status |
 |---|---|---|---|
-| C13 | VIZUALIZARE — faci rezultatul vizibil și corect | VIZUALIZEZ | NESTAR |
-| C14 | COMPUNERE — așezi rezultatele într-o pagină coerentă | COMPUN | NESTAR |
-| C15 | SINTETIZARE — distilezi mesajul care contează | SINTETIZEZ | NESTAR |
-| C16 | LIVRARE — predai raportul pregătit pentru decizie | LIVREZ | NESTAR |
+| C13 | VIZUALIZARE: faci rezultatul vizibil și CORECT | VIZUALIZEZ | NESTAR |
+| C14 | COMPUNERE: organizarea spațială a elementelor vizuale | COMPUN | NESTAR |
+| C15 | SINTETIZARE: extragerea și formularea mesajului esențial | SINTETIZEZ | NESTAR |
+| C16 | LIVRARE: raport pregătit pentru decizie (decision-ready), nu transmitere logistică | LIVREZ | NESTAR |
 
 > Identitatea T4 NU e „dashboard / cockpit / scorecard" (acelea sunt instrumente). Alertele NU sunt T4; orice declanșare automată = T5.
 
 **T4 e închidere treaptă** la C16.
+
+> **FREEZE T4 (audit adversarial V70 vs Message-First, LOCKED).** Nomenclatura V70 confirmată ca standard oficial; varianta Message-First (MESAJUL/FORMA/TRASEUL/CONCLUZIA) RESPINSĂ ca nomenclatură de sistem (rupe gramatica gerunziu-act a scării, contaminează granița C12 INTERPRETAREA). Orice derivat Message-First se respinge implicit, fără nouă analiză, până la redeschidere explicită. SPEC-ul T4 rămâne deschis cu 5 datorii (sursă: Bible §T4): principiul „nu arăt tot, arăt ce contează"; C14 = organizare spațială; C15 = mesaj esențial; C16 = decision-ready; seed C13 închide contradicția message-first vs build-up în voce/SPEC, nu în nume. Nomenclatura NU se mai atinge.
 
 ---
 
