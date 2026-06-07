@@ -74,3 +74,48 @@ C13 VIZUALIZAREA e competența de a transforma un rezultat deja produs de T3 în
 - **Anti-clonă (R-V03.74):** AHA „Forma greșită minte cu cifra corectă." și mantra „Nu desenez frumos. Desenez adevărat." NU reiau tiparele vecinilor (C10 „Ai toate cifrele. Și nicio decizie." / C11 „Ai toate măsurile. Și nicio ierarhie."). Semnătură C13 distinctă.
 - **Ce NU conține (conform mandatului):** zero exerciții, film, Studiu, HTML, imagini, structură de lecție. Exclusiv SEED conceptual.
 - **Următorul pas (la mandat ARHITECT):** SPEC 11-slot complet (SLUG/INTRIGA/PROBLEMELE/MIZA/MANTRA/WOW/MOTTO/FENOMENE/STEP-TITLES) + blueprint dedicat C13, construite peste acest SEED.
+
+---
+
+# CLAUDE → BRAIN · SYNC 2026-06-07
+
+## STATUS
+SEED conceptual C13 = COMPLET și consistent cu doc 13 (T4 RAPORTARE). Construcția NU e generată: zero HTML/Studiu/Video/FILM/imagini/exerciții. **B1 ACTIV:** generarea rămâne blocată până la înghețarea SPEC-ului 11-slot de către BRAIN. Obiectiv curent (din chat ARHITECT): definirea SPEC 11 SLOT C13.
+
+## PROGRES
+- Citit SEED-ul conceptual existent (cele 11 secțiuni: întrebare, transformare, costul minciunii, cine devii, AHA, mantra, filosofie, test 2030, granițe C12|C13|C14, formula de verificare, verdict).
+- Axa LOCKED clară: **ONESTITATEA FORMEI**. C13 dă formă vizuală onestă unui rezultat deja produs de T3. Nu descoperă, nu interpretează, nu compune, nu livrează.
+- Nomenclatura V70 verificată: C13 VIZUALIZAREA / VIZUAL / VIZUALIZEZ. Granițe C13|C12 (formă vs înțeles) și C13|C14 (un obiect vs ordinea spațială) ținute.
+- Pregătit un DRAFT de SPEC 11-slot construit strict peste SEED (mai jos, ca propunere de îngheț).
+
+## BLOCAJE
+1. **Lipsește `_brain/c13/BRAIN-TO-CLAUDE.md`** (nu există fizic). Nu am mandat scris cu MANDAT-ID, fișiere permise/interzise, validări cerute. Lucrez pe obiectivul din chat. **Cer BRAIN să creeze mandatul** sau să confirme că obiectivul „SPEC 11 SLOT C13" e mandatul activ.
+2. **B1 (SPEC neînghețat)** blochează orice generare. Deblocarea = BRAIN validează + îngheață cele 11 sloturi.
+3. **Ambiguitate de definiție „11 slot".** Există două liste în sistem: (a) cele 9 elemente B1 de gate-generare (SLUG/INTRIGA/PROBLEMELE/MIZA/MANTRA/WOW/MOTTO/FENOMENE/STEP-TITLES); (b) cele ~10 sloturi de identitate folosite la înghețul C09 (HERO/BOMBĂ/GREȘEALA/AHA/MANTRA/WOW/MOTTO/CINE DEVII/PAYOFF/MIZA). Am presupus că „SPEC 11 SLOT" = lista de identitate stil C09 + verb-semnătură. **Cer confirmarea listei exacte de sloturi.**
+
+## PROPUNERE · DRAFT SPEC 11-SLOT C13 (pentru validare + îngheț, NU înghețat)
+
+1. **HERO (întrebarea):** „Cum dau unui rezultat forma care îl face adevărat și vizibil dintr-o privire?" (verbatim din SEED §1)
+2. **INTRIGA / BOMBĂ:** „Cifra e corectă. Graficul minte." (alt: „Ai răspunsul. Și o formă care îl trădează.") Distinct de C10 „Ai toate cifrele. Și nicio decizie." și C11 „Ai toate măsurile. Și nicio ierarhie." (R-V03.74 OK).
+3. **GREȘEALA (Oameni/Profesioniști):** „Oamenii aleg graficul care arată bine. Profesioniștii aleg graficul care arată adevărat." (⚠️ formula „Oameni/Profesioniști" e la saturație 100% pe T1-T2, notat în STARE V65; semnalez riscul, dar pe axa onestitate se potrivește perfect.)
+4. **AHA (lock):** „Forma greșită minte cu cifra corectă." (din SEED §5)
+5. **MANTRA:** „Nu desenez frumos. Desenez adevărat." (galben: *adevărat*; din SEED §6)
+6. **WOW:** „Aceeași cifră, două grafice: unul te duce la decizia corectă, celălalt la cea greșită, fără să schimbe un singur număr."
+7. **MOTTO (slot de treaptă T4):** propunere „O privire. Aceeași concluzie ca din cifră." ⚠️ T4 nu are încă un template de motto-treaptă înghețat (la T3 era „Întrebi [WH]. Modelul [verb]."). **Cer BRAIN gramatica de motto T4** înainte de a fixa acest slot.
+8. **CINE DEVII:** „Nu mai desenezi date. Răspunzi de ce vede altcineva." (din SEED §4)
+9. **PAYOFF:** „Un rezultat corect a devenit o formă în care poți avea încredere." (oglindă tipar T3 „Un set... a devenit...")
+10. **MIZA (director, fără jargon):** „Decidentul hotărăște în secunda în care vede graficul, nu când citește cifra de sub el. O formă greșită îl face să decidă pe o imagine falsă cu numărul corect dedesubt, iar când iese la iveală se pierde încrederea în tot raportul. C13 garantează că ce se vede e ce este."
+11. **VERB-SEMNĂTURĂ / GRAMATICĂ:** verb de construcție *a da formă onestă* (VIZUALIZEZ). Anti-contaminare: verbele vecinilor T4 (C14 *compun*, C15 *sintetizez*, C16 *livrez*) interzise ca ancoră de identitate în C13; reciproc, *vizualizez/formă onestă* nu apare ca identitate în C14-C16.
+
+**Elemente B1 de gate (derivate, pentru completitudine):**
+- **SLUG:** „Vizualizarea" (fișiere: `...-Excel-13-Vizualizarea`, `hero-poster-excel-13-vizualizarea.jpg`).
+- **PROBLEMELE:** cele 6 minciuni de formă din SEED §3 (axă non-zero nedeclarată · pie cu peste 5 felii · scală dublă · gradient care inventează tendință · 3D care distorsionează proporția · agregare care netezește varianța relevantă).
+- **FENOMENE (5) + STEP-TITLES (6 etape / 18 pași):** țin de blueprint-ul dedicat, nu de SPEC-ul de identitate. Le propun la pasul de blueprint, după înghețul celor 11 sloturi. **Cer confirmarea** dacă le vrei incluse acum sau la blueprint.
+
+## ÎNTREBĂRI CĂTRE BRAIN
+1. Confirmi că obiectivul activ e „SPEC 11 SLOT C13" și creezi `BRAIN-TO-CLAUDE.md` cu mandatul formal (MANDAT-ID, fișiere permise, validări)?
+2. Care e lista canonică de „11 slot": identitate stil C09 (varianta de mai sus) sau altă listă? Confirmi cele 11 etichete.
+3. Care e gramatica de motto pentru treapta T4 (echivalentul „Întrebi/răspunde" de la T3)? De ea depinde slotul 7.
+4. Validezi INTRIGA, WOW, PAYOFF, MIZA propuse (sloturile neacoperite verbatim de SEED)? Accepți AHA + MANTRA ca lock-uri?
+5. FENOMENE + STEP-TITLES: le includem în acest îngheț sau le lăsăm pentru blueprint-ul dedicat C13?
+6. Păstrăm formula „Oameni/Profesioniști" la GREȘEALA (saturație 100% semnalată) sau cauți o variantă nouă pentru T4?
