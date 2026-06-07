@@ -32,7 +32,8 @@ Orice generare CNN, fix, refactor, poză, edit doc, comit la index, tot — dire
 
 1. **Citește acest fișier** (CLAUDE.md) — 30 sec
 2. **Citește STARE-CURENTA.md** — 30 sec (versiune, ce e gata, ce urmează)
-3. **Salut ARHITECT:** "La V{N curent}. T1+C05 LIVRABILE. C06 SPEC pending. Ce facem?"
+3. **Dacă ești chat de construcție CXX**, citește imediat `_brain/cXX/CHAT-CONTEXT.md` și respectă `_system/15-PROTOCOL-SYNC-CONSTRUCTII.md`.
+4. **Salut ARHITECT:** "La V{N curent}. Context citit. Ce facem?"
 
 Pentru orice altceva, consultă on-demand din `_system/`.
 
@@ -58,6 +59,7 @@ După orice modificare la livrabile, rulează `_system/generatoare/audit_sync.py
 | Comandă | Acțiune | Detaliu |
 |---|---|---|
 | `sync` | Sincronizez repo + execut mandatul BRAIN | pull main, citesc BRAIN-TO-CLAUDE.md, execut mandatul curent, raportez în CLAUDE-TO-BRAIN.md, commit + push |
+| `Prompt` | Regula BRAIN CXX | în chat BRAIN, scriu direct mandatul în `_brain/cXX/BRAIN-TO-CLAUDE.md`, nu îl afișez în chat |
 | `status` | Raportez stare + audit | citește STARE-CURENTA + rulează audit_sync |
 | `genereaza CNN` | Prima generare construcție | `_system/COMENZI.yaml` → genereaza_constructie |
 | `regenereaza CNN de la zero` | Suprascrie versiunea (cu confirmare) | branch dedicat `regen/cNN-AAAALLZZ` + commit înainte de suprascriere |
@@ -85,6 +87,24 @@ Când ARHITECT scrie doar `sync`, NU este doar sincronizare Git.
 
 Interdicție explicită: la comanda `sync`, NU te oprești niciodată după mesaj de tip "local la zi / working tree curat". Acesta este doar pasul 1. Execuția mandatului este obligatorie.
 
+### REGULĂ DURABILĂ PENTRU CONSTRUCȚII C13-C20
+
+Pentru chaturile de construcție CXX, `sync` este scopat pe folderul propriu:
+
+```text
+_brain/cXX/CHAT-CONTEXT.md
+_brain/cXX/BRAIN-TO-CLAUDE.md
+_brain/cXX/CLAUDE-TO-BRAIN.md
+```
+
+CLAUDE CXX citește mandatul din `_brain/cXX/BRAIN-TO-CLAUDE.md`, execută doar ce este permis acolo și scrie raportul în `_brain/cXX/CLAUDE-TO-BRAIN.md`.
+
+BRAIN CXX citește raportul din `_brain/cXX/CLAUDE-TO-BRAIN.md` și scrie următorul mandat în `_brain/cXX/BRAIN-TO-CLAUDE.md`.
+
+Când ARHITECT scrie `Prompt` într-un chat BRAIN CXX, BRAIN nu dă text de copiat în chat. BRAIN scrie direct mandatul / promptul în `_brain/cXX/BRAIN-TO-CLAUDE.md` și confirmă doar fișierul + commit SHA.
+
+Document oficial: `_system/15-PROTOCOL-SYNC-CONSTRUCTII.md`.
+
 Pentru lista exhaustivă: `_system/03-COMENZI-OPERATIONALE.md`.
 Pentru format machine-readable: `_system/COMENZI.yaml`.
 
@@ -101,6 +121,7 @@ Pentru format machine-readable: `_system/COMENZI.yaml`.
 | Regulile active | `_system/01-REGULI-ACTIVE.md` |
 | Definiții termeni | `_system/02-GLOSAR.md` |
 | Comenzi disponibile | `_system/03-COMENZI-OPERATIONALE.md` + `_system/COMENZI.yaml` |
+| Protocol sync construcții BRAIN ↔ CLAUDE | `_system/15-PROTOCOL-SYNC-CONSTRUCTII.md` |
 | Schema livrabile | `_system/04-ARHITECTURA-LIVRABILE.md` |
 | Workflow pas cu pas | `_system/05-WORKFLOW-PER-SCENARIU.md` |
 | Construcțiile T1-T5 | `_system/06-MAP-CONSTRUCTII-T1-T5.md` |
@@ -223,4 +244,4 @@ La sfârșit de sesiune cu decizii importante:
 
 **FINAL:** orice e ambiguu, consultă INDEX-CAUTARE.md. Orice e blocant, oprește și raportează.
 
-Versiune document: V41 · 28 mai 2026
+Versiune document: V74 · 7 iunie 2026 · include protocol sync construcții + regula Prompt direct în BRAIN-TO-CLAUDE.
