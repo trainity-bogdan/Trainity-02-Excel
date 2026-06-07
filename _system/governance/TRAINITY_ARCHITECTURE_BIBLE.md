@@ -241,6 +241,16 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 
 **Nuanța deciziei (LOCKED):** decizia UMANĂ stă între T4 și T5 (omul citește raportul T4 și hotărăște = consumatorul pachetului, în afara construcțiilor). Sistemul care rulează și se autoguvernează fără autor = T5 AUTONOMIE.
 
+**Spina T5 (LOCKED, autoritate = doc 14):** autorul iese progresiv din muncă — C17 din OCAZIE · C18 din EFORT · C19 din ATENȚIE · C20 din PROPRIETATE.
+
+**Datorii conceptuale T5 — ÎNCHISE (freeze SPEC conceptual, audit „Testul concediului" = PASS):** cele 6 riscuri (C17/C18 formă vs mișcare · C18/C04 lanț vs set · C19/babysitting · C19/C20 reguli vs predarea controlului · T4/T5 act unic vs sistem · definiția autonomiei fără infrastructură) sunt închise prin distincții structurale. Detaliul complet = `14-ARHITECTURA-CONCEPTUALA-T5.md` (autoritate conceptuală T5).
+
+**Obligații de autorare T5 (rămân deschise, se onorează la seed C17-C20; NU sunt de nomenclatură):**
+- C18 se autorează ca JUDECATĂ („ce merită să ruleze fără mine / cum mă retrag"), nu ca mecanism; garda „Apăs Refresh = C04" se respectă.
+- intrarea în T5 își asumă narativ maturizarea de rol analist -> constructor de sisteme.
+- AHA-urile C17-C20 sunt CANDIDATE; se confirmă (lock S5) la seed, în gramatica de treaptă.
+- autonomia se definește prin independența de autor, NU prin cloud/sincronizare/refresh/Power Automate/infrastructură.
+
 ---
 
 # BACKLOG DECIZII (reguli candidate, ÎNCĂ NEDECISE — NU sunt norme)
