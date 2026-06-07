@@ -41,6 +41,8 @@ Dacă ești **Claude** (motor) la primul chat → citește în ordine:
 | **06** | `06-MAP-CONSTRUCTII-T1-T5.md` | Cele 20 construcții mapate pe 5 trepte. | ~11 KB |
 | **07** | `07-BRAND-OPERATIONAL.md` | Cum se exprimă brand-ul în fișiere. | ~11 KB |
 | **11** | `11-ARHITECTURA-CONCEPTUALA-T2.md` | **AUTORITATE conceptuală T2** (axe C05-C08, ce face/NU face, garda T2/T3, prioritate peste istoric pre-V45). Citește înainte de orice C05-C08. | ~6 KB |
+| **12** | `12-ARHITECTURA-CONCEPTUALA-T3.md` | **AUTORITATE conceptuală T3** (lanț C09-C12, verbe-semnătură, granițe, formula T3/T4/T5). Citește înainte de orice C09-C12. | ~6 KB |
+| **13** | `13-ARHITECTURA-CONCEPTUALA-T4.md` | **AUTORITATE conceptuală T4** (lanț C13-C16, pilon „T4 consumă răspunsul T3", granițe, voce, testul 2030). Citește înainte de orice C13-C16. | ~8 KB |
 
 Plus `COMENZI.yaml` (catalog machine-readable) + `INDEX-CAUTARE.md` (search alphabetic).
 

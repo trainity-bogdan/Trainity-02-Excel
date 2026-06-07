@@ -223,12 +223,12 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 
 **Principiu de autorare T4 (LOCKED):** „nu arăt tot, arăt ce contează." Se aplică pe toate cele 4 construcții.
 
-**Datorii deschise în SPEC (NU în nomenclatură; nomenclatura e înghețată):**
-1. T4 autorat după principiul „nu arăt tot, arăt ce contează".
-2. C14 definit explicit ca organizarea spațială a elementelor vizuale (graniță față de C15).
-3. C15 definit explicit ca extragerea și formularea mesajului esențial (graniță față de C14).
-4. C16 definit explicit ca raport decision-ready, nu transmitere logistică (graniță față de T5).
-5. Seed-ul C13 închide contradicția dintre ordinea conceptuală message-first (ce contează conduce) și ordinea pedagogică build-up (cursantul începe de la vizual). Rezolvarea trăiește în voce/SPEC/ordine de predare, NU în nume.
+**Datorii ÎNCHISE conceptual (SPEC autoritate = `13-ARHITECTURA-CONCEPTUALA-T4.md`; rămân obligații de AUTORARE la C13-C16).** SPEC-ul conceptual T4 a fost construit și înghețat (confirmare ARHITECT). Pilonul care le închide: **T4 consumă răspunsul produs de T3, nu îl naște.** Datoriile nu mai sunt deschise ca SPEC de treaptă; rămân ca obligații de autorare în construcțiile C13-C16 (se aplică la seed-ul fiecăreia, NU în nomenclatură):
+1. T4 autorat după principiul „nu arăt tot, arăt ce contează" ca CRITERIU aplicat la toate cele 4 construcții (nu un pas separat).
+2. C14 autorat ca organizarea spațială a elementelor vizuale (graniță față de C15).
+3. C15 autorat ca extragerea și FORMULAREA mesajului esențial (formulare, nu descoperire; graniță față de C14 și C12).
+4. C16 autorat ca raport decision-ready, nu transmitere logistică (graniță față de T5, fără furt din C12).
+5. Seed-ul C13 închide contradicția message-first vs build-up în voce/SPEC/ordine de predare (build-up guvernat de mesaj), NU în nume.
 
 ### §T5 — AUTONOMIE / FUNCȚIONARE FĂRĂ AUTOR
 - **Întrebarea treptei:** „Cum funcționează fără mine?"
