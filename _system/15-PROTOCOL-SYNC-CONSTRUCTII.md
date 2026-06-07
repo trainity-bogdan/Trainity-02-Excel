@@ -51,6 +51,8 @@ La comanda "sync" citești DOAR:
 - _brain/cXX/BRAIN-TO-CLAUDE.md
 - _brain/cXX/CLAUDE-TO-BRAIN.md
 
+La comanda "Prompt" NU răspunzi cu prompt în chat. Scrii direct în _brain/cXX/BRAIN-TO-CLAUDE.md mandatul / promptul pe care trebuie să îl citească Claude la următorul sync.
+
 Respecti nomenclatura LOCKED V70 + doc 13/14 (autoritate conceptuală T4/T5).
 Nu redeschizi decizii LOCKED.
 ```
@@ -99,6 +101,29 @@ La `sync`, fiecare chat citește DOAR fișierele propriei construcții (`_brain/
 
 ---
 
+## 4.1 REGULA PROMPT ÎN CHAT BRAIN
+
+Când ARHITECT scrie **`Prompt`** într-un chat BRAIN CXX, BRAIN NU oferă textul în conversație pentru copy-paste.
+
+BRAIN trebuie să scrie direct în GitHub, în:
+
+```text
+_brain/cXX/BRAIN-TO-CLAUDE.md
+```
+
+conținutul pe care Claude trebuie să îl citească la următorul `sync`.
+
+Reguli:
+1. `Prompt` = actualizare directă a fișierului `BRAIN-TO-CLAUDE.md`.
+2. BRAIN poate răspunde în chat doar cu confirmare scurtă: fișier scris + commit SHA.
+3. Nu se cere confirmare suplimentară dacă intenția e clară.
+4. Nu se scrie promptul lung în chat decât dacă ARHITECT cere explicit "afișează promptul aici".
+5. Claude va citi acel fișier la `sync` și va răspunde exclusiv în `CLAUDE-TO-BRAIN.md`.
+
+Scop: elimină copy-paste-ul între chaturi și face GitHub sursa unică de sincronizare.
+
+---
+
 ## 5. REGULI DE INTERDICȚIE
 
 Într-un chat de construcție CXX (BRAIN sau CLAUDE):
@@ -129,8 +154,9 @@ Pasul de deschidere a unei construcții CXX (din Chat Andrei SYSTEM sau manual):
 3. **Pornește Chat BRAIN CXX** cu promptul standard (secțiunea 2).
 4. **Pornește Chat CLAUDE CXX** cu promptul standard (secțiunea 3).
 5. **Se lucrează exclusiv prin `sync`:** BRAIN scrie mandat -> CLAUDE face `sync` -> execută -> raportează -> commit. Repetă.
-6. **Ordinea conceptuală obligatorie** (regula B1): SEED conceptual -> SPEC 11-slot înghețat -> blueprint -> generare cele 7 artefacte. Nu se generează fără SPEC înghețat.
-7. **Folosirea fișierelor comune** trece prin `CERERE SYSTEM`, nu prin chatul de construcție.
+6. **Dacă ARHITECT scrie `Prompt` în chat BRAIN:** BRAIN scrie direct noul mandat în `BRAIN-TO-CLAUDE.md`, nu îl afișează pentru copy-paste.
+7. **Ordinea conceptuală obligatorie** (regula B1): SEED conceptual -> SPEC 11-slot înghețat -> blueprint -> generare cele 7 artefacte. Nu se generează fără SPEC înghețat.
+8. **Folosirea fișierelor comune** trece prin `CERERE SYSTEM`, nu prin chatul de construcție.
 
 ---
 
@@ -152,6 +178,8 @@ La sync citește doar:
 - _brain/cXX/CHAT-CONTEXT.md
 Scrie mandate doar în _brain/cXX/BRAIN-TO-CLAUDE.md.
 NU modifică fișiere sistem. Nevoie de sistem = CERERE SYSTEM.
+
+La comanda Prompt, scrie direct mandatul în _brain/cXX/BRAIN-TO-CLAUDE.md și confirmă doar commit-ul. Nu afișa promptul în chat decât dacă ARHITECT cere explicit.
 
 ## Claude CXX
 La sync:
@@ -215,4 +243,4 @@ Status așteptat: MANDAT_CXX_<ETAPA>_DONE
 
 ---
 
-Versiune document: V73 · procedură oficială multi-chat C13-C20.
+Versiune document: V74 · procedură oficială multi-chat C13-C20 + regula Prompt direct în BRAIN-TO-CLAUDE.
