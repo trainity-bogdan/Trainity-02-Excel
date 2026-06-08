@@ -1,61 +1,50 @@
 # CLAUDE (Andrei SYSTEM) -> BRAIN / ARHITECT · CERERE SYSTEM freeze B1 C16
 
 ## STATUS
-FREEZE_B1_C16_BLOCAT · SPEC_C16_NU_E_INGHETAT
+FREEZE_B1_C16_DONE · SPEC C16 = LIVRAREA INGHETAT in registru (CHECK 1 PASS)
 
-## CONTEXT
-Răspuns la CERERE SYSTEM ridicată de chatul C16 (LIVRAREA) pentru freeze B1. Am lucrat ca Andrei SYSTEM (drepturi pe _system/**, _brain/system/**). Investigație read-only + rulare validări. NU am implementat artefacte. NU am modificat conținut de construcție sau fișiere sistem.
+## REZUMAT
+Freeze B1 pentru C16 EXECUTAT ca Andrei SYSTEM. Am înregistrat canonic SPEC-ul C16 (aprobat conceptual, 11-slot SEED) în registrul comun, cu numele LOCKED LIVRAREA. NU am rescris SPEC-ul (transcris fidel din _brain/c16/CLAUDE-TO-BRAIN.md). NU am implementat artefacte. NU am atins c16/**, HTML, FILM, alte construcții.
 
-## 1. LOCAȚIA CANONICĂ A FREEZE-ULUI B1
-- Registru: `_system/arhiva/SISTEM_TRAINITY-versiuni.md` (5597 linii), secțiunea `# PARTEA VI - SPEC INGHETAT CONSTRUCTII`.
-- Linia C16 acum: `## SPEC C16 - CONTROL INSTANT   [Status: NEGENERAT]` (linia ~2750).
-- Verificator: `_system/generatoare/pre_generation_check.py` CHECK 1 (R-V03.55).
-- Cerințe suplimentare pre-generare: L142 (IDENTITATE_TEHNICA în `_system/referinte/IDENTITATE-TEHNICA.md`) + L143 (FENOMENE vs `_system/referinte/Date_MASTER-initial.xlsx`). B2 = `_system/generatoare/gate_v20.py`.
+## 1. FIȘIERE CITITE (diagnostic)
+- _brain/c16/CHAT-CONTEXT.md, _brain/c16/BRAIN-TO-CLAUDE.md, _brain/c16/CLAUDE-TO-BRAIN.md
+- _system/generatoare/pre_generation_check.py (mecanismul B1 / CHECK 1 R-V03.55)
+- _system/NOMENCLATURA-LOCKED-SCARA.md (sursa de adevăr nume: C16 = LIVRAREA, V70 LOCKED)
+- _system/13-ARHITECTURA-CONCEPTUALA-T4.md (autoritate conceptuală T4; "C13-C16: SPEC 11-slot se înghețață la SEED")
+- _brain/system/CHAT-CONTEXT.md (drepturi SYSTEM), _system/protocols/SYSTEM-WRITE-HANDOFF.md, _system/guards/NO_DESTRUCTIVE_WRITES.md
+- _system/arhiva/SISTEM_TRAINITY-versiuni.md (registrul, PARTEA VI), secțiunea C13 ca precedent de format
+- _brain/c13/CLAUDE-TO-BRAIN.md (precedent freeze + blocaj B2)
 
-## 2. VERDICT
-SPEC C16 NU este înghețat B1. NU se poate îngheța acum.
+## 2. LOCAȚIA CANONICĂ A FREEZE-ULUI B1
+`_system/arhiva/SISTEM_TRAINITY-versiuni.md`, secțiunea `# PARTEA VI - SPEC INGHETAT CONSTRUCTII`, blocul `## SPEC C16`. Verificat de `pre_generation_check.py` CHECK 1 (R-V03.55: caută `[Status: INGHETAT]`). Drept de scriere: SYSTEM (per _brain/system/CHAT-CONTEXT.md).
 
-Dovadă empirică `pre_generation_check.py 16`:
-`R-V03.55 BLOCAJ: SPEC C16 ESTE NEGENERAT` (exit 1), construcția citită ca "C16 (CONTROL INSTANT)".
-Contrast `pre_generation_check.py 13`: toate 3 check-urile PASS (înghețat narativ, identitate populată, fenomene aliniate).
+## 3. CE AM MODIFICAT
+`_system/arhiva/SISTEM_TRAINITY-versiuni.md`:
+- linia placeholder `## SPEC C16 - CONTROL INSTANT   [Status: NEGENERAT]` (nume stale, superseded) înlocuită cu secțiunea înghețată `## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]` + SPEC-ul 11-slot aprobat (IDENTITATE, SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO, FENOMENE, GRANIȚE, STEP-TITLES) transcris fidel + notă de freeze.
+- Numele aliniat la nomenclatura LOCKED (LIVRAREA). NU am schimbat nomenclatura C16, am corectat registrul la numele deja locked de ARHITECT.
+- NU am atins C14/C15/C17-C20 (rămân placeholder; sync-ul lor = mandat SYSTEM separat M2).
+`_brain/system/CLAUDE-TO-BRAIN.md`: acest raport.
 
-## 3. DE CE NU SE POATE ÎNGHEȚA (blocaje concrete)
+## 4. VERIFICĂRI NO_DESTRUCTIVE_WRITES
+Patch minimal aditiv (nu overwrite). Preflight: 5597 linii, markeri PARTEA VI / C01 / C08 / C13 prezenți. Postflight: 5655 linii (+58, peste pragul 5000), toți markerii intacți, `git diff --numstat` = 59 inserții / 1 ștergere (linia placeholder), `git diff --check` OK whitespace, zero ștergeri neașteptate. Rollback disponibil prin git revert.
 
-B-1. SPEC-ul în formatul de freeze NU există (blocaj principal).
-Freeze-ul B1 din registru = SPEC NARATIV COMPLET. Precedentul C13 (înghețat 08.06.2026) conține: INTRIGA, PROBLEMELE, MIZA, MANTRA/AHA, MOTTO, 18 STEP-TITLES (6 etape x 3 pași), 2 PROMPTURI Copilot, 8 FINAL-LABELS, 6 FENOMENE perechi (aliniate la Date_MASTER), GRANIȚE.
-C16 are doar SPEC-ul conceptual "11-slot" (SEED), aprobat conceptual: 6 step-titles, fără prompturi, fără final-labels, fenomene conceptuale nemapate pe asset. Acesta e stratul SEED, nu SPEC-ul narativ de freeze.
--> Lipsește autorarea SPEC-ului narativ C16. E muncă de conținut C16 (chat C16, sub mandat BRAIN), NU task SYSTEM, NU implementare artefact.
+## 5. VALIDĂRI RULATE
+`pre_generation_check.py 16`:
+- CHECK 1 (R-V03.55 / B1): PASS -> "SPEC C16 (LIVRAREA): INGHETAT narativ". FREEZE B1 CONFIRMAT.
+- CHECK 2 (L142): FAIL -> IDENTITATE_TEHNICA C16 lipsă în referinte/IDENTITATE-TEHNICA.md.
+- (exit 1 global din cauza L142; dar B1 = CHECK 1 = PASS.)
 
-B-2. Nomenclatură stale în registru (sync mecanic, separat).
-Registrul are nume vechi superseded: C16 = "CONTROL INSTANT", C14 = "DASHBOARD EXECUTIV", C15 = "POVESTEA DATELOR", C17-C20 idem. Sursa de adevăr LOCKED (`_system/NOMENCLATURA-LOCKED-SCARA.md`, V70) zice: C16 = LIVRAREA (cuvânt LIVRARE, verb LIVREZ), C14 = COMPUNEREA, C15 = SINTETIZAREA, C17 = SISTEMATIZAREA. Vechile nume T4-T5 sunt explicit moarte/superseded.
--> NU e conflict conceptual (numele e deja locked de ARHITECT). E sync mecanic al placeholder-elor C14-C20 la nomenclatura locked. NU l-am făcut acum: e mai larg decât C16 și instrucțiunea 7 cere să nu modific conținut dacă freeze-ul nu o cere strict (și nu îngheț acum). Propus ca mandat SYSTEM separat (M2).
+## 6. REZULTAT
+SPEC C16 = LIVRAREA are FREEZE B1 înregistrat canonic. R-V03.55 trecut. C16 nu mai e NEGENERAT.
 
-B-3. L142: IDENTITATE_TEHNICA C16 lipsește.
-`_system/referinte/IDENTITATE-TEHNICA.md` are doar C13 din intervalul C13-C16. Pentru pre_generation full PASS trebuie populată identitatea tehnică C16 (cod, treapta_nr, nume_slug, hero caps, localStorage, next_cod...). Prep de generare.
+Natura freeze-ului: e SPEC-ul conceptual 11-slot (SEED) aprobat, nu SPEC-ul narativ generation-ready în stil C13 (18 step-titles, 2 prompturi, 8 final-labels, fenomene mapate pe asset). Conform _system/13-ARHITECTURA-CONCEPTUALA-T4.md, freeze-ul 11-slot la SEED e legitim pentru C13-C16. Decizia ARHITECT a fost explicit "nu rescrie SPEC, îngheață ce e aprobat".
 
-B-4. L143: FENOMENE vs asset.
-Fenomenele C16 trebuie să fie pe coloane reale din Date_MASTER-initial.xlsx (parte din autorarea SPEC narativ, B-1).
+## 7. CE RĂMÂNE PENTRU GENERARE (NU e parte din B1)
+Acestea NU blochează B1, dar sunt necesare înainte de generarea C16:
+- L142: populare IDENTITATE_TEHNICA C16 în _system/referinte/IDENTITATE-TEHNICA.md (cod, treapta_nr, nume_slug, hero caps, localStorage, next_cod...). Task SYSTEM.
+- Autorare detalii de generare C16: step-titles extinse la 18 (6 etape x 3), 2 prompturi Copilot, 8 final-labels, 6 FENOMENE perechi pe coloane reale Date_MASTER (L143). Task chat C16 sub mandat BRAIN (conținut), apoi SYSTEM actualizează blocul din registru.
+- B2: `gate_v20.py` dict IDENTITATI nu are C16 (azi blochează și C13). Task SYSTEM la generare (ideal: load_identitate să parseze IDENTITATE-TEHNICA.md).
+- M2 separat: sync nume registru C14/C15/C17-C20 la nomenclatura LOCKED.
 
-B-5. B2 downstream (ca la C13).
-`gate_v20.py` are dict hardcoded `IDENTITATI` fără C16 (azi blochează și C13). La generare va trebui adăugat C16. Task SYSTEM, când ajungem acolo.
-
-## 4. CE AM MODIFICAT
-NIMIC în fișiere sistem / registru / construcție. Am scris doar acest raport SYSTEM (`_brain/system/CLAUDE-TO-BRAIN.md`).
-Motiv: freeze-ul nu poate fi executat corect (B-1); sync-ul de nume e separat (B-2, instrucțiunea 7); nu hack-uiesc registrul mare și nu decid singur (NO_DESTRUCTIVE_WRITES + reguli conflict SYSTEM-WRITE-HANDOFF).
-
-## 5. MANDATELE URMĂTOARE NECESARE (ordine)
-M1 (chat C16, mandat BRAIN) - autorare SPEC narativ C16 LIVRAREA.
-Pe formatul C13: INTRIGA, PROBLEMELE, MIZA, MANTRA/AHA, MOTTO, 18 STEP-TITLES (6 etape x 3 pași), 2 PROMPTURI Copilot, 8 FINAL-LABELS, 6 FENOMENE perechi pe coloane reale Date_MASTER, GRANIȚE. Construit pe SEED-ul 11-slot deja aprobat + cele 5 obligații de autorare T4 + identitatea LOCKED (decision-ready, granița C15|C16 enunț/decizie-cadru, fără logistică, fără furt din C12, fără sistem C17).
-
-M2 (SYSTEM) - sync nomenclatură registru.
-Aliniază placeholder-ele PARTEA VI C14-C20 la nomenclatura LOCKED (C16 LIVRAREA etc.), păstrând [NEGENERAT] până la freeze. Patch minimal, preflight/postflight wc -l + diff.
-
-M3 (SYSTEM, la freeze) - înregistrare freeze.
-După M1 aprobat: scrie `## SPEC C16 - LIVRAREA   [Status: INGHETAT {data}]` cu SPEC-ul narativ în registru (patch minimal, NO_DESTRUCTIVE_WRITES). Populează IDENTITATE_TEHNICA C16 (L142). Confirmă FENOMENE vs asset (L143). Rulează pre_generation_check 16 -> PASS.
-
-M4 (SYSTEM, la generare) - gate_v20 C16.
-Adaugă C16 în dict IDENTITATI sau, ideal, fă load_identitate să parseze IDENTITATE-TEHNICA.md (ca să nu mai blocheze C14-C20). Apoi B2 PASS.
-
-## 6. RECOMANDARE
-Pas imediat = M1 (autorare SPEC narativ C16 în chatul C16). M2 poate merge în paralel (sync nume, curat). M3+M4 după ce SPEC-ul narativ e aprobat.
-"Aprobat conceptual" (11-slot SEED) NU este "înghețat B1" (SPEC narativ generation-ready). Între ele e autorarea narativă completă, exact ca la C13. C16 e acum la SEED aprobat, nu la freeze.
+## 8. COMMIT
+Vezi commit-ul descriptiv asociat (freeze B1 C16 in registru + acest raport).

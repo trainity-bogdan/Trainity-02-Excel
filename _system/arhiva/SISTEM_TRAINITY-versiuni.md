@@ -2747,7 +2747,65 @@ C12 = interpretarea rezultatului. C13 = forma vizuală onestă a unui rezultat d
 
 ## SPEC C14 - DASHBOARD EXECUTIV   [Status: NEGENERAT]
 ## SPEC C15 - POVESTEA DATELOR   [Status: NEGENERAT]
-## SPEC C16 - CONTROL INSTANT   [Status: NEGENERAT]
+## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]
+
+Axă: RAPORT DECISION-READY. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
+Decizie locked: C16 = livrarea raportului ca obiect de decizie, NU logistică (email/export/PDF/share/trimitere = logistică, nu livrare).
+Nomenclatură LOCKED (NOMENCLATURA-LOCKED-SCARA V70): C16 LIVRAREA, cuvânt LIVRARE, verb LIVREZ. Numele vechi "CONTROL INSTANT" e superseded.
+Nota freeze: SPEC conceptual 11-slot înghețat la SEED (aprobat conceptual de ARHITECT 08.06.2026). Detaliile de generare se autorează separat înainte de generare: step-titles extinse la 18 (6 etape x 3), 2 prompturi Copilot, 8 final-labels, FENOMENE mapate pe coloane reale Date_MASTER (L143), IDENTITATE_TEHNICA C16 (L142). B2 gate_v20 necesită intrare C16.
+
+### 1. IDENTITATE
+- C16 = LIVRAREA
+- T4 = RAPORTARE
+- CUVÂNT LOCKED = LIVRARE
+- VERB LOCKED = LIVREZ
+- Rol în T4: transformarea raportului într-un material decision-ready, predabil decidentului.
+
+### 2. SLUG
+livrarea
+
+### 3. INTRIGA
+Ai răspunsul, e și sintetizat, dar decidentul tot nu decide. Raportul bun care nu mișcă nimic. Distanța dintre "am terminat analiza" și "s-a luat decizia".
+
+### 4. PROBLEMELE
+- mesajul esențial (venit de la C15) există, dar e îngropat, nu stă în capul foii ca decizie cerută;
+- complet, dar aglomerat: decidentul se îneacă în detaliu fără relevanță pentru decizie;
+- raportul are nevoie de autor lângă el ca să fie înțeles (nu se susține singur);
+- lipsește cadrul de decizie (decizie, risc, concluzie, pas următor): e informație, nu ramă de decizie;
+- livrarea tratată ca logistică ("am trimis"), nu ca obiect de decizie.
+
+### 5. MIZA
+Valoarea întregului lanț T1-T4 se realizează sau se pierde în momentul livrării. O decizie amânată sau greșită pentru că raportul nu a livrat decizia înseamnă analiză irosită. Livrarea e locul unde analiza devine (sau nu) acțiune.
+
+### 6. MANTRA
+"Nu livrez informație. Livrez o decizie gata de luat."
+
+### 7. WOW (aspirațional)
+Raportul te aduce în punctul în care poți decide din el, nu din alte cinci documente și o ședință. Orizont spre care țintește forma de livrare, nu o garanție operațională rigidă.
+
+### 8. MOTTO
+"Raportul care decide."
+
+### 9. FENOMENE
+- cadrul de decizie (decizie, risc, concluzie, pas următor);
+- decizia cerută în capul foii: mesajul sintetizat de C15 este poziționat pentru decizie, nu re-sintetizat;
+- documentul care se susține singur (zero dependență de autor lângă el);
+- relevanța-pentru-decizie ca filtru: ce intră în decizie vs ce rămâne anexă, distinct de ierarhia vizuală (care e C14);
+- completitudine raportată la decizie, nu la "a fi acoperit".
+
+### 10. GRANIȚE
+- vs C15 (jos): C15 sintetizează mesajul esențial; C16 NU sintetizează, livrează mesajul deja sintetizat, dându-i forma de decizie.
+- vs C14: C14 face compunerea vizuală generală; C16 NU aranjează vizual, lucrează cadrul de decizie al raportului.
+- vs C17 (sus): C17 sistematizează raportul în T5 AUTONOMIE (sistem recurent, dashboard viu, procedură autonomă, automatizare); C16 livrează o dată un raport finit, nu construiește mecanismul.
+
+### 11. STEP-TITLES (SEED: 6 etape; se extind la 18 la autorarea de generare)
+1. Decizia cerută, în capul foii
+2. Cadrul de decizie: decizie, risc, concluzie, pas următor
+3. Ce intră în decizie, ce rămâne anexă
+4. Complet pentru decizie, fără surplus
+5. Raportul care se susține singur
+6. Raportul devine obiect de decizie
+
 ## SPEC C17 - RAPORTAREA DE LUNI DIMINEATA   [Status: NEGENERAT]
 ## SPEC C18 - ELIMINAREA VERSIUNILOR   [Status: NEGENERAT]
 ## SPEC C19 - PROCEDURA DE RAPORTARE   [Status: NEGENERAT]
