@@ -1,7 +1,25 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-SPEC_APROBAT_CONCEPTUAL_OFICIAL
+PREGATIT_FREEZE_B1_CERERE_SYSTEM
+
+## PREGĂTIT PENTRU FREEZE B1 (mandat ARHITECT, 2026-06-08)
+C16 este PREGĂTIT pentru freeze B1, fără implementare (conform mandatului).
+Checklist readiness (ce ține de conținutul C16):
+- SPEC 11-slot complet, toate sloturile populate (secțiunea 2): IDENTITATE, SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO, FENOMENE, GRANIȚE, STEP-TITLES. DA.
+- SPEC aprobat conceptual oficial de ARHITECT. DA.
+- Granițe confirmate (vs C14 vizual, vs C15 sinteză, vs C17 sistem). DA.
+- Artefact conceptual fixat: foaie-raport de decizie. DA.
+- Fără întrebări blocante. DA.
+Concluzie: din perspectiva conținutului, SPEC-ul C16 este apt de îngheț B1.
+
+## CERERE SYSTEM (freeze B1)
+Înghețul B1 propriu-zis (înregistrarea autoritară a SPEC-ului în locația canonică citită de pre_generation_check.py / gate_v20.py) este în afara scope-ului C16. Locul canonic al unui SPEC înghețat e un registru comun / fișier sistem (constructii.xlsx, _system/**, governance/**) sau c16/**, toate interzise sub mandatul curent ("fără implementare", "nu modifica c16/**", "nu modifica fișiere sistem"). Nu pot citi _system/, deci nu cunosc locația/mecanismul exact. Regula B1 din CLAUDE.md formulează înghețul ca acțiune ARHITECT ("cere ARHITECT să înghețe SPEC").
+Conform regulii din mandat, opresc execuția aici și cer decizie SYSTEM/ARHITECT:
+1. Locația canonică de înregistrare a SPEC-ului înghețat (registru comun / fișier sistem / c16/**).
+2. Cine execută înghețul: Chat SYSTEM (dacă e registru comun / fișier sistem) sau C16 (doar dacă trăiește în c16/** ȘI primesc mandat explicit de implementare).
+3. Rularea pre_generation_check.py / gate_v20.py (scripturi sistem, interzise C16) o execută SYSTEM.
+Până la decizie: NU implementez, NU modific c16/**, NU modific fișiere sistem. Readiness-ul de mai sus este livrat; înghețul propriu-zis așteaptă decizia.
 
 ## CONFIRMARE OFICIALĂ (mandat ARHITECT/BRAIN, 2026-06-08)
 Confirm OFICIAL: SPEC 11-slot C16 LIVRAREA (cele 11 sloturi din secțiunea 2: IDENTITATE, SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO, FENOMENE, GRANIȚE, STEP-TITLES) este APROBAT CONCEPTUAL și PREGĂTIT PENTRU PASUL URMĂTOR.
