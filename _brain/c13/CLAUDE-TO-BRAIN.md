@@ -1,118 +1,77 @@
-# CLAUDE → BRAIN · C13 VIZUALIZAREA · BLUEPRINT (după freeze SPEC)
+# CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERARE BLOCATĂ
 
 ## 1. STATUS
-CLAUDE_C13_BLUEPRINT_READY_AFTER_SPEC_FREEZE
+CLAUDE_C13_GENERATION_BLOCKED
 
-> Răspuns la mandat **C13-FREEZE-SPEC-AND-BLUEPRINT-004**. **SPEC 11-slot C13 a fost înghețat de ARHITECT** („confirm freeze SPEC C13"). Acest raport marchează freeze-ul și livrează blueprint-ul conceptual C13. Exclusiv conceptual, zero implementare. Scope: doar `_brain/c13/CLAUDE-TO-BRAIN.md`. Sistemul (doc 13 / 06-MAP) NEATINS; tensiunea dashboard formalizată ca CERERE SYSTEM (secțiunea 6), de tratat din Chat Andrei SYSTEM.
+> Răspuns la mandat **C13-GENERATE-ARTIFACTS-007**. Generarea NU poate începe: gate-ul HARD de pre-generare (B1 / R-V03.55) eșuează, iar deblocarea cere modificarea unor fișiere `_system/**` INTERZISE în acest chat de construcție. Conform mandatului („Dacă gate_v20.py sau alt validator nu este pregătit pentru C13, NU modifica fișiere sistem din acest chat. Raportează blocajul exact."), raportez blocajul cu rețeta de deblocare. Zero generare, zero atingere sistem.
 
-## 2. SPEC LOCKED (recapitulativ)
-- **SLUG:** `Vizualizare`
-- **INTRIGA:** „Cifra e corectă. Graficul minte."
-- **MIZA:** „O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
-- **MANTRA:** „Nu desenez frumos. Desenez adevărat." · **AHA:** „Forma greșită minte cu cifra corectă."
-- **WOW:** „Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
-- **MOTTO:** „Forma nu se nimerește. Se alege."
-- **AXĂ:** ONESTITATEA FORMEI. **PILON T4:** T4 consumă răspunsul produs de T3, nu îl naște.
-- **6 FENOMENE LOCKED** (deformare → regulă): axa care exagerează → zero/abatere declarată · tip nepotrivit → urmează natura rezultatului · scala care inventează → o scală liniară declarată · codarea care sugerează → o dimensiune codată coerent · agregarea care ascunde → arăți variația · etichetă/unitate/context lipsă → fiecare vizual le poartă.
-- **18 STEP-TITLES LOCKED** (6 etape × 3), recapitulate în blueprint la secțiunea 3.
-- **GRANIȚE LOCKED:** C12 = interpretare · C13 = forma onestă a unui rezultat deja produs · C14 = organizare spațială · C15 = sinteza mesajului · C16 = livrare decision-ready.
-- **DECIZIE LOCKED:** C13 = obiect vizual onest. NU dashboard, NU layout, NU pagină, NU storytelling.
+## 2. LIVRABILE GENERATE
+NICIUNUL. Blocaj înainte de generare. `c13/` nu a fost creat.
 
-## 3. BLUEPRINT PE 6 ETAPE × 3 PAȘI
+## 3. FIȘIERE MODIFICATE
+- Doar `_brain/c13/CLAUDE-TO-BRAIN.md` (acest raport).
 
-### ETAPA 1 · REALITATE
-Pași: (1) Răspunsul corect, dar invizibil · (2) Nimeni nu decide privind un model · (3) Aceeași cifră, încă fără formă.
-- **Scop:** cursantul pleacă de la răspunsul produs de T3 și constată că e corect, dar mut: nu se poate decide pe el.
-- **Transformare:** răspuns analitic (în model) → conștientizarea că lipsește forma vizibilă.
-- **Rezultat:** un rezultat T3 identificat ca „de făcut vizibil", încă fără formă.
-- **Risc de drift:** re-analiză (T3) sau săritul direct la grafic fără a vedea că forma e o alegere.
-- **Control de graniță (C12|C13):** răspunsul se preia ca dat; NU se interpretează, NU se explică „de ce".
+## 4. FIȘIERE NEATINSE (explicit)
+- `c13/**` — necreate (blocaj pre-generare).
+- `_system/**` (inclusiv `SISTEM_TRAINITY-versiuni.md`, `referinte/IDENTITATE-TEHNICA.md`, `gate_v20.py`, `audit_sync.py`) — NEATINSE (interzise).
+- `c01/**`..`c12/**`, `c14/**`..`c20/**`, CLAUDE.md, README, STARE-CURENTA, index.html, constructii.xlsx — NEATINSE.
 
-### ETAPA 2 · INVESTIGAȚIE
-Pași: (4) O cifră, mai multe forme posibile · (5) Promptul 1: ce formă cere rezultatul · (6) Aceeași cifră, două grafice, două concluzii.
-- **Scop:** descoperă că forma e o alegere a autorului, nu o proprietate a cifrei; vede prima minciună de formă.
-- **Transformare:** o cifră → spectrul formelor posibile + dovada că forma schimbă concluzia (fenomenul 1, axa).
-- **Rezultat:** conștientizarea operațională că aceeași cifră poate minți prin formă.
-- **Risc de drift:** alunecare în „grafic frumos" (estetică) sau în moralizare despre minciună fără competență.
-- **Control de graniță:** rămâne pe forma-ca-alegere, nu pe design decorativ. Promptul 1 = interogare (AI propune, omul judecă), nu execuție (R-PED-2/R-PED-3).
+## 5. CUM AM PĂSTRAT C13 = OBIECT VIZUAL ONEST
+N/A la nivel de artefact (negenerat). La nivel de pregătire: SPEC-ul înghețat respectă integral „C13 = obiect vizual onest, nu dashboard"; la deblocare, generarea va respecta cerința critică (workbook = suport pentru obiectul vizual, nu dashboard; handoff „C13 face obiectul adevărat. C14 îl așază în pagină.").
 
-### ETAPA 3 · TRANSFORMARE
-Pași: (7) Tipul de grafic urmează natura rezultatului · (8) Promptul 2: generezi vizualul, corectezi axa și scala · (9) Scoți codarea care sugerează fals.
-- **Scop:** construiește forma onestă: tip potrivit, axă/scală corecte, codare curată (fenomenele 2-4 ca reguli).
-- **Transformare:** rezultat fără formă → obiect vizual onest.
-- **Rezultat:** un vizual care reprezintă rezultatul fără să adauge și fără să ascundă.
-- **Risc de drift:** dashboard/pagină (C14); adăugarea unui al doilea vizual sau a unei compoziții.
-- **Control de graniță (C13|C14):** un SINGUR obiect, nu pagina. Promptul 2 = output AI corectat de om (E3 AI-assisted, R-PED-1).
+## 6. VALIDĂRI RULATE
+- `python3 _system/generatoare/pre_generation_check.py 13` (gate B1, R-V03.55 + L142). Read-only, nu am modificat nimic.
 
-### ETAPA 4 · VERIFICARE
-Pași: (10) Vizualul față de cifra brută: aceeași concluzie? · (11) Testul celui de-al doilea ochi · (12) Marchezi forma care spune mai mult decât cifra.
-- **Scop:** verifică onestitatea formei prin confruntare cu cifra (formula de validare).
-- **Transformare:** obiect vizual → obiect vizual VERIFICAT onest (sau marcat neonest).
-- **Rezultat:** vizualul trece proba „citit singur = aceeași concluzie ca cifra brută".
-- **Risc de drift:** E4 construiește în loc să verifice (R-MET-1); sau interpretează rezultatul (C12).
-- **Control de graniță:** E4 confruntă/verifică/marchează, nu construiește. Zero „de ce" (C12).
+## 7. REZULTATE VALIDĂRI
+**Gate de pre-generare = FAIL (exit non-zero, BLOCANT).** Două HARD checks pică:
 
-### ETAPA 5 · STABILIZARE
-Pași: (13) Cele șase reguli de onestitate a formei · (14) Eticheta, unitatea, contextul: nimic de ghicit · (15) Un obiect vizual onest, repetabil.
-- **Scop:** transformă onestitatea dintr-un act punctual într-un standard repetabil (cele 6 fenomene = reguli).
-- **Transformare:** vizual verificat → reguli de onestitate fixate ca standard + etichetare completă (fenomenul 6 închis).
-- **Rezultat:** un obiect vizual onest, repetabil, complet etichetat.
-- **Risc de drift:** lecție de design grafic (tehnici/estetică) în loc de reguli de onestitate.
-- **Control de graniță:** regulile = onestitate, nu estetică. Rămâne obiect, nu pagină.
+### CHECK 1 (R-V03.55) — FAIL
+`SPEC C13 ESTE NEGENERAT`. Validatorul caută secțiunea `## SPEC C13 ... [Status: INGHETAT]` în `_system/arhiva/SISTEM_TRAINITY-versiuni.md` și nu o găsește. SPEC-ul C13 e înghețat CONCEPTUAL (în `_brain/c13/`, `doc 13`, confirmat de ARHITECT `confirm freeze SPEC C13`), dar NU e transcris în registrul de sistem pe care îl verifică gate-ul.
 
-### ETAPA 6 · CONFIRMARE
-Pași: (16) Forma onestă repară percepția · (17) Devii garantul a ceea ce vede altcineva · (18) Predai către C14: obiectul, gata de așezat în pagină.
-- **Scop:** payoff (WOW: forma onestă repară percepția) + transformare de identitate (garantul onestității vizuale) + handoff la C14.
-- **Transformare:** obiect vizual onest → predat către C14; cursantul devine garantul a ce vede altcineva.
-- **Rezultat:** un obiect vizual onest predat; treapta C13 închisă, C14 deschisă.
-- **Risc de drift:** compunerea paginii (C14) sau formularea mesajului (C15) la handoff.
-- **Control de graniță (C13|C14, C13|C15):** predă obiectul, NU construiește pagina, NU formulează mesajul.
+### CHECK 2 (L142) — FAIL
+`Sectiunea IDENTITATE_TEHNICA C13 LIPSA in referinte/IDENTITATE-TEHNICA.md`. Fișierul are C12 (cu `next_cod: C13`), dar nu există secțiunea `## IDENTITATE_TEHNICA C13` cu schema tehnică (output_filename, footer_text, topbar_text, mobile_topbar, nav_brand_label, title_studiu etc.).
 
-## 4. (inclus în secțiunea 3) Scop / transformare / rezultat / risc / control de graniță pentru fiecare etapă
-Toate cele 6 etape de mai sus conțin cele 5 câmpuri cerute. Sinteza riscurilor cap-coadă: jos = C12 (interpretare), sus = C14 (pagină/dashboard) și C15 (mesaj); lateral = estetică/moralizare. Blueprint-ul ține C13 strict pe obiectul vizual onest.
+## 8. BLOCAJUL (precis) + REȚETĂ DE DEBLOCARE
+**Cauză:** gate-ul B1 cere SPEC-ul + identitatea tehnică C13 înregistrate în 2 fișiere `_system/**`, pe care acest chat de construcție NU are voie să le modifice. Înregistrarea lor e un task SYSTEM (Chat Andrei SYSTEM), nu un task de generare C13.
 
-## 5. HANDOFF CLAR CĂTRE C14
-C13 predă un **obiect vizual onest**: verificat (citit singur = aceeași concluzie ca cifra), repetabil (cele 6 reguli), complet etichetat. C14 primește mai multe astfel de obiecte și le organizează SPAȚIAL într-o pagină coerentă.
-- Formula de handoff: **„C13 face obiectul adevărat. C14 îl așază în pagină."**
-- C14 NU re-verifică onestitatea fiecărui obiect (presupune obiecte oneste de la C13).
-- C13 NU anticipează layout-ul, ierarhia de pagină sau dashboard-ul (acelea sunt C14).
-- Predarea = un obiect, nu o pagină; un atom, nu un ansamblu.
+**Deblocare (de executat din Chat Andrei SYSTEM, nu aici):**
 
-## 6. CERERE SYSTEM (tensiunea dashboard)
-O consider necesară. Tensiunea e reală și mandatul confirmă că se tratează din Chat Andrei SYSTEM, nu din C13.
-
+**(A) `_system/arhiva/SISTEM_TRAINITY-versiuni.md`** — adaugă secțiunea:
 ```
-CERERE SYSTEM
-Construcție: C13
-Fișiere comune vizate: _system/13-ARHITECTURA-CONCEPTUALA-T4.md (STARE DE IMPLEMENTARE),
-                       _system/06-MAP-CONSTRUCTII-T1-T5.md (nota „dashboard XLSX la C13")
-Motiv: aceste note contrazic DECIZIA LOCKED (C13 = obiect vizual onest; dashboard = C14).
-Impact: la implementare, riscă să producă un dashboard, rupând axa ONESTITATEA FORMEI.
-Propunere: livrabilul tehnic C13 = obiect vizual onest (chart / PivotChart corect);
-           „dashboard XLSX" = livrabil de TREAPTĂ, asamblat de la C14 încolo.
-Stare: NEEXECUTAT din C13 (în afara scope-ului). De preluat de Chat Andrei SYSTEM
-       înainte de implementarea tehnică a C13.
+## SPEC C13 — VIZUALIZAREA   [Status: INGHETAT]
 ```
+cu cele 9 elemente narative (toate înghețate deja, de transcris din SPEC-ul C13):
+1. INTRIGA: „Cifra e corectă. Graficul minte."
+2. PROBLEMELE: cele 5 (aceeași cifră / formă aleasă de autor / ochiul crede forma / AI nu garantează onestitatea / decidentul vede o formă prost aleasă).
+3. MIZA: „O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
+4. MANTRA: „Nu desenez frumos. Desenez adevărat." (AHA: „Forma greșită minte cu cifra corectă.")
+5. MOTTO: „Forma nu se nimerește. Se alege."
+6. STEP-TITLES: cele 18 (6 etape × 3), LOCKED în mandat.
+7. PROMPTURI: Promptul 1 (E2 INVESTIGAȚIE, „ce formă cere rezultatul"), Promptul 2 (E3 TRANSFORMARE, „generezi vizualul, corectezi axa și scala").
+8. FINAL-LABELS: 8 ancore de retenție (de propus la înregistrare, în spiritul axei ONESTITATEA FORMEI).
+9. FENOMENE: cele 6 perechi (axă/tip/scală/codare/agregare/etichetă → regulă onestă).
 
-Până la decizia SYSTEM, blueprint-ul C13 construiește strict obiect vizual onest, nu dashboard.
+**(B) `_system/referinte/IDENTITATE-TEHNICA.md`** — adaugă secțiunea `## IDENTITATE_TEHNICA C13 — VIZUALIZAREA` pe șablonul C12, cu valorile C13:
+- cod: C13
+- slug: Vizualizare
+- output_filename: `Date_MASTER-C13-Vizualizare.xlsx`
+- title_studiu: `C13 · Vizualizare · Trainity`
+- topbar_text: `Sistemul 02 - Excel · C13 · Vizualizare`
+- mobile_topbar: `C13 · Vizualizare`
+- nav_brand_label: `PACK 02 EXCEL · C13`
+- footer_text: `TRAINITY · C13 VIZUALIZARE · ...` (CUVÂNT LOCKED VIZUAL)
+- next_cod: C14
+- plus restul câmpurilor schema (nume_hero_caps_rand1, localStorage_studiu etc.) conform tiparului C12.
+- Recomandare: actualizează și `next_cod` al C12 dacă gate-ul cere lanț coerent (C12 are deja `next_cod: C13`, OK).
 
-## 7. VERDICT DE AUTO-AUDIT
-- **Consistență cu SPEC LOCKED:** blueprint-ul nu modifică niciun slot înghețat; doar îl operaționalizează pe etape. Cele 18 step-titles LOCKED = neatinse.
-- **Granițe:** fiecare etapă are control de graniță explicit (C12 jos, C14/C15 sus, estetică/moralizare lateral). Zero „de ce" (C12), zero pagină (C14), zero mesaj (C15).
-- **Schelet (S4):** 6 etape × 3 = 18 pași. R-PED-2 (Promptul 1 în E2, Promptul 2 în E3) respectat. R-PED-1 (E3 AI-assisted) respectat. R-MET-1 (E4 verifică, nu construiește) respectat.
-- **Riscurile celor 6 fenomene** sunt mapate ca riscuri de drift pe etape (estetică, dashboard, C12, design grafic).
-- **Scope:** doar `_brain/c13/CLAUDE-TO-BRAIN.md` scris. Sistem neatins. Tensiunea dashboard izolată ca CERERE SYSTEM.
-- **Zero implementare:** niciun HTML/Excel/FILM/imagine; blueprint pur conceptual.
+**(C)** După (A)+(B), rulează din nou `pre_generation_check.py 13` → exit 0. Apoi mandat de generare C13, iar acest chat generează cele 7 artefacte.
 
-**VERDICT: BLUEPRINT C13 COMPLET, consistent cu SPEC-ul înghețat, deciziile și granițele LOCKED.** C13 e pregătit conceptual cap-coadă. Rămâne UN singur deblocaj înainte de implementarea tehnică: decizia SYSTEM pe tensiunea dashboard (CERERE SYSTEM, secțiunea 6). La dezlegarea ei + mandat de implementare, C13 poate intra în generare (HTML/Date_MASTER/FILM/assets).
+**Notă FINAL-LABELS:** singurul element din cele 9 care NU e încă explicit în SPEC-ul înghețat sunt cele 8 FINAL-LABELS. Pot fi propuse (de mine sau BRAIN) înainte de înregistrarea SYSTEM, ca SPEC-ul de registru să fie complet 9/9.
 
----
+## 9. COMMIT SHA
+(completat la commit, mai jos în raportul de chat)
 
-## ADENDĂ SYSTEM (rezolvare CERERE SYSTEM, scrisă de Chat Andrei SYSTEM)
-**STATUS: SYSTEM_C13_DASHBOARD_TENSION_RESOLVED**
+## 10. VERDICT FINAL
+**GENERARE BLOCATĂ legitim, conform B1 (R-V03.55).** Nu am forțat gate-ul și nu am atins sistemul. Blocajul NU e o eroare a SPEC-ului (care e solid și înghețat conceptual), ci o **datorie de înregistrare SYSTEM**: SPEC-ul C13 trăiește în `_brain/c13` + `doc 13`, dar gate-ul de pre-generare îl cere în `SISTEM_TRAINITY-versiuni.md` + `IDENTITATE-TEHNICA.md`. Acestea sunt fișiere `_system/**`, deci task SYSTEM, nu C13.
 
-CERERE SYSTEM din secțiunea 6 (tensiunea „dashboard XLSX la C13") = REZOLVATĂ de SYSTEM. Documentele sistemice au fost clarificate, fără ștergere brutală și fără a redeschide SPEC-ul sau nomenclatura LOCKED:
-- `_system/13-ARHITECTURA-CONCEPTUALA-T4.md` (STARE DE IMPLEMENTARE): nota veche „la C13 se introduce dashboard XLSX" → clarificare „C13 = obiect vizual onest; workbook-ul = suport pentru construirea/verificarea obiectului; dashboard-ul / pagina = C14".
-- `_system/06-MAP-CONSTRUCTII-T1-T5.md` (Calea de evoluție): idem, „obiectul vizual onest la C13; compunerea dashboard-ului începe la C14".
-
-C13 rămâne **obiect vizual onest**. C14 preia compunerea paginii / dashboard-ului. **Deblocajul tehnic e ridicat:** C13 poate intra în implementare la mandat de generare. Commit clarificare sistem: `90e4d1f` (integrat în main).
+**Următorul pas:** Chat Andrei SYSTEM execută rețeta (A)+(B), rulează gate-ul până la exit 0, apoi BRAIN re-emite mandatul de generare. La acel `sync`, generez C13 complet (7 artefacte, COPY+MODIFY din c12/c01, axat ONESTITATEA FORMEI, fără dashboard). Eventual, înainte, propun cele 8 FINAL-LABELS ca SPEC-ul de registru să fie 9/9.
