@@ -1,98 +1,112 @@
 # CLAUDE -> BRAIN C15
 
 ## 1. STATUS
-**BLUEPRINT_V1_1_PREPARED** · rafinare conceptuală a blueprintului C15 (NU generare). Două delte față de v1.0: (A) E5 reluat ca să nu sune a calcul/T3; (B) substratul Excel clarificat ca strat MESAJ. SPEC 11-slot LOCKED neatins. Niciun artefact, niciun fișier sistem, fără intrare în alt `_brain/cYY`. Singurul fișier scris: acesta.
+**GENERATION_SPEC_FREEZE_PREPARED** · cele 9 elemente SPEC de generare C15 consolidate freeze-ready, cu deciziile BRAIN integrate (E5 = REFORMULARE · substrat = strat MESAJ). SPEC 11-slot LOCKED neatins. Freeze CONCEPTUAL al SPEC-ului de generare — **NU generare**. Pasul următor = **înregistrare SYSTEM** (registru + IDENTITATE_TEHNICA + gate dict), NU generare directă. Niciun artefact, niciun fișier sistem, fără intrare în alt `_brain/cYY`. Singurul fișier scris: acesta.
 
 ---
 
-## 2. CE RĂMÂNE NEMODIFICAT DIN BLUEPRINT V1.0
-Aprobat în principiu de BRAIN, deci rămâne neschimbat (doar E5 + substrat Excel se rafinează):
-- **SEED de generare** (axa SINTEZĂ, nucleu SINTEZĂ ≠ REZUMAT, pilon T4).
-- **Cele 9 elemente:** SLUG `sintetizarea`, INTRIGA, PROBLEMELE (5), MIZA/MANTRA/WOW/MOTTO (LOCKED), FENOMENE (5), STEP-TITLES — toate ca în v1.0, CU EXCEPȚIA celor 3 pași din E5 (rescriși la secțiunea 5).
-- **Etapele E1 INPUT · E2 AI · E3 SINTEZĂ · E4 CONTROL · E6 PAYOFF** — neschimbate.
-- **5 FENOMENE · 8 VERIFICĂRI · 2 PROMPTURI AI** — neschimbate.
-- **Formula:** „Rezumatul scurtează tot. Sinteza spune ce contează." — neschimbată.
-- **Livrabile** (7 canonice) + **validări** (B1/B2/B3 + CERERE SYSTEM-uri) — neschimbate.
+## 2. SPEC 11-SLOT RĂMAS LOCKED (neatins, verbatim)
+1. HERO: „Cum transform o pagină într-o singură frază care contează?"
+2. BOMBĂ: „O pagină impecabilă. Și niciun mesaj."
+3. GREȘEALA: „Oamenii rezumă tot. Profesioniștii formulează ce contează."
+4. AHA: „O pagină arată. O sinteză spune."
+5. MANTRA: „Nu rezumăm. Sintetizăm."
+6. WOW: „O pagină întreagă pe care trebuia s-o descifrezi. Acum o singură frază îți spune ce contează, iar pagina o dovedește."
+7. MOTTO: „Dintr-o privire, mesajul."
+8. CINE DEVII: „Nu mai prezinți tot ce ai. Sintetizezi singura frază care contează."
+9. PAYOFF: „O pagină coerentă a devenit un mesaj care contează."
+10. MIZA: „Un director nu citește toată pagina. O deschide și întreabă: «și ce-i cu asta?»..." (verbatim).
+11. VERB-SEMNĂTURĂ: SINTETIZEZ.
 
 ---
 
-## 3. PROBLEMA E5 RECALCUL
-Phase-tag-ul standard E5 = RECALCUL (din arcul moștenit, unde înseamnă „datele se reîmprospătează → valorile se recalculează"). Pentru C15 e contaminant:
-- „RECALCUL" e un act de CALCUL — sugerează că C15 re-derivă numere, exact ce face T3, contrazicând nucleul „C15 nu calculează, formulează".
-- Mesajul C15 NU se recalculează; el se RE-FORMULEAZĂ (act verbal) când pagina de dedesubt se schimbă. Recalcularea valorilor se întâmplă în AMONTE (model / T3), nu în C15.
-- Lăsat ca „RECALCUL", E5 ar trage cursantul să „refacă cifrele", adică să intre în T3.
+## 3. CELE 9 ELEMENTE SPEC DE GENERARE C15 — FREEZE-READY
+(4 LOCKED din 11-slot + 5 consolidate; format pregătit pentru transcriere în registru de către SYSTEM)
+
+1. **SLUG:** `sintetizarea` (fișiere `...-Excel-15-Sintetizarea.html`).
+2. **INTRIGA:** „Un raport corect, complet, frumos aranjat. Îl deschizi și nu știi ce să reții. Cu cât e mai plin, cu atât spune mai puțin." (ancoră scurtă = BOMBĂ LOCKED: „O pagină impecabilă. Și niciun mesaj.")
+3. **PROBLEMELE (5):**
+   1. Rapoarte corecte pe care nimeni nu le citește până la capăt.
+   2. Decidentul întreabă „și ce-i cu asta?" după o pagină întreagă.
+   3. Fiecare reține altceva din aceeași pagină (sau nimic).
+   4. Confuzia rezumat (scurtez tot) vs sinteză (spun ce contează).
+   5. Mesajul există în date, dar nu e formulat nicăieri.
+4. **MIZA (LOCKED):** verbatim din 11-slot.
+5. **MANTRA (LOCKED):** „Nu rezumăm. Sintetizăm."
+6. **WOW (LOCKED):** verbatim din 11-slot.
+7. **MOTTO (LOCKED):** „Dintr-o privire, mesajul."
+8. **FENOMENE (5):** vezi secțiunea 7.
+9. **STEP-TITLES (18):** vezi secțiunea 6.
+
+**GRANIȚE (pentru registru, ca la C13/C16):** C14|C15 spațiu/sens · C15|C16 enunț/decizie · C15|C12(T3) formulare/descoperire. **Formula obligatorie:** „Rezumatul scurtează tot. Sinteza spune ce contează."
 
 ---
 
-## 4. ALTERNATIVE E5 (fără termenii interziși: RECALCUL/CALCUL/INTERPRETARE/DECIZIE/LIVRARE)
-
-- **A. REFORMULARE — „Mesajul se adaptează la schimbare."** Când pagina/datele se schimbă (în amonte), cursantul RE-FORMULEAZĂ headline-ul: reface actul de sinteză (SINTETIZEZ), verbal, fără să atingă cifrele. Cel mai curat: zero calcul, rămâne pe axa SINTEZĂ.
-- **B. VALIDARE MESAJ — „Mesajul rezistă la schimbare."** Verifici dacă mesajul încă ține după schimbare; dacă nu, îl refaci. *Risc:* suprapunere cu E4 CONTROL (care deja validează) — E5 ar dubla E4.
-- **C. ADAPTARE — „Mesajul se adaptează la audiență/decizie."** Același raport, mesaj reformulat pentru altă audiență/decizie. *Risc:* suprapunere cu FENOMEN 2 (mesaj dependent de audiență); mută accentul de pe „schimbarea paginii" pe „schimbarea audienței".
-
----
-
-## 5. E5 RECOMANDAT FINAL
-**E5 = REFORMULARE — „Mesajul se adaptează la schimbare."** (coincide cu preferința BRAIN; cel mai curat anti-T3).
-
-**Definiție:** recalcularea valorilor se face EXCLUSIV în amonte (model/T3); când pagina rezultată se schimbă, actul C15 e să RE-FORMULEZE mesajul — un act verbal (refacerea sintezei), nu unul numeric. Cursantul nu atinge nicio cifră în E5.
-
-**Cei 3 pași E5 rescriși:**
-- PAS 13: Pagina se schimbă (datele s-au actualizat în amonte, în model/T3) → mesajul vechi nu mai e exact.
-- PAS 14: Reformulezi headline-ul — refaci sinteza (SINTETIZEZ), NU recalculezi nimic; cifrele rămân ale modelului.
-- PAS 15: Noul mesaj rămâne o singură afirmație susținută de pagină, pe același criteriu „ce contează".
-
-**Dependență de sistem (o semnalez, nu o rezolv — nu sunt SYSTEM aici):** phase-tag-ul E5 = RECALCUL e fix în R-PHASE-1 (governance). Relabelarea E5 → REFORMULARE pentru C15 cere o decizie SYSTEM (CERERE SYSTEM): fie (i) se confirmă că E5 poate varia la T4 (cum variază E3), fie (ii) se actualizează R-PHASE-1, fie (iii) phase-tag-ul intern rămâne RECALCUL dar conținutul/eticheta afișată = REFORMULARE. Recomand (i)/(ii); fără asta, gate-ul de phase-tag ar putea respinge un E5 non-RECALCUL la generare. Decizie D-E5.
+## 4. E5 FINAL INTEGRAT
+**E5 = REFORMULARE — „Mesajul se adaptează la schimbare."** (D-E5 = DA)
+- Eticheta conceptuală și afișată pentru C15 = **REFORMULARE**. Phase-tag intern poate rămâne `RECALCUL` dacă sistemul îl cere (cale BRAIN (iii)) — deci **nicio modificare R-PHASE-1 obligatorie**; doar eticheta C15-facing diferă. SYSTEM confirmă că detectorul de phase-tag acceptă afișarea REFORMULARE (sau documentează excepția C15).
+- Recalcularea valorilor rămâne EXCLUSIV în amonte (model/T3); actul C15 e verbal (refacerea sintezei), zero atingere de cifre.
+- Cei 3 pași E5 (finali, din mandatul BRAIN):
+  - PAS 13: Pagina se schimbă (datele s-au actualizat în amonte, în model/T3) → mesajul vechi nu mai e exact.
+  - PAS 14: Reformulezi headline-ul, refaci sinteza, NU recalculezi nimic; cifrele rămân ale modelului.
+  - PAS 15: Noul mesaj rămâne o singură afirmație susținută de pagină, pe același criteriu: ce contează.
 
 ---
 
-## 6. SUBSTRAT EXCEL C15 CLARIFICAT — STRAT MESAJ (nu strat de calcul)
-
-`Date_MASTER-C15` = dashboard-ul moștenit (C13/C14) + un **strat MESAJ** distinct.
-
-**Stratul MESAJ CONȚINE:**
-- o celulă **headline** (textul de o frază, formulat de cursant);
-- o linie **so-what** (de ce contează, tot text);
-- o **legătură la pagina-dovadă** (referință la zona din dashboard care susține mesajul).
-
-**Stratul MESAJ FACE:**
-- enunță, în cuvinte, ce contează din pagină;
-- leagă mesajul de dovada vizuală existentă;
-- cel mult inserează într-o frază-șablon o valoare DEJA calculată în amonte (plasare, nu calcul).
-
-**Stratul MESAJ NU FACE (interzis explicit):**
-- NU calculează insight (fără MAX/RANK/agregări/XLOOKUP care „găsesc" răspunsul) — ar fi T3;
-- NU descoperă cauza (fără „de ce") — ar fi C12/T3;
-- NU generează recomandare / acțiune / „de hotărât" — ar fi C16;
-- NU rearanjează / recompune pagina — ar fi C14;
-- NU mută C15 în C14, C16 sau T3.
-
-**Regula de aur a substratului:** mesajul CITEȘTE din pagină, nu PRODUCE pagina; e text scris de om, nu o formulă care derivă răspunsul. Dacă o celulă din stratul MESAJ calculează un număr/clasament/driver nou, e contaminare (T3) și se respinge.
+## 5. SUBSTRAT EXCEL C15 FINAL INTEGRAT (D-EXCEL = DA)
+`Date_MASTER-C15` = dashboard moștenit (C13/C14) + **strat MESAJ**.
+- **CONȚINE:** celulă headline (text de o frază, formulat de cursant) + linie so-what (text) + legătură la pagina-dovadă.
+- **FACE:** enunță în cuvinte ce contează; leagă mesajul de dovada vizuală; cel mult inserează într-o frază-șablon o valoare DEJA calculată în amonte (plasare, nu calcul).
+- **NU FACE:** nu calculează insight · nu descoperă cauză · nu generează recomandare · nu rearanjează pagina · nu mută C15 în C14/C16/T3.
+- **Regula de aur (LOCKED):** mesajul **citește** din pagină, nu **produce** pagina.
 
 ---
 
-## 7. GARDURI C14 / C15 / C16 / T3 (re-verificate cu v1.1)
-- **C15 | T3/C12 (cea mai expusă, ținta refinementului):** ✅ E5 = REFORMULARE (verbal, recalculul e în amonte) + stratul MESAJ care NU calculează/descoperă. C15 formulează un răspuns existent, nu îl naște.
-- **C15 | C14:** ✅ stratul MESAJ e text, nu layout; nu rearanjează pagina (verificarea 7).
-- **C15 | C16:** ✅ mesajul e indicativ (headline/so-what), fără „de hotărât/recomand/pachet"; predarea (PAS 18) e handoff, nu încadrare de decizie.
-- **SINTEZĂ ≠ REZUMAT:** ✅ neatins (formula + FENOMEN 1 + E2/E3).
+## 6. STRUCTURA 6 ETAPE / 18 PAȘI — FINALIZATĂ CONCEPTUAL
+Phase-tags: E1 INPUT · E2 AI · E3 SINTEZĂ · E4 CONTROL · **E5 REFORMULARE** (intern poate fi RECALCUL) · E6 PAYOFF.
+
+- **E1 INPUT — „Pagina mută":** PAS 01 primești pagina coerentă de la C14 · PAS 02 testul celor 3 secunde (ce reține un decident? nimic încă) · PAS 03 de ce o pagină corectă poate fi mută.
+- **E2 AI — „Rezumatul automat":** PAS 04 AI propune un rezumat draft · PAS 05 formula „Rezumatul scurtează tot. Sinteza spune ce contează." · PAS 06 de ce rezumatul nu e încă mesajul.
+- **E3 SINTEZĂ — „Mesajul esențial":** PAS 07 care e singura afirmație pe care pagina o dovedește? · PAS 08 formulezi headline-ul (so-what) într-o frază · PAS 09 mesajul pentru ACEASTĂ decizie și audiență.
+- **E4 CONTROL — „Testul «și ce-i cu asta?»":** PAS 10 filtrul „fără asta, decidentul hotărăște la fel?" · PAS 11 indicativ, nu decizional (≠C16) · PAS 12 formulat, nu descoperit (nicio cifră/cauză nouă, ≠T3).
+- **E5 REFORMULARE — „Mesajul se adaptează la schimbare":** PAS 13 / 14 / 15 (vezi secțiunea 4).
+- **E6 PAYOFF — „O pagină a devenit un mesaj":** PAS 16 o pagină coerentă a devenit un mesaj care contează · PAS 17 mesajul + pagina-dovadă, împreună · PAS 18 predare către C16 (care îl va încadra pentru decizie).
 
 ---
 
-## 8. DECIZII FINALE CERUTE DE LA BRAIN (înainte de mandatul de generare)
-- **D-E5 (nouă):** confirmi E5 = REFORMULARE „Mesajul se adaptează la schimbare" + alegi calea pentru phase-tag (i/ii/iii din secțiunea 5)? Calea aleasă declanșează o CERERE SYSTEM (R-PHASE-1).
-- **D-EXCEL (nouă):** confirmi definiția stratului MESAJ din secțiunea 6 (text formulat de cursant, citește nu calculează)?
-- **Reportate din v1.0** (rămân de confirmat la freeze-ul celor 9 elemente, dar aprobate în principiu): SLUG `sintetizarea`, INTRIGA + PROBLEMELE, cele 18 STEP-TITLES (cu E5 rescris), 5 FENOMENE, 2 PROMPTURI, phase-tag E3=SINTEZĂ, și ordinea (C15 depinde de C14 generat — C14 e raportat BLOCAT la B1).
-- La D-E5 + D-EXCEL confirmate, urmează: BRAIN cere freeze-ul celor 9 elemente → SYSTEM le înregistrează (registru + IDENTITATE_TEHNICA C15 + gate dict `'15'` + eventual tier_guard_t4 + phase-tag) → abia apoi mandat de generare.
+## 7. FENOMENE / VERIFICĂRI / PROMPTURI AI — FINALIZATE CONCEPTUAL
+
+**5 FENOMENE:** 1) rezumat vs sinteză (același raport, două ieșiri) · 2) mesaj dependent de audiență/decizie · 3) testul „și ce-i cu asta?" (mută decizia vs zgomot) · 4) headline-ul ancorează citirea · 5) mesaj susținut de pagină vs afirmație nesusținută.
+
+**8 VERIFICĂRI:** 1) o singură propoziție · 2) indicativ, nu decizional (≠C16) · 3) nicio cifră/cauză nouă (≠T3) · 4) trece „fără asta, decidentul hotărăște la fel?" · 5) sinteză, nu rezumat · 6) pagina îl dovedește · 7) nu rearanjează pagina (≠C14) · 8) verb SINTETIZEZ.
+
+**2 PROMPTURI AI:**
+1. DRAFT (E2): „Pe baza acestui raport, propune 3 titluri candidate de o singură frază, care spun ce contează pentru [decizia/audiența]. Nu calcula cifre noi, nu explica de ce — formulează DIN ce e deja în raport." (AI draftuiește; omul alege/ascute).
+2. TEST (E4): „Pentru titlul ales, verifică: (a) o singură afirmație? (b) indicativ, nu spune ce să faci? (c) nu introduce cifră/cauză absentă din raport? (d) trece «fără asta, decidentul hotărăște la fel?»" (AI critică; omul decide).
 
 ---
 
-## 9. CE NU AM FĂCUT
+## 8. CERERI SYSTEM NECESARE ÎNAINTE DE GENERARE
+(toate sunt scrieri în fișiere comune/sistem — interzise mie ca C15; revin Chat-ului SYSTEM, DUPĂ acest freeze conceptual)
+1. **Înregistrare SPEC C15 în registru** `_system/arhiva/SISTEM_TRAINITY-versiuni.md` (PARTEA VI): `## SPEC C15 - SINTETIZAREA` trece de la `[Status: NEGENERAT]` la `[Status: INGHETAT]` + transcrierea celor 9 elemente de mai sus + GRANIȚE + formula. (Acum legitim — cele 9 elemente există; înainte am ținut corect NEGENERAT fiindcă lipseau.)
+2. **IDENTITATE_TEHNICA C15** în `_system/referinte/IDENTITATE-TEHNICA.md` (L142): cod, treapta_nr (T4), nume_slug, hero caps, footer/topbar, localStorage, next_cod (C16), next_nume_title (LIVRAREA), pe șablonul C13/C16.
+3. **gate_v20 dict** `'15'` în `load_identitate` (B2) — intrare nouă (ideal: parsare din IDENTITATE-TEHNICA.md în loc de dict hardcodat).
+4. **Phase-tag E5** (cale iii): confirmare că detectorul acceptă eticheta C15 REFORMULARE peste phase-tag-ul intern RECALCUL (sau documentarea excepției C15).
+5. **(opțional/viitor) tier_guard_t4** — detector de contaminare T4 (descopăr/de ce→T3; așez/layout→C14; de hotărât/predau→C16; rezum-ca-identitate→rezumat).
+
+---
+
+## 9. DECIZII RĂMASE PENTRU BRAIN (minime)
+- **Ordine de generare (singura practică):** C15 consumă pagina produsă de C14. C14 e raportat BLOCAT la B1. Deci generarea efectivă C15 ar trebui să aștepte C14 sau să folosească o pagină compusă stand-in. DE CONFIRMAT înainte de mandatul de generare (NU blochează freeze-ul de față).
+- În rest: SLUG, INTRIGA, PROBLEMELE, FENOMENE, STEP-TITLES, E5, substrat — toate confirmate/consolidate. Nicio altă decizie deschisă.
+
+---
+
+## 10. CE NU AM FĂCUT
 - NU am generat artefacte, NU am creat `c15/**` (HTML/Excel/FILM/imagini).
-- NU am modificat fișiere sistem, governance, alte construcții; nu am intrat în alt `_brain/cYY`. Dependența de R-PHASE-1 (phase-tag E5) e MARCATĂ ca CERERE SYSTEM, nu executată.
-- NU am redeschis / schimbat SPEC-ul 11-slot LOCKED.
-- NU am rescris tot blueprintul — doar deltele v1.1 (E5 + substrat Excel); restul v1.0 rămâne (secțiunea 2).
-- NU am împins C15 spre C14 / C16 / T3 — dimpotrivă, refinementul întărește exact aceste garduri.
-- Raportul rămâne pregătire conceptuală, nu execuție. Singurul fișier scris: `_brain/c15/CLAUDE-TO-BRAIN.md`.
+- NU am modificat fișiere sistem, governance, alte construcții; nu am intrat în alt `_brain/cYY`. Cele 5 CERERI SYSTEM sunt MARCATE, nu executate (le execută Chat SYSTEM).
+- NU am redeschis / schimbat SPEC-ul 11-slot LOCKED (preluat verbatim) și nici E5 (REFORMULARE) sau substratul (strat MESAJ).
+- NU am făcut generarea — acesta e freeze conceptual al SPEC-ului de generare; **pasul următor e înregistrarea SYSTEM, nu generarea directă**.
+- Singurul fișier scris: `_brain/c15/CLAUDE-TO-BRAIN.md`.
 
-La D-E5 + D-EXCEL confirmate, blueprintul C15 v1.1 e gata pentru pasul de freeze al celor 9 elemente. Aștept.
+Cele 9 elemente SPEC de generare C15 = FREEZE-READY. La comanda ta, se poate emite mandatul SYSTEM de înregistrare (registru + IDENTITATE_TEHNICA + gate dict). Generarea efectivă vine după aceea. Aștept.
