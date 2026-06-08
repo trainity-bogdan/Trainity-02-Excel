@@ -315,7 +315,7 @@ Date_MASTER-initial  →  C01  →  C02  →  C03  →  C04  →  C05  →  C06 
 1. **C06-C08 generate** sub schema V38+ (canonic+editat automat la prima rulare)
 2. T2 încheiat complet
 3. **T3 ANALIZA** începe cu C09 — primul SPEC cu axă DAX
-4. La C13 (T4) se introduce un nou tip de livrabil: **dashboard XLSX** (Power Pivot + Pivot Tables vizibile)
+4. La C13 (T4) se introduce **obiectul vizual onest** (chart / PivotChart / vizual verificat contra cifrei brute). *Clarificare (decizie LOCKED C13): workbook-ul Excel la C13 NU este dashboard final, ci suportul pentru construirea și verificarea obiectului vizual. Compunerea dashboard-ului / paginii începe la C14, care primește obiectele vizuale oneste de la C13 și le organizează spațial. C13 NU este dashboard.*
 5. La C20 (semnătura pack-ului) avem un livrabil bonus: **SISTEMUL COMPLET** funcțional Refresh All
 
 **La C20 pack-ul Pack 02 Excel e gata.** Total: ~140 livrabile (20 × 7 artefacte) + sistemul de generare reutilizabil.

@@ -128,7 +128,7 @@ Datoriile T4 din Bible §T4 sunt ÎNCHISE conceptual aici. Rămân ca obligații
 ## STARE DE IMPLEMENTARE
 - Arhitectură T4 = ÎNGHEȚATĂ cap-coadă (nomenclatură V70 + Bible §T4 + acest document).
 - C13-C16 = NESTAR. SPEC 11-slot per construcție + blueprint dedicat se creează la SEED-ul fiecăreia, respectând acest SPEC conceptual și cele 5 obligații de autorare.
-- Livrabil per construcție (la generare): Date_MASTER-CNN (la C13 se introduce dashboard XLSX: Power Pivot + Pivot Tables vizibile) + 4 HTML + FILM + hero + 6 exec-stage.
+- Livrabil per construcție (la generare): Date_MASTER-CNN + 4 HTML + FILM + hero + 6 exec-stage. **Clarificare C13 (decizie LOCKED):** la C13 livrabilul vizual este **obiectul vizual onest** (chart / PivotChart / vizual verificat contra cifrei brute), NU un dashboard. Workbook-ul Excel (Power Pivot / Pivot Tables) la C13 e DOAR suportul pentru construirea și verificarea obiectului vizual, nu dashboard-ul final. Compunerea dashboard-ului / paginii / organizarea spațială începe la C14, care primește obiecte vizuale oneste de la C13 și le așază într-o compoziție. C13 NU este dashboard, layout, pagină sau storytelling.
 
 ---
 
