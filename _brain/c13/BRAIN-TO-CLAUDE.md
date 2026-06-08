@@ -1,91 +1,72 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-BRAIN_C13_GENERATION_IN_PROGRESS_APPROVED_CONTINUE
+BRAIN_C13_AUDIT_HOLD_PENDING_COMMIT_SHA
 
 ## MANDAT-ID
-C13-CONTINUE-GENERATION-FULL-SET-012
+C13-FINAL-REPORT-COMMIT-SHA-013
 
 ## RAPORT CLAUDE ANALIZAT
 BRAIN a analizat raportul:
 
-`CLAUDE_C13_GENERATION_IN_PROGRESS`
+`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
 
 din:
 
 `_brain/c13/CLAUDE-TO-BRAIN.md`
 
 ## VERDICT BRAIN
-PASS INTERMEDIAR.
+HOLD TEHNIC, NU FAIL CONCEPTUAL.
 
-Generarea C13 este pe direcția corectă.
+C13 pare generat corect, iar raportul declară:
+- B1 PASS
+- B2 PASS pe 5/5 livrabile
+- B3 audit_sync OK cu 1 XX pe assets
+- C13 păstrat ca obiect vizual onest, nu dashboard
+- Date_MASTER aliniat la gate: `Date_MASTER-C13.xlsx`
+- hero aliniat la CUVÂNT LOCKED: `VIZUAL`
 
-Nu există blocaj SYSTEM.
-Nu există blocaj B1.
-Nu există blocaj B2.
+Dar raportul final are o lipsă critică:
 
-Primele 2 artefacte raportate ca generate și validate sunt acceptate ca progres legitim:
-- HTML-Studiu C13
-- Date_MASTER C13
+`## 9. COMMIT SHA`
 
-## DECIZII BRAIN CONFIRMATE
-1. Numele Date_MASTER aplicat conform gate-ului este acceptat:
-   - `Date_MASTER-C13.xlsx`
-2. Hero identity aplicat conform CUVÂNT LOCKED este acceptat:
-   - `VIZUAL`
-3. C13 rămâne obiect vizual onest, nu dashboard.
-4. Workbook-ul C13 rămâne suport pentru construire și verificare, nu dashboard.
+conține doar placeholder:
 
-## OBSERVAȚIE BRAIN
-Raportul intermediar nu trebuie tratat ca final.
+`(completat la commit, mai jos)`
 
-Statusul final acceptabil rămâne:
+Nu pot da PASS final de audit fără commit SHA real.
 
-`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
+## DECIZIE BRAIN
+Nu se reface conținutul C13.
+Nu se modifică artefactele C13 decât dacă descoperi că nu sunt comise sau că validarea finală nu corespunde raportului.
 
-Raportul final trebuie să includă commit SHA complet, nu placeholder.
+Se cere doar completarea/verificarea raportului final cu commit SHA real.
 
 ## MANDAT CĂTRE CLAUDE C13
-Continuă generarea până la setul complet C13.
+La următorul `sync`:
 
-Finalizează obligatoriu:
-1. `HTML-Editor-Studiu-Excel-13-Vizualizare.html`
-2. `HTML-Video-Excel-13-Vizualizare.html`
-3. `HTML-Editor-Video-Excel-13-Vizualizare.html`
-4. `FILM-Excel-13-Vizualizare.docx`
-5. `c13/assets/`, dacă patternul construcțiilor anterioare o cere
+1. Verifică dacă artefactele C13 sunt comise pe main.
+2. Verifică SHA-ul commitului care conține generarea completă C13.
+3. Actualizează `_brain/c13/CLAUDE-TO-BRAIN.md`, secțiunea `## 9. COMMIT SHA`, cu SHA real.
+4. Dacă există mai multe commituri relevante, listează-le clar:
+   - commit artefacte C13
+   - commit raport final C13
+5. Nu modifica artefactele C13 dacă nu este necesar.
+6. Dacă artefactele NU sunt comise, comite-le doar după ce confirmi din nou B1, B2 și B3 PASS.
+7. Dacă există blocaj, raportează status `CLAUDE_C13_FINAL_REPORT_BLOCKED`.
 
-Păstrează artefactele deja validate:
-- HTML-Studiu C13
-- Date_MASTER-C13.xlsx
-- generatoarele necesare din `c13/**`
+## STATUS AȘTEPTAT
+Dacă totul este comis și raportul este completat:
 
-## REGULĂ CRITICĂ
-C13 NU devine dashboard.
-C13 NU devine layout final.
-C13 NU devine pagină finală.
-C13 NU formulează mesaj C15.
-C13 NU livrează raport C16.
+`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT_WITH_COMMIT_SHA`
 
-C13 = obiect vizual onest.
-C14 = compunerea paginii / dashboard-ului.
+Dacă există blocaj:
 
-## VALIDĂRI OBLIGATORII LA FINAL
-Rulează validările disponibile pentru setul complet:
-- B1 `pre_generation_check.py 13`
-- B2 `gate_v20.py 13 c13 c01`
-- existență fizică livrabile C13
-- sincronizare Studiu / Editor-Studiu
-- sincronizare Video / Editor-Video
-- 18/18 step-titles locked
-- zero dashboard final / layout final / pagină finală
-- zero modificări în afara scope-ului
-
-Dacă apare blocaj nou de sistem, NU modifica `_system/**` din chatul C13. Raportează exact blocajul.
+`CLAUDE_C13_FINAL_REPORT_BLOCKED`
 
 ## FIȘIERE PERMISE
-- `c13/**`
 - `_brain/c13/CLAUDE-TO-BRAIN.md`
+- `c13/**` doar dacă artefactele nu sunt comise sau trebuie regenerate pentru validare
 
 ## FIȘIERE INTERZISE
 - `_system/**`
@@ -93,28 +74,5 @@ Dacă apare blocaj nou de sistem, NU modifica `_system/**` din chatul C13. Rapor
 - alte construcții
 - alte foldere `_brain/cXX`
 
-## RAPORT FINAL OBLIGATORIU
-Scrie raportul final în:
-
-`_brain/c13/CLAUDE-TO-BRAIN.md`
-
-Raportul trebuie să conțină:
-1. STATUS
-2. livrabile generate
-3. fișiere modificate
-4. validări rulate
-5. rezultate validări
-6. cum ai păstrat C13 ca obiect vizual onest, nu dashboard
-7. decizia aplicată pentru Date_MASTER
-8. decizia aplicată pentru hero `VIZUAL`
-9. commit SHA real
-10. verdict final
-
-## STATUS AȘTEPTAT
-`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
-
-Dacă apare blocaj:
-`CLAUDE_C13_GENERATION_BLOCKED`
-
 ## CERERE DIRECTĂ
-Continuă generarea C13 până la setul complet și raportează doar după validarea finală.
+Completează raportul final C13 cu commit SHA real. Fără commit SHA real nu există PASS final BRAIN.
