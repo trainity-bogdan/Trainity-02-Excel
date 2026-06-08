@@ -1,115 +1,107 @@
-# CLAUDE → BRAIN · C13 VIZUALIZAREA · SPEC 11 SLOT
+# CLAUDE → BRAIN · C13 VIZUALIZAREA · BLUEPRINT (după freeze SPEC)
 
 ## 1. STATUS
-CLAUDE_C13_SPEC_11_SLOT_FULL_READY
+CLAUDE_C13_BLUEPRINT_READY_AFTER_SPEC_FREEZE
 
-> Răspuns la mandat **C13-SPEC-11-SLOT-002**. SPEC exclusiv conceptual, zero implementare. Toate cele 4 DECIZII BRAIN aplicate, cele 6 RISCURI evitate (auto-audit la secțiunea 13). Scris exclusiv în `_brain/c13/CLAUDE-TO-BRAIN.md`. Sistemul (doc 13 / 06-MAP) NEATINS; o tensiune marcată ca CERERE SYSTEM (secțiunea 12). Versiunile anterioare (SEED `6284e0b`, raport conceptual `3fac372`) rămân în istoric.
+> Răspuns la mandat **C13-FREEZE-SPEC-AND-BLUEPRINT-004**. **SPEC 11-slot C13 a fost înghețat de ARHITECT** („confirm freeze SPEC C13"). Acest raport marchează freeze-ul și livrează blueprint-ul conceptual C13. Exclusiv conceptual, zero implementare. Scope: doar `_brain/c13/CLAUDE-TO-BRAIN.md`. Sistemul (doc 13 / 06-MAP) NEATINS; tensiunea dashboard formalizată ca CERERE SYSTEM (secțiunea 6), de tratat din Chat Andrei SYSTEM.
 
-## 2. SLUG
-**`Vizualizare`** → fișiere viitoare de tip `HTML-Studiu-Excel-13-Vizualizare.html`, `Date_MASTER-C13-Vizualizare.xlsx`, `FILM-13-Vizualizare`.
-Alternativă pe tiparul CUVÂNT (ca C09 RELAȚII → „Relatii"): `Vizual`. Recomand `Vizualizare` (numele construcției, fără ambiguitate în fișier). BRAIN alege forma de lock.
+## 2. SPEC LOCKED (recapitulativ)
+- **SLUG:** `Vizualizare`
+- **INTRIGA:** „Cifra e corectă. Graficul minte."
+- **MIZA:** „O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
+- **MANTRA:** „Nu desenez frumos. Desenez adevărat." · **AHA:** „Forma greșită minte cu cifra corectă."
+- **WOW:** „Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
+- **MOTTO:** „Forma nu se nimerește. Se alege."
+- **AXĂ:** ONESTITATEA FORMEI. **PILON T4:** T4 consumă răspunsul produs de T3, nu îl naște.
+- **6 FENOMENE LOCKED** (deformare → regulă): axa care exagerează → zero/abatere declarată · tip nepotrivit → urmează natura rezultatului · scala care inventează → o scală liniară declarată · codarea care sugerează → o dimensiune codată coerent · agregarea care ascunde → arăți variația · etichetă/unitate/context lipsă → fiecare vizual le poartă.
+- **18 STEP-TITLES LOCKED** (6 etape × 3), recapitulate în blueprint la secțiunea 3.
+- **GRANIȚE LOCKED:** C12 = interpretare · C13 = forma onestă a unui rezultat deja produs · C14 = organizare spațială · C15 = sinteza mesajului · C16 = livrare decision-ready.
+- **DECIZIE LOCKED:** C13 = obiect vizual onest. NU dashboard, NU layout, NU pagină, NU storytelling.
 
-## 3. INTRIGA
-**„Cifra e corectă. Graficul minte."**
+## 3. BLUEPRINT PE 6 ETAPE × 3 PAȘI
 
-Dezvoltare (explicație, nu headline): un grafic pare obiectiv, dar tu ai ales fiecare lucru pe care îl vede cineva. Forma nu e o oglindă neutră a cifrei, e o serie de alegeri. Alegerile greșite mint cu cifra corectă.
+### ETAPA 1 · REALITATE
+Pași: (1) Răspunsul corect, dar invizibil · (2) Nimeni nu decide privind un model · (3) Aceeași cifră, încă fără formă.
+- **Scop:** cursantul pleacă de la răspunsul produs de T3 și constată că e corect, dar mut: nu se poate decide pe el.
+- **Transformare:** răspuns analitic (în model) → conștientizarea că lipsește forma vizibilă.
+- **Rezultat:** un rezultat T3 identificat ca „de făcut vizibil", încă fără formă.
+- **Risc de drift:** re-analiză (T3) sau săritul direct la grafic fără a vedea că forma e o alegere.
+- **Control de graniță (C12|C13):** răspunsul se preia ca dat; NU se interpretează, NU se explică „de ce".
 
-## 4. PROBLEMELE (operaționale)
-1. Aceeași cifră produce concluzii diferite prin forme diferite.
-2. Graficul pare obiectiv, dar forma e aleasă de autor.
-3. Ochiul crede forma înainte să verifice cifra.
-4. AI generează graficul, dar nu garantează onestitatea lui.
-5. Decidentul crede că vede datele, dar vede o formă vizuală prost aleasă.
+### ETAPA 2 · INVESTIGAȚIE
+Pași: (4) O cifră, mai multe forme posibile · (5) Promptul 1: ce formă cere rezultatul · (6) Aceeași cifră, două grafice, două concluzii.
+- **Scop:** descoperă că forma e o alegere a autorului, nu o proprietate a cifrei; vede prima minciună de formă.
+- **Transformare:** o cifră → spectrul formelor posibile + dovada că forma schimbă concluzia (fenomenul 1, axa).
+- **Rezultat:** conștientizarea operațională că aceeași cifră poate minți prin formă.
+- **Risc de drift:** alunecare în „grafic frumos" (estetică) sau în moralizare despre minciună fără competență.
+- **Control de graniță:** rămâne pe forma-ca-alegere, nu pe design decorativ. Promptul 1 = interogare (AI propune, omul judecă), nu execuție (R-PED-2/R-PED-3).
 
-## 5. MIZA (business)
-**„O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."**
-Vizualul neonest nu produce îndoială, produce certitudine falsă, atribuită „datelor", nu autorului. Când minciuna de formă iese la iveală, se pierde încrederea în tot raportul.
+### ETAPA 3 · TRANSFORMARE
+Pași: (7) Tipul de grafic urmează natura rezultatului · (8) Promptul 2: generezi vizualul, corectezi axa și scala · (9) Scoți codarea care sugerează fals.
+- **Scop:** construiește forma onestă: tip potrivit, axă/scală corecte, codare curată (fenomenele 2-4 ca reguli).
+- **Transformare:** rezultat fără formă → obiect vizual onest.
+- **Rezultat:** un vizual care reprezintă rezultatul fără să adauge și fără să ascundă.
+- **Risc de drift:** dashboard/pagină (C14); adăugarea unui al doilea vizual sau a unei compoziții.
+- **Control de graniță (C13|C14):** un SINGUR obiect, nu pagina. Promptul 2 = output AI corectat de om (E3 AI-assisted, R-PED-1).
 
-## 6. MANTRA
-**„Nu desenez frumos. Desenez adevărat."**
+### ETAPA 4 · VERIFICARE
+Pași: (10) Vizualul față de cifra brută: aceeași concluzie? · (11) Testul celui de-al doilea ochi · (12) Marchezi forma care spune mai mult decât cifra.
+- **Scop:** verifică onestitatea formei prin confruntare cu cifra (formula de validare).
+- **Transformare:** obiect vizual → obiect vizual VERIFICAT onest (sau marcat neonest).
+- **Rezultat:** vizualul trece proba „citit singur = aceeași concluzie ca cifra brută".
+- **Risc de drift:** E4 construiește în loc să verifice (R-MET-1); sau interpretează rezultatul (C12).
+- **Control de graniță:** E4 confruntă/verifică/marchează, nu construiește. Zero „de ce" (C12).
 
-**AHA (aprobat):** „Forma greșită minte cu cifra corectă."
+### ETAPA 5 · STABILIZARE
+Pași: (13) Cele șase reguli de onestitate a formei · (14) Eticheta, unitatea, contextul: nimic de ghicit · (15) Un obiect vizual onest, repetabil.
+- **Scop:** transformă onestitatea dintr-un act punctual într-un standard repetabil (cele 6 fenomene = reguli).
+- **Transformare:** vizual verificat → reguli de onestitate fixate ca standard + etichetare completă (fenomenul 6 închis).
+- **Rezultat:** un obiect vizual onest, repetabil, complet etichetat.
+- **Risc de drift:** lecție de design grafic (tehnici/estetică) în loc de reguli de onestitate.
+- **Control de graniță:** regulile = onestitate, nu estetică. Rămâne obiect, nu pagină.
 
-## 7. WOW
-**„Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."**
+### ETAPA 6 · CONFIRMARE
+Pași: (16) Forma onestă repară percepția · (17) Devii garantul a ceea ce vede altcineva · (18) Predai către C14: obiectul, gata de așezat în pagină.
+- **Scop:** payoff (WOW: forma onestă repară percepția) + transformare de identitate (garantul onestității vizuale) + handoff la C14.
+- **Transformare:** obiect vizual onest → predat către C14; cursantul devine garantul a ce vede altcineva.
+- **Rezultat:** un obiect vizual onest predat; treapta C13 închisă, C14 deschisă.
+- **Risc de drift:** compunerea paginii (C14) sau formularea mesajului (C15) la handoff.
+- **Control de graniță (C13|C14, C13|C15):** predă obiectul, NU construiește pagina, NU formulează mesajul.
 
-## 8. MOTTO
-**„Forma nu se nimerește. Se alege."**
-(diferit de mantra; orientat spre controlul formei: o formă onestă e o alegere deliberată, nu un default acceptat de la grafic sau de la AI.)
+## 4. (inclus în secțiunea 3) Scop / transformare / rezultat / risc / control de graniță pentru fiecare etapă
+Toate cele 6 etape de mai sus conțin cele 5 câmpuri cerute. Sinteza riscurilor cap-coadă: jos = C12 (interpretare), sus = C14 (pagină/dashboard) și C15 (mesaj); lateral = estetică/moralizare. Blueprint-ul ține C13 strict pe obiectul vizual onest.
 
-## 9. FENOMENE (6 perechi: deformare vizuală → corecție onestă ca regulă de lucru)
-1. **Axa care exagerează** → regulă: axa pleacă de la zero, sau abaterea e declarată explicit. (axa trunchiată umflă o diferență minusculă)
-2. **Tipul de grafic nepotrivit** → regulă: tipul urmează natura rezultatului (categorii = bare, evoluție = linie, parte din tot = stacked/100%, corelație = scatter).
-3. **Scala care inventează relații** → regulă: o singură scală liniară, declarată; fără axă dublă, fără log ascuns.
-4. **Codarea care sugerează fals** (3D, gradient, arie) → regulă: o singură dimensiune codată coerent; fără efecte care adaugă tendințe inexistente.
-5. **Agregarea care ascunde variația** → regulă: arăți distribuția/variația, nu doar media.
-6. **Eticheta / unitatea / contextul lipsă** → regulă: fiecare vizual poartă unitate, etichetă și context; nimic lăsat de ghicit.
+## 5. HANDOFF CLAR CĂTRE C14
+C13 predă un **obiect vizual onest**: verificat (citit singur = aceeași concluzie ca cifra), repetabil (cele 6 reguli), complet etichetat. C14 primește mai multe astfel de obiecte și le organizează SPAȚIAL într-o pagină coerentă.
+- Formula de handoff: **„C13 face obiectul adevărat. C14 îl așază în pagină."**
+- C14 NU re-verifică onestitatea fiecărui obiect (presupune obiecte oneste de la C13).
+- C13 NU anticipează layout-ul, ierarhia de pagină sau dashboard-ul (acelea sunt C14).
+- Predarea = un obiect, nu o pagină; un atom, nu un ansamblu.
 
-Fenomenele NU sunt o listă de greșeli, sunt cele 6 reguli de construcție ale unei forme oneste. Minciuna e hook-ul; competența e alegerea formei oneste.
+## 6. CERERE SYSTEM (tensiunea dashboard)
+O consider necesară. Tensiunea e reală și mandatul confirmă că se tratează din Chat Andrei SYSTEM, nu din C13.
 
-## 10. STEP-TITLES (18 pași · 6 etape × 3)
-Fără cifre business statice, fără dashboard, fără pagină finală. Cele 14 beats redistribuite în 18.
+```
+CERERE SYSTEM
+Construcție: C13
+Fișiere comune vizate: _system/13-ARHITECTURA-CONCEPTUALA-T4.md (STARE DE IMPLEMENTARE),
+                       _system/06-MAP-CONSTRUCTII-T1-T5.md (nota „dashboard XLSX la C13")
+Motiv: aceste note contrazic DECIZIA LOCKED (C13 = obiect vizual onest; dashboard = C14).
+Impact: la implementare, riscă să producă un dashboard, rupând axa ONESTITATEA FORMEI.
+Propunere: livrabilul tehnic C13 = obiect vizual onest (chart / PivotChart corect);
+           „dashboard XLSX" = livrabil de TREAPTĂ, asamblat de la C14 încolo.
+Stare: NEEXECUTAT din C13 (în afara scope-ului). De preluat de Chat Andrei SYSTEM
+       înainte de implementarea tehnică a C13.
+```
 
-**ETAPA 1 · REALITATE**
-1. Răspunsul corect, dar invizibil
-2. Nimeni nu decide privind un model
-3. Aceeași cifră, încă fără formă
+Până la decizia SYSTEM, blueprint-ul C13 construiește strict obiect vizual onest, nu dashboard.
 
-**ETAPA 2 · INVESTIGAȚIE**
-4. O cifră, mai multe forme posibile
-5. Promptul 1: ce formă cere rezultatul (AI propune, tu judeci)
-6. Aceeași cifră, două grafice, două concluzii
+## 7. VERDICT DE AUTO-AUDIT
+- **Consistență cu SPEC LOCKED:** blueprint-ul nu modifică niciun slot înghețat; doar îl operaționalizează pe etape. Cele 18 step-titles LOCKED = neatinse.
+- **Granițe:** fiecare etapă are control de graniță explicit (C12 jos, C14/C15 sus, estetică/moralizare lateral). Zero „de ce" (C12), zero pagină (C14), zero mesaj (C15).
+- **Schelet (S4):** 6 etape × 3 = 18 pași. R-PED-2 (Promptul 1 în E2, Promptul 2 în E3) respectat. R-PED-1 (E3 AI-assisted) respectat. R-MET-1 (E4 verifică, nu construiește) respectat.
+- **Riscurile celor 6 fenomene** sunt mapate ca riscuri de drift pe etape (estetică, dashboard, C12, design grafic).
+- **Scope:** doar `_brain/c13/CLAUDE-TO-BRAIN.md` scris. Sistem neatins. Tensiunea dashboard izolată ca CERERE SYSTEM.
+- **Zero implementare:** niciun HTML/Excel/FILM/imagine; blueprint pur conceptual.
 
-**ETAPA 3 · TRANSFORMARE**
-7. Tipul de grafic urmează natura rezultatului
-8. Promptul 2: generezi vizualul, corectezi axa și scala (AI-assisted)
-9. Scoți codarea care sugerează fals
-
-**ETAPA 4 · VERIFICARE**
-10. Vizualul față de cifra brută: aceeași concluzie?
-11. Testul celui de-al doilea ochi
-12. Marchezi forma care spune mai mult decât cifra
-
-**ETAPA 5 · STABILIZARE**
-13. Cele șase reguli de onestitate a formei
-14. Eticheta, unitatea, contextul: nimic de ghicit
-15. Un obiect vizual onest, repetabil
-
-**ETAPA 6 · CONFIRMARE**
-16. Forma onestă repară percepția
-17. Devii garantul a ceea ce vede altcineva
-18. Predai către C14: obiectul, gata de așezat în pagină
-
-*Note de schelet:* Promptul 1 = etapa 2 (pas 5), Promptul 2 = etapa 3 (pas 8), conform R-PED-2. Etapa 4 confruntă/verifică/marchează, nu construiește (R-MET-1). Handoff la pas 18 = predare, nu compunere de pagină (pagina e C14).
-
-## 11. GRANIȚE C13 / C12 / C14 / C15 / C16
-- **C13 | C12:** forma onestă (comunicativ) vs înțelesul / cauza (analitic, „de ce"). C12 generează sensul; C13 dă formă unui sens deja produs. C13 NU explică, NU interpretează.
-- **C13 | C14:** un obiect vizual onest vs organizarea SPAȚIALĂ a obiectelor într-o pagină. C13 = atomul; C14 = pagina / dashboard-ul. C13 NU compune pagina.
-- **C13 | C15:** forma vizuală vs mesajul verbal esențial. C13 = cum arăt adevărat; C15 = ce spune, pe scurt. C13 NU formulează mesajul.
-- **C13 | C16:** obiect vizual vs raport decision-ready predat. C13 = un element; C16 = pachetul final pentru decizie. C13 NU livrează.
-
-## 12. TENSIUNI / CERERI SYSTEM
-**TENSIUNE 1 (per DECIZIE 2 BRAIN):** doc 13 (STARE DE IMPLEMENTARE) și `06-MAP` (nota „la C13 se introduce dashboard XLSX, Power Pivot + Pivot Tables") contrazic delimitarea aprobată (C13 = obiect vizual onest; dashboard = C14). Conform DECIZIE 2, NU am modificat sistemul. Pentru SPEC-ul C13 lucrez cu: **C13 = obiect vizual onest · C14 = compunerea paginii / dashboard-ului.**
-
-**CERERE SYSTEM (propusă, neexecutată, în afara scope-ului C13):**
-- Construcție: C13.
-- Fișiere comune vizate: `_system/13-ARHITECTURA-CONCEPTUALA-T4.md` (STARE DE IMPLEMENTARE), `_system/06-MAP-CONSTRUCTII-T1-T5.md`.
-- Motiv: nota „dashboard XLSX la C13" contaminează livrabilul C13 cu pagina (C14+).
-- Impact: fără rafinare, implementarea C13 riscă să producă un dashboard, rupând axa ONESTITATEA FORMEI.
-- Propunere: livrabilul tehnic C13 = obiect vizual onest (chart / PivotChart corect); „dashboard XLSX" = livrabil de TREAPTĂ, asamblat de la C14 încolo.
-- De executat din Chat Andrei SYSTEM la momentul implementării C13, nu acum.
-
-## 13. VERDICT DE AUTO-AUDIT
-Cele 4 DECIZII BRAIN: **aplicate.** (1) 18 pași 6×3, cele 14 beats redistribuite fără pierdere. (2) C13 = obiect, nu dashboard; tensiunea marcată CERERE SYSTEM, sistemul neatins. (3) Intriga = „Cifra e corectă. Graficul minte." (4) 6 fenomene ca perechi deformare→regulă.
-
-Cele 6 RISCURI: **evitate.**
-1. Lecție de design grafic: evitat (competența = alegerea formei oneste, nu tehnici de design).
-2. Dashboard: evitat (C13 = obiect; dashboard delimitat la C14; tensiune marcată).
-3. C12 prin „de ce": evitat (zero explicații cauzale; granița C13|C12 explicită).
-4. C15 prin formularea mesajului: evitat (C13 nu formulează mesaj; granița C13|C15 explicită).
-5. Moralizare despre „minciună": evitat (minciuna = hook în INTRIGA/AHA; competența = cele 6 reguli de formă).
-6. Fenomene = listă de greșeli: evitat (fiecare fenomen = deformare + regulă de lucru).
-
-Schelet (S4): 6 etape × 3 = 18 step-titles. R-PED-2 (2 prompturi, E2+E3) respectat. R-MET-1 (E4 verifică, nu construiește) respectat. Zero cifre business statice. Identitate (S5) + nomenclatură LOCKED neatinse.
-
-**VERDICT: SPEC 11-slot C13 COMPLET și consistent cu nomenclatura LOCKED + doc 13 + deciziile BRAIN. Gata de îngheț la confirmarea BRAIN.** O singură tensiune deschisă (dashboard în doc 13/06-MAP), izolată ca CERERE SYSTEM, nerezolvată în scope-ul C13. Aștept verdict BRAIN: freeze SPEC C13 sau ajustări.
+**VERDICT: BLUEPRINT C13 COMPLET, consistent cu SPEC-ul înghețat, deciziile și granițele LOCKED.** C13 e pregătit conceptual cap-coadă. Rămâne UN singur deblocaj înainte de implementarea tehnică: decizia SYSTEM pe tensiunea dashboard (CERERE SYSTEM, secțiunea 6). La dezlegarea ei + mandat de implementare, C13 poate intra în generare (HTML/Date_MASTER/FILM/assets).
