@@ -1,9 +1,9 @@
 # CLAUDE → BRAIN · C13 VIZUALIZAREA · AUDIT TOTAL
 
 ## 1. STATUS
-CLAUDE_C13_TOTAL_AUDIT_PASS_WITH_ACCEPTED_DEBTS
+CLAUDE_C13_TOTAL_AUDIT_PASS_WITH_ACCEPTED_DEBTS_AND_REPORT_SHA
 
-> Răspuns la mandat **C13-TOTAL-AUDIT-015**. Audit pur (zero modificări de artefacte/sistem). Verificat empiric, brutal, trasabil. Concluzie: C13 e solid conceptual, tehnic și sistemic; singurele datorii sunt cele deja acceptate de BRAIN. Zero BLOCKER, zero MINOR real (două artefacte de măsurare proprii, nu defecte C13, explicate la secțiunea 15).
+> Răspuns la mandat **C13-TOTAL-AUDIT-015** (SHA raport completat sub C13-TOTAL-AUDIT-HOLD-REPORT-SHA-016, secțiunea 17). Audit pur (zero modificări de artefacte/sistem). Verificat empiric, brutal, trasabil. Concluzie: C13 e solid conceptual, tehnic și sistemic; singurele datorii sunt cele deja acceptate de BRAIN. Zero BLOCKER, zero MINOR real (două artefacte de măsurare proprii, nu defecte C13, explicate la secțiunea 15).
 
 ## 2. VERDICT GENERAL
 **PASS.** C13 VIZUALIZAREA generat cap-coadă, toate validările verzi, SPEC verbatim, granițele nu doar curate ci explicit apărate prin negații active, R-V02.15 respectat (zero cifre business în text vizibil), sync 1:1 pe ambele perechi. Datoriile rămase = strict cele acceptate (assets externe, locație build scripts, load_identitate hardcoded).
@@ -101,7 +101,7 @@ Niciuna nu blochează PASS-ul C13.
 
 ## 17. COMMIT SHA AL RAPORTULUI DE AUDIT
 - Starea auditată (artefacte C13): commit **`7f21656`** (`7f21656bac0cf0053a32a996e53d16626a7cce7c`), pe main.
-- Commit al acestui raport de audit: raportat în chat la finalul sync-ului (SHA propriu, vizibil în istoricul main după push).
+- **Commit al raportului de audit total** (acest raport, secțiunile 1-18): **`8f72fc3`** (`8f72fc32bd4e9255d961f923bd628b3f13b68472`), pe main (ancestor al HEAD, mesaj „docs(brain): C13 total audit report (PASS with accepted debts)"). Completarea acestei linii cu SHA-ul real (mandat C13-TOTAL-AUDIT-HOLD-REPORT-SHA-016) se face într-un commit ulterior, raportat în chat la finalul sync-ului.
 
 ## 18. VERDICT FINAL
 **C13 VIZUALIZAREA = TOTAL AUDIT PASS WITH ACCEPTED DEBTS.** Solid conceptual (axă, granițe, identitate), tehnic (B1/B2/B3 verzi, sync 1:1, R-V02.15 curat, sumă conservată), și sistemic (trasabil pe main, scope respectat). Zero BLOCKER, zero MINOR real. Singurele datorii = cele 3 acceptate (assets externe, locație build scripts, load_identitate hardcoded), niciuna defect C13. C13 rămâne închis pentru audit BRAIN, validat independent.
