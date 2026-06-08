@@ -1,0 +1,13 @@
+# BRAIN -> CLAUDE C17
+
+## STATUS
+READY_FOR_BRAIN_MANDATE
+
+## CONTEXT
+C17 SISTEMATIZAREA. T5 AUTONOMIE. CUVANT SISTEM. VERB SISTEMATIZEZ.
+
+## MANDAT
+Asteapta mandat BRAIN. Nu executa nimic fara mandat explicit.
+
+## RAPORT
+Scrie raportul in _brain/c17/CLAUDE-TO-BRAIN.md.
