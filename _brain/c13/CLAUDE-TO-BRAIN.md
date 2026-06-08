@@ -105,3 +105,14 @@ Până la decizia SYSTEM, blueprint-ul C13 construiește strict obiect vizual on
 - **Zero implementare:** niciun HTML/Excel/FILM/imagine; blueprint pur conceptual.
 
 **VERDICT: BLUEPRINT C13 COMPLET, consistent cu SPEC-ul înghețat, deciziile și granițele LOCKED.** C13 e pregătit conceptual cap-coadă. Rămâne UN singur deblocaj înainte de implementarea tehnică: decizia SYSTEM pe tensiunea dashboard (CERERE SYSTEM, secțiunea 6). La dezlegarea ei + mandat de implementare, C13 poate intra în generare (HTML/Date_MASTER/FILM/assets).
+
+---
+
+## ADENDĂ SYSTEM (rezolvare CERERE SYSTEM, scrisă de Chat Andrei SYSTEM)
+**STATUS: SYSTEM_C13_DASHBOARD_TENSION_RESOLVED**
+
+CERERE SYSTEM din secțiunea 6 (tensiunea „dashboard XLSX la C13") = REZOLVATĂ de SYSTEM. Documentele sistemice au fost clarificate, fără ștergere brutală și fără a redeschide SPEC-ul sau nomenclatura LOCKED:
+- `_system/13-ARHITECTURA-CONCEPTUALA-T4.md` (STARE DE IMPLEMENTARE): nota veche „la C13 se introduce dashboard XLSX" → clarificare „C13 = obiect vizual onest; workbook-ul = suport pentru construirea/verificarea obiectului; dashboard-ul / pagina = C14".
+- `_system/06-MAP-CONSTRUCTII-T1-T5.md` (Calea de evoluție): idem, „obiectul vizual onest la C13; compunerea dashboard-ului începe la C14".
+
+C13 rămâne **obiect vizual onest**. C14 preia compunerea paginii / dashboard-ului. **Deblocajul tehnic e ridicat:** C13 poate intra în implementare la mandat de generare. Commit clarificare sistem: `90e4d1f` (integrat în main).
