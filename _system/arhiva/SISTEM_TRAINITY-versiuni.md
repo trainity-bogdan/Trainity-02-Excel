@@ -2892,61 +2892,84 @@ C14 = organizarea spațială a paginii (layout). C15 = sinteza mesajului esenți
 ## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]
 
 Axă: RAPORT DECISION-READY. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
-Decizie locked: C16 = livrarea raportului ca obiect de decizie, NU logistică (email/export/PDF/share/trimitere = logistică, nu livrare).
+Decizie locked: C16 = foaie-raport de decizie (raportul devine obiect de decizie), NU logistică (email/export/PDF/share/trimitere = logistică, nu livrare), NU sinteză (C15), NU layout vizual (C14), NU sistem recurent (C17).
 Nomenclatură LOCKED (NOMENCLATURA-LOCKED-SCARA V70): C16 LIVRAREA, cuvânt LIVRARE, verb LIVREZ. Numele vechi "CONTROL INSTANT" e superseded.
-Nota freeze: SPEC conceptual 11-slot înghețat la SEED (aprobat conceptual de ARHITECT 08.06.2026). Detaliile de generare se autorează separat înainte de generare: step-titles extinse la 18 (6 etape x 3), 2 prompturi Copilot, 8 final-labels, FENOMENE mapate pe coloane reale Date_MASTER (L143), IDENTITATE_TEHNICA C16 (L142). B2 gate_v20 necesită intrare C16.
+Nota: SPEC narativ M-A (revizuit) aprobat de BRAIN 08.06.2026; înlocuiește blocul SEED 11-slot. IDENTITATE_TEHNICA C16 populată (L142). Hero descriptor (IDENTITATE-TEHNICA) = "DECIZIA GATA" PROVIZORIU, de confirmat BRAIN.
 
-### 1. IDENTITATE
-- C16 = LIVRAREA
-- T4 = RAPORTARE
-- CUVÂNT LOCKED = LIVRARE
-- VERB LOCKED = LIVREZ
-- Rol în T4: transformarea raportului într-un material decision-ready, predabil decidentului.
+### 1. INTRIGA
+Ai răspunsul, e și sintetizat (C15), dar decidentul tot nu decide: cere clarificări, amână, "se mai gândește". Raportul bun care nu mișcă nimic. Distanța dintre "am terminat analiza" și "s-a luat decizia".
 
-### 2. SLUG
-livrarea
-
-### 3. INTRIGA
-Ai răspunsul, e și sintetizat, dar decidentul tot nu decide. Raportul bun care nu mișcă nimic. Distanța dintre "am terminat analiza" și "s-a luat decizia".
-
-### 4. PROBLEMELE
-- mesajul esențial (venit de la C15) există, dar e îngropat, nu stă în capul foii ca decizie cerută;
+### 2. PROBLEMELE
+- mesajul esențial (de la C15) e îngropat, nu stă în capul foii ca decizie cerută;
 - complet, dar aglomerat: decidentul se îneacă în detaliu fără relevanță pentru decizie;
 - raportul are nevoie de autor lângă el ca să fie înțeles (nu se susține singur);
 - lipsește cadrul de decizie (decizie, risc, concluzie, pas următor): e informație, nu ramă de decizie;
 - livrarea tratată ca logistică ("am trimis"), nu ca obiect de decizie.
 
-### 5. MIZA
-Valoarea întregului lanț T1-T4 se realizează sau se pierde în momentul livrării. O decizie amânată sau greșită pentru că raportul nu a livrat decizia înseamnă analiză irosită. Livrarea e locul unde analiza devine (sau nu) acțiune.
+### 3. MIZA
+Valoarea întregului lanț T1-T4 se realizează sau se pierde în momentul livrării. O decizie amânată sau greșită pentru că raportul nu a livrat decizia = analiză irosită. Livrarea e locul unde analiza devine (sau nu) acțiune.
 
-### 6. MANTRA
-"Nu livrez informație. Livrez o decizie gata de luat."
+### 4. MANTRA / AHA
+MANTRA: "Nu livrez informație. Livrez o decizie gata de luat."
+AHA: "Raportul nu se trimite, se predă ca obiect de decizie."
 
-### 7. WOW (aspirațional)
-Raportul te aduce în punctul în care poți decide din el, nu din alte cinci documente și o ședință. Orizont spre care țintește forma de livrare, nu o garanție operațională rigidă.
-
-### 8. MOTTO
+### 5. MOTTO
 "Raportul care decide."
 
-### 9. FENOMENE
-- cadrul de decizie (decizie, risc, concluzie, pas următor);
-- decizia cerută în capul foii: mesajul sintetizat de C15 este poziționat pentru decizie, nu re-sintetizat;
-- documentul care se susține singur (zero dependență de autor lângă el);
-- relevanța-pentru-decizie ca filtru: ce intră în decizie vs ce rămâne anexă, distinct de ierarhia vizuală (care e C14);
-- completitudine raportată la decizie, nu la "a fi acoperit".
+### 6. STEP-TITLES (18, în 6 etape x 3 pași)
+ETAPA 1 REALITATE
+1. Mesajul sintetizat, dar încă nu o decizie
+2. Raportul plin, iar decidentul tot întreabă
+3. Aceeași informație, încă fără cadru de decizie
+ETAPA 2 INVESTIGAȚIE
+4. Ce decizie se cere, de fapt, din acest raport
+5. Promptul 1: ce-i trebuie decidentului ca să decidă (AI propune, omul judecă)
+6. Ce e semnal pentru decizie, ce e zgomot
+ETAPA 3 TRANSFORMARE
+7. Concluzia urcă în capul foii
+8. Promptul 2: construiești cadrul decizie / risc / concluzie / pas următor (omul corectează)
+9. Detaliul exhaustiv coboară în anexă
+ETAPA 4 VERIFICARE
+10. Poate decidentul hotărî doar din foaie?
+11. Testul fără autor: întrebările inevitabile, nu întrebările de bază
+12. Riscul și pasul următor, scrise explicit, nu deduse
+ETAPA 5 STABILIZARE
+13. Cele șase reguli ale foii-raport de decizie
+14. Complet pentru decizie, fără surplus
+15. O foaie-raport de decizie care stă în picioare singură
+ETAPA 6 CONFIRMARE
+16. Forma de decizie scurtează drumul spre hotărâre
+17. Devii cel care predă o decizie, nu un teanc de date
+18. Raportul-decizie este gata, T5 îl poate sistematiza
 
-### 10. GRANIȚE
-- vs C15 (jos): C15 sintetizează mesajul esențial; C16 NU sintetizează, livrează mesajul deja sintetizat, dându-i forma de decizie.
-- vs C14: C14 face compunerea vizuală generală; C16 NU aranjează vizual, lucrează cadrul de decizie al raportului.
-- vs C17 (sus): C17 sistematizează raportul în T5 AUTONOMIE (sistem recurent, dashboard viu, procedură autonomă, automatizare); C16 livrează o dată un raport finit, nu construiește mecanismul.
+### 7. PROMPTURI Copilot (2)
+- Promptul 1, E2 INVESTIGAȚIE: ceri Copilot să identifice, pentru un decident concret, ce decizie se cere din raport, ce risc o însoțește și ce informație e relevantă pentru decizie vs zgomot. AI propune lista, omul judecă. NU re-sintetizează mesajul (C15), îl încadrează pentru decizie.
+- Promptul 2, E3 TRANSFORMARE: ceri Copilot să structureze foaia-raport cu cadrul de decizie în cap (decizie, risc, concluzie, pas următor) și detaliul în anexă, pornind de la agregatul relevant. Omul corectează formularea și pragul de risc. NU aranjează vizual (C14), NU automatizează (C17).
 
-### 11. STEP-TITLES (SEED: 6 etape; se extind la 18 la autorarea de generare)
-1. Decizia cerută, în capul foii
-2. Cadrul de decizie: decizie, risc, concluzie, pas următor
-3. Ce intră în decizie, ce rămâne anexă
-4. Complet pentru decizie, fără surplus
-5. Raportul care se susține singur
-6. Raportul devine obiect de decizie
+### 8. FINAL-LABELS (8)
+- Un raport care nu produce o decizie nu e livrat, e doar trimis.
+- Decizia se citește din capul foii, nu se caută la pagina 14.
+- Cadrul de decizie: decizie, risc, concluzie, pas următor.
+- Complet înseamnă cât îi trebuie decidentului, nu tot ce ai.
+- Un raport bun se susține singur, fără autorul lângă el.
+- Riscul și pasul următor se scriu, nu se deduc.
+- Ce nu intră în decizie coboară în anexă, nu dispare.
+- Nu livrezi informație, livrezi o decizie gata de luat.
+
+### 9. FENOMENE / OPERATII (6 perechi: problemă de livrare -> corecție decision-ready)
+Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria, clientul, județul); cifrele rămân în Excel (R-V02.15).
+- Concluzia relevantă (ex. valoarea netă pe o categorie) îngropată în tabel -> urcă în capul foii ca decizie cerută.
+- Detaliul brut listat linie cu linie (fiecare factură, fiecare dată) -> coboară în anexă; sus rămâne agregatul de decizie.
+- Doar cifre, fără ramă de decizie -> se adaugă cadrul (decizie/risc/concluzie/pas următor) peste agregatul pe categorie, client sau județ.
+- Riscul lăsat implicit (decidentul îl deduce din valoarea netă față de cantitate) -> riscul scris explicit, cu pragul lui.
+- Raportul se termină în constatare -> se scrie pasul următor (acțiunea propusă), ancorat în datele care o susțin.
+- Foaia are nevoie de autor -> fiecare cifră poartă unitate, perioadă (data facturii) și referință, ca foaia să se susțină singură.
+
+### GRANIȚE
+- vs C12 (T3): C12 interpretează (de ce); C16 nu re-interpretează, primește răspunsul și îl livrează ca decizie.
+- vs C15 (jos): C15 sintetizează mesajul esențial (enunț); C16 NU sintetizează, livrează mesajul deja sintetizat dându-i forma de decizie (decizie-cadru).
+- vs C14: C14 face compunerea vizuală / layout-ul paginii (spațiu); C16 NU aranjează vizual, lucrează cadrul de decizie al raportului.
+- vs C17 (sus): C17 sistematizează raportul în T5 AUTONOMIE (recurent, dashboard viu, automatizare); C16 livrează o dată un raport finit, nu construiește mecanismul. Handoff: "C16 predă decizia gata; C17 o face să ruleze singură."
 
 ## SPEC C17 - SISTEMATIZAREA   [Status: NEGENERAT]
 ## SPEC C18 - AUTOMATIZAREA   [Status: NEGENERAT]

@@ -1,7 +1,27 @@
 # CLAUDE (Andrei SYSTEM) -> BRAIN / ARHITECT
 
 ## STATUS (curent)
-C16_B2_READY · M-B + M-C executate · pre_generation_check 16 = TOATE 3 PASS (exit 0)
+C16_B2_READY (COMPLET) · SPEC narativ în registru + M-B + M-C · pre_generation_check 16 = TOATE 3 PASS (exit 0) · audit zero drift nou
+
+## RAPORT SYSTEM - C16 REGISTRARE SPEC NARATIV (2026-06-08)
+Mandat SYSTEM: înregistrare canonică SPEC_NARATIV_MA_REVIZUIT (aprobat de BRAIN) + reconfirmare M-B/M-C + validări.
+
+### PAS 2 - SPEC narativ în registru
+`_system/arhiva/SISTEM_TRAINITY-versiuni.md`, PARTEA VI, `## SPEC C16 - LIVRAREA [INGHETAT 08.06.2026]`: blocul SEED 11-slot ÎNLOCUIT cu SPEC-ul narativ M-A revizuit (format C13): INTRIGA, PROBLEMELE, MIZA, MANTRA/AHA, MOTTO, 18 STEP-TITLES (6 etape x 3, cu pasul 11 "întrebările inevitabile, nu cele de bază" + pasul 18 "T5 îl poate sistematiza" din revizia BRAIN), 2 PROMPTURI Copilot, 8 FINAL-LABELS, 6 FENOMENE (concepte reale Date_MASTER, fără tokeni inventați), GRANIȚE (C12/C14/C15/C17). Status păstrat INGHETAT. Transcriere fidelă a SPEC-ului aprobat, fără rescriere conceptuală.
+
+### M-B / M-C (reconfirmate, idempotent)
+IDENTITATE_TEHNICA C16 (referinte/IDENTITATE-TEHNICA.md, linia 427) și gate_v20 dict `'16'` (linia 1142) = deja prezente din mandatul anterior (commit 5e581f7). Neatinse acum.
+
+### VALIDĂRI
+- pre_generation_check 16: TOATE 3 PASS (B1 + L142 + L143), exit 0. "Motorul poate proceda la generare C16."
+- audit_sync.py: 3 XX preexistente (C12/C13/C14, coloana V39.assets - fluxuri de generare proprii, asset-related), 0 ERR. ZERO drift nou cauzat de această modificare (am atins doar registrul/SPEC, niciun artefact cNN/).
+- gate_v20 full (16 c16 c01): neaplicabil (fără artefacte c16/ încă); blocajul de identitate B2 e rezolvat (load_identitate('16') OK).
+
+### NO_DESTRUCTIVE_WRITES
+Înlocuire de secțiune (doar C16), aditiv net: registru 5797->5820 (+23). Markeri PARTEA VI / C01 / C13 / C16 / C17 intacți. diff --check OK. Alte secțiuni neatinse.
+
+### STARE FINALĂ
+C16 = B2_READY COMPLET. Registrul are SPEC-ul narativ generation-ready (18 step-titles), IDENTITATE_TEHNICA populată, gate C16-ready, toate gate-urile pre-generare PASS. Rămâne doar: confirmare BRAIN descriptor hero "DECIZIA GATA" (provizoriu) + mandat de generare efectivă a celor 7 artefacte.
 
 ## RAPORT SYSTEM - C16 B2-PREP (M-B + M-C), 2026-06-08
 Mandat SYSTEM: pașii B2 pentru C16 (M-B IDENTITATE_TEHNICA + M-C gate_v20). Executat ca Andrei SYSTEM. Niciun artefact, nicio construcție atinsă, SPEC C16 neredeschis, nomenclatura neschimbată.
