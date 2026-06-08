@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_READY_FOR_GENERATION_CHECK
+MANDAT_DEPENDENCY_CHECK
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
@@ -9,86 +9,79 @@ C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
 SEED C14 este aprobat.
 SPEC 11 SLOT C14 este aprobat.
 BLUEPRINT C14 este aprobat.
-SPEC COMPLET C14 este aprobat cu ajustarea motto-ului.
+SPEC COMPLET C14 este aprobat.
+READY FOR GENERATION CHECK este aprobat ca raport de planificare.
 
-Nu se generează C14 încă.
+C14 NU este autorizat încă pentru generare.
 
-Următorul pas este READY FOR GENERATION CHECK.
+Motiv: trebuie clarificată dependența C13 și forma corectă a `Date_MASTER-C14.xlsx`.
 
 ## DECIZII BRAIN VALIDATE
 
-- axa C14 = ORGANIZAREA SPAȚIALĂ A ELEMENTELOR VIZUALE
-- întrebarea-ax C14 = "Ce vede ochiul întâi?"
-- substrat C14 = foaia/pagina de raportare din Excel
-- C13 creează/validează obiectul vizual
-- C14 așază obiectele vizuale în ansamblu
-- C15 extrage/formulează mesajul esențial
-- C16 livrează raportul decision-ready
-
-## SPEC COMPLET C14 APROBAT
-
-- SLUG provizoriu: `compunerea`
-- INTRIGA: aprobată
-- PROBLEMELE: aprobate
-- MIZA: aprobată
-- MANTRA: "Compun privirea, nu pagina."
-- WOW: before/after de rearanjare pură
-- MOTTO final: "Ce vede ochiul întâi schimbă decizia."
-- FENOMENE: aprobate
-- STEP-TITLES: aprobate, exact 11
-
-## STEP-TITLES APROBATE
-
-1. Pagina fără "întâi"
-2. Primul punct de contact al ochiului
-3. Poziția ca semnal de importanță
-4. Focarul vizual
-5. Traseul de citire
-6. Retrogradarea elementelor secundare
-7. Ierarhia vizuală pentru decizie
-8. Gruparea elementelor legate
-9. Spațiul gol ca instrument de ierarhie
-10. Compunerea guvernată de răspunsul venit din T3
-11. Testul celui de-al doilea ochi
-
-## OUTPUT C14 APROBAT
-
-Pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15.
-
-## GARDURI APROBATE
-
+- C13 produce obiectele vizuale individuale
+- C14 le primește ca intrare
+- C14 le așază într-o pagină de raportare coerentă
 - C14 nu desenează grafice
-- C14 nu formulează mesajul
-- C14 nu livrează raportul final
-- C14 nu face estetică
-- C14 compune ordinea privirii
-- C14 răspunde la "ce vede ochiul întâi?"
-- C14 nu se autorizează ca dashboard
-- dashboard poate rămâne doar substrat tehnic, nu identitate conceptuală
+- C14 nu modifică tipul graficelor
+- C14 nu inventează date
+- C14 nu formulează concluzia C15
+- C14 nu livrează raportul final C16
+
+## DECIZII BRAIN PE GENERARE
+
+### Decizie 1, ordinea corectă
+
+C13 trebuie generat / stabilizat înainte de C14.
+
+C14 nu se generează cu obiecte-placeholder.
+
+Motiv: identitatea C14 este compunerea obiectelor vizuale oneste venite din C13. Fără C13, C14 ar inventa substrat și ar încălca granița în jos.
+
+### Decizie 2, Date_MASTER-C14
+
+`Date_MASTER-C14.xlsx` trebuie să fie continuare compozițională a output-ului C13, nu dashboard nou, nu reconstrucție de grafice.
+
+Formula corectă:
+
+- C13 produce obiectele vizuale individuale
+- C14 le primește ca intrare
+- C14 demonstrează așezarea lor într-o pagină de raportare coerentă
+- C14 poate conține layout / poziționare / ierarhie / compoziție
+- C14 nu schimbă tipul graficelor
+- C14 nu inventează date
+- C14 nu reformulează concluzia
+
+### Decizie 3, slug
+
+Slug provizoriu confirmat:
+
+`compunerea`
+
+Slug-ul se confirmă tehnic doar după citirea convenției `c01/`.
 
 ## MANDAT
 
 Pregătește raportul:
 
-# CLAUDE -> BRAIN · C14 READY FOR GENERATION CHECK
+# CLAUDE -> BRAIN · C14 DEPENDENCY CHECK
 
 Scrie raportul în:
 
 `_brain/c14/CLAUDE-TO-BRAIN.md`
 
-Scopul raportului: să spună clar ce trebuie autorizat înainte de generare.
+Scop: confirmarea explicită dacă C13 este suficient de stabil pentru ca C14 să poată intra ulterior în generare.
 
 ## STRUCTURĂ OBLIGATORIE RAPORT
 
-Raportul trebuie să includă:
+Raportul trebuie să răspundă punctual la:
 
-1. Fișiere / foldere care trebuie citite înainte de generare
-2. Ce se poate folosi din `c01/` ca COPY+MODIFY
-3. Ce generatoare / gate-uri trebuie accesate
-4. Ce fișiere se vor putea modifica la generare
-5. Ce fișiere sunt interzise
-6. Dacă este sau nu nevoie de CERERE SYSTEM
-7. Riscuri finale înainte de generare
+1. C13 este generat sau doar pre-generation ready?
+2. Există output C13 suficient pentru C14?
+3. Ce anume primește C14 din C13?
+4. Ce NU are voie C14 să refacă din C13?
+5. Ce formă trebuie să aibă `Date_MASTER-C14.xlsx` ca să nu dubleze C13?
+6. Poate începe generarea C14 acum sau trebuie așteptat C13?
+7. Dacă nu poate începe, ce status corect trebuie păstrat pentru C14?
 
 ## INTERDICȚII ÎN ACEST PAS
 
@@ -106,4 +99,4 @@ Raportul trebuie să includă:
 
 ## RAPORT
 
-După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul READY FOR GENERATION CHECK.
+După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul DEPENDENCY CHECK.
