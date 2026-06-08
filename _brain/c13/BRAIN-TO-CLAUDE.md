@@ -1,119 +1,87 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-BRAIN_C13_REAUTHORIZE_GENERATION_AFTER_B2_GATE_READY
+BRAIN_C13_GENERATION_IN_PROGRESS_APPROVED_CONTINUE
 
 ## MANDAT-ID
-C13-GENERATE-AFTER-B2-GATE-READY-011
+C13-CONTINUE-GENERATION-FULL-SET-012
 
 ## RAPORT CLAUDE ANALIZAT
-BRAIN a analizat raportul actualizat din:
+BRAIN a analizat raportul:
+
+`CLAUDE_C13_GENERATION_IN_PROGRESS`
+
+din:
 
 `_brain/c13/CLAUDE-TO-BRAIN.md`
 
-Status relevant găsit:
-
-`SYSTEM_C13_B2_GATE_READY`
-
 ## VERDICT BRAIN
-PASS.
+PASS INTERMEDIAR.
 
-Blocajul B2 privind identitatea C13 în `gate_v20.py` este rezolvat. Gate-ul recunoaște acum C13.
+Generarea C13 este pe direcția corectă.
 
-C13 poate reintra în generare.
+Nu există blocaj SYSTEM.
+Nu există blocaj B1.
+Nu există blocaj B2.
 
-## STARE C13
-- SPEC C13 = FROZEN
-- Blueprint C13 = APPROVED
-- Tensiune dashboard = RESOLVED
-- SYSTEM pre-generation = READY
-- B1 = PASS
-- B2 identity gate = READY
-- ARHITECT a confirmat deja: `confirm generate C13`
+Primele 2 artefacte raportate ca generate și validate sunt acceptate ca progres legitim:
+- HTML-Studiu C13
+- Date_MASTER C13
 
-## DECIZIE BRAIN
-Claude C13 este autorizat să genereze C13 complet și să comită artefactele doar dacă validările trec.
+## DECIZII BRAIN CONFIRMATE
+1. Numele Date_MASTER aplicat conform gate-ului este acceptat:
+   - `Date_MASTER-C13.xlsx`
+2. Hero identity aplicat conform CUVÂNT LOCKED este acceptat:
+   - `VIZUAL`
+3. C13 rămâne obiect vizual onest, nu dashboard.
+4. Workbook-ul C13 rămâne suport pentru construire și verificare, nu dashboard.
+
+## OBSERVAȚIE BRAIN
+Raportul intermediar nu trebuie tratat ca final.
+
+Statusul final acceptabil rămâne:
+
+`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
+
+Raportul final trebuie să includă commit SHA complet, nu placeholder.
+
+## MANDAT CĂTRE CLAUDE C13
+Continuă generarea până la setul complet C13.
+
+Finalizează obligatoriu:
+1. `HTML-Editor-Studiu-Excel-13-Vizualizare.html`
+2. `HTML-Video-Excel-13-Vizualizare.html`
+3. `HTML-Editor-Video-Excel-13-Vizualizare.html`
+4. `FILM-Excel-13-Vizualizare.docx`
+5. `c13/assets/`, dacă patternul construcțiilor anterioare o cere
+
+Păstrează artefactele deja validate:
+- HTML-Studiu C13
+- Date_MASTER-C13.xlsx
+- generatoarele necesare din `c13/**`
 
 ## REGULĂ CRITICĂ
+C13 NU devine dashboard.
+C13 NU devine layout final.
+C13 NU devine pagină finală.
+C13 NU formulează mesaj C15.
+C13 NU livrează raport C16.
+
 C13 = obiect vizual onest.
 C14 = compunerea paginii / dashboard-ului.
 
-C13 nu generează dashboard final, layout final, pagină finală sau mesaj C15.
-Workbook-ul C13 este suport pentru construirea și verificarea obiectului vizual onest.
-
-## REZIDUURI DE ALINIAT ÎN GENERARE
-
-### 1. Nume fișier Excel
-În raportul SYSTEM apare tensiunea:
-- mandatul anterior cerea `Date_MASTER-C13-Vizualizare.xlsx`
-- gate-ul pare să aștepte `Date_MASTER-C13.xlsx`
-
-Decizie BRAIN pentru această generare:
-Respectă validatorul canonic. Dacă gate-ul B2 cere `Date_MASTER-C13.xlsx`, generează fișierul cu numele cerut de gate.
-
-Nu modifica gate-ul din chatul C13.
-Nu modifica sistemul din chatul C13.
-Dacă există nevoie de alias secundar, raportează, nu inventa.
-
-### 2. Hero identity
-Gate-ul C13 folosește:
-- `nume_hero_caps_rand1: VIZUAL`
-
-Decizie BRAIN:
-Aliniază HTML-ul C13 la `VIZUAL`, deoarece CUVÂNT LOCKED C13 = VIZUAL.
-
-Poți păstra ideea tematică „forma adevărată” în copy intern, dar identitatea verificată de gate trebuie să fie `VIZUAL`.
-
-## SPEC LOCKED DE RESPECTAT
-Intriga: "Cifra e corectă. Graficul minte."
-Miza: "O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
-Mantra: "Nu desenez frumos. Desenez adevărat."
-AHA: "Forma greșită minte cu cifra corectă."
-WOW: "Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
-Motto: "Forma nu se nimerește. Se alege."
-
-## STEP-TITLES LOCKED
-1. Răspunsul corect, dar invizibil
-2. Nimeni nu decide privind un model
-3. Aceeași cifră, încă fără formă
-4. O cifră, mai multe forme posibile
-5. Promptul 1: ce formă cere rezultatul
-6. Aceeași cifră, două grafice, două concluzii
-7. Tipul de grafic urmează natura rezultatului
-8. Promptul 2: generezi vizualul, corectezi axa și scala
-9. Scoți codarea care sugerează fals
-10. Vizualul față de cifra brută: aceeași concluzie?
-11. Testul celui de-al doilea ochi
-12. Marchezi forma care spune mai mult decât cifra
-13. Cele șase reguli de onestitate a formei
-14. Eticheta, unitatea, contextul: nimic de ghicit
-15. Un obiect vizual onest, repetabil
-16. Forma onestă repară percepția
-17. Devii garantul a ceea ce vede altcineva
-18. Predai către C14: obiectul, gata de așezat în pagină
-
-## LIVRABILE CERUTE
-Generează în `c13/`, conform patternului verificat de repo:
-1. HTML-Studiu C13
-2. HTML-Editor-Studiu C13
-3. HTML-Video C13
-4. HTML-Editor-Video C13
-5. Date_MASTER C13, cu numele acceptat de gate
-6. FILM C13
-7. assets C13, dacă patternul construcțiilor anterioare o cere
-
-## VALIDĂRI OBLIGATORII
-Rulează validările disponibile pentru C13:
+## VALIDĂRI OBLIGATORII LA FINAL
+Rulează validările disponibile pentru setul complet:
 - B1 `pre_generation_check.py 13`
 - B2 `gate_v20.py 13 c13 c01`
-- existență fizică livrabile
+- existență fizică livrabile C13
 - sincronizare Studiu / Editor-Studiu
 - sincronizare Video / Editor-Video
-- verificare 18 step-titles locked
-- verificare că C13 nu conține dashboard final / layout final / pagină finală
-- verificare că nu există modificări în afara scope-ului
+- 18/18 step-titles locked
+- zero dashboard final / layout final / pagină finală
+- zero modificări în afara scope-ului
 
-Dacă un validator cere modificări sistem, NU le face din chatul C13. Raportează blocajul exact.
+Dacă apare blocaj nou de sistem, NU modifica `_system/**` din chatul C13. Raportează exact blocajul.
 
 ## FIȘIERE PERMISE
 - `c13/**`
@@ -137,19 +105,16 @@ Raportul trebuie să conțină:
 4. validări rulate
 5. rezultate validări
 6. cum ai păstrat C13 ca obiect vizual onest, nu dashboard
-7. decizia aplicată pentru numele Date_MASTER
+7. decizia aplicată pentru Date_MASTER
 8. decizia aplicată pentru hero `VIZUAL`
-9. commit SHA
+9. commit SHA real
 10. verdict final
 
 ## STATUS AȘTEPTAT
-Dacă totul trece:
-
 `CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
 
-Dacă există blocaj:
-
+Dacă apare blocaj:
 `CLAUDE_C13_GENERATION_BLOCKED`
 
 ## CERERE DIRECTĂ
-Generează C13 complet, controlat, cu B1 și B2 PASS. Fără dashboard. Fără modificări sistem.
+Continuă generarea C13 până la setul complet și raportează doar după validarea finală.
