@@ -1,48 +1,44 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_PATCH_TITLURI_C14
+C14_APPROVED_TEHNIC_CONCEPTUAL_ASSETS_PENDING
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
 
-C14 este generat tehnic, cu B1 PASS, B2 GATE PASS și B3 zero drift real.
+Patch-ul de titluri a fost verificat și aprobat de BRAIN.
 
-Auditul conceptual a identificat o singură abatere minoră: step-title-urile afișate nu sunt 1:1 cu cele 11 sloturi aprobate.
+Raport acceptat:
 
-Status BRAIN curent:
-
-`C14_GENERAT_GATE_PASS_ASSETS_PENDING_PATCH_TITLURI`
-
-Assets rămân pending.
-
-Nu se face integrare globală încă.
-
-Nu se marchează C14 LIVRAT 100% încă.
+`CLAUDE_C14_PATCH_TITLURI_DONE`
 
 ## DECIZIE BRAIN
 
-Aplică PATCH CONCEPTUAL MINOR, obligatoriu, strict pe titluri și propagarea lor.
+C14 este aprobat conceptual și tehnic în forma curentă.
 
-Nu regenera conceptual C14.
-Nu modifica Date_MASTER dacă nu este necesar.
-Nu modifica assets.
-Nu integra global.
+Nu mai sunt necesare patch-uri conceptuale.
 
-## PROBLEMA DE REPARAT
+C14 nu se marchează LIVRAT 100% încă, deoarece assets rămân pending.
 
-Step-title-urile afișate în HTML-Studiu și HTML-Video nu sunt 1:1 cu cele 11 sloturi aprobate.
+## APROBĂRI
 
-Probleme exacte:
+BRAIN aprobă:
 
-- slotul 6, "Retrogradarea elementelor secundare", nu apare ca titlu propriu
-- conceptul există în corp, dar nu ca titlu
-- un titlu "Promptul 1" ocupă loc de step-title
-- prompturile trebuie să stea în corpul pașilor relevanți, nu în titlu
+- identitatea C14
+- cele 11 step-title-uri afișate 1:1 cu SPEC-ul aprobat
+- mutarea prompturilor în corpul pașilor
+- granițele C13 / C15 / C16
+- Date_MASTER-C14 ca extensie compozițională a C13
+- HTML-Studiu
+- HTML-Video
+- Editor-Studiu
+- Editor-Video
+- FILM
+- B1 PASS
+- B2 GATE PASS
+- B3 zero drift real
 
-## STEP-TITLES FINALE OBLIGATORII
-
-După patch, cele 11 step-title-uri afișate trebuie să fie exact:
+## STEP-TITLES FINALE APROBATE
 
 1. Pagina fără "întâi"
 2. Primul punct de contact al ochiului
@@ -56,63 +52,27 @@ După patch, cele 11 step-title-uri afișate trebuie să fie exact:
 10. Compunerea guvernată de răspunsul venit din T3
 11. Testul celui de-al doilea ochi
 
-## PATCH OBLIGATORIU
+## STATUS CURENT
 
-1. Adaugă "Retrogradarea elementelor secundare" ca titlu propriu.
-2. Elimină "Promptul 1" ca titlu de pas.
-3. Mută prompturile Copilot în corpul pașilor relevanți, ca box / secțiune internă, nu ca step-title.
-4. Păstrează cele 11 concepte intacte.
-5. Păstrează toate granițele C13 / C15 / C16.
+`C14_APPROVED_TEHNIC_CONCEPTUAL_ASSETS_PENDING`
 
-## PROPAGARE
+## RISC RĂMAS
 
-Aplică patch-ul, dacă este afectat, în:
+Singurul element deschis este:
 
-- `c14/HTML-Studiu-Excel-14-Compunere.html`
-- `c14/HTML-Editor-Studiu-Excel-14-Compunere.html`
-- `c14/HTML-Video-Excel-14-Compunere.html`
-- `c14/HTML-Editor-Video-Excel-14-Compunere.html`
-- `c14/FILM-Excel-14-Compunere.docx`, doar dacă titlurile sunt afectate acolo
+- assets pending, hero + 6 exec-stage
 
-## VALIDARE
+## MANDAT
 
-După patch:
+C14 se oprește aici până la assets.
 
-- rulează B1
-- rulează B2
-- rulează B3
-- verifică explicit că cele 11 step-title-uri afișate sunt 1:1 cu lista aprobată
-
-## INTERDICȚII
-
-Nu modifica:
-
-- `c01/**`
-- `c13/**`
-- alte `cNN/**`
-- `_system/**`
-- index / STARE / constructii
-- assets
-
+Nu mai face patch-uri conceptuale.
+Nu regenera C14.
 Nu integra global.
-Nu marca C14 LIVRAT 100%.
-Nu schimba SPEC-ul conceptual.
-Nu schimba identitatea C14.
-Nu schimba granițele C13 / C15 / C16.
+Nu marca LIVRAT 100%.
+
+Următorul pas este producerea și integrarea assets C14, la mandat separat.
 
 ## RAPORT
 
-La final, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu:
-
-# CLAUDE -> BRAIN · C14 PATCH TITLURI RAPORT
-
-Raportul trebuie să includă:
-
-- ce ai modificat
-- unde ai propagat patch-ul
-- lista finală a celor 11 step-title-uri detectate în artefacte
-- status B1
-- status B2
-- status B3
-- riscuri rămase
-- dacă C14 poate intra în reaprobarea finală BRAIN
+Actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` doar dacă trebuie să confirmi primirea acestui verdict.
