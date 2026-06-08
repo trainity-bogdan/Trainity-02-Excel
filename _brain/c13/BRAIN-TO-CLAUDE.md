@@ -1,89 +1,155 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-BRAIN_C13_B2_GATE_SYSTEM_BLOCK_CONFIRMED
+BRAIN_C13_REAUTHORIZE_GENERATION_AFTER_B2_GATE_READY
 
 ## MANDAT-ID
-C13-B2-GATE-SYSTEM-BLOCK-010
+C13-GENERATE-AFTER-B2-GATE-READY-011
 
 ## RAPORT CLAUDE ANALIZAT
-BRAIN a analizat raportul:
-
-`CLAUDE_C13_GENERATION_BLOCKED`
-
-din:
+BRAIN a analizat raportul actualizat din:
 
 `_brain/c13/CLAUDE-TO-BRAIN.md`
 
+Status relevant găsit:
+
+`SYSTEM_C13_B2_GATE_READY`
+
 ## VERDICT BRAIN
-PASS PE BLOCAJ.
+PASS.
 
-Blocajul B2 este legitim.
+Blocajul B2 privind identitatea C13 în `gate_v20.py` este rezolvat. Gate-ul recunoaște acum C13.
 
-Generarea C13 a pornit corect, dar nu poate fi comisă ca artefact canonic deoarece `gate_v20.py` nu este pregătit pentru C13.
+C13 poate reintra în generare.
 
-## STARE CITITĂ DIN RAPORT
-- HTML-Studiu C13 a fost generat local.
-- Conținutul C13 trece validările interne disponibile.
-- B1 `pre_generation_check.py 13` trece.
-- B2 `gate_v20.py 13 c13 c01` pică.
-- Cauza: `gate_v20.py` folosește un dict hardcoded de identități care include C01-C12, dar nu include C13.
-- Claude C13 a procedat corect: nu a comis artefacte canonice și nu a modificat `gate_v20.py` din chatul C13.
+## STARE C13
+- SPEC C13 = FROZEN
+- Blueprint C13 = APPROVED
+- Tensiune dashboard = RESOLVED
+- SYSTEM pre-generation = READY
+- B1 = PASS
+- B2 identity gate = READY
+- ARHITECT a confirmat deja: `confirm generate C13`
 
 ## DECIZIE BRAIN
-C13 rămâne blocat până când taskul SYSTEM actualizează gate-ul B2 pentru C13.
+Claude C13 este autorizat să genereze C13 complet și să comită artefactele doar dacă validările trec.
 
-Status C13:
+## REGULĂ CRITICĂ
+C13 = obiect vizual onest.
+C14 = compunerea paginii / dashboard-ului.
 
-`BLOCKED_PENDING_SYSTEM_GATE_V20_C13`
+C13 nu generează dashboard final, layout final, pagină finală sau mesaj C15.
+Workbook-ul C13 este suport pentru construirea și verificarea obiectului vizual onest.
 
-## TASK SYSTEM NECESAR
-Taskul SYSTEM trebuie executat separat de Claude, nu din chatul C13.
+## REZIDUURI DE ALINIAT ÎN GENERARE
 
-Obiectiv:
-- fă `gate_v20.py` capabil să valideze C13;
-- minim: adaugă identitatea C13 în dictul hardcoded folosit de `load_identitate`;
-- ideal: adaptează `load_identitate` să citească din `_system/referinte/IDENTITATE-TEHNICA.md`, ca să nu lovească același blocaj la C14-C20;
-- rulează `gate_v20.py 13 c13 c01` până la PASS;
-- raportează commit SHA și statusul final.
+### 1. Nume fișier Excel
+În raportul SYSTEM apare tensiunea:
+- mandatul anterior cerea `Date_MASTER-C13-Vizualizare.xlsx`
+- gate-ul pare să aștepte `Date_MASTER-C13.xlsx`
 
-## IDENTITATE C13 PENTRU GATE
-Dacă se alege soluția minimă, intrarea C13 trebuie să respecte logica LOCKED:
+Decizie BRAIN pentru această generare:
+Respectă validatorul canonic. Dacă gate-ul B2 cere `Date_MASTER-C13.xlsx`, generează fișierul cu numele cerut de gate.
 
-- cod: C13
-- nume_slug: Vizualizare
-- nume_hero_caps_rand1: VIZUAL
-- meta_val_treapta: VIZUALIZARE · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)
+Nu modifica gate-ul din chatul C13.
+Nu modifica sistemul din chatul C13.
+Dacă există nevoie de alias secundar, raportează, nu inventa.
 
-Notă:
-În raportul Claude apare o tensiune între `VIZUAL` și `FORMA` pentru hero. Pentru gate și nomenclatură, BRAIN preferă `VIZUAL`, deoarece CUVÂNT LOCKED C13 = VIZUAL.
+### 2. Hero identity
+Gate-ul C13 folosește:
+- `nume_hero_caps_rand1: VIZUAL`
 
-## MANDAT CĂTRE CLAUDE C13
-Nu continua generarea C13 până când taskul SYSTEM pentru `gate_v20.py` nu este rezolvat și raportat.
+Decizie BRAIN:
+Aliniază HTML-ul C13 la `VIZUAL`, deoarece CUVÂNT LOCKED C13 = VIZUAL.
 
-La următorul sync, dacă nu există status SYSTEM nou de tip:
+Poți păstra ideea tematică „forma adevărată” în copy intern, dar identitatea verificată de gate trebuie să fie `VIZUAL`.
 
-`SYSTEM_C13_GATE_V20_READY`
+## SPEC LOCKED DE RESPECTAT
+Intriga: "Cifra e corectă. Graficul minte."
+Miza: "O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
+Mantra: "Nu desenez frumos. Desenez adevărat."
+AHA: "Forma greșită minte cu cifra corectă."
+WOW: "Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
+Motto: "Forma nu se nimerește. Se alege."
 
-răspunde cu:
+## STEP-TITLES LOCKED
+1. Răspunsul corect, dar invizibil
+2. Nimeni nu decide privind un model
+3. Aceeași cifră, încă fără formă
+4. O cifră, mai multe forme posibile
+5. Promptul 1: ce formă cere rezultatul
+6. Aceeași cifră, două grafice, două concluzii
+7. Tipul de grafic urmează natura rezultatului
+8. Promptul 2: generezi vizualul, corectezi axa și scala
+9. Scoți codarea care sugerează fals
+10. Vizualul față de cifra brută: aceeași concluzie?
+11. Testul celui de-al doilea ochi
+12. Marchezi forma care spune mai mult decât cifra
+13. Cele șase reguli de onestitate a formei
+14. Eticheta, unitatea, contextul: nimic de ghicit
+15. Un obiect vizual onest, repetabil
+16. Forma onestă repară percepția
+17. Devii garantul a ceea ce vede altcineva
+18. Predai către C14: obiectul, gata de așezat în pagină
 
-`WAITING_FOR_SYSTEM_C13_GATE_V20_READY`
+## LIVRABILE CERUTE
+Generează în `c13/`, conform patternului verificat de repo:
+1. HTML-Studiu C13
+2. HTML-Editor-Studiu C13
+3. HTML-Video C13
+4. HTML-Editor-Video C13
+5. Date_MASTER C13, cu numele acceptat de gate
+6. FILM C13
+7. assets C13, dacă patternul construcțiilor anterioare o cere
 
-și nu modifica nimic altceva.
+## VALIDĂRI OBLIGATORII
+Rulează validările disponibile pentru C13:
+- B1 `pre_generation_check.py 13`
+- B2 `gate_v20.py 13 c13 c01`
+- existență fizică livrabile
+- sincronizare Studiu / Editor-Studiu
+- sincronizare Video / Editor-Video
+- verificare 18 step-titles locked
+- verificare că C13 nu conține dashboard final / layout final / pagină finală
+- verificare că nu există modificări în afara scope-ului
 
-## FIȘIERE PERMISE C13
-Până la rezolvarea SYSTEM, Claude C13 poate scrie doar în:
+Dacă un validator cere modificări sistem, NU le face din chatul C13. Raportează blocajul exact.
+
+## FIȘIERE PERMISE
+- `c13/**`
 - `_brain/c13/CLAUDE-TO-BRAIN.md`
 
-## FIȘIERE INTERZISE C13
-Nu modifica:
-- `c13/**`
+## FIȘIERE INTERZISE
 - `_system/**`
-- alte construcții
 - fișiere globale repo
+- alte construcții
+- alte foldere `_brain/cXX`
 
-## STATUS AȘTEPTAT C13
-`WAITING_FOR_SYSTEM_C13_GATE_V20_READY`
+## RAPORT FINAL OBLIGATORIU
+Scrie raportul final în:
+
+`_brain/c13/CLAUDE-TO-BRAIN.md`
+
+Raportul trebuie să conțină:
+1. STATUS
+2. livrabile generate
+3. fișiere modificate
+4. validări rulate
+5. rezultate validări
+6. cum ai păstrat C13 ca obiect vizual onest, nu dashboard
+7. decizia aplicată pentru numele Date_MASTER
+8. decizia aplicată pentru hero `VIZUAL`
+9. commit SHA
+10. verdict final
+
+## STATUS AȘTEPTAT
+Dacă totul trece:
+
+`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
+
+Dacă există blocaj:
+
+`CLAUDE_C13_GENERATION_BLOCKED`
 
 ## CERERE DIRECTĂ
-Așteaptă deblocarea SYSTEM a gate-ului B2. Nu comite artefacte C13 fără `gate_v20.py` PASS.
+Generează C13 complet, controlat, cu B1 și B2 PASS. Fără dashboard. Fără modificări sistem.
