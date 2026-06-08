@@ -1,90 +1,38 @@
-# CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERARE BLOCATĂ LA B2
+# CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERARE ÎN PROGRES (gate PASS pe artefactele prezente)
 
 ## 1. STATUS
-CLAUDE_C13_GENERATION_BLOCKED
+CLAUDE_C13_GENERATION_IN_PROGRESS
 
-> Răspuns la mandat **C13-GENERATE-AFTER-SYSTEM-READY-009**. Generarea FUNCȚIONEAZĂ (HTML-Studiu generat și validat de toate check-urile disponibile), dar se oprește la gate-ul B2: `gate_v20.py` NU e pregătit pentru C13. Conform regulii absolute B2 (CLAUDE.md: „gate_v20 PASS obligatoriu înainte de orice commit cu artefacte canonice; FAIL → nu commit, raportezi"), NU comit artefacte canonice necertificate și NU ating fișierul de gate (system, interzis). Raportez blocajul cu rețeta de deblocare.
+> Răspuns la mandat **C13-GENERATE-AFTER-B2-GATE-READY-011**. Ambele gate-uri (B1, B2) sunt ready și generarea FUNCȚIONEAZĂ: primele 2 artefacte (HTML-Studiu + Date_MASTER) sunt generate și trec `gate_v20` cap-coadă. Cele 2 decizii BRAIN (hero VIZUAL, nume xlsx) aplicate. NU declar GENERATED_READY încă (construcția are 7 artefacte; 5 rămân), dar nu e blocaj: drumul e validat. Nu las construcție parțială canonică pe main; comit generatoarele validate.
 
-## 2. LIVRABILE GENERATE
-- **`c13/HTML-Studiu-Excel-13-Vizualizare.html`** — GENERAT local (102 KB, 2436 linii) prin COPY+MODIFY din c12, body autorat pe ONESTITATEA FORMEI. Validat (vezi secțiunea 5). NEcomis ca artefact canonic (B2 nu poate certifica).
-- **`c13/build_html_studiu_c13.py`** — generatorul (comis: păstrează autorarea body-ului C13, reproducibil).
-- Restul (Editor-Studiu, Video, Editor-Video, Date_MASTER, FILM, assets) = NEÎNCEPUTE, ținute până la deblocarea B2 (nu are sens să continui dacă gate-ul nu poate certifica niciun artefact C13).
+## 2. LIVRABILE GENERATE (gate PASS)
+- **`HTML-Studiu-Excel-13-Vizualizare.html`** (101 KB) — body autorat ONESTITATEA FORMEI, 18/18 step-titles LOCKED, 6 fenomene, 8 verificări, 2 prompturi, hero `VIZUAL`. **Trece gate.**
+- **`Date_MASTER-C13.xlsx`** — nume cerut de gate; sumă conservată (delta 0, 7.986.019,38); foaie `Vizualizare` (suport obiect vizual onest); toate foile moștenite intacte. **Trece gate (DATA-CONTINUITY).**
+- Generatoare comise (in-scope, reproductibile): `c13/build_html_studiu_c13.py`, `c13/build_date_master_c13.py`.
 
-## 3. FIȘIERE MODIFICATE / CREATE
-- `c13/build_html_studiu_c13.py` (creat, comis).
-- `_brain/c13/CLAUDE-TO-BRAIN.md` (acest raport).
-- `c13/HTML-Studiu-...html` generat LOCAL, NEcomis (B2).
-- Sistem, alte construcții, alte `_brain/cXX` = NEATINSE.
+## 3. REZULTAT GATE (măsurătoare)
+`gate_v20.py 13 c13 c01`: **✓✓✓ GATE PASS — toate verificările au trecut** pe livrabilele prezente (2/5). Cele 3 HTML lipsă (Editor-Studiu, Video, Editor-Video) sunt notate „lipsă" dar NU produc FAIL pe conținut. Cele 6 clase de verificări (no-clone, identity, brand, structure, ..., data-continuity) trec pe Studiu + Date_MASTER.
 
-## 4. VALIDĂRI RULATE
-B1 `pre_generation_check.py 13` · parse JS · structură (etape/pași/fenomene/verificări/prompturi) · 18 step-titles LOCKED · em/en-dash · reziduu C12 · B2 `gate_v20.py 13 c13 c01`.
+## 4. DECIZIILE BRAIN APLICATE
+- **Nume Date_MASTER (decizia 1):** generat `Date_MASTER-C13.xlsx` (numele acceptat de gate), nu `-Vizualizare`. Gate-ul îl recunoaște, DATA-CONTINUITY PASS.
+- **Hero (decizia 2):** hov-object = `VIZUAL` (CUVÂNT LOCKED). check_identity premium trece („OBIECTUL CONSTRUCȚIEI · C13" + mobile-topbar slug). Tema „forma adevărată" rămâne doar în copy intern (placeholder hero), nu ca identitate de gate.
 
-## 5. REZULTATE VALIDĂRI
-**Tot ce e disponibil PASS, mai puțin B2 care nu poate rula:**
-- B1 `pre_generation_check 13`: **PASS (exit 0)**, 3/3 checks.
-- JS intact: toate funcțiile cheie prezente, 1 bloc `<script>` balansat, body/html balansate. **PASS**
-- Structură: 18 pași, 6 etape, 6 fenomene SCENA, 8 verificări finale, 2 prompturi. **PASS**
-- 18 step-titles LOCKED: **18/18 verbatim**. **PASS**
-- em/en-dash: **0**. **PASS**
-- reziduu C12 în body: **0**. **PASS**
-- **B2 `gate_v20.py 13`: ERROR** → „IDENTITATE_TEHNICA pentru C13 nu e definita."
+## 5. CUM AM PĂSTRAT C13 = OBIECT VIZUAL ONEST (nu dashboard)
+- Studiu: handoff LOCKED „C13 face obiectul adevărat. C14 îl așază în pagină.", next-section = C14 Compunerea, prompturile interzic pagina/dashboard/mesaj/livrare.
+- Date_MASTER foaia `Vizualizare` = SUPORT: rezultatul de vizualizat (citit din model) + forma onestă vs forma care minte (axă de la zero vs trunchiată) + verificarea (vizual citit singur = cifra brută) + cele 6 reguli + handoff. ZERO chart/dashboard/pagină. Cifrele business trăiesc în Excel (R-V02.15 respectat în HTML).
 
-## 6. CUM AM PĂSTRAT C13 = OBIECT VIZUAL ONEST (nu dashboard)
-- hero system-map T4: `VIZUALIZARE (activ) · COMPUNERE · SINTETIZARE · LIVRARE`.
-- handoff PAS 18 LOCKED: „C13 face obiectul adevărat. C14 îl așază în pagină."
-- next-section = `C14 · Compunerea` (organizarea spațială predată explicit la C14).
-- prompturile interzic explicit „nu compune o pagină / dashboard", „nu formula mesajul", „nu trece la livrare".
-- zero cifre business statice (R-V02.15): vizualele demonstrează forma onestă vs înșelătoare, se verifică contra cifrei brute, fără valori finale afișate.
-- zero „de ce"/cauză ca identitate (graniță C12 ținută).
+## 6. VALIDĂRI RULATE + REZULTATE
+B1 `pre_generation_check 13` PASS · B2 `gate_v20 13 c13 c01` PASS (pe 2/5) · sumă conservată delta 0 · 18/18 step-titles · 0 em-dash · 0 reziduu C12 · scope: doar `c13/**` + acest raport.
 
-## 7. BLOCAJUL (precis) + REȚETĂ DE DEBLOCARE
-**Cauză:** `gate_v20.py` (gate-ul B2, BLOCANT) încarcă identitatea construcției dintr-un **dict hardcoded** (`load_identitate`, linia ~1064: „in acest sample: dict hardcoded"). Dictul `IDENTITATI` are C01-C12, dar **NU are C13**. La `load_identitate(13)` → None → ERROR + `sys.exit(1)`. `gate_v20.py` e fișier sistem, INTERZIS în chatul de construcție C13. Repararea = task SYSTEM.
-
-**Deblocare (de executat din Chat Andrei SYSTEM, nu aici):**
-- **(A) `_system/generatoare/gate_v20.py`** — adaugă în dictul `IDENTITATI` din `load_identitate` intrarea C13, pe tiparul C11/C12:
-```python
-'13': {
-    'cod': 'C13', 'nume_hero_caps_rand1': 'VIZUAL',
-    'nume_slug': 'Vizualizare',
-    'meta_val_treapta': '<b>VIZUALIZARE</b> · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)'
-},
-```
-- **(B) recomandare durabilă (opțional, dar curată):** fă `load_identitate` să PARSEZE `referinte/IDENTITATE-TEHNICA.md` (deja populat cu C13) în loc de dict hardcoded, ca să nu mai fie nevoie de o intrare hardcoded la fiecare construcție nouă (C14-C20 vor lovi același blocaj).
-- **(C)** după (A), rulează `gate_v20.py 13 c13 c01` și confirmă PASS, apoi BRAIN re-emite mandatul de generare; chatul C13 generează cele 7 artefacte și le comite cu B2 PASS.
-
-**Notă aliniere identitate:** dictul gate folosește CUVÂNTUL ca `nume_hero_caps_rand1` (C11=CLASAMENT, C12=CAUZA) → pentru C13 = `VIZUAL`. În IDENTITATE-TEHNICA.md am pus `nume_hero_caps_rand1: FORMA` (hero tematic „FORMA ADEVĂRATĂ"). Când gate-ul rulează, voi alinia hero-ul Studiu cu valoarea pe care SYSTEM o fixează în dict (VIZUAL vs FORMA), ca check_identity să treacă. Decizia hero finală = a SYSTEM/BRAIN; o aplic la regenerare.
+## 7. CE RĂMÂNE (de generat în continuare)
+- `HTML-Editor-Studiu-Excel-13-Vizualizare.html` (companion sincronizat cu Studiu, regula COMPANION) — imediat următorul.
+- `HTML-Video-Excel-13-Vizualizare.html` (broadcast, body autorat).
+- `HTML-Editor-Video-Excel-13-Vizualizare.html` (companion Video).
+- `FILM-Excel-13-Vizualizare.docx` (narativ 6 etape).
+- `c13/assets/` (hero + exec-stage; imaginile externe, ARHITECT/Banana, până atunci placeholder ca la C09-C12).
 
 ## 8. COMMIT SHA
 (completat la commit, mai jos)
 
-## 9. VERDICT FINAL
-**Generarea C13 e funcțională și corectă** (Studiu generat, axat ONESTITATEA FORMEI, validat de B1 + toate check-urile de conținut). Blocajul NU e în artefact, ci în **gate-ul B2 care nu e C13-ready** (dict hardcoded fără C13), exact clasă cu blocajul B1 rezolvat anterior. Per regula absolută B2, nu comit artefacte canonice fără gate PASS, și nu ating gate-ul (system, interzis).
-
-**Următorul pas:** Chat Andrei SYSTEM adaugă C13 în `gate_v20.py` (rețeta A, ideal + B), rulează gate-ul până la PASS, apoi BRAIN re-emite generarea. La acel `sync`, generez cele 7 artefacte cap-coadă cu B2 PASS și le comit. Body-ul Studiu C13 e deja autorat (în build script), deci regenerarea e rapidă.
-
----
-
-## ADENDĂ SYSTEM · C13 B2 GATE READY
-
-**STATUS: SYSTEM_C13_B2_GATE_READY**
-
-Blocajul B2 din raportul de mai sus a fost rezolvat de Chat Andrei SYSTEM. Gate-ul `gate_v20.py` recunoaște acum identitatea C13.
-
-**Fișiere citite:** `_brain/c13/BRAIN-TO-CLAUDE.md`, `_brain/c13/CLAUDE-TO-BRAIN.md`, `_system/generatoare/gate_v20.py`, `_system/referinte/IDENTITATE-TEHNICA.md`.
-
-**Fișier modificat:** `_system/generatoare/gate_v20.py` (+ acest addendum în `_brain/c13/CLAUDE-TO-BRAIN.md`).
-
-**Ce s-a adăugat:** intrarea `'13'` în dictul `IDENTITATI` din `load_identitate`, pe tiparul C11/C12:
-`cod: C13 · nume_hero_caps_rand1: VIZUAL · nume_slug: Vizualizare · meta_val_treapta: VIZUALIZARE · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)`.
-
-**Verificare:** `load_identitate('13')` întoarce dictul C13 (nu mai e None). `gate_v20.py 13 c13 c01` NU mai dă „IDENTITATE_TEHNICA pentru C13 nu e definita" — trece de identitate și raportează corect doar artefactele încă negenerate (`Date_MASTER-C13.xlsx` etc.), normal pentru `c13/` care are doar build script-ul.
-
-**Commit SHA:** `874830d`.
-
-**Confirmare:** C13 poate REINTRA în generare. La următorul mandat de generare, gate-ul B2 rulează pentru C13 (eroarea de identitate e eliminată); generez cele 7 artefacte și le comit cu B2 PASS.
-
-**Reziduuri de aliniat la generare (nu blochează, dar de rezolvat în chatul de generare):**
-1. **Nume fișier xlsx:** gate-ul așteaptă `Date_MASTER-C13.xlsx` (tiparul C01-C12), dar IDENTITATE_TEHNICA + mandatul cer `Date_MASTER-C13-Vizualizare.xlsx`. La generare aliniez numele cu ce verifică gate-ul (sau BRAIN decide convenția).
-2. **Hero `nume_hero_caps_rand1`:** gate = `VIZUAL`; HTML-Studiu generat are hero tematic „FORMA ADEVĂRATĂ" / hov-object „VIZUALIZARE" (conține „VIZUAL"). La regenerare verific că `check_identity` trece, ajustez hero-ul dacă e nevoie.
-
-**Recomandare durabilă (rețeta B, neimplementată — în afara acestui task):** `load_identitate` rămâne dict hardcoded, deci **C14-C20 vor lovi același blocaj B2 la prima lor generare**. Un task SYSTEM viitor ar trebui să facă `load_identitate` să parseze `IDENTITATE-TEHNICA.md`, eliminând nevoia de intrare hardcoded per construcție.
+## 9. VERDICT
+**Generarea C13 e validată cap-coadă pe drumul critic:** primele 2 artefacte trec `gate_v20`, ambele decizii BRAIN aplicate, axa ONESTITATEA FORMEI respectată, C13 ținut ca obiect vizual onest (zero dashboard). Nu mai e niciun blocaj de tooling (B1+B2 ready). Rămâne autorarea celor 5 artefacte (Editor-Studiu companion, Video, Editor-Video, FILM, assets), pe pattern-ul deja validat. La următorul `sync` continui generarea până la setul complet + gate PASS pe 5/5, apoi comit toate artefactele canonice și raportez `CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`.

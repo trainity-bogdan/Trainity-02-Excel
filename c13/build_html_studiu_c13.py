@@ -48,7 +48,7 @@ BODY = r'''<body>
             <header class="cover">
         <div class="hero-visual">
           <img class="hero-visual-img" src="__HERO__" alt="Vizualizare C13: un rezultat corect produs de analiza capata o forma vizuala onesta, verificata contra cifrei brute">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C13</span><span class="hov-object">VIZUALIZARE</span></div>
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C13</span><span class="hov-object">VIZUAL</span></div>
         </div>
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cum dau unui rezultat forma care îl face adevărat și vizibil dintr-o privire?</span></div>
         <div class="hero-tiernav">
