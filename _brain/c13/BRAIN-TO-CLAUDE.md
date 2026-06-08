@@ -1,169 +1,83 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-MANDAT_C13_SPEC_11_SLOT_FULL
+BRAIN_C13_SPEC_11_SLOT_APPROVED_FOR_ARCHITECT_FREEZE
 
 ## MANDAT-ID
-C13-SPEC-11-SLOT-002
+C13-SPEC-11-SLOT-003
 
 ## RAPORT CLAUDE ANALIZAT
-BRAIN a analizat raportul `CLAUDE_C13_SPEC_11_SLOT_REPORT_READY` din `_brain/c13/CLAUDE-TO-BRAIN.md`.
+BRAIN a analizat raportul `CLAUDE_C13_SPEC_11_SLOT_FULL_READY` din `_brain/c13/CLAUDE-TO-BRAIN.md`.
 
 ## VERDICT BRAIN
-PASS CONCEPTUAL CU MANDAT DE SPEC.
+PASS.
 
-Raportul Claude este valid ca direcție conceptuală pentru C13. Axa, granițele, mantra, AHA-ul și formula de validare sunt compatibile cu NOMENCLATURA LOCKED, doc 13 T4 și rolul C13 în treaptă.
+SPEC-ul C13 este complet, coerent și pregătit pentru confirmarea ARHITECTULUI.
+
+Nu există mandat nou de execuție până la confirmarea explicită a ARHITECTULUI pentru freeze SPEC C13.
 
 ## APROBĂRI
-1. Axa C13 rămâne: **ONESTITATEA FORMEI**.
-2. Mantra rămâne: **Nu desenez frumos. Desenez adevărat.**
-3. AHA rămâne: **Forma greșită minte cu cifra corectă.**
-4. Formula de validare rămâne: un vizual este corect dacă, citit singur, produce aceeași concluzie ca cifra brută din care vine.
-5. Granița C13/C14 este confirmată:
-   - C13 = un obiect vizual onest.
-   - C14 = organizarea spațială a obiectelor vizuale.
-6. C13 NU este dashboard, NU este layout, NU este pagină și NU este storytelling.
+1. STATUS-ul raportului este corect: `CLAUDE_C13_SPEC_11_SLOT_FULL_READY`.
+2. Intriga este aprobată:
+   - "Cifra e corectă. Graficul minte."
+3. Mantra este aprobată:
+   - "Nu desenez frumos. Desenez adevărat."
+4. AHA-ul este aprobat:
+   - "Forma greșită minte cu cifra corectă."
+5. Miza este aprobată:
+   - "O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
+6. WOW-ul este aprobat:
+   - "Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
+7. Motto-ul este aprobat:
+   - "Forma nu se nimerește. Se alege."
+8. Cele 6 fenomene sunt aprobate ca perechi deformare vizuală → corecție onestă.
+9. Cele 18 step-titles sunt aprobate ca schelet conceptual 6 etape × 3 pași.
+10. Granițele C13/C12/C14/C15/C16 sunt corecte.
 
 ## DECIZII BRAIN
 
-### DECIZIE 1 · Pași
-Cele 14 beats propuse sunt acceptate doar ca materie conceptuală intermediară, NU ca formă finală.
+### DECIZIE 1 · Slug
+Se aprobă slug-ul:
 
-Pentru SPEC, reconciliază obligatoriu la scheletul canonic:
-- 6 etape
-- 3 pași per etapă
-- total 18 step-titles
+`Vizualizare`
 
-Nu pierde conținutul celor 14 beats. Îl redistribui în 18 pași.
+Motiv: este forma clară a construcției, compatibilă cu fișierele viitoare și mai puțin ambiguă decât `Vizual`.
 
-### DECIZIE 2 · Livrabil conceptual C13
-C13 livrează **obiect vizual onest**, nu dashboard.
+### DECIZIE 2 · SPEC 11 SLOT
+SPEC-ul este acceptat ca formă finală conceptuală C13, cu statut:
 
-Dacă găsești în doc 13 / 06-MAP formulări de tip „dashboard XLSX” pentru C13, nu modifica sistemul. Marchează tensiunea în raport ca posibilă CERERE SYSTEM, dar pentru SPEC C13 lucrează cu delimitarea:
+`READY_FOR_ARCHITECT_FREEZE`
 
-C13 = obiect vizual onest.
-C14 = compunerea paginii / dashboard-ului.
+### DECIZIE 3 · Tensiunea dashboard
+Tensiunea semnalată de Claude este reală și validă:
 
-### DECIZIE 3 · Intrigă
-Folosește ca intrigă principală:
+- C13 = obiect vizual onest.
+- C14 = compunerea paginii / dashboard-ului.
 
-**Cifra e corectă. Graficul minte.**
+Mențiunile din doc 13 / 06-MAP despre „dashboard XLSX la C13” trebuie tratate separat prin CERERE SYSTEM, nu în chatul C13.
 
-Formula mai lungă „Un grafic pare obiectiv...” poate fi folosită ca explicație în dezvoltarea intrigii, nu ca headline principal.
-
-### DECIZIE 4 · Fenomene
-Păstrează logica „minciună de formă → corecție onestă”, dar construiește fenomenele și constructiv, nu doar defensiv.
-
-C13 trebuie să aibă 6 fenomene centrale:
-1. Axa care exagerează.
-2. Tipul de grafic nepotrivit.
-3. Scala care inventează relații.
-4. Codarea vizuală care sugerează fals.
-5. Agregarea care ascunde variația.
-6. Eticheta / unitatea / contextul lipsă, care obligă cititorul să ghicească.
-
-## RISCURI DE EVITAT ÎN SPEC
-1. Să transformi C13 în lecție de design grafic.
-2. Să transformi C13 în dashboard.
-3. Să transformi C13 în C12 prin explicații de tip „de ce”.
-4. Să transformi C13 în C15 prin formularea mesajului esențial.
-5. Să folosești prea mult limbaj moralizator despre „minciună” fără construcție operațională. Minciuna este hook-ul, dar competența este alegerea formei oneste.
-6. Să faci fenomenele doar listă de greșeli. Ele trebuie să devină reguli de lucru.
+## RISCURI VERIFICATE
+1. C13 nu intră în design grafic decorativ.
+2. C13 nu intră în dashboard / layout.
+3. C13 nu fură interpretarea din C12.
+4. C13 nu formulează mesajul esențial din C15.
+5. C13 nu livrează raportul final, acesta rămâne C16.
+6. Hook-ul cu „minciuna” rămâne operațional, nu moralizator.
 
 ## MANDAT CĂTRE CLAUDE
-Construiește SPEC 11 SLOT complet pentru C13 VIZUALIZAREA.
+Nu executa nimic nou până la confirmarea explicită a ARHITECTULUI.
 
-Raportul trebuie scris în:
+Dacă ARHITECT confirmă freeze SPEC C13, următorul mandat BRAIN va cere:
 
-`_brain/c13/CLAUDE-TO-BRAIN.md`
-
-și să conțină obligatoriu:
-
-1. STATUS
-2. SLUG
-3. INTRIGA
-4. PROBLEMELE
-5. MIZA
-6. MANTRA
-7. WOW
-8. MOTTO
-9. FENOMENE
-10. STEP-TITLES, 18 pași, grupați în 6 etape × 3 pași
-11. GRANIȚE C13/C12/C14/C15/C16
-12. TENSIUNI / CERERI SYSTEM, dacă apar
-13. VERDICT DE AUTO-AUDIT
-
-## CERINȚE DE CONȚINUT
-
-### SLUG
-Propune un slug scurt, compatibil cu fișierele viitoare C13.
-
-### INTRIGA
-Intriga principală trebuie să plece de la:
-
-**Cifra e corectă. Graficul minte.**
-
-### PROBLEMELE
-Problemele trebuie să fie operaționale, nu abstracte. Exemple de direcții acceptate:
-- aceeași cifră produce concluzii diferite prin forme diferite
-- graficul pare obiectiv, dar forma este aleasă de autor
-- ochiul crede forma înainte să verifice cifra
-- AI poate genera graficul, dar nu garantează onestitatea lui
-- decidentul crede că vede datele, dar vede o interpretare vizuală prost aleasă
-
-### MIZA
-Miza trebuie să rămână business:
-
-O decizie este luată cu încredere pe o imagine falsă construită peste date corecte.
-
-### WOW
-WOW-ul trebuie să fie demonstrațional:
-
-Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția.
-
-### MOTTO
-Propune un motto scurt, diferit de mantra, orientat spre controlul formei.
-
-### FENOMENE
-Cele 6 fenomene trebuie formulate ca perechi:
-
-- deformare vizuală
-- corecție onestă
-
-### STEP-TITLES
-Construiește 18 step-titles, fără cifre business statice, fără dashboard, fără pagină finală.
-
-Etapele canonice:
-1. REALITATE
-2. INVESTIGAȚIE
-3. TRANSFORMARE
-4. VERIFICARE
-5. STABILIZARE
-6. CONFIRMARE
-
-Fiecare etapă are exact 3 pași.
+1. marcarea SPEC-ului C13 ca înghețat în raportul de lucru C13,
+2. pregătirea blueprint-ului C13,
+3. menținerea strictă a graniței C13 = obiect vizual onest, nu dashboard.
 
 ## FIȘIERE PERMISE
-Ai voie să scrii doar în:
-- `_brain/c13/CLAUDE-TO-BRAIN.md`
+Până la următorul mandat explicit, Claude nu modifică nimic.
 
-## FIȘIERE INTERZISE
-Nu modifica:
-- `CLAUDE.md`
-- `README.md`
-- `STARE-CURENTA.md`
-- `index.html`
-- `_system/**`
-- `governance/**`
-- `constructii.xlsx`
-- `c01/**` până la `c20/**`
-- orice HTML
-- orice Date_MASTER
-- orice FILM
-- orice fișier din alte foldere `_brain/cXX`
-
-## STATUS AȘTEPTAT ÎN RAPORT
-`CLAUDE_C13_SPEC_11_SLOT_FULL_READY`
+## STATUS AȘTEPTAT
+`WAITING_FOR_ARCHITECT_FREEZE_C13`
 
 ## CERERE DIRECTĂ
-La următorul `sync`, produce SPEC 11 SLOT complet C13, exclusiv conceptual, fără implementare.
+Așteaptă confirmarea ARHITECTULUI pentru freeze SPEC C13.
