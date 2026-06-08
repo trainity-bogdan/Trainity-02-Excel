@@ -75,3 +75,25 @@ cu cele 9 elemente narative (toate înghețate deja, de transcris din SPEC-ul C1
 **GENERARE BLOCATĂ legitim, conform B1 (R-V03.55).** Nu am forțat gate-ul și nu am atins sistemul. Blocajul NU e o eroare a SPEC-ului (care e solid și înghețat conceptual), ci o **datorie de înregistrare SYSTEM**: SPEC-ul C13 trăiește în `_brain/c13` + `doc 13`, dar gate-ul de pre-generare îl cere în `SISTEM_TRAINITY-versiuni.md` + `IDENTITATE-TEHNICA.md`. Acestea sunt fișiere `_system/**`, deci task SYSTEM, nu C13.
 
 **Următorul pas:** Chat Andrei SYSTEM execută rețeta (A)+(B), rulează gate-ul până la exit 0, apoi BRAIN re-emite mandatul de generare. La acel `sync`, generez C13 complet (7 artefacte, COPY+MODIFY din c12/c01, axat ONESTITATEA FORMEI, fără dashboard). Eventual, înainte, propun cele 8 FINAL-LABELS ca SPEC-ul de registru să fie 9/9.
+
+---
+
+## ADENDĂ SYSTEM · C13 PRE-GENERATION
+
+**STATUS: SYSTEM_C13_PRE_GENERATION_READY**
+
+Deblocajul cerut de raportul de blocaj a fost executat de Chat Andrei SYSTEM. Gate-ul B1 de pre-generare trece acum complet.
+
+**Fișiere citite:** `_brain/c13/BRAIN-TO-CLAUDE.md`, `_brain/c13/CLAUDE-TO-BRAIN.md`, `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, `_system/referinte/IDENTITATE-TEHNICA.md`, `_system/generatoare/pre_generation_check.py` (pentru schema câmpurilor).
+
+**Fișiere modificate:** `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, `_system/referinte/IDENTITATE-TEHNICA.md` (+ acest addendum în `_brain/c13/CLAUDE-TO-BRAIN.md`).
+
+**Secțiuni adăugate:**
+- `## SPEC C13 - VIZUALIZAREA [Status: INGHETAT 08.06.2026]` (stub-ul vechi „VIZUALIZARE EXECUTIVA [NEGENERAT]" înlocuit), cu cele 9 elemente: intriga, problemele, miza, mantra/AHA, motto, 18 step-titles, 2 prompturi, 8 final-labels, 6 fenomene + granițe.
+- `## IDENTITATE_TEHNICA C13 · VIZUALIZAREA` pe șablonul C12, cu toate câmpurile obligatorii (cod, treapta_nr, nume_slug, nume_hero_caps_rand1, meta_val_treapta, footer_text, topbar_text, localStorage_studiu, localStorage_video, next_cod, next_nume_title) + restul schemei adaptate (slug Vizualizare, output_filename Date_MASTER-C13-Vizualizare.xlsx, next_cod C14).
+
+**Rezultat `pre_generation_check.py 13`:** EXIT 0. CHECK 1 (R-V03.55 SPEC) PASS · CHECK 2 (L142 IDENTITATE_TEHNICA) PASS · CHECK 3 (L143 FENOMENE vs asset fizic) PASS.
+
+**Commit SHA SYSTEM:** `92a44ec` (integrat în origin/main la `b834bd2`).
+
+**Confirmare:** C13 poate REINTRA în generare. La următorul mandat de generare (BRAIN re-emite C13-GENERATE-ARTIFACTS), gate-ul B1 nu mai blochează; chat-ul C13 poate produce cele 7 artefacte.
