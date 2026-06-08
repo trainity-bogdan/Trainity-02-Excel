@@ -396,6 +396,34 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c14_study_v1
 - localStorage_video: trainity_c14_video_v1
 
+## IDENTITATE_TEHNICA C15 · SINTETIZAREA
+
+- cod: C15
+- treapta_nr: 4
+- treapta_nume: RAPORTARE
+- treapta_pozitie: 3 din 4 (Vizualizare, Compunere, Sintetizare, Livrare)
+- nume_hero_caps_rand1: MESAJUL
+- nume_hero_caps_rand2: ESENȚIAL
+- nume_hero_caps: MESAJUL ESENȚIAL
+- nume_title_case: Sintetizarea
+- nume_slug: Sintetizare
+- input_filename: Date_MASTER-C14-Compunere.xlsx
+- output_filename: Date_MASTER-C15-Sintetizare.xlsx
+- meta_val_treapta: VIZUALIZARE · COMPUNERE · <b>SINTETIZARE</b> · LIVRARE (RAPORTARE)
+- next_cod: C16
+- next_nume_title: Livrarea
+- next_label: TREAPTA 4 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C15 SINTETIZARE · SINTEZĂ
+- topbar_text: Sistemul 02 - Excel · C15 · Sintetizare
+- mobile_topbar: C15 · Sintetizare
+- nav_brand_label: PACK 02 EXCEL · C15
+- nav_brand_title: MESAJUL ESENȚIAL
+- title_studiu: C15 · Sintetizare · Trainity
+- title_video: C15 · SINTETIZARE · BROADCAST
+- localStorage_studiu: trainity_c15_study_v1
+- localStorage_video: trainity_c15_video_v1
+- nota_hero: PROVIZORIU — nume_hero_caps (MIZĂ HERO descriptor) derivat din axa locked „mesajul esențial"; NU e înghețat explicit în SPEC-ul C15. De confirmat/autorat de BRAIN (ca „FORMA ADEVĂRATĂ" C13 / „ORDINEA PRIVIRII" C14) înainte de generare.
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination

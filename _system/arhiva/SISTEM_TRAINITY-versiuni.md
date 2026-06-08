@@ -2811,8 +2811,84 @@ NOTĂ TEHNICĂ 11 vs 18: SPEC-ul conceptual C14 rămâne la 11 step-titles (deci
 ### GRANIȚE
 C13 = obiectul vizual onest (atomul). C14 = organizarea spațială a mai multor obiecte într-o pagină cu ierarhie (ansamblul). C15 = sinteza mesajului esențial. C16 = livrarea decision-ready. Handoff: "C13 face obiectul adevărat. C14 îl așază în pagină. C14 predă pagina coerentă către C15." C14 NU desenează obiectul (C13), NU formulează mesajul (C15), NU livrează raportul (C16), NU face estetică, NU se autorizează ca dashboard.
 
-## SPEC C15 - SINTETIZAREA   [Status: NEGENERAT]
-> Nume aliniat la nomenclatura LOCKED V70 (stale pre-V70: "POVESTEA DATELOR"). SPEC 11-slot CONCEPTUAL v1.0 = freeze conceptual in governance/TRAINITY_ARCHITECTURE_BIBLE.md sectiunea T4 SPEC C15 (autoritate conceptuala) + doc 13. Acest registru de generare ramane NEGENERAT: elementele de generare (SLUG, PROBLEMELE, FENOMENE, 18 STEP-TITLES, 2 prompturi) NU sunt definite; se autoreaza la SEED-ul de generare (freeze conceptual != generare).
+## SPEC C15 - SINTETIZAREA   [Status: INGHETAT 08.06.2026]
+
+Axă: SINTEZA — extragerea și formularea mesajului ESENȚIAL al paginii. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
+Decizie locked: C15 = formularea mesajului esențial (headline / so-what) pe care pagina o dovedește. SINTEZA NU ESTE REZUMAT. C15 nu descoperă mesajul, îl formulează. Output = o propoziție, NU layout (C14), NU decizie (C16), NU analiză nouă (T3). SLUG: sintetizarea. SPEC 11-slot conceptual = autoritate governance/TRAINITY_ARCHITECTURE_BIBLE.md §T4 SPEC C15 (verbatim, neatins).
+Întrebarea-ax (HERO): "Cum transform o pagină într-o singură frază care contează?"
+
+### 1. INTRIGA
+"Un raport corect, complet, frumos aranjat. Îl deschizi și nu știi ce să reții. Cu cât e mai plin, cu atât spune mai puțin." (ancoră scurtă, BOMBĂ LOCKED: "O pagină impecabilă. Și niciun mesaj.")
+
+### 2. PROBLEMELE
+- Rapoarte corecte pe care nimeni nu le citește până la capăt.
+- Decidentul întreabă "și ce-i cu asta?" după o pagină întreagă.
+- Fiecare reține altceva din aceeași pagină (sau nimic).
+- Confuzia rezumat (scurtez tot) vs sinteză (spun ce contează).
+- Mesajul există în date, dar nu e formulat nicăieri.
+
+### 3. MIZA
+"Un director nu citește toată pagina. O deschide și întreabă: «și ce-i cu asta?». Are zece rapoarte corecte pe masă și trei minute pentru fiecare. C15 e momentul în care o pagină întreagă capătă o singură frază care spune ce contează din ea, dintr-o privire. Nu o cifră nouă, nu o cauză nouă (acelea vin gata din analiză), ci mesajul: ce trebuie să reții. Fără sinteză, până și cel mai corect raport rămâne mut: arată tot și nu spune nimic. Cu sinteză, decidentul știe în trei secunde ce contează și ce să rețină."
+
+### 4. MANTRA / AHA
+MANTRA: "Nu rezumăm. Sintetizăm."
+AHA: "O pagină arată. O sinteză spune."
+
+### 5. WOW
+"O pagină întreagă pe care trebuia s-o descifrezi. Acum o singură frază îți spune ce contează, iar pagina o dovedește."
+
+### 6. MOTTO
+"Dintr-o privire, mesajul."
+
+### 7. STEP-TITLES (18, pe 6 etape; phase-tags E1-E6, E5 etichetă C15 = REFORMULARE)
+E1 INPUT — Pagina mută:
+1. Primești pagina coerentă de la C14
+2. Testul celor 3 secunde: ce reține un decident? (încă nimic)
+3. De ce o pagină corectă poate fi mută
+E2 AI — Rezumatul automat:
+4. AI propune un rezumat draft al paginii
+5. Formula: "Rezumatul scurtează tot. Sinteza spune ce contează."
+6. De ce rezumatul nu e încă mesajul
+E3 SINTEZĂ — Mesajul esențial:
+7. Care e singura afirmație pe care pagina o dovedește?
+8. Formulezi headline-ul (so-what) într-o singură frază
+9. Mesajul pentru ACEASTĂ decizie și audiență
+E4 CONTROL — Testul "și ce-i cu asta?":
+10. Filtrul "fără asta, decidentul hotărăște la fel?"
+11. Indicativ, nu decizional (≠C16)
+12. Formulat, nu descoperit (nicio cifră/cauză nouă, ≠T3)
+E5 REFORMULARE — Mesajul se adaptează la schimbare:
+13. Pagina se schimbă (datele s-au actualizat în amonte, în model/T3) → mesajul vechi nu mai e exact
+14. Reformulezi headline-ul, refaci sinteza, NU recalculezi nimic; cifrele rămân ale modelului
+15. Noul mesaj rămâne o singură afirmație susținută de pagină, pe același criteriu: ce contează
+E6 PAYOFF — O pagină a devenit un mesaj:
+16. O pagină coerentă a devenit un mesaj care contează
+17. Mesajul + pagina-dovadă, împreună
+18. Predare către C16 (care îl va încadra pentru decizie)
+OUTPUT C15: o pagină de raport care spune, într-o singură frază, ce contează (mesajul esențial, dovedit de pagină), predată către C16 pentru încadrare de decizie.
+
+### 8. PROMPTURI Copilot (2)
+- Promptul 1 (DRAFT, E2): pe baza raportului, AI propune 3 titluri candidate de o singură frază care spun ce contează pentru decizia/audiența dată. Nu calculează cifre noi, nu explică de ce — formulează din ce e deja în raport. Omul alege și ascute.
+- Promptul 2 (TEST, E4): pentru titlul ales, AI verifică: o singură afirmație? indicativ (nu spune ce să faci)? nu introduce cifră/cauză absentă din raport? trece "fără asta, decidentul hotărăște la fel?". Omul decide forma finală.
+
+### 9. FENOMENE / OPERATII (5: pagină mută -> mesaj esențial)
+- Rezumat vs sinteză: același raport, două ieșiri (scurtare proporțională vs afirmația-cheie).
+- Mesaj dependent de audiență/decizie: aceeași pagină -> mesaj diferit pentru CFO vs operațiuni.
+- Testul "și ce-i cu asta?": o frază care mută decizia vs una care e zgomot.
+- Headline-ul ancorează citirea: aceeași pagină, două headline-uri -> ochiul reține altceva.
+- Mesaj susținut de pagină (pagina îl dovedește) vs afirmație nesusținută.
+
+### 10. VERIFICĂRI (8)
+1. O singură propoziție. 2. Indicativ, nu decizional (≠C16). 3. Nicio cifră/cauză nouă (≠T3). 4. Trece "fără asta, decidentul hotărăște la fel?". 5. Sinteză, nu rezumat. 6. Pagina îl dovedește. 7. Nu rearanjează pagina (≠C14). 8. Verb SINTETIZEZ.
+
+### SUBSTRAT EXCEL (strat MESAJ)
+Date_MASTER-C15 = dashboard moștenit (C13/C14) + strat MESAJ: celulă headline (text formulat de cursant) + linie so-what + legătură la pagina-dovadă. FACE: enunță în cuvinte ce contează; leagă mesajul de dovadă; cel mult inserează într-o frază-șablon o valoare deja calculată în amonte (plasare, nu calcul). NU FACE: nu calculează insight, nu descoperă cauză, nu generează recomandare, nu rearanjează pagina, nu mută C15 în C14/C16/T3. Regula de aur: mesajul citește din pagină, nu produce pagina.
+
+### FORMULA LOCKED
+"Rezumatul scurtează tot. Sinteza spune ce contează."
+
+### GRANIȚE
+C14 = organizarea spațială a paginii (layout). C15 = sinteza mesajului esențial (propoziție). C16 = livrarea decision-ready. Handoff: "C14 predă pagina coerentă. C15 formulează mesajul esențial. C15 predă mesajul + pagina-dovadă către C16." C15 NU organizează pagina (C14), NU numește decizia / nu predă pentru decident (C16), NU descoperă cauză / nu calculează (T3/C12), NU rezumă (rezumat != sinteză).
 ## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]
 
 Axă: RAPORT DECISION-READY. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
