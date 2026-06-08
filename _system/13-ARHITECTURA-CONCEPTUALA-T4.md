@@ -127,7 +127,8 @@ Datoriile T4 din Bible §T4 sunt ÎNCHISE conceptual aici. Rămân ca obligații
 
 ## STARE DE IMPLEMENTARE
 - Arhitectură T4 = ÎNGHEȚATĂ cap-coadă (nomenclatură V70 + Bible §T4 + acest document).
-- C13-C16 = NESTAR. SPEC 11-slot per construcție + blueprint dedicat se creează la SEED-ul fiecăreia, respectând acest SPEC conceptual și cele 5 obligații de autorare.
+- C13-C16: SPEC 11-slot per construcție + blueprint dedicat se înghețață la SEED-ul fiecăreia, respectând acest SPEC conceptual și cele 5 obligații de autorare.
+- **C15 SINTETIZAREA (decizie LOCKED, freeze conceptual v1.0):** SPEC 11-slot ÎNGHEȚAT CONCEPTUAL — SPEC complet în `governance/TRAINITY_ARCHITECTURE_BIBLE.md` → `### §T4 · SPEC C15 SINTETIZAREA`. Nucleu LOCKED: **SINTEZĂ ≠ REZUMAT** (C15 formulează mesajul esențial, nu îl descoperă; output = propoziție, NU layout C14, NU decizie C16). MOTTO LOCKED „Dintr-o privire, mesajul." (template de treaptă T4 „Dintr-o privire, [output]"). **Freeze CONCEPTUAL, NU generare:** SLUG/PROBLEMELE/FENOMENE/STEP-TITLES + blueprint + cele 7 artefacte rămân pentru SEED-ul de generare. Celelalte (C13/C14/C16) se propagă la freeze-ul/înregistrarea fiecăreia.
 - Livrabil per construcție (la generare): Date_MASTER-CNN + 4 HTML + FILM + hero + 6 exec-stage. **Clarificare C13 (decizie LOCKED):** la C13 livrabilul vizual este **obiectul vizual onest** (chart / PivotChart / vizual verificat contra cifrei brute), NU un dashboard. Workbook-ul Excel (Power Pivot / Pivot Tables) la C13 e DOAR suportul pentru construirea și verificarea obiectului vizual, nu dashboard-ul final. Compunerea dashboard-ului / paginii / organizarea spațială începe la C14, care primește obiecte vizuale oneste de la C13 și le așază într-o compoziție. C13 NU este dashboard, layout, pagină sau storytelling.
 
 ---
