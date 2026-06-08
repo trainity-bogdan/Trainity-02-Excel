@@ -1,138 +1,97 @@
 # CLAUDE -> BRAIN C15
 
 ## 1. STATUS
-MANDATE_EXECUTED · SPEC 11-SLOT C15 **FREEZE-READY**.
-Toate locks BRAIN integrate verbatim (AHA, MANTRA, GREȘEALA, nucleu, verb). Rămâne UN singur punct de reconciliere înainte de freeze (MOTTO vs gramatica T4/C13) + confirmarea în bloc a sloturilor neînghețate. Niciun artefact, niciun fișier sistem, fără intrare în `_brain/c13` sau alt `_brain/cYY`.
+**SPEC 11-SLOT C15 = ÎNGHEȚAT CONCEPTUAL (v1.0 LOCKED).**
+Toate cele 13 decizii BRAIN + cele 11 sloturi aprobate sunt integrate verbatim. D-1 (MOTTO) și D-2 (sloturile freeze-ready) rezolvate de BRAIN. **Nu mai cer nicio decizie pentru freeze.** Niciun artefact, niciun fișier sistem, fără intrare în `_brain/c13` sau alt `_brain/cYY`.
 
 ---
 
-## 2. SPEC 11 SLOT C15 FREEZE-READY
+## 2. SPEC 11 SLOT C15 ÎNGHEȚAT CONCEPTUAL (v1.0)
 
-Legendă: **[LOCK BRAIN]** = înghețat deja · **[FREEZE-READY]** = propus final, așteaptă confirmare ARHITECT · **[RECONCILIERE]** = depinde de gramatica T4/C13.
+**C15 SINTETIZAREA · SINTEZĂ · SINTETIZEZ · T4 RAPORTARE**
 
-1. **HERO** [FREEZE-READY]: „Cum transform o pagină într-o singură frază care contează?"
+1. **HERO:** „Cum transform o pagină într-o singură frază care contează?"
+2. **BOMBĂ:** „O pagină impecabilă. Și niciun mesaj."
+3. **GREȘEALA:** „Oamenii rezumă tot. Profesioniștii formulează ce contează."
+4. **AHA (lock S5):** „O pagină arată. O sinteză spune."
+5. **MANTRA:** „Nu rezumăm. Sintetizăm." (cuvânt-cheie galben: *Sintetizăm*)
+6. **WOW:** „O pagină întreagă pe care trebuia s-o descifrezi. Acum o singură frază îți spune ce contează, iar pagina o dovedește."
+7. **MOTTO (slot de treaptă):** „Dintr-o privire, mesajul."
+8. **CINE DEVII:** „Nu mai prezinți tot ce ai. Sintetizezi singura frază care contează."
+9. **PAYOFF:** „O pagină coerentă a devenit un mesaj care contează."
+10. **MIZA:** „Un director nu citește toată pagina. O deschide și întreabă: «și ce-i cu asta?». Are zece rapoarte corecte pe masă și trei minute pentru fiecare. C15 e momentul în care o pagină întreagă capătă o singură frază care spune ce contează din ea, dintr-o privire. Nu o cifră nouă, nu o cauză nouă (acelea vin gata din analiză), ci mesajul: ce trebuie să reții. Fără sinteză, până și cel mai corect raport rămâne mut: arată tot și nu spune nimic. Cu sinteză, decidentul știe în trei secunde ce contează și ce să rețină."
+11. **VERB-SEMNĂTURĂ:** SINTETIZEZ.
 
-2. **BOMBĂ** [FREEZE-READY]: „O pagină impecabilă. Și niciun mesaj."
-
-3. **GREȘEALA** [LOCK BRAIN]: „Oamenii rezumă tot. Profesioniștii formulează ce contează."
-
-4. **AHA (lock S5)** [LOCK BRAIN]: „O pagină arată. O sinteză spune."
-
-5. **MANTRA** [LOCK BRAIN]: „Nu rezumăm. Sintetizăm." (cuvânt-cheie galben: *Sintetizăm*)
-
-6. **WOW** [FREEZE-READY]: „O pagină întreagă pe care trebuia s-o descifrezi. Acum o singură frază îți spune ce contează, iar pagina o dovedește."
-
-7. **MOTTO (slot de treaptă)** [RECONCILIERE]: „Dintr-o privire, mesajul." *(aprobat provizoriu de BRAIN; vezi secțiunea 3)*
-
-8. **CINE DEVII** [FREEZE-READY]: „Nu mai prezinți tot ce ai. Sintetizezi singura frază care contează."
-   *(revizuit: ancoră pe SINTETIZEZ, conform deciziei 6 BRAIN — înainte folosea „formulezi")*
-
-9. **PAYOFF** [FREEZE-READY]: „O pagină coerentă a devenit un mesaj care contează."
-
-10. **MIZA** [FREEZE-READY]: „Un director nu citește toată pagina. O deschide și întreabă: «și ce-i cu asta?». Are zece rapoarte corecte pe masă și trei minute pentru fiecare. C15 e momentul în care o pagină întreagă capătă o singură frază care spune ce contează din ea, dintr-o privire. Nu o cifră nouă, nu o cauză nouă (acelea vin gata din analiză), ci mesajul: ce trebuie să reții. Fără sinteză, până și cel mai corect raport rămâne mut: arată tot și nu spune nimic. Cu sinteză, decidentul știe în trei secunde ce contează și ce să rețină."
-    *(revizuit: „unde să se uite" -> „ce contează", ca să nu existe ecou spațial C14)*
-
-11. **VERB-SEMNĂTURĂ** [LOCK BRAIN]: **SINTETIZEZ** (ancoră în MANTRA „Sintetizăm" + CINE DEVII „Sintetizezi"; substantivul SINTEZĂ în AHA + MIZA). *a formula* = permis DOAR ca explicație semantică secundară (apare în GREȘEALA locked + în seed), niciodată ca înlocuitor al lui SINTETIZEZ.
+*Notă canonică:* textul de mai sus e forma cu diacritice (forma livrabilă); coincide cu „SPEC 11 SLOT APROBAT PENTRU FREEZE" din mandat. Sloturile NU se mai redeschid fără decizie explicită de arhitectură.
 
 ---
 
-## 3. MOTTO T4 / C13 RECONCILIERE (doar pe surse permise, fără `_brain/c13`)
+## 3. NUCLEU C15 LOCKED
 
-**Ce am putut deriva din autoritățile permise:**
-- Doc 13 (autoritate T4): întrebarea treptei = „Cum vede altcineva, **dintr-o privire**, ce are de decis?" -> fraza-semnătură a treptei T4 = **„dintr-o privire"**.
-- Bible §T4: confirmă „Întrebarea treptei: «Cum vede altcineva, **dintr-o privire**?»".
-- Doc 13 (output-uri per construcție): C13 = vizual corect/adevăr · C14 = pagină coerentă · C15 = **afirmația esențială (mesajul)** · C16 = ce e de decis.
+> **C15 SINTETIZAREA** ia o pagină coerentă (C14) și FORMULEAZĂ mesajul ei esențial — o singură afirmație (headline / so-what) pe care pagina o dovedește. **SINTEZA NU ESTE REZUMAT:** rezumatul scurtează tot proporțional (automatizabil); sinteza alege și enunță SINGURUL mesaj care contează pentru această decizie și audiență — judecata umană, „cea mai umană din treaptă". **C15 nu descoperă mesajul, îl formulează** (pilon T4: T4 consumă răspunsul produs de T3, nu îl naște). Output = o propoziție, nu un layout (C14), nu un cadru de decizie (C16).
 
-**Derivarea formei generice T4 (slot de treaptă) — analog gramaticii T3:**
-```
-T4 MOTTO = „Dintr-o privire, [output-ul construcției]."
-  C13 -> „Dintr-o privire, adevărul."
-  C14 -> „Dintr-o privire, pagina."
-  C15 -> „Dintr-o privire, mesajul."
-  C16 -> „Dintr-o privire, ce e de decis."
-```
-Ancora generică („dintr-o privire") trăiește în slotul de treaptă; variabila („mesajul") e output-ul propriu C15. Exact structura cu două categorii (slot de treaptă generic + slot de construcție specific) pe care a fixat-o gramatica T3.
-
-**Concluzie:** „Dintr-o privire, mesajul." este consistent cu gramatica T4 **așa cum e documentată** în doc 13 + Bible §T4. ✅
-
-**Reziduul de reconciliere (singurul, vezi decizia D-1):** decizia de FORMĂ a slotului de treaptă T4 (o clauză „Dintr-o privire, X." vs două clauze în stil T3 „Întrebi X. Modelul Y.") s-a luat la seed-ul C13 și NU e propagată în doc 13 / Bible §T4. Nu pot verifica forma exactă fără `_brain/c13` (interzis). 
-- Dacă C13 a folosit forma cu o clauză -> „Dintr-o privire, mesajul." e gata de freeze.
-- Dacă C13 a folosit forma cu două clauze -> varianta-oglindă C15: **„Privești o dată. Reții mesajul."** (am evitat „vezi" = ancoră C13 vizualizare). 
-BRAIN reconciliază cu forma reală C13 și alege una; eu nu intru în folderul lor.
+Cele 4 piloane LOCKED:
+1. **SINTEZĂ ≠ REZUMAT** (alegerea mesajului care contează vs scurtare proporțională).
+2. **FORMULARE ≠ DESCOPERIRE** (act retoric vs act analitic; mesajul vine de la T3).
+3. **Output = PROPOZIȚIE** (verbal), nu spațiu (C14), nu decizie-cadru (C16).
+4. **Verb SINTETIZEZ + cuvânt SINTEZĂ**; AHA + MANTRA + MOTTO fixe; FORMULEZ doar explicație secundară.
 
 ---
 
-## 4. NUCLEU CONCEPTUAL LOCKABIL
+## 4. GRANIȚE VERIFICATE C14 / C15 / C16 (slot cu slot)
 
-Propoziția-nucleu (lockable ca identitate C15, gata de oglindit în Bible §T4 / registru):
+- **C14 | C15 = spațiu vs sens.** Verificat: niciun slot nu rearanjează/grupează obiecte pe pagină. HERO/WOW/PAYOFF/MIZA vorbesc despre „pagină" ca INPUT consumat, output-ul lor e mereu „o frază / un mesaj" (verbal), nu un layout. ✅
+- **C15 | C16 = enunț vs decizie-cadru** (cea mai subțire graniță). Verificat: toate sloturile sunt INDICATIVE („o frază care contează", „mesajul"), niciunul nu numește o decizie, nu zice „de hotărât / recomand / pachet pentru decident", nu predă. MIZA folosește „decidentul" doar ca audiență (ca toate MIZA-urile surori), nu ca destinatar al unui pachet C16. ✅
+- **C15 | C12 = formulare vs descoperire** (T4|T3). Verificat: MIZA spune explicit „nu o cifră nouă, nu o cauză nouă (acelea vin gata din analiză)". Niciun slot nu cere întoarcerea în model pentru a calcula/descoperi. ✅
 
-> **C15 SINTETIZAREA · SINTEZĂ · SINTETIZEZ.** Ia o pagină coerentă (C14) și FORMULEAZĂ mesajul ei esențial — o singură afirmație (headline / so-what) pe care pagina o dovedește. **SINTEZA NU ESTE REZUMAT:** rezumatul scurtează tot, proporțional (automatizabil); sinteza alege și enunță SINGURUL mesaj care contează pentru această decizie și audiență (judecata umană, „cea mai umană din treaptă"). **C15 nu descoperă mesajul, îl formulează** — mesajul vine gata de la T3 (pilon T4: T4 consumă răspunsul, nu îl naște). Output = o propoziție (nu un layout = C14, nu un cadru de decizie = C16). AHA: „O pagină arată. O sinteză spune." MANTRA: „Nu rezumăm. Sintetizăm."
-
-Cele 4 piloane lockable:
-1. SINTEZĂ ≠ REZUMAT (scurtare proporțională vs alegerea mesajului care contează).
-2. FORMULARE ≠ DESCOPERIRE (act retoric vs act analitic; mesajul vine de la T3).
-3. Output = PROPOZIȚIE (verbal), nu spațiu (C14) și nu decizie-cadru (C16).
-4. Verb SINTETIZEZ + cuvânt SINTEZĂ; AHA + MANTRA fixe.
+**Concluzie:** cele 11 sloturi respectă toate cele trei granițe. SPEC înghețabil din punct de vedere al granițelor.
 
 ---
 
-## 5. GRANIȚE C14 / C15 / C16 (întărite)
+## 5. VERIFICARE T3 / T4
 
-- **C14 | C15 = spațiu vs sens.** C14 produce un LAYOUT (unde stă fiecare obiect, ierarhie, flux). C15 produce o PROPOZIȚIE (ce spune pagina). **Test:** dacă „sinteza" rearanjează/regrupează ceva pe pagină -> e C14, nu C15. Ortogonale: pagină fără mesaj (dashboard mut) și mesaj fără pagină (afirmație nesusținută) = ambele incomplete.
-- **C15 | C16 = enunț vs decizie-cadru.** (Cea mai subțire graniță din treaptă.) C15 e INDICATIV: „X scade din cauza Y". C16 e DECIZIONAL: „de hotărât: oprim Y? iată pachetul". **Test:** dacă fraza conține „de hotărât / de decis / recomand / acțiunea e / pachet pentru decident" -> e C16. C15 nu numește decizia și nu predă.
-- **C15 | C12 = formulare vs descoperire (graniță inter-treaptă T4|T3, cea mai periculoasă).** C12 DESCOPERĂ cauza din date (analitic). C15 FORMULEAZĂ un răspuns deja cunoscut (retoric). **Test:** dacă pentru a scrie sinteza trebuie să mă întorc în model să calculez/descopăr -> am intrat în T3.
-
-Verificare SPEC propus: ✅ niciun slot nu rearanjează spațiu, nu numește o decizie, nu descoperă înțeles.
-
----
-
-## 6. LIMBAJ INTERZIS / LIMBAJ PERMIS
-
-**INTERZIS — împinge spre ANALIZĂ NOUĂ (T3/C12):** descopăr, aflu, calculez, „de ce", cauză, motiv, interpretez, analizez, găsesc-ca-descoperire, deduc.
-
-**INTERZIS — împinge spre COMPOZIȚIE (C14):** așez, aranjez, grupez, pun în pagină, layout, ierarhie spațială, „unde stă", flux vizual, compun.
-
-**INTERZIS — împinge spre LIVRARE/DECIZIE (C16/T5):** „de hotărât", „de decis", recomand, acțiune, predau, livrez, pachet, decident concret, trimit, distribui, export.
-
-**INTERZIS — împinge spre REZUMAT:** rezum (ca identitate), „pe scurt tot", comprim proporțional, scurtez. *(„rezumăm/rezumă" permis DOAR ca foil în construcția de contrast: „Nu rezumăm..." / „Oamenii rezumă tot...".)*
-
-**PERMIS — identitate C15:** sintetizez, sinteză, mesaj esențial, afirmația-cheie, headline, so-what, „ce contează", spune, o singură frază, cristalizez/distilez (ca metafore de formulare).
-
-**PERMIS — secundar (explicație, nu identitate):** formulez/formulează (explică ce înseamnă a sintetiza; apare în GREȘEALA locked + seed; NU înlocuiește SINTETIZEZ).
-
-**PERMIS — ca foil (vechiul mod / ce face pagina înainte de sinteză):** arată, vede, descifrezi, prezinți, rezumă. Niciodată ca verb-identitate C15.
+- **Pilon T4** (T4 consumă răspunsul T3, nu îl naște): ✅ — întărit chiar în MIZA + nucleu.
+- **C15 NU intră în T3 / NU introduce analiză nouă:** ✅ — limbajul de descoperire (descopăr/aflu/calculez/de ce/cauză/interpretez) e INTERZIS (secțiunea 6) și absent din toate sloturile.
+- **Întrebarea treptei T4** („Cum vede altcineva, dintr-o privire, ce are de decis?"): ✅ — MOTTO „Dintr-o privire, mesajul." instanțiază felia C15 a întrebării.
+- **Mantra treptei** („Nu arăt tot. Arăt ce contează."): ✅ — aplicată la altitudinea C15 = „spun doar afirmația-cheie".
+- **Test 2030:** ✅ — C15 ancorat pe judecata umană (alegerea mesajului), nu pe actul automatizabil (rezumatul draft). Cea mai umană construcție din T4.
+- **Condițiile de acceptare ale mandatului:** SPEC marcat înghețat ✅ · nicio decizie suplimentară cerută ✅ · SINTEZĂ nu rezumat ✅ · formulează, nu reorganizează ✅ · nu e livrare ✅ · nu e analiză nouă ✅ · SINTETIZEZ + SINTEZĂ ✅ · AHA/MANTRA/MOTTO neschimbate ✅ · strict conceptual ✅.
 
 ---
 
-## 7. RISCURI RĂMASE
+## 6. LIMBAJ LOCKED / LIMBAJ INTERZIS
 
-- **RR-1 (singurul blocant de freeze): forma slotului de treaptă T4 (MOTTO)** depinde de ce a înghețat C13; nedocumentată în autoritățile permise. Atenuat: ancora „dintr-o privire" e derivată din doc 13 + Bible; ofer și varianta cu două clauze. Decizie D-1.
-- **RR-2: C15|C16 (cea mai subțire graniță)** — de ținut ferm la blueprint; limbajul interzis (sect. 6) o protejează la nivel de SPEC.
-- **RR-3: SINTEZĂ vs REZUMAT** trebuie predată explicit la implementare (contrastul e nucleul, nu se subînțelege). Atenuat de AHA + MANTRA + GREȘEALA, toate construite pe acest contrast.
-- **RR-4 (coexistență, NU contradicție — o documentez ca să nu fie semnalată drift): „formulează" în GREȘEALA (locked) + regula „SINTETIZEZ e verbul-semnătură".** Rezolvat prin decizia 6 BRAIN: „formulează" = explicație semantică în slotul de contrast; SINTETIZEZ rămâne ancora identității (MANTRA/CINE DEVII). Nu necesită decizie; e regulă în secțiunea 6.
-- **RR-5: saturația „Oamenii/Profesioniștii"** (GREȘEALA o folosește, acceptată de BRAIN). Risc moștenit T4, semnalat în doc 13; rămâne ca atare prin decizie BRAIN.
+**LOCKED — identitate C15 (de folosit la generare):** sintetizez, sinteză, mesaj esențial, afirmația-cheie, headline, so-what, „ce contează", spune, o singură frază.
+- Verb-semnătură: **SINTETIZEZ** (ancoră în MANTRA „Sintetizăm" + CINE DEVII „Sintetizezi"; substantivul SINTEZĂ în AHA + MIZA).
+- *a formula / formulează* = permis DOAR ca explicație semantică secundară (apare în GREȘEALA + nucleu), niciodată ca verb-semnătură înlocuitor.
 
----
-
-## 8. DECIZII MINIME CERUTE DE LA ARHITECT PENTRU FREEZE
-
-(strict cele necesare freeze-ului)
-
-- **D-1 (blocant):** confirmă forma MOTTO. „Dintr-o privire, mesajul." (o clauză) SAU „Privești o dată. Reții mesajul." (două clauze), în funcție de gramatica T4 înghețată la C13. Aceasta e singura piesă care depinde de C13.
-- **D-2 (confirmare de freeze, în bloc):** confirmi ca freeze-ready cele 7 sloturi neînghețate încă (HERO, BOMBĂ, WOW, CINE DEVII, PAYOFF, MIZA, VERB-SEMNĂTURĂ)? Un singur „da" le îngheață alături de cele 3 deja LOCK (AHA/MANTRA/GREȘEALA).
-
-Nu cer nimic altceva: nucleul, AHA, MANTRA, GREȘEALA, verbul sunt deja decise de BRAIN.
+**INTERZIS — analiză nouă (T3/C12):** descopăr, aflu, calculez, „de ce", cauză, motiv, interpretez, analizez, deduc.
+**INTERZIS — compoziție (C14):** așez, aranjez, grupez, pun în pagină, layout, ierarhie spațială, „unde stă", compun.
+**INTERZIS — livrare/decizie (C16/T5):** „de hotărât", „de decis", recomand, acțiune, predau, livrez, pachet, decident concret, trimit, distribui, export.
+**INTERZIS — rezumat ca identitate:** rezum, „pe scurt tot", comprim proporțional, scurtez. *(„rezumă/rezumăm" permis DOAR ca foil de contrast: „Nu rezumăm...", „Oamenii rezumă tot...".)*
+**Permis ca foil (vechiul mod):** arată, vede, descifrezi, prezinți — niciodată ca verb-identitate C15.
 
 ---
 
-## 9. CE NU AM FĂCUT
+## 7. CE RĂMÂNE PENTRU GENERARE ULTERIOARĂ (NU executat acum)
+
+Identitatea (11-slot) e înghețată. Pentru generarea efectivă a construcției C15, la mandatul de generare, rămân:
+1. **SEED de generare / blueprint dedicat:** structura de implementare — 6 etape exec / 18 pași / fenomene / verificări / 2 prompturi AI, pe axa SINTEZĂ (analog blueprint-urilor C09).
+2. **Cele 9 elemente SPEC de generare (B1, CLAUDE.md)** care NU sunt în 11-slot și trebuie definite la generare: **SLUG**, **PROBLEMELE**, **FENOMENE**, **STEP-TITLES** (INTRIGA/MIZA/MANTRA/WOW/MOTTO sunt deja acoperite de 11-slot).
+3. **Livrabile (per doc 13):** `Date_MASTER-C15.xlsx` + 4 HTML (Studiu / Editor-Studiu / Video / Editor-Video) + FILM + hero-poster + 6 imagini exec-stage proprii (nu clone).
+4. **Validări de generare:** `pre_generation_check.py`, `gate_v20.py`, `audit_sync.py` (B1/B2/B3) — se rulează la generare, nu la freeze conceptual.
+5. **PROPAGARE SISTEM (CERERE SYSTEM, NU pentru mine):** SPEC-ul C15 înghețat ar trebui oglindit în `governance/TRAINITY_ARCHITECTURE_BIBLE.md §T4` (ca C09-C12 în §T3) + eventual gramatica de treaptă T4 (template MOTTO „Dintr-o privire, [output]") codificată acolo. Sunt fișiere sistem/governance, interzise pentru C15 -> revine Chat-ului SYSTEM.
+
+---
+
+## 8. CE NU AM FĂCUT
 
 - NU am implementat artefacte, NU am generat `c15/**`.
-- NU am intrat în `_brain/c13` sau alt `_brain/cYY`; reconcilierea MOTTO am făcut-o doar din doc 13 + Bible §T4 (surse permise), reziduul de formă l-am lăsat ca decizie pentru BRAIN.
-- NU am modificat niciun fișier sistem, governance sau altă construcție.
-- NU am înghețat nimic — eu propun freeze-ready; LOCK = decizia ARHITECT.
-- NU am schimbat niciun slot deja LOCK de BRAIN (le-am preluat verbatim).
-- NU am scris blueprint de implementare (18 pași / fenomene / verificări / livrabile) — se face la SEED-ul de generare, după freeze SPEC.
+- NU am modificat niciun fișier sistem, governance sau altă construcție; propagarea în Bible §T4 e marcată ca CERERE SYSTEM, nu executată.
+- NU am intrat în `_brain/c13` sau alt `_brain/cYY`.
+- NU am schimbat niciun slot/decizie LOCKED de BRAIN (preluate verbatim).
+- NU am cerut decizii suplimentare (freeze-ul e complet).
+- NU am scris blueprint-ul de generare (marcat la secțiunea 7, neexecutat).
 - Singurul fișier scris: acest `_brain/c15/CLAUDE-TO-BRAIN.md`.
 
-La D-1 + D-2 confirmate, SPEC 11-slot C15 e gata de îngheț. Aștept.
+**SPEC 11-slot C15 SINTETIZAREA = ÎNGHEȚAT CONCEPTUAL v1.0.** Gata pentru etapa de generare la următorul mandat. Aștept.

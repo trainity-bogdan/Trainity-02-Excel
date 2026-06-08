@@ -1,77 +1,88 @@
-# CLAUDE -> BRAIN · C14 BLUEPRINT PROPUS
+# CLAUDE -> BRAIN · C14 SPEC COMPLET PROPUS
 
 ## STATUS
-CLAUDE_C14_BLUEPRINT_PROPUS_READY
-Conceptual exclusiv. Zero implementare, zero artefacte, zero c14/**, generare NEPORNITĂ. Răspuns la `MANDAT_BLUEPRINT_PROPUS`. SPEC 11 slot rămâne în istoric (commit 75049d4).
+CLAUDE_C14_SPEC_COMPLET_PROPUS_READY
+Conceptual exclusiv. Zero implementare, zero artefacte, zero c14/**, generare NEPORNITĂ. Fără acces la generatoare/gate, fără c01/ COPY+MODIFY, fără CERERE SYSTEM (toate interzise în această etapă). Răspuns la `MANDAT_SPEC_COMPLET_PROPUS`. Blueprint rămâne în istoric (commit 6260b27).
 
 ---
 
-## 1. Identitate finală C14
-- CUVÂNT: COMPOZIȚIE · Nume / MIZĂ HERO: COMPUNEREA · Verb: COMPUN.
-- Treaptă: T4 RAPORTARE (litera R, C13-C16). Pilon: T4 consumă răspunsul produs de T3, nu îl naște.
-- Axă: ORGANIZAREA SPAȚIALĂ A ELEMENTELOR VIZUALE (ierarhia / ordinea privirii).
-- Întrebarea-ax: "Ce vede ochiul întâi?".
-- Substrat: foaia / pagina de raportare din Excel. Dashboard = doar substrat tehnic posibil, NICIODATĂ identitate conceptuală.
-- Statut: nomenclatură LOCKED V70; SEED aprobat; SPEC 11 slot aprobat.
+## CELE 9 ELEMENTE CANONICE
 
-## 2. Hook / AHA / Mantra / WOW final (aprobate)
-- **Hook / Intriga:** aceleași grafice corecte pot produce decizii diferite prin așezare.
-- **AHA:** "Aceleași grafice, altă ordine, altă decizie."
-- **Mantra:** "Compun privirea, nu pagina."
-- **WOW:** before/after de rearanjare pură: aceleași grafice, aceleași cifre, altă așezare, altă claritate decizională.
-- **Miza:** eșecul silențios al paginii prost compuse (pare completă și profesională, dar întârzie sau strică decizia).
+### 1. SLUG
+**Propunere:** `compunerea` (rădăcina numelui / MIZĂ HERO, minuscule, fără diacritice). Alternativă din CUVÂNT: `compozitie`.
+Folosire prevăzută la generare: `hero-poster-excel-14-{slug}.jpg`, topbar `C14 · COMPOZIȚIE`, hero `COMPUNEREA`.
+DE CONFIRMAT: forma exactă a slug-ului trebuie aliniată la convenția c01 de denumire fișiere; nu am citit `c01/` (interzis în această etapă), deci marchez slug-ul ca propunere, nu ca fapt.
 
-## 3. Cele 11 sloturi aprobate, reformulate ca flux educațional
-Trei faze, un singur fir: de la o pagină care nu decide la o pagină care decide dintr-o privire.
+### 2. INTRIGA
+Aceleași grafice corecte pot produce decizii diferite prin așezare. Două persoane primesc exact aceleași grafice oneste; una decide în câteva secunde, cealaltă se pierde în pagină și amână. Diferența nu e în date, e în ce a întâlnit ochiul primul.
 
-**Faza A. Diagnostic (înțelege cum se vede o pagină) — sloturile 1-3.**
-Cursantul pornește de la o pagină-zid fără un "întâi" (1); descoperă că ochiul are un prim punct de contact, nu citește totul deodată (2); și înțelege că poziția nu e neutră, ci semnalează importanță (3). Iese de aici cu o lentilă nouă: pagina e un traseu al privirii, nu un container.
+### 3. PROBLEMELE
+- Pagina nu are un "întâi": ochiul nu știe unde să înceapă, decizia întârzie.
+- Esențialul stă la fel de tare ca detaliul: nicio ierarhie, totul concurează.
+- Ordinea de pe pagină = ordinea de producție, nu ordinea pentru decizie.
+- Proximitate greșită: lucruri legate stau departe, nelegate stau lipite; relația se citește fals.
+- Munca de prioritizare e împinsă pe decident, exact omul care n-ar trebui s-o facă.
+- Eșecul e invizibil: pagina pare completă și profesională, dar decizia e lentă sau greșită, iar vina cade pe cititor ("prea multe date"), nu pe autor.
 
-**Faza B. Compunere activă (așază) — sloturile 4-6.**
-Stabilește focarul, lucrul atins primul, ales după răspunsul din T3 (4); trasează ce vede ochiul după și în ce ordine (5); retrogradează spațial secundarul, fără să-l șteargă (6). Iese cu o pagină care are un început, un drum și o periferie.
+### 4. MIZA
+Eșecul silențios al paginii prost compuse. Costul: decizii lente, decizii cu prioritate greșită, raport ignorat. Spre deosebire de un grafic fals (care se prinde), o pagină prost compusă trece drept profesională și ratează decizia fără să declanșeze suspiciune. Miza compune în sus pe treaptă: dacă pagina îngroapă esențialul, mesajul C15 nu mai are pe ce sta, iar cadrul de decizie C16 arată spre lucrul greșit.
 
-**Faza C. Consolidare + guvernare + probă — sloturile 7-11.**
-Consolidează ierarhia cu mărime/poziție/contrast/spațiu (7), grupează ce e legat prin proximitate (8), folosește spațiul gol ca instrument, nu ca lipsă (9); aliniază întreaga compoziție la răspunsul venit din T3 (10); și validează cu testul celui de-al doilea ochi: un cititor nou, trei secunde, prinde același "întâi" (11). Iese cu o pagină coerentă, testată, gata pentru C15.
+### 5. MANTRA
+"Compun privirea, nu pagina." (aprobată)
 
-## 4. Obiectul practic al construcției în Excel
-O foaie de raportare în Excel pe care cursantul AȘAZĂ mai multe obiecte vizuale deja produse și validate la C13 (grafice / pivot charts, carduri de indicator, un tabel pivot de suport). Acțiunile practice: stabilirea focarului, poziționare pe grilă, dimensionare relativă, aliniere, grupare spațială, folosirea spațiului gol, ordonarea traseului de citire. Cursantul NU desenează graficele (vin de la C13) și NU scrie concluzia (C15). Substratul tehnic poate fi o foaie de tip dashboard, dar competența și identitatea sunt COMPOZIȚIA, nu dashboard-ul. Fără cifre business concrete (referințe generice; cifrele trăiesc în Excel, R-V02.15).
+### 6. WOW
+Before/after de rearanjare pură: aceeași pagină, aceleași grafice, aceleași cifre, altă așezare. În "before" decidentul caută zeci de secunde și alege greșit; în "after", fără să se schimbe un singur grafic sau o singură cifră, răspunsul sare în ochi în câteva secunde. Demonstrația că ordinea, nu datele, a făcut decizia. (aprobat)
 
-## 5. Before / after demonstrabil
-- **Before:** aceeași foaie, obiectele așezate în ordinea producției, toate la fel de mari, niciun focar; decidentul caută, ezită, alege greșit sau amână.
-- **After:** aceleași obiecte, aceleași cifre, rearanjate: focar clar în zona primului contact, secundar retrogradat, grupuri coerente, spațiu gol care izolează esențialul; răspunsul sare în câteva secunde.
-- **Demonstrația:** zero modificări de date sau de grafice, doar așezare. Decizia se schimbă mutând blocurile. (Operaționalizarea WOW.)
+### 7. MOTTO
+**Propunere:** "Ce vede ochiul întâi decide."
+Distinct de AHA (insight) și de Mantra (crez la persoana întâi); motto = semnătura declarativă a construcției, ancorată pe întrebarea-ax. DE VALIDAT.
 
-## 6. Ce primește cursantul la început
-- Output-ul C13: un set de obiecte vizuale oneste, corecte, validate individual, dar neașezate (împrăștiate sau în ordinea producției).
-- Răspunsul venit din T3 (busola): ce contează pentru decizie. Nu se naște aici, se primește.
-- Deci: materie primă vizuală corectă + răspunsul-busolă, fără pagină.
+### 8. FENOMENE
+- Pagina-zid: zeci de grafice de aceeași mărime, niciunul mai important, ochiul nu știe unde să meargă.
+- Esențialul îngropat: cel mai important rezultat stă jos, în colț, la fel de mare ca un detaliu minor.
+- Ordinea de producție pe pagină: pui graficele cum le-ai făcut, nu cum trebuie văzute.
+- Grupare ratată: proximitatea minte despre relații.
+- Greutate egală la lucruri inegale: titlu, total, detaliu, notă, toate la fel.
+- Decidentul întreabă "deci la ce mă uit aici?" = semnul lipsei unui "întâi".
+- Horror vacui: reflexul de a umple orice gol cu încă un grafic, în loc să-l lași să creeze ierarhie.
+- Eșec silențios: pagina pare profesională, dar decizia întârzie sau e greșită.
 
-## 7. Ce produce cursantul la final
-OUTPUT C14 aprobat: o pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, cu un focar clar și un traseu de citire, pregătită pentru extragerea mesajului esențial în C15. NU un mesaj (C15), NU un pachet de decizie (C16), NU grafice noi (C13).
+### 9. STEP-TITLES (cele 11 sloturi aprobate, exact 11)
+1. Pagina fără "întâi"
+2. Primul punct de contact al ochiului
+3. Poziția ca semnal de importanță
+4. Focarul vizual
+5. Traseul de citire
+6. Retrogradarea elementelor secundare
+7. Ierarhia vizuală pentru decizie
+8. Gruparea elementelor legate
+9. Spațiul gol ca instrument de ierarhie
+10. Compunerea guvernată de răspunsul venit din T3
+11. Testul celui de-al doilea ochi
 
-## 8. Ce vede decidentul în 3 secunde
-Focarul (lucrul care contează cel mai mult pentru decizie) prins primul; ierarhia care spune instant ce e principal și ce e secundar; gruparea care arată ce ține de ce. Decidentul prinde ORDINEA DE PRIORITATE, nu o propoziție. NU citește un mesaj formulat (acela vine la C15) și NU primește o recomandare de decizie (C16). Aceasta este exact proba slotului 11.
+---
 
-## 9. Garduri C13 / C15 / C16
-- **Față de C13:** C14 nu desenează și nu modifică obiectele vizuale; ele intră gata și oneste de la C13.
-- **Față de C15:** C14 nu formulează și nu scrie mesajul esențial; îl face doar vizibil prin ordine și ierarhie.
-- **Față de C16:** C14 nu face raportul decision-ready, nu adaugă cadru de decizie, nu predă și nu distribuie; predă pagina către C15.
-- **Garduri de identitate:** C14 nu face estetică; C14 compune ordinea privirii; C14 răspunde la "ce vede ochiul întâi?"; C14 NU se autorizează ca dashboard (dashboard = substrat tehnic, nu identitate).
+## INCLUSE OBLIGATORIU ÎN SPEC
 
-## 10. Riscuri de implementare
-- **Alunecare în C13:** tentația de a "îmbunătăți" graficele la așezare. Gardă: obiectele intră înghețate de la C13; C14 mută, nu redesenează.
-- **Alunecare în C15:** a adăuga un titlu/headline care formulează concluzia. Gardă: titlurile rămân etichete de obiect, nu so-what; mesajul aparține C15.
-- **Alunecare în C16:** a adăuga "recomandare / next step / decizie". Gardă: pagina se oprește la ordine vizuală și predă C15.
-- **Estetism:** focus pe culori/fonturi frumoase. Gardă: criteriul unic e "se vede întâi ce decide", nu "arată plăcut".
-- **Testul de 3 secunde derapat:** transformat în validare de mesaj sau de decizie. Gardă: testează DOAR prioritatea și ordinea percepută.
-- **"Dashboard" ca identitate:** Gardă: dashboard doar ca substrat tehnic; numele și identitatea = COMPOZIȚIA / COMPUNEREA.
-- **Dependența de C13:** dacă obiectele primite nu sunt clare, C14 nu are ce compune. De asigurat că generarea presupune obiecte C13 valide ca intrare.
-- **Anti-clonă (R-V03.74):** voce/AHA/mantra distincte de C13 și C15 (deja asigurat prin AHA/Mantra aprobate).
+### AHA (aprobat)
+"Aceleași grafice, altă ordine, altă decizie."
 
-## 11. Cereri de validare înainte de generare
-- Confirmi identitatea finală + fluxul educațional în 3 faze al celor 11 sloturi?
-- Confirmi obiectul practic Excel (așezarea obiectelor C13 pe foaia de raport) și before/after-ul ca demonstrație centrală a construcției?
-- Confirmi că substratul tehnic poate fi o foaie de tip dashboard, dar identitatea rămâne COMPOZIȚIA (dashboard niciodată ca nume)?
-- Confirmi diviziunea C13/C14 pe XLSX: C13 produce obiectele individuale, C14 le așază în ansamblu (anti-suprapunere la generare)?
-- La aprobare, care e următorul pas: îngheț SPEC complet (cele 9 elemente canonice) înainte de generare, sau treci direct la mandatul de generare C14?
-- Ce lipsește / de autorizat la pasul de generare (semnalez, NU ridic CERERE SYSTEM acum, conform mandatului): accesul la `c01/` ca referință COPY+MODIFY și la generatoare/gate. De inclus explicit în mandatul de generare viitor.
+### OUTPUT C14 (aprobat)
+Pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15. (NU pas separat; este rezultatul construcției.)
+
+### GARDURI C13 / C15 / C16
+- Față de C13: nu desenează și nu modifică obiectele vizuale (intră oneste, gata, de la C13).
+- Față de C15: nu formulează și nu scrie mesajul esențial (îl face doar vizibil prin ordine).
+- Față de C16: nu face raportul decision-ready, nu adaugă cadru de decizie, nu predă/distribuie.
+- Identitate: nu face estetică; compune ordinea privirii; răspunde la "ce vede ochiul întâi?".
+
+### INTERDICȚIA DASHBOARD
+C14 nu se autorizează ca dashboard. Dashboard = substrat tehnic posibil al foii Excel, NICIODATĂ identitate / nume conceptual. Identitatea = COMPOZIȚIA / COMPUNEREA.
+
+---
+
+## CE LIPSEȘTE / DE VALIDAT
+- SLUG final (aliniere la convenția c01, neaccesibilă în această etapă): `compunerea` vs `compozitie`.
+- MOTTO: confirmi "Ce vede ochiul întâi decide." sau preferi altă formulare?
+- Confirmi SPEC-ul complet ca îngheț pre-generare (cele 9 elemente)?
+- La aprobare, mandatul de generare va trebui să autorizeze explicit: acces `c01/` (COPY+MODIFY), generatoare/gate, eventual CERERE SYSTEM pentru orice fișier comun. (Semnalez, nu ridic acum.)
