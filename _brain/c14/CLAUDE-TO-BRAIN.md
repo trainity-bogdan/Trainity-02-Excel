@@ -1,27 +1,29 @@
-# CLAUDE -> BRAIN · C14 SYSTEM DEBLOCARE (raport SYSTEM)
+# SYSTEM -> C14 REGISTRATION REPORT
 
 ## STATUS
-CLAUDE_C14_SYSTEM_DEBLOCAT_GENERATION_READY
-Am acționat CA SYSTEM, cu autorizare explicită ARHITECT (excepție durabilă de la interdicția `_system` pentru deblocarea C14). Nu am atins `c14/**`. Nu am generat C14. Doar deblocare sistem. B1 PASS, B2 C14-ready.
+C14_SYSTEM_REGISTRATION_COMPLETE — C14 POATE INTRA ÎN GENERARE.
+Acțiune CA SYSTEM (autorizare ARHITECT). Exclusiv înregistrare C14 în sistem. Zero `c14/**`, zero generare, zero alte construcții atinse. Înregistrarea a fost executată în commit `24aad3a` și reconfirmată idempotent acum (main `e021554`).
 
-## CE AM MODIFICAT (3 fișiere `_system`)
-1. **`_system/arhiva/SISTEM_TRAINITY-versiuni.md`** (registrul de generare activ): am înghețat SPEC C14 = **COMPUNEREA** `[Status: INGHETAT 08.06.2026]`, cu cele 9 elemente aprobate (INTRIGA, PROBLEMELE, MIZA, MANTRA/AHA, MOTTO, 11 STEP-TITLES + OUTPUT, 2 PROMPTURI, 8 FINAL-LABELS, 6 FENOMENE) + GRANIȚE. Stub-ul mort `## SPEC C14 - DASHBOARD EXECUTIV [NEGENERAT]` a fost ÎNLOCUIT.
-2. **`_system/referinte/IDENTITATE-TEHNICA.md`**: am adăugat `## IDENTITATE_TEHNICA C14 · COMPUNEREA` cu toate câmpurile obligatorii (cod C14, treapta 4 RAPORTARE poz 2/4, slug `Compunere`, hero `ORDINEA PRIVIRII`, meta_val cu COMPUNERE bold, prev C13 / next C15, footer/topbar/title/localStorage `trainity_c14_*`).
-3. **`_system/generatoare/gate_v20.py`** (`load_identitate`): am adăugat intrarea `'14'` (cod C14, cuvânt COMPOZIȚIE, slug Compunere, meta_val_treapta cu COMPUNERE bold).
+## CELE 6 CERERI SYSTEM — TOATE REZOLVATE
+1. **SPEC C14 înghețat** în `_system/arhiva/SISTEM_TRAINITY-versiuni.md` (registrul de generare activ; SISTEM_TRAINITY.md a fost mutat aici la refactor V38): `## SPEC C14 - COMPUNEREA [Status: INGHETAT 08.06.2026]`, cele 9 elemente + GRANIȚE. CONFIRMAT (linia 2748).
+2. **IDENTITATE_TEHNICA C14 adăugată** în `_system/referinte/IDENTITATE-TEHNICA.md` (linia 372), toate câmpurile obligatorii. CONFIRMAT.
+3. **Intrarea C14 în `gate_v20.py / load_identitate`** (linia 1132). CONFIRMAT.
+4. **Numele mort „DASHBOARD EXECUTIV" SUPERSEDAT** pentru C14: zero apariții ca SPEC activ; B1 numește construcția COMPUNEREA. CONFIRMAT.
+5. **Conflict 18 vs 11 step-titles REZOLVAT** fără atingerea SPEC-ului conceptual: nici B1, nici B2 nu numără step-titles („18" e doar text-instrucțiune generic, nu check hard). SPEC C14 rămâne la **11**. Maparea pe scaffold-ul HTML se face la generare.
+6. **B1 și B2 C14-ready: CONFIRMAT empiric** (vezi mai jos).
 
-## NUMELE MORT "DASHBOARD EXECUTIV"
-SUPERSEDAT pentru C14 în registrul de generare. B1 numește acum construcția **COMPUNEREA**. (Nota din `_brain/system/CLAUDE-TO-BRAIN.md` care lăsa C14 stale „fluxului activ C14" este acum onorată.)
+## CONFORMITATE CU DECIZIILE LOCKED C14 (verificat 1:1)
+Cod C14 · Nume COMPUNEREA · Cuvânt COMPOZIȚIE · Verb COMPUN · Întrebare-ax „Ce vede ochiul întâi?" · AHA „Aceleași grafice, altă ordine, altă decizie." · MANTRA „Compun privirea, nu pagina." · MOTTO „Ce vede ochiul întâi schimbă decizia." · MIZA „Eșecul silențios al paginii prost compuse." · cele 11 STEP-TITLES · OUTPUT C14. Toate înregistrate identic.
 
-## 18 vs 11 STEP-TITLES (decizie tehnică)
-Rezolvat fără a atinge SPEC-ul conceptual: B1 **NU numără** step-titles (cele „18" apar doar în mesajul-instrucție generic, nu într-un check hard). SPEC C14 rămâne la **11** step-titles. Gate_v20 (B2) nici el nu verifică numărul de pași. Maparea celor 11 pe scaffold-ul HTML (etape) se face la generare, fără modificarea SPEC-ului.
+**Nota SLUG:** slug conceptual = `compunerea`; slug tehnic de fișier = `Compunere` (convenția C13 `Vizualizare`: nume_title_case fără articol, capitalizat). Fișierele la generare: `HTML-Studiu-Excel-14-Compunere.html`, `Date_MASTER-C14.xlsx` (cerut de gate). Fără conflict.
 
-## STATUS VALIDATOARE (verificat empiric acum)
-- **B1 (`pre_generation_check 14`): PASS, exit 0.** ✓ CHECK 1 SPEC INGHETAT (COMPUNEREA) · ✓ CHECK 2 IDENTITATE_TEHNICA C14 POPULATA · ✓ CHECK 3 FENOMENE ALINIAT. „TOATE CHECK-URILE PASS. Motorul poate proceda la generare C14."
-- **B2 (`gate_v20 14`): C14-READY.** `load_identitate('14')` întoarce identitatea C14; gate-ul rulează „POST-FLIGHT GATE V20 — C14" și raportează doar livrabile lipsă (corect, `c14/` neexistent). Eroarea „IDENTITATE nu e definita" a dispărut. Validarea reală PASS/FAIL se va da pe artefacte, la generare.
-- **B3 (`audit_sync`): N/A acum.** E generic, folder-based, post-generare; nu necesită înregistrare per-construcție. Nimic de auditat până la generare.
+## STATUS VALIDATOARE (rulat acum)
+- **B1 `pre_generation_check 14`: PASS, exit 0.** ✓ CHECK 1 SPEC INGHETAT (COMPUNEREA) · ✓ CHECK 2 IDENTITATE_TEHNICA POPULATA · ✓ CHECK 3 FENOMENE ALINIAT → „Motorul poate proceda la generare C14."
+- **B2 `gate_v20`: C14-READY.** `load_identitate('14')` întoarce identitatea (slug Compunere); gate-ul rulează „POST-FLIGHT GATE V20 — C14". PASS/FAIL real se dă pe artefacte, la generare.
+- **B3 `audit_sync`:** generic, post-generare; nu cere înregistrare per-construcție.
 
-## NOTĂ DE MEDIU
-`openpyxl` nu e instalat în acest container: L143 (B1) se auto-skip (PASS), iar rularea COMPLETĂ B2 pe artefacte (CLASA 6 DATA-CONTINUITY) va cere `openpyxl` la generare. De avut în vedere la mandatul de generare.
+## VERDICT EXPLICIT
+**C14 POATE INTRA ÎN GENERARE.** Blocajul de sistem (B1/B2) este ridicat. La mandatul de generare, Claude C14 pornește cap-coadă: COPY+MODIFY din C13 (structură) + `Date_MASTER-C13` (intrare vizuală) → cele 7 artefacte în `c14/**` → B1 → B2 → B3.
 
-## CE TREBUIE SĂ FACĂ BRAIN / ARHITECT
-Sistemul e C14-ready. Blocajul B1 e ridicat. La următorul **mandat de generare C14** pornesc cap-coadă (COPY+MODIFY din C13 ca structură + `Date_MASTER-C13` ca intrare vizuală, cele 7 artefacte în `c14/**`, B1->B2->B3). De confirmat la generare: mediul are `openpyxl` pentru B2 CLASA 6.
+## SINGURUL FLAG RĂMAS (mediu, nu blocaj de înregistrare)
+`openpyxl` nu e instalat în containerul curent. B1 trece (L143 auto-skip). Rularea COMPLETĂ B2 pe artefacte (CLASA 6 DATA-CONTINUITY) va cere `openpyxl` — de asigurat în mediul de generare.
