@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_SPEC_COMPLET_PROPUS
+MANDAT_DEPENDENCY_CHECK
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
@@ -9,131 +9,89 @@ C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
 SEED C14 este aprobat.
 SPEC 11 SLOT C14 este aprobat.
 BLUEPRINT C14 este aprobat.
+SPEC COMPLET C14 este aprobat.
+READY FOR GENERATION CHECK este aprobat ca raport de planificare.
 
-Nu se generează C14 încă.
+C14 NU este autorizat încă pentru generare.
 
-Următorul pas este SPEC COMPLET C14, cele 9 elemente canonice.
+Motiv: trebuie clarificată dependența C13 și forma corectă a `Date_MASTER-C14.xlsx`.
 
 ## DECIZII BRAIN VALIDATE
 
-- axa C14 = ORGANIZAREA SPAȚIALĂ A ELEMENTELOR VIZUALE
-- întrebarea-ax C14 = "Ce vede ochiul întâi?"
-- substrat C14 = foaia/pagina de raportare din Excel
-- C13 creează/validează obiectul vizual
-- C14 așază obiectele vizuale în ansamblu
-- C15 extrage/formulează mesajul esențial
-- C16 livrează raportul decision-ready
+- C13 produce obiectele vizuale individuale
+- C14 le primește ca intrare
+- C14 le așază într-o pagină de raportare coerentă
+- C14 nu desenează grafice
+- C14 nu modifică tipul graficelor
+- C14 nu inventează date
+- C14 nu formulează concluzia C15
+- C14 nu livrează raportul final C16
 
-## APROBĂRI SEED
+## DECIZII BRAIN PE GENERARE
 
-AHA final aprobat:
+### Decizie 1, ordinea corectă
 
-"Aceleași grafice, altă ordine, altă decizie."
+C13 trebuie generat / stabilizat înainte de C14.
 
-Mantra finală aprobată:
+C14 nu se generează cu obiecte-placeholder.
 
-"Compun privirea, nu pagina."
+Motiv: identitatea C14 este compunerea obiectelor vizuale oneste venite din C13. Fără C13, C14 ar inventa substrat și ar încălca granița în jos.
 
-WOW final aprobat:
+### Decizie 2, Date_MASTER-C14
 
-before/after de rearanjare pură, aceleași grafice, aceleași cifre, altă așezare, altă claritate decizională.
+`Date_MASTER-C14.xlsx` trebuie să fie continuare compozițională a output-ului C13, nu dashboard nou, nu reconstrucție de grafice.
 
-Intriga aprobată:
+Formula corectă:
 
-aceleași grafice corecte pot produce decizii diferite prin așezare.
+- C13 produce obiectele vizuale individuale
+- C14 le primește ca intrare
+- C14 demonstrează așezarea lor într-o pagină de raportare coerentă
+- C14 poate conține layout / poziționare / ierarhie / compoziție
+- C14 nu schimbă tipul graficelor
+- C14 nu inventează date
+- C14 nu reformulează concluzia
 
-Miza aprobată:
+### Decizie 3, slug
 
-eșecul silențios al paginii prost compuse.
+Slug provizoriu confirmat:
 
-## SPEC 11 SLOT APROBAT
+`compunerea`
 
-1. Pagina fără "întâi"
-2. Primul punct de contact al ochiului
-3. Poziția ca semnal de importanță
-4. Focarul vizual
-5. Traseul de citire
-6. Retrogradarea elementelor secundare
-7. Ierarhia vizuală pentru decizie
-8. Gruparea elementelor legate
-9. Spațiul gol ca instrument de ierarhie
-10. Compunerea guvernată de răspunsul venit din T3
-11. Testul celui de-al doilea ochi
-
-## OUTPUT C14 APROBAT
-
-Pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15.
-
-## BLUEPRINT APROBAT
-
-Aprobat:
-
-- identitatea finală C14
-- fluxul educațional în 3 faze
-- obiectul practic Excel
-- before / after-ul demonstrabil
-- testul de 3 secunde ca test de prioritate vizuală, nu mesaj
-- diviziunea C13/C14 pe XLSX
-- formula: dashboard = substrat tehnic posibil, niciodată identitate conceptuală
+Slug-ul se confirmă tehnic doar după citirea convenției `c01/`.
 
 ## MANDAT
 
 Pregătește raportul:
 
-# CLAUDE -> BRAIN · C14 SPEC COMPLET PROPUS
+# CLAUDE -> BRAIN · C14 DEPENDENCY CHECK
 
 Scrie raportul în:
 
 `_brain/c14/CLAUDE-TO-BRAIN.md`
 
-Fără implementare, fără artefacte, fără modificări în `c14/**`.
+Scop: confirmarea explicită dacă C13 este suficient de stabil pentru ca C14 să poată intra ulterior în generare.
 
-## STRUCTURĂ OBLIGATORIE SPEC COMPLET
+## STRUCTURĂ OBLIGATORIE RAPORT
 
-Raportul trebuie să conțină cele 9 elemente canonice:
+Raportul trebuie să răspundă punctual la:
 
-1. SLUG
-2. INTRIGA
-3. PROBLEMELE
-4. MIZA
-5. MANTRA
-6. WOW
-7. MOTTO
-8. FENOMENE
-9. STEP-TITLES
+1. C13 este generat sau doar pre-generation ready?
+2. Există output C13 suficient pentru C14?
+3. Ce anume primește C14 din C13?
+4. Ce NU are voie C14 să refacă din C13?
+5. Ce formă trebuie să aibă `Date_MASTER-C14.xlsx` ca să nu dubleze C13?
+6. Poate începe generarea C14 acum sau trebuie așteptat C13?
+7. Dacă nu poate începe, ce status corect trebuie păstrat pentru C14?
 
-## CONDIȚII OBLIGATORII
-
-SPEC-ul complet trebuie să includă:
-
-- AHA aprobat: "Aceleași grafice, altă ordine, altă decizie."
-- Mantra aprobată: "Compun privirea, nu pagina."
-- WOW aprobat: before/after de rearanjare pură
-- cele 11 sloturi aprobate ca STEP-TITLES
-- output C14 aprobat
-- gardurile C13/C15/C16
-- interdicția de a folosi dashboard ca identitate
-
-## GARDURI OBLIGATORII
-
-- C14 nu desenează grafice
-- C14 nu formulează mesajul
-- C14 nu livrează raportul final
-- C14 nu face estetică
-- C14 compune ordinea privirii
-- C14 răspunde la "ce vede ochiul întâi?"
-- C14 nu se autorizează ca dashboard
-- dashboard poate rămâne doar substrat tehnic, nu identitate conceptuală
-
-## INTERDICȚII
+## INTERDICȚII ÎN ACEST PAS
 
 - nu implementa nimic
 - nu modifica fișiere de construcție
 - nu genera artefacte
-- nu ridica CERERE SYSTEM în această etapă
 - nu porni generarea C14
-- nu accesa generatoare/gate
+- nu accesa generatoare/gate încă
 - nu folosi `c01/` ca referință COPY+MODIFY încă
+- nu ridica CERERE SYSTEM încă
 - nu presupune status
 - nu inventa conținut lipsă
 - lucrează doar pe baza fișierelor citite efectiv
@@ -141,4 +99,4 @@ SPEC-ul complet trebuie să includă:
 
 ## RAPORT
 
-După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul SPEC COMPLET PROPUS.
+După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul DEPENDENCY CHECK.

@@ -226,9 +226,28 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 **Datorii ÎNCHISE conceptual (SPEC autoritate = `13-ARHITECTURA-CONCEPTUALA-T4.md`; rămân obligații de AUTORARE la C13-C16).** SPEC-ul conceptual T4 a fost construit și înghețat (confirmare ARHITECT). Pilonul care le închide: **T4 consumă răspunsul produs de T3, nu îl naște.** Datoriile nu mai sunt deschise ca SPEC de treaptă; rămân ca obligații de autorare în construcțiile C13-C16 (se aplică la seed-ul fiecăreia, NU în nomenclatură):
 1. T4 autorat după principiul „nu arăt tot, arăt ce contează" ca CRITERIU aplicat la toate cele 4 construcții (nu un pas separat).
 2. C14 autorat ca organizarea spațială a elementelor vizuale (graniță față de C15).
-3. C15 autorat ca extragerea și FORMULAREA mesajului esențial (formulare, nu descoperire; graniță față de C14 și C12).
+3. C15 autorat ca extragerea și FORMULAREA mesajului esențial (formulare, nu descoperire; graniță față de C14 și C12). **ONORAT la freeze conceptual C15 v1.0 — vezi `### §T4 · SPEC C15 SINTETIZAREA` mai jos.**
 4. C16 autorat ca raport decision-ready, nu transmitere logistică (graniță față de T5, fără furt din C12).
 5. Seed-ul C13 închide contradicția message-first vs build-up în voce/SPEC/ordine de predare (build-up guvernat de mesaj), NU în nume.
+
+### §T4 · SPEC C15 SINTETIZAREA (SINTEZĂ) — LOCKED v1.0 CONCEPTUAL (freeze C15, confirmat ARHITECT)
+> **Statut:** freeze CONCEPTUAL (identitate 11-slot), **NU generare.** Blueprint dedicat + cele 9 elemente de generare care NU sunt în 11-slot (SLUG, PROBLEMELE, FENOMENE, STEP-TITLES) + cele 7 artefacte canonice se fac la SEED-ul de generare. Autoritate conceptuală: `13-ARHITECTURA-CONCEPTUALA-T4.md`. Primul SPEC 11-slot complet din §T4 (oglinda blocurilor §T3 C09-C12).
+
+- **NUCLEU LOCKED — SINTEZĂ ≠ REZUMAT:** C15 ia o pagină coerentă (produsă de C14) și FORMULEAZĂ mesajul ei esențial — o singură afirmație (headline / so-what) pe care pagina o dovedește. Rezumatul scurtează tot proporțional (automatizabil); sinteza alege și enunță SINGURUL mesaj care contează pentru această decizie și audiență (judecata umană, „cea mai umană construcție din T4"). **C15 nu descoperă mesajul, îl formulează** (pilon T4: T4 consumă răspunsul produs de T3, nu îl naște). Output = o propoziție, NU un layout (= C14), NU un cadru de decizie (= C16).
+- **HERO:** „Cum transform o pagină într-o singură frază care contează?"
+- **BOMBĂ:** „O pagină impecabilă. Și niciun mesaj."
+- **GREȘEALA:** „Oamenii rezumă tot. Profesioniștii formulează ce contează."
+- **AHA (lock S5):** „O pagină arată. O sinteză spune."
+- **MANTRA:** „Nu rezumăm. Sintetizăm." (cuvânt-cheie galben: *Sintetizăm*)
+- **WOW:** „O pagină întreagă pe care trebuia s-o descifrezi. Acum o singură frază îți spune ce contează, iar pagina o dovedește."
+- **MOTTO (slot de treaptă T4):** „Dintr-o privire, mesajul." Instanțiază template-ul de treaptă T4 **„Dintr-o privire, [output]"** (output C15 = *mesajul*). Formele C13/C14/C16 ale acestui template se fixează la freeze-ul fiecăreia, nu aici.
+- **CINE DEVII:** „Nu mai prezinți tot ce ai. Sintetizezi singura frază care contează."
+- **PAYOFF:** „O pagină coerentă a devenit un mesaj care contează."
+- **MIZA:** „Un director nu citește toată pagina. O deschide și întreabă: «și ce-i cu asta?». Are zece rapoarte corecte pe masă și trei minute pentru fiecare. C15 e momentul în care o pagină întreagă capătă o singură frază care spune ce contează din ea, dintr-o privire. Nu o cifră nouă, nu o cauză nouă (acelea vin gata din analiză), ci mesajul: ce trebuie să reții. Fără sinteză, până și cel mai corect raport rămâne mut: arată tot și nu spune nimic. Cu sinteză, decidentul știe în trei secunde ce contează și ce să rețină."
+- **VERB-SEMNĂTURĂ:** *SINTETIZEZ* (ancoră în MANTRA „Sintetizăm" + CINE DEVII „Sintetizezi"; substantivul SINTEZĂ în AHA + MIZA). *a formula / formulează* = permis DOAR ca explicație semantică secundară (apare în GREȘEALA + nucleu), niciodată ca verb-semnătură înlocuitor.
+- **Granițe LOCKED:** **C14|C15** = spațiu vs sens (dacă rearanjează pagina = C14, nu C15); **C15|C16** = enunț indicativ vs decizie-cadru/predare (dacă apare „de hotărât / recomand / acțiune / pachet / predau" = C16, nu C15); **C15|C12 (T4|T3)** = formulare vs descoperire (dacă trebuie să calculeze / afle / explice de ce / interpreteze datele = T3/C12, nu C15).
+- **Limbaj LOCKED (identitate):** sintetizez, sinteză, mesaj esențial, afirmația-cheie, headline, so-what, „ce contează", spune, o singură frază. **Permis secundar:** formulez / formulează (explicație semantică, nu verb-semnătură). **INTERZIS spre T3/C12:** descopăr, aflu, calculez, „de ce", cauză, motiv, interpretez, analizez, deduc. **INTERZIS spre C14:** așez, aranjez, grupez, pun în pagină, layout, ierarhie spațială, „unde stă", compun. **INTERZIS spre C16:** „de hotărât", „de decis", recomand, acțiune, predau, livrez, pachet, decident concret, trimit, distribui, export. **INTERZIS ca identitate C15:** rezum, „pe scurt tot", comprim proporțional, scurtez. *(„rezumă / rezumăm" permis DOAR ca foil de contrast: „Nu rezumăm. Sintetizăm." / „Oamenii rezumă tot. Profesioniștii formulează ce contează.")*
+- **Statut sloturi:** toate cele 11 LOCKED (confirmat ARHITECT, freeze C15). NU se redeschid fără decizie explicită de arhitectură. AHA + MANTRA + MOTTO neschimbate.
 
 ### §T5 — AUTONOMIE / FUNCȚIONARE FĂRĂ AUTOR
 - **Întrebarea treptei:** „Cum funcționează fără mine?"

@@ -1,88 +1,78 @@
-# CLAUDE -> BRAIN · C14 SPEC COMPLET PROPUS
+# CLAUDE -> BRAIN · C14 READY FOR GENERATION CHECK
 
 ## STATUS
-CLAUDE_C14_SPEC_COMPLET_PROPUS_READY
-Conceptual exclusiv. Zero implementare, zero artefacte, zero c14/**, generare NEPORNITĂ. Fără acces la generatoare/gate, fără c01/ COPY+MODIFY, fără CERERE SYSTEM (toate interzise în această etapă). Răspuns la `MANDAT_SPEC_COMPLET_PROPUS`. Blueprint rămâne în istoric (commit 6260b27).
+CLAUDE_C14_READY_FOR_GENERATION_CHECK_READY
+Conceptual / planificare exclusiv. Zero implementare, zero artefacte, zero c14/**, generare NEPORNITĂ. Nu am accesat în acest pas: c01/, generatoare/gate, niciun fișier de sistem; nicio CERERE SYSTEM ridicată. Răspuns la `MANDAT_READY_FOR_GENERATION_CHECK`.
+
+## STARE APROBATĂ (preluată din mandat, nu reinventată)
+SEED + SPEC 11 SLOT + BLUEPRINT + SPEC COMPLET = aprobate. SLUG provizoriu `compunerea`. MOTTO final: "Ce vede ochiul întâi schimbă decizia." AHA "Aceleași grafice, altă ordine, altă decizie." Mantra "Compun privirea, nu pagina." STEP-TITLES = cele 11 sloturi.
+
+Acest raport spune CE trebuie autorizat înainte de generare. Baza de cunoaștere = CLAUDE.md + Doc 13 T4 (citite). Ce nu am citit încă e marcat explicit (necesar la generare).
 
 ---
 
-## CELE 9 ELEMENTE CANONICE
+## 1. Fișiere / foldere care trebuie citite înainte de generare
+**Deja citite în sesiune:** CLAUDE.md; `_brain/c14/CHAT-CONTEXT.md`; `_brain/c14/BRAIN-TO-CLAUDE.md`; `_system/NOMENCLATURA-LOCKED-SCARA.md`; `_system/13-ARHITECTURA-CONCEPTUALA-T4.md` (în special §STARE: livrabil per construcție + dashboard XLSX la C13); `_system/governance/TRAINITY_ARCHITECTURE_BIBLE.md` §T4; SPEC COMPLET C14 (în CLAUDE-TO-BRAIN.md).
+**NECITITE încă, necesare la generare (de autorizat):**
+- `_system/04-ARHITECTURA-LIVRABILE.md` (schema exactă a celor 7 artefacte)
+- `_system/05-WORKFLOW-PER-SCENARIU.md` (workflow generare pas cu pas)
+- `_system/08-PROCEDURA-GENERARE-VALIDARE.md` (procedura + validări)
+- `_system/10-MAP-FILM-HTML.md` (maparea FILM <-> HTML)
+- `_system/COMENZI.yaml` (intrarea `genereaza_constructie`)
+- `c01/` integral (referință COPY+MODIFY)
 
-### 1. SLUG
-**Propunere:** `compunerea` (rădăcina numelui / MIZĂ HERO, minuscule, fără diacritice). Alternativă din CUVÂNT: `compozitie`.
-Folosire prevăzută la generare: `hero-poster-excel-14-{slug}.jpg`, topbar `C14 · COMPOZIȚIE`, hero `COMPUNEREA`.
-DE CONFIRMAT: forma exactă a slug-ului trebuie aliniată la convenția c01 de denumire fișiere; nu am citit `c01/` (interzis în această etapă), deci marchez slug-ul ca propunere, nu ca fapt.
+## 2. Ce se poate folosi din `c01/` ca COPY+MODIFY
+Per CLAUDE.md, c01 = construcția-cobai, referința unică de COPY+MODIFY. La generare se copiază SCHELETUL, nu conținutul:
+- structura celor 4 HTML: `HTML-Studiu`, `HTML-Editor-Studiu`, `HTML-Video`, `HTML-Editor-Video` (base64 inline)
+- structura `Date_MASTER-CNN.xlsx` (schema, nu cifrele)
+- structura `FILM`
+- convenția `assets/`: `hero-poster-excel-14-{slug}.jpg` + `exec-stage-1..6.jpg` (jpg, 3:2 cinematic)
+- modelul de afișare pe 2 straturi (NOMENCLATURA): topbar `C14 · COMPOZIȚIE`, hero `COMPUNEREA`, navigare cuvinte T4, titlu articol „Cum să…"
+NU se copiază: cifrele, textul, imaginile C01 (imaginile sunt DIFERITE per construcție). Conținutul vine din SPEC COMPLET C14.
+Flag: nu am accesat `c01/` (interzis acum), deci descriu din CLAUDE.md; structura empirică se confirmă la generare.
 
-### 2. INTRIGA
-Aceleași grafice corecte pot produce decizii diferite prin așezare. Două persoane primesc exact aceleași grafice oneste; una decide în câteva secunde, cealaltă se pierde în pagină și amână. Diferența nu e în date, e în ce a întâlnit ochiul primul.
+## 3. Ce generatoare / gate-uri trebuie accesate
+- `_system/generatoare/pre_generation_check.py 14` (B1: cele 3 checks HARD pre-generare)
+- `_system/generatoare/gate_v20.py 14 <dir> <pilot_dir>` (B2: GATE V20 PASS pe canonic + editat, pre-livrare)
+- `_system/generatoare/audit_sync.py` (B3: AUDIT ZERO DRIFT post-modificare)
+- `_system/generatoare/strip_watermark.py` (R-V49.1: curățare watermark Gemini înainte de a pune imaginile în assets/)
+- eventual `_system/generatoare/patch_runner.py` (doar dacă se aplică patch-uri prin rețetă)
+Acestea se RULEAZĂ și se CITESC, NU se modifică. Nu le-am accesat în acest pas (interzis).
 
-### 3. PROBLEMELE
-- Pagina nu are un "întâi": ochiul nu știe unde să înceapă, decizia întârzie.
-- Esențialul stă la fel de tare ca detaliul: nicio ierarhie, totul concurează.
-- Ordinea de pe pagină = ordinea de producție, nu ordinea pentru decizie.
-- Proximitate greșită: lucruri legate stau departe, nelegate stau lipite; relația se citește fals.
-- Munca de prioritizare e împinsă pe decident, exact omul care n-ar trebui s-o facă.
-- Eșecul e invizibil: pagina pare completă și profesională, dar decizia e lentă sau greșită, iar vina cade pe cititor ("prea multe date"), nu pe autor.
+## 4. Ce fișiere se vor putea modifica la generare
+Doar `c14/**`, cele 7 artefacte canonice (R-V01.2 LIVRARE TOATE ODATĂ):
+1. `c14/HTML-Studiu`
+2. `c14/HTML-Editor-Studiu`
+3. `c14/HTML-Video`
+4. `c14/HTML-Editor-Video`
+5. `c14/Date_MASTER-C14.xlsx`
+6. `c14/FILM`
+7. `c14/assets/` (`hero-poster-excel-14-{slug}.jpg` + `exec-stage-1..6.jpg`)
+Plus, ca raportare: `_brain/c14/CLAUDE-TO-BRAIN.md`.
 
-### 4. MIZA
-Eșecul silențios al paginii prost compuse. Costul: decizii lente, decizii cu prioritate greșită, raport ignorat. Spre deosebire de un grafic fals (care se prinde), o pagină prost compusă trece drept profesională și ratează decizia fără să declanșeze suspiciune. Miza compune în sus pe treaptă: dacă pagina îngroapă esențialul, mesajul C15 nu mai are pe ce sta, iar cadrul de decizie C16 arată spre lucrul greșit.
+## 5. Ce fișiere sunt interzise
+Per CHAT-CONTEXT C14, NU se modifică: toate celelalte `cNN/**`; alte `_brain/cYY/**`; `CLAUDE.md`; `README.md`; `STARE-CURENTA.md`; `index.html`; `_system/**`; `governance/**`; `constructii.xlsx`; codul generatoarelor/gate; `COMENZI.yaml`; orice fișier global/sistem.
+Nuanță: `_system/generatoare/*.py` și `c01/` se CITESC/RULEAZĂ la generare (cu autorizare în mandatul de generare), dar NU se MODIFICĂ.
 
-### 5. MANTRA
-"Compun privirea, nu pagina." (aprobată)
+## 6. Este sau nu nevoie de CERERE SYSTEM?
+- Pentru **generarea artefactelor `c14/**`** (COPY+MODIFY din c01, rulare generatoare existente): **NU e nevoie de CERERE SYSTEM** — nu se modifică niciun fișier comun/sistem.
+- Pentru **integrarea globală post-generare** (înregistrarea C14 în `index.html`, `constructii.xlsx`, `STARE-CURENTA.md`, eventual un doc `_system`): **DA, CERERE SYSTEM separată** către chat-ul SYSTEM. C14 produce doar `c14/**` + raport; integrarea globală nu e treaba C14.
+- Caz posibil de CERERE SYSTEM și la generare: dacă `Date_MASTER-C14.xlsx` cere o schemă de dashboard XLSX care depinde de o decizie de sistem sau de output-ul C13 (vezi riscul de la pct. 7).
 
-### 6. WOW
-Before/after de rearanjare pură: aceeași pagină, aceleași grafice, aceleași cifre, altă așezare. În "before" decidentul caută zeci de secunde și alege greșit; în "after", fără să se schimbe un singur grafic sau o singură cifră, răspunsul sare în ochi în câteva secunde. Demonstrația că ordinea, nu datele, a făcut decizia. (aprobat)
-
-### 7. MOTTO
-**Propunere:** "Ce vede ochiul întâi decide."
-Distinct de AHA (insight) și de Mantra (crez la persoana întâi); motto = semnătura declarativă a construcției, ancorată pe întrebarea-ax. DE VALIDAT.
-
-### 8. FENOMENE
-- Pagina-zid: zeci de grafice de aceeași mărime, niciunul mai important, ochiul nu știe unde să meargă.
-- Esențialul îngropat: cel mai important rezultat stă jos, în colț, la fel de mare ca un detaliu minor.
-- Ordinea de producție pe pagină: pui graficele cum le-ai făcut, nu cum trebuie văzute.
-- Grupare ratată: proximitatea minte despre relații.
-- Greutate egală la lucruri inegale: titlu, total, detaliu, notă, toate la fel.
-- Decidentul întreabă "deci la ce mă uit aici?" = semnul lipsei unui "întâi".
-- Horror vacui: reflexul de a umple orice gol cu încă un grafic, în loc să-l lași să creeze ierarhie.
-- Eșec silențios: pagina pare profesională, dar decizia întârzie sau e greșită.
-
-### 9. STEP-TITLES (cele 11 sloturi aprobate, exact 11)
-1. Pagina fără "întâi"
-2. Primul punct de contact al ochiului
-3. Poziția ca semnal de importanță
-4. Focarul vizual
-5. Traseul de citire
-6. Retrogradarea elementelor secundare
-7. Ierarhia vizuală pentru decizie
-8. Gruparea elementelor legate
-9. Spațiul gol ca instrument de ierarhie
-10. Compunerea guvernată de răspunsul venit din T3
-11. Testul celui de-al doilea ochi
-
----
-
-## INCLUSE OBLIGATORIU ÎN SPEC
-
-### AHA (aprobat)
-"Aceleași grafice, altă ordine, altă decizie."
-
-### OUTPUT C14 (aprobat)
-Pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15. (NU pas separat; este rezultatul construcției.)
-
-### GARDURI C13 / C15 / C16
-- Față de C13: nu desenează și nu modifică obiectele vizuale (intră oneste, gata, de la C13).
-- Față de C15: nu formulează și nu scrie mesajul esențial (îl face doar vizibil prin ordine).
-- Față de C16: nu face raportul decision-ready, nu adaugă cadru de decizie, nu predă/distribuie.
-- Identitate: nu face estetică; compune ordinea privirii; răspunde la "ce vede ochiul întâi?".
-
-### INTERDICȚIA DASHBOARD
-C14 nu se autorizează ca dashboard. Dashboard = substrat tehnic posibil al foii Excel, NICIODATĂ identitate / nume conceptual. Identitatea = COMPOZIȚIA / COMPUNEREA.
+## 7. Riscuri finale înainte de generare
+- **B1 (SPEC înghețat):** SPEC complet C14 aprobat (9 elemente). De confirmat HARD prin `pre_generation_check.py 14` la generare.
+- **Suprapunere C13/C14 pe XLSX:** Doc 13 §STARE spune că dashboard XLSX se introduce la C13. De clarificat ce conține `Date_MASTER-C14`: moștenește dashboard-ul C13? îl extinde cu compoziția/ierarhia? doar îl referențiază? Risc real de suprapunere de substrat. DE DECIS înainte de generare.
+- **Dependența de output C13:** obiectele vizuale oneste vin de la C13. C13 e „pre-generation ready" (per commit-urile recente), dar NU generat. Dacă C13 nu e generat/stabil, C14 nu are input vizual coerent. De confirmat ordinea.
+- **Garduri la autorarea HTML/FILM:** dashboard doar substrat (nu identitate); fără mesaj (C15); fără livrare decision-ready (C16); fără estetică; fără redesenarea obiectului (C13).
+- **R-V02.15 ZERO CIFRE BUSINESS:** în HTML/FILM doar referințe generice; cifrele trăiesc în Excel.
+- **R-V02.14 SUMĂ CONSERVATĂ:** valoarea netă cap-coadă; `Date_MASTER-C14` trebuie să continue lanțul (input de la C13).
+- **Imagini:** hero + 6 exec-stage se produc extern (ARHITECT); watermark Gemini curățat cu `strip_watermark.py`. Dacă imaginile nu sunt furnizate la generare, generarea vizuală e blocată parțial. Flag.
+- **SLUG provizoriu `compunerea`:** de confirmat definitiv înainte de a fixa numele fișierelor din assets.
 
 ---
 
-## CE LIPSEȘTE / DE VALIDAT
-- SLUG final (aliniere la convenția c01, neaccesibilă în această etapă): `compunerea` vs `compozitie`.
-- MOTTO: confirmi "Ce vede ochiul întâi decide." sau preferi altă formulare?
-- Confirmi SPEC-ul complet ca îngheț pre-generare (cele 9 elemente)?
-- La aprobare, mandatul de generare va trebui să autorizeze explicit: acces `c01/` (COPY+MODIFY), generatoare/gate, eventual CERERE SYSTEM pentru orice fișier comun. (Semnalez, nu ridic acum.)
+## CERERE DE DECIZIE PENTRU BRAIN
+- Confirmi lista de autorizări (pct. 1-4) pentru mandatul de generare?
+- Decizia pe `Date_MASTER-C14` vs dashboard-ul C13 (pct. 7, suprapunere XLSX) — esențială înainte de generare.
+- Confirmi ordinea: C13 generat înainte de C14 (input vizual), sau C14 se generează cu obiecte-placeholder?
+- La aprobare, mandatul de generare trebuie să ridice explicit interdicțiile din acest pas: acces citire `c01/` + `_system/04,05,08,10` + `COMENZI.yaml`, rulare `pre_generation_check / gate_v20 / audit_sync / strip_watermark`.
