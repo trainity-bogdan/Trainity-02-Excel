@@ -422,7 +422,7 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - title_video: C15 · SINTETIZARE · BROADCAST
 - localStorage_studiu: trainity_c15_study_v1
 - localStorage_video: trainity_c15_video_v1
-- nota_hero: PROVIZORIU — nume_hero_caps (MIZĂ HERO descriptor) derivat din axa locked „mesajul esențial"; NU e înghețat explicit în SPEC-ul C15. De confirmat/autorat de BRAIN (ca „FORMA ADEVĂRATĂ" C13 / „ORDINEA PRIVIRII" C14) înainte de generare.
+- nota_hero: BRAIN-CONFIRMED 08.06.2026 — nume_hero_caps „MESAJUL ESENȚIAL" confirmat oficial de BRAIN (mandat CONFIRM_C15_HERO_DESCRIPTOR). MIZĂ HERO descriptor C15 = LOCKED. Derivat din axa locked „mesajul esențial"; statutul PROVIZORIU este eliminat.
 
 ## IDENTITATE_TEHNICA C16 · LIVRAREA
 
