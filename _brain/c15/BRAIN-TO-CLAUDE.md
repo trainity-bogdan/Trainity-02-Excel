@@ -1,23 +1,20 @@
 # BRAIN -> CLAUDE C15
 
 ## STATUS
-EXECUTE_GENERATION_BLUEPRINT_NOW
+BLUEPRINT_V1_1_REFINEMENT_MANDATE_READY
 
 ## CONTEXT
 C15 SINTETIZAREA. T4 RAPORTARE. CUVANT LOCKED: SINTEZA. VERB LOCKED: SINTETIZEZ.
 
 SPEC 11-slot C15 este inghetat conceptual v1.0.
 
-Atentie: mandatul anterior de blueprint a fost scris, dar la ultimul sync raportul CLAUDE-TO-BRAIN ramasese raportul vechi de freeze conceptual. Acum executa mandatul de blueprint si suprascrie raportul vechi cu raportul cerut mai jos.
+Ultimul raport Claude C15 are status BLUEPRINT_GENERATION_PREPARED si a propus blueprint-ul de generare C15.
 
-C15 este constructia de extragere si formulare a mesajului esential al raportului.
+BRAIN aproba seed-ul si blueprint-ul in principiu, dar cere o versiune BLUEPRINT C15 v1.1 inainte de generarea efectiva.
 
-Granita in jos: C14 COMPUNEREA = organizarea spatiala a obiectelor vizuale.
-Granita in sus: C16 LIVRAREA = transformarea raportului intr-un material decision-ready, predabil decidentului.
-
-Pilon T4: T4 consuma raspunsul produs de T3. Nu il naste.
-
-C15 nu descopera insight-ul. C15 formuleaza sinteza.
+Motivul cererii:
+1. E5 RECALCUL poate contamina C15 spre calcul/T3;
+2. substratul Excel C15 trebuie clarificat ca strat MESAJ, nu strat de calcul, analiza sau decizie.
 
 ## SPEC 11 SLOT C15 LOCKED
 
@@ -55,56 +52,74 @@ Un director nu citeste toata pagina. O deschide si intreaba: si ce-i cu asta? Ar
 SINTETIZEZ.
 
 ## MANDAT
-Claude C15 executa acum exclusiv pregatirea conceptuala pentru generare C15, NU generarea efectiva.
+Claude C15 executa exclusiv rafinarea conceptuala a blueprint-ului C15 la versiunea v1.1.
 
-Obiectiv:
-1. construieste SEED-ul de generare C15;
-2. propune blueprint-ul dedicat C15 pentru structura de implementare;
-3. defineste cele 9 elemente SPEC de generare care NU sunt in 11-slot: SLUG, PROBLEMELE, FENOMENE, STEP-TITLES si celelalte elemente cerute de protocolul B1/CLAUDE.md, dar fara sa inventezi daca protocolul cere altceva;
-4. propune structura de 6 etape exec / 18 pasi / fenomene / verificari / 2 prompturi AI, pe axa SINTEZA;
-5. propune lista de livrabile pentru C15, fara sa le creezi;
-6. propune validari necesare pentru generare;
-7. marcheaza riscurile de contaminare C15 spre rezumat, C14, C16 sau T3;
-8. marcheaza exact ce decizii trebuie sa dea BRAIN inainte de mandatul de generare efectiva.
-
-NU implementezi artefacte.
+NU executa generarea efectiva.
+NU creezi artefacte.
 NU generezi c15/**.
 NU creezi HTML, Excel, FILM, imagini sau fisiere livrabile.
 NU modifici fisiere sistem.
 NU modifici alte constructii.
 NU intri in _brain/c13 sau alte foldere _brain/cYY.
-NU faci cleanup.
 NU repari nimic in afara acestui mandat.
 
-Ai voie sa scrii doar raportul in:
-- _brain/c15/CLAUDE-TO-BRAIN.md
+Obiectiv:
+1. pastreaza blueprint-ul C15 ca baza;
+2. nu redeschide SPEC 11-slot C15;
+3. revizuieste E5 RECALCUL pentru a evita contaminarea spre calcul/T3;
+4. propune 2-3 alternative pentru E5;
+5. recomanda o varianta finala pentru E5, preferinta BRAIN fiind:
+   E5 REFORMULARE - Mesajul se adapteaza la schimbare;
+6. clarifica substratul Excel C15 ca strat MESAJ, nu strat de calcul;
+7. defineste explicit ce face stratul MESAJ si ce NU face;
+8. verifica din nou granitele C15 fata de C14, C16 si T3;
+9. marcheaza deciziile finale necesare inainte de mandatul de generare efectiva.
+
+## CERINTE SPECIFICE
+
+Pentru E5, ai voie sa propui alternative precum:
+- REFORMULARE
+- ADAPTARE
+- ACTUALIZARE
+- VALIDARE MESAJ
+
+Dar trebuie sa eviti termeni precum:
+- RECALCUL
+- CALCUL
+- INTERPRETARE
+- DECIZIE
+- LIVRARE
+
+Pentru substratul Excel C15, defineste clar:
+- stratul MESAJ contine headline-ul / so-what-ul formulat de cursant;
+- mesajul este legat de pagina-dovada;
+- mesajul nu calculeaza insight;
+- mesajul nu descopera cauza;
+- mesajul nu genereaza recomandare;
+- mesajul nu muta C15 in C14, C16 sau T3.
 
 ## CERINTE DE RAPORTARE
 Raportul trebuie sa contina obligatoriu:
 
-1. STATUS
-2. SEED DE GENERARE C15
-3. BLUEPRINT C15 PROPUS
-4. CELE 9 ELEMENTE SPEC DE GENERARE
-5. STRUCTURA 6 ETAPE / 18 PASI
-6. FENOMENE SI VERIFICARI
-7. CELE 2 PROMPTURI AI
-8. LIVRABILE C15 PROPUSE
-9. VALIDARI NECESARE
-10. RISCURI DE CONTAMINARE
-11. DECIZII CERUTE DE LA BRAIN INAINTE DE GENERARE
-12. CE NU AI FACUT
+1. STATUS = BLUEPRINT_V1_1_PREPARED
+2. CE RAMANE NEMODIFICAT DIN BLUEPRINT V1.0
+3. PROBLEMA E5 RECALCUL
+4. ALTERNATIVE E5
+5. E5 RECOMANDAT FINAL
+6. SUBSTRAT EXCEL C15 CLARIFICAT
+7. GARDURI C14 / C15 / C16 / T3
+8. DECIZII FINALE CERUTE DE LA BRAIN
+9. CE NU AI FACUT
 
 ## CONDITII DE ACCEPTARE
 Acceptabil doar daca:
+- raportul are status BLUEPRINT_V1_1_PREPARED;
 - nu redeschizi SPEC 11-slot C15;
 - nu modifici sloturile locked;
-- pastrezi C15 ca SINTEZA, nu rezumat;
-- pastrezi output-ul C15 ca mesaj esential / propozitie;
-- nu impingi C15 spre C14, C16 sau T3;
+- E5 nu mai suna a calcul;
+- substratul Excel ramane strat MESAJ, nu strat de analiza;
 - nu generezi artefacte;
-- raportul ramane pregatire conceptuala pentru generare, nu executie;
-- CLAUDE-TO-BRAIN.md nu mai ramane raport de freeze vechi, ci devine raportul de blueprint cerut aici.
+- raportul ramane pregatire conceptuala pentru generare, nu executie.
 
 ## RAPORT
 Scrie raportul in _brain/c15/CLAUDE-TO-BRAIN.md si apoi commit descriptiv pe main + push.
