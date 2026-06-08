@@ -2669,7 +2669,82 @@ Nu rezultatul contează. Contează de ce apare rezultatul.
 ### FORMULA FINALĂ
 Rezultat numeric + cauză citită din model + frază verificabilă = insight care închide analiza.
 
-## SPEC C13 - VIZUALIZARE EXECUTIVA   [Status: NEGENERAT]
+## SPEC C13 - VIZUALIZAREA   [Status: INGHETAT 08.06.2026]
+
+Axă: ONESTITATEA FORMEI. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
+Decizie locked: C13 = obiect vizual onest, NU dashboard (dashboard = C14).
+
+### 1. INTRIGA
+"Cifra e corectă. Graficul minte."
+
+### 2. PROBLEMELE
+- aceeași cifră produce concluzii diferite prin forme diferite
+- graficul pare obiectiv, dar forma e aleasă de autor
+- ochiul crede forma înainte să verifice cifra
+- AI generează graficul, dar nu garantează onestitatea lui
+- decidentul crede că vede datele, dar vede o formă vizuală prost aleasă
+
+### 3. MIZA
+"O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
+
+### 4. MANTRA / AHA
+MANTRA: "Nu desenez frumos. Desenez adevărat."
+AHA: "Forma greșită minte cu cifra corectă."
+
+### 5. MOTTO
+"Forma nu se nimerește. Se alege."
+
+### 6. STEP-TITLES (18, în 6 etape x 3 pași)
+ETAPA 1 REALITATE
+1. Răspunsul corect, dar invizibil
+2. Nimeni nu decide privind un model
+3. Aceeași cifră, încă fără formă
+ETAPA 2 INVESTIGAȚIE
+4. O cifră, mai multe forme posibile
+5. Promptul 1: ce formă cere rezultatul
+6. Aceeași cifră, două grafice, două concluzii
+ETAPA 3 TRANSFORMARE
+7. Tipul de grafic urmează natura rezultatului
+8. Promptul 2: generezi vizualul, corectezi axa și scala
+9. Scoți codarea care sugerează fals
+ETAPA 4 VERIFICARE
+10. Vizualul față de cifra brută: aceeași concluzie?
+11. Testul celui de-al doilea ochi
+12. Marchezi forma care spune mai mult decât cifra
+ETAPA 5 STABILIZARE
+13. Cele șase reguli de onestitate a formei
+14. Eticheta, unitatea, contextul: nimic de ghicit
+15. Un obiect vizual onest, repetabil
+ETAPA 6 CONFIRMARE
+16. Forma onestă repară percepția
+17. Devii garantul a ceea ce vede altcineva
+18. Predai către C14: obiectul, gata de așezat în pagină
+
+### 7. PROMPTURI Copilot (2)
+- Promptul 1, E2 INVESTIGAȚIE: ce formă cere rezultatul (AI propune, omul judecă)
+- Promptul 2, E3 TRANSFORMARE: generezi vizualul, corectezi axa și scala (omul corectează)
+
+### 8. FINAL-LABELS (8)
+- Cifra corectă nu garantează grafic corect.
+- Forma este o decizie.
+- Axa poate exagera adevărul.
+- Tipul de grafic urmează natura rezultatului.
+- Scala trebuie să fie declarată.
+- Codarea vizuală spune un singur lucru.
+- Eticheta, unitatea și contextul elimină ghicitul.
+- Vizualul corect produce aceeași concluzie ca cifra brută.
+
+### 9. FENOMENE / OPERATII (6 perechi: deformare -> corecție onestă)
+- Axa care exagerează -> axa pleacă de la zero, sau abaterea e declarată explicit.
+- Tipul de grafic nepotrivit -> tipul urmează natura rezultatului.
+- Scala care inventează relații -> o singură scală liniară, declarată.
+- Codarea care sugerează fals -> o singură dimensiune codată coerent.
+- Agregarea care ascunde variația -> arăți distribuția / variația, nu doar media.
+- Eticheta / unitatea / contextul lipsă -> fiecare vizual poartă unitate, etichetă și context.
+
+### GRANIȚE
+C12 = interpretarea rezultatului. C13 = forma vizuală onestă a unui rezultat deja produs. C14 = organizarea spațială (pagină / dashboard). C15 = sinteza mesajului. C16 = livrarea decision-ready. Handoff: "C13 face obiectul adevărat. C14 îl așază în pagină."
+
 ## SPEC C14 - DASHBOARD EXECUTIV   [Status: NEGENERAT]
 ## SPEC C15 - POVESTEA DATELOR   [Status: NEGENERAT]
 ## SPEC C16 - CONTROL INSTANT   [Status: NEGENERAT]

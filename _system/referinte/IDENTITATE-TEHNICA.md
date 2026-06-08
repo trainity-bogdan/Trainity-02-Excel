@@ -342,6 +342,33 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_studiu: trainity_c12_study_v1
 - localStorage_video: trainity_c12_video_v1
 
+## IDENTITATE_TEHNICA C13 · VIZUALIZAREA
+
+- cod: C13
+- treapta_nr: 4
+- treapta_nume: RAPORTARE
+- treapta_pozitie: 1 din 4 (Vizualizare, Compunere, Sintetizare, Livrare)
+- nume_hero_caps_rand1: FORMA
+- nume_hero_caps_rand2: ADEVĂRATĂ
+- nume_hero_caps: FORMA ADEVĂRATĂ
+- nume_title_case: Vizualizarea
+- nume_slug: Vizualizare
+- input_filename: Date_MASTER-C12.xlsx
+- output_filename: Date_MASTER-C13-Vizualizare.xlsx
+- meta_val_treapta: <b>VIZUALIZARE</b> · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)
+- next_cod: C14
+- next_nume_title: Compunerea
+- next_label: TREAPTA 4 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C13 VIZUALIZARE · VIZUAL
+- topbar_text: Sistemul 02 - Excel · C13 · Vizualizare
+- mobile_topbar: C13 · Vizualizare
+- nav_brand_label: PACK 02 EXCEL · C13
+- nav_brand_title: FORMA ADEVĂRATĂ
+- title_studiu: C13 · Vizualizare · Trainity
+- title_video: C13 · VIZUALIZARE · BROADCAST
+- localStorage_studiu: trainity_c13_study_v1
+- localStorage_video: trainity_c13_video_v1
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination
