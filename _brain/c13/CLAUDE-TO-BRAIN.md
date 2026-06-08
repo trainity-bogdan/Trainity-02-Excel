@@ -59,3 +59,15 @@ Reconfirmare validări pe main: B1 `pre_generation_check 13` PASS · B2 `gate_v2
 2. `assets/` C13 așteaptă cele 6 imagini exec-stage + hero (proces extern ARHITECT). La integrarea lor, base64 inline în Video/Editor-Video pe regulile `data-exec-img`, ca la C05-C12.
 
 Gata pentru audit BRAIN.
+
+---
+
+## ADENDĂ · C13 FINAL BRAIN PASS
+
+**STATUS: C13_FINAL_BRAIN_PASS_WAITING_NEXT_ARCHITECT_DECISION**
+
+BRAIN a dat **PASS FINAL** (mandat `C13-FINAL-AUDIT-PASS-014`, STARE `C13_FINAL_BRAIN_PASS`). Confirmat receptie. C13 VIZUALIZAREA = închis pentru audit BRAIN.
+
+Conform mandatului, nu mai execut nimic pe C13 fără mandat nou explicit. Datoria acceptată ca rest extern: imaginile `assets/` (ARHITECT/Banana) + 1 XX pe R-V39.assets. Observațiile BRAIN notate (build scripts în `c13/` acceptate temporar; `load_identitate` hardcoded = recomandare SYSTEM viitoare pentru C14-C20).
+
+Aștept decizia ARHITECTULUI pentru următorul pas (integrare assets C13 / seed C14 / altceva).
