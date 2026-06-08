@@ -1,12 +1,14 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_SEED_CONCEPTUAL_PROPUS
+MANDAT_SPEC_11_SLOT_PROPUS
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
 
-C14 poate trece din PRE-SPEC RESEARCH în SEED CONCEPTUAL PROPUS, dar nu încă în SPEC 11-slot.
+SEED C14 este aprobat.
+
+C14 poate trece în etapa SPEC 11 SLOT PROPUS, fără implementare și fără artefacte.
 
 ## DECIZII BRAIN VALIDATE
 
@@ -18,73 +20,88 @@ C14 poate trece din PRE-SPEC RESEARCH în SEED CONCEPTUAL PROPUS, dar nu încă 
 - C15 extrage/formulează mesajul esențial
 - C16 livrează raportul decision-ready
 
+## APROBĂRI SEED
+
+AHA final aprobat:
+
+"Aceleași grafice, altă ordine, altă decizie."
+
+Mantra finală aprobată:
+
+"Compun privirea, nu pagina."
+
+WOW final aprobat:
+
+before/after de rearanjare pură, aceleași grafice, aceleași cifre, altă așezare, altă claritate decizională.
+
+Intriga aprobată:
+
+aceleași grafice corecte pot produce decizii diferite prin așezare.
+
+Miza aprobată:
+
+eșecul silențios al paginii prost compuse.
+
 ## MANDAT
 
-Pregătește SEED conceptual C14, fără implementare, fără artefacte, fără modificări în c14/**.
+Pregătește raportul:
+
+# CLAUDE -> BRAIN · C14 SPEC 11 SLOT PROPUS
 
 Scrie raportul în:
 
 `_brain/c14/CLAUDE-TO-BRAIN.md`
 
-Format obligatoriu:
+Fără implementare, fără artefacte, fără modificări în `c14/**`.
 
-# CLAUDE -> BRAIN · C14 SEED PROPUS
+## STRUCTURĂ OBLIGATORIE SPEC 11 SLOT
 
-cu 11 secțiuni:
+Folosește exact 11 sloturi, nu 12:
 
-1. Identitate LOCKED
-2. Granițe C13 / C14 / C15 / C16
-3. Definiție C14 într-o propoziție
-4. Întrebarea construcției
-5. Intriga
-6. Miza
-7. AHA
-8. Mantra
-9. WOW
-10. Fenomene observabile
-11. Step-titles candidate pentru SPEC 11-slot
+1. Pagina fără "întâi"
+2. Primul punct de contact al ochiului
+3. Poziția ca semnal de importanță
+4. Focarul vizual
+5. Traseul de citire
+6. Retrogradarea elementelor secundare
+7. Ierarhia vizuală pentru decizie
+8. Gruparea elementelor legate
+9. Spațiul gol ca instrument de ierarhie
+10. Compunerea guvernată de răspunsul venit din T3
+11. Testul celui de-al doilea ochi
 
-## ZIDURI OBLIGATORII
+## OUTPUT C14
 
-- nu folosi "dashboard" ca identitate C14
-- nu formula mesajul raportului, aceasta aparține C15
-- nu redesena obiectul vizual singular, aceasta aparține C13
-- nu transforma pagina în livrare decision-ready, aceasta aparține C16
-- nu folosi estetica drept miză
-- autorarea trebuie să fie despre decizie vizuală: ce vede decidentul întâi, ce vede după, ce nu trebuie să vadă
+Nu păstra "Predarea către C15" ca pas 12.
 
-## AHA ȘI MANTRA
+Pune separat:
 
-Propune:
+OUTPUT C14: pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15.
 
-- 3 variante AHA
-- 3 variante Mantra
-- marchează una ca recomandare principală
+## GARDURI PENTRU SPEC
 
-Direcție:
+În SPEC, păstrează explicit:
 
-- AHA trebuie să arate că ordinea vizuală schimbă decizia
-- Mantra trebuie să fie scurtă, memorabilă și distinctă de C13
+- C14 nu desenează grafice
+- C14 nu formulează mesajul
+- C14 nu livrează raportul final
+- C14 nu face estetică
+- C14 compune ordinea privirii
+- C14 răspunde la "ce vede ochiul întâi?"
 
-Evită clone de tip:
+## RISCURI DE CONTROLAT
 
-- "Nu desenez frumos. Desenez adevărat."
-- "Nu arăt tot. Arăt ce contează."
-
-## VALIDĂRI PERMISE
-
-Poți cere validare doar pentru:
-
-- AHA final
-- Mantra finală
-- WOW final
-- step-title-urile finale pentru SPEC 11-slot
+- pasul 2 să nu devină teorie UX generală
+- pasul 7 să nu alunece spre design estetic
+- pasul 10 să nu formuleze răspunsul, ci doar să alinieze compoziția la răspunsul venit din T3
+- output-ul către C15 să nu devină pas separat
 
 ## INTERDICȚII
 
 - nu implementa nimic
 - nu modifica fișiere de construcție
 - nu genera artefacte
+- nu ridica CERERE SYSTEM pentru șablon în această etapă
 - nu presupune status
 - nu inventa conținut lipsă
 - lucrează doar pe baza fișierelor citite efectiv
@@ -92,4 +109,4 @@ Poți cere validare doar pentru:
 
 ## RAPORT
 
-După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul SEED PROPUS.
+După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul SPEC 11 SLOT PROPUS.
