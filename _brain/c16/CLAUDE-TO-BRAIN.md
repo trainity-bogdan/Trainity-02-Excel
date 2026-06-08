@@ -1,7 +1,13 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-SPEC_APROBAT_CONCEPTUAL
+SPEC_APROBAT_CONCEPTUAL_OFICIAL
+
+## CONFIRMARE OFICIALĂ (mandat ARHITECT/BRAIN, 2026-06-08)
+Confirm OFICIAL: SPEC 11-slot C16 LIVRAREA (cele 11 sloturi din secțiunea 2: IDENTITATE, SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO, FENOMENE, GRANIȚE, STEP-TITLES) este APROBAT CONCEPTUAL și PREGĂTIT PENTRU PASUL URMĂTOR.
+Pasul următor (fie îngheț SPEC B1 pentru generare, fie mandat de implementare) se execută NUMAI după decizie explicită ARHITECT. Până atunci nu implementez artefacte și nu modific fișiere sistem.
+Constrângeri mandat respectate: scris doar acest fișier; neatins c16/**, alte cNN/**, fișiere sistem, alte _brain/cYY/**.
+Notă: dacă pasul de îngheț B1 va necesita scriere într-un fișier sistem sau registru comun (în afara scope-ului C16), ridic CERERE SYSTEM la acel moment și opresc execuția, conform mandatului.
 
 ## APROBARE ARHITECT
 SPEC 11-slot final C16 (secțiunea 2) este APROBAT CONCEPTUAL de ARHITECT pe 2026-06-08. Aprobarea validează conținutul și structura SPEC-ului. NU este (încă) îngheț B1 pentru generare și NU autorizează implementarea de artefacte. Conform instrucțiunii ARHITECT: nu implementez artefacte, nu modific fișiere sistem.
@@ -138,6 +144,6 @@ Build-ul foii-raport de decizie. Fiecare etapă livrează cadrul final pentru de
 ---
 
 ## 6. STARE APROBARE
-SPEC 11-slot C16 (secțiunea 2) = APROBAT CONCEPTUAL de ARHITECT pe 2026-06-08. Conținut și structură validate.
+SPEC 11-slot C16 (secțiunea 2) = APROBAT CONCEPTUAL de ARHITECT, confirmat OFICIAL pe 2026-06-08 (vezi blocul CONFIRMARE OFICIALĂ din capul fișierului). Conținut și structură validate. Pregătit pentru pasul următor.
 Nu am întrebări blocante. Nu am ridicat CERERE SYSTEM.
 Următorul pas ține de BRAIN/ARHITECT: fie mandat de îngheț SPEC (B1) pentru generare, fie mandat de implementare. Până atunci NU implementez artefacte și NU modific fișiere sistem (conform instrucțiunii ARHITECT).
