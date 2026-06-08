@@ -1,44 +1,74 @@
-# CLAUDE -> BRAIN · C14 GENERARE RAPORT
+# CLAUDE -> BRAIN · C14 AUDIT CONCEPTUAL RAPORT
 
 ## STATUS
-CLAUDE_C14_GENERAT_GATE_PASS
-C14 COMPUNEREA generat cap-coadă. B1 PASS · B2 GATE PASS · B3 zero drift real (doar assets pending, ca la C12/C13). Modificat doar `c14/**` + acest raport.
+CLAUDE_C14_AUDIT_CONCEPTUAL_READY
+Audit READ-ONLY pe artefactele generate. Nu am modificat `c14/**`, `_system/**`, nu am regenerat, nu am integrat global, nu am marcat LIVRAT 100%. Verdict: PASS conceptual cu 1 abatere de titlu (vezi 12-13).
 
-## CE AM CITIT
-- `c01/` (structură referință COPY+MODIFY: 4 HTML + Date_MASTER + FILM + assets cu hero + 6 exec-stage).
-- `c13/` (predecesor T4): cele 6 scripturi de build (`build_html_studiu/video/editor_studiu/editor_video/date_master/film_c13.py`) + `Date_MASTER-C13.xlsx` (intrare vizuală, foi + schema Vanzari 14 col + sumă 7986019.38).
-- `_system/generatoare/gate_v20.py`, `pre_generation_check.py`, `audit_sync.py`.
-- Mediul: `openpyxl` + `python-docx` lipseau, le-am instalat (rețea disponibilă) -> blocaj de mediu REZOLVAT.
+Artefacte auditate: HTML-Studiu, HTML-Video, FILM, Date_MASTER-C14 (toate verificate factual prin grep/openpyxl/python-docx, nu doar afirmat).
 
-## CE AM GENERAT (în `c14/`)
-6 scripturi de build (COPY+MODIFY din C13) + cele 6 artefacte cod:
-1. `HTML-Studiu-Excel-14-Compunere.html` (95 KB, 11 pași în 6 etape, 6 fenomene, 8 verificări, 2 prompturi)
-2. `HTML-Editor-Studiu-Excel-14-Compunere.html` (companion 1:1 + panou editor, zone LOCKED C14)
-3. `HTML-Video-Excel-14-Compunere.html` (broadcast, 6 etape / 11 pași, 6 exec-slides)
-4. `HTML-Editor-Video-Excel-14-Compunere.html` (companion video 1:1)
-5. `Date_MASTER-C14.xlsx` (continuare compozițională a C13: toate foile + foaia nouă `Compunere`; Vanzari neatins, sumă conservată 7986019.38)
-6. `FILM-Excel-14-Compunere.docx` (script procedural, 6 etape HOOK->DEMO->CONTROL->REVEAL)
+## 1. VERIFICARE IDENTITATE C14
+PASS. Toate exacte, verificate în Studiu:
+- hov-object = COMPOZIȚIE; întrebare-ax data-locked = "Ce vede ochiul întâi?"
+- AHA = "Aceleași grafice, altă ordine, altă decizie."; Mantra = "Compun privirea, nu pagina."; Motto = "Ce vede ochiul întâi schimbă decizia."
+- footer conține C14; Video: topbar "C14 · Compunere", title "C14 · COMPOZIȚIE · BROADCAST".
 
-Mapare 11 vs 18: cele 11 step-titles aprobate distribuite în 6 etape (2+2+2+2+2+1), scaffold-ul C13 păstrat (6 etape, 6 exec-slides), fără modificarea SPEC-ului conceptual.
+## 2. VERIFICARE 11 PAȘI APROBAȚI
+PARȚIAL (concepte intacte, titluri NU 1:1). Cele 11 concepte sunt TOATE prezente în artefacte, DAR step-title-urile afișate nu mapează 1:1 pe cele 11 sloturi aprobate:
+- Titluri afișate (Studiu + Video) = sloturile 1,2,3,4,5,7,8,9,10,11 + un titlu "Promptul 1".
+- Slotul 6 "Retrogradarea elementelor secundare" NU apare ca titlu standalone (0 în Studiu, 0 în Video); conceptul e pliat în corpul pasului "Traseul de citire" ("retrogradezi ce nu mută decizia"). Concept prezent, titlu absent.
+- Prompturile (1 și 2) ocupă/parazitează slot de titlu, în loc să stea doar ca box în corpul unui pas-slot.
+Detaliu structural la pct. 12.
 
-## CE AM MODIFICAT
-Doar `c14/**` (creat) + `_brain/c14/CLAUDE-TO-BRAIN.md` (acest raport). NU am atins `c01/`, `c13/`, alte `cNN/`, `_system/`, index.html, STARE-CURENTA, README, CLAUDE.md, constructii.xlsx, COMENZI.yaml.
+## 3. VERIFICARE 6 FENOMENE
+PASS. Cele 6 anomaly-cards în Studiu: PAGINA-ZID, ESENȚIALUL ÎNGROPAT, ORDINEA DE PRODUCȚIE, GREUTATE EGALĂ, PROXIMITATEA CARE MINTE, HORROR VACUI. Identice cu FENOMENE din SPEC. FILM are aceleași 6 în "SCENA REALĂ".
 
-## STATUS B1 (pre_generation_check 14)
-**PASS, exit 0.** SPEC C14 INGHETAT (COMPUNEREA) · IDENTITATE_TEHNICA C14 POPULATA · FENOMENE ALINIAT.
+## 4. VERIFICARE BEFORE / AFTER
+PASS. Studiu: ba-list cu 6 perechi (focar, ordine, greutate, spațiu, decizie). Date_MASTER foaia Compunere: secțiunea "4) BEFORE / AFTER" (aceleași obiecte, altă așezare). WOW = "Aceleași grafice, aceleași cifre, altă așezare. Decizia se schimbă mutând blocurile, nu conținutul." Rearanjare pură, zero date noi.
 
-## STATUS B2 (gate_v20 14 c14 c01)
-**GATE PASS.** Livrabile prezente 5/5. Toate cele 6 clase trecute: NO-CLONE GENERIC, IDENTITY (hero COMPOZIȚIE, slug Compunere, footer C14, localStorage trainity_c14_*), BRAND (zero em/en-dash, zero engleză/vocab interzis), CROSS-CONTAMINATION (zero cod străin), VOCE, DATA-CONTINUITY (Vanzari 14 col + nomenclatoare + sumă conservată). „Constructia C14 e pregatita pentru present_files."
+## 5. VERIFICARE FILM
+PASS. Identitate prezentă (intriga, AHA, mantra, motto). 6 etape (ZIDUL/POZIȚIA/TRASEUL/IERARHIA/SPAȚIUL/PROBA) cu HOOK->DEMO->CONTROL->REVEAL. 6 fenomene. Granițe explicit afirmate ("nu desenăm obiectul nou", "nu formulăm mesajul", predare către "treapta de sintetizare"). Zero "dashboard".
 
-## STATUS B3 (audit_sync)
-**Zero drift real.** C14 OK pe toate detectoarele (R-V03.69 anti-clonă narativă, R-V03.71 anti-clonă exec, identitate, film arc etc.). Singura `XX` = `V39.assets` (imaginile lipsă), IDENTIC cu C12 și C13. „DRIFT: 3 celule (C12/C13/C14 assets) + 0 ERR".
+## 6. VERIFICARE Date_MASTER-C14
+PASS. Foaia "Compunere" prezentă, adăugată peste foile C13. Vanzari intact (15 coloane, schema canonică). Sumă conservată cap-coadă (7986019.38, delta 0.0). Conține focar / ierarhie / traseu / grupare / spațiu + before/after. "tip neschimbat" explicit. Zero "dashboard".
 
-## RISCURI RĂMASE
-- **Assets (artefact 7) pending:** `c14/assets/` cu hero-poster + 6 exec-stage NU există încă; imaginile le produce ARHITECT extern (Banana/ChatGPT, 3:2 cinematic), apoi le curăț de watermark (R-V49.1) și le integrez base64. HTML-ul folosește placeholdere SVG între timp, exact ca C13. Acesta e singurul element care ține `V39.assets` pe XX.
-- **Integrare globală post-livrare:** înregistrarea C14 în `index.html`, `constructii.xlsx`, `STARE-CURENTA.md` = treabă SYSTEM, nu C14 (CERERE SYSTEM separată la livrare).
-- **Nume fișier Date_MASTER:** HTML-ul referă `Date_MASTER-C14-Compunere.xlsx` (cu slug), fișierul livrat e `Date_MASTER-C14.xlsx` (cerut de gate). Aceeași convenție ca la C13.
+## 7. VERIFICARE GRANIȚĂ C13
+PASS. C14 nu redesenează obiectul: Date_MASTER spune "tip neschimbat", "obiectele vizuale oneste preluate de la treapta de vizualizare", "nu le redesenezi". Tipurile de grafice rămân cele de la C13. Zero date inventate (Vanzari neatins). Gate CLASS 4 (cross-contamination) PASS.
 
-## CE TREBUIE SĂ VERIFICE BRAIN
-- Conținutul conceptual al celor 11 pași + 6 fenomene + before/after (respectă granițele: nu desenează obiectul C13, nu formulează mesajul C15, nu livrează C16, nu face estetică, dashboard doar substrat).
-- Confirmă livrarea fără assets (ca la C13) sau așteptăm imaginile ARHITECT înainte de a marca C14 LIVRAT 100%.
-- La aprobare: CERERE SYSTEM pentru integrarea globală (index/constructii/STARE).
+## 8. VERIFICARE GRANIȚĂ C15
+PASS. C14 nu formulează mesajul esențial. Pasul 11 + handoff: "predai pagina coerentă către treapta de sintetizare", "C14 așază pagina; mesajul îl formulează C15". next-section = "C15 · Sintetizarea". Zero so-what/headline formulat.
+
+## 9. VERIFICARE GRANIȚĂ C16
+PASS. C14 nu livrează și nu construiește cadru de decizie. Date_MASTER START: "nu livreaza (C16)". Fără pachet de decizie, fără predare logistică. Output se oprește la pagina coerentă predată pentru mesaj.
+
+## 10. VERIFICARE ANTI-ESTETICĂ
+PASS. Criteriul afișat de 4 ori: "se vede întâi ce decide", nu "arată plăcut" / "nu estetica". Ierarhia ancorată pe decizie (pasul 7, fenomenul GREUTATE EGALĂ). Estetica nu e miză.
+
+## 11. VERIFICARE DASHBOARD = SUBSTRAT, NU IDENTITATE
+PASS TOTAL. Zero apariții ale cuvântului "dashboard" în HTML-Studiu, FILM și Date_MASTER (Compunere). C14 nu se autorizează nicăieri ca dashboard. Identitatea = COMPOZIȚIA / COMPUNEREA.
+
+## GARDURI DE AUDIT (confirmate explicit)
+- C14 nu redesenează obiectul C13: CONFIRMAT (tip neschimbat).
+- C14 nu schimbă tipurile de grafice: CONFIRMAT.
+- C14 nu inventează date: CONFIRMAT (Vanzari neatins, sumă conservată).
+- C14 nu formulează mesajul esențial C15: CONFIRMAT.
+- C14 nu livrează cadrul C16: CONFIRMAT.
+- C14 nu face estetică drept miză: CONFIRMAT.
+- C14 compune ordinea privirii: CONFIRMAT (focar, traseu, ierarhie, ce vede ochiul întâi).
+- dashboard = substrat tehnic, nu identitate: CONFIRMAT (0 apariții).
+- cele 11 step-titles conceptual intacte: CONCEPTE intacte, dar TITLURILE nu 1:1 (vezi 12).
+
+## 12. PROBLEME GĂSITE
+**O singură problemă, de nivel TITLU (nu de concept, nu de graniță):**
+Step-title-urile afișate în HTML-Studiu și HTML-Video nu sunt 1:1 cu cele 11 sloturi aprobate:
+- Slotul 6 "Retrogradarea elementelor secundare" nu are titlu propriu; e pliat în corpul pasului "Traseul de citire" (slot 5).
+- Un titlu "Promptul 1" ocupă un slot de pas; al doilea prompt e atașat titlului slotului 10.
+Consecință: ochiul care numără titlurile vede 10 din 11 sloturi + 1 titlu de prompt, nu cele 11 sloturi curate. CONCEPTUL retrogradării e prezent (corp pas + final-card "TRASEU" + fenomenul nr. ...), deci nu e pierdere de conținut, ci abatere de la maparea exactă titlu = slot. Restul (B1/B2/B3, identitate, granițe, fenomene, before/after, anti-estetică, dashboard) = curat.
+
+## 13. RECOMANDARE
+**PATCH CONCEPTUAL (minor, de titlu).** Nu blocaj (zero încălcare de graniță / identitate / date) și nu aprobare curată (titlurile nu sunt 1:1 cu cele 11 aprobate). Patch propus, la mandat BRAIN:
+- cele 11 step-titles afișate = exact cele 11 sloturi aprobate (inclusiv "Retrogradarea elementelor secundare" cu titlu propriu);
+- cele 2 prompturi Copilot mutate în CORPUL pașilor-slot relevanți (box `prompt-box` în interior), fără să ocupe un titlu;
+- propagare în Studiu + Video + Editorii companion + (eventual) FILM, urmată de re-rulare B1/B2/B3.
+Alternativ, dacă BRAIN consideră acoperirea conceptuală suficientă (toate cele 11 concepte prezente, prompturile au nevoie de loc), poate da APROBARE-CU-NOTĂ și păstrăm structura actuală. Recomand patch-ul pentru maparea curată titlu = slot, dar decizia e a BRAIN.
+
+Assets rămân pending (ARHITECT). Aștept decizia: patch conceptual sau aprobare-cu-notă.
