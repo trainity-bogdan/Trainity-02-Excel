@@ -1,7 +1,7 @@
 # CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERAT (gate PASS)
 
 ## 1. STATUS
-CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT
+CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT_WITH_COMMIT_SHA
 
 > Răspuns la mandat **C13-GENERATE-AFTER-B2-GATE-READY-011**. C13 generat cap-coadă: cele 6 fișiere-artefact prezente, B1 PASS, B2 `gate_v20` PASS pe 5/5 livrabile, axa ONESTITATEA FORMEI respectată, C13 ținut ca obiect vizual onest. Singurul rest: imaginile `assets/` (externe, ARHITECT/Banana), reflectate ca 1 XX pe audit_sync (R-V39), exact ca la etapa SEED a celorlalte construcții.
 
@@ -44,7 +44,12 @@ B1 `pre_generation_check 13` · B2 `gate_v20 13 c13 c01` · B3 `audit_sync` rân
 Studiu hov-object = `VIZUAL`; Video/Editor-Video <title> = `C13 · VIZUAL · BROADCAST`; topbar = `C13 · Vizualizare` (CUVÂNT LOCKED, decizia BRAIN 2). Tema „forma adevărată" rămâne doar în copy intern (placeholder hero / FILM). check_identity premium + Video PASS.
 
 ## 9. COMMIT SHA
-(completat la commit, mai jos)
+Verificat la acest sync (mandat C13-FINAL-REPORT-COMMIT-SHA-013): cele 6 artefacte sunt comise pe main (`git ls-files c13/`), iar B1/B2/B3 reconfirmate PASS pe starea de pe main.
+
+- **Commit generare artefacte C13** (cele 6 fișiere-artefact + 6 build scripts + acest raport): **`7f21656`** (full: `7f21656bac0cf0053a32a996e53d16626a7cce7c`), integrat în main.
+- **Commit raport final cu COMMIT SHA real**: actualizarea de față a secțiunii 9 (SHA propriu raportat în chat la finalul sync-ului, vizibil în istoricul main după push).
+
+Reconfirmare validări pe main: B1 `pre_generation_check 13` PASS · B2 `gate_v20 13 c13 c01` ✓✓✓ GATE PASS pe 5/5 · B3 `audit_sync` C13 OK (1 XX = R-V39.assets, imagini externe pending).
 
 ## 10. VERDICT FINAL
 **C13 VIZUALIZARE generat cap-coadă, gate PASS, ambele decizii BRAIN aplicate, axa ONESTITATEA FORMEI respectată, C13 ținut strict ca obiect vizual onest (zero dashboard/pagină/mesaj/livrare).** Singura datorie rămasă = imaginile `assets/` (externe, ARHITECT/Banana), exact ca la etapa de finalizare a construcțiilor anterioare; HTML-ul rulează pe placeholder SVG inline până atunci.
