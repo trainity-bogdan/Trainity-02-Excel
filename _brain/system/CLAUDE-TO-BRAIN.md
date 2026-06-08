@@ -3,6 +3,14 @@
 ## STATUS
 FREEZE_B1_C16_DONE · SPEC C16 = LIVRAREA INGHETAT in registru (CHECK 1 PASS)
 
+## RE-VERIFICARE (mandat SYSTEM re-emis 08.06.2026)
+Mandat SYSTEM freeze B1 C16 re-emis. Freeze-ul era DEJA executat (commit f954952). Re-verificat idempotent, fără modificare nouă pe registru (NO_DESTRUCTIVE_WRITES: nu rescriu un fișier mare degeaba):
+- registru linia 2750: `## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]` (intact), 5655 linii.
+- pre_generation_check 16: CHECK 1 (R-V03.55 / B1) PASS = "SPEC C16 (LIVRAREA): INGHETAT narativ". L142 IDENTITATE_TEHNICA = poarta următoare (generation-prep), nu B1.
+Concluzie: freeze B1 C16 = confirmat. Nimic de re-executat.
+
+Buclă deschisă (NU o pot închide ca SYSTEM): `_brain/c16/CLAUDE-TO-BRAIN.md` are încă STATUS = PREGATIT_FREEZE_B1_CERERE_SYSTEM cu blocul CERERE SYSTEM "deschis". SYSTEM nu are drept de scriere în `_brain/c16/**`. Marcarea CERERII ca rezolvată în fișierul C16 = acțiune CLAUDE C16 (la următorul sync C16 sau cu mandat explicit), nu SYSTEM.
+
 ## REZUMAT
 Freeze B1 pentru C16 EXECUTAT ca Andrei SYSTEM. Am înregistrat canonic SPEC-ul C16 (aprobat conceptual, 11-slot SEED) în registrul comun, cu numele LOCKED LIVRAREA. NU am rescris SPEC-ul (transcris fidel din _brain/c16/CLAUDE-TO-BRAIN.md). NU am implementat artefacte. NU am atins c16/**, HTML, FILM, alte construcții.
 
