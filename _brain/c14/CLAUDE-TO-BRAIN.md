@@ -1,78 +1,64 @@
-# CLAUDE -> BRAIN · C14 DEPENDENCY CHECK REVIZUIT
+# CLAUDE -> BRAIN · C14 GENERARE RAPORT
 
 ## STATUS
-CLAUDE_C14_DEPENDENCY_CHECK_REVIZUIT_READY
-Conceptual / verificare exclusiv. Zero implementare, zero artefacte, zero c14/**, generare NEPORNITĂ. Nicio CERERE SYSTEM. Răspuns la `MANDAT_DEPENDENCY_CHECK_REVIZUIT`.
+CLAUDE_C14_GENERARE_BLOCAT_B1_CERERE_SYSTEM
+Generare NEEFECTUATĂ. Blocat la B1 (pre_generation_check) de o dependență `_system` pe care mandatul C14 o interzice la modificare. Zero `c14/**` create. Singurul fișier atins: acest raport.
 
-## CORECȚIE FAȚĂ DE RAPORTUL ANTERIOR
-Raportul anterior („C13 blocat la B2") se baza pe commit-ul vechi `317c862` (atunci singura stare disponibilă). Acea stare e SUPERSEDED. Am reverificat READ-ONLY starea reală curentă (HEAD `2fd1364`). Nu mai presupun nimic din commit-uri vechi.
+## DE CE NU AM GENERAT (blocaj B1, invariant absolut)
+Am pornit corect cu B1 înainte de orice generare. `pre_generation_check.py 14` întoarce BLOCAJ:
+```
+R-V03.55 BLOCAJ: SPEC C14 ESTE NEGENERAT
+NU POT genera constructia C14 (DASHBOARD EXECUTIV) fara SPEC inghetat.
+```
+B1 este invariant blocant (CLAUDE.md: „Dacă lipsește SPEC -> BLOCHEAZĂ"). Nu generez fără SPEC înghețat în SISTEM. Repararea cere modificări în `_system/**`, INTERZISE în acest mandat și în afara lane-ului C14. Acesta e exact blocajul prin care a trecut C13 („accept C13 generation block and request system registration").
 
-## METODĂ
-Observație read-only la HEAD curent: `ls c13/`, `git log -- c13/`, linia STATUS din `_brain/c13/*`. Nu am citit conținut de artefacte, nu am modificat nimic.
+## 1. CE AM CITIT
+- `c01/` (structură: 4 HTML + Date_MASTER-C01.xlsx + FILM + assets cu hero + 6 exec-stage).
+- `c13/` (structură + `build_html_studiu_c13.py` integral = pattern COPY+MODIFY; C13 copiază din predecesor C12, head/CSS/JS generice, doar BODY rescris).
+- `_system/generatoare/gate_v20.py` integral (B2) si `pre_generation_check.py` (B1).
+- Am RULAT `pre_generation_check.py 14` (B1).
+- `_system/referinte/IDENTITATE-TEHNICA.md` (are C13, NU are C14).
+- `_system/generatoare/audit_sync.py` (B3, detectoare anti-clonă).
 
----
+## 2. CE AM GENERAT
+NIMIC. Blocat la B1 înainte de orice generare. Zero artefacte `c14/**`.
 
-## RĂSPUNSURI PUNCTUALE (stare reală curentă)
+## 3. CE AM MODIFICAT
+Doar `_brain/c14/CLAUDE-TO-BRAIN.md` (acest raport). Niciun fișier de construcție, niciun fișier de sistem.
 
-### 1. Care este starea curentă reală C13?
-**C13 GENERAT, gate B2 PASS.** `c13/` conține: `Date_MASTER-C13.xlsx` (196KB), `HTML-Studiu`, `HTML-Editor-Studiu`, `HTML-Video`, `HTML-Editor-Video` (Excel-13-Vizualizare), `FILM-Excel-13-Vizualizare.docx`, plus scripturile de build. Commit recent: `7f21656 feat(c13): generate C13 VIZUALIZARE artifacts, gate PASS`. Blocajul B2 anterior (gate_v20) este REZOLVAT.
-**Nuanțe (incomplet 100%):** `c13/assets/` LIPSEȘTE (hero + 6 exec-stage neprezente); status brain C13 = `BRAIN_C13_AUDIT_HOLD_PENDING_COMMIT_SHA` (audit hold, în așteptarea unui SHA). Deci C13 = generat + gate PASS, dar în AUDIT HOLD și fără imagini.
+## 4. STATUS pre_generation_check (B1)
+**FAIL / BLOCAJ.** Trei lipsuri, toate în `_system/`:
+- **SPEC C14 NEGENERAT** în `SISTEM_TRAINITY.md`. SPEC-ul aprobat de BRAIN trăiește doar în `_brain/c14/` (commit-urile noastre), NU a fost înghețat în registrul de sistem din care citește B1.
+- **IDENTITATE_TEHNICA C14 LIPSĂ** în `_system/referinte/IDENTITATE-TEHNICA.md`.
+- **Nume MORT:** B1 numește C14 „DASHBOARD EXECUTIV" (formă supersedată V70). Sistemul nu cunoaște încă identitatea LOCKED COMPUNEREA / COMPOZIȚIE.
 
-### 2. C13 livrat / deblocat / generat / stabilizat suficient pentru C14?
-- Deblocat: **DA** (gate PASS, nu mai e blocat la B2).
-- Generat: **DA** pe date + 4 HTML + FILM.
-- Stabilizat complet: **PARȚIAL** (audit hold pending SHA + fără assets).
-- Suficient pentru INPUT-ul C14: **DA** la nivel de obiecte vizuale (vezi pct. 3).
+## 5. STATUS gate_v20 (B2)
+**NU POATE RULA pe C14.** `load_identitate` din `gate_v20.py` are intrări doar C01-C13; pentru C14 întoarce None si scriptul iese cu „IDENTITATE_TEHNICA pentru C14 nu e definita" (exit 1). Gate-ul trebuie făcut C14-ready (intrare „14" în dict) ca să poată valida, exact ca la C13.
 
-### 3. Există output C13 suficient pentru C14?
-**DA, pentru substratul de compus.** `Date_MASTER-C13.xlsx` există și găzduiește obiectele vizuale oneste produse la C13 (dashboard XLSX cu graficele/pivoturile). Acela este input-ul real al C14. HTML-urile C13 există ca referință de continuitate de treaptă. Singurul lucru care lipsește (assets/imagini) NU este input pentru compoziția C14: sunt poze de lecție, nu obiecte de date.
+## 6. STATUS audit_sync (B3)
+**N/A.** Nu există artefacte `c14/**` de auditat. Driftul se verifică post-generare; generarea nu a pornit.
 
-### 4. Ce anume poate primi C14 din C13 acum?
-- `Date_MASTER-C13.xlsx`: obiectele vizuale individuale oneste = materia primă de așezat.
-- Lanțul de date (R-V02.14 sumă conservată) din Date_MASTER-C13.
-- Convenția de denumire observată ca referință de continuitate: `...Excel-13-Vizualizare` -> pentru C14 analog `...Excel-14-Compunere` (de confirmat la convenția c01).
-NU primește: concluzia (C15), pachet de decizie (C16).
+## 7. RISCURI RĂMASE
+- **Nume mort în sistem:** dacă C14 se înregistrează fără corecție, se propagă „DASHBOARD EXECUTIV" (interzis V70). Înregistrarea trebuie făcută cu COMPUNEREA / COMPOZIȚIE.
+- **18 vs 11 step-titles:** B1 generic așteaptă 18 step-titles; BRAIN a aprobat exact 11 pentru C14. Conflict structural de rezolvat înainte de generare (HTML-ul moștenit din C13 are 6 etape x 3 pași = 18). Decizie necesară: C14 rămâne la 11 (și se adaptează scaffold-ul) sau se extinde la 18?
+- **Substrat XLSX:** Date_MASTER-C14 = continuare compozițională a Date_MASTER-C13 (decizie BRAIN); gate B2 cere schema canonică Vanzari (14 coloane) + nomenclatoare + sumă in +/-15% vs initial. De păstrat din C13.
+- **Assets:** C13 încă nu are `assets/` (hero + 6 exec-stage); imaginile C14 le produce ARHITECT extern. Generarea HTML poate folosi hero placeholder (ca la C13), dar imaginile finale lipsesc.
 
-### 5. Ce NU are voie C14 să refacă din C13?
-- nu desenează / nu redesenează graficele
-- nu schimbă tipul graficelor
-- nu inventează date
-- nu re-validează onestitatea formei (C13)
-- nu reformulează concluzia (C15)
-C14 doar AȘAZĂ obiectele primite.
-
-### 6. Ce formă trebuie să aibă `Date_MASTER-C14.xlsx` ca să nu dubleze C13?
-Continuare COMPOZIȚIONALĂ a output-ului C13:
-- pleacă de la aceleași obiecte din `Date_MASTER-C13` (aceeași sursă, aceleași grafice)
-- adaugă DOAR stratul de compoziție: layout, poziționare, ierarhie, grupare, flux, spațiu, focar pe o foaie de raportare coerentă
-- NU dashboard nou, NU reconstrucție de grafice, NU schimbă tipul, NU inventează date, NU reformulează concluzia
-C13 = obiectele corecte (atomii); C14 = aceleași obiecte AȘEZATE (ansamblul).
-
-### 7. Poate începe generarea C14 după acest check sau mai există blocaj?
-**Blocajul de gate (B2) NU mai există** (C13 a trecut gate PASS, deci gate_v20 e acum T4-ready). Input-ul C14 (`Date_MASTER-C13`) există.
-Rămâne UN singur blocaj MIC, de stabilizare: C13 e în `AUDIT_HOLD_PENDING_COMMIT_SHA`. Recomand ca input-ul C14 să fie înghețat (C13 ieșit din audit hold, SHA confirmat) înainte de a porni, ca să nu compun pe un substrat care încă se poate schimba. Imaginile C13 lipsă NU blochează C14.
-Concluzie: C14 e la un pas de generare; nu mai e blocat pe gate, doar pe semnarea finală a auditului C13.
-
-### 8. Dacă poate începe, ce mandat de generare trebuie cerut?
-Mandat de generare C14 care ridică explicit interdicțiile curente și autorizează:
-- citire `c01/` (COPY+MODIFY) + `_system/04,05,08,10` + `COMENZI.yaml`
-- citire `c13/Date_MASTER-C13.xlsx` (input: obiectele vizuale) + HTML-urile C13 ca referință de continuitate
-- rulare `pre_generation_check.py 14`, `gate_v20.py 14`, `audit_sync.py`, `strip_watermark.py`
-- scriere `c14/**` (cele 7 artefacte) + raport
-- confirmarea SLUG `compunerea` la convenția c01
-- furnizarea imaginilor C14 (hero + 6 exec-stage) de către ARHITECT
-
-### 9. Dacă nu poate începe, ce status corect trebuie păstrat pentru C14?
-Nu mai e cazul de `BLOCKED...B2_GATE` (rezolvat). Status corect propus:
-`C14_READY_PENDING_C13_AUDIT_SIGNOFF`
-C14 e gata conceptual și nu mai are blocaj de gate; așteaptă doar înghețarea input-ului C13 (ieșirea din audit hold, SHA confirmat).
+## 8. CE TREBUIE SĂ VERIFICE / DECIDĂ BRAIN
+Aprobarea conceptuală (SEED/SPEC/BLUEPRINT) e completă, dar NU egal cu înregistrarea în SISTEM. Generarea cere întâi un pas de SISTEM. Vezi CERERE SYSTEM.
 
 ---
 
-## CE LIPSEȘTE (raportat clar)
-- C13: assets (hero + 6 exec-stage) și ieșirea din audit hold (SHA). Niciunul nu blochează compoziția C14, dar al doilea trebuie confirmat ca să înghețe input-ul.
+## CERERE SYSTEM (obligatorie, blochează generarea C14)
+Conform CHAT-CONTEXT („Nevoie de fișier comun: Claude NU îl modifică. Scrie CERERE SYSTEM si oprește execuția până la decizie."). Chat-ul SYSTEM (nu C14) trebuie să facă, cu nomenclatura LOCKED V70 (COMPUNEREA / COMPOZIȚIE, NICIODATĂ „dashboard" ca identitate):
 
-## CERERE DE DECIZIE PENTRU BRAIN
-- Confirmi noul status `C14_READY_PENDING_C13_AUDIT_SIGNOFF`?
-- Aștept ieșirea C13 din audit hold (SHA) înainte de mandatul de generare, sau pornesc C14 imediat ce dai mandat (riscul: substrat C13 încă neînghețat)?
-- La mandatul de generare, ridici interdicțiile de la pct. 8?
+1. **Îngheață SPEC C14** în `SISTEM_TRAINITY.md` (cele 9 elemente aprobate: INTRIGA, PROBLEMELE, MIZA, MANTRA, MOTTO „Ce vede ochiul întâi schimbă decizia.", STEP-TITLES, PROMPTURI, FINAL-LABELS, FENOMENE), status INGHETAT.
+2. **Adaugă IDENTITATE_TEHNICA C14** în `_system/referinte/IDENTITATE-TEHNICA.md`: cod C14, nume COMPUNEREA, cuvânt COMPOZIȚIE, verb COMPUN, slug `Compunere`, output `Date_MASTER-C14.xlsx`, footer/topbar/title cu C14, prev_cod C13, next_cod C15, meta_val_treapta `VIZUALIZARE · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)` cu COMPUNERE bold.
+3. **Adaugă intrarea „14"** în `gate_v20.py load_identitate` (cod C14, nume_hero_caps_rand1 `COMPOZITIE`, nume_slug `Compunere`, meta_val_treapta ca mai sus).
+4. **Supersedează numele mort „DASHBOARD EXECUTIV"** pentru C14 oriunde apare în `_system` (B1 încă îl folosește).
+5. **Decizie 18 vs 11 step-titles** pentru C14 (afectează scaffold-ul HTML si B1).
+
+După acest pas de SISTEM, dă-mi din nou mandat de generare si pornesc imediat (B1 va trece, gate-ul va putea rula).
+
+## ÎNTREBARE PENTRU ARHITECT
+Aprobarea ta de generare presupunea că sistemul e C14-ready. Nu este (înregistrarea C14 nu s-a făcut, spre deosebire de C13). Vrei: (a) deschizi chat SYSTEM pentru pasul de înregistrare de mai sus, apoi reluăm generarea C14, sau (b) îmi dai explicit voie să ating eu fișierele `_system` pentru înregistrarea C14 (ar fi excepție de la mandat)?
