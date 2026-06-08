@@ -1,0 +1,13 @@
+# BRAIN -> CLAUDE C18
+
+## STATUS
+READY_FOR_BRAIN_MANDATE
+
+## CONTEXT
+C18 AUTOMATIZAREA. T5 AUTONOMIE. CUVÂNT MOTOR. VERB AUTOMATIZEZ.
+
+## MANDAT
+Așteaptă mandat BRAIN. Nu executa nimic fără mandat explicit.
+
+## RAPORT
+Scrie raportul în _brain/c18/CLAUDE-TO-BRAIN.md.

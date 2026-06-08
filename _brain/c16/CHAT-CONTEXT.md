@@ -1,18 +1,18 @@
-# CHAT-CONTEXT · ANDREI C15 / CLAUDE C15
+# CHAT-CONTEXT · ANDREI C16 / CLAUDE C16
 
-Acest folder este dedicat exclusiv construcției C15 SINTETIZAREA.
+Acest folder este dedicat exclusiv construcției C16 LIVRAREA.
 
 ## Comanda unică
 sync
 
-## Andrei C15 / BRAIN C15
+## Andrei C16 / BRAIN C16
 La sync citește doar:
-- _brain/c15/CHAT-CONTEXT.md
-- _brain/c15/BRAIN-TO-CLAUDE.md
-- _brain/c15/CLAUDE-TO-BRAIN.md
+- _brain/c16/CHAT-CONTEXT.md
+- _brain/c16/BRAIN-TO-CLAUDE.md
+- _brain/c16/CLAUDE-TO-BRAIN.md
 
 Scrie mandate doar în:
-- _brain/c15/BRAIN-TO-CLAUDE.md
+- _brain/c16/BRAIN-TO-CLAUDE.md
 
 NU modifică fișiere sistem.
 NU modifică alte construcții.
@@ -20,24 +20,24 @@ NU implementează artefacte.
 Nevoie de sistem = CERERE SYSTEM pentru Chat Andrei SYSTEM.
 
 La comanda Prompt, scrie direct mandatul în:
-- _brain/c15/BRAIN-TO-CLAUDE.md
+- _brain/c16/BRAIN-TO-CLAUDE.md
 și confirmă doar fișierul + commit-ul. Nu afișa promptul în chat decât dacă ARHITECT cere explicit.
 
-## Claude C15
+## Claude C16
 La sync:
 1. lucrează exclusiv pe main, fără branch-uri
-2. citește _brain/c15/CHAT-CONTEXT.md
-3. citește mandatul din _brain/c15/BRAIN-TO-CLAUDE.md
+2. citește _brain/c16/CHAT-CONTEXT.md
+3. citește mandatul din _brain/c16/BRAIN-TO-CLAUDE.md
 4. execută doar ce este permis în mandat
-5. scrie raportul în _brain/c15/CLAUDE-TO-BRAIN.md
+5. scrie raportul în _brain/c16/CLAUDE-TO-BRAIN.md
 6. rulează validările cerute de mandat
 7. commit descriptiv pe main + push
 
-## Fișiere permise pentru Claude C15
-- _brain/c15/CLAUDE-TO-BRAIN.md
-- c15/** doar dacă mandatul BRAIN permite explicit generare / implementare
+## Fișiere permise pentru Claude C16
+- _brain/c16/CLAUDE-TO-BRAIN.md
+- c16/** doar dacă mandatul BRAIN permite explicit generare / implementare
 
-## Fișiere interzise pentru C15
+## Fișiere interzise pentru C16
 - toate celelalte cNN/**
 - alte _brain/cYY/**
 - CLAUDE.md
@@ -55,14 +55,14 @@ La sync:
 ## Nevoie de fișier comun
 Claude NU îl modifică. Scrie CERERE SYSTEM în CLAUDE-TO-BRAIN.md și oprește execuția până la decizie.
 
-## Context conceptual C15
-C15 = SINTETIZAREA.
+## Context conceptual C16
+C16 = LIVRAREA.
 T4 = RAPORTARE.
-CUVÂNT LOCKED = SINTEZĂ.
-Verb LOCKED = SINTETIZEZ.
-Axa C15 = EXTRAGEREA ȘI FORMULAREA MESAJULUI ESENȚIAL (formulare, nu descoperire).
+CUVÂNT LOCKED = LIVRARE.
+Verb LOCKED = LIVREZ.
+Axa C16 = RAPORT DECISION-READY (cadru de decizie, nu transmitere logistică).
 Pilon T4 = T4 consumă răspunsul produs de T3. Nu îl naște.
 
-## Stare curentă C15
-Obiectiv curent: SEED conceptual + SPEC 11-slot C15.
+## Stare curentă C16
+Obiectiv curent: SEED conceptual + SPEC 11-slot C16.
 Nu executa nimic fără mandat în BRAIN-TO-CLAUDE.md.
