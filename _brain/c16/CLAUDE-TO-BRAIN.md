@@ -1,9 +1,17 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-FREEZE_B1_DONE · SPEC_NARATIV_PROPUS_MA
+FREEZE_B1_DONE · SPEC_NARATIV_MA_REVIZUIT
 
-## SPEC NARATIV C16 LIVRAREA (M-A autorare, propus pentru aprobare) - 2026-06-08
+## REVIZIE MINORĂ M-A (mandat C16-MA-REVIZIE-MINORA, 2026-06-08)
+Aplicat reviziile minore cerute de BRAIN pe SPEC-ul narativ M-A (SPEC aprobat cu aceste ajustări):
+- Pasul 11: "zero întrebări de follow-up" -> "întrebările inevitabile, nu întrebările de bază" (test realist, nu promisiune rigidă).
+- Pasul 18: "Predai către T5 (C17): ... urmează să fie sistematizat" -> "Raportul-decizie este gata, T5 îl poate sistematiza" (handoff fără a forța pasul T5).
+- Final-label 1 păstrat ca ancoră centrală: "Un raport care nu produce o decizie nu e livrat, e doar trimis."
+- Consistență: nota de autorare actualizată la noua formulare a pasului 18.
+Restul SPEC-ului nemodificat.
+
+## SPEC NARATIV C16 LIVRAREA (M-A, aprobat cu revizie minoră aplicată) - 2026-06-08
 Mandat C16-MA-AUTORARE. Autorat pe baza SEED-ului 11-slot aprobat + identitatea LOCKED + format C13. NU am implementat artefacte. E SPEC propus pentru aprobare; după aprobare, SYSTEM îl înregistrează în registru (înlocuiește blocul SEED 11-slot din PARTEA VI), rulează L143 și populează IDENTITATE_TEHNICA C16.
 
 Axă: RAPORT DECISION-READY. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
@@ -44,7 +52,7 @@ ETAPA 3 TRANSFORMARE
 9. Detaliul exhaustiv coboară în anexă
 ETAPA 4 VERIFICARE
 10. Poate decidentul hotărî doar din foaie?
-11. Testul fără autor: zero întrebări de follow-up
+11. Testul fără autor: întrebările inevitabile, nu întrebările de bază
 12. Riscul și pasul următor, scrise explicit, nu deduse
 ETAPA 5 STABILIZARE
 13. Cele șase reguli ale foii-raport de decizie
@@ -53,7 +61,7 @@ ETAPA 5 STABILIZARE
 ETAPA 6 CONFIRMARE
 16. Forma de decizie scurtează drumul spre hotărâre
 17. Devii cel care predă o decizie, nu un teanc de date
-18. Predai către T5 (C17): raportul-decizie gata, urmează să fie sistematizat
+18. Raportul-decizie este gata, T5 îl poate sistematiza
 
 ### 7. PROMPTURI Copilot (2)
 - Promptul 1, E2 INVESTIGAȚIE: ceri Copilot să identifice, pentru un decident concret, ce decizie se cere din raport, ce risc o însoțește și ce informație e relevantă pentru decizie vs zgomot. AI propune lista, omul judecă (nu lasă AI să decidă). NU re-sintetizează mesajul (C15), îl încadrează pentru decizie.
@@ -87,7 +95,7 @@ Mapare pe asset: fenomenele referă concepte reale din Date_MASTER (valoarea net
 ### NOTĂ AUTORARE (delimitări în step-titles)
 - Niciun pas nu sintetizează concluzia (pasul 1 primește mesajul de la C15; pasul 7 doar îl poziționează). -> nu e C15.
 - Niciun pas nu aranjează vizual (pasul 9 = relevanță pentru decizie, nu layout; "anexă" = ierarhie de decizie, nu spațială). -> nu e C14.
-- Niciun pas nu sistematizează (pasul 15 = se susține singur, nu recurent; pasul 18 predă explicit sistematizarea la C17). -> nu e C17.
+- Niciun pas nu sistematizează (pasul 15 = se susține singur, nu recurent; pasul 18 lasă sistematizarea pe seama T5/C17). -> nu e C17.
 - Pasul 6 livrarea (predarea) e starea finală de obiect de decizie, nu actul logistic de trimitere. -> nu e logistică.
 
 ## RAPORT B2-PREP (mandat C16-B2-PREP, 2026-06-08)
