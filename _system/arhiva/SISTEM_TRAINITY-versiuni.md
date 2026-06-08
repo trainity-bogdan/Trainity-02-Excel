@@ -2746,7 +2746,8 @@ ETAPA 6 CONFIRMARE
 C12 = interpretarea rezultatului. C13 = forma vizuală onestă a unui rezultat deja produs. C14 = organizarea spațială (pagină / dashboard). C15 = sinteza mesajului. C16 = livrarea decision-ready. Handoff: "C13 face obiectul adevărat. C14 îl așază în pagină."
 
 ## SPEC C14 - DASHBOARD EXECUTIV   [Status: NEGENERAT]
-## SPEC C15 - POVESTEA DATELOR   [Status: NEGENERAT]
+## SPEC C15 - SINTETIZAREA   [Status: NEGENERAT]
+> Nume aliniat la nomenclatura LOCKED V70 (stale pre-V70: "POVESTEA DATELOR"). SPEC 11-slot CONCEPTUAL v1.0 = freeze conceptual in governance/TRAINITY_ARCHITECTURE_BIBLE.md sectiunea T4 SPEC C15 (autoritate conceptuala) + doc 13. Acest registru de generare ramane NEGENERAT: elementele de generare (SLUG, PROBLEMELE, FENOMENE, 18 STEP-TITLES, 2 prompturi) NU sunt definite; se autoreaza la SEED-ul de generare (freeze conceptual != generare).
 ## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]
 
 Axă: RAPORT DECISION-READY. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
