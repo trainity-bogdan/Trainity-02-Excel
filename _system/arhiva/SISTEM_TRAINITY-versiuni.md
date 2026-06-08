@@ -2807,10 +2807,10 @@ Raportul te aduce în punctul în care poți decide din el, nu din alte cinci do
 5. Raportul care se susține singur
 6. Raportul devine obiect de decizie
 
-## SPEC C17 - RAPORTAREA DE LUNI DIMINEATA   [Status: NEGENERAT]
-## SPEC C18 - ELIMINAREA VERSIUNILOR   [Status: NEGENERAT]
-## SPEC C19 - PROCEDURA DE RAPORTARE   [Status: NEGENERAT]
-## SPEC C20 - SISTEMUL TRAINITY   [Status: NEGENERAT]
+## SPEC C17 - SISTEMATIZAREA   [Status: NEGENERAT]
+## SPEC C18 - AUTOMATIZAREA   [Status: NEGENERAT]
+## SPEC C19 - GUVERNAREA   [Status: NEGENERAT]
+## SPEC C20 - DELEGAREA   [Status: NEGENERAT]
 
 ================================================================================
 
