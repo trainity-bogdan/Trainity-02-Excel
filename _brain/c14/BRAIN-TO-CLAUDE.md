@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_DEPENDENCY_CHECK
+MANDAT_DEPENDENCY_CHECK_REVIZUIT
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
@@ -12,9 +12,11 @@ BLUEPRINT C14 este aprobat.
 SPEC COMPLET C14 este aprobat.
 READY FOR GENERATION CHECK este aprobat ca raport de planificare.
 
-C14 NU este autorizat încă pentru generare.
+Corecție BRAIN: nu considera C13 blocat pe baza raportului anterior sau a unor commit-uri vechi.
 
-Motiv: trebuie clarificată dependența C13 și forma corectă a `Date_MASTER-C14.xlsx`.
+User a confirmat explicit: C13 nu este blocat.
+
+C14 trebuie să refacă dependency check pe starea reală curentă C13.
 
 ## DECIZII BRAIN VALIDATE
 
@@ -31,11 +33,11 @@ Motiv: trebuie clarificată dependența C13 și forma corectă a `Date_MASTER-C1
 
 ### Decizie 1, ordinea corectă
 
-C13 trebuie generat / stabilizat înainte de C14.
+C13 trebuie să fie generat / stabilizat înainte de C14.
 
 C14 nu se generează cu obiecte-placeholder.
 
-Motiv: identitatea C14 este compunerea obiectelor vizuale oneste venite din C13. Fără C13, C14 ar inventa substrat și ar încălca granița în jos.
+Dar: nu presupune că C13 este blocat. Verifică starea curentă reală.
 
 ### Decizie 2, Date_MASTER-C14
 
@@ -63,25 +65,27 @@ Slug-ul se confirmă tehnic doar după citirea convenției `c01/`.
 
 Pregătește raportul:
 
-# CLAUDE -> BRAIN · C14 DEPENDENCY CHECK
+# CLAUDE -> BRAIN · C14 DEPENDENCY CHECK REVIZUIT
 
 Scrie raportul în:
 
 `_brain/c14/CLAUDE-TO-BRAIN.md`
 
-Scop: confirmarea explicită dacă C13 este suficient de stabil pentru ca C14 să poată intra ulterior în generare.
+Scop: revizuirea dependency check pe baza stării reale actuale C13, fără presupuneri din raportul anterior.
 
 ## STRUCTURĂ OBLIGATORIE RAPORT
 
 Raportul trebuie să răspundă punctual la:
 
-1. C13 este generat sau doar pre-generation ready?
-2. Există output C13 suficient pentru C14?
-3. Ce anume primește C14 din C13?
-4. Ce NU are voie C14 să refacă din C13?
-5. Ce formă trebuie să aibă `Date_MASTER-C14.xlsx` ca să nu dubleze C13?
-6. Poate începe generarea C14 acum sau trebuie așteptat C13?
-7. Dacă nu poate începe, ce status corect trebuie păstrat pentru C14?
+1. Care este starea curentă reală C13?
+2. C13 este livrat / deblocat / generat / stabilizat suficient pentru C14?
+3. Există output C13 suficient pentru C14?
+4. Ce anume poate primi C14 din C13 acum?
+5. Ce NU are voie C14 să refacă din C13?
+6. Ce formă trebuie să aibă `Date_MASTER-C14.xlsx` ca să nu dubleze C13?
+7. Poate începe generarea C14 după acest check sau mai există blocaj?
+8. Dacă poate începe, ce mandat de generare trebuie cerut?
+9. Dacă nu poate începe, ce status corect trebuie păstrat pentru C14?
 
 ## INTERDICȚII ÎN ACEST PAS
 
@@ -92,11 +96,11 @@ Raportul trebuie să răspundă punctual la:
 - nu accesa generatoare/gate încă
 - nu folosi `c01/` ca referință COPY+MODIFY încă
 - nu ridica CERERE SYSTEM încă
-- nu presupune status
+- nu presupune status pe baza commit-urilor vechi
 - nu inventa conținut lipsă
 - lucrează doar pe baza fișierelor citite efectiv
 - raportează clar ce lipsește, dacă lipsește
 
 ## RAPORT
 
-După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul DEPENDENCY CHECK.
+După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul DEPENDENCY CHECK REVIZUIT.
