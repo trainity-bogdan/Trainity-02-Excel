@@ -1139,6 +1139,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Sintetizare',
             'meta_val_treapta': 'VIZUALIZARE · COMPUNERE · <b>SINTETIZARE</b> · LIVRARE (RAPORTARE)'
         },
+        '16': {
+            'cod': 'C16', 'nume_hero_caps_rand1': 'LIVRARE',
+            'nume_slug': 'Livrare',
+            'meta_val_treapta': 'VIZUALIZARE · COMPUNERE · SINTETIZARE · <b>LIVRARE</b> (RAPORTARE)'
+        },
     }
     return IDENTITATI.get(NN)
 

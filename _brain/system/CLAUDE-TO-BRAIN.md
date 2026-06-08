@@ -1,5 +1,41 @@
 # CLAUDE (Andrei SYSTEM) -> BRAIN / ARHITECT
 
+## STATUS (curent)
+C16_B2_READY · M-B + M-C executate · pre_generation_check 16 = TOATE 3 PASS (exit 0)
+
+## RAPORT SYSTEM - C16 B2-PREP (M-B + M-C), 2026-06-08
+Mandat SYSTEM: pașii B2 pentru C16 (M-B IDENTITATE_TEHNICA + M-C gate_v20). Executat ca Andrei SYSTEM. Niciun artefact, nicio construcție atinsă, SPEC C16 neredeschis, nomenclatura neschimbată.
+
+### M-B - IDENTITATE_TEHNICA C16 (L142)
+`_system/referinte/IDENTITATE-TEHNICA.md`: adăugat `## IDENTITATE_TEHNICA C16 · LIVRAREA` pe șablonul C13/C14/C15. Câmpuri derivate din nomenclatura LOCKED V70 + SPEC: cod C16, treapta_nr 4 RAPORTARE, poziție 4 din 4, nume_title_case Livrarea, nume_slug Livrare, input Date_MASTER-C15-Sintetizare.xlsx, output Date_MASTER-C16-Livrare.xlsx, meta_val_treapta (LIVRARE bold), next_cod C17, next_nume_title Sistematizarea, next_label TREAPTA 5, footer/topbar/mobile/nav/titles/localStorage complete.
+- ATENȚIE (decizie BRAIN): `nume_hero_caps` = "DECIZIA GATA" e PROVIZORIU. Descriptorul MIZĂ HERO de 2 cuvinte NU e înghețat explicit în SPEC-ul C16 (la fel ca la C15). Derivat din axa locked (decision-ready; mantra "decizie gata de luat"; motto "raportul care decide"), marcat `nota_hero: PROVIZORIU`. Alternative: "DECIZIA PREDATĂ", "RAPORTUL-DECIZIE". De confirmat/autorat de BRAIN înainte de generare.
+- next_label = TREAPTA 5 (C17 SISTEMATIZAREA = prima din T5; C16 = ultima din T4). Marcat `nota_treapta`.
+
+### M-C - gate_v20 dict (B2)
+`_system/generatoare/gate_v20.py`, `load_identitate`: adăugat intrarea `'16'` (cod C16, nume_hero_caps_rand1 LIVRARE - convenția gate folosește CUVÂNTUL, ca C13 VIZUAL / C14 COMPOZIȚIE / C15 SINTEZĂ; nume_slug Livrare; meta_val_treapta cu LIVRARE bold). Mecanism activ = dict hardcodat (parserul nu e implementat); urmat tiparul existent. `load_identitate('16')` întoarce acum intrarea corectă -> blocajul de identitate B2 (ca la C13) rezolvat pentru C16.
+
+### VALIDĂRI RULATE
+- `pre_generation_check.py 16`: TOATE 3 PASS, exit 0. CHECK 1 (R-V03.55/B1) PASS; CHECK 2 (L142) PASS (IDENTITATE_TEHNICA C16 POPULATA); CHECK 3 (L143) PASS (FENOMENE aliniate). "Motorul poate proceda la generare C16."
+- `load_identitate('16')` -> intrare corectă (gate C16-ready).
+- gate_v20 full (gate_v20.py 16 c16 c01): NEaplicabil acum - gate-ul verifică ARTEFACTE, iar c16/ nu există încă (generarea nu e făcută). Blocajul de identitate B2 e însă rezolvat.
+
+### NO_DESTRUCTIVE_WRITES
+Patch-uri aditive. IDENTITATE-TEHNICA 430->459 (+29, 0 ștergeri), gate_v20 1190->1195 (+5, 0 ștergeri). Secțiuni C13-C15 + dict C10-C15 intacte. diff --check OK.
+
+### STARE FINALĂ B2
+C16 = B2_READY pentru generare. pre_generation_check trece complet; gate e C16-ready. Niciun blocaj.
+
+### RĂMÂNE (înainte de generarea efectivă, NU în acest mandat)
+- Transcriere SPEC narativ în registru: registrul are acum SPEC-ul 11-slot SEED (frozen). SPEC-ul narativ M-A aprobat (18 step-titles, 2 prompturi, 8 final-labels, fenomene) trăiește în _brain/c16/CLAUDE-TO-BRAIN.md. Înainte de generare, SYSTEM ar trebui să-l transcrie în PARTEA VI (înlocuind blocul SEED), ca generatorul să folosească cele 18 step-titles. (Nu e cerut de acest mandat; L143 trece oricum.)
+- BRAIN: confirmă descriptorul MIZĂ HERO C16 (acum PROVIZORIU "DECIZIA GATA").
+- La generare: mandat de generare C16 -> 7 artefacte (COPY+MODIFY c01) -> gate_v20 16 c16 c01 B2 PASS.
+
+### CE NU AM FĂCUT
+Niciun artefact, niciun cNN/, niciun _brain/cYY/ (în afară de acest raport), nomenclatura C16 neschimbată, SPEC neredeschis conceptual, SPEC narativ NEtranscris în registru (nu e în mandat).
+
+---
+_Mai jos: raportul SYSTEM anterior (C15 register), păstrat ca istoric._
+
 ## 1. STATUS
 **REGISTER_C15_DONE** · C15 SINTETIZAREA înregistrată în sistem după modelul C13/C16, din sursa `_brain/c15/CLAUDE-TO-BRAIN.md` (status GENERATION_SPEC_FREEZE_PREPARED). `pre_generation_check.py 15` = **TOATE 3 CHECK-URI PASS** (B1 + L142 + L143), exit 0. Niciun artefact generat, nicio construcție atinsă, freeze C15 neredeschis. Doar propagare SYSTEM.
 

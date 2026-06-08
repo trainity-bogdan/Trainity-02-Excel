@@ -424,6 +424,35 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - localStorage_video: trainity_c15_video_v1
 - nota_hero: PROVIZORIU — nume_hero_caps (MIZĂ HERO descriptor) derivat din axa locked „mesajul esențial"; NU e înghețat explicit în SPEC-ul C15. De confirmat/autorat de BRAIN (ca „FORMA ADEVĂRATĂ" C13 / „ORDINEA PRIVIRII" C14) înainte de generare.
 
+## IDENTITATE_TEHNICA C16 · LIVRAREA
+
+- cod: C16
+- treapta_nr: 4
+- treapta_nume: RAPORTARE
+- treapta_pozitie: 4 din 4 (Vizualizare, Compunere, Sintetizare, Livrare)
+- nume_hero_caps_rand1: DECIZIA
+- nume_hero_caps_rand2: GATA
+- nume_hero_caps: DECIZIA GATA
+- nume_title_case: Livrarea
+- nume_slug: Livrare
+- input_filename: Date_MASTER-C15-Sintetizare.xlsx
+- output_filename: Date_MASTER-C16-Livrare.xlsx
+- meta_val_treapta: VIZUALIZARE · COMPUNERE · SINTETIZARE · <b>LIVRARE</b> (RAPORTARE)
+- next_cod: C17
+- next_nume_title: Sistematizarea
+- next_label: TREAPTA 5 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C16 LIVRARE · LIVRARE
+- topbar_text: Sistemul 02 - Excel · C16 · Livrare
+- mobile_topbar: C16 · Livrare
+- nav_brand_label: PACK 02 EXCEL · C16
+- nav_brand_title: DECIZIA GATA
+- title_studiu: C16 · Livrare · Trainity
+- title_video: C16 · LIVRARE · BROADCAST
+- localStorage_studiu: trainity_c16_study_v1
+- localStorage_video: trainity_c16_video_v1
+- nota_hero: PROVIZORIU — nume_hero_caps (MIZĂ HERO descriptor "DECIZIA GATA") derivat din axa locked (raport decision-ready; mantra "decizie gata de luat"; motto "raportul care decide"); NU e înghețat explicit ca descriptor de 2 cuvinte în SPEC-ul C16. Alternative: "DECIZIA PREDATĂ", "RAPORTUL-DECIZIE". De confirmat/autorat de BRAIN înainte de generare (ca "FORMA ADEVĂRATĂ" C13 / "ORDINEA PRIVIRII" C14).
+- nota_treapta: C16 = ultima din T4 RAPORTARE; next (C17 SISTEMATIZAREA) = prima din T5 AUTONOMIE, de aici next_label TREAPTA 5.
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination
