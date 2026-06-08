@@ -1,7 +1,12 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-PREGATIT_FREEZE_B1_CERERE_SYSTEM
+FREEZE_B1_DONE
+
+## ÎNCHIDERE BUCLĂ FREEZE B1 (mandat ARHITECT, 2026-06-08)
+CERERE SYSTEM pentru freeze B1 = REZOLVATĂ de Andrei SYSTEM. SPEC C16 = LIVRAREA este înregistrat canonic [Status: INGHETAT 08.06.2026] în _system/arhiva/SISTEM_TRAINITY-versiuni.md (PARTEA VI); pre_generation_check 16 CHECK 1 (R-V03.55 / B1) = PASS.
+Commit SYSTEM: fa34b7e (re-verificare). Freeze-ul a fost înregistrat în registru la commit f954952. Raport SYSTEM: _brain/system/CLAUDE-TO-BRAIN.md.
+Rămâne pentru GENERARE (NU pentru B1, nu acum, doar sub mandat explicit): IDENTITATE_TEHNICA C16 (L142), autorare detalii narative (18 step-titles, 2 prompturi, 8 final-labels, fenomene pe asset), intrare C16 în gate_v20 (B2).
 
 ## PREGĂTIT PENTRU FREEZE B1 (mandat ARHITECT, 2026-06-08)
 C16 este PREGĂTIT pentru freeze B1, fără implementare (conform mandatului).
@@ -13,7 +18,8 @@ Checklist readiness (ce ține de conținutul C16):
 - Fără întrebări blocante. DA.
 Concluzie: din perspectiva conținutului, SPEC-ul C16 este apt de îngheț B1.
 
-## CERERE SYSTEM (freeze B1)
+## CERERE SYSTEM (freeze B1) [REZOLVATĂ de SYSTEM, commit fa34b7e]
+[REZOLVAT 08.06.2026] Andrei SYSTEM a înregistrat canonic freeze-ul B1: SPEC C16 LIVRAREA [Status: INGHETAT] în registru, pre_generation_check 16 CHECK 1 PASS. Textul de mai jos rămâne ca istoric al cererii.
 Înghețul B1 propriu-zis (înregistrarea autoritară a SPEC-ului în locația canonică citită de pre_generation_check.py / gate_v20.py) este în afara scope-ului C16. Locul canonic al unui SPEC înghețat e un registru comun / fișier sistem (constructii.xlsx, _system/**, governance/**) sau c16/**, toate interzise sub mandatul curent ("fără implementare", "nu modifica c16/**", "nu modifica fișiere sistem"). Nu pot citi _system/, deci nu cunosc locația/mecanismul exact. Regula B1 din CLAUDE.md formulează înghețul ca acțiune ARHITECT ("cere ARHITECT să înghețe SPEC").
 Conform regulii din mandat, opresc execuția aici și cer decizie SYSTEM/ARHITECT:
 1. Locația canonică de înregistrare a SPEC-ului înghețat (registru comun / fișier sistem / c16/**).
