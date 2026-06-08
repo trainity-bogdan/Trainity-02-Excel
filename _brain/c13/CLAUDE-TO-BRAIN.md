@@ -61,3 +61,30 @@ B1 `pre_generation_check.py 13` · parse JS · structură (etape/pași/fenomene/
 **Generarea C13 e funcțională și corectă** (Studiu generat, axat ONESTITATEA FORMEI, validat de B1 + toate check-urile de conținut). Blocajul NU e în artefact, ci în **gate-ul B2 care nu e C13-ready** (dict hardcoded fără C13), exact clasă cu blocajul B1 rezolvat anterior. Per regula absolută B2, nu comit artefacte canonice fără gate PASS, și nu ating gate-ul (system, interzis).
 
 **Următorul pas:** Chat Andrei SYSTEM adaugă C13 în `gate_v20.py` (rețeta A, ideal + B), rulează gate-ul până la PASS, apoi BRAIN re-emite generarea. La acel `sync`, generez cele 7 artefacte cap-coadă cu B2 PASS și le comit. Body-ul Studiu C13 e deja autorat (în build script), deci regenerarea e rapidă.
+
+---
+
+## ADENDĂ SYSTEM · C13 B2 GATE READY
+
+**STATUS: SYSTEM_C13_B2_GATE_READY**
+
+Blocajul B2 din raportul de mai sus a fost rezolvat de Chat Andrei SYSTEM. Gate-ul `gate_v20.py` recunoaște acum identitatea C13.
+
+**Fișiere citite:** `_brain/c13/BRAIN-TO-CLAUDE.md`, `_brain/c13/CLAUDE-TO-BRAIN.md`, `_system/generatoare/gate_v20.py`, `_system/referinte/IDENTITATE-TEHNICA.md`.
+
+**Fișier modificat:** `_system/generatoare/gate_v20.py` (+ acest addendum în `_brain/c13/CLAUDE-TO-BRAIN.md`).
+
+**Ce s-a adăugat:** intrarea `'13'` în dictul `IDENTITATI` din `load_identitate`, pe tiparul C11/C12:
+`cod: C13 · nume_hero_caps_rand1: VIZUAL · nume_slug: Vizualizare · meta_val_treapta: VIZUALIZARE · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)`.
+
+**Verificare:** `load_identitate('13')` întoarce dictul C13 (nu mai e None). `gate_v20.py 13 c13 c01` NU mai dă „IDENTITATE_TEHNICA pentru C13 nu e definita" — trece de identitate și raportează corect doar artefactele încă negenerate (`Date_MASTER-C13.xlsx` etc.), normal pentru `c13/` care are doar build script-ul.
+
+**Commit SHA:** `874830d`.
+
+**Confirmare:** C13 poate REINTRA în generare. La următorul mandat de generare, gate-ul B2 rulează pentru C13 (eroarea de identitate e eliminată); generez cele 7 artefacte și le comit cu B2 PASS.
+
+**Reziduuri de aliniat la generare (nu blochează, dar de rezolvat în chatul de generare):**
+1. **Nume fișier xlsx:** gate-ul așteaptă `Date_MASTER-C13.xlsx` (tiparul C01-C12), dar IDENTITATE_TEHNICA + mandatul cer `Date_MASTER-C13-Vizualizare.xlsx`. La generare aliniez numele cu ce verifică gate-ul (sau BRAIN decide convenția).
+2. **Hero `nume_hero_caps_rand1`:** gate = `VIZUAL`; HTML-Studiu generat are hero tematic „FORMA ADEVĂRATĂ" / hov-object „VIZUALIZARE" (conține „VIZUAL"). La regenerare verific că `check_identity` trece, ajustez hero-ul dacă e nevoie.
+
+**Recomandare durabilă (rețeta B, neimplementată — în afara acestui task):** `load_identitate` rămâne dict hardcoded, deci **C14-C20 vor lovi același blocaj B2 la prima lor generare**. Un task SYSTEM viitor ar trebui să facă `load_identitate` să parseze `IDENTITATE-TEHNICA.md`, eliminând nevoia de intrare hardcoded per construcție.
