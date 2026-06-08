@@ -1,83 +1,148 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-BRAIN_C13_SPEC_11_SLOT_APPROVED_FOR_ARCHITECT_FREEZE
+ARCHITECT_FREEZE_SPEC_C13_CONFIRMED
 
 ## MANDAT-ID
-C13-SPEC-11-SLOT-003
+C13-FREEZE-SPEC-AND-BLUEPRINT-004
 
-## RAPORT CLAUDE ANALIZAT
-BRAIN a analizat raportul `CLAUDE_C13_SPEC_11_SLOT_FULL_READY` din `_brain/c13/CLAUDE-TO-BRAIN.md`.
+## CONFIRMARE ARHITECT
+ARHITECT a confirmat explicit:
 
-## VERDICT BRAIN
-PASS.
+`confirm freeze SPEC C13`
 
-SPEC-ul C13 este complet, coerent și pregătit pentru confirmarea ARHITECTULUI.
+Prin urmare, SPEC 11 SLOT C13 este înghețat conceptual.
 
-Nu există mandat nou de execuție până la confirmarea explicită a ARHITECTULUI pentru freeze SPEC C13.
+## SPEC C13 ÎNGHEȚAT
 
-## APROBĂRI
-1. STATUS-ul raportului este corect: `CLAUDE_C13_SPEC_11_SLOT_FULL_READY`.
-2. Intriga este aprobată:
-   - "Cifra e corectă. Graficul minte."
-3. Mantra este aprobată:
-   - "Nu desenez frumos. Desenez adevărat."
-4. AHA-ul este aprobat:
-   - "Forma greșită minte cu cifra corectă."
-5. Miza este aprobată:
-   - "O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
-6. WOW-ul este aprobat:
-   - "Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
-7. Motto-ul este aprobat:
-   - "Forma nu se nimerește. Se alege."
-8. Cele 6 fenomene sunt aprobate ca perechi deformare vizuală → corecție onestă.
-9. Cele 18 step-titles sunt aprobate ca schelet conceptual 6 etape × 3 pași.
-10. Granițele C13/C12/C14/C15/C16 sunt corecte.
-
-## DECIZII BRAIN
-
-### DECIZIE 1 · Slug
-Se aprobă slug-ul:
-
+### SLUG
 `Vizualizare`
 
-Motiv: este forma clară a construcției, compatibilă cu fișierele viitoare și mai puțin ambiguă decât `Vizual`.
+### INTRIGA
+"Cifra e corectă. Graficul minte."
 
-### DECIZIE 2 · SPEC 11 SLOT
-SPEC-ul este acceptat ca formă finală conceptuală C13, cu statut:
+### PROBLEMELE
+1. Aceeași cifră produce concluzii diferite prin forme diferite.
+2. Graficul pare obiectiv, dar forma e aleasă de autor.
+3. Ochiul crede forma înainte să verifice cifra.
+4. AI generează graficul, dar nu garantează onestitatea lui.
+5. Decidentul crede că vede datele, dar vede o formă vizuală prost aleasă.
 
-`READY_FOR_ARCHITECT_FREEZE`
+### MIZA
+"O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
 
-### DECIZIE 3 · Tensiunea dashboard
-Tensiunea semnalată de Claude este reală și validă:
+### MANTRA
+"Nu desenez frumos. Desenez adevărat."
 
-- C13 = obiect vizual onest.
-- C14 = compunerea paginii / dashboard-ului.
+### AHA
+"Forma greșită minte cu cifra corectă."
 
-Mențiunile din doc 13 / 06-MAP despre „dashboard XLSX la C13” trebuie tratate separat prin CERERE SYSTEM, nu în chatul C13.
+### WOW
+"Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
 
-## RISCURI VERIFICATE
-1. C13 nu intră în design grafic decorativ.
-2. C13 nu intră în dashboard / layout.
-3. C13 nu fură interpretarea din C12.
-4. C13 nu formulează mesajul esențial din C15.
-5. C13 nu livrează raportul final, acesta rămâne C16.
-6. Hook-ul cu „minciuna” rămâne operațional, nu moralizator.
+### MOTTO
+"Forma nu se nimerește. Se alege."
+
+### FENOMENE LOCKED
+1. Axa care exagerează → axa pleacă de la zero, sau abaterea e declarată explicit.
+2. Tipul de grafic nepotrivit → tipul urmează natura rezultatului.
+3. Scala care inventează relații → o singură scală liniară, declarată.
+4. Codarea care sugerează fals → o singură dimensiune codată coerent.
+5. Agregarea care ascunde variația → arăți distribuția / variația, nu doar media.
+6. Eticheta / unitatea / contextul lipsă → fiecare vizual poartă unitate, etichetă și context.
+
+### STEP-TITLES LOCKED
+
+ETAPA 1 · REALITATE
+1. Răspunsul corect, dar invizibil
+2. Nimeni nu decide privind un model
+3. Aceeași cifră, încă fără formă
+
+ETAPA 2 · INVESTIGAȚIE
+4. O cifră, mai multe forme posibile
+5. Promptul 1: ce formă cere rezultatul
+6. Aceeași cifră, două grafice, două concluzii
+
+ETAPA 3 · TRANSFORMARE
+7. Tipul de grafic urmează natura rezultatului
+8. Promptul 2: generezi vizualul, corectezi axa și scala
+9. Scoți codarea care sugerează fals
+
+ETAPA 4 · VERIFICARE
+10. Vizualul față de cifra brută: aceeași concluzie?
+11. Testul celui de-al doilea ochi
+12. Marchezi forma care spune mai mult decât cifra
+
+ETAPA 5 · STABILIZARE
+13. Cele șase reguli de onestitate a formei
+14. Eticheta, unitatea, contextul: nimic de ghicit
+15. Un obiect vizual onest, repetabil
+
+ETAPA 6 · CONFIRMARE
+16. Forma onestă repară percepția
+17. Devii garantul a ceea ce vede altcineva
+18. Predai către C14: obiectul, gata de așezat în pagină
+
+## GRANIȚE LOCKED
+- C12 = interpretarea / înțelegerea rezultatului.
+- C13 = forma vizuală onestă a unui rezultat deja produs.
+- C14 = organizarea spațială a obiectelor vizuale.
+- C15 = sinteza mesajului esențial.
+- C16 = livrarea raportului decision-ready.
+
+## DECIZIE LOCKED
+C13 NU este dashboard.
+C13 NU este layout.
+C13 NU este pagină.
+C13 NU este storytelling.
+
+C13 = obiect vizual onest.
+C14 = compunerea paginii / dashboard-ului.
+
+## TENSIUNE SYSTEM DESCHISĂ
+Există tensiune semnalată de Claude: doc 13 / 06-MAP conțin mențiuni de tip „dashboard XLSX la C13”. Aceasta trebuie tratată separat de Chat Andrei SYSTEM, nu de C13.
+
+Până la decizie SYSTEM, C13 se construiește strict ca obiect vizual onest, nu ca dashboard.
 
 ## MANDAT CĂTRE CLAUDE
-Nu executa nimic nou până la confirmarea explicită a ARHITECTULUI.
+La următorul `sync`, marchează în `_brain/c13/CLAUDE-TO-BRAIN.md` faptul că SPEC C13 a fost înghețat de ARHITECT și pregătește blueprint-ul conceptual C13.
 
-Dacă ARHITECT confirmă freeze SPEC C13, următorul mandat BRAIN va cere:
+Blueprint-ul trebuie să includă:
 
-1. marcarea SPEC-ului C13 ca înghețat în raportul de lucru C13,
-2. pregătirea blueprint-ului C13,
-3. menținerea strictă a graniței C13 = obiect vizual onest, nu dashboard.
+1. STATUS
+2. SPEC LOCKED recapitulativ
+3. Blueprint pe 6 etape × 3 pași
+4. Pentru fiecare etapă:
+   - scop
+   - transformare
+   - rezultat
+   - risc de drift
+   - control de graniță
+5. Handoff clar către C14
+6. CERERE SYSTEM pentru tensiunea dashboard, dacă o consideri necesară
+7. Verdict de auto-audit
 
 ## FIȘIERE PERMISE
-Până la următorul mandat explicit, Claude nu modifică nimic.
+Ai voie să scrii doar în:
+- `_brain/c13/CLAUDE-TO-BRAIN.md`
 
-## STATUS AȘTEPTAT
-`WAITING_FOR_ARCHITECT_FREEZE_C13`
+## FIȘIERE INTERZISE
+Nu modifica:
+- `CLAUDE.md`
+- `README.md`
+- `STARE-CURENTA.md`
+- `index.html`
+- `_system/**`
+- `governance/**`
+- `constructii.xlsx`
+- `c01/**` până la `c20/**`
+- orice HTML
+- orice Date_MASTER
+- orice FILM
+- orice fișier din alte foldere `_brain/cXX`
+
+## STATUS AȘTEPTAT ÎN RAPORT
+`CLAUDE_C13_BLUEPRINT_READY_AFTER_SPEC_FREEZE`
 
 ## CERERE DIRECTĂ
-Așteaptă confirmarea ARHITECTULUI pentru freeze SPEC C13.
+Produce blueprint-ul conceptual C13 după freeze SPEC. Zero implementare.
