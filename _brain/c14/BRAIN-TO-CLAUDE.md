@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C14
 
 ## STATUS
-MANDAT_SPEC_COMPLET_PROPUS
+MANDAT_READY_FOR_GENERATION_CHECK
 
 ## CONTEXT
 C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
@@ -9,10 +9,11 @@ C14 COMPUNEREA. T4 RAPORTARE. CUVÂNT LOCKED COMPOZIȚIE. VERB LOCKED COMPUN.
 SEED C14 este aprobat.
 SPEC 11 SLOT C14 este aprobat.
 BLUEPRINT C14 este aprobat.
+SPEC COMPLET C14 este aprobat cu ajustarea motto-ului.
 
 Nu se generează C14 încă.
 
-Următorul pas este SPEC COMPLET C14, cele 9 elemente canonice.
+Următorul pas este READY FOR GENERATION CHECK.
 
 ## DECIZII BRAIN VALIDATE
 
@@ -24,29 +25,19 @@ Următorul pas este SPEC COMPLET C14, cele 9 elemente canonice.
 - C15 extrage/formulează mesajul esențial
 - C16 livrează raportul decision-ready
 
-## APROBĂRI SEED
+## SPEC COMPLET C14 APROBAT
 
-AHA final aprobat:
+- SLUG provizoriu: `compunerea`
+- INTRIGA: aprobată
+- PROBLEMELE: aprobate
+- MIZA: aprobată
+- MANTRA: "Compun privirea, nu pagina."
+- WOW: before/after de rearanjare pură
+- MOTTO final: "Ce vede ochiul întâi schimbă decizia."
+- FENOMENE: aprobate
+- STEP-TITLES: aprobate, exact 11
 
-"Aceleași grafice, altă ordine, altă decizie."
-
-Mantra finală aprobată:
-
-"Compun privirea, nu pagina."
-
-WOW final aprobat:
-
-before/after de rearanjare pură, aceleași grafice, aceleași cifre, altă așezare, altă claritate decizională.
-
-Intriga aprobată:
-
-aceleași grafice corecte pot produce decizii diferite prin așezare.
-
-Miza aprobată:
-
-eșecul silențios al paginii prost compuse.
-
-## SPEC 11 SLOT APROBAT
+## STEP-TITLES APROBATE
 
 1. Pagina fără "întâi"
 2. Primul punct de contact al ochiului
@@ -64,57 +55,7 @@ eșecul silențios al paginii prost compuse.
 
 Pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15.
 
-## BLUEPRINT APROBAT
-
-Aprobat:
-
-- identitatea finală C14
-- fluxul educațional în 3 faze
-- obiectul practic Excel
-- before / after-ul demonstrabil
-- testul de 3 secunde ca test de prioritate vizuală, nu mesaj
-- diviziunea C13/C14 pe XLSX
-- formula: dashboard = substrat tehnic posibil, niciodată identitate conceptuală
-
-## MANDAT
-
-Pregătește raportul:
-
-# CLAUDE -> BRAIN · C14 SPEC COMPLET PROPUS
-
-Scrie raportul în:
-
-`_brain/c14/CLAUDE-TO-BRAIN.md`
-
-Fără implementare, fără artefacte, fără modificări în `c14/**`.
-
-## STRUCTURĂ OBLIGATORIE SPEC COMPLET
-
-Raportul trebuie să conțină cele 9 elemente canonice:
-
-1. SLUG
-2. INTRIGA
-3. PROBLEMELE
-4. MIZA
-5. MANTRA
-6. WOW
-7. MOTTO
-8. FENOMENE
-9. STEP-TITLES
-
-## CONDIȚII OBLIGATORII
-
-SPEC-ul complet trebuie să includă:
-
-- AHA aprobat: "Aceleași grafice, altă ordine, altă decizie."
-- Mantra aprobată: "Compun privirea, nu pagina."
-- WOW aprobat: before/after de rearanjare pură
-- cele 11 sloturi aprobate ca STEP-TITLES
-- output C14 aprobat
-- gardurile C13/C15/C16
-- interdicția de a folosi dashboard ca identitate
-
-## GARDURI OBLIGATORII
+## GARDURI APROBATE
 
 - C14 nu desenează grafice
 - C14 nu formulează mesajul
@@ -125,15 +66,39 @@ SPEC-ul complet trebuie să includă:
 - C14 nu se autorizează ca dashboard
 - dashboard poate rămâne doar substrat tehnic, nu identitate conceptuală
 
-## INTERDICȚII
+## MANDAT
+
+Pregătește raportul:
+
+# CLAUDE -> BRAIN · C14 READY FOR GENERATION CHECK
+
+Scrie raportul în:
+
+`_brain/c14/CLAUDE-TO-BRAIN.md`
+
+Scopul raportului: să spună clar ce trebuie autorizat înainte de generare.
+
+## STRUCTURĂ OBLIGATORIE RAPORT
+
+Raportul trebuie să includă:
+
+1. Fișiere / foldere care trebuie citite înainte de generare
+2. Ce se poate folosi din `c01/` ca COPY+MODIFY
+3. Ce generatoare / gate-uri trebuie accesate
+4. Ce fișiere se vor putea modifica la generare
+5. Ce fișiere sunt interzise
+6. Dacă este sau nu nevoie de CERERE SYSTEM
+7. Riscuri finale înainte de generare
+
+## INTERDICȚII ÎN ACEST PAS
 
 - nu implementa nimic
 - nu modifica fișiere de construcție
 - nu genera artefacte
-- nu ridica CERERE SYSTEM în această etapă
 - nu porni generarea C14
-- nu accesa generatoare/gate
+- nu accesa generatoare/gate încă
 - nu folosi `c01/` ca referință COPY+MODIFY încă
+- nu ridica CERERE SYSTEM încă
 - nu presupune status
 - nu inventa conținut lipsă
 - lucrează doar pe baza fișierelor citite efectiv
@@ -141,4 +106,4 @@ SPEC-ul complet trebuie să includă:
 
 ## RAPORT
 
-După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul SPEC COMPLET PROPUS.
+După analiză, actualizează `_brain/c14/CLAUDE-TO-BRAIN.md` cu raportul READY FOR GENERATION CHECK.
