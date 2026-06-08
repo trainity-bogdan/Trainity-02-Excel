@@ -1,99 +1,63 @@
-# CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERARE BLOCATĂ
+# CLAUDE → BRAIN · C13 VIZUALIZAREA · GENERARE BLOCATĂ LA B2
 
 ## 1. STATUS
 CLAUDE_C13_GENERATION_BLOCKED
 
-> Răspuns la mandat **C13-GENERATE-ARTIFACTS-007**. Generarea NU poate începe: gate-ul HARD de pre-generare (B1 / R-V03.55) eșuează, iar deblocarea cere modificarea unor fișiere `_system/**` INTERZISE în acest chat de construcție. Conform mandatului („Dacă gate_v20.py sau alt validator nu este pregătit pentru C13, NU modifica fișiere sistem din acest chat. Raportează blocajul exact."), raportez blocajul cu rețeta de deblocare. Zero generare, zero atingere sistem.
+> Răspuns la mandat **C13-GENERATE-AFTER-SYSTEM-READY-009**. Generarea FUNCȚIONEAZĂ (HTML-Studiu generat și validat de toate check-urile disponibile), dar se oprește la gate-ul B2: `gate_v20.py` NU e pregătit pentru C13. Conform regulii absolute B2 (CLAUDE.md: „gate_v20 PASS obligatoriu înainte de orice commit cu artefacte canonice; FAIL → nu commit, raportezi"), NU comit artefacte canonice necertificate și NU ating fișierul de gate (system, interzis). Raportez blocajul cu rețeta de deblocare.
 
 ## 2. LIVRABILE GENERATE
-NICIUNUL. Blocaj înainte de generare. `c13/` nu a fost creat.
+- **`c13/HTML-Studiu-Excel-13-Vizualizare.html`** — GENERAT local (102 KB, 2436 linii) prin COPY+MODIFY din c12, body autorat pe ONESTITATEA FORMEI. Validat (vezi secțiunea 5). NEcomis ca artefact canonic (B2 nu poate certifica).
+- **`c13/build_html_studiu_c13.py`** — generatorul (comis: păstrează autorarea body-ului C13, reproducibil).
+- Restul (Editor-Studiu, Video, Editor-Video, Date_MASTER, FILM, assets) = NEÎNCEPUTE, ținute până la deblocarea B2 (nu are sens să continui dacă gate-ul nu poate certifica niciun artefact C13).
 
-## 3. FIȘIERE MODIFICATE
-- Doar `_brain/c13/CLAUDE-TO-BRAIN.md` (acest raport).
+## 3. FIȘIERE MODIFICATE / CREATE
+- `c13/build_html_studiu_c13.py` (creat, comis).
+- `_brain/c13/CLAUDE-TO-BRAIN.md` (acest raport).
+- `c13/HTML-Studiu-...html` generat LOCAL, NEcomis (B2).
+- Sistem, alte construcții, alte `_brain/cXX` = NEATINSE.
 
-## 4. FIȘIERE NEATINSE (explicit)
-- `c13/**` — necreate (blocaj pre-generare).
-- `_system/**` (inclusiv `SISTEM_TRAINITY-versiuni.md`, `referinte/IDENTITATE-TEHNICA.md`, `gate_v20.py`, `audit_sync.py`) — NEATINSE (interzise).
-- `c01/**`..`c12/**`, `c14/**`..`c20/**`, CLAUDE.md, README, STARE-CURENTA, index.html, constructii.xlsx — NEATINSE.
+## 4. VALIDĂRI RULATE
+B1 `pre_generation_check.py 13` · parse JS · structură (etape/pași/fenomene/verificări/prompturi) · 18 step-titles LOCKED · em/en-dash · reziduu C12 · B2 `gate_v20.py 13 c13 c01`.
 
-## 5. CUM AM PĂSTRAT C13 = OBIECT VIZUAL ONEST
-N/A la nivel de artefact (negenerat). La nivel de pregătire: SPEC-ul înghețat respectă integral „C13 = obiect vizual onest, nu dashboard"; la deblocare, generarea va respecta cerința critică (workbook = suport pentru obiectul vizual, nu dashboard; handoff „C13 face obiectul adevărat. C14 îl așază în pagină.").
+## 5. REZULTATE VALIDĂRI
+**Tot ce e disponibil PASS, mai puțin B2 care nu poate rula:**
+- B1 `pre_generation_check 13`: **PASS (exit 0)**, 3/3 checks.
+- JS intact: toate funcțiile cheie prezente, 1 bloc `<script>` balansat, body/html balansate. **PASS**
+- Structură: 18 pași, 6 etape, 6 fenomene SCENA, 8 verificări finale, 2 prompturi. **PASS**
+- 18 step-titles LOCKED: **18/18 verbatim**. **PASS**
+- em/en-dash: **0**. **PASS**
+- reziduu C12 în body: **0**. **PASS**
+- **B2 `gate_v20.py 13`: ERROR** → „IDENTITATE_TEHNICA pentru C13 nu e definita."
 
-## 6. VALIDĂRI RULATE
-- `python3 _system/generatoare/pre_generation_check.py 13` (gate B1, R-V03.55 + L142). Read-only, nu am modificat nimic.
+## 6. CUM AM PĂSTRAT C13 = OBIECT VIZUAL ONEST (nu dashboard)
+- hero system-map T4: `VIZUALIZARE (activ) · COMPUNERE · SINTETIZARE · LIVRARE`.
+- handoff PAS 18 LOCKED: „C13 face obiectul adevărat. C14 îl așază în pagină."
+- next-section = `C14 · Compunerea` (organizarea spațială predată explicit la C14).
+- prompturile interzic explicit „nu compune o pagină / dashboard", „nu formula mesajul", „nu trece la livrare".
+- zero cifre business statice (R-V02.15): vizualele demonstrează forma onestă vs înșelătoare, se verifică contra cifrei brute, fără valori finale afișate.
+- zero „de ce"/cauză ca identitate (graniță C12 ținută).
 
-## 7. REZULTATE VALIDĂRI
-**Gate de pre-generare = FAIL (exit non-zero, BLOCANT).** Două HARD checks pică:
-
-### CHECK 1 (R-V03.55) — FAIL
-`SPEC C13 ESTE NEGENERAT`. Validatorul caută secțiunea `## SPEC C13 ... [Status: INGHETAT]` în `_system/arhiva/SISTEM_TRAINITY-versiuni.md` și nu o găsește. SPEC-ul C13 e înghețat CONCEPTUAL (în `_brain/c13/`, `doc 13`, confirmat de ARHITECT `confirm freeze SPEC C13`), dar NU e transcris în registrul de sistem pe care îl verifică gate-ul.
-
-### CHECK 2 (L142) — FAIL
-`Sectiunea IDENTITATE_TEHNICA C13 LIPSA in referinte/IDENTITATE-TEHNICA.md`. Fișierul are C12 (cu `next_cod: C13`), dar nu există secțiunea `## IDENTITATE_TEHNICA C13` cu schema tehnică (output_filename, footer_text, topbar_text, mobile_topbar, nav_brand_label, title_studiu etc.).
-
-## 8. BLOCAJUL (precis) + REȚETĂ DE DEBLOCARE
-**Cauză:** gate-ul B1 cere SPEC-ul + identitatea tehnică C13 înregistrate în 2 fișiere `_system/**`, pe care acest chat de construcție NU are voie să le modifice. Înregistrarea lor e un task SYSTEM (Chat Andrei SYSTEM), nu un task de generare C13.
+## 7. BLOCAJUL (precis) + REȚETĂ DE DEBLOCARE
+**Cauză:** `gate_v20.py` (gate-ul B2, BLOCANT) încarcă identitatea construcției dintr-un **dict hardcoded** (`load_identitate`, linia ~1064: „in acest sample: dict hardcoded"). Dictul `IDENTITATI` are C01-C12, dar **NU are C13**. La `load_identitate(13)` → None → ERROR + `sys.exit(1)`. `gate_v20.py` e fișier sistem, INTERZIS în chatul de construcție C13. Repararea = task SYSTEM.
 
 **Deblocare (de executat din Chat Andrei SYSTEM, nu aici):**
-
-**(A) `_system/arhiva/SISTEM_TRAINITY-versiuni.md`** — adaugă secțiunea:
+- **(A) `_system/generatoare/gate_v20.py`** — adaugă în dictul `IDENTITATI` din `load_identitate` intrarea C13, pe tiparul C11/C12:
+```python
+'13': {
+    'cod': 'C13', 'nume_hero_caps_rand1': 'VIZUAL',
+    'nume_slug': 'Vizualizare',
+    'meta_val_treapta': '<b>VIZUALIZARE</b> · COMPUNERE · SINTETIZARE · LIVRARE (RAPORTARE)'
+},
 ```
-## SPEC C13 — VIZUALIZAREA   [Status: INGHETAT]
-```
-cu cele 9 elemente narative (toate înghețate deja, de transcris din SPEC-ul C13):
-1. INTRIGA: „Cifra e corectă. Graficul minte."
-2. PROBLEMELE: cele 5 (aceeași cifră / formă aleasă de autor / ochiul crede forma / AI nu garantează onestitatea / decidentul vede o formă prost aleasă).
-3. MIZA: „O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
-4. MANTRA: „Nu desenez frumos. Desenez adevărat." (AHA: „Forma greșită minte cu cifra corectă.")
-5. MOTTO: „Forma nu se nimerește. Se alege."
-6. STEP-TITLES: cele 18 (6 etape × 3), LOCKED în mandat.
-7. PROMPTURI: Promptul 1 (E2 INVESTIGAȚIE, „ce formă cere rezultatul"), Promptul 2 (E3 TRANSFORMARE, „generezi vizualul, corectezi axa și scala").
-8. FINAL-LABELS: 8 ancore de retenție (de propus la înregistrare, în spiritul axei ONESTITATEA FORMEI).
-9. FENOMENE: cele 6 perechi (axă/tip/scală/codare/agregare/etichetă → regulă onestă).
+- **(B) recomandare durabilă (opțional, dar curată):** fă `load_identitate` să PARSEZE `referinte/IDENTITATE-TEHNICA.md` (deja populat cu C13) în loc de dict hardcoded, ca să nu mai fie nevoie de o intrare hardcoded la fiecare construcție nouă (C14-C20 vor lovi același blocaj).
+- **(C)** după (A), rulează `gate_v20.py 13 c13 c01` și confirmă PASS, apoi BRAIN re-emite mandatul de generare; chatul C13 generează cele 7 artefacte și le comite cu B2 PASS.
 
-**(B) `_system/referinte/IDENTITATE-TEHNICA.md`** — adaugă secțiunea `## IDENTITATE_TEHNICA C13 — VIZUALIZAREA` pe șablonul C12, cu valorile C13:
-- cod: C13
-- slug: Vizualizare
-- output_filename: `Date_MASTER-C13-Vizualizare.xlsx`
-- title_studiu: `C13 · Vizualizare · Trainity`
-- topbar_text: `Sistemul 02 - Excel · C13 · Vizualizare`
-- mobile_topbar: `C13 · Vizualizare`
-- nav_brand_label: `PACK 02 EXCEL · C13`
-- footer_text: `TRAINITY · C13 VIZUALIZARE · ...` (CUVÂNT LOCKED VIZUAL)
-- next_cod: C14
-- plus restul câmpurilor schema (nume_hero_caps_rand1, localStorage_studiu etc.) conform tiparului C12.
-- Recomandare: actualizează și `next_cod` al C12 dacă gate-ul cere lanț coerent (C12 are deja `next_cod: C13`, OK).
+**Notă aliniere identitate:** dictul gate folosește CUVÂNTUL ca `nume_hero_caps_rand1` (C11=CLASAMENT, C12=CAUZA) → pentru C13 = `VIZUAL`. În IDENTITATE-TEHNICA.md am pus `nume_hero_caps_rand1: FORMA` (hero tematic „FORMA ADEVĂRATĂ"). Când gate-ul rulează, voi alinia hero-ul Studiu cu valoarea pe care SYSTEM o fixează în dict (VIZUAL vs FORMA), ca check_identity să treacă. Decizia hero finală = a SYSTEM/BRAIN; o aplic la regenerare.
 
-**(C)** După (A)+(B), rulează din nou `pre_generation_check.py 13` → exit 0. Apoi mandat de generare C13, iar acest chat generează cele 7 artefacte.
+## 8. COMMIT SHA
+(completat la commit, mai jos)
 
-**Notă FINAL-LABELS:** singurul element din cele 9 care NU e încă explicit în SPEC-ul înghețat sunt cele 8 FINAL-LABELS. Pot fi propuse (de mine sau BRAIN) înainte de înregistrarea SYSTEM, ca SPEC-ul de registru să fie complet 9/9.
+## 9. VERDICT FINAL
+**Generarea C13 e funcțională și corectă** (Studiu generat, axat ONESTITATEA FORMEI, validat de B1 + toate check-urile de conținut). Blocajul NU e în artefact, ci în **gate-ul B2 care nu e C13-ready** (dict hardcoded fără C13), exact clasă cu blocajul B1 rezolvat anterior. Per regula absolută B2, nu comit artefacte canonice fără gate PASS, și nu ating gate-ul (system, interzis).
 
-## 9. COMMIT SHA
-(completat la commit, mai jos în raportul de chat)
-
-## 10. VERDICT FINAL
-**GENERARE BLOCATĂ legitim, conform B1 (R-V03.55).** Nu am forțat gate-ul și nu am atins sistemul. Blocajul NU e o eroare a SPEC-ului (care e solid și înghețat conceptual), ci o **datorie de înregistrare SYSTEM**: SPEC-ul C13 trăiește în `_brain/c13` + `doc 13`, dar gate-ul de pre-generare îl cere în `SISTEM_TRAINITY-versiuni.md` + `IDENTITATE-TEHNICA.md`. Acestea sunt fișiere `_system/**`, deci task SYSTEM, nu C13.
-
-**Următorul pas:** Chat Andrei SYSTEM execută rețeta (A)+(B), rulează gate-ul până la exit 0, apoi BRAIN re-emite mandatul de generare. La acel `sync`, generez C13 complet (7 artefacte, COPY+MODIFY din c12/c01, axat ONESTITATEA FORMEI, fără dashboard). Eventual, înainte, propun cele 8 FINAL-LABELS ca SPEC-ul de registru să fie 9/9.
-
----
-
-## ADENDĂ SYSTEM · C13 PRE-GENERATION
-
-**STATUS: SYSTEM_C13_PRE_GENERATION_READY**
-
-Deblocajul cerut de raportul de blocaj a fost executat de Chat Andrei SYSTEM. Gate-ul B1 de pre-generare trece acum complet.
-
-**Fișiere citite:** `_brain/c13/BRAIN-TO-CLAUDE.md`, `_brain/c13/CLAUDE-TO-BRAIN.md`, `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, `_system/referinte/IDENTITATE-TEHNICA.md`, `_system/generatoare/pre_generation_check.py` (pentru schema câmpurilor).
-
-**Fișiere modificate:** `_system/arhiva/SISTEM_TRAINITY-versiuni.md`, `_system/referinte/IDENTITATE-TEHNICA.md` (+ acest addendum în `_brain/c13/CLAUDE-TO-BRAIN.md`).
-
-**Secțiuni adăugate:**
-- `## SPEC C13 - VIZUALIZAREA [Status: INGHETAT 08.06.2026]` (stub-ul vechi „VIZUALIZARE EXECUTIVA [NEGENERAT]" înlocuit), cu cele 9 elemente: intriga, problemele, miza, mantra/AHA, motto, 18 step-titles, 2 prompturi, 8 final-labels, 6 fenomene + granițe.
-- `## IDENTITATE_TEHNICA C13 · VIZUALIZAREA` pe șablonul C12, cu toate câmpurile obligatorii (cod, treapta_nr, nume_slug, nume_hero_caps_rand1, meta_val_treapta, footer_text, topbar_text, localStorage_studiu, localStorage_video, next_cod, next_nume_title) + restul schemei adaptate (slug Vizualizare, output_filename Date_MASTER-C13-Vizualizare.xlsx, next_cod C14).
-
-**Rezultat `pre_generation_check.py 13`:** EXIT 0. CHECK 1 (R-V03.55 SPEC) PASS · CHECK 2 (L142 IDENTITATE_TEHNICA) PASS · CHECK 3 (L143 FENOMENE vs asset fizic) PASS.
-
-**Commit SHA SYSTEM:** `92a44ec` (integrat în origin/main la `b834bd2`).
-
-**Confirmare:** C13 poate REINTRA în generare. La următorul mandat de generare (BRAIN re-emite C13-GENERATE-ARTIFACTS), gate-ul B1 nu mai blochează; chat-ul C13 poate produce cele 7 artefacte.
+**Următorul pas:** Chat Andrei SYSTEM adaugă C13 în `gate_v20.py` (rețeta A, ideal + B), rulează gate-ul până la PASS, apoi BRAIN re-emite generarea. La acel `sync`, generez cele 7 artefacte cap-coadă cu B2 PASS și le comit. Body-ul Studiu C13 e deja autorat (în build script), deci regenerarea e rapidă.
