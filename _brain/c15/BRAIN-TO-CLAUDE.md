@@ -1,10 +1,12 @@
 # BRAIN -> CLAUDE C15
 
 ## STATUS
-FREEZE_MANDATE_READY
+GENERATION_BLUEPRINT_MANDATE_READY
 
 ## CONTEXT
 C15 SINTETIZAREA. T4 RAPORTARE. CUVANT LOCKED: SINTEZA. VERB LOCKED: SINTETIZEZ.
+
+SPEC 11-slot C15 este inghetat conceptual v1.0.
 
 C15 este constructia de extragere si formulare a mesajului esential al raportului.
 
@@ -15,23 +17,7 @@ Pilon T4: T4 consuma raspunsul produs de T3. Nu il naste.
 
 C15 nu descopera insight-ul. C15 formuleaza sinteza.
 
-## DECIZII BRAIN LOCKED PENTRU FREEZE
-
-1. C15 = SINTEZA, nu rezumat.
-2. C15 formuleaza mesajul esential, nu il descopera.
-3. C15 output = o propozitie / mesaj esential, nu layout.
-4. C15 nu este compozitie C14.
-5. C15 nu este livrare C16.
-6. C15 nu introduce analiza noua peste T3.
-7. Verb locked = SINTETIZEZ.
-8. Cuvant locked = SINTEZA.
-9. AHA locked: O pagina arata. O sinteza spune.
-10. MANTRA locked: Nu rezumam. Sintetizam.
-11. GRESEALA locked: Oamenii rezuma tot. Profesionistii formuleaza ce conteaza.
-12. MOTTO locked: Dintr-o privire, mesajul.
-13. FORMULEZ este permis doar ca explicatie semantica secundara, nu ca verb-semnatura.
-
-## SPEC 11 SLOT C15 APROBAT PENTRU FREEZE
+## SPEC 11 SLOT C15 LOCKED
 
 1. HERO:
 Cum transform o pagina intr-o singura fraza care conteaza?
@@ -67,18 +53,21 @@ Un director nu citeste toata pagina. O deschide si intreaba: si ce-i cu asta? Ar
 SINTETIZEZ.
 
 ## MANDAT
-Claude C15 executa exclusiv freeze final conceptual pentru SPEC 11 SLOT C15.
+Claude C15 executa exclusiv pregatirea conceptuala pentru generare C15, NU generarea efectiva.
 
 Obiectiv:
-1. marcheaza SPEC 11-slot C15 ca inghetat conceptual;
-2. redacteaza raportul final de freeze C15;
-3. verifica explicit ca toate sloturile respecta granitele C14 / C15 / C16;
-4. verifica explicit ca C15 nu intra in T3 si nu introduce analiza noua;
-5. pastreaza nucleul SINTEZA != REZUMAT ca identitate centrala;
-6. marcheaza ce ramane pentru etapa ulterioara de generare, fara a o executa.
+1. construieste SEED-ul de generare C15;
+2. propune blueprint-ul dedicat C15 pentru structura de implementare;
+3. defineste cele 9 elemente SPEC de generare care NU sunt in 11-slot: SLUG, PROBLEMELE, FENOMENE, STEP-TITLES si celelalte elemente cerute de protocolul B1/CLAUDE.md, dar fara sa inventezi daca protocolul cere altceva;
+4. propune structura de 6 etape exec / 18 pasi / fenomene / verificari / 2 prompturi AI, pe axa SINTEZA;
+5. propune lista de livrabile pentru C15, fara sa le creezi;
+6. propune validari necesare pentru generare;
+7. marcheaza riscurile de contaminare C15 spre rezumat, C14, C16 sau T3;
+8. marcheaza exact ce decizii trebuie sa dea BRAIN inainte de mandatul de generare efectiva.
 
 NU implementezi artefacte.
 NU generezi c15/**.
+NU creezi HTML, Excel, FILM, imagini sau fisiere livrabile.
 NU modifici fisiere sistem.
 NU modifici alte constructii.
 NU intri in _brain/c13 sau alte foldere _brain/cYY.
@@ -92,27 +81,27 @@ Ai voie sa scrii doar raportul in:
 Raportul trebuie sa contina obligatoriu:
 
 1. STATUS
-2. SPEC 11 SLOT C15 INGHETAT CONCEPTUAL
-3. NUCLEU C15 LOCKED
-4. GRANITE VERIFICATE C14 / C15 / C16
-5. VERIFICARE T3 / T4
-6. LIMBAJ LOCKED / LIMBAJ INTERZIS
-7. CE RAMANE PENTRU GENERARE ULTERIOARA
-8. CE NU AI FACUT
+2. SEED DE GENERARE C15
+3. BLUEPRINT C15 PROPUS
+4. CELE 9 ELEMENTE SPEC DE GENERARE
+5. STRUCTURA 6 ETAPE / 18 PASI
+6. FENOMENE SI VERIFICARI
+7. CELE 2 PROMPTURI AI
+8. LIVRABILE C15 PROPUSE
+9. VALIDARI NECESARE
+10. RISCURI DE CONTAMINARE
+11. DECIZII CERUTE DE LA BRAIN INAINTE DE GENERARE
+12. CE NU AI FACUT
 
 ## CONDITII DE ACCEPTARE
 Acceptabil doar daca:
-- marchezi explicit SPEC 11-slot ca inghetat conceptual;
-- nu mai ceri decizii suplimentare pentru freeze;
-- C15 ramane SINTEZA, nu rezumat proportional;
-- C15 formuleaza mesajul esential, nu reorganizeaza vizual raportul;
-- C15 nu devine livrare decision-ready;
-- C15 nu introduce analiza noua peste T3;
-- C15 foloseste verbul SINTETIZEZ si cuvantul SINTEZA;
-- AHA ramane: O pagina arata. O sinteza spune.;
-- MANTRA ramane: Nu rezumam. Sintetizam.;
-- MOTTO ramane: Dintr-o privire, mesajul.;
-- raportul ramane strict conceptual.
+- nu redeschizi SPEC 11-slot C15;
+- nu modifici sloturile locked;
+- pastrezi C15 ca SINTEZA, nu rezumat;
+- pastrezi output-ul C15 ca mesaj esential / propozitie;
+- nu impingi C15 spre C14, C16 sau T3;
+- nu generezi artefacte;
+- raportul ramane pregatire conceptuala pentru generare, nu executie.
 
 ## RAPORT
 Scrie raportul in _brain/c15/CLAUDE-TO-BRAIN.md si apoi commit descriptiv pe main + push.
