@@ -1,210 +1,272 @@
 # BRAIN → CLAUDE · C13 VIZUALIZAREA
 
 ## STATUS
-ARCHITECT_APPROVED_GENERATE_C13
+BRAIN_C13_GENERATION_BLOCK_CONFIRMED_SYSTEM_REGISTRATION_REQUIRED
 
 ## MANDAT-ID
-C13-GENERATE-ARTIFACTS-007
+C13-GENERATION-BLOCK-SYSTEM-REGISTRATION-008
 
-## CONFIRMARE ARHITECT
-ARHITECT a confirmat explicit:
+## RAPORT CLAUDE ANALIZAT
+BRAIN a analizat raportul:
 
-`confirm generate C13`
+`CLAUDE_C13_GENERATION_BLOCKED`
 
-Prin urmare, Claude C13 este autorizat să intre în generarea controlată a artefactelor C13.
+din:
 
-## STARE PRE-GENERARE
-- SPEC C13 = FROZEN.
-- Blueprint C13 = APPROVED.
-- Tensiunea SYSTEM despre dashboard = RESOLVED.
-- Decizie locked: C13 = obiect vizual onest, nu dashboard.
-- C14 = compunerea paginii / dashboard-ului.
+`_brain/c13/CLAUDE-TO-BRAIN.md`
 
-## IDENTITATE C13
-- Construcție: C13 VIZUALIZAREA.
-- Treaptă: T4 RAPORTARE.
-- CUVÂNT LOCKED: VIZUAL.
-- VERB LOCKED: VIZUALIZEZ.
-- Slug aprobat: `Vizualizare`.
-- Axă: ONESTITATEA FORMEI.
-- Pilon T4: T4 consumă răspunsul produs de T3. Nu îl naște.
+## VERDICT BRAIN
+PASS PE BLOCAJ.
 
-## SPEC LOCKED DE RESPECTAT
+Blocajul este legitim și nu trebuie forțat.
 
-### INTRIGA
+Claude C13 a procedat corect:
+- a rulat gate-ul de pre-generare;
+- a identificat lipsa înregistrării SPEC C13 în registrul sistemic;
+- a identificat lipsa identității tehnice C13;
+- nu a modificat fișiere `_system/**` din chatul C13;
+- nu a generat artefacte înainte de gate.
+
+## STARE C13
+
+### Conceptual
+`C13_CONCEPTUAL_READY`
+
+### SPEC
+`SPEC_C13_FROZEN`
+
+### Blueprint
+`BLUEPRINT_C13_APPROVED`
+
+### System dashboard tension
+`SYSTEM_C13_DASHBOARD_TENSION_RESOLVED`
+
+### Generation
+`BLOCKED_PENDING_SYSTEM_REGISTRATION`
+
+## BLOCAJE CONFIRMATE
+
+### Blocaj 1
+Lipsește înregistrarea SPEC C13 în:
+
+`_system/arhiva/SISTEM_TRAINITY-versiuni.md`
+
+Gate-ul cere secțiune de tip:
+
+`## SPEC C13 — VIZUALIZAREA   [Status: INGHETAT]`
+
+### Blocaj 2
+Lipsește identitatea tehnică C13 în:
+
+`_system/referinte/IDENTITATE-TEHNICA.md`
+
+Gate-ul cere secțiune de tip:
+
+`## IDENTITATE_TEHNICA C13 — VIZUALIZAREA`
+
+## DECIZIE BRAIN
+C13 NU se generează până când înregistrarea SYSTEM nu este făcută și `pre_generation_check.py 13` nu trece.
+
+## FINAL-LABELS C13 APROBATE PENTRU REGISTRUL SYSTEM
+Pentru completarea registrului, BRAIN aprobă următoarele 8 FINAL-LABELS C13:
+
+1. Cifra corectă nu garantează grafic corect.
+2. Forma este o decizie.
+3. Axa poate exagera adevărul.
+4. Tipul de grafic urmează natura rezultatului.
+5. Scala trebuie să fie declarată.
+6. Codarea vizuală spune un singur lucru.
+7. Eticheta, unitatea și contextul elimină ghicitul.
+8. Vizualul corect produce aceeași concluzie ca cifra brută.
+
+Acestea sunt aprobate doar pentru înregistrarea SYSTEM a SPEC C13 și trebuie păstrate în logica:
+
+C13 = obiect vizual onest, nu dashboard.
+
+## TASK SYSTEM DE EXECUTAT SEPARAT DE CLAUDE
+
+```text
+ACEST TASK ESTE SYSTEM, EXECUTAT DE CLAUDE.
+
+Repo:
+trainity-bogdan/Trainity-02-Excel
+
+Context:
+C13 VIZUALIZAREA are SPEC înghețat, blueprint aprobat și tensiunea dashboard rezolvată. Generarea C13 este blocată de gate-ul B1 pentru că lipsesc înregistrările SYSTEM.
+
+Obiectiv:
+Deblochează pre-generation gate pentru C13 prin înregistrarea SPEC C13 și a identității tehnice C13 în fișierele sistemice cerute de validator.
+
+Lucrează pe main:
+
+git checkout main
+git pull origin main
+
+Citește înainte:
+- _brain/c13/BRAIN-TO-CLAUDE.md
+- _brain/c13/CLAUDE-TO-BRAIN.md
+- _system/arhiva/SISTEM_TRAINITY-versiuni.md
+- _system/referinte/IDENTITATE-TEHNICA.md
+
+Modifică doar:
+- _system/arhiva/SISTEM_TRAINITY-versiuni.md
+- _system/referinte/IDENTITATE-TEHNICA.md
+
+Nu modifica:
+- c13/**
+- c01/** până la c20/**
+- CLAUDE.md
+- README.md
+- STARE-CURENTA.md
+- index.html
+- gate_v20.py
+- audit_sync.py
+- COMENZI.yaml
+- orice alt fișier sistemic
+
+PASUL A:
+În _system/arhiva/SISTEM_TRAINITY-versiuni.md adaugă secțiunea:
+
+## SPEC C13 — VIZUALIZAREA   [Status: INGHETAT]
+
+Include cele 9 elemente cerute de gate:
+
+1. INTRIGA:
 "Cifra e corectă. Graficul minte."
 
-### MIZA
+2. PROBLEMELE:
+- aceeași cifră produce concluzii diferite prin forme diferite
+- graficul pare obiectiv, dar forma e aleasă de autor
+- ochiul crede forma înainte să verifice cifra
+- AI generează graficul, dar nu garantează onestitatea lui
+- decidentul crede că vede datele, dar vede o formă vizuală prost aleasă
+
+3. MIZA:
 "O decizie este luată cu încredere pe o imagine falsă construită peste date corecte."
 
-### MANTRA
+4. MANTRA / AHA:
 "Nu desenez frumos. Desenez adevărat."
-
-### AHA
 "Forma greșită minte cu cifra corectă."
 
-### WOW
-"Aceeași cifră, două grafice, două concluzii opuse. Apoi forma onestă repară percepția."
-
-### MOTTO
+5. MOTTO:
 "Forma nu se nimerește. Se alege."
 
-### FENOMENE LOCKED
-1. Axa care exagerează → axa pleacă de la zero, sau abaterea e declarată explicit.
-2. Tipul de grafic nepotrivit → tipul urmează natura rezultatului.
-3. Scala care inventează relații → o singură scală liniară, declarată.
-4. Codarea care sugerează fals → o singură dimensiune codată coerent.
-5. Agregarea care ascunde variația → arăți distribuția / variația, nu doar media.
-6. Eticheta / unitatea / contextul lipsă → fiecare vizual poartă unitate, etichetă și context.
+6. STEP-TITLES:
+Cele 18 step-titles locked C13, în 6 etape x 3 pași:
 
-### STEP-TITLES LOCKED
-
-ETAPA 1 · REALITATE
+ETAPA 1 REALITATE
 1. Răspunsul corect, dar invizibil
 2. Nimeni nu decide privind un model
 3. Aceeași cifră, încă fără formă
 
-ETAPA 2 · INVESTIGAȚIE
+ETAPA 2 INVESTIGAȚIE
 4. O cifră, mai multe forme posibile
 5. Promptul 1: ce formă cere rezultatul
 6. Aceeași cifră, două grafice, două concluzii
 
-ETAPA 3 · TRANSFORMARE
+ETAPA 3 TRANSFORMARE
 7. Tipul de grafic urmează natura rezultatului
 8. Promptul 2: generezi vizualul, corectezi axa și scala
 9. Scoți codarea care sugerează fals
 
-ETAPA 4 · VERIFICARE
+ETAPA 4 VERIFICARE
 10. Vizualul față de cifra brută: aceeași concluzie?
 11. Testul celui de-al doilea ochi
 12. Marchezi forma care spune mai mult decât cifra
 
-ETAPA 5 · STABILIZARE
+ETAPA 5 STABILIZARE
 13. Cele șase reguli de onestitate a formei
 14. Eticheta, unitatea, contextul: nimic de ghicit
 15. Un obiect vizual onest, repetabil
 
-ETAPA 6 · CONFIRMARE
+ETAPA 6 CONFIRMARE
 16. Forma onestă repară percepția
 17. Devii garantul a ceea ce vede altcineva
 18. Predai către C14: obiectul, gata de așezat în pagină
 
-## LIVRABILE CERUTE
-Generează artefactele C13 în folderul `c13/`, folosind slug-ul `Vizualizare`:
+7. PROMPTURI:
+- Promptul 1, E2 INVESTIGAȚIE: ce formă cere rezultatul
+- Promptul 2, E3 TRANSFORMARE: generezi vizualul, corectezi axa și scala
 
-1. `c13/HTML-Studiu-Excel-13-Vizualizare.html`
-2. `c13/HTML-Editor-Studiu-Excel-13-Vizualizare.html`
-3. `c13/HTML-Video-Excel-13-Vizualizare.html`
-4. `c13/HTML-Editor-Video-Excel-13-Vizualizare.html`
-5. `c13/Date_MASTER-C13-Vizualizare.xlsx`
-6. `c13/FILM-Excel-13-Vizualizare.docx`
-7. `c13/assets/` cu asset-uri necesare, dacă patternul construcțiilor anterioare o cere.
+8. FINAL-LABELS:
+- Cifra corectă nu garantează grafic corect.
+- Forma este o decizie.
+- Axa poate exagera adevărul.
+- Tipul de grafic urmează natura rezultatului.
+- Scala trebuie să fie declarată.
+- Codarea vizuală spune un singur lucru.
+- Eticheta, unitatea și contextul elimină ghicitul.
+- Vizualul corect produce aceeași concluzie ca cifra brută.
 
-## CERINȚĂ CRITICĂ DE LIVRABIL
-C13 NU generează dashboard final.
+9. FENOMENE:
+- Axa care exagerează → axa pleacă de la zero, sau abaterea e declarată explicit.
+- Tipul de grafic nepotrivit → tipul urmează natura rezultatului.
+- Scala care inventează relații → o singură scală liniară, declarată.
+- Codarea care sugerează fals → o singură dimensiune codată coerent.
+- Agregarea care ascunde variația → arăți distribuția / variația, nu doar media.
+- Eticheta / unitatea / contextul lipsă → fiecare vizual poartă unitate, etichetă și context.
 
-Workbook-ul C13 este suport pentru construirea și verificarea obiectului vizual onest.
+PASUL B:
+În _system/referinte/IDENTITATE-TEHNICA.md adaugă secțiunea:
 
-Dacă există element vizual în Excel, el trebuie să servească:
-- demonstrația formei corecte vs formei înșelătoare
-- verificarea vizualului contra cifrei brute
-- obiectul vizual onest final
+## IDENTITATE_TEHNICA C13 — VIZUALIZAREA
 
-NU compune pagină / dashboard.
-NU construi layout final de raport.
-NU introduce mesaj C15.
-NU introduce livrare C16.
+Construiește secțiunea pe tiparul C12 existent, adaptată la C13:
+- cod: C13
+- slug: Vizualizare
+- output_filename: Date_MASTER-C13-Vizualizare.xlsx
+- title_studiu: C13 · Vizualizare · Trainity
+- topbar_text: Sistemul 02 - Excel · C13 · Vizualizare
+- mobile_topbar: C13 · Vizualizare
+- nav_brand_label: PACK 02 EXCEL · C13
+- footer_text: TRAINITY · C13 VIZUALIZARE · VIZUAL
+- next_cod: C14
+- localStorage_studiu și celelalte câmpuri tehnice conform tiparului C12, adaptate la c13 / Vizualizare.
 
-## CERINȚE PEDAGOGICE
-1. Construiește C13 ca primă construcție T4, dar fără să rupă continuitatea cu T3.
-2. C13 pornește de la rezultate deja produse, nu descoperă rezultate noi.
-3. Fiecare etapă trebuie să aibă clar transformarea de la rezultat invizibil la obiect vizual onest.
-4. Promptul 1 stă în INVESTIGAȚIE: AI propune forma, omul judecă.
-5. Promptul 2 stă în TRANSFORMARE: AI generează vizualul, omul corectează axa, scala și codarea.
-6. Etapa 4 verifică, nu construiește.
-7. Etapa 6 predă către C14 fără să compună pagina.
+Nu inventa o schemă nouă. Copiază schema C12 și adapteaz-o.
 
-## CERINȚE DE COPY
-- Folosește intriga, miza, mantra, AHA, WOW și motto exact în spiritul SPEC-ului locked.
-- Nu folosi cifre business statice în HTML / FILM ca elemente de prezentare.
-- Cifrele se citesc, se demonstrează și se validează live în Excel, nu se preafișează ca rezultat final în pagină.
-- Limbaj: operațional, B2B, clar, polarizant controlat.
-- Nu transforma C13 în lecție de design grafic.
-- Nu moraliza excesiv cu „minciuna”; hook-ul este minciuna de formă, competența este alegerea formei oneste.
+PASUL C:
+Rulează:
 
-## CERINȚE DE GRANIȚĂ
-Respectă strict:
-- C12 = interpretarea / înțelegerea rezultatului.
-- C13 = forma vizuală onestă a unui rezultat deja produs.
-- C14 = organizarea spațială a obiectelor vizuale.
-- C15 = sinteza mesajului esențial.
-- C16 = livrarea raportului decision-ready.
+python3 _system/generatoare/pre_generation_check.py 13
 
-C13 trebuie să se închidă cu handoff-ul:
-"C13 face obiectul adevărat. C14 îl așază în pagină."
+Dacă trece, commit:
 
-## VALIDĂRI OBLIGATORII
-După generare, rulează validările disponibile în repo pentru C13.
+git add _system/arhiva/SISTEM_TRAINITY-versiuni.md _system/referinte/IDENTITATE-TEHNICA.md
+git commit -m "docs(system): register C13 spec and technical identity"
+git push origin main
 
-Minim:
-1. verificare existență fizică livrabile C13 pe `main`
-2. verificare că nu există drift C13 vs patternul construcțiilor anterioare
-3. verificare că Editor-Studiu este sincronizat cu Studiu conform mecanismului existent
-4. verificare că Editor-Video este sincronizat cu Video conform mecanismului existent
-5. verificare că nu ai introdus dashboard / layout / pagină finală în C13
-6. verificare că nu ai modificat fișiere din afara scope-ului
-7. verificare că ai respectat cele 18 step-titles locked
-8. verificare em-dash / en-dash conform regulilor proiectului, dacă există script dedicat
-9. verificare termeni interziși / vocabular, dacă există script dedicat
+Raport final obligatoriu:
+- STATUS
+- fișiere citite
+- fișiere modificate
+- secțiuni adăugate
+- rezultatul pre_generation_check.py 13
+- commit SHA
 
-Dacă `gate_v20.py` sau alt validator nu este pregătit pentru C13, NU modifica fișiere sistem din acest chat. Raportează blocajul exact în `_brain/c13/CLAUDE-TO-BRAIN.md`.
+STATUS așteptat dacă trece:
+SYSTEM_C13_PRE_GENERATION_READY
 
-## FIȘIERE PERMISE
-Ai voie să creezi / modifici:
-- `c13/**`
+Dacă nu trece:
+SYSTEM_C13_PRE_GENERATION_STILL_BLOCKED
+și explică exact ce mai lipsește.
+```
+
+## MANDAT CĂTRE CLAUDE C13
+Nu încerca din nou generarea C13 până când taskul SYSTEM de mai sus nu este executat și raportat cu status:
+
+`SYSTEM_C13_PRE_GENERATION_READY`
+
+La următorul sync C13, dacă acest status nu există, răspunde cu:
+
+`WAITING_FOR_SYSTEM_C13_PRE_GENERATION_READY`
+
+## FIȘIERE PERMISE C13
+Până la rezolvarea SYSTEM, Claude C13 poate scrie doar în:
 - `_brain/c13/CLAUDE-TO-BRAIN.md`
 
-## FIȘIERE INTERZISE
-Nu modifica:
-- `CLAUDE.md`
-- `README.md`
-- `STARE-CURENTA.md`
-- `index.html`
-- `_system/**`
-- `governance/**`
-- `constructii.xlsx`
-- `gate_v20.py`
-- `audit_sync.py`
-- `COMENZI.yaml`
-- `c01/**` până la `c12/**`
-- `c14/**` până la `c20/**`
-- orice fișier din alte foldere `_brain/cXX`
-
-## RAPORT FINAL OBLIGATORIU
-Scrie raportul final în:
-
-`_brain/c13/CLAUDE-TO-BRAIN.md`
-
-Raportul trebuie să conțină:
-1. STATUS
-2. livrabile generate
-3. fișiere modificate
-4. fișiere neatinse explicit
-5. cum ai păstrat C13 ca obiect vizual onest, nu dashboard
-6. validări rulate
-7. rezultate validări
-8. blocaje, dacă există
-9. commit SHA
-10. verdict final
-
-## STATUS AȘTEPTAT
-Dacă totul trece:
-
-`CLAUDE_C13_GENERATED_READY_FOR_BRAIN_AUDIT`
-
-Dacă există blocaj tehnic:
-
-`CLAUDE_C13_GENERATION_BLOCKED`
+## STATUS AȘTEPTAT C13
+`WAITING_FOR_SYSTEM_C13_PRE_GENERATION_READY`
 
 ## CERERE DIRECTĂ
-Generează C13 complet, controlat, conform SPEC-ului înghețat și blueprint-ului aprobat. Fără dashboard. Fără modificări sistem.
+Așteaptă înregistrarea SYSTEM. Nu genera C13 până când gate-ul B1 nu este deblocat.
