@@ -1,12 +1,14 @@
 # BRAIN -> CLAUDE C15
 
 ## STATUS
-GENERATION_BLUEPRINT_MANDATE_READY
+EXECUTE_GENERATION_BLUEPRINT_NOW
 
 ## CONTEXT
 C15 SINTETIZAREA. T4 RAPORTARE. CUVANT LOCKED: SINTEZA. VERB LOCKED: SINTETIZEZ.
 
 SPEC 11-slot C15 este inghetat conceptual v1.0.
+
+Atentie: mandatul anterior de blueprint a fost scris, dar la ultimul sync raportul CLAUDE-TO-BRAIN ramasese raportul vechi de freeze conceptual. Acum executa mandatul de blueprint si suprascrie raportul vechi cu raportul cerut mai jos.
 
 C15 este constructia de extragere si formulare a mesajului esential al raportului.
 
@@ -53,7 +55,7 @@ Un director nu citeste toata pagina. O deschide si intreaba: si ce-i cu asta? Ar
 SINTETIZEZ.
 
 ## MANDAT
-Claude C15 executa exclusiv pregatirea conceptuala pentru generare C15, NU generarea efectiva.
+Claude C15 executa acum exclusiv pregatirea conceptuala pentru generare C15, NU generarea efectiva.
 
 Obiectiv:
 1. construieste SEED-ul de generare C15;
@@ -101,7 +103,8 @@ Acceptabil doar daca:
 - pastrezi output-ul C15 ca mesaj esential / propozitie;
 - nu impingi C15 spre C14, C16 sau T3;
 - nu generezi artefacte;
-- raportul ramane pregatire conceptuala pentru generare, nu executie.
+- raportul ramane pregatire conceptuala pentru generare, nu executie;
+- CLAUDE-TO-BRAIN.md nu mai ramane raport de freeze vechi, ci devine raportul de blueprint cerut aici.
 
 ## RAPORT
 Scrie raportul in _brain/c15/CLAUDE-TO-BRAIN.md si apoi commit descriptiv pe main + push.
