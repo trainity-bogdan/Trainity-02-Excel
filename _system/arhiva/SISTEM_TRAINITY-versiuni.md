@@ -2745,7 +2745,72 @@ ETAPA 6 CONFIRMARE
 ### GRANIȚE
 C12 = interpretarea rezultatului. C13 = forma vizuală onestă a unui rezultat deja produs. C14 = organizarea spațială (pagină / dashboard). C15 = sinteza mesajului. C16 = livrarea decision-ready. Handoff: "C13 face obiectul adevărat. C14 îl așază în pagină."
 
-## SPEC C14 - DASHBOARD EXECUTIV   [Status: NEGENERAT]
+## SPEC C14 - COMPUNEREA   [Status: INGHETAT 08.06.2026]
+
+Axă: ORGANIZAREA SPAȚIALĂ A ELEMENTELOR VIZUALE. Pilon T4: T4 consumă răspunsul produs de T3, nu îl naște.
+Decizie locked: C14 = organizarea spațială a mai multor obiecte vizuale într-o pagină cu ierarhie. Dashboard = substrat tehnic posibil, NICIODATĂ identitate conceptuală. Numele vechi "DASHBOARD EXECUTIV" e SUPERSEDAT (NOMENCLATURA-LOCKED-SCARA V70: C14 COMPUNEREA, cuvânt COMPOZIȚIE, verb COMPUN).
+Întrebarea-ax: "Ce vede ochiul întâi?"
+
+### 1. INTRIGA
+"Aceleași grafice corecte pot produce decizii diferite prin așezare."
+
+### 2. PROBLEMELE
+- pagina nu are un "întâi": ochiul nu știe unde să înceapă, decizia întârzie
+- esențialul stă la fel de tare ca detaliul: nicio ierarhie, totul concurează
+- ordinea de pe pagină este ordinea de producție, nu ordinea pentru decizie
+- proximitate greșită: lucruri legate stau departe, nelegate stau lipite
+- pagina prost compusă pare profesională și eșuează silențios
+
+### 3. MIZA
+"Eșecul silențios al paginii prost compuse: o decizie lentă sau greșită luată pe o pagină care pare completă, iar vina cade pe cititor, nu pe autor."
+
+### 4. MANTRA / AHA
+MANTRA: "Compun privirea, nu pagina."
+AHA: "Aceleași grafice, altă ordine, altă decizie."
+
+### 5. MOTTO
+"Ce vede ochiul întâi schimbă decizia."
+
+### 6. STEP-TITLES (11, conceptual LOCKED de BRAIN; scaffold HTML mapează la generare)
+1. Pagina fără "întâi"
+2. Primul punct de contact al ochiului
+3. Poziția ca semnal de importanță
+4. Focarul vizual
+5. Traseul de citire
+6. Retrogradarea elementelor secundare
+7. Ierarhia vizuală pentru decizie
+8. Gruparea elementelor legate
+9. Spațiul gol ca instrument de ierarhie
+10. Compunerea guvernată de răspunsul venit din T3
+11. Testul celui de-al doilea ochi
+OUTPUT C14: pagină de raportare coerentă, cu ordine vizuală, ierarhie și flux, pregătită pentru extragerea mesajului esențial în C15.
+NOTĂ TEHNICĂ 11 vs 18: SPEC-ul conceptual C14 rămâne la 11 step-titles (decizie BRAIN). Cele 18 din mesajul generic pre_generation_check sunt text-instrucțiune, NU un check hard; B1 nu numără step-titles. La generare, scaffold-ul HTML (etape) mapează cele 11 fără a modifica SPEC-ul.
+
+### 7. PROMPTURI Copilot (2)
+- Promptul 1, ierarhie și ordine de citire: dă-i AI-ului obiectele vizuale deja produse și cere-i să propună ce vede ochiul întâi, ce după și ce se retrogradează. Nu redesenează obiectele, nu formulează mesajul.
+- Promptul 2, compoziția paginii: cere-i o variantă de poziționare, grupare, spațiu și focar pentru pagina de raport, pe care o corectezi după criteriul "se vede întâi ce decide", nu după estetică. Nu adaugă concluzie, nu pregătește livrarea.
+
+### 8. FINAL-LABELS (8)
+- Aceleași obiecte, altă ordine, altă decizie.
+- Poziția pe pagină este un argument despre importanță.
+- O pagină are un singur focar.
+- Ce vede ochiul întâi guvernează decizia.
+- Ierarhia se face cu mărime, poziție, contrast și spațiu.
+- Proximitatea spune adevărul despre relații.
+- Spațiul gol este instrument, nu lipsă.
+- Compoziția servește răspunsul venit din T3, nu estetica.
+
+### 9. FENOMENE / OPERATII (6 perechi: dezordine -> compoziție pentru decizie)
+- Pagina-zid fără focar -> stabilești un singur focar, atins primul.
+- Esențialul îngropat în colț -> esențialul urcă în primul punct de contact al ochiului.
+- Ordinea de producție pe pagină -> ordinea de citire guvernată de răspuns.
+- Greutate egală la lucruri inegale -> ierarhie prin mărime, poziție, contrast, spațiu.
+- Proximitate care minte despre relații -> grupare spațială a obiectelor legate.
+- Horror vacui, umpli orice gol -> spațiul gol folosit ca instrument de ierarhie.
+
+### GRANIȚE
+C13 = obiectul vizual onest (atomul). C14 = organizarea spațială a mai multor obiecte într-o pagină cu ierarhie (ansamblul). C15 = sinteza mesajului esențial. C16 = livrarea decision-ready. Handoff: "C13 face obiectul adevărat. C14 îl așază în pagină. C14 predă pagina coerentă către C15." C14 NU desenează obiectul (C13), NU formulează mesajul (C15), NU livrează raportul (C16), NU face estetică, NU se autorizează ca dashboard.
+
 ## SPEC C15 - SINTETIZAREA   [Status: NEGENERAT]
 > Nume aliniat la nomenclatura LOCKED V70 (stale pre-V70: "POVESTEA DATELOR"). SPEC 11-slot CONCEPTUAL v1.0 = freeze conceptual in governance/TRAINITY_ARCHITECTURE_BIBLE.md sectiunea T4 SPEC C15 (autoritate conceptuala) + doc 13. Acest registru de generare ramane NEGENERAT: elementele de generare (SLUG, PROBLEMELE, FENOMENE, 18 STEP-TITLES, 2 prompturi) NU sunt definite; se autoreaza la SEED-ul de generare (freeze conceptual != generare).
 ## SPEC C16 - LIVRAREA   [Status: INGHETAT 08.06.2026]
