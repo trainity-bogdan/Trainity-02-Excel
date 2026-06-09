@@ -1,6 +1,36 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
+GENERARE_IN_PROGRES · Date_MASTER-C16 generat+validat (1/5 livrabile gate); 4 HTML = faza următoare
+
+## RAPORT GENERARE C16 (mandat C16-GENERARE, 2026-06-08) - IN PROGRES
+Lucrez pe main, fără branch. Generare prin COPY+MODIFY din c01, tipar build-scripts C13 (precedentul T4 complet).
+
+### Mediu
+- openpyxl LIPSEA în mediu -> instalat (pip) pentru build/citire Date_MASTER.
+
+### Artefacte generate (checkpoint)
+- c16/Date_MASTER-C16.xlsx: GENERAT + validat. Chain din c14/Date_MASTER-C14.xlsx (C15 pe HOLD, vezi C15-gap). Foaie 'Livrare' = foaie-raport de decizie (decizia cerută, cadru decizie/risc/concluzie/pas următor peste agregat live, ce intră/anexă, verificare self-standing, 6 reguli, handoff la C17). Suma conservată 7986019.38 (R-V02.14, delta 0.0). Cifre live prin SUMIFS (R-V02.15).
+- c16/build_date_master_c16.py: generatorul (reproducibil).
+
+### Validare
+- gate_v20 16 c16 c01: DATA-CONTINUITY/schemă/sumă PASS pe Date_MASTER. Gate raportează "PASS" cu 1/5 livrabile - NU e completare reală (gate nu eșuează pe HTML lipsă, doar le listează). Completarea reală = toate 5 + gate PASS.
+- pre_generation_check 16: 3/3 PASS (neschimbat).
+
+### DECIZII DE ALINIERE (aplicate; gate = autoritate B2)
+1. NUME FIȘIERE: gate derivă din nume_slug='Livrare' -> "HTML-Studiu-Excel-16-Livrare.html" etc. Mandatul scrie "Livrarea". Pentru B2 PASS folosesc forma gate ("...-16-Livrare.html"). Dacă BRAIN vrea "Livrarea", trebuie schimbat nume_slug în IDENTITATE_TEHNICA + gate (task SYSTEM), altfel B2 nu trece.
+2. SET ARTEFACTE: gate B2 cere Date_MASTER-C16.xlsx + 4 HTML. Mandatul listează FILM/STUDIU/VIDEO ca .md (precedent C13: FILM .docx). Voi produce: 4 HTML + Date_MASTER (gate) + FILM/STUDIU/VIDEO (mandat). De confirmat formatul docs (.md vs .docx).
+
+### C15-GAP (notat)
+Date_MASTER-C16 chainuit din C14 (foi Vizualizare+Compunere), FĂRĂ foaia Sintetizare (C15 negenerat, HOLD). Suma conservată identic. La generarea C15, C16 se re-chainuiește ca să moștenească Sintetizare. Nu blochează gate (verifică schemă+sumă+nomenclatoare, nu lanțul de foi-suport).
+
+### URMĂTOAREA FAZĂ (4 HTML, build amplu)
+build_html_studiu_c16.py + build_html_video_c16.py + build_html_editor_studiu_c16.py + build_html_editor_video_c16.py (tipar C13), cu corpul C16 autorat din SPEC_NARATIV (18 step-titles, 2 prompturi, 8 final-labels, fenomene, granițe C12/C14/C15/C17). Apoi FILM/STUDIU/VIDEO. Apoi gate_v20 16 c16 c01 cu toate 5 livrabile -> B2 PASS real. Build mare, iterativ (HTML-Studiu C13 = 40KB script / ~2400 linii HTML).
+
+### STARE
+GENERARE_IN_PROGRES. Fundație (Date_MASTER) gata+validată. Cele 4 HTML + docs = faza următoare. Niciun blocaj dur. Fără CERERE SYSTEM (nume_slug se ajustează de SYSTEM doar dacă BRAIN vrea "Livrarea").
+
+## STATUS ANTERIOR
 FREEZE_B1_DONE · SPEC_NARATIV_MA_REVIZUIT
 
 ## REVIZIE MINORĂ M-A (mandat C16-MA-REVIZIE-MINORA, 2026-06-08)
