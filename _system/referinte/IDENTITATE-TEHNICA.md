@@ -450,7 +450,7 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - title_video: C16 · LIVRARE · BROADCAST
 - localStorage_studiu: trainity_c16_study_v1
 - localStorage_video: trainity_c16_video_v1
-- nota_hero: PROVIZORIU — nume_hero_caps (MIZĂ HERO descriptor "DECIZIA GATA") derivat din axa locked (raport decision-ready; mantra "decizie gata de luat"; motto "raportul care decide"); NU e înghețat explicit ca descriptor de 2 cuvinte în SPEC-ul C16. Alternative: "DECIZIA PREDATĂ", "RAPORTUL-DECIZIE". De confirmat/autorat de BRAIN înainte de generare (ca "FORMA ADEVĂRATĂ" C13 / "ORDINEA PRIVIRII" C14).
+- nota_hero: BRAIN-CONFIRMED 08.06.2026. nume_hero_caps (MIZĂ HERO descriptor "DECIZIA GATA") confirmat de BRAIN C16: exprimă C16 ca LIVRARE, susține axa raport decision-ready, nu confundă cu C15 (sinteză) / C14 (layout) / C17 (sistematizare), nu sună logistic, compatibil cu "raportul care decide". Nu mai e provizoriu.
 - nota_treapta: C16 = ultima din T4 RAPORTARE; next (C17 SISTEMATIZAREA) = prima din T5 AUTONOMIE, de aici next_label TREAPTA 5.
 
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
