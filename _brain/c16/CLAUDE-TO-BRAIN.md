@@ -1,7 +1,18 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-GENERARE_IN_PROGRES · Date_MASTER-C16 generat+validat (1/5 livrabile gate); 4 HTML = faza următoare
+GENERARE_IN_PROGRES · 3/5 gate livrabile (Date_MASTER + HTML-Studiu + HTML-Editor-Studiu, toate gate PASS); rămân HTML-Video + HTML-Editor-Video + docs FILM/STUDIU/VIDEO
+
+## PROGRES GENERARE (faza 2, increment 2026-06-08)
+3/5 livrabile gate generate, toate trec gate_v20 16 c16 c01:
+- Date_MASTER-C16.xlsx (foaie Livrare, sumă conservată) [48903e9 anterior, build]
+- HTML-Studiu-Excel-16-Livrare.html: 2436 linii, 101KB, body C16 LIVRARE autorat (18 step-titles din SPEC narativ, 2 prompturi Copilot, 8 final-labels, 6 fenomene raport->decizie, hero DECIZIA GATA, mantra/AHA/motto, granițe vs C12/C14/C15/C17). build_html_studiu_c16.py. gate PASS. [48903e9]
+- HTML-Editor-Studiu-Excel-16-Livrare.html: companion 1:1 (body verbatim + panou editor #editor-companion-head/.ech identic cu c14 + shell editor c14, patch C14->C16). build_html_editor_studiu_c16.py. gate PASS. [941ea54]
+RĂMÂN (faza video + docs):
+- HTML-Video-Excel-16-Livrare.html + HTML-Editor-Video-Excel-16-Livrare.html (build tip C13 ~18KB, format broadcast, STAGES/PROMPTS/BODY C16; exec-stage = placeholdere, C16 nu are assets reale - imaginile vin extern de la ARHITECT per R-V49).
+- FILM/STUDIU/VIDEO docs (FILM .docx = standard repo C13).
+- gate_v20 final cu toate 5 livrabile = B2 PASS complet.
+COPY+MODIFY din c14 (construcția completă cea mai recentă; C15 pe HOLD). Naming gate-aligned (Livrare). C15-GAP = dependență pipeline (re-chain la generarea C15).
 
 ## RAPORT GENERARE C16 (mandat C16-GENERARE, 2026-06-08) - IN PROGRES
 Lucrez pe main, fără branch. Generare prin COPY+MODIFY din c01, tipar build-scripts C13 (precedentul T4 complet).
