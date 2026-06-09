@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C16
 
 ## STATUS
-MANDAT_BRAIN_ACTIV_C16_GENERARE
+MANDAT_BRAIN_ACTIV_C16_GENERARE_FAZA_2
 
 ## CONTEXT
 C16 = LIVRAREA
@@ -10,35 +10,37 @@ CUVANT LOCKED = LIVRARE
 VERB LOCKED = LIVREZ
 
 ## STATUS CURENT
-C16 = READY_FOR_GENERATION FINAL.
-SPEC_NARATIV_MA_REVIZUIT este aprobat si inghetat.
-Hero descriptor "DECIZIA GATA" este BRAIN-CONFIRMED.
-pre_generation_check 16 = 3/3 PASS.
-B2 SYSTEM/gate = READY_FOR_GENERATION.
+C16 = GENERARE_IN_PROGRES.
+Date_MASTER-C16.xlsx este generat si validat.
+1/5 livrabile gate sunt gata.
+Raman 4 HTML + documentele FILM/STUDIU/VIDEO + gate final.
 
-## MANDAT C16-GENERARE
+## DECIZIE BRAIN
+BRAIN accepta alinierea la gate:
+- foloseste forma de fisier derivata din gate: Livrare
+- NU cere schimbare SYSTEM catre Livrarea
+- NU schimba nume_slug
+
+## MANDAT C16-GENERARE-FAZA-2
 
 Claude C16, la urmatorul sync:
 
-1. Lucreaza exclusiv pe main, fara branch-uri.
+1. Continua generarea C16 de unde ai ramas.
 
-2. Citeste strict:
-   - _brain/c16/CHAT-CONTEXT.md
-   - _brain/c16/BRAIN-TO-CLAUDE.md
-   - _brain/c16/CLAUDE-TO-BRAIN.md
-   - fisierele C16 permise si necesare pentru generare
-   - sursele COPY+MODIFY din c01, doar cat este necesar pentru generarea C16
+2. Pastreaza artefactele deja generate:
+   - c16/Date_MASTER-C16.xlsx
+   - c16/build_date_master_c16.py
 
-3. Genereaza C16 prin COPY+MODIFY din c01, conform standardului curent.
+3. Genereaza artefactele gate cu forma acceptata de BRAIN: Livrare
+   - c16/HTML-Studiu-Excel-16-Livrare.html
+   - c16/HTML-Editor-Studiu-Excel-16-Livrare.html
+   - c16/HTML-Video-Excel-16-Livrare.html
+   - c16/HTML-Editor-Video-Excel-16-Livrare.html
 
-4. Artefacte cerute:
-   - c16/HTML-Studiu-Excel-16-Livrarea.html
-   - c16/HTML-Editor-Studiu-Excel-16-Livrarea.html
-   - c16/HTML-Video-Excel-16-Livrarea.html
-   - c16/HTML-Editor-Video-Excel-16-Livrarea.html
-   - c16/FILM-Excel-16-Livrarea.md
-   - c16/STUDIU-Excel-16-Livrarea.md
-   - c16/VIDEO-Excel-16-Livrarea.md
+4. Genereaza si documentele cerute de mandat, aliniate la standardul repo:
+   - FILM / STUDIU / VIDEO pentru C16
+   - foloseste formatul standard deja folosit in constructiile T4 precedente
+   - daca standardul real este .docx pentru FILM, foloseste standardul repo, nu presupunerea .md din mandatul anterior
 
 5. Respecta obligatoriu:
    - C16 = foaie-raport de decizie
@@ -58,18 +60,19 @@ Claude C16, la urmatorul sync:
    - granitele vs C12, C14, C15, C17
 
 7. Respecta dependenta de pipeline:
-   - input C16 = Date_MASTER-C15-Sintetizare.xlsx, daca exista in flux
+   - C16 se va re-chainui dupa C15 cand C15 va fi generat
+   - pana atunci pastreaza nota C15-GAP ca dependenta de pipeline, nu ca blocaj C16
    - nu inventa date numerice in HTML/FILM
    - cifrele business raman in Excel
 
-8. Dupa generare ruleaza validarile relevante:
+8. Ruleaza validarile relevante:
    - pre_generation_check 16
    - gate_v20 16 c16 c01
    - audit_sync, daca este standard in flux
 
 9. Nu modifica:
    - alte constructii cNN/**
-   - fisiere sistem, cu exceptia cazului in care validarea cere explicit si opreste pentru CERERE SYSTEM
+   - fisiere sistem
    - nomenclatura locked
    - continutul conceptual aprobat
 
@@ -85,4 +88,4 @@ Scrie raportul in _brain/c16/CLAUDE-TO-BRAIN.md cu:
 - blocaje ramase, daca exista
 
 ## REZULTAT ASTEPTAT
-C16_GENERAT si gate_v20 16 c16 c01 = B2 PASS.
+C16_GENERAT si gate_v20 16 c16 c01 = B2 PASS real, cu toate livrabilele gate prezente.
