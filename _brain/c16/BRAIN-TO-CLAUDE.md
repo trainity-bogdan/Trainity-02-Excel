@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C16
 
 ## STATUS
-MANDAT_BRAIN_ACTIV_C16_GENERARE_FAZA_2
+MANDAT_BRAIN_ACTIV_C16_GENERARE_FINALA
 
 ## CONTEXT
 C16 = LIVRAREA
@@ -11,38 +11,38 @@ VERB LOCKED = LIVREZ
 
 ## STATUS CURENT
 C16 = GENERARE_IN_PROGRES.
-Date_MASTER-C16.xlsx este generat si validat.
-1/5 livrabile gate sunt gata.
-Raman 4 HTML + documentele FILM/STUDIU/VIDEO + gate final.
+3/5 livrabile gate sunt generate si trec gate:
+- c16/Date_MASTER-C16.xlsx
+- c16/HTML-Studiu-Excel-16-Livrare.html
+- c16/HTML-Editor-Studiu-Excel-16-Livrare.html
+
+Raman:
+- c16/HTML-Video-Excel-16-Livrare.html
+- c16/HTML-Editor-Video-Excel-16-Livrare.html
+- documentele FILM / STUDIU / VIDEO conform standardului repo
+- gate final cu toate livrabilele
 
 ## DECIZIE BRAIN
-BRAIN accepta alinierea la gate:
-- foloseste forma de fisier derivata din gate: Livrare
-- NU cere schimbare SYSTEM catre Livrarea
-- NU schimba nume_slug
+BRAIN confirma:
+- continua fara redeschidere conceptuala
+- alinierea la gate ramane: Livrare
+- NU se cere schimbare SYSTEM catre Livrarea
+- C15-GAP ramane dependenta de pipeline, nu blocaj C16
 
-## MANDAT C16-GENERARE-FAZA-2
+## MANDAT C16-GENERARE-FINALA
 
 Claude C16, la urmatorul sync:
 
-1. Continua generarea C16 de unde ai ramas.
+1. Continua generarea C16 din punctul curent si inchide faza finala.
 
-2. Pastreaza artefactele deja generate:
-   - c16/Date_MASTER-C16.xlsx
-   - c16/build_date_master_c16.py
+2. Pastreaza artefactele deja generate si validate.
 
-3. Genereaza artefactele gate cu forma acceptata de BRAIN: Livrare
-   - c16/HTML-Studiu-Excel-16-Livrare.html
-   - c16/HTML-Editor-Studiu-Excel-16-Livrare.html
+3. Genereaza artefactele ramase:
    - c16/HTML-Video-Excel-16-Livrare.html
    - c16/HTML-Editor-Video-Excel-16-Livrare.html
+   - documentele FILM / STUDIU / VIDEO pentru C16, in formatul standard real al repo-ului
 
-4. Genereaza si documentele cerute de mandat, aliniate la standardul repo:
-   - FILM / STUDIU / VIDEO pentru C16
-   - foloseste formatul standard deja folosit in constructiile T4 precedente
-   - daca standardul real este .docx pentru FILM, foloseste standardul repo, nu presupunerea .md din mandatul anterior
-
-5. Respecta obligatoriu:
+4. Respecta obligatoriu:
    - C16 = foaie-raport de decizie
    - C16 nu sintetizeaza, C15 face asta
    - C16 nu face layout vizual general, C14 face asta
@@ -52,31 +52,30 @@ Claude C16, la urmatorul sync:
    - hero descriptor: "DECIZIA GATA"
    - final-label ancora: "Un raport care nu produce o decizie nu e livrat, e doar trimis."
 
-6. Respecta SPEC_NARATIV_MA_REVIZUIT:
+5. Respecta SPEC_NARATIV_MA_REVIZUIT:
    - 18 step-titles
    - 2 prompturi Copilot
    - 8 final-labels
    - fenomene / operatii mapate pe asset
    - granitele vs C12, C14, C15, C17
 
-7. Respecta dependenta de pipeline:
-   - C16 se va re-chainui dupa C15 cand C15 va fi generat
-   - pana atunci pastreaza nota C15-GAP ca dependenta de pipeline, nu ca blocaj C16
+6. Respecta regulile de date:
    - nu inventa date numerice in HTML/FILM
    - cifrele business raman in Excel
+   - C15-GAP se pastreaza doar ca nota de pipeline
 
-8. Ruleaza validarile relevante:
+7. Ruleaza validarile finale:
    - pre_generation_check 16
    - gate_v20 16 c16 c01
    - audit_sync, daca este standard in flux
 
-9. Nu modifica:
+8. Nu modifica:
    - alte constructii cNN/**
    - fisiere sistem
    - nomenclatura locked
    - continutul conceptual aprobat
 
-10. Daca apare blocaj SYSTEM, scrie CERERE SYSTEM in _brain/c16/CLAUDE-TO-BRAIN.md si opreste executia.
+9. Daca apare blocaj SYSTEM real, scrie CERERE SYSTEM in _brain/c16/CLAUDE-TO-BRAIN.md si opreste executia.
 
 ## RAPORT FINAL
 Scrie raportul in _brain/c16/CLAUDE-TO-BRAIN.md cu:
@@ -88,4 +87,4 @@ Scrie raportul in _brain/c16/CLAUDE-TO-BRAIN.md cu:
 - blocaje ramase, daca exista
 
 ## REZULTAT ASTEPTAT
-C16_GENERAT si gate_v20 16 c16 c01 = B2 PASS real, cu toate livrabilele gate prezente.
+C16_GENERAT_COMPLET si gate_v20 16 c16 c01 = B2 PASS real, cu toate livrabilele gate prezente.
