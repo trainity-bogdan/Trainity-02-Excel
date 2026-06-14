@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_SLICE_3_HTML_VIDEO
+MANDAT_SLICE_4_FILM_ASSETS
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,43 +13,50 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-Slice 2 este acceptat:
+Slice 3 este acceptat:
 
-`C19_SLICE_2_HTML_STUDIU_ACCEPTAT`
+`C19_SLICE_3_HTML_VIDEO_ACCEPTAT`
 
 C19 are acum:
 
 - Slice 1 Date_MASTER acceptat
 - Slice 2 HTML-Studiu + HTML-Editor-Studiu acceptat
+- Slice 3 HTML-Video + HTML-Editor-Video acceptat
 
 Status release rămâne:
 
 `DRAFT_NOT_RELEASE_COMPLETE`
 
+Motiv: lipsesc FILM + assets finale / imagini finale GUVERNARE.
+
 ## MANDAT
 
-Continuă generarea C19 cu Slice 3.
+Continuă generarea C19 cu Slice 4.
 
 Generează:
 
-1. HTML-Video C19
-2. HTML-Editor-Video C19
+1. FILM C19
+2. assets C19, hero + 6 exec-stage
 
-Nu genera încă:
+Dacă imaginile finale GUVERNARE lipsesc, generează assets fallback DRAFT / placeholder și marchează explicit.
 
-- FILM final
-- release complet
+Nu declara release complet dacă imaginile sunt fallback / placeholder / clone / lipsesc.
 
 ### 1. Sursă de adevăr
 
-Folosește `c19/Date_MASTER-C19.xlsx` și HTML-Studiu C19 ca surse de adevăr.
+Folosește ca surse de adevăr:
 
-Video trebuie să explice clar:
+- `c19/Date_MASTER-C19.xlsx`
+- `c19/HTML-Studiu-Excel-19-Guvernare.html`
+- `c19/HTML-Video-Excel-19-Guvernare.html`
+
+FILM trebuie să explice clar:
 
 - `STATUS=OPRIT` este intenționat în demonstrație
 - `_GUVERNARE` prinde anomaliile pe care C18 le-ar fi lăsat să curgă tacit
 - C19 nu repară motorul, ci îl ține corect prin reguli
 - `_GUVERNARE` blochează rezultatul corupt prin fail-safe
+- C19 = CONTROL, nu MOTOR, nu ownership
 
 ### 2. Identitate locked
 
@@ -66,9 +73,9 @@ Păstrează locked:
 - AHA: `Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește.`
 - STEP 5: `Excepția și oprirea controlată`
 
-### 3. Blueprint obligatoriu în Video
+### 3. Blueprint obligatoriu în FILM
 
-HTML-Video trebuie să reflecte cele 6 etape:
+FILM trebuie să reflecte cele 6 etape:
 
 1. `Sistemul care merge doar cât te uiți`
 2. `Ce poate să devieze previzibil`
@@ -77,13 +84,13 @@ HTML-Video trebuie să reflecte cele 6 etape:
 5. `Excepția și oprirea controlată`
 6. `Testul ochilor închiși`
 
-Arcul video obligatoriu:
+Arcul FILM obligatoriu:
 
 input greșit -> regulă -> prag / stare -> excepție -> oprire controlată -> testul ochilor închiși
 
 ### 4. Gărzi conceptuale obligatorii
 
-Păstrează în Video:
+Păstrează în FILM și assets:
 
 - C18 = rulează
 - C19 = se ține corect
@@ -106,42 +113,61 @@ C19 NU este:
 Etapa 4 = semnal care schimbă starea, nu dashboard.
 Etapa 5 = oprire automată, nu intervenție umană.
 
-### 5. Imagini
+### 5. Assets / imagini
 
-Dacă imaginile finale GUVERNARE lipsesc, folosește fallback DRAFT.
+Dacă imaginile finale GUVERNARE lipsesc:
 
-Obligație:
-
+- folosește fallback DRAFT / placeholder
 - marchează explicit `DRAFT_IMAGINI_FALLBACK`
+- NU declara hash imagini PASS
 - NU declara release complet
-- NU declara hash imagini PASS dacă imaginile sunt fallback / clone / placeholder
 
-### 6. Validări Slice 3
+Dacă imaginile finale există:
 
-Rulează și raportează ce este aplicabil pentru Slice 3:
+- procesează watermark, dacă este cazul
+- verifică hash diferit de c01
+- raportează PASS doar dacă sunt finale și diferite de c01
 
-- existență HTML-Video C19
-- existență HTML-Editor-Video C19
-- identitate C19 locked prezentă în Video
-- cele 6 etape prezente
-- arcul video prezent
+### 6. Validări Slice 4
+
+Rulează și raportează ce este aplicabil pentru Slice 4:
+
+- existență FILM C19
+- existență assets C19
+- identitate C19 locked prezentă în FILM
+- cele 6 etape prezente în FILM
+- arcul FILM prezent
 - Etapa 4 = semnal care schimbă starea, nu dashboard
 - Etapa 5 = oprire automată, nu intervenție umană
-- zero em dash / en dash în Video
+- zero em dash / en dash în FILM / assets text
 - verificare fallback imagini
-- editor video fără leftover C17/C18
+- verificare fără leftover C17/C18
 
-Nu rula `gate_v20.py 19` ca PASS complet dacă lipsesc artefacte. Dacă îl rulezi parțial sau nu îl rulezi, marchează explicit.
+### 7. Validări finale după Slice 4
 
-### 7. Interdicții
+Dacă toate cele 7 artefacte există, rulează și raportează:
+
+- `gate_v20.py 19 ...`
+- `audit_sync.py`
+- verificare zero em dash / en dash pe toate artefactele C19
+- verificare `_GUVERNARE` distinct de `_AUTOMATIZARE`
+- verificare `STATUS` OK / ATENȚIE / OPRIT
+- verificare Data Validation
+- verificare fail-safe
+- verificare R-V02.14 suma conservată
+- verificare imgclone / hash diferit de c01 doar dacă imaginile sunt finale
+
+Dacă imaginile sunt fallback, poți raporta gate / audit ca DRAFT sau parțial, dar NU declara release complet.
+
+### 8. Interdicții
 
 NU modifica fișiere sistem.
 NU modifica alte construcții.
 NU modifica alte foldere `_brain/**`.
-NU declara release complet.
-NU considera Slice 3 executat fără cele două HTML-uri video.
+NU declara release complet dacă imaginile nu sunt finale.
+NU considera C19 final dacă FILM sau assets lipsesc.
 
-### 8. Raport
+### 9. Raport
 
 Scrie raportul exclusiv în:
 
@@ -153,17 +179,17 @@ Format raport:
 
 ## STATUS
 
-## SLICE 3 ARTEFACTE GENERATE
+## SLICE 4 ARTEFACTE GENERATE
 
-## SURSA VIDEO
+## SURSA FILM / ASSETS
 
-## IDENTITATE C19 ÎN VIDEO
-
-## DATE_MASTER FOLOSIT
+## IDENTITATE C19 ÎN FILM
 
 ## STATUS IMAGINI
 
-## VALIDĂRI SLICE 3
+## VALIDĂRI SLICE 4
+
+## VALIDĂRI FINALE RULATE
 
 ## VALIDĂRI NERULATE / PROBLEME
 
@@ -175,7 +201,7 @@ Format raport:
 
 ## COMMIT
 
-Fă commit descriptiv pe main după Slice 3.
+Fă commit descriptiv pe main după Slice 4.
 
 ## RAPORT
-Aștept raport Slice 3 C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept raport Slice 4 C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
