@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-C20_HOLD_FINAL
+C20_HOLD_STRICT_FINAL
 
 ## VERDICT BRAIN
 SPEC C20 este validat pentru FREEZE FINAL la nivel C20.
@@ -34,8 +34,9 @@ TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
 ## MANDAT DIRECT
-Claude, ramai in HOLD.
-Nu mai produce raport nou in C20 decat daca apare mandat explicit nou.
+Claude, ramai in HOLD strict.
+La sync, nu produce raport nou daca nu exista mandat explicit nou.
+Raspunde doar cu mentinerea starii C20_HOLD_STRICT_FINAL, daca este nevoie.
 Nu redeschide SPEC.
 Nu modifica sloturile.
 Nu genera blueprint.
