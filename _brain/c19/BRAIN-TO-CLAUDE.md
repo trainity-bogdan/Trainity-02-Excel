@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-GO_GENERARE_EFECTIVA_C19
+MANDAT_SLICE_2_HTML_STUDIU
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,72 +13,49 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-Status real după ultimul sync:
+Slice 1 este acceptat:
 
-`C19_B1_DEBLOCAT_READY_TO_GENERATE`
+`C19_SLICE_1_DATE_MASTER_ACCEPTAT`
 
-B1 este raportat deblocat. Generarea efectivă NU a început încă.
+Aprobate în Slice 1:
 
-Acesta este GO explicit pentru generarea efectivă C19.
-
-## RIDICARE EXPLICITĂ INTERDICȚII OPERAȚIONALE
-
-Pentru acest mandat, ridic explicit interdicțiile necesare generării C19.
-
-AI VOIE să creezi / modifici:
-
-- folder `c19/`
-- fișiere HTML C19
 - `Date_MASTER-C19.xlsx`
-- FILM C19
-- build / scripturi locale necesare C19, doar în limita modelului existent
-- `c19/assets/**`
-- `_brain/c19/CLAUDE-TO-BRAIN.md`
-
-NU AI VOIE să modifici:
-
-- fișiere sistem (`CLAUDE.md`, `README.md`, `STARE-CURENTA.md`, `index.html`, `_system/**`, `governance/**`, `constructii.xlsx`, `gate_v20.py`, `audit_sync.py`, `COMENZI.yaml`)
-- alte construcții `cNN/**`
-- alte foldere `_brain/cYY/**`
+- `_GUVERNARE`
+- `STATUS` OK / ATENȚIE / OPRIT
+- Data Validation
+- praguri vii
+- listă de excepții
+- fail-safe automat
+- conservarea sumei față de C18
+- status DRAFT, nu release complet
 
 ## MANDAT
 
-Generează efectiv C19 GUVERNAREA complet, pe baza SPEC frozen, Blueprint acceptat și B1 deblocat.
+Continuă generarea C19 cu Slice 2.
 
-Nu mai face doar readiness.
-Nu mai face doar freeze de registru.
-Nu mai cere GO.
-Acesta este GO.
-
-### 1. Sursă COPY+MODIFY
-
-Folosește sursa COPY+MODIFY conform regulilor curente ale repo-ului:
-
-- preferat: `c01/`, dacă acesta este modelul canonic curent
-- dacă există pattern build-script mai potrivit pentru construcțiile recente, raportează exact ce ai folosit și de ce
-
-Nu inventa structură nouă dacă există model canonic.
-
-### 2. Cele 7 artefacte canonice
-
-Generează împreună cele 7 artefacte canonice C19:
+Generează:
 
 1. HTML-Studiu C19
 2. HTML-Editor-Studiu C19
-3. HTML-Video C19
-4. HTML-Editor-Video C19
-5. `Date_MASTER-C19.xlsx`
-6. FILM C19
-7. `assets/` C19, hero + 6 exec-stage
 
-Dacă imaginile finale originale GUVERNARE lipsesc, ai voie să folosești fallback DRAFT.
+Nu genera încă:
 
-Obligație:
-- marchează explicit `DRAFT_IMAGINI_FALLBACK` dacă imaginile sunt fallback / placeholder / clone
-- NU declara release complet dacă imaginile sunt fallback / placeholder / clone / lipsesc
-- declară release complet doar dacă imaginile sunt finale și hash diferit de c01
+- HTML-Video
+- HTML-Editor-Video
+- FILM
+- release complet
 
-### 3. Identitate C19 obligatorie
+### 1. Sursă de adevăr
+
+Folosește `c19/Date_MASTER-C19.xlsx` ca sursă de adevăr pentru demonstrația C19.
+
+Trebuie explicat clar în HTML că:
+
+- `STATUS=OPRIT` este intenționat în demonstrație
+- `_GUVERNARE` prinde anomaliile pe care C18 le-ar fi lăsat să curgă tacit
+- C19 nu repară motorul, ci îl ține corect prin reguli
+
+### 2. Identitate locked
 
 Păstrează locked:
 
@@ -91,12 +68,11 @@ Păstrează locked:
 - MOTTO: `Pleci, și munca se ține singură.`
 - GREȘEALA: `Confunzi «merge» cu «merge corect».`
 - AHA: `Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește.`
-- Artefact: `_GUVERNARE`
 - STEP 5: `Excepția și oprirea controlată`
 
-### 4. Blueprint obligatoriu
+### 3. Blueprint obligatoriu în HTML-Studiu
 
-Construiește C19 pe cele 6 etape acceptate:
+HTML-Studiu trebuie să reflecte cele 6 etape:
 
 1. `Sistemul care merge doar cât te uiți`
 2. `Ce poate să devieze previzibil`
@@ -105,26 +81,13 @@ Construiește C19 pe cele 6 etape acceptate:
 5. `Excepția și oprirea controlată`
 6. `Testul ochilor închiși`
 
-Arcul Excel obligatoriu:
+Arcul obligatoriu:
 
 input greșit -> regulă -> prag / stare -> excepție -> oprire controlată -> testul ochilor închiși
 
-### 5. Excel / Date_MASTER obligatoriu
+### 4. Gărzi conceptuale obligatorii
 
-`Date_MASTER-C19.xlsx` trebuie să includă explicit:
-
-- `_GUVERNARE` distinct de `_AUTOMATIZARE`
-- `STATUS` OK / ATENȚIE / OPRIT
-- Data Validation la sursă
-- praguri vii (`LIMIT_MIN`, `LIMIT_MAX` sau echivalent)
-- listă de excepții
-- fail-safe automat
-- output legat de `STATUS=OPRIT`, astfel încât rezultatul corupt să nu curgă mai departe
-- conservarea sumei față de C18 conform R-V02.14, verificată explicit la generare
-
-### 6. Gărzi conceptuale obligatorii
-
-Păstrează în toate artefactele:
+Păstrează în HTML:
 
 - C18 = rulează
 - C19 = se ține corect
@@ -147,24 +110,32 @@ C19 NU este:
 Etapa 4 = semnal care schimbă starea, nu dashboard.
 Etapa 5 = oprire automată, nu intervenție umană.
 
-### 7. Validări obligatorii
+### 5. Imagini
 
-Rulează și raportează:
+Dacă imaginile finale GUVERNARE lipsesc, folosește fallback DRAFT.
 
-- `pre_generation_check.py 19`
-- `gate_v20.py 19 ...` pe artefactele canonice
-- `audit_sync.py`
-- verificare zero em dash / en dash
-- verificare `_GUVERNARE` distinct de `_AUTOMATIZARE`
-- verificare `STATUS` OK / ATENȚIE / OPRIT
-- verificare Data Validation
-- verificare fail-safe
-- verificare R-V02.14 suma conservată
-- verificare imagini: hash diferit de c01, dacă există imagini finale
+Obligație:
 
-Dacă o validare nu poate fi rulată, marchează explicit NU_RULAT și motivul. Nu declara PASS pentru ce nu ai rulat.
+- marchează explicit `DRAFT_IMAGINI_FALLBACK`
+- NU declara release complet
+- NU declara hash imagini PASS dacă imaginile sunt fallback / clone / placeholder
 
-### 8. Raport
+### 6. Validări Slice 2
+
+Rulează și raportează ce este aplicabil pentru Slice 2:
+
+- existență HTML-Studiu C19
+- existență HTML-Editor-Studiu C19
+- identitate C19 locked prezentă în HTML
+- cele 6 etape prezente
+- Etapa 4 = semnal care schimbă starea, nu dashboard
+- Etapa 5 = oprire automată, nu intervenție umană
+- zero em dash / en dash în HTML
+- verificare imagini / fallback status
+
+Nu rula `gate_v20.py 19` ca PASS complet dacă lipsesc artefacte. Dacă îl rulezi parțial sau nu îl rulezi, marchează explicit.
+
+### 7. Raport
 
 Scrie raportul exclusiv în:
 
@@ -176,19 +147,19 @@ Format raport:
 
 ## STATUS
 
-## ARTEFACTE GENERATE
+## SLICE 2 ARTEFACTE GENERATE
 
-## SURSA COPY+MODIFY
+## SURSA HTML
 
-## IDENTITATE C19 IMPLEMENTATĂ
+## IDENTITATE C19 ÎN HTML
 
-## DATE_MASTER / _GUVERNARE
-
-## VALIDĂRI RULATE
-
-## VALIDĂRI NERULATE / PROBLEME
+## DATE_MASTER FOLOSIT
 
 ## STATUS IMAGINI
+
+## VALIDĂRI SLICE 2
+
+## VALIDĂRI NERULATE / PROBLEME
 
 ## STATUS RELEASE
 
@@ -198,7 +169,7 @@ Format raport:
 
 ## COMMIT
 
-Fă commit descriptiv pe main după generare și raport.
+Fă commit descriptiv pe main după Slice 2.
 
 ## RAPORT
-Aștept raportul de generare efectivă C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept raport Slice 2 C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
