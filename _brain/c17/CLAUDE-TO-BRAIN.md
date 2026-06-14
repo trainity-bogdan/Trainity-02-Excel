@@ -1,7 +1,15 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_GENERATED_READY_FOR_AUDIT (6/6 artefacte generate + verificate prin audit_sync B3; B2 gate_v20 pending CERERE SYSTEM identitate)
+C17_GATE_FAIL_CROSS_CONTAMINATION (identitate C17 adaugata, gate_v20 RULEAZA; FAIL pe 6 referinte legitime C18 handoff in zone newhitelisted; necesita rephrase c17/** sub mandat de generare)
+
+## SYSTEM REPORT · IDENTITATE TEHNICA C17 (MANDAT_SYSTEM_IDENTITATE_TEHNICA_C17)
+- **Identitate C17 adaugata** (commit 7162e0c): `gate_v20.py` dict IDENTITATI (entry '17': cod C17, nume_hero_caps_rand1 SISTEM, nume_slug Sistematizare, meta T5) + `IDENTITATE-TEHNICA.md` bloc doc complet. Descoperire: `load_identitate` = dict hardcoded in gate_v20.py (NU parseaza doc-ul), deci dict-ul e ce conteaza pentru gate.
+- **Conflict cu chat C18 rezolvat:** origin/main adaugase blocul doc C18 in aceeasi pozitie; pastrat AMBELE (C17 apoi C18, ordine numerica), zero pierdere.
+- **Gate_v20 acum RULEAZA** (era blocat). Rezultat: **FAIL, 6 cross-contamination = referinte legitime C18** (3 unice x base+companion): (1) ba-val „etichetă candidat C18" (Studiu pas 12 dovada), (2) stage-tags „Predare C18" (Studiu etapa 6), (3) Video JSON title „Granița spre C18..." (pas 18). Whitelist-ul gate acopera step-action/step-title/next-section/instr, dar NU ba-val/stage-tags/video-title.
+- **Fix necesar (in c17/**, interzis sub acest mandat de identitate):** in `build_html_studiu_c17.py`: „candidat C18" -> „candidat de automatizare" (ba-val), „Predare C18" -> „Predare T5"/„Handoff"; in `build_html_video_c17.py`: title pas 18 fara „C18" (ex. „Granița spre automatizare"), C18 ramane in instr (whitelisted). Apoi re-run 4 build HTML + gate.
+- Verificari: doar fisiere SYSTEM atinse (zero c17/**); zero em-dash in adaugiri; audit_sync fara drift nou; nomenclatura LOCKED neatinsa.
+- **Recomandare:** mandat de generare (sau autorizare c17/**) pentru rephrase-ul de 3 puncte, apoi gate PASS -> RELEASE. Pot aplica imediat la autorizare.
 
 ## GENERATION PROGRESS (MANDAT_GENERARE_CONTROLATA_C17 + MANDAT_CONTINUA_GENERARE_C17)
 Mediu pregatit: openpyxl 3.1.5 + python-docx instalate. `pre_generation_check` legacy (cauta `SISTEM_TRAINITY.md`, fisier abandonat la C13-C16) = neaplicabil; fluxul real = scripturi `build_*_c17.py` in `c17/` (ca C13-C16) + gate_v20 (B2) + audit_sync (B3).
