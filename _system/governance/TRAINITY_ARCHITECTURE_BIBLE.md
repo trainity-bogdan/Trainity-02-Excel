@@ -270,6 +270,23 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 - AHA-urile C17-C20 sunt CANDIDATE; se confirmă (lock S5) la seed, în gramatica de treaptă.
 - autonomia se definește prin independența de autor, NU prin cloud/sincronizare/refresh/Power Automate/infrastructură.
 
+### §T5 · SPEC C20 DELEGAREA (AUTONOMIE) — LOCKED v1.0 (freeze C20, confirmat BRAIN + audit total, propagat SYSTEM 14.06.2026)
+> **Statut:** freeze SPEC 11-slot (identitate). Audit total adversarial PASS = `C20_VALIDAT_CU_REZERVE_MINORE`; micro-fixuri aplicate. BLUEPRINT (6 etape/18 pași) + cele 7 artefacte = la mandat separat. Autoritate conceptuală: `14-ARHITECTURA-CONCEPTUALA-T5.md`; SPEC complet: `_brain/c20/CLAUDE-TO-BRAIN.md`. C20 închide PACK-ul C01-C20.
+
+- **NUCLEU LOCKED — DELEGARE = TRANSFER DE PROPRIETATE, NU ÎMPĂRȚIRE DE SARCINI:** C20 ia un sistem guvernat (rulează C18 + se păzește singur C19, încă deținut de autor) și PREDĂ proprietatea operațională unui ROL care îl poate deține și continua fără autor. NU management/HR/RACI/fișă de post, NU documentare/predare verbală, NU reguli (C19), NU motor (C18). Autorul iese din PROPRIETATE (ultima din OCAZIE/EFORT/ATENȚIE/PROPRIETATE). Dovada = test de predare VIU în workbook, nu un checklist bifat.
+- **HERO:** „Cum deleg sistemul, ca să meargă fără mine?"
+- **BOMBĂ:** „Sistemul tău rulează singur și se păzește singur. Și totuși e încă al tău, numai al tău."
+- **GREȘEALA:** „Crezi că ai delegat când ai explicat. Dar explicația nu mută proprietatea: la prima problemă, tot pe tine te sună." (diversificată, fără „Oameni/Profesioniști")
+- **AHA (lock S5):** „Un sistem nu e autonom pentru că merge singur. E autonom când îl poate deține altcineva."
+- **MANTRA:** „Nu împart sarcini. Deleg sistemul." (cuvânt-cheie galben: *Deleg*)
+- **WOW:** „Apeși «scoate autorul», și sistemul nu se rupe: workbook-ul confirmă singur că alt rol îl poate continua."
+- **MOTTO (slot de treaptă T5):** „Pleci, și munca nu mai e a ta." Instanțiază template-ul „Pleci, și munca [...]" (C17 o reia altcineva → C18 se face singură → C19 se ține singură → C20 nu mai e a ta). **CANDIDAT** — template-ul de treaptă T5 nu e ratificat global; NU lock absolut de sistem.
+- **MIZA:** „Cât timp sistemul rămâne proprietatea informală a autorului, autonomia construită până aici e falsă: merge doar cât autorul e disponibil. Un sistem care rulează perfect dar e deținut de o singură persoană moare când acea persoană pleacă, nu pentru că s-a stricat, ci pentru că nimeni altcineva nu îl deține. Delegarea mută proprietatea de la o persoană la un ROL, verificabil în workbook." (director-test; fără cifre, R-V02.15)
+- **VERB-SEMNĂTURĂ:** *DELEG* (ancoră în MANTRA „Deleg sistemul" + HERO „Cum deleg"). Substantivul PROPRIETATE în nucleu + MIZA.
+- **ARTEFACT `_DELEGARE` (workbook-native, VIU):** comutator AUTOR_ACTIV=NU + ROL_DELEGAT (rol, nu persoană) + verificări prin formule (V1 zero dependență author-only, V2 acces, V3 zone blocate, V4 escaladare) + STATUS calculat NEPREDAT/PARȚIAL/DELEGAT/AUTONOM. Distinct de `_GUVERNARE` (C19 reacționează la date greșite; C20 la dispariția omului).
+- **Granițe LOCKED:** **C19|C20** = controlează datele (reguli, autorul rămâne titular) vs transferă sistemul (predă titularitatea); **C18|C20** = merge singur vs poate fi deținut de altcineva; **C04|C20** = refresh set vs predarea proprietății unui sistem; **C20|HR/management** = proprietate pe ROL demonstrată în workbook, nu organigramă/fișă de post/discurs; **C20|documentare** = explicația nu e delegare, dovada = testul viu.
+- **Limbaj LOCKED (identitate):** deleg, delegare, proprietate operațională, transfer de proprietate, rol care preia, predare verificabilă, AUTONOM. **INTERZIS ca identitate:** împărțire de sarcini, fișă de post, organigramă, responsabil nominal (persoană), management, escaladare ca regulă C19, refresh, motor. **Rezerve audit (la blueprint):** test viu cablat real (anti-RACI), hero ascuțit pe proprietate, exemplu concret + dramă FAIL→AUTONOM.
+
 ---
 
 # BACKLOG DECIZII (reguli candidate, ÎNCĂ NEDECISE — NU sunt norme)

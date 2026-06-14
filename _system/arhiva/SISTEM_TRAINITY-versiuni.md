@@ -3135,7 +3135,73 @@ Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria
 - vs C20 (sus): C20 = ownership/predarea controlului/escaladare; C19 = autorul rămâne titularul regulilor, marchează și oprește, dar nu desemnează responsabilul. Handoff: „C19 predă sistemul guvernat, încă deținut de autor; C20 predă proprietatea."
 - vs babysitting: monitorizarea ține autorul prezent; guvernarea înlocuiește ochiul cu reguli (testul ochilor închiși).
 - vs T4: semnalul C19 acționează (schimbă starea, oprește), nu e un dashboard de citit pentru un om care decide.
-## SPEC C20 - DELEGAREA   [Status: NEGENERAT]
+## SPEC C20 - DELEGAREA   [Status: INGHETAT 14.06.2026]
+
+Axă: PREDAI SISTEMUL DE LUCRU CA SĂ FIE DEȚINUT ȘI CONTINUAT DE ALTCINEVA, FĂRĂ AUTOR (autorul iese din PROPRIETATE). Pilon T5: T5 consumă raportul livrabil (T4) și îl face să funcționeze fără autor; C20 = predarea proprietății operaționale, închide PACK-ul. C20 NU depinde de C19.
+Decizie locked: C20 = transferul controlabil al proprietății operaționale asupra sistemului, demonstrabil ÎN workbook prin testul de predare VIU (comutator AUTOR_ACTIV=NU + verificări prin formule + STATUS calculat). NU management/HR/RACI/fișă de post, NU documentare/predare verbală, NU reguli/praguri (C19), NU motor (C18), NU refresh (C04). Artefact `_DELEGARE`.
+Nomenclatură LOCKED (NOMENCLATURA-LOCKED-SCARA V70): C20 DELEGAREA, cuvânt AUTONOMIE, verb DELEG. Iese din PROPRIETATE.
+Notă: SPEC 11-slot CONFIRMAT + ÎNGHEȚAT de BRAIN 14.06.2026 (freeze SPEC final; audit total adversarial PASS = C20_VALIDAT_CU_REZERVE_MINORE; micro-fixuri aplicate). Propagare SYSTEM autorizată ARHITECT. IDENTITATE_TEHNICA C20 populată (L142). BLUEPRINT (6 etape/18 pași) = PENDING, la mandat separat (NU în acest freeze). Sursa SPEC completă: `_brain/c20/CLAUDE-TO-BRAIN.md`.
+
+### 1. SLUG
+Excel-20-Delegare · CUVÂNT AUTONOMIE · MIZĂ HERO (hov-object) „DELEGAREA SISTEMULUI DE LUCRU" · verb DELEG · închide PACK-ul (T5, construcția-semnătură).
+
+### 2. INTRIGA
+Tensiune centrală: autorul dispare, sistemul continuă. Sistemul tău rulează singur (C18) și se păzește singur (C19), și totuși e încă al tău, numai al tău: la orice problemă, tot pe tine te sună. HERO: „Cum deleg sistemul, ca să meargă fără mine?"
+
+### 3. PROBLEMELE
+- sistemul rulează, dar autorul rămâne punctul central de contact;
+- responsabilitatea nu e transferată explicit;
+- drepturile de acces ale celui care ar prelua sunt neclare;
+- rolul nou nu știe unde are voie să intervină;
+- escaladarea rămâne verbală;
+- predarea nu poate fi verificată;
+- continuitatea depinde de disponibilitatea autorului (sistem orfan).
+
+### 4. MIZA
+Cât timp sistemul rămâne proprietatea informală a autorului, autonomia construită până aici e falsă: merge doar cât autorul e disponibil. Un sistem care rulează perfect dar e deținut de o singură persoană moare când acea persoană pleacă: nu pentru că s-a stricat, ci pentru că nimeni altcineva nu îl deține, doar îl folosește. Delegarea mută proprietatea de la o PERSOANĂ la un ROL, verificabil în workbook. (director-test; fără cifre business, R-V02.15.)
+
+### 5. MANTRA / AHA
+MANTRA: „Nu împart sarcini. Deleg sistemul." (cuvânt-cheie galben: Deleg)
+AHA (lock S5): „Un sistem nu e autonom pentru că merge singur. E autonom când îl poate deține altcineva."
+
+### 6. WOW
+„Apeși «scoate autorul», și sistemul nu se rupe: workbook-ul confirmă singur că alt rol îl poate continua."
+
+### 7. MOTTO
+„Pleci, și munca nu mai e a ta." (slot de treaptă T5; CANDIDAT, dependent de ratificarea template-ului de treaptă T5, NU lock global)
+
+### 8. GREȘEALA
+„Crezi că ai delegat când ai explicat. Dar explicația nu mută proprietatea: la prima problemă, tot pe tine te sună." (diversificată, fără formula „Oameni/Profesioniști")
+
+### 9. FENOMENE (8 stări observabile; conceptuale, fără cifre, R-V02.15)
+- proprietate implicită rămasă la autor;
+- rol operațional nedefinit;
+- responsabilitate transferată parțial;
+- acces insuficient sau excesiv pentru rolul care preia;
+- intervenție fără limită clară;
+- escaladare verbală (nedovedibilă);
+- predare imposibil de verificat;
+- sistem orfan după plecarea autorului.
+
+### STEP-TITLES (8, nivel SPEC; remapare pe 6 etape/18 pași la BLUEPRINT)
+1. Identifică rolul care preia sistemul (rol, nu persoană).
+2. Stabilește responsabilitatea care se transferă.
+3. Mapează accesul necesar pentru operare.
+4. Definește punctele unde rolul poate interveni.
+5. Blochează zonele care nu trebuie atinse.
+6. Stabilește escaladarea (către ce rol, cu ce declanșator).
+7. Rulează testul de predare: scoate autorul, vezi dacă sistemul se ține.
+8. Citește statusul calculat: nepredat / parțial / delegat / autonom.
+
+### ARTEFACT _DELEGARE (workbook-native, test VIU)
+Controale: AUTOR_ACTIV (DA/NU) + ROL_DELEGAT (rol, nu persoană). Hartă de predare: rol/responsabilitate/acces/intervenție/limite/escaladare. Verificare vie: V1 zero dependență author-only · V2 acces validat · V3 zone blocate · V4 escaladare funcțională (OK/FAIL). STATUS FINAL calculat: NEPREDAT / PARȚIAL / DELEGAT / AUTONOM. Distinct de `_GUVERNARE` (C19 reacționează la date greșite; C20 la dispariția omului).
+
+### GRANIȚE
+- vs C19 (jos): C19 controlează DATELE (reguli care prind input greșit); C20 transferă SISTEMUL (proprietatea către un rol). C19 = autorul rămâne titularul regulilor; C20 = predă titularitatea. Handoff: „C19 predă sistemul guvernat, încă deținut de autor; C20 predă proprietatea."
+- vs C18: C18 face sistemul să meargă singur (fără efort); C20 face ca sistemul să poată fi DEȚINUT de altcineva.
+- vs C04: C04 = actualizarea unui set (Refresh); C20 = predarea proprietății unui sistem întreg.
+- vs HR/management/RACI/fișă de post: C20 NU desemnează persoane, NU face fișe de post, NU e lecție de management; proprietatea pe ROL, demonstrată în workbook prin testul viu, nu în discurs.
+- vs documentare/predare verbală: explicația nu e delegare; dovada = testul viu, nu un checklist bifat.
 
 ================================================================================
 

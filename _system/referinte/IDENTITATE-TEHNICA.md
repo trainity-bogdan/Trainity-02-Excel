@@ -545,6 +545,35 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nota_hero: BRAIN-CONFIRMED 14.06.2026: MIZA HERO "GUVERNAREA SISTEMULUI PRIN REGULI" + CUVANT CONTROL aprobate de BRAIN (mandat C19_SPEC_11_SLOT_FROZEN_ACCEPTAT). LOCKED.
 - nota_treapta: C19 = a 3-a din T5 AUTONOMIE; next (C20 DELEGAREA) = a 4-a din T5.
 
+## IDENTITATE_TEHNICA C20 · DELEGAREA
+
+- cod: C20
+- treapta_nr: 5
+- treapta_nume: AUTONOMIE
+- treapta_pozitie: 4 din 4 (Sistematizare, Automatizare, Guvernare, Delegare)
+- nume_hero_caps_rand1: DELEGAREA
+- nume_hero_caps_rand2: SISTEMULUI DE LUCRU
+- nume_hero_caps: DELEGAREA SISTEMULUI DE LUCRU
+- nume_title_case: Delegarea
+- nume_slug: Delegare
+- input_filename: Date_MASTER-C19-Guvernare.xlsx
+- output_filename: Date_MASTER-C20-Delegare.xlsx
+- meta_val_treapta: SISTEMATIZARE · AUTOMATIZARE · GUVERNARE · <b>DELEGARE</b> (AUTONOMIE)
+- next_cod: — (C20 închide PACK-ul Excel C01-C20)
+- next_nume_title: — (fără construcție următoare)
+- next_label: PACK 02 EXCEL · CONSTRUCȚIA FINALĂ
+- footer_text: TRAINITY · C20 DELEGARE · AUTONOMIE
+- topbar_text: Sistemul 02 - Excel · C20 · Delegare
+- mobile_topbar: C20 · Delegare
+- nav_brand_label: PACK 02 EXCEL · C20
+- nav_brand_title: DELEGAREA SISTEMULUI DE LUCRU
+- title_studiu: C20 · Delegare · Trainity
+- title_video: C20 · DELEGARE · BROADCAST
+- localStorage_studiu: trainity_c20_study_v1
+- localStorage_video: trainity_c20_video_v1
+- nota_hero: BRAIN-CONFIRMED 14.06.2026: MIZA HERO "DELEGAREA SISTEMULUI DE LUCRU" + CUVANT AUTONOMIE aprobate de BRAIN (freeze SPEC C20 final, audit total acceptat). LOCKED.
+- nota_treapta: C20 = a 4-a și ULTIMA din T5 AUTONOMIE; închide PACK-ul Excel C01-C20. Fără next.
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination
