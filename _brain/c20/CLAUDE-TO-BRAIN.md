@@ -1,20 +1,20 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SPEC_C20_PREGATIT_PENTRU_FREEZE (SPEC 11-slot DELEGAREA APROBAT de BRAIN; marcat gata de freeze; astept confirmarea finala ARHITECT. Blueprint NEGENERAT - asteapta mandat separat.)
+SPEC_C20_VALIDAT_FREEZE_FINAL (SPEC 11-slot DELEGAREA validat de BRAIN pentru FREEZE SPEC FINAL; record de freeze la nivel C20. Propagarea in autoritatea de sistem = CERERE SYSTEM separata. Blueprint NEGENERAT - asteapta mandat separat.)
 
 ## SURSA
-Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CERE_SLUG_SPEC_11_SLOT_C20` (commit cf770df). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
+Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CONFIRMA_FREEZE_SPEC_C20_FINAL` (commit 48149db). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
 
 ---
 
-## CONFIRMARE FREEZE-READINESS (mandat APROBA_FREEZE_SPEC_C20, commit 930b4cd)
+## CONFIRMARE FREEZE FINAL (mandat CONFIRMA_FREEZE_SPEC_C20_FINAL, commit 48149db)
 
-BRAIN a aprobat SPEC 11-slot C20 pentru freeze. Confirm:
+BRAIN a validat SPEC 11-slot C20 pentru FREEZE SPEC FINAL. Confirm:
 
-- **SPEC marcat PREGATIT PENTRU FREEZE.** Valori LOCK aprobate, restated compact pentru un record de freeze auto-continut:
+- **SPEC C20 VALIDAT PENTRU FREEZE FINAL** (record de freeze la nivel C20). Valori LOCK, restated compact pentru un record auto-continut:
   - SLUG `Excel-20-Delegare` · MIZA HERO `DELEGAREA SISTEMULUI DE LUCRU` · CUVANT `AUTONOMIE` · VERB `DELEG`
   - INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
   - MANTRA: Nu impart sarcini. Deleg sistemul.
@@ -25,9 +25,10 @@ BRAIN a aprobat SPEC 11-slot C20 pentru freeze. Confirm:
   - TENSIUNE CENTRALA: autorul dispare, sistemul continua.
 - **Blueprint NEGENERAT.** Respect mandatul: blueprint conceptual C20 doar la mandat separat.
 - **Garde pentru blueprint INREGISTRATE** (le apar la mandatul de blueprint): `_DELEGARE` viu nu pasiv · AUTOR_ACTIV=NU test central · STATUS calculat nu bifat · rol nu persoana · granita vs C19 / C18 / HR / documentare verbala.
-- **Poarta ramasa:** confirmarea finala ARHITECT pentru a trece SPEC din "pregatit pentru freeze" in FROZEN / LOCKED. Freeze-ul de SPEC e prerogativa ARHITECT (B1/B2), nu il declar eu.
+- **FREEZE confirmat la nivel C20.** SPEC inghetat ca record al chatului C20. Propagarea in autoritatea de sistem (governance Bible §T5, Doc 14, NOMENCLATURA-LOCKED-SCARA, STARE-CURENTA) = CERERE SYSTEM separata, intr-un chat SYSTEM: din chatul C20 NU pot atinge fisiere de sistem. Semnalez nevoia, nu o execut.
+- **URMATOR PAS:** dupa freeze final -> BLUEPRINT conceptual C20, DOAR la mandat separat. Garde inregistrate (vezi sus).
 
-SPEC-ul complet aprobat ramane mai jos, neschimbat.
+SPEC-ul complet, validat si inghetat, ramane mai jos, neschimbat.
 
 ---
 
