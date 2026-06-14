@@ -377,7 +377,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(12)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action">În blocul C, fiecare pas e un HYPERLINK la zona lui, cu obiectul atins ca named range OBJ_ și rezultatul oglindit live. <span data-locked="1">Pașii repetitivi îi etichetezi „candidat C18", dar îi lași manuali.</span> Harta arată ce iese, nu produce ea rezultatul.</p>
+    <p class="step-action">În blocul C, fiecare pas e un HYPERLINK la zona lui, cu obiectul atins ca named range OBJ_ și rezultatul oglindit live. <span data-locked="1">Pașii repetitivi îi etichetezi „candidat de automatizare", dar îi lași manuali.</span> Harta arată ce iese, nu produce ea rezultatul.</p>
     <div class="section-sublabel">BLOCUL C · LANȚUL DE RELUARE</div>
     <ul class="ba-list">
 <li class="ba-item">
@@ -401,7 +401,7 @@ BODY = r'''<body>
       <div class="ba-pair">
         <div class="ba-before"><span class="ba-tag">ÎNAINTE</span><span class="ba-val">tentația de a o face acum</span></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">etichetă „candidat C18", amânată</span></div>
+        <div class="ba-after"><span class="ba-tag">DUPĂ</span><span class="ba-val">etichetă „candidat de automatizare", amânată</span></div>
       </div>
     </li>
     </ul>
@@ -486,7 +486,7 @@ BODY = r'''<body>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 6 · TESTUL SUBSTITUTULUI</div>
       <h2 class="stage-name">SUBSTITUT</h2>
-      <div class="stage-tags"><span class="phase-tag">HANDOFF</span><span class="type-tag">Predare C18</span></div>
+      <div class="stage-tags"><span class="phase-tag">HANDOFF</span><span class="type-tag">Predare T5</span></div>
     </div>
   </header>
   <p class="stage-quote">Proba finală: altcineva pornește din _SISTEM și reia munca fără tine. Apoi marchezi unde se oprește C17 și începe automatizarea.</p>
@@ -543,7 +543,7 @@ BODY = r'''<body>
     <div class="step-check" onclick="event.stopPropagation();checkStep(18)" title="Marchează pasul ca verificat"></div>
   </div>
   <div class="step-body">
-    <p class="step-action"><span data-locked="1">C17 face munca reluabilă de un om. Treapta următoare scoate omul din pașii repetitivi.</span> Predai o hartă cu pașii „candidat C18" marcați, gata de automatizat. Automatizarea, guvernarea prin reguli și predarea proprietății încep mai sus. Tu ai garantat că munca se reia fără tine.</p>
+    <p class="step-action"><span data-locked="1">C17 face munca reluabilă de un om. Treapta următoare scoate omul din pașii repetitivi.</span> Predai o hartă cu pașii „candidat de automatizare" marcați, gata de automatizat. Automatizarea, guvernarea prin reguli și predarea proprietății încep mai sus. Tu ai garantat că munca se reia fără tine.</p>
 
   </div>
 </div>
@@ -571,7 +571,7 @@ BODY = r'''<body>
       <section class="next-section">
         <div class="next-label">TREAPTA 5 · CONSTRUCȚIA URMĂTOARE</div>
         <h3 class="next-title">C18 · Automatizarea</h3>
-        <p class="next-desc">Ai un sistem reluabil de un om, cu pașii „candidat C18" marcați. Dar cum scoți omul din pașii repetitivi, ca munca să ruleze fără să o pornească cineva de fiecare dată? Automatizarea începe la C18.</p>
+        <p class="next-desc">Ai un sistem reluabil de un om, cu pașii „candidat de automatizare" marcați. Dar cum scoți omul din pașii repetitivi, ca munca să ruleze fără să o pornească cineva de fiecare dată? Automatizarea începe la C18.</p>
       </section>
 
       <section class="payoff-section">
@@ -663,7 +663,7 @@ def main():
     print('  leftover C16 tokens in BODY (trebuie 0):', len(leftover), leftover[:8])
     # garda contaminare C18/C19/C20 ca IDENTITATE (granita/handoff sunt ok)
     c18 = re.findall(r'automatiz', body, re.IGNORECASE)
-    print('  "automatiz" in BODY (doar candidat C18/handoff, verifica context):', len(c18))
+    print('  "automatiz" in BODY (doar candidat de automatizare/handoff, verifica context):', len(c18))
     c19 = re.findall(r'\bvalidare\b|\bprag\b|\bvalideaz', body, re.IGNORECASE)
     print('  C19 (validare/prag) in BODY (trebuie ~0, doar negatii):', len(c19), c19[:6])
     # garda anti-em-dash
