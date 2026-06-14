@@ -1,47 +1,70 @@
 # CLAUDE -> BRAIN C19
 
 ## STATUS
-C19_B1_DEBLOCAT_READY_TO_GENERATE (CERERE SYSTEM rezolvata, autorizat ARHITECT: SPEC C19 + IDENTITATE_TEHNICA C19 inghetate in registrul de sistem; `pre_generation_check 19` = TOATE PASS; B1 deblocat; gata de generare; astept GO + cele 7 imagini GUVERNARE)
+C19_GENERARE_SLICE_1_DATE_MASTER (GO acceptat; Date_MASTER-C19 cu `_GUVERNARE` generat si verificat cap-coada; restul artefactelor in slice-uri urmatoare; NU release complet)
 
-SURSA: ARHITECT a comandat `cerere system` in chatul C19 = autorizare explicita sa execut freeze-ul de registru (precedent C18, commit e26bcc9 "autorizat ARHITECT"). Realiniat la origin/main inainte.
-
----
-
-## CE S-A FACUT (freeze de registru, autorizat ARHITECT)
-Replicat procedura C18 (oglinda exacta). Editat DOAR intrarile C19, in 2 fisiere sistem (commit **652adc6**):
-1. `_system/arhiva/SISTEM_TRAINITY-versiuni.md`: `## SPEC C19 - GUVERNAREA` trecut din `[Status: NEGENERAT]` in `[Status: INGHETAT 14.06.2026]` + cele 9 elemente narative (INTRIGA, PROBLEMELE, MIZA, MANTRA/AHA, MOTTO, STEP-TITLES 18/6x3, PROMPTURI Copilot x2, FINAL-LABELS x8, FENOMENE x6) + GRANITE. Continut = SPEC-ul FROZEN acceptat de BRAIN.
-2. `_system/referinte/IDENTITATE-TEHNICA.md`: `## IDENTITATE_TEHNICA C19 · GUVERNAREA`, 24 campuri (consistent cu C18: treapta 5 pozitia 3/4, hero `GUVERNAREA SISTEMULUI PRIN REGULI`, slug `Guvernare`, input `Date_MASTER-C18-Automatizare.xlsx`, output `Date_MASTER-C19-Guvernare.xlsx`, next C20).
-
-**Verificare:** `pre_generation_check 19`:
-- CHECK 1 (R-V03.55): SPEC C19 INGHETAT narativ -> PASS
-- CHECK 2 (L142): IDENTITATE_TEHNICA C19 POPULATA -> PASS
-- CHECK 3 (L143): FENOMENE C19 vs asset fizic ALINIAT -> PASS
-
-**B1 DEBLOCAT.** Zero em/en-dash pe liniile adaugate. Atins doar intrarile C19 (alte constructii neatinse).
+SURSA: comanda `sync`, mandat `GO_GENERARE_EFECTIVA_C19` (origin/main 9eaf4e2). Generare in slice-uri, ca C18 (Slice 1, Slice 2-4). Acest slice = Date_MASTER (inima T5). Permisiuni operationale ridicate folosite: creat `c19/`.
 
 ---
 
-## URMATORUL PAS (generare, la GO explicit)
-Acum pot genera cele 7 artefacte. Plan:
-- Sursa COPY+MODIFY: decid intre pattern build-script (c17) si COPY din c01 (ca C18 slice 1), raportez ce folosesc.
-- 7 artefacte: HTML-Studiu / Editor-Studiu / Video / Editor-Video, `Date_MASTER-C19.xlsx` (`_GUVERNARE` distinct: STATUS OK/ATENTIE/OPRIT, Data Validation la sursa, `LIMIT_MIN`/`LIMIT_MAX`, lista exceptii, fail-safe legat de STATUS=OPRIT, R-V02.14 suma conservata fata de C18), FILM, assets.
-- Validari post-generare: `gate_v20 19` (B2; IDENTITATE_TEHNICA tocmai adaugata ar trebui sa deblocheze cross-contamination, ca la C17 commit 7162e0c), `audit_sync`, dash, _GUVERNARE distinct de _AUTOMATIZARE, STATUS, Data Validation, fail-safe, imgclone.
+## ARTEFACTE GENERATE
+- **`c19/Date_MASTER-C19.xlsx`** - GENERAT + verificat (Slice 1).
+- **`c19/build_date_master_c19.py`** - build script (reproductibil).
+- HTML-Studiu / HTML-Editor-Studiu / HTML-Video / HTML-Editor-Video / FILM / assets = **NEGENERATE** (slice-uri urmatoare).
 
----
+## SURSA COPY+MODIFY
+Chain T5 = **`c18/Date_MASTER-C18.xlsx`** (predecesorul direct; R-V02.14: input C19 = output C18). Pattern = build-script, oglinda `c17/build_date_master_c17.py` (deschid Date_MASTER-ul precedent, pastrez TOATE foile intacte, adaug START + foaia-artefact). Pentru HTML (slice 2) decid intre pattern build-script c17 si COPY+MODIFY din c01 (ca C18); raportez ce folosesc.
 
-## DEPENDENTE
-1. **Cele 7 imagini GUVERNARE** (hero + 6 exec-stage pe axa CONTROL) = produse EXTERN de ARHITECT. Fara ele, generarea iese DRAFT (imagini fallback / clone c01), NU release complet (per mandat).
-2. **MOTTO template T5** = candidat (neblocant).
+## IDENTITATE C19 IMPLEMENTATA
+In Date_MASTER (foile START + `_GUVERNARE`): HERO "Cum se tine corect fara ochiul meu?", AHA, MANTRA "Nu o supraveghez. O guvernez prin reguli.", MOTTO "Pleci, si munca se tine singura." (in START). Axa CONTROL, verb GUVERNEZ, artefact `_GUVERNARE`. Identitatea HTML/FILM (cover, topbar, 18 pasi) = slice-uri urmatoare, din IDENTITATE_TEHNICA C19 (deja in registru).
 
----
+## DATE_MASTER / _GUVERNARE
+`Date_MASTER-C19.xlsx`: 10 foi = START + `_GUVERNARE` + cele 8 mostenite de la C18 (intacte). 8 named ranges.
+**`_GUVERNARE`** (controlul, nativ-Excel pe `Vanzari_Curat`):
+- A PRAGURI vii: `LIMIT_CANT_MIN/MAX`, `LIMIT_VAL_MIN`, `LIMIT_TOL`.
+- B DIAGNOSTIC: `TOTAL_INREGISTRAT`=SUM(valoare_neta), `TOTAL_CONSISTENT`=SUMPRODUCT(cant,pret), randuri_inconsistente, randuri_nepozitive, cantitati/categorii in afara.
+- C REGULI / Data Validation la sursa: 3 reguli (cantitate interval `LIMIT_`, pret>0, categorie din lista) care RESPING intrarea gresita.
+- D SEMNALE: 5 reguli -> OK/ATENTIE/OPRIT.
+- E STARE: `STATUS_SISTEM` (IFS pe semnale) + conditional formatting verde/galben/rosu.
+- F EXCEPTII: lista cu nr. cazuri vii (marcheaza, NU desemneaza responsabil).
+- G FAIL-SAFE: `OUTPUT_GUVERNAT` = IF(STATUS=OPRIT, rezultat retinut, total validat) -> rezultatul corupt nu curge.
+- H GRANITE/GARDA/testul ochilor inchisi.
+
+**Demonstratie autentica:** datele mostenite de la C18 contin 2 randuri imposibile plantate (rand 1147 valoare_neta=-5.725.878,84; rand 1148 = +2.865.117,29; ambele cant=126, != cant x pret). Motorul (C18) le-a insumat tacut (total inregistrat 1.247.893,50, cand consistenta da ~4,11M). `_GUVERNARE` le prinde prin consistenta rand + inchiderea totalului + valoare>0 -> **STATUS=OPRIT** -> fail-safe BLOCHEAZA rezultatul. Exact ce face C19.
+
+## VALIDARI RULATE
+- `pre_generation_check.py 19`: **TOATE PASS** (SPEC INGHETAT + IDENTITATE POPULATA + FENOMENE ALINIAT).
+- **R-V02.14 suma conservata: PASS** - SUM(Vanzari_Curat.valoare_neta) = 1.247.893,50 = C18 (verificat).
+- **`_GUVERNARE` distinct de `_AUTOMATIZARE`: PASS** (foaie noua; lineage c01 nu are `_AUTOMATIZARE` in Date_MASTER).
+- **STATUS OK/ATENTIE/OPRIT: PREZENT + evaluat** (mirror Python al formulelor pe date reale = OPRIT, prinde anomaliile; logica corecta).
+- **Data Validation la sursa: PASS** (3 reguli active pe zona de intrare).
+- **Fail-safe: PASS** (`OUTPUT_GUVERNAT` legat de `STATUS=OPRIT`).
+- **OOXML valid: PASS** (zip testzip + openpyxl full round-trip).
+
+## VALIDARI NERULATE / PROBLEME
+- `gate_v20.py 19`: **NU_RULAT** - necesita toate cele 7 artefacte canonice; doar Date_MASTER exista. De rulat la finalul slice-urilor.
+- `audit_sync.py` pe C19 complet: **NU_RULAT** (de rulat la final).
+- Recalc LibreOffice: **NU_RULAT** - LibreOffice headless nu incarca fisierul in acest mediu (eroare "source file could not be loaded" + warning Java). Evaluarea formulelor verificata prin mirror Python + validitate OOXML confirmata. Excel + gate_v20 (openpyxl) il incarca corect.
+- imgclone (hash != c01): **NU_RULAT** (imagini negenerate).
+- verificare em/en-dash artefacte HTML/FILM: **NU_RULAT** (negenerate; textul Date_MASTER e fara em/en-dash).
+
+## STATUS IMAGINI
+**NEGENERATE.** Necesita cele 7 imagini GUVERNARE (hero + 6 exec-stage, axa CONTROL) de la ARHITECT. La generarea HTML (slice urmator) folosesc fallback DRAFT marcat -> `DRAFT_IMAGINI_FALLBACK`.
+
+## STATUS RELEASE
+**NU release complet.** Slice 1 din generare (Date_MASTER). Lipsesc 4 HTML + FILM + assets. Imaginile vor fi fallback pana le produce ARHITECT. `DRAFT`.
+
+## RISCURI RAMASE
+1. STATUS=OPRIT by default = INTENTIONAT (demonstratia C19 prinde anomaliile plantate din datele C18). Daca C18 isi curata Date_MASTER, regenerez (chain).
+2. Slicing: cele 7 artefacte se livreaza impreuna la final (R-V01.2); pana atunci = work-in-progress, nu release.
+3. Branch de sesiune divergent; commit pe main aliniat.
 
 ## CERERI CATRE BRAIN / SYSTEM
-- **Catre ARHITECT:** GO explicit pentru generare + cele 7 imagini GUVERNARE (le procesez la sosire: watermark scos, base64 inline, hash != c01).
-- **CERERE SYSTEM:** REZOLVATA (freeze de registru facut, autorizat). Niciuna deschisa.
-
----
+- **Catre ARHITECT:** cele 7 imagini GUVERNARE (le procesez la sosire: watermark scos, base64 inline, hash != c01).
+- La urmatorul `sync` continui cu Slice 2 (HTML-Studiu + companion), apoi Video/Editor-Video, FILM, assets.
+- **CERERE SYSTEM:** niciuna.
 
 ## COMMIT
-Freeze: `652adc6 feat(c19): freeze SPEC + IDENTITATE_TEHNICA in registrul de sistem (autorizat ARHITECT)`. Acest raport: commit separat pe `main`.
+Commit pe `main`: `feat(c19): Slice 1 - Date_MASTER-C19 cu _GUVERNARE (STATUS/DV/praguri/exceptii/fail-safe), suma conservata`. SHA in git log.
 
-**C19_B1_DEBLOCAT_READY_TO_GENERATE**
+**C19_GENERARE_SLICE_1_DATE_MASTER**
