@@ -1,115 +1,78 @@
 # BRAIN -> CLAUDE C17
 
 ## STATUS
-MANDAT_SLUG_BLUEPRINT_C17
+MANDAT_REVIZUIRE_BLUEPRINT_C17
 
 ## CONTEXT
-C17 SPEC 11-slot este inghetat in sistem.
-Status curent verificat in _brain/c17/CLAUDE-TO-BRAIN.md:
-C17_SPEC_FROZEN_READY_FOR_BLUEPRINT.
+C17 Blueprint a fost propus si este in review BRAIN.
+Status curent in _brain/c17/CLAUDE-TO-BRAIN.md:
+C17_BLUEPRINT_READY_FOR_REVIEW.
 
-C17:
-- SISTEMATIZAREA
-- CUVANT LOCKED = SISTEM
-- VERB LOCKED = SISTEMATIZEZ
-- T5 = AUTONOMIE
-- iese din OCAZIE
-- axa: RELUABILITATEA / forma reluabila
-- artefact obligatoriu: _SISTEM
-- _SISTEM = harta functionala nativ-Excel, legata de workbook, nu SOP, nu documentatie
-- garda OGLINDA: oglindeste, leaga si navigheaza, nu executa, nu judeca, nu deleaga
+Observatii BRAIN:
+- Slug-ul propus `Sistematizare` este compatibil cu identitatea C17.
+- Blueprint-ul are 6 etape si 18 pasi.
+- Structura `_SISTEM` este suficient de concreta pentru review: blocuri A-F, named ranges, hyperlink-uri, formule vii, START AICI, punct de reluare, test anti-SOP.
+- Testele sunt prezente: anti-SOP, substitut, anti-C18, anti-C19, anti-C20, filmabilitate.
 
-SPEC inghetat:
-- HERO: "Cum transform munca pe care doar eu o stiu intr-un sistem pe care altcineva il porneste?"
-- MIZA HERO: "SISTEMATIZAREA MUNCII RELUABILE"
-- BOMBA: "Munca ta merge perfect. Pana pleci tu."
-- GRESEALA: "Nu ai un proces. Ai o memorie personala care tine un Excel in viata."
-- AHA: "O munca facuta de doua ori nu mai e o livrare. E un sistem ascuns in workbook."
-- MANTRA: "Nu o fac din nou. O fac sistem."
-- WOW: "Un proces care traia doar in capul tau. Acum o harta vie in workbook, pe care altcineva o porneste fara tine."
-- MOTTO C17: "Pleci, si munca o reia altcineva."
-- PAYOFF: "Acum poti lipsi o saptamana, si munca are cine s-o reia."
+Riscuri de corectat punctual:
+1. In etapa 2 apare formularea "cartografiezi componentele reale". Risc ecou C08. Inlocuieste cu "inventariezi functional componentele reale".
+2. Unde "harta reluabila" risca ecou C08, foloseste "structura reluabila" sau "harta functionala" doar daca e clar legata de workbook.
+3. In etapa 5 apare "praguri de proces". Risc C19. Inlocuieste cu "conventii de proces".
+4. Unde apare "rol", clarifica: "profil de competenta, nu ownership".
+5. `FORMULATEXT`, `ROWS`, `COUNTA` si referintele live trebuie confirmate explicit ca oglinzi de stare, nu reguli, nu validari, nu control C19.
 
 ## MANDAT
-MANDAT · SLUG + BLUEPRINT C17
-
-Lucrezi exclusiv pe C17.
-
-Nu genera HTML.
-Nu genera Date_MASTER.
-Nu genera build scripts.
-Nu genera FILM.
-Nu intra in C18.
-Nu modifica fisiere de sistem.
-Nu crea artefacte finale.
-Nu crea folder c17.
-
-Obiectiv:
-Pregateste SLUG + BLUEPRINT C17 pentru review BRAIN.
-
-Output obligatoriu:
-
-1. SLUG final propus
-- nume fisiere
-- nume folder
-- titlu intern
-- topbar label
-- hov-object
-- hero-title / hero-question
-- compatibilitate cu nomenclatura LOCKED
-
-2. BLUEPRINT C17
-- 6 etape
-- 18 pasi, 3 pasi per etapa
-- obiectivul fiecarei etape
-- ce se vede in Excel in fiecare etapa
-- ce se schimba in workbook
-- ce se dovedeste prin _SISTEM
-
-3. ARTEFACT _SISTEM
-Defineste concret structura foii _SISTEM:
-- blocuri
-- coloane
-- formule vii
-- named ranges
-- hyperlink-uri interne
-- zone SRC_
-- zone INPUT_
-- zone PARAM_
-- zone OBJ_
-- zona START AICI
-- zona punct de reluare
-- zona test anti-SOP
-- ce NU are voie sa contina
-
-4. TESTE
-- test anti-SOP
-- test substitut
-- test anti-C18
-- test anti-C19
-- test anti-C20
-- test filmabilitate 8-12 minute
-
-5. CONTINUITATE
-- ce primeste din C16
-- ce preda la C18
-- unde se opreste inainte de automatizare
-- cum pastreaza granita fata de C19 si C20
-
-6. RISCURI
-- contaminare SOP
-- contaminare C18
-- contaminare C19
-- contaminare C20
-- contaminare T4
-- ecou C08 prin termenul "harta"
-- risc de generic
-- risc de film static
-
-7. VERDICT
-C17_BLUEPRINT_READY_FOR_REVIEW
-sau
-C17_BLUEPRINT_NEEDS_REVISION
-
-Scrie raportul doar in:
+Revizuieste punctual blueprint-ul C17 in:
 _brain/c17/CLAUDE-TO-BRAIN.md
+
+Nu modifica sistemul.
+Nu genera artefacte.
+Nu crea folder `c17/`.
+Nu intra in HTML, Date_MASTER, build scripts sau FILM.
+Nu intra in C18.
+
+Aplică urmatoarele corectii:
+
+1. Inlocuieste formularea:
+"cartografiezi componentele reale"
+cu:
+"inventariezi functional componentele reale"
+
+2. Inlocuieste:
+"harta reluabila"
+unde risca ecou C08,
+cu:
+"structura reluabila" sau "harta functionala", doar daca e clar legata de workbook.
+
+3. In etapa 5, inlocuieste:
+"praguri de proces"
+cu:
+"conventii de proces"
+
+4. In toate locurile unde apare "rol", clarifica:
+"profil de competenta, nu ownership".
+
+5. Confirma explicit ca `FORMULATEXT`, `ROWS`, `COUNTA` si referintele live sunt:
+oglinzi de stare, nu reguli, nu validari, nu control C19.
+
+Dupa corectii:
+- re-ruleaza audit intern pe C08/C18/C19/C20;
+- verifica anti-SOP;
+- verifica filmabilitatea;
+- verifica zero em-dash;
+- pastreaza verdictul doar daca este justificat.
+
+## OUTPUT CERUT
+CLAUDE -> BRAIN
+
+Include:
+- ce ai schimbat;
+- ce riscuri ai inchis;
+- audit intern C08/C18/C19/C20;
+- verdict final:
+
+C17_BLUEPRINT_CONFIRMED
+
+sau
+
+C17_BLUEPRINT_NEEDS_REVISION
