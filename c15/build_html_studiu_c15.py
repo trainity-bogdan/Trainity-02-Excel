@@ -33,7 +33,7 @@ BODY = r'''<body>
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C15 · Sintetizare</div>
+  <div class="mobile-topbar-title">C15 · SINTEZĂ</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -47,7 +47,7 @@ BODY = r'''<body>
             <header class="cover">
         <div class="hero-visual">
           <img class="hero-visual-img" src="__HERO__" alt="Sintetizare C15: o pagina de raport coerenta din care se extrage o singura fraza, mesajul esential pe care pagina il dovedeste">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C15</span><span class="hov-object">SINTEZĂ</span></div>
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C15</span><span class="hov-object">MESAJUL ESENȚIAL</span></div>
         </div>
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cum transform o pagină într-o singură frază care contează?</span></div>
         <div class="hero-tiernav">
@@ -58,6 +58,7 @@ BODY = r'''<body>
       </header>
 
       <section class="study-intro-top">
+        <h1 class="cover-title">Cum să sintetizezi o pagină într-o singură frază</h1>
         <p class="hero-microbrief">Primești o pagină coerentă de la treapta de compunere: focar, ierarhie, traseu de citire. Totul e corect și totul se vede. Și decidentul tot întreabă: și ce-i cu asta? O pagină arată; nu spune. Mesajul esențial există în date, dar nu e formulat nicăieri. Aici îl extragi și îl scrii într-o singură frază pe care pagina o dovedește.</p>
         <div class="cover-miza">C15 nu rearanjează pagina și nu calculează nimic. Aici o pagină întreagă capătă o singură afirmație, headline-ul pe care restul paginii îl susține. Nu o cifră nouă, nu o cauză nouă, acelea vin gata din analiză, ci mesajul: ce trebuie să reții dintr-o privire. C15 formulează mesajul; încadrarea lui pentru decizie începe la treapta următoare.</div>
       </section>

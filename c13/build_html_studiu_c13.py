@@ -34,7 +34,7 @@ BODY = r'''<body>
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C13 · Vizualizare</div>
+  <div class="mobile-topbar-title">C13 · VIZUAL</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/18</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -48,7 +48,7 @@ BODY = r'''<body>
             <header class="cover">
         <div class="hero-visual">
           <img class="hero-visual-img" src="__HERO__" alt="Vizualizare C13: un rezultat corect produs de analiza capata o forma vizuala onesta, verificata contra cifrei brute">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C13</span><span class="hov-object">VIZUAL</span></div>
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C13</span><span class="hov-object">FORMA ADEVĂRATĂ</span></div>
         </div>
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Cum dau unui rezultat forma care îl face adevărat și vizibil dintr-o privire?</span></div>
         <div class="hero-tiernav">
@@ -59,6 +59,7 @@ BODY = r'''<body>
       </header>
 
       <section class="study-intro-top">
+        <h1 class="cover-title">Cum să dai unui rezultat o formă care nu minte</h1>
         <p class="hero-microbrief">Analiza a dat răspunsul: un rezultat corect, citit din model. Dar răspunsul trăiește în model, mut pentru oricine altcineva. Un decident nu hotărăște privind un Power Pivot. Înainte să fie văzut, rezultatul are nevoie de o formă. Și forma nu e neutră: aceeași cifră, desenată altfel, spune altceva.</p>
         <div class="cover-miza">C13 nu descoperă răspunsul, îl primește de la analiză și îl face vizibil pentru decizie. Aici un rezultat corect capătă forma vizuală care îl arată adevărat dintr-o privire: tipul potrivit, axa onestă, scala declarată, codarea curată. Nu un grafic frumos, un obiect vizual onest, care produce aceeași concluzie ca cifra brută din care vine. C13 construiește obiectul adevărat; așezarea lui în pagină începe la treapta următoare.</div>
       </section>

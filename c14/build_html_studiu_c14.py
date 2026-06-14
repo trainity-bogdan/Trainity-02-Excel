@@ -33,7 +33,7 @@ BODY = r'''<body>
 <div class="top-progress"><div class="top-progress-fill" id="topProgressFill"></div></div>
 
 <div class="mobile-topbar" role="banner">
-  <div class="mobile-topbar-title">C14 · Compunere</div>
+  <div class="mobile-topbar-title">C14 · COMPOZIȚIE</div>
   <div class="mobile-topbar-progress" id="mobileTopProgress">0/11</div>
   <button class="mobile-nav-toggle" id="mobileToggleBtn" onclick="toggleMobileNav()" aria-label="Meniu"></button>
 </div>
@@ -47,7 +47,7 @@ BODY = r'''<body>
             <header class="cover">
         <div class="hero-visual">
           <img class="hero-visual-img" src="__HERO__" alt="Compunere C14: mai multe obiecte vizuale oneste asezate spatial intr-o pagina de raport cu focar, ierarhie si traseu de citire">
-          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C14</span><span class="hov-object">COMPOZIȚIE</span></div>
+          <div class="hero-visual-overlay"><span class="hov-kicker">OBIECTUL CONSTRUCȚIEI · C14</span><span class="hov-object">ORDINEA PRIVIRII</span></div>
         </div>
         <div class="hero-question"><span class="hero-question-label">ÎNTREBAREA CONSTRUCȚIEI</span><span class="hero-question-text" data-locked="1">Ce vede ochiul întâi?</span></div>
         <div class="hero-tiernav">
@@ -58,6 +58,7 @@ BODY = r'''<body>
       </header>
 
       <section class="study-intro-top">
+        <h1 class="cover-title">Cum să compui o pagină care se citește dintr-o privire</h1>
         <p class="hero-microbrief">Ai obiecte vizuale oneste, fiecare adevărat singur, primite de la treapta de vizualizare. Le pui pe o pagină. Și decidentul tot nu vede ce contează. Nimic nu e fals, dar pagina induce în eroare: aceleași obiecte, altă așezare, altă decizie. O pagină nu e un container, e un traseu al privirii.</p>
         <div class="cover-miza">C14 nu desenează obiectul și nu formulează mesajul. Aici mai multe obiecte vizuale oneste se așază spațial într-o pagină de raport: un focar atins primul, o ierarhie care spune ce e principal, un traseu de citire pentru decizie. Nu o pagină frumoasă, o pagină în care ochiul prinde întâi ce contează. C14 organizează ordinea privirii; extragerea mesajului începe la treapta următoare.</div>
       </section>
