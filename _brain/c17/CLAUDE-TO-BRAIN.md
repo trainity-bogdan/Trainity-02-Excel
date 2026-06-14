@@ -1,7 +1,19 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_BLUEPRINT_FROZEN_READY_FOR_GENERATION (Blueprint înghețat în sistem prin CERERE SYSTEM; pregătit pentru generare controlată)
+C17_GENERATION_IN_PROGRESS (1/6 artefacte: Date_MASTER-C17 cu `_SISTEM` GENERAT + verificat; raman 4 HTML + FILM)
+
+## GENERATION PROGRESS (MANDAT_GENERARE_CONTROLATA_C17)
+Mediu pregatit: openpyxl 3.1.5 + python-docx instalate. `pre_generation_check` legacy (cauta `SISTEM_TRAINITY.md`, fisier abandonat la C13-C16) = neaplicabil; fluxul real = scripturi `build_*_c17.py` in `c17/` (ca C13-C16) + gate_v20 (B2) + audit_sync (B3).
+
+- [x] **Date_MASTER-C17.xlsx** (`build_date_master_c17.py`, commit f6c5d86): chain din C16, suma conservata exact 7986019.38 (R-V02.14). Foaia `_SISTEM` = harta functionala nativ-Excel: 15 componente reale prin HYPERLINK + COUNTA, named ranges SRC_VANZARI + PARAM_*, 7 pasi de reluare (cu „candidat C18"), FORMULATEXT(Livrare!B9), START AICI + punct de reluare + test anti-SOP. 49 formule vii; se rup scoase din workbook (#REF!). Garda OGLINDA respectata; zero termeni interzisi (singurul „owner" = negatia „NU ownership").
+- [ ] HTML-Studiu-Excel-17-Sistematizare.html (COPY+MODIFY din c16, narativ C17: 6 etape/18 pasi + 6 anomalii + prompturi + final-labels)
+- [ ] HTML-Editor-Studiu (companion)
+- [ ] HTML-Video + HTML-Editor-Video (base64 inline)
+- [ ] FILM-Excel-17-Sistematizare.docx
+- [ ] gate_v20 (B2) PASS + audit_sync (B3) zero drift, dupa toate artefactele
+
+Foundatia (`_SISTEM`, partea cea mai noua/riscanta) e gata si verificata. Restul = build scripts substantiale, in lucru.
 
 ## SURSA
 Mandat BRAIN `MANDAT_REVIZUIRE_BLUEPRINT_C17` (via sync), pe blueprint-ul propus la `MANDAT_SLUG_BLUEPRINT_C17`. Doar `_brain/c17/CLAUDE-TO-BRAIN.md`. Fără sistem / artefacte / folder c17 / HTML / Date_MASTER / build / FILM / C18.
