@@ -1,12 +1,33 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SPEC_11_SLOT_C20_PROPUS (SLUG + SPEC 11-slot DELEGAREA, pe deciziile LOCK BRAIN; gata de freeze SPEC dupa confirmare ARHITECT)
+SPEC_C20_PREGATIT_PENTRU_FREEZE (SPEC 11-slot DELEGAREA APROBAT de BRAIN; marcat gata de freeze; astept confirmarea finala ARHITECT. Blueprint NEGENERAT - asteapta mandat separat.)
 
 ## SURSA
 Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CERE_SLUG_SPEC_11_SLOT_C20` (commit cf770df). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
+
+---
+
+## CONFIRMARE FREEZE-READINESS (mandat APROBA_FREEZE_SPEC_C20, commit 930b4cd)
+
+BRAIN a aprobat SPEC 11-slot C20 pentru freeze. Confirm:
+
+- **SPEC marcat PREGATIT PENTRU FREEZE.** Valori LOCK aprobate, restated compact pentru un record de freeze auto-continut:
+  - SLUG `Excel-20-Delegare` · MIZA HERO `DELEGAREA SISTEMULUI DE LUCRU` · CUVANT `AUTONOMIE` · VERB `DELEG`
+  - INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
+  - MANTRA: Nu impart sarcini. Deleg sistemul.
+  - WOW: Apesi «scoate autorul», si sistemul nu se rupe: workbook-ul confirma singur ca alt rol il poate continua.
+  - MOTTO (candidat treapta T5): Pleci, si munca nu mai e a ta.
+  - AHA: Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+  - ARTEFACT: `_DELEGARE` (test viu: AUTOR_ACTIV=NU + STATUS calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM)
+  - TENSIUNE CENTRALA: autorul dispare, sistemul continua.
+- **Blueprint NEGENERAT.** Respect mandatul: blueprint conceptual C20 doar la mandat separat.
+- **Garde pentru blueprint INREGISTRATE** (le apar la mandatul de blueprint): `_DELEGARE` viu nu pasiv · AUTOR_ACTIV=NU test central · STATUS calculat nu bifat · rol nu persoana · granita vs C19 / C18 / HR / documentare verbala.
+- **Poarta ramasa:** confirmarea finala ARHITECT pentru a trece SPEC din "pregatit pentru freeze" in FROZEN / LOCKED. Freeze-ul de SPEC e prerogativa ARHITECT (B1/B2), nu il declar eu.
+
+SPEC-ul complet aprobat ramane mai jos, neschimbat.
 
 ---
 
