@@ -1,79 +1,85 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-EXECUTA_SEED_C20_ACUM
+CONSOLIDEAZA_SEED_C20_DUPA_AUDIT
 
-## CONTEXT LOCKED
+## DECIZII
+
+C20 NU depinde de C19.
+
+Artefact C20 = _DELEGARE.
+Nu folosi _OWNERSHIP ca nume principal.
+Proprietate operationala ramane concept intern.
+
 C20 = DELEGAREA.
 T5 = AUTONOMIE.
 CUVANT LOCKED = AUTONOMIE.
 VERB LOCKED = DELEG.
 
-C20 NU depinde de C19.
-C20 nu asteapta confirmare C19.
-C20 porneste direct cu identitate proprie.
-
-## IDENTITATE
 C20 scoate autorul din PROPRIETATE.
-C20 este predarea controlabila a sistemului de lucru, demonstrabila in workbook.
 
-C20 nu este management generic.
-C20 nu este HR.
-C20 nu este predare verbala.
-C20 nu este documentatie pasiva.
-C20 nu este lista de instructiuni.
+## CE TREBUIE INCHIS
 
-## GRANITE
-C17 = sistemul functioneaza repetabil.
-C18 = sistemul ruleaza fara efort manual.
-C19 = sistemul semnaleaza si controleaza abateri.
-C20 = alt rol poate detine si continua sistemul fara autor.
+### M1
+Seed-ul actual are manifestare filmabila slaba.
+Claude trebuie sa propuna un test live in workbook, nu tabel pasiv.
 
-## INTREBARE CENTRALA
-Cum poate altcineva sa detina si sa continue sistemul fara autor?
+Testul trebuie sa arate ca autorul este scos din sistem si ca alt rol poate continua.
+Include:
+- stare autor scos;
+- rol nou activ;
+- verificare zero dependenta author-only;
+- acces validat;
+- zone interzise blocate;
+- escaladare functionala;
+- status final calculat: nepredat / partial / delegat / autonom.
 
-## MANDAT DIRECT
-Executa acum SEED conceptual C20.
-Scrie raportul complet in _brain/c20/CLAUDE-TO-BRAIN.md.
-Nu verifica C19.
-Nu conditiona C20 de C19.
-Nu cere clarificari.
-Nu lasa raport EMPTY.
+### M2
+Nomenclatura se inchide pe _DELEGARE.
+Nu _OWNERSHIP.
+Evita formule mixte romana-engleza.
+Testeaza formule romanesti:
+- Nu deleg sarcini. Deleg proprietatea sistemului.
+- Nu deleg munca. Deleg sistemul.
+- Nu predau explicatii. Deleg continuitatea.
 
-## RAPORT OBLIGATORIU
-Include aceste sectiuni:
+## REMAPARE CANONICA
+Urmatorul raport trebuie sa fie SEED C20 consolidat dupa audit, nu SPEC final.
 
-1. DEFINITIE C20
-Definitie scurta, precisa, memorabila.
+Foloseste 11-slot canonic:
+1. SLUG
+2. INTRIGA
+3. PROBLEMELE
+4. MIZA
+5. MANTRA
+6. WOW
+7. MOTTO
+8. FENOMENE
+9. STEP-TITLES
+10. GRESEALA
+11. AHA
 
-2. AXA DRAMATICA
-Ce se rupe in business cand sistemul ramane proprietatea autorului.
+Motto candidat:
+Pleci, si munca nu mai e a ta.
 
-3. GRANITA C19-C20
-Diferenta dintre control si ownership, fara dependenta de C19.
+AHA candidat:
+Nu o tin. O predau.
+Testeaza si variante cu verb locked:
+Nu o tin. O deleg.
+Nu o pastrez. O deleg.
 
-4. 11 SLOTURI PRELIMINARE
-HERO.
-BOMBA.
-PROMISIUNE.
-PROBLEME.
-MECANISM.
-DEMO.
-WOW.
-MANTRA.
-MOTTO.
-FENOMENE.
-STEP-TITLES.
+## MANDAT
+Scrie in _brain/c20/CLAUDE-TO-BRAIN.md:
+SEED C20 CONSOLIDAT DUPA AUDIT
 
-5. ARTEFACT WORKBOOK
-Propune structura conceptuala pentru _DELEGARE sau _OWNERSHIP.
-Trebuie sa dovedeasca rolul care preia, responsabilitatea transferata, drepturile de acces, punctele de interventie, limitele, escaladarea, verificarea predarii si continuitatea fara autor.
-
-6. RISCURI DE CONTAMINARE
-Ce trebuie interzis in C20.
-
-7. RECOMANDARE
-Spune daca SEED-ul este suficient pentru SPEC sau cere inca o runda BRAIN.
+Sectiuni cerute:
+1. Verdict scurt
+2. Inchidere M1
+3. Inchidere M2
+4. 11-slot canonic propus
+5. Artefact _DELEGARE workbook-native
+6. Riscuri ramase
+7. Recomandare: gata de SPEC sau inca o runda BRAIN
 
 ## INTERDICTII
 Nu genera HTML.
@@ -81,4 +87,4 @@ Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
 Nu modifica artefacte de constructie.
-Nu face commit-uri in afara _brain/c20 daca nu ti se cere explicit.
+Nu face commit-uri in afara _brain/c20 fara cerere explicita.
