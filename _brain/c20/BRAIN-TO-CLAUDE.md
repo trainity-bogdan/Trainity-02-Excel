@@ -1,15 +1,10 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-CONSOLIDEAZA_SEED_C20_DUPA_AUDIT
+CERE_SLUG_SPEC_11_SLOT_C20
 
-## DECIZII
-
+## LOCK C20
 C20 NU depinde de C19.
-
-Artefact C20 = _DELEGARE.
-Nu folosi _OWNERSHIP ca nume principal.
-Proprietate operationala ramane concept intern.
 
 C20 = DELEGAREA.
 T5 = AUTONOMIE.
@@ -18,35 +13,38 @@ VERB LOCKED = DELEG.
 
 C20 scoate autorul din PROPRIETATE.
 
-## CE TREBUIE INCHIS
+Artefact C20 = _DELEGARE.
+Nu _OWNERSHIP ca nume principal.
+Proprietate operationala ramane concept intern in artefact.
 
-### M1
-Seed-ul actual are manifestare filmabila slaba.
-Claude trebuie sa propuna un test live in workbook, nu tabel pasiv.
+## DECIZII FORMULARI
 
-Testul trebuie sa arate ca autorul este scos din sistem si ca alt rol poate continua.
-Include:
-- stare autor scos;
-- rol nou activ;
-- verificare zero dependenta author-only;
-- acces validat;
-- zone interzise blocate;
-- escaladare functionala;
-- status final calculat: nepredat / partial / delegat / autonom.
+MANTRA LOCK:
+Nu impart sarcini. Deleg sistemul.
 
-### M2
-Nomenclatura se inchide pe _DELEGARE.
-Nu _OWNERSHIP.
-Evita formule mixte romana-engleza.
-Testeaza formule romanesti:
-- Nu deleg sarcini. Deleg proprietatea sistemului.
-- Nu deleg munca. Deleg sistemul.
-- Nu predau explicatii. Deleg continuitatea.
+AHA LOCK:
+Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
 
-## REMAPARE CANONICA
-Urmatorul raport trebuie sa fie SEED C20 consolidat dupa audit, nu SPEC final.
+MIZA HERO LOCK:
+DELEGAREA SISTEMULUI DE LUCRU
 
-Foloseste 11-slot canonic:
+MOTTO CANDIDAT PRINCIPAL:
+Pleci, si munca nu mai e a ta.
+
+TEST FILMABIL CENTRAL:
+AUTOR_ACTIV = NU + status calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+
+TENSIUNE CENTRALA:
+Autorul dispare, sistemul continua.
+
+## MANDAT DIRECT
+Claude, pregateste urmatorul livrabil:
+SLUG + SPEC 11-slot C20.
+
+Scrie rezultatul in _brain/c20/CLAUDE-TO-BRAIN.md.
+
+## SPEC 11-SLOT CERUT
+Include exact:
 1. SLUG
 2. INTRIGA
 3. PROBLEMELE
@@ -59,27 +57,12 @@ Foloseste 11-slot canonic:
 10. GRESEALA
 11. AHA
 
-Motto candidat:
-Pleci, si munca nu mai e a ta.
-
-AHA candidat:
-Nu o tin. O predau.
-Testeaza si variante cu verb locked:
-Nu o tin. O deleg.
-Nu o pastrez. O deleg.
-
-## MANDAT
-Scrie in _brain/c20/CLAUDE-TO-BRAIN.md:
-SEED C20 CONSOLIDAT DUPA AUDIT
-
-Sectiuni cerute:
-1. Verdict scurt
-2. Inchidere M1
-3. Inchidere M2
-4. 11-slot canonic propus
-5. Artefact _DELEGARE workbook-native
-6. Riscuri ramase
-7. Recomandare: gata de SPEC sau inca o runda BRAIN
+## CERINTE SPEC
+Pastreaza artefactul _DELEGARE.
+Pastreaza testul viu, nu tabel pasiv.
+Pastreaza rolul, nu persoana nominala.
+Pastreaza diferenta fata de C19: C19 controleaza datele, C20 transfera sistemul.
+Pastreaza diferenta fata de C18: C18 merge singur, C20 poate fi detinut de altcineva.
 
 ## INTERDICTII
 Nu genera HTML.
