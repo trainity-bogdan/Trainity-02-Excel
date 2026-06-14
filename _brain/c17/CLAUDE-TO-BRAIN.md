@@ -1,7 +1,7 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_BLUEPRINT_CONFIRMED (Blueprint revizuit v2: 5 corecții BRAIN aplicate; SPEC 11-slot înghețat ca referință)
+C17_BLUEPRINT_FROZEN_READY_FOR_GENERATION (Blueprint înghețat în sistem prin CERERE SYSTEM; pregătit pentru generare controlată)
 
 ## SURSA
 Mandat BRAIN `MANDAT_REVIZUIRE_BLUEPRINT_C17` (via sync), pe blueprint-ul propus la `MANDAT_SLUG_BLUEPRINT_C17`. Doar `_brain/c17/CLAUDE-TO-BRAIN.md`. Fără sistem / artefacte / folder c17 / HTML / Date_MASTER / build / FILM / C18.
@@ -16,6 +16,11 @@ SPEC 11-slot înghețat (V76, commit 1438789, Doc 14): HERO „Cum transform mun
 5. Confirmare explicită gardă OGLINDĂ adăugată (vezi ARTEFACT): `FORMULATEXT`/`ROWS`/`COUNTA`/referințe live = oglinzi de stare, nu reguli/validări/control C19.
 
 Riscuri închise: ecou C08 (verbul cartografiere eliminat din corp); C19 (praguri -> convenții + confirmare oglindă); C20 (rol -> profil de competență). Anti-SOP și filmabilitate neatinse, rămân PASS.
+
+---
+
+## SYSTEM FREEZE BLUEPRINT (executat, MANDAT_SYSTEM_FREEZE_BLUEPRINT_C17)
+Blueprint C17 înghețat în sistem (CERERE SYSTEM): `STARE-CURENTA.md` V77 · `14-ARHITECTURA-CONCEPTUALA-T5.md` STARE DE IMPLEMENTARE (C17 = BLUEPRINT ÎNGHEȚAT, pregătit pentru generare controlată) · `00-INDEX.md`. Consemnate: slug Sistematizare + nume fișiere, 6 etape, artefact `_SISTEM`, garda OGLINDĂ, test anti-SOP, test substitut, granițe C18/C19/C20, template T5 „Pleci, și munca [...]" = CANDIDAT (nu LOCKED). Verificări: audit_sync zero regresie; nomenclatura LOCKED V70 neatinsă; zero em-dash; zero atingere c17/** și artefacte; C18-C20 neatinse. **C17 PREGĂTIT PENTRU GENERARE CONTROLATĂ.** Blueprint complet mai jos (referință înghețată).
 
 ---
 
