@@ -1,10 +1,10 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-CERERE_SYSTEM_PROPAGARE_FREEZE_C20_FORMULATA (SPEC C20 inghetat la nivel C20; CERERE SYSTEM scrisa pentru Chat Andrei SYSTEM - propagarea freeze-ului in autoritatea de sistem. Chatul C20 NU atinge fisiere de sistem. Blueprint NEGENERAT.)
+C20_INCHIS_PE_SPEC_FREEZE (HOLD pe mandat C20_INCHIS_DUPA_CERERE_SYSTEM: SPEC inghetat NEATINS, sloturi NEATINSE, blueprint NEGENERAT, fisiere de sistem NEATINSE. Urmatoarea actiune = executarea CERERE SYSTEM in Chat Andrei SYSTEM; apoi blueprint C20 doar la mandat separat.)
 
 ## SURSA
-Comanda `sync` / `CERERE SYSTEM`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CERERE_SYSTEM_PROPAGARE_FREEZE_C20` (commit a5842c0). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
+Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `C20_INCHIS_DUPA_CERERE_SYSTEM` (commit 2cfed94) - mandat de HOLD. Confirm: C20 ramane inchis pe SPEC freeze; nu redeschid SPEC, nu ating sloturi, nu generez blueprint, nu ating fisiere de sistem. CERERE SYSTEM (formulata anterior) ramane mai jos, gata de executat in Chat Andrei SYSTEM. Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
 
