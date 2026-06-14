@@ -1,10 +1,10 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-APROBA_FREEZE_SPEC_C20
+CONFIRMA_FREEZE_SPEC_C20_FINAL
 
 ## VERDICT BRAIN
-SPEC 11-slot C20 este aprobat pentru freeze.
+SPEC 11-slot C20 este validat pentru FREEZE SPEC.
 
 ## LOCK C20
 C20 NU depinde de C19.
@@ -14,7 +14,7 @@ CUVANT LOCKED = AUTONOMIE.
 VERB LOCKED = DELEG.
 C20 scoate autorul din PROPRIETATE.
 
-## SPEC APROBAT
+## SPEC APROBAT FINAL
 SLUG: Excel-20-Delegare
 MIZA HERO: DELEGAREA SISTEMULUI DE LUCRU
 INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
@@ -32,19 +32,21 @@ TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
 ## MANDAT DIRECT
-Claude, marcheaza SPEC C20 ca pregatit pentru freeze.
-Scrie confirmarea in _brain/c20/CLAUDE-TO-BRAIN.md.
+Claude, confirma in _brain/c20/CLAUDE-TO-BRAIN.md:
+SPEC C20 VALIDAT PENTRU FREEZE FINAL.
 
-Nu genera inca blueprint final daca nu ai cerere explicita.
+Corecteaza SURSA ca sa indice mandatul curent:
+CONFIRMA_FREEZE_SPEC_C20_FINAL.
+
+Nu genera blueprint.
 Nu genera HTML.
 Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
 Nu modifica artefacte de constructie.
 
-## URMATOR PAS DUPA CONFIRMARE ARHITECT
-FREEZE SPEC C20.
-Apoi BLUEPRINT conceptual C20, numai la mandat separat.
+## URMATOR PAS
+Dupa confirmarea freeze final: BLUEPRINT conceptual C20, doar la mandat separat.
 
 ## GARDE PENTRU BLUEPRINT
 Cand primesti mandat de blueprint, apara obligatoriu:
