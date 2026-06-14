@@ -1,55 +1,56 @@
 # BRAIN -> CLAUDE C18
 
 ## STATUS
-REVIZIE_SEED_C18
+SPEC_C18_CERUT
 
 ## CONTEXT
 C18 AUTOMATIZAREA. T5 AUTONOMIE. CUVANT MOTOR. VERB AUTOMATIZEZ.
 
-SEED C18 propus de Claude este conceptual valid ca baza.
+Revizia SEED C18 este aprobata. Treci la SPEC 11-slot C18 conceptual, fara livrabile.
 
-Aprobate ca directie:
-- identitatea C18 = proiectarea retragerii omului din executia repetitiva
-- axa MOTOR + AUTOMATIZEZ + scoaterea autorului din EFORT
-- C17 = forma reluabila pornita de om
-- C18 = miscare fara om in executia repetitiva
-- C04 = actualizare date
-- C19 = autocontrol
-- C20 = ownership
-- intrebarea centrala: Ce din munca asta poate rula fara sa o fac eu de fiecare data, si cum ma scot din bucla?
-- BOMBA principala: Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data.
-- MANTRA principala: Nu o execut. O las sa ruleze.
-- criteriul de filmabilitate: testul mainile jos
+## DECIZII BRAIN PENTRU SPEC
 
-## MANDAT DE REVIZIE
+1. HERO:
+Cum fac munca sa mearga mai departe fara mana mea?
 
-Pastreaza SEED C18 ca baza valida si revizuieste punctual:
+2. MIZA HERO:
+AUTOMATIZAREA MUNCII RECURENTE
 
-1. Propune 3 variante de descriptor HERO pentru C18:
-- una tehnica
-- una memorabila
-- una polarizanta
+3. BOMBA:
+Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data.
 
-2. Propune 3 variante de MOTTO care evita promisiunea de autonomie totala:
-- sa transmita retragerea autorului din executie
-- sa nu sugereze autocontrol C19
-- sa nu sugereze ownership C20
+4. MANTRA:
+Nu o execut. O las sa ruleze.
 
-3. Pastreaza BOMBA principala, dar ofera inca 2 alternative.
+5. MOTTO:
+Tu pleci din executie, lantul ramane in miscare.
 
-4. Defineste artefactul _AUTOMATIZARE in 3 fraze:
-- ce este
-- ce arata
-- ce nu este
+6. GRESEALA:
+Nu folosi formula Oamenii / Profesionistii.
+Propune o formula noua, specifica C18, despre confuzia dintre am sistem si nu mai trebuie sa execut.
 
-5. Clarifica diferenta C04 / C18:
-- C04 = refresh sau actualizare
-- C18 = lant repetitiv care ruleaza fara omul din executie
+7. AHA:
+Ce repeti manual la fiecare ciclu nu e o sarcina. E un motor care inca merge pe mana ta.
 
-6. Pregateste directia pentru SPEC 11-slot C18, fara generare.
+8. CINE DEVII:
+Nu mai esti omul care executa munca. Esti omul care o pune in miscare.
+
+9. PAYOFF:
+O munca pe care o porneai si o duceai manual la fiecare ciclu se executa acum fara mana ta.
+
+## TESTE DE PAZA
+
+- testul mainile jos;
+- anti-C04: elimina pasi, nu doar refresh;
+- anti-C19: ruleaza, dar nu se autocontroleaza;
+- anti-C20: nu desemneaza proprietar.
+
+## CERERE
+
+Pregateste SPEC 11-slot C18 conceptual.
 
 ## LIMITA
-Nu genera livrabile.
+Fara HTML. Fara Date_MASTER. Fara FILM. Fara alte livrabile.
 
 ## RAPORT
-Scrie revizia in _brain/c18/CLAUDE-TO-BRAIN.md.
+Scrie SPEC-ul conceptual in _brain/c18/CLAUDE-TO-BRAIN.md.
