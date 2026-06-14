@@ -9,13 +9,13 @@ C16 = LIVRAREA. Verb: a LIVRA. Axa: RAPORT DECISION-READY.
 C16 = foaie-raport de decizie (raportul devine obiect de decizie), NU sinteza (C15),
 NU layout (C14), NU sistem recurent (C17), NU logistica.
 
-Strategie (ca la C13 din C12): deschid Date_MASTER-C14.xlsx (pastreaza TOATE foile,
+Strategie (re-chain post-audit T4): deschid Date_MASTER-C15.xlsx (pastreaza TOATE foile,
 formulele si stilurile intacte), rescriu START pentru C16 si ADAUG foaia 'Livrare'.
 Vanzari ramane neatins -> suma conservata cap-coada (R-V02.14).
 
-NOTA chain: Date_MASTER-C15.xlsx NU exista (C15 pe HOLD). Chainez din C14 (cel mai recent
-disponibil). Foaia 'Sintetizare' (C15) lipseste din lant; la generarea C15 + re-chain,
-C16 o va mosteni. Suma e conservata identic (T4 nu schimba Vanzari).
+NOTA chain (REPARAT post-audit T4): chainez din Date_MASTER-C15.xlsx, care contine foaia
+'Sinteza' (C15). Lantul T4 e complet: Vizualizare (C13) -> Compunere (C14) -> Sinteza (C15)
+-> Livrare (C16). Suma e conservata identic (T4 nu schimba Vanzari).
 
 Garda C16: workbook = SUPORT pentru construirea foii-raport de decizie (cadru de decizie
 peste agregatul real + ce intra in decizie vs anexa + verificare self-standing + 6 reguli).
@@ -29,7 +29,7 @@ from openpyxl.styles import Font, PatternFill
 from collections import defaultdict
 import os
 
-SRC = 'c14/Date_MASTER-C14.xlsx'
+SRC = 'c15/Date_MASTER-C15.xlsx'
 OUT = 'c16/Date_MASTER-C16.xlsx'
 SUMA_ASTEPTATA = 7986019.38
 
@@ -100,6 +100,7 @@ def main():
         ['  Interpretare   explicatia mostenita de la C12'],
         ['  Vizualizare    forma onesta mostenita de la C13'],
         ['  Compunere      organizarea paginii mostenita de la C14'],
+        ['  Sinteza        mesajul esential mostenit de la C15'],
         ['  Livrare        SUPORT: cadru de decizie + ce intra/anexa + verificare + 6 reguli'],
         [],
         ['Exercitiul:'],
@@ -115,7 +116,7 @@ def main():
     ]:
         ws.append(line)
     ws['A1'].font = TITLE
-    for rr in (3, 13, 21):
+    for rr in (3, 13, 22):
         ws['A%d' % rr].font = SECT
 
     # --- foaia Livrare (suport pentru foaia-raport de decizie) ---
@@ -219,8 +220,8 @@ def main():
     print('  top_cat=%s (%.2f, %.1f%%) | a doua=%s (%.2f)'
           % (top_cat, top_val, pondere_top, second_cat, second_val))
     assert abs(suma - SUMA_ASTEPTATA) < 0.01, 'SUMA NU se conserva'
-    assert 'Sintetizare' not in out.sheetnames, 'verificare: Sintetizare lipseste (C15 negenerat) - chain din C14'
-    print('  OK: suma conservata, Livrare adaugata, T4 inchisa (chain din C14, C15-gap notat)')
+    assert 'Sinteza' in out.sheetnames, 'verificare: foaia Sinteza (C15) trebuie sa existe dupa re-chain'
+    print('  OK: suma conservata, Livrare adaugata, lant T4 complet (Vizualizare->Compunere->Sinteza->Livrare)')
 
 
 if __name__ == '__main__':
