@@ -453,6 +453,35 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nota_hero: BRAIN-CONFIRMED 08.06.2026. nume_hero_caps (MIZĂ HERO descriptor "DECIZIA GATA") confirmat de BRAIN C16: exprimă C16 ca LIVRARE, susține axa raport decision-ready, nu confundă cu C15 (sinteză) / C14 (layout) / C17 (sistematizare), nu sună logistic, compatibil cu "raportul care decide". Nu mai e provizoriu.
 - nota_treapta: C16 = ultima din T4 RAPORTARE; next (C17 SISTEMATIZAREA) = prima din T5 AUTONOMIE, de aici next_label TREAPTA 5.
 
+## IDENTITATE_TEHNICA C18 · AUTOMATIZAREA
+
+- cod: C18
+- treapta_nr: 5
+- treapta_nume: AUTONOMIE
+- treapta_pozitie: 2 din 4 (Sistematizare, Automatizare, Guvernare, Delegare)
+- nume_hero_caps_rand1: AUTOMATIZAREA
+- nume_hero_caps_rand2: MUNCII RECURENTE
+- nume_hero_caps: AUTOMATIZAREA MUNCII RECURENTE
+- nume_title_case: Automatizarea
+- nume_slug: Automatizare
+- input_filename: Date_MASTER-C17-Sistematizare.xlsx
+- output_filename: Date_MASTER-C18-Automatizare.xlsx
+- meta_val_treapta: SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)
+- next_cod: C19
+- next_nume_title: Guvernarea
+- next_label: TREAPTA 5 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C18 AUTOMATIZARE · MOTOR
+- topbar_text: Sistemul 02 - Excel · C18 · Automatizare
+- mobile_topbar: C18 · Automatizare
+- nav_brand_label: PACK 02 EXCEL · C18
+- nav_brand_title: AUTOMATIZAREA MUNCII RECURENTE
+- title_studiu: C18 · Automatizare · Trainity
+- title_video: C18 · AUTOMATIZARE · BROADCAST
+- localStorage_studiu: trainity_c18_study_v1
+- localStorage_video: trainity_c18_video_v1
+- nota_hero: BRAIN-CONFIRMED 14.06.2026 — MIZĂ HERO „AUTOMATIZAREA MUNCII RECURENTE" + CUVÂNT MOTOR aprobate de BRAIN (mandat C18_CONCEPTUAL_INCHIS_CONFIRMAT_BRAIN). LOCKED.
+- nota_treapta: C18 = a 2-a din T5 AUTONOMIE; next (C19 GUVERNAREA) = a 3-a din T5.
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination

@@ -2972,7 +2972,87 @@ Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria
 - vs C17 (sus): C17 sistematizează raportul în T5 AUTONOMIE (recurent, dashboard viu, automatizare); C16 livrează o dată un raport finit, nu construiește mecanismul. Handoff: "C16 predă decizia gata; C17 o face să ruleze singură."
 
 ## SPEC C17 - SISTEMATIZAREA   [Status: NEGENERAT]
-## SPEC C18 - AUTOMATIZAREA   [Status: NEGENERAT]
+## SPEC C18 - AUTOMATIZAREA   [Status: INGHETAT 14.06.2026]
+
+Axă: RETRAGEREA OMULUI DIN EXECUȚIA REPETITIVĂ printr-un lanț care rămâne în mișcare. Pilon T5: T5 consumă raportul livrabil (T4) și îl face să funcționeze fără autor; C18 = mișcarea (motorul), nu forma.
+Decizie locked: C18 = judecata retragerii (ce e destul de stabil/repetabil încât să nu mai treacă prin mâinile autorului la fiecare ciclu) materializată într-un lanț pornit dintr-un singur declanșator. NU tutorial de unealtă, NU refresh (C04), NU buton-ca-identitate, NU autocontrol (C19), NU ownership (C20).
+Nomenclatură LOCKED (NOMENCLATURA-LOCKED-SCARA V70): C18 AUTOMATIZAREA, cuvânt MOTOR, verb AUTOMATIZEZ. Iese din EFORT.
+Nota: pachet conceptual aprobat de BRAIN 14.06.2026 (SEED + SPEC 11-slot + SLUG Automatizare + blueprint 6x3 + artefact _AUTOMATIZARE), mandat C18_CONCEPTUAL_INCHIS_CONFIRMAT_BRAIN. IDENTITATE_TEHNICA C18 populată (L142).
+
+### 1. INTRIGA
+Ți-ai construit sistemul (C17): munca are o formă reluabilă, există în workbook. Și totuși, la fiecare ciclu, tot tu o pornești, pas cu pas. Paradoxul: ai un sistem și ești încă veriga manuală. „Am sistem" nu înseamnă „nu mai execut".
+
+### 2. PROBLEMELE
+- același lanț de pași se reface manual la fiecare ciclu;
+- autorul e gâtuirea: când e ocupat, ciclul așteaptă;
+- pașii manuali introduc variație și erori între cicluri;
+- timpul de judecată e mâncat de timpul de execuție;
+- forma reluabilă (C17) există, dar nimic nu se mișcă fără mâna omului.
+
+### 3. MIZA
+Câtă vreme fiecare ciclu trece prin mâinile autorului, omul devine plafonul: cât poate el executa, atât se face. Automatizarea mută execuția repetitivă pe un motor și eliberează omul pentru ce doar el poate face. Procesul nu se mai oprește când autorul e prins cu altceva.
+
+### 4. MANTRA / AHA
+MANTRA: "Nu o execut. O las să ruleze."
+AHA: "Ce repeți manual la fiecare ciclu nu e o sarcină. E un motor care încă merge pe mâna ta."
+
+### 5. MOTTO
+"Tu pleci din execuție, lanțul rămâne în mișcare."
+
+### 6. STEP-TITLES (18, în 6 etape x 3 pași)
+ETAPA 1 REALITATE
+1. Ai un sistem, dar tot tu îl pornești
+2. Același lanț de pași, refăcut cu mâna la fiecare ciclu
+3. „Am sistem" nu înseamnă „nu mai execut"
+ETAPA 2 INVESTIGAȚIE
+4. Care pași sunt destul de stabili ca să iasă din mâinile tale
+5. Promptul 1: ce merită automatizat și ce cere judecată (AI propune, omul decide)
+6. Ce e repetiție mecanică, ce rămâne decizie umană
+ETAPA 3 TRANSFORMARE
+7. Pașii stabili, legați într-un lanț
+8. Promptul 2: construiești declanșatorul unic al lanțului (omul corectează)
+9. O singură atingere pornește ce făceai în mulți pași
+ETAPA 4 VERIFICARE
+10. Un pas manual dispare, rezultatul rămâne corect
+11. Testul anti-refresh: ai eliminat un pas, nu doar ai adus date la zi
+12. Contorul de atingeri scade, ciclu după ciclu
+ETAPA 5 STABILIZARE
+13. Ce rămâne mâna omului, marcat explicit
+14. Lanțul rulează, dar nu se autocontrolează: aici intri tu
+15. Un motor care merge fără tine, cu un singur punct de intervenție
+ETAPA 6 CONFIRMARE
+16. Testul mâinile jos: declanșezi și nu mai atingi nimic
+17. Devii cel care pune în mișcare, nu cel care execută
+18. Motorul rulează; C19 îl poate guverna
+
+### 7. PROMPTURI Copilot (2)
+- Promptul 1, E2 INVESTIGAȚIE: ceri Copilot să clasifice pașii ciclului în „stabili și repetabili" (candidați de automatizare) vs „cer judecată umană", pe criteriul „se face la fel de fiecare dată?". AI propune lista, omul decide. NU configurează unealta, NU stabilește praguri (C19).
+- Promptul 2, E3 TRANSFORMARE: ceri Copilot să propună cum se leagă pașii stabili într-un lanț pornit dintr-un singur declanșator (secvență end-to-end). Omul corectează ordinea și ce rămâne manual. NU adaugă validări/alerte (C19), NU se rezumă la un refresh (C04).
+
+### 8. FINAL-LABELS (8)
+- „Am un sistem" nu e același lucru cu „nu mai execut".
+- Ce repeți manual la fiecare ciclu e un motor care încă merge pe mâna ta.
+- Automatizezi mișcarea, nu forma: forma e C17.
+- Un pas eliminat nu mai trece prin tine; un refresh doar aduce date la zi.
+- Lanțul pornește dintr-o singură atingere și se duce până la capăt fără tine.
+- Ce rămâne mâna omului se marchează, nu se ascunde.
+- C18 rulează, dar nu se autocontrolează: un eșec încă te cheamă.
+- Nu o execut. O las să ruleze.
+
+### 9. FENOMENE / OPERATII (6 perechi: execuție manuală -> retragere în lanț)
+Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria); cifrele rămân în Excel (R-V02.15).
+- Recalcularea agregatului pe categorie, refăcută manual la fiecare ciclu -> pasul intră în lanț și se execută la declanșare, fără mâna ta.
+- Importul și curățarea aceluiași set, repetate identic -> legate în lanț; un pas manual dispare, valoarea netă rămâne identică.
+- Reîmprospătarea datelor confundată cu automatizarea -> testul: ai eliminat un pas din lanț, nu doar ai adus la zi data facturii (refresh = C04).
+- Pasul care cere judecată (ex. o alegere pe cantitate) -> marcat ca intervenție minimă, rămâne mâna omului (granița C19).
+- Numărul de atingeri pe ciclu -> scade vizibil între ciclul 1 și ciclul 2, dovada retragerii.
+- Lanțul pornit dintr-o singură atingere -> se duce până la capăt fără intervenție, mai puțin punctul minim marcat.
+
+### GRANIȚE
+- vs C04: C04 = refresh/actualizarea unui set; C18 = elimină pași din lanțul end-to-end ca să iasă omul din execuție. Refresh poate fi un pas-mijloc, nu identitatea.
+- vs C17 (jos): C17 = forma reluabilă pornită de om; C18 = mișcarea fără om. C18 nu definește structura, o pune în mișcare. Handoff: „C17 predă forma reluabilă; C18 o face să ruleze fără mâini."
+- vs C19 (sus): C19 = autocontrol (praguri, validări, excepții); C18 rulează, dar nu se autoguvernează: un eșec încă cheamă omul. Handoff: „C18 predă motorul care rulează; C19 îl face să se țină singur."
+- vs C20: C20 = ownership/predarea controlului; C18 = mișcare tehnică, nu desemnare de proprietar.
 ## SPEC C19 - GUVERNAREA   [Status: NEGENERAT]
 ## SPEC C20 - DELEGAREA   [Status: NEGENERAT]
 
