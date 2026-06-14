@@ -256,16 +256,16 @@ Regula care ține cele 4 construcții T3 coerente și ne-contaminate. Două cate
 - **Verbe de treaptă:** sistematizez · automatizez · guvernez · deleg.
 - **Permis:** a transforma o livrare unică într-un sistem repetabil (C17); a-l face să ruleze fără efortul autorului (C18); a-i da reguli care îl țin corect fără supraveghere (C19); a preda responsabilitatea ca sistemul să lucreze fără autor (C20).
 - **Interzis:** a reface analiza T3 sau designul vizual T4 ca lecție nouă; T5 industrializează ce există, nu naște conținut nou.
-- **Delimitare C18 vs C04 (LOCKED):** C04 NORMALIZARE = automatizarea curățării/refacerii unui SET de date prin flux (teritoriul „Apăs Refresh"). C18 AUTOMATIZARE = automatizarea LANȚULUI operațional end-to-end, ca întregul sistem să ruleze fără autor. „Apăs Refresh" NU e identitate T5; e teritoriu C04.
+- **Delimitare C18 vs C04 (LOCKED, rafinat faza 1):** distincție de NATURĂ, nu de scară. **C04 = actualizarea unui SET de date** prin flux (Refresh simplu = teritoriul C04). **C18 = scoaterea omului din LANȚUL de execuție al muncii repetitive** (lanț repetabil, controlat, documentat, cu intervenție umană minimă; obiect = procesul, nu setul). C18 NU e Power Automate / scheduler / Refresh ca IDENTITATE, dar POATE folosi mecanisme tehnice ca MIJLOC al retragerii omului. „Apăs Refresh" ca identitate = C04; un Refresh orchestrat ca verigă într-un lanț = mijloc legitim în C18.
 
 **Nuanța deciziei (LOCKED):** decizia UMANĂ stă între T4 și T5 (omul citește raportul T4 și hotărăște = consumatorul pachetului, în afara construcțiilor). Sistemul care rulează și se autoguvernează fără autor = T5 AUTONOMIE.
 
 **Spina T5 (LOCKED, autoritate = doc 14):** autorul iese progresiv din muncă — C17 din OCAZIE · C18 din EFORT · C19 din ATENȚIE · C20 din PROPRIETATE.
 
-**Datorii conceptuale T5 — ÎNCHISE (freeze SPEC conceptual, audit „Testul concediului" = PASS):** cele 6 riscuri (C17/C18 formă vs mișcare · C18/C04 lanț vs set · C19/babysitting · C19/C20 reguli vs predarea controlului · T4/T5 act unic vs sistem · definiția autonomiei fără infrastructură) sunt închise prin distincții structurale. Detaliul complet = `14-ARHITECTURA-CONCEPTUALA-T5.md` (autoritate conceptuală T5).
+**Datorii conceptuale T5 ÎNCHISE · datorii de MANIFESTARE Excel DESCHISE la seed (rafinat faza 1):** cele 6 riscuri conceptuale (C17/C18 formă vs mișcare · C18/C04 lanț vs set · C19/babysitting · C19/C20 reguli vs predarea controlului · T4/T5 act unic vs sistem · definiția autonomiei fără infrastructură) sunt închise prin distincții structurale; audit „Testul concediului" = PASS pe autonomie-rezultat. **T5 e blindată CONCEPTUAL, NU „complet blindată":** fiecare C17-C20 datorează la seed un **artefact vizibil distinct în workbook** (C17 `_SISTEM` · C18 `_AUTOMATIZARE` · C19 `_GUVERNARE` · C20 `_DELEGARE`/`_OWNERSHIP`), ca granițele conceptuale să se vadă și în fișier. Detaliul complet + testul de manifestare = `14-ARHITECTURA-CONCEPTUALA-T5.md` (autoritate conceptuală T5).
 
 **Obligații de autorare T5 (rămân deschise, se onorează la seed C17-C20; NU sunt de nomenclatură):**
-- C18 se autorează ca JUDECATĂ („ce merită să ruleze fără mine / cum mă retrag"), nu ca mecanism; garda „Apăs Refresh = C04" se respectă.
+- C18 se autorează ca JUDECATĂ de retragere („ce merită să ruleze fără mine / cum mă retrag din execuția repetitivă"), nu ca identitate de mecanism; „Apăs Refresh" ca IDENTITATE = C04, dar C18 poate folosi un Refresh orchestrat / script / trigger ca MIJLOC.
 - intrarea în T5 își asumă narativ maturizarea de rol analist -> constructor de sisteme.
 - AHA-urile C17-C20 sunt CANDIDATE; se confirmă (lock S5) la seed, în gramatica de treaptă.
 - autonomia se definește prin independența de autor, NU prin cloud/sincronizare/refresh/Power Automate/infrastructură.

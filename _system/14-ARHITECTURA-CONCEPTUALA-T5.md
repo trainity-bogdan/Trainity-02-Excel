@@ -5,6 +5,7 @@
 > Acest document explică treapta pentru chat-uri viitoare. Înghețat prin confirmare ARHITECT (freeze SPEC conceptual T5).
 > Oglinda lui `11-ARHITECTURA-CONCEPTUALA-T2.md` (T2) și `12-ARHITECTURA-CONCEPTUALA-T3.md` (T3).
 > Nomenclatura C17-C20 = LOCKED V70. Nimic redeschis aici.
+> **Revizie post-audit adversarial faza 1 (corecții SPEC, NU nomenclatură):** clarificată identitatea C18 (proiectarea retragerii omului din execuția repetitivă; poate folosi mecanisme tehnice ca mijloc; „zero tehnologie" descrie treapta, NU blochează C18); rafinată granița C04↔C18 (natură, nu scară); adăugat TEST DE MANIFESTARE EXCEL (artefact vizibil distinct per C17-C20); ton corectat (blindare CONCEPTUALĂ, datorii de manifestare deschise la seed); gardă C20 anti-management-generic. Nomenclatura LOCKED V70 NEATINSĂ.
 
 ---
 
@@ -57,9 +58,10 @@ Fiecare construcție CONSUMĂ output-ul precedentei: nu automatizezi ce n-ai sis
 
 ### C18 AUTOMATIZARE (mișcarea)
 - **Problema:** sistem repetabil, dar care încă trece prin mâinile autorului la fiecare ciclu.
-- **Produce:** un sistem care se execută singur; autorul scos din execuție.
-- **Competența:** **judecata retragerii** — ce e destul de repetabil și stabil încât să nu mai treacă prin mâinile nimănui. NU configurarea unei unelte.
-- **NU are voie:** să definească structura (= C17); să fie confundată cu fluxul de curățare a unui set (= C04).
+- **Produce:** un sistem care se execută singur; autorul scos din execuția repetitivă.
+- **Competența:** **judecata retragerii**: ce e destul de repetabil și stabil încât să nu mai treacă prin mâinile autorului la fiecare ciclu, și cum se proiectează acea retragere. C18 este **proiectarea retragerii omului din execuția repetitivă**, NU configurarea unei unelte.
+- **Identitate (clarificare LOCKED, faza 1):** C18 NU este Power Automate ca identitate, NU este scheduler ca identitate, NU este simplul Refresh din C04. C18 **poate folosi** mecanisme tehnice (Refresh orchestrat, script, trigger, flux) atunci când acestea servesc retragerii omului din execuție; mecanismul e MIJLOC, nu identitate. „Zero tehnologie" (vezi definiția autonomiei) descrie treapta ca întreg și NU blochează C18: aici un mecanism non-uman e adesea necesar ca pașii repetitivi să nu mai treacă prin niciun om. Ce contează e retragerea omului, nu prezența sau absența uneltei.
+- **NU are voie:** să definească structura (= C17); să fie confundată cu fluxul de curățare a unui set (= C04, vezi granița dedicată).
 - **AHA candidat:** „Munca pe care o repeți la fel de fiecare dată nu trebuia să mai treacă prin tine."
 
 ### C19 GUVERNARE (autocontrolul)
@@ -74,18 +76,33 @@ Fiecare construcție CONSUMĂ output-ul precedentei: nu automatizezi ce n-ai sis
 - **Produce:** transferul proprietății/responsabilității către sistem sau către rolul care îl operează după reguli. Funcționare fără autor.
 - **Competența:** predarea controlului, nu păstrarea lui.
 - **NU are voie:** să păstreze autorul ca proprietar ascuns („fără să pierzi controlul" = INTERZIS, contrazice autonomia).
+- **Gardă (clarificare LOCKED, faza 1):** C20 NU este management generic / lecție de HR / handover abstract. C20 este **predarea controlabilă a unui sistem de lucru**, demonstrabilă ÎN workbook prin patru elemente vizibile: ownership (cine deține), rol responsabil (cine operează după reguli), escaladare (unde merge problema când apare), eliminarea dependenței de autor (zero cheie / referință author-only). Dacă predarea nu se vede în fișier, nu e C20, e discurs de management.
 - **AHA candidat:** „Nu mai e munca ta. E un sistem care era cândva munca ta."
+
+---
+
+## TEST DE MANIFESTARE EXCEL (artefact vizibil distinct per construcție)
+> Datorie de manifestare, OBLIGATORIE la seed-ul fiecărei construcții. Granițele conceptuale de mai jos sunt închise logic; acest test le ține închise ȘI în workbook. Regula: fiecare construcție T5 adaugă în workbook un artefact VIZIBIL, DISTINCT față de construcția precedentă. Fără el, C17 se confundă vizual cu C18 și C19 cu C20.
+
+| Construcție | Artefact vizibil în workbook | Ce dovedește |
+|---|---|---|
+| C17 SISTEMATIZARE | foaie/zonă `_SISTEM` | munca poate fi reluată de altcineva fără autor: componente definite, o singură sursă de adevăr, pași repetabili numerotați |
+| C18 AUTOMATIZARE | foaie/zonă `_AUTOMATIZARE` | ce pași manuali au fost eliminați, ce declanșează lanțul, ce rămâne ca intervenție umană minimă |
+| C19 GUVERNARE | foaie/zonă `_GUVERNARE` | reguli, praguri, validări, excepții, semnale de control care prind deviațiile previzibile |
+| C20 DELEGARE | foaie/zonă `_DELEGARE` (sau `_OWNERSHIP`) | transferul de proprietate: rolul responsabil, escaladarea, eliminarea dependenței de autor |
+
+**Regula de distinctivitate:** la seed-ul fiecărei C17-C20 se verifică empiric că artefactul vizibil EXISTĂ și că NU e identic cu al construcției precedente (C18 adaugă peste C17, nu îl rebotează; C20 adaugă peste C19). Testul de manifestare e complementar Testului concediului: concediul testează autonomia-rezultat, manifestarea testează distinctivitatea-artefact în fișier.
 
 ---
 
 ## GRANIȚE ÎNTRE CONSTRUCȚII (cele 6 riscuri, închise)
 
 - **C17 | C18 (formă vs mișcare):** poți sistematiza fără să automatizezi (o procedură scrisă, rulată manual de un om, e sistem). Nu poți automatiza fără să sistematizezi. C17 = „există ca sistem / altcineva POATE porni"; C18 = „rulează fără ca vreun om să facă pașii". C17 nu spune niciodată „se face singur"; C18 nu spune niciodată „definesc structura".
-- **C18 | C04 (lanț T5 vs flux T1):** altitudine diferită. C04 NORMALIZARE automatizează o TRANSFORMARE de date (curățarea/refacerea unui SET prin flux; semnătură „Apăs Refresh, setul se reface"). C18 automatizează un LANȚ operațional end-to-end (obiect = procesul care produce raportul; „nu mai apăs nimic"). C04 = competență ÎN pipeline; C18 = meta-competență DESPRE pipeline. C04 poate fi una dintre uneltele pe care C18 le orchestrează.
+- **C18 | C04 (lanț T5 vs flux T1):** distincție de NATURĂ, nu de scară. **C04 = actualizarea unui SET de date** (curățarea/refacerea unui set prin flux; semnătură „Apăs Refresh, setul se reface" = teritoriul C04). **C18 = scoaterea omului din LANȚUL de execuție al muncii repetitive** (lanț repetabil, controlat, documentat, cu intervenție umană minimă; obiect = procesul care produce raportul, nu setul). C04 = competență ÎN pipeline; C18 = meta-competență DESPRE pipeline, care poate orchestra C04 ca una dintre uneltele lui. Test: output = un set reîmprospătat -> C04; output = un om scos dintr-un lanț de pași repetitivi -> C18.
 - **C19 | monitorizare (guvernare vs babysitting):** monitorizarea ține autorul prezent (te uiți dacă merge) = vechiul T5 respins. Guvernarea înlocuiește ochiul cu reguli; sistemul se păzește singur, tu pleci. Test: după C19 mai trebuie să te uiți zilnic? DA = babysitting (fail); NU, pentru că regulile prind problema = guvernare (pass).
 - **C19 | C20 (control prin reguli vs predarea controlului):** la C19 autorul rămâne TITULARUL regulilor (iese din atenție, nu din proprietate); la C20 predă titularitatea (iese din proprietate). Test: cine răspunde dacă regulile trebuie schimbate? La C19 = autorul; la C20 = sistemul/delegatul. C19 PĂSTREAZĂ controlul prin reguli; C20 ELIBEREAZĂ controlul.
 - **T4 | T5 (act unic vs sistem repetabil):** T4 se termină când raportul e gata de decizie și e predat unui OM care decide (act unic, obiect = artefactul). T5 începe la „cum se mai întâmplă fără mine?" (obiect = procesul). T5 NU automatizează decizia (omul-consumator rămâne); scoate AUTORUL din PRODUCȚIE, nu omul din decizie.
-- **Definiția autonomiei (anti-infrastructură):** **AUTONOMIE = proprietatea unui mod de lucru validat de a continua să producă valoare corectă fără autorul lui prezent.** NU cloud (= unde), NU sincronizare (= mecanism), NU refresh (= unealta C04), NU Power Automate (= implementare). Se măsoară prin independența de autor, nu prin tehnologie: același T5 se atinge cu o procedură scrisă + un rol instruit + un checklist (zero tehnologie) SAU cu unelte. Test: **scoate autorul o lună; munca validată continuă să producă valoare corectă?** DA = autonom.
+- **Definiția autonomiei (anti-infrastructură):** **AUTONOMIE = proprietatea unui mod de lucru validat de a continua să producă valoare corectă fără autorul lui prezent.** NU cloud (= unde), NU sincronizare (= mecanism), NU refresh (= unealta C04), NU Power Automate (= implementare). Se măsoară prin independența de autor, nu prin tehnologie: ca TREAPTĂ, T5 se poate atinge și cu o procedură scrisă + un rol instruit + un checklist (zero tehnologie) SAU cu unelte. **Nuanță (faza 1):** „zero tehnologie" descrie treapta ca întreg și NU blochează C18; C18 este construcția în care un mecanism non-uman e adesea MIJLOCUL prin care pașii repetitivi nu mai trec prin niciun om (acolo unealta servește retragerii, nu devine identitate). Test: **scoate autorul o lună; munca validată continuă să producă valoare corectă?** DA = autonom.
 
 ## GRANIȚA T4 / T5 (formula LOCKED)
 **T4 = raportul este gata pentru decizie · T5 = raportul devine sistem care funcționează fără autor.**
@@ -123,15 +140,17 @@ Cineva blocat la 2015 e indispensabil: fiecare raport trece prin el, în concedi
 
 ## OBLIGAȚII DE AUTORARE (rămân deschise la seed C17-C20)
 Aceste datorii NU sunt de nomenclatură (LOCKED) și NU se ating aici; se onorează la autorarea fiecărei construcții:
-1. **C18 = judecată, nu mecanism.** Se autorează ca „ce merită să ruleze fără mine / cum mă retrag din execuție", nu ca „configurez Power Automate". Garda „Apăs Refresh = C04, interzis în T5" se respectă.
+1. **C18 = judecată de retragere, nu identitate de mecanism.** Se autorează ca „ce merită să ruleze fără mine / cum mă retrag din execuția repetitivă", nu ca „configurez Power Automate". Nuanță (faza 1): „Apăs Refresh" ca IDENTITATE = C04; C18 POATE folosi un Refresh orchestrat / script / trigger ca MIJLOC în slujba retragerii omului. Garda reală: mecanismul nu devine identitatea construcției.
 2. **Maturizarea de rol.** Intrarea în T5 își asumă narativ trecerea analist -> constructor de sisteme care se poate retrage.
 3. **AHA-urile C17-C20** de mai sus sunt CANDIDATE; se confirmă (lock S5) la seed-ul fiecărei construcții, în stilul gramaticii de treaptă.
 4. **Delimitarea C18 vs C04** se ține empiric în corpul fiecărei machete C18.
 
 ---
 
-## DATORII CONCEPTUALE — ÎNCHISE
-Cele 6 riscuri conceptuale descoperite în rundele de audit sunt închise prin distincții structurale verificabile (vezi GRANIȚE + TESTUL CONCEDIULUI): C17/C18, C18/C04, C19/babysitting, C19/C20, T4/T5, definiția autonomiei. Verdict audit adversarial „Testul concediului": **PASS.** T5 AUTONOMIE este blindată conceptual la nivel de autoritate.
+## DATORII CONCEPTUALE ÎNCHISE · DATORII DE MANIFESTARE DESCHISE LA SEED
+Cele 6 riscuri conceptuale descoperite în rundele de audit sunt închise prin distincții structurale verificabile (vezi GRANIȚE + TESTUL CONCEDIULUI): C17/C18, C18/C04, C19/babysitting, C19/C20, T4/T5, definiția autonomiei. Verdict audit adversarial „Testul concediului": **PASS** pe autonomie-rezultat.
+
+**Ton corect (post-audit adversarial faza 1):** T5 este **blindată CONCEPTUAL**. NU este „complet blindată": datoriile de **manifestare Excel** (artefactul vizibil distinct per construcție, vezi TEST DE MANIFESTARE EXCEL) se rezolvă **OBLIGATORIU la seed-ul fiecărei construcții**. Testul concediului confirmă autonomia-rezultat; NU confirmă distinctivitatea-artefact în workbook. Cele două nu se confundă: nomenclatura și granițele conceptuale sunt LOCKED; manifestarea în fișier rămâne deschisă până la seed.
 
 ---
 
