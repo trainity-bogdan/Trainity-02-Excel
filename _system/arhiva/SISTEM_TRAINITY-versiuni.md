@@ -3053,7 +3053,88 @@ Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria
 - vs C17 (jos): C17 = forma reluabilă pornită de om; C18 = mișcarea fără om. C18 nu definește structura, o pune în mișcare. Handoff: „C17 predă forma reluabilă; C18 o face să ruleze fără mâini."
 - vs C19 (sus): C19 = autocontrol (praguri, validări, excepții); C18 rulează, dar nu se autoguvernează: un eșec încă cheamă omul. Handoff: „C18 predă motorul care rulează; C19 îl face să se țină singur."
 - vs C20: C20 = ownership/predarea controlului; C18 = mișcare tehnică, nu desemnare de proprietar.
-## SPEC C19 - GUVERNAREA   [Status: NEGENERAT]
+## SPEC C19 - GUVERNAREA   [Status: INGHETAT 14.06.2026]
+
+Axă: DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE (autorul iese din ATENȚIE). Pilon T5: T5 consumă raportul livrabil (T4) și îl face să funcționeze fără autor; C19 = controlul (regulile), nu mișcarea (C18), nu forma (C17).
+Decizie locked: C19 = judecata controlului (ce poate devia previzibil și ce regulă prinde devierea înainte să producă gunoi în tăcere), materializată în reguli/praguri/validări/excepții/semnale într-o foaie _GUVERNARE. NU babysitting/monitorizare, NU dashboard de citit (T4), NU execuția lanțului (C18), NU refresh (C04), NU ownership/escaladare/responsabil (C20).
+Nomenclatură LOCKED (NOMENCLATURA-LOCKED-SCARA V70): C19 GUVERNAREA, cuvânt CONTROL, verb GUVERNEZ. Iese din ATENȚIE.
+Nota: pachet conceptual aprobat de BRAIN 14.06.2026 (SEED + SPEC 11-slot FROZEN + SLUG guvernare + blueprint 6x3 + artefact _GUVERNARE), mandat MANDAT_GENERARE_C19. Freeze autorizat ARHITECT. IDENTITATE_TEHNICA C19 populată (L142).
+
+### 1. INTRIGA
+Ți-ai pus motorul să ruleze (C18): lanțul se mișcă fără mâna ta. Și totuși, pe o intrare greșită, produce un rezultat greșit în tăcere, iar tu tot verifici „a ieșit bine?" la fiecare ciclu. HERO: „Cum se ține corect fără ochiul meu?" BOMBĂ: „Motorul tău rulează. Dar tot tu verifici că n-a greșit, de fiecare dată."
+
+### 2. PROBLEMELE
+- motorul rulează, dar pe o intrare proastă produce rezultat greșit în tăcere;
+- un caz neprevăzut trece nedetectat și curge în decizii ca și cum ar fi corect;
+- autorul a scăpat de efort, dar tot el verifică la fiecare ciclu (atenția = gâtuirea);
+- greșeala se vede târziu, după ce a produs pagubă, nu în momentul apariției;
+- nicio regulă nu spune sistemului unde să se oprească singur; se bazează pe ochiul omului.
+
+### 3. MIZA
+Câtă vreme cineva trebuie să confirme de fiecare dată că rezultatul e corect, sistemul nu e autonom: atenția unui om e încă plafonul, iar o intrare greșită nedetectată intră în decizii ca și cum ar fi bună. Guvernarea prin reguli mută verificarea din mintea omului în sistem: deviațiile previzibile sunt prinse, semnalate sau blocate înainte să producă pagubă tăcută.
+
+### 4. MANTRA / AHA
+MANTRA: "Nu o supraveghez. O guvernez prin reguli."
+AHA: "Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește."
+
+### 5. MOTTO
+"Pleci, și munca se ține singură." (slot de treaptă T5; candidat, dependent de ratificarea template-ului de treaptă T5)
+
+### 6. STEP-TITLES (18, în 6 etape x 3 pași)
+ETAPA 1 REALITATE (Sistemul care merge doar cât te uiți)
+1. Motorul rulează, dar pe o intrare proastă produce gunoi în tăcere
+2. Tot tu verifici „a ieșit bine?" la fiecare ciclu
+3. „Merge" nu înseamnă „merge corect"
+ETAPA 2 INVESTIGAȚIE (Ce poate să devieze previzibil)
+4. Registrul deviațiilor previzibile: ce poate strica rezultatul
+5. Promptul 1: Copilot listează valorile și intervalul permis pe fiecare coloană
+6. Definești plicul așteptat ca praguri vii (LIMIT_MIN, LIMIT_MAX)
+ETAPA 3 TRANSFORMARE (Regula care prinde intrarea greșită)
+7. Data Validation la sursă: intrarea greșită e respinsă înainte să intre
+8. Promptul 2: Copilot propune pragurile și ce abatere aprinde ATENȚIE / OPRIT
+9. STATUS OK / ATENȚIE / OPRIT, calculat din reguli
+ETAPA 4 VERIFICARE (Pragul și semnalul)
+10. Bagi o intrare greșită: e respinsă la sursă, nu ajunge în motor
+11. O valoare derapează intern: pragul aprinde ATENȚIE, STATUS se schimbă singur
+12. Testul anti-dashboard: semnalul acționează (schimbă starea), nu doar afișează
+ETAPA 5 STABILIZARE (Excepția și oprirea controlată)
+13. Excepția: cazul neprevăzut cade în lista de excepții, nu trece tăcut
+14. Fail-safe: output legat de STATUS=OPRIT, rezultatul corupt nu mai curge
+15. _GUVERNARE marchează excepția și oprește, dar nu desemnează responsabilul (granița C20)
+ETAPA 6 CONFIRMARE (Testul ochilor închiși)
+16. Plantezi deviații, pleci: regulile prind, semnalează, opresc singure
+17. Devii cel care scrie constituția sistemului, nu cel care patrulează
+18. Sistemul se ține corect singur; C20 îi poate prelua proprietatea
+
+### 7. PROMPTURI Copilot (2)
+- Promptul 1, E2 INVESTIGAȚIE: ceri Copilot să listeze, pentru fiecare coloană de intrare, valorile și intervalul permis și să propună o regulă de Data Validation care respinge intrările în afara plicului la sursă, fără să corecteze automat valoarea. AI propune, omul decide. NU desemnează responsabil/escaladare (C20), NU configurează execuția lanțului (C18).
+- Promptul 2, E3 TRANSFORMARE: ceri Copilot să propună praguri (min/max) pe valorile interne și să marcheze ce abatere aprinde ATENȚIE și ce eroare gravă trece STATUS în OPRIT și oprește lanțul. Omul corectează pragurile. NU desemnează responsabil (C20), NU se rezumă la un refresh (C04).
+
+### 8. FINAL-LABELS (8)
+- Regula prinde, nu ochiul.
+- „Merge" nu e același lucru cu „merge corect".
+- Prag, semnal, stare: OK / ATENȚIE / OPRIT.
+- Intrarea greșită e respinsă la sursă, nu intră în motor.
+- Excepția nu trece tăcut; fail-safe oprește lanțul.
+- Semnalul acționează, nu se citește: nu e dashboard (T4).
+- _GUVERNARE marchează abaterea, nu desemnează responsabilul (C20).
+- Nu o supraveghez. O guvernez prin reguli.
+
+### 9. FENOMENE / OPERATII (6 perechi: input necontrolat -> regulă care ține corect)
+Concepte reale Date_MASTER (valoarea netă, cantitatea, data facturii, categoria); cifrele rămân în Excel (R-V02.15).
+- O cantitate în afara intervalului permis -> Data Validation o respinge la sursă, nu intră în motor.
+- Valoarea netă agregată care iese din plicul așteptat -> pragul aprinde ATENȚIE, STATUS trece din OK.
+- Un total pe categorie care nu se închide -> regula de sumă marchează abaterea, STATUS devine OPRIT.
+- O categorie necunoscută (caz neprevăzut) -> cade în lista de excepții, nu trece tăcut.
+- Output legat de STATUS=OPRIT -> rezultatul corupt nu mai curge în aval (fail-safe).
+- Set cu deviații plantate, autorul absent -> regulile prind, semnalează și opresc singure (testul ochilor închiși).
+
+### GRANIȚE
+- vs C04: C04 = refresh/actualizarea unui set; C19 = reguli care țin corect un sistem care rulează. Refresh nu e identitatea C19.
+- vs C18 (jos): C18 = motorul rulează (mișcare); C19 = motorul rulează controlat și își semnalează abaterea. Handoff: „C18 predă motorul care rulează; C19 îl face să se țină singur."
+- vs C20 (sus): C20 = ownership/predarea controlului/escaladare; C19 = autorul rămâne titularul regulilor, marchează și oprește, dar nu desemnează responsabilul. Handoff: „C19 predă sistemul guvernat, încă deținut de autor; C20 predă proprietatea."
+- vs babysitting: monitorizarea ține autorul prezent; guvernarea înlocuiește ochiul cu reguli (testul ochilor închiși).
+- vs T4: semnalul C19 acționează (schimbă starea, oprește), nu e un dashboard de citit pentru un om care decide.
 ## SPEC C20 - DELEGAREA   [Status: NEGENERAT]
 
 ================================================================================

@@ -516,6 +516,35 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nota_hero: BRAIN-CONFIRMED 14.06.2026 — MIZĂ HERO „AUTOMATIZAREA MUNCII RECURENTE" + CUVÂNT MOTOR aprobate de BRAIN (mandat C18_CONCEPTUAL_INCHIS_CONFIRMAT_BRAIN). LOCKED.
 - nota_treapta: C18 = a 2-a din T5 AUTONOMIE; next (C19 GUVERNAREA) = a 3-a din T5.
 
+## IDENTITATE_TEHNICA C19 · GUVERNAREA
+
+- cod: C19
+- treapta_nr: 5
+- treapta_nume: AUTONOMIE
+- treapta_pozitie: 3 din 4 (Sistematizare, Automatizare, Guvernare, Delegare)
+- nume_hero_caps_rand1: GUVERNAREA
+- nume_hero_caps_rand2: SISTEMULUI PRIN REGULI
+- nume_hero_caps: GUVERNAREA SISTEMULUI PRIN REGULI
+- nume_title_case: Guvernarea
+- nume_slug: Guvernare
+- input_filename: Date_MASTER-C18-Automatizare.xlsx
+- output_filename: Date_MASTER-C19-Guvernare.xlsx
+- meta_val_treapta: SISTEMATIZARE · AUTOMATIZARE · <b>GUVERNARE</b> · DELEGARE (AUTONOMIE)
+- next_cod: C20
+- next_nume_title: Delegarea
+- next_label: TREAPTA 5 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C19 GUVERNARE · CONTROL
+- topbar_text: Sistemul 02 - Excel · C19 · Guvernare
+- mobile_topbar: C19 · Guvernare
+- nav_brand_label: PACK 02 EXCEL · C19
+- nav_brand_title: GUVERNAREA SISTEMULUI PRIN REGULI
+- title_studiu: C19 · Guvernare · Trainity
+- title_video: C19 · GUVERNARE · BROADCAST
+- localStorage_studiu: trainity_c19_study_v1
+- localStorage_video: trainity_c19_video_v1
+- nota_hero: BRAIN-CONFIRMED 14.06.2026: MIZA HERO "GUVERNAREA SISTEMULUI PRIN REGULI" + CUVANT CONTROL aprobate de BRAIN (mandat C19_SPEC_11_SLOT_FROZEN_ACCEPTAT). LOCKED.
+- nota_treapta: C19 = a 3-a din T5 AUTONOMIE; next (C20 DELEGAREA) = a 4-a din T5.
+
 1. Generatorul CITESTE IDENTITATE_TEHNICA C{NN} integral
 2. APLICA fiecare camp in HTML conform COVER-CHECKLIST.md
 3. RULEAZA post-flight gate cross-contamination
