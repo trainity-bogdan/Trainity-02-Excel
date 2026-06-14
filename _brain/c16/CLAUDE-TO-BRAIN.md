@@ -1,7 +1,33 @@
 # CLAUDE -> BRAIN C16
 
 ## STATUS
-GENERARE_IN_PROGRES · 3/5 gate livrabile (Date_MASTER + HTML-Studiu + HTML-Editor-Studiu, toate gate PASS); rămân HTML-Video + HTML-Editor-Video + docs FILM/STUDIU/VIDEO
+C16_GENERAT · B2 PASS REAL (gate_v20 16 c16 c01, 5/5 livrabile) · pre_generation_check 3/3 PASS
+
+## RAPORT FINAL GENERARE C16 (mandat C16-GENERARE-FINALA, 2026-06-08)
+REZULTAT: C16_GENERAT, gate_v20 16 c16 c01 = GATE PASS pe toate 5 livrabilele = B2 PASS REAL.
+
+Artefacte generate (c16/):
+- Date_MASTER-C16.xlsx (foaie Livrare, sumă conservată 7986019.38)
+- HTML-Studiu-Excel-16-Livrare.html (2436 linii, body C16 complet)
+- HTML-Editor-Studiu-Excel-16-Livrare.html (companion 1:1)
+- HTML-Video-Excel-16-Livrare.html (broadcast, 18 step-titles)
+- HTML-Editor-Video-Excel-16-Livrare.html (companion 1:1)
+- FILM-Excel-16-Livrare.docx (script video, 6 etape HOOK->DEMO->CONTROL->REVEAL)
+- 6 build scripts reproductibile (build_*_c16.py)
+Toate prin COPY+MODIFY din c14 (construcția completă cea mai recentă; C15 pe HOLD).
+
+Conținut C16 (SPEC narativ respectat): 18 step-titles (6 etape), 2 prompturi Copilot, 8 final-labels, 6 fenomene (raport->decizie), hero DECIZIA GATA, mantra/AHA/motto, granițe vs C12/C14/C15/C17. Zero contaminare. Zero cifre business statice (R-V02.15, SUMIFS live). Naming gate-aligned (Livrare).
+
+Validări:
+- gate_v20 16 c16 c01: GATE PASS, 5/5 livrabile. B2 PASS REAL.
+- pre_generation_check 16: 3/3 PASS.
+- audit_sync: C16 OK pe tot, 1 XX la coloana assets (V39.assets) = AȘTEPTAT.
+
+BLOCAJE RĂMASE (neblocante pentru B2):
+- ASSETS: c16/assets/ nu există. hero + 6 exec-stage = placeholdere SVG. Imaginile reale (hero-poster-excel-16-livrarea.jpg + exec-stage-1..6.jpg) le produce ARHITECT extern (R-V49) și se integrează apoi (base64 în HTML). audit_sync XX pe assets = din asta. NU blochează gate/B2.
+- C15-GAP: Date_MASTER chainuit din C14 (C15 pe HOLD). La generarea C15, C16 se re-chainuiește pentru foaia Sintetizare. Dependență pipeline, nu blocaj.
+
+COMMIT-uri: 48903e9 (Studiu), 941ea54 (Editor-Studiu), 46c5217 (Video+Editor-Video, B2 PASS), + FILM (acest commit).
 
 ## PROGRES GENERARE (faza 2, increment 2026-06-08)
 3/5 livrabile gate generate, toate trec gate_v20 16 c16 c01:
