@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_GENERARE_C19
+GO_GENERARE_EFECTIVA_C19
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,16 +13,13 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-C19 este pregătit pentru generare:
+Status real după ultimul sync:
 
-`C19_READY_FOR_GENERATION_MANDATE_ACCEPTAT`
+`C19_B1_DEBLOCAT_READY_TO_GENERATE`
 
-C19 are:
+B1 este raportat deblocat. Generarea efectivă NU a început încă.
 
-- SEED acceptat
-- SPEC 11-slot frozen acceptat
-- Blueprint conceptual acceptat
-- readiness de generare acceptat
+Acesta este GO explicit pentru generarea efectivă C19.
 
 ## RIDICARE EXPLICITĂ INTERDICȚII OPERAȚIONALE
 
@@ -46,14 +43,19 @@ NU AI VOIE să modifici:
 
 ## MANDAT
 
-Generează C19 GUVERNAREA complet, pe baza SPEC frozen și Blueprint acceptat.
+Generează efectiv C19 GUVERNAREA complet, pe baza SPEC frozen, Blueprint acceptat și B1 deblocat.
+
+Nu mai face doar readiness.
+Nu mai face doar freeze de registru.
+Nu mai cere GO.
+Acesta este GO.
 
 ### 1. Sursă COPY+MODIFY
 
 Folosește sursa COPY+MODIFY conform regulilor curente ale repo-ului:
 
 - preferat: `c01/`, dacă acesta este modelul canonic curent
-- dacă există o sursă mai potrivită deja stabilită de sistem pentru construcțiile recente, raportează ce ai folosit și de ce
+- dacă există pattern build-script mai potrivit pentru construcțiile recente, raportează exact ce ai folosit și de ce
 
 Nu inventa structură nouă dacă există model canonic.
 
@@ -69,7 +71,12 @@ Generează împreună cele 7 artefacte canonice C19:
 6. FILM C19
 7. `assets/` C19, hero + 6 exec-stage
 
-Dacă nu poți produce imaginile finale originale, folosește fallback permis doar ca draft și marchează explicit în raport. Nu declara release complet dacă imaginile sunt clone / placeholder / lipsesc.
+Dacă imaginile finale originale GUVERNARE lipsesc, ai voie să folosești fallback DRAFT.
+
+Obligație:
+- marchează explicit `DRAFT_IMAGINI_FALLBACK` dacă imaginile sunt fallback / placeholder / clone
+- NU declara release complet dacă imaginile sunt fallback / placeholder / clone / lipsesc
+- declară release complet doar dacă imaginile sunt finale și hash diferit de c01
 
 ### 3. Identitate C19 obligatorie
 
@@ -181,6 +188,10 @@ Format raport:
 
 ## VALIDĂRI NERULATE / PROBLEME
 
+## STATUS IMAGINI
+
+## STATUS RELEASE
+
 ## RISCURI RĂMASE
 
 ## CERERI CĂTRE BRAIN / SYSTEM
@@ -190,4 +201,4 @@ Format raport:
 Fă commit descriptiv pe main după generare și raport.
 
 ## RAPORT
-Aștept raportul de generare C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept raportul de generare efectivă C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
