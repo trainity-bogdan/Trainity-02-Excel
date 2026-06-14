@@ -1,78 +1,96 @@
 # BRAIN -> CLAUDE C17
 
 ## STATUS
-MANDAT_REVIZUIRE_BLUEPRINT_C17
+MANDAT_SYSTEM_FREEZE_BLUEPRINT_C17
 
 ## CONTEXT
-C17 Blueprint a fost propus si este in review BRAIN.
-Status curent in _brain/c17/CLAUDE-TO-BRAIN.md:
-C17_BLUEPRINT_READY_FOR_REVIEW.
+C17 Blueprint a fost revizuit si confirmat de BRAIN.
+Status curent verificat in _brain/c17/CLAUDE-TO-BRAIN.md:
+C17_BLUEPRINT_CONFIRMED.
 
-Observatii BRAIN:
-- Slug-ul propus `Sistematizare` este compatibil cu identitatea C17.
-- Blueprint-ul are 6 etape si 18 pasi.
-- Structura `_SISTEM` este suficient de concreta pentru review: blocuri A-F, named ranges, hyperlink-uri, formule vii, START AICI, punct de reluare, test anti-SOP.
-- Testele sunt prezente: anti-SOP, substitut, anti-C18, anti-C19, anti-C20, filmabilitate.
+C17:
+- SISTEMATIZAREA
+- CUVANT LOCKED = SISTEM
+- VERB LOCKED = SISTEMATIZEZ
+- T5 = AUTONOMIE
+- iese din OCAZIE
+- axa: RELUABILITATEA / forma reluabila
+- slug final: Sistematizare
+- artefact obligatoriu: _SISTEM
+- _SISTEM = structura/harta functionala nativ-Excel, legata de workbook, nu SOP, nu documentatie
+- garda OGLINDA: FORMULATEXT, ROWS, COUNTA si referintele live sunt oglinzi de stare, nu reguli, nu validari, nu control C19
 
-Riscuri de corectat punctual:
-1. In etapa 2 apare formularea "cartografiezi componentele reale". Risc ecou C08. Inlocuieste cu "inventariezi functional componentele reale".
-2. Unde "harta reluabila" risca ecou C08, foloseste "structura reluabila" sau "harta functionala" doar daca e clar legata de workbook.
-3. In etapa 5 apare "praguri de proces". Risc C19. Inlocuieste cu "conventii de proces".
-4. Unde apare "rol", clarifica: "profil de competenta, nu ownership".
-5. `FORMULATEXT`, `ROWS`, `COUNTA` si referintele live trebuie confirmate explicit ca oglinzi de stare, nu reguli, nu validari, nu control C19.
+Blueprint confirmat:
+- 6 etape
+- 18 pasi, 3 pasi per etapa
+- foaie _SISTEM cu blocuri A-F
+- named ranges SRC_, INPUT_, PARAM_, OBJ_
+- hyperlink-uri interne
+- START AICI
+- punct de reluare
+- test anti-SOP
+- test substitut
+- granita C17->C18 prin pasi etichetati candidat C18, neautomatizati
+
+Cele 6 etape confirmate:
+1. Munca pe care o stii doar tu
+2. Inventarul componentelor reale
+3. O singura sursa pentru fiecare intrare
+4. Ordinea de reluare, legata de obiecte
+5. Cunoasterea scoasa din cap
+6. Testul substitutului
 
 ## MANDAT
-Revizuieste punctual blueprint-ul C17 in:
-_brain/c17/CLAUDE-TO-BRAIN.md
+CERERE SYSTEM · FREEZE BLUEPRINT C17
 
-Nu modifica sistemul.
-Nu genera artefacte.
-Nu crea folder `c17/`.
-Nu intra in HTML, Date_MASTER, build scripts sau FILM.
-Nu intra in C18.
+Ai voie sa modifici doar fisiere SYSTEM permise.
 
-Aplică urmatoarele corectii:
+Nu modifica:
+- c17/**
+- HTML-uri
+- Date_MASTER
+- build scripts
+- FILM
+- C18/C19/C20
+- nomenclatura LOCKED
 
-1. Inlocuieste formularea:
-"cartografiezi componentele reale"
-cu:
-"inventariezi functional componentele reale"
+Obiectiv:
+Consemneaza in sistem inghetarea Blueprint C17 si marcheaza C17 pregatit pentru generare controlata.
 
-2. Inlocuieste:
-"harta reluabila"
-unde risca ecou C08,
-cu:
-"structura reluabila" sau "harta functionala", doar daca e clar legata de workbook.
+Actualizeaza, dupa caz:
+- STARE-CURENTA.md
+- _system/14-ARHITECTURA-CONCEPTUALA-T5.md
+- _system/00-INDEX.md, doar daca indexul trebuie sa reflecte noua stare
 
-3. In etapa 5, inlocuieste:
-"praguri de proces"
-cu:
-"conventii de proces"
+Trebuie consemnate:
+- status: C17_BLUEPRINT_FROZEN_READY_FOR_GENERATION
+- slug final: Sistematizare
+- nume fisiere propuse
+- 6 etape confirmate
+- artefact _SISTEM
+- garda OGLINDA
+- test anti-SOP
+- test substitut
+- granite C18/C19/C20
+- faptul ca template-ul T5 "Pleci, si munca [...]" ramane CANDIDAT, nu LOCKED
 
-4. In toate locurile unde apare "rol", clarifica:
-"profil de competenta, nu ownership".
-
-5. Confirma explicit ca `FORMULATEXT`, `ROWS`, `COUNTA` si referintele live sunt:
-oglinzi de stare, nu reguli, nu validari, nu control C19.
-
-Dupa corectii:
-- re-ruleaza audit intern pe C08/C18/C19/C20;
-- verifica anti-SOP;
-- verifica filmabilitatea;
-- verifica zero em-dash;
-- pastreaza verdictul doar daca este justificat.
+Ruleaza:
+- audit_sync
+- verificare nomenclatura LOCKED neatinsa
+- verificare zero em-dash
+- verificare ca nu ai atins c17/**
+- verificare ca nu ai generat artefacte
 
 ## OUTPUT CERUT
-CLAUDE -> BRAIN
+SYSTEM REPORT · C17 BLUEPRINT FREEZE
 
 Include:
-- ce ai schimbat;
-- ce riscuri ai inchis;
-- audit intern C08/C18/C19/C20;
-- verdict final:
+- fisiere modificate
+- commit
+- verificari rulate
+- status final
 
-C17_BLUEPRINT_CONFIRMED
-
+Raspunde la final:
+C17_BLUEPRINT_FROZEN_READY_FOR_GENERATION
 sau
-
-C17_BLUEPRINT_NEEDS_REVISION
+C17_BLUEPRINT_FREEZE_FAILED
