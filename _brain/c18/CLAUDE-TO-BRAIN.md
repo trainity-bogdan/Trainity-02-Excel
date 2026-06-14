@@ -1,83 +1,118 @@
 # CLAUDE -> BRAIN C18
 
 ## STATUS
-REVIZIE_C18_PROPUSA (revizie pe mandatul REVIZIE_SEED_C18; cele 6 puncte acoperite + directie SPEC 11-slot, FARA generare de livrabile; asteapta decizii ARHITECT)
+C18_SPEC_READY_FOR_REVIEW (SPEC 11-slot conceptual, pe deciziile BRAIN din SPEC_C18_CERUT; FARA livrabile)
 
 ## SURSA
-Comanda `sync` in chatul CLAUDE C18. Mandat activ pe origin/main = REVIZIE_SEED_C18 (commit 67f3045). SEED-ul anterior (commit 12a2285) aprobat ca baza valida. Pastrez baza si revizuiesc punctual cele 6 cereri. LIMITA respectata: NU generez livrabile (zero HTML / Date_MASTER / FILM / SPEC final). Atins doar acest fisier.
+Comanda `sync`. Mandat origin/main = SPEC_C18_CERUT (commit 2286f39): revizia aprobata, trec la SPEC 11-slot conceptual. Sloturile HERO/MIZA HERO/BOMBA/AHA/MANTRA/MOTTO/CINE DEVII/PAYOFF = decizii BRAIN preluate VERBATIM. Autorate aici: GRESEALA (formula noua ceruta explicit, fara "Oameni/Profesionisti"), WOW, MIZA, VERB-SEMNATURA + sectiunile de sprijin. LIMITA respectata: fara HTML / Date_MASTER / FILM / alt livrabil. Atins doar acest fisier.
+
+Axa: AUTOMATIZAREA = retragerea omului din executia repetitiva. Verb LOCKED: AUTOMATIZEZ. Artefact: _AUTOMATIZARE.
 
 ---
 
-## 1. HERO - 3 variante de descriptor
-(MIZA HERO ramane gerunziu + obiect, model C01 "STRUCTURAREA TABELELOR" / C17 "SISTEMATIZAREA MUNCII RELUABILE".)
+## SPEC 11-SLOT C18 AUTOMATIZAREA
 
-- **(a) Tehnica:** "Cum transform un lant de pasi repetitivi intr-o executie care ruleaza fara mine?"
-  MIZA HERO: "AUTOMATIZAREA EXECUTIEI REPETITIVE"
-  (Numeste lantul / pasii / executia; "fara mine" = retragerea, nu unealta.)
-- **(b) Memorabila:** "Cum fac munca sa mearga mai departe fara mana mea?"
-  MIZA HERO: "AUTOMATIZAREA MUNCII RECURENTE"
-  (Scurt, ritm, "mana mea" = imagine concreta. Usor de tinut minte.)
-- **(c) Polarizanta:** "De ce mai faci tu, manual, ce poate rula singur?"
-  MIZA HERO: "AUTOMATIZAREA EXECUTIEI REPETITIVE"
-  (Acuza direct repetitia manuala; pune cititorul in defensiva productiva. Ton de temperat la SPEC.)
+### 1. HERO (decizie BRAIN, verbatim)
+Intrebare-hero: **"Cum fac munca sa mearga mai departe fara mana mea?"**
+MIZA HERO (hov-object, gerunziu + obiect): **"AUTOMATIZAREA MUNCII RECURENTE"**
 
-Recomandare: (a) ca MIZA HERO afisata (stabila, descriptiva); (b) sau (c) ca intrebare-hero in deschidere. Decizia ta.
+### 2. BOMBA (decizie BRAIN, verbatim)
+**"Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data."**
+(Tensiunea EFORT: forma reluabila din C17 exista, autorul e inca veriga manuala la fiecare ciclu.)
 
-## 2. MOTTO - 3 variante fara promisiune de autonomie totala
-Nota: MOTTO-ul din SEED ("Pleci, si munca se face singura") risca sa promita autonomie totala ("se face singura" atinge C19/C20). Il retrag ca varianta unica. Cele 3 de mai jos transmit retragerea din EXECUTIE, fara autocontrol (C19) si fara predarea proprietatii (C20):
+### 3. GRESEALA (autorat - formula noua ceruta, FARA "Oameni/Profesionisti")
+**"Confunzi «am un sistem» cu «nu mai trebuie sa-l fac eu». Un sistem pe care tot tu il pornesti la fiecare ciclu te-a organizat, nu te-a scos din executie."**
+(Exact confuzia ceruta: "am sistem" vs "nu mai execut". "organizat" face puntea catre C17 (forma); "scos din executie" e miza C18 (miscarea).)
 
-- **(a)** "Nu mai apesi tu butonul de fiecare data."
-  (Retragere din executia repetitiva, concret. Ecou la BOMBA aprobata. Zero autocontrol, zero ownership.)
-- **(b)** "Tu pleci din executie, lantul ramane in miscare."
-  ("din executie", nu din control/proprietate. "ramane in miscare" != "se tine singur".)
-- **(c)** "Pleci de la tastatura, si pasii se duc singuri."
-  (Scopat la "tastatura" = executie + "pasii"; nu spune ca munca se judeca / se detine singura.)
+### 4. AHA (lock S5, decizie BRAIN, verbatim)
+**"Ce repeti manual la fiecare ciclu nu e o sarcina. E un motor care inca merge pe mana ta."**
+("motor" = CUVANT C18; "inca merge pe mana ta" = nu e automatizat cat timp treci tu prin el.)
 
-Pozitionare in progresia de treapta T5 (subiectul marcheaza granita):
-C17 "o reia altcineva" -> **C18 [una din a/b/c]** -> C19 "se tine singura" -> C20 "nu mai e a ta".
-Niciuna din a/b/c nu spune "se tine singura" (C19) sau "nu mai e a ta" (C20). Cere si ratificarea / ajustarea template-ului de treapta, ramasa deschisa de la C17.
+### 5. MANTRA (decizie BRAIN, verbatim)
+**"Nu o execut. O las sa ruleze."** (galben: **ruleze**)
+("execut" vs "las sa ruleze" = mutarea omului din lant.)
 
-## 3. BOMBA - principala pastrata + 2 alternative
-- **Principala (pastrata, aprobata):** "Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data."
-- **Alt 1:** "Ai construit sistemul o data. Dar il pornesti manual la fiecare ciclu."
-- **Alt 2:** "Tot ce era de pus la punct e pus la punct. A ramas un singur pas manual: tu."
+### 6. WOW (autorat)
+**"Un lant de pasi pe care il faceai cu mana la fiecare ciclu. Acum porneste dintr-o singura atingere si se duce pana la capat fara tine."**
+(before manual / after = miscare fara om. "fara tine" la capatul executiei. Anti-C19: nu spune "se controleaza singur", doar "se duce pana la capat".)
 
-(Toate trei tin tensiunea EFORT: sistemul exista, autorul e inca veriga manuala recurenta.)
+### 7. MOTTO (decizie BRAIN, verbatim; slot de treapta T5)
+**"Tu pleci din executie, lantul ramane in miscare."**
+(Progresia de treapta: C17 "o reia altcineva" -> **C18 "pleci din executie, lantul ramane in miscare"** -> C19 "se tine singura" -> C20 "nu mai e a ta". "din executie" = NU din control (C19) sau proprietate (C20). Cere ratificarea formala a template-ului de treapta T5, ramasa deschisa de la C17.)
 
-## 4. _AUTOMATIZARE in 3 fraze
-- **Ce este:** o foaie/zona in workbook care face vizibil lantul de executie automatizat - secventa de pasi care inainte treceau prin mainile autorului la fiecare ciclu si care acum porneste dintr-un singur declansator.
-- **Ce arata:** ce pasi manuali au fost eliminati (taiati explicit), ce declanseaza lantul (un singur punct de pornire) si ce ramane interventie umana minima (marcata distinct, ca granita catre C19).
-- **Ce nu este:** NU e tutorial de unealta ("cum configurez X"); NU e reimprospatare de date la apasare (= C04); NU contine praguri / validari / alerte autocorectate (= C19).
+### 8. CINE DEVII (decizie BRAIN, verbatim)
+**"Nu mai esti omul care executa munca. Esti omul care o pune in miscare."**
+(Rol: din executant repetitiv in constructor de motor. "pune in miscare" = verb de pornire, nu de control C19.)
 
-## 5. Diferenta C04 / C18 (clarificata)
-- **C04 = refresh / actualizare:** un set de date existent e adus la zi printr-un flux. Obiectul = continutul unui set; restul pasilor raman pe mana omului. Miscarea e pe DATE.
-- **C18 = lant repetitiv care ruleaza fara omul din executie:** obiectul = LANTUL de pasi end-to-end; scopul = scoaterea mainii omului din executia repetitiva. Refresh-ul poate fi UN pas in lant (mijloc), nu identitatea.
-- **Linia de test:** "datele sunt la zi, dar eu tot fac pasii din jur" = C04. "pasii pe care ii faceam nu mai trec prin mine" = C18. C18 ELIMINA pasi din lant; C04 improspateaza continutul unui pas.
+### 9. PAYOFF (decizie BRAIN, verbatim)
+**"O munca pe care o porneai si o duceai manual la fiecare ciclu se executa acum fara mana ta."**
+(before: pornit + dus manual / after: se executa fara mana ta. Distinct de C17 "o porneste altcineva" si de C16/T4 "raport livrat".)
 
-## 6. DIRECTIE SPEC 11-slot C18 (pregatire, FARA generare)
+### 10. MIZA (autorat - director, fara jargon, fara cifre, R-V02.15)
+**"Cata vreme fiecare ciclu de munca trece prin mainile autorului, omul devine plafonul: cat poate el executa, atat se face. Timpul lui se duce pe repetitie, nu pe judecata, iar cand e ocupat, ciclul asteapta. Automatizarea muta executia repetitiva pe un motor si elibereaza omul pentru ce doar el poate face."**
+(Risc de business calitativ: omul = plafon / gatuire. Fara "bus factor" / FTE / ROI / cifre. Director-test.)
 
-| Slot | Stare | Directie |
-|---|---|---|
-| HERO | DECIZIE | alege a/b/c (pct.1) |
-| BOMBA | DECIZIE | principala + 2 alt (pct.3) |
-| GRESEALA | DESCHIS | formula "Oamenii/Profesionistii" saturata 100% (R7); diversificam sau pastram constient? |
-| AHA (lock S5) | CANDIDAT | "Ce repeti manual la fiecare ciclu nu e o sarcina. E un motor care inca merge pe mana ta." |
-| MANTRA | LOCK | "Nu o execut. O las sa ruleze." (aprobata) |
-| WOW | CANDIDAT | "Un lant de pasi care trecea prin mainile tale la fiecare ciclu. Acum se duce dintr-un declansator, fara sa-l faci tu." (anti-C19: nu "se controleaza singur") |
-| MOTTO | DECIZIE | alege a/b/c (pct.2) + ratifica template-ul de treapta |
-| CINE DEVII | CANDIDAT | "Nu mai esti omul care executa munca. Esti omul care o pune in miscare." |
-| PAYOFF | CANDIDAT | "O munca pe care o porneai si o duceai manual la fiecare ciclu se executa acum fara mana ta." (distinct de C17 "o porneste altcineva" si C16 "raport livrat") |
-| MIZA | APROBAT (directie) | risc de business: omul = plafonul / gatuirea; fara cifre (R-V02.15) |
-| VERB-SEMNATURA | LOCK | "a automatiza / AUTOMATIZEZ"; interzise ca ancora: a sistematiza (C17) / a guverna (C19) / a delega (C20) |
+### 11. VERB-SEMNATURA
+**a automatiza / AUTOMATIZEZ.**
+Anti-contaminare: a sistematiza (C17), a guverna (C19), a delega (C20) INTERZISE ca ancora in C18. Verbe-satelit permise: a inlantui, a declansa, a rula, a elimina (pasi), a se retrage din executie, a externaliza executia.
 
-Anti-contaminare la nivel de SPEC: fiecare slot trece testul mainile jos (filmabilitate) + garda C04 (elimina pasi, nu doar refresh) + garda C19 (nu judeca / autocorecteaza) + garda C20 (nu desemneaza proprietar).
+---
 
-## DECIZII PENTRU ARHITECT (inainte de SPEC)
-1. HERO: care din a/b/c?
-2. MOTTO: care din a/b/c + ratifici template-ul de treapta T5?
-3. BOMBA: pastram principala sau preferi o alternativa?
-4. GRESEALA: diversificam formula "Oamenii/Profesionistii" sau o pastram?
+## PROBLEMELE C18
+1. Acelasi lant de pasi se reface manual la fiecare ciclu.
+2. Autorul e gatuirea: cand e ocupat, ciclul asteapta.
+3. Pasii manuali introduc variatie si erori intre cicluri.
+4. Timpul de judecata e mancat de timpul de executie.
+5. Forma reluabila (C17) exista, dar nimic nu se misca fara mana omului.
+6. "Am un sistem" e confundat cu "nu mai execut" (vezi GRESEALA).
 
-Dupa raspuns + "go SPEC", scriu SPEC-ul 11-slot complet C18 (conceptual, fara HTML / Date_MASTER / FILM). LIMITA respectata: nu am generat livrabile.
+## FENOMENE OBSERVABILE (Excel, nu teorie)
+1. **Lantul intr-un singur declansator:** o atingere porneste o secventa care inainte cerea N pasi manuali.
+2. **Pasul eliminat:** un pas manual dispare din flux, rezultatul ramane corect.
+3. **Mainile jos:** dupa declansare, executia merge pana la capat fara interventie.
+4. **Interventia minima ramasa:** un singur punct unde omul mai atinge procesul, marcat explicit (granita C19).
+5. **Ciclul urmator gratis:** al doilea ciclu ruleaza fara sa reconstruiesti nimic.
 
-REVIZIE_C18_PROPUSA
+## STEP-TITLES (6 etape, specifice C18)
+1. "Lantul pe care il faci de fiecare data" (before, EFORT)
+2. "Ce merita scos din mainile tale" (judecata retragerii)
+3. "Pasii legati intr-un singur declansator" (construirea motorului)
+4. "Pasul manual care dispare" (eliminare, nu doar refresh - granita C04)
+5. "Ce ramane mana omului" (_AUTOMATIZARE: interventia minima explicita - granita C19)
+6. "Testul mainile jos" (declansezi, iei mainile, lantul merge singur)
+(18 pasi = 3/etapa, la blueprint. Titluri specifice axei.)
+
+## ARTEFACT _AUTOMATIZARE (3 fraze, din revizia aprobata)
+- **Ce este:** o foaie/zona in workbook care face vizibil lantul de executie automatizat - secventa de pasi care inainte treceau prin mainile autorului si acum porneste dintr-un singur declansator.
+- **Ce arata:** pasii manuali eliminati (taiati explicit), ce declanseaza lantul, ce ramane interventie umana minima (marcata, granita C19).
+- **Ce nu este:** nu tutorial de unealta; nu refresh la apasare (C04); nu praguri / validari / alerte autocorectate (C19).
+Distinctivitate (TEST MANIFESTARE Doc 14): _AUTOMATIZARE adauga PESTE _SISTEM (C17), nu il reboteaza. _SISTEM = harta navigabila pornita de om; _AUTOMATIZARE = lant care se misca fara om.
+
+## GRANITE
+- **C17 <-> C18:** forma (sistem pornit de om) vs miscare (lant fara om). C18 nu spune "definesc structura".
+- **C18 <-> C04:** lant end-to-end fara om vs refresh / actualizare set. Refresh = mijloc, nu identitate. C18 ELIMINA pasi.
+- **C18 <-> C19:** ruleaza vs se autocontroleaza. Fara praguri / validari / alerte / exceptii autocorectate.
+- **C18 <-> C20:** miscare tehnica vs ownership / escaladare. Nu desemneaza proprietar.
+
+## RISCURI DE CONTAMINARE (cu garda)
+- R1 -> C04: "Apas Refresh" ca identitate. Garda: C18 elimina pasi din lant; refresh e doar mijloc.
+- R2 -> mecanism-ca-identitate: "configurez Power Automate / macro". Garda: identitatea = judecata retragerii; filmul arata decizia + lantul, nu unealta.
+- R3 -> C17: redescrie forma / structura. Garda: C18 = miscare fara om.
+- R4 -> C19: praguri / validari / alerte autocorectate. Garda: C18 ruleaza, nu se autoguverneaza; un esec inca cere omul.
+- R5 -> C20: cine raspunde / detine / escaladare. Garda: miscare tehnica, nu desemnare.
+- R6 -> "se face singur" prematur: autonomie totala cand inca exista hand-off manual. Garda: _AUTOMATIZARE declara interventia minima ramasa.
+
+## TESTE DE PAZA (din mandat)
+- **Testul mainile jos (filmabilitate + identitate):** declansezi, iei mainile de pe tastatura. PASS = lantul merge pana la capat. FAIL = se blocheaza la un pas manual neeliminat -> inca C17 (forma), nu C18 (miscare).
+- **Anti-C04:** daca tot ce face e "actualizeaza un set la apasare" = C04. C18 ELIMINA pasi din lant.
+- **Anti-C19:** daca apar praguri / validari care se autocorecteaza = C19. C18 ruleaza, dar un esec opreste si cere omul.
+- **Anti-C20:** daca apare "cine raspunde / detine" = C20. C18 nu desemneaza proprietar.
+
+## VERDICT
+SPEC 11-slot C18 complet pe deciziile BRAIN (8 sloturi verbatim) + 3 sloturi autorate (GRESEALA noua ceruta, WOW, MIZA) + VERB-SEMNATURA. Toate trec cele 4 teste de paza si granitele C04 / C17 / C19 / C20 (verificat slot cu slot). GRESEALA inlocuieste formula "Oameni/Profesionisti" cu confuzia "am sistem vs nu mai execut", specifica C18. Zero livrabile generate (LIMITA respectata).
+
+Punct ramas formal deschis: ratificarea template-ului de treapta T5 pentru MOTTO (C17 "o reia altcineva" -> C18 "pleci din executie, lantul ramane in miscare" -> C19 "se tine singura" -> C20 "nu mai e a ta").
+
+Pas urmator (doar la mandat explicit): SLUG + blueprint + cele 7 artefacte (generare), separat.
+
+C18_SPEC_READY_FOR_REVIEW
