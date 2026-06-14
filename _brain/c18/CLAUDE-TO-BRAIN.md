@@ -1,70 +1,46 @@
 # CLAUDE -> BRAIN C18
 
 ## STATUS
-C18_GATE_DIAGNOSTIC (diagnostic B2 + CERERE SYSTEM; nimic modificat în gate/_system; RELEASE = NU)
+C18_GATE_PATCH_A_APLICAT_B2_FAIL (în SYSTEM mode; patch identitate aplicat + verificat; gate rulează dar B2=FAIL din config+moștenire, nu din defecte C18; RELEASE = NU)
 
 ## SURSA
-Mandat C18_GATE_DIAGNOSTIC_CERUT (commit 8a5152e). Doar diagnostic + propunere. LIMITA respectată: nu am atins gate_v20.py / _system / artefacte; nu declar B2 PASS; nu declar release.
+ARHITECT a tastat „SYSTEM" după diagnosticul gate. Am intrat în capacitate SYSTEM și am aplicat opțiunea A din CERERE (patch minim identitate C18 în gate_v20.py). LIMITA: nu am declarat release; B2 NU e PASS.
 
-## 1. VERDICT SCURT
-B2 nu rulează dintr-o cauză **izolată și benignă**: `gate_v20.py` din acest repo e un **stub** care citește identitățile dintr-un dict hardcodat C01-C17. C18 nu e în dict → gate iese cu eroare înainte de orice verificare. Nu e o problemă a artefactelor C18 (toate celelalte gate-uri trec). Soluția corectă = parser de producție; soluția minimă sigură = adăugarea intrării C18 în dict. Ambele = CERERE SYSTEM (gate forbidden pentru CLAUDE C18).
+## CE AM FĂCUT (SYSTEM)
+Adăugat în `gate_v20.py` dictul `IDENTITATI` cheia `'18'` (cod C18, nume_hero_caps_rand1 AUTOMATIZAREA, nume_slug Automatizare, meta_val_treapta „SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)"), identică cu IDENTITATE_TEHNICA C18 înghețat.
 
-## 2. CAUZA EXACTĂ
-`gate_v20.py`, funcția `load_identitate(NN, ...)` (linia ~1061):
-- linia 1064 comentariu: „In productie: parser complet. In acest sample: dict hardcoded."
-- linia 1153: `return IDENTITATI.get(NN)` — dict `IDENTITATI` cu chei `01..17`.
-- `IDENTITATI.get('18')` → `None`.
-- main (linia ~1184): `if not identitate: print("EROARE: IDENTITATE_TEHNICA pentru C18 nu e definita."); sys.exit(1)`.
-=> gate se oprește la încărcarea identității, NU ajunge la nicio clasă de verificare. Deci „B2 neverificabil" = gate nu pornește, NU = C18 pică un check.
+## VERIFICARE
+- **Gate PORNEȘTE acum pe C18** (nu mai dă „IDENTITATE_TEHNICA nu e definita"). Patch-ul A funcționează.
+- **Regresie C01:** `gate_v20.py 01 c01 c01` → **GATE PASS** (neschimbat). Adăugarea C18 nu afectează C01-C17.
 
-## 3. FIȘIERE CITITE
-- _system/generatoare/gate_v20.py (load_identitate + main)
-- _system/generatoare/pre_generation_check.py (rulat: PASS)
-- _system/generatoare/audit_sync.py (rulat: C18 doar imgclone)
-- _system/arhiva/SISTEM_TRAINITY-versiuni.md (SPEC C18)
-- _system/referinte/IDENTITATE-TEHNICA.md (IDENTITATE_TEHNICA C18)
+## DAR: B2 = FAIL (gate rulează și pică) — clasificat
+Patch A e NECESAR dar INSUFICIENT. Gate-ul are mai multe config-uri hardcodate C01-C17, nu doar dictul de identitate.
 
-## 4. STATUS INTRĂRI C18 ÎN SISTEM
-- SPEC C18 - AUTOMATIZAREA [Status: INGHETAT]: **PREZENT** (SISTEM_TRAINITY-versiuni.md).
-- IDENTITATE_TEHNICA C18: **PREZENT** (referinte/IDENTITATE-TEHNICA.md, 24 câmpuri).
-- pre_generation_check 18: **TOATE PASS** (B1).
-- audit_sync: C18 **doar imgclone XX** (B3).
-- gate_v20 dict `IDENTITATI`: **C18 LIPSEȘTE** (singura lacună).
-Concluzie pct.2 din mandat: DA, problema e DOAR lipsa C18 din dictul hardcodat. Restul e complet.
+### CLASA CROSS-CONTAMINATION (8 unice): 3×C04, 3×C17, 1×C19, 1×C20
+- **Toate sunt referințe LEGITIME** de identitate C18: C17 ca prev/handoff („un sistem (C17)", „_SISTEM moștenit din C17"), C04/C19/C20 ca GRANIȚE și ANTI-PATTERN („E C04", „separă C18 de C04", anomaly „AUTO-CONTROL"=C19, „PROPRIETAR"=C20, „Acela e C20").
+- `check_cross_contamination` whitelistează doar: cod curent, C19(next) în handoff, C17(prev) în „mostenit/predat de", recap enumerativ. NU acoperă: (a) anomaly-desc cu „Acela e C19/C20/C04" (granițele esențiale C18), (b) „moștenit" cu diacritică (ș) — whitelist-ul caută ASCII „mostenit" → **fals pozitiv pe diacritice**.
+- Verdict: zero contaminare conceptuală reală (confirmă auditul total + L198). Sunt limitări de whitelist gate vs stilul de graniță al C18.
 
-## 5. SOLUȚIA MINIMĂ SIGURĂ (patch punctual)
-Adăugare intrare C18 în dictul `IDENTITATI` din gate_v20.py, cu cele 4 câmpuri folosite de gate (identice cu IDENTITATE_TEHNICA C18 înghețat):
-```
-'18': {
-    'cod': 'C18', 'nume_hero_caps_rand1': 'AUTOMATIZAREA',
-    'nume_slug': 'Automatizare',
-    'meta_val_treapta': 'SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)'
-},
-```
-- Risc: minim. Aditiv (o cheie nouă); NU afectează C01-C17 (`.get(NN)` per cheie).
-- Dezavantaj: perpetuează stub-ul — C19 și C20 vor lovi exact același zid.
+### CLASA DATA-CONTINUITY (4)
+- „Coloane canonice LIPSA in OUTPUT 'Vanzari'": gate verifică sheet-ul GREȘIT. C18 nu e în `SHEET_OUTPUT_CANONIC` (config C01-C17) → default pe `Vanzari` (export brut, fără coloane canonice) în loc de `Vanzari_Curat` (output curat care LE ARE). Config gap, nu defect.
+- „Nomenclator PRODUSE 13 vs 14 / AGENTI 6 vs 7 / DEPOZITE 5 vs 6": **c01 are EXACT aceleași counts (13/6/5)** ca c18, diferite de initial (14/7/6). Deci e **MOȘTENIT din c01** (livrat, trece gate ca pilot/exceptat). Nu e defect introdus de C18; e o discrepanță c01-vs-initial preexistentă.
 
-## 6. SOLUȚIA STRUCTURALĂ RECOMANDATĂ (parser de producție)
-Înlocuirea dictului hardcodat cu un **parser** care citește `_system/referinte/IDENTITATE-TEHNICA.md` (sursa unică de adevăr, deja folosită de pre_generation_check). `load_identitate(NN)` extrage secțiunea `## IDENTITATE_TEHNICA C{NN}` și mapează câmpurile.
-- Avantaj: rezolvă C18 + C19 + C20 + orice viitor dintr-o lovitură; elimină driftul dict-vs-.md (gate-ul ar valida exact identitatea înghețată, nu o copie hardcodată care poate diverge).
-- Aceasta e chiar intenția din comentariul „in productie: parser complet".
+## CONCLUZIE DIAGNOSTIC
+B2 = FAIL, dar din **3 cauze ne-conținut**: (1) whitelist gate prea îngust pentru granițele/anti-pattern C18 + bug diacritice „moștenit"; (2) `SHEET_OUTPUT_CANONIC` fără C18 → verifică sheet greșit; (3) nomenclator c01-moștenit (c01 însuși trece). Niciuna nu e defect de conținut C18. **Patch A a dovedit empiric că soluția B (structurală) e cea corectă** — gate-ul are config per-construcție hardcodat în 3 locuri (IDENTITATI + SHEET_OUTPUT_CANONIC + whitelist), toate oprite la C17.
 
-## 7. RISCURI
-- **Patch punctual:** risc tehnic ~0; risc de proces = uită C19/C20 (datorie repetată).
-- **Parser:** risc mediu — schimbă comportamentul gate pentru TOATE construcțiile; trebuie testat că C01-C17 rămân la același verdict (regression). De făcut cu rulare gate pe C01-C17 înainte/după.
-- **Contaminare sistem printr-un patch rapid:** NU, dacă se adaugă DOAR cheia C18 (izolat). Pericolul real ar fi un parser scris prost care schimbă validarea C01-C17 — de aceea parserul cere testare de regresie.
-- Niciuna nu atinge artefactele C18 (audit + B1 rămân neschimbate).
+## CE MAI TREBUIE (CERERE SYSTEM — decizie ARHITECT/SYSTEM)
+Pentru ca B2 să TREACĂ real pe C18, una din:
+- **B-structural (recomandat):** gate config-driven per construcție: identitate din IDENTITATE-TEHNICA.md + `SHEET_OUTPUT_CANONIC['18']='Vanzari_Curat'` + whitelist cross-contam care acoperă granițele de treaptă (anomaly „Acela e CXX", diacritice). Rezolvă C18-C20.
+- **Patch incremental:** adaug `SHEET_OUTPUT_CANONIC['18']` + extind whitelist-ul (diacritice „moștenit" + context anomaly-desc graniță). Mai rapid, dar tot stub.
+- **Nomenclator c01-moștenit:** decizie separată — c01 are 13/6/5 (livrat). Ori se aliniază c01+c18 la initial (14/7/6), ori se exceptează C18 cum e exceptat c01.
 
-## 8. PROMPT COMPLET PENTRU CHAT SYSTEM
-> MANDAT SYSTEM · gate_v20 nu cunoaște C18 (și va rata C19/C20).
-> Cauză: `gate_v20.py` `load_identitate()` returnează dintr-un dict hardcodat C01-C17 (linia ~1153 `return IDENTITATI.get(NN)`; comentariu „in productie: parser complet").
-> CERERE: alege una:
-> (A) PATCH MINIM — adaugă în dictul `IDENTITATI` cheia `'18'` cu: cod 'C18', nume_hero_caps_rand1 'AUTOMATIZAREA', nume_slug 'Automatizare', meta_val_treapta 'SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)'. (rapid, deblochează C18 acum)
-> (B) STRUCTURAL (recomandat) — rescrie `load_identitate(NN)` să parseze `_system/referinte/IDENTITATE-TEHNICA.md` (secțiunea `## IDENTITATE_TEHNICA C{NN}`), eliminând dictul hardcodat. Rezolvă C18-C20 + viitor.
-> OBLIGATORIU după patch: rulează `gate_v20.py 18 c18 c01` → trebuie să PORNEASCĂ și să dea verdict; și rulează gate pe C01-C17 (regresie, dacă alegi B) — verdictele să rămână identice.
-> Nu declara C18 release; B2 trebuie să ruleze REAL și să treacă.
+Nu am extins patch-ul dincolo de A fără mandat (config-urile suplimentare = regression risk pe C01-C17; nomenclatorul atinge date c01-moștenite).
 
-## 9. VERDICT
-**RELEASE = NU** până când B2 rulează real și trece. C18 e blocat de B2 doar din cauza stub-ului gate (lacună de tooling, nu defect C18). Recomand: SYSTEM aplică (A) acum pentru a debloca C18, plus (B) ca hardening înainte de C19/C20. Eu NU ating gate (CERERE SYSTEM formulată mai sus). Plus P0 imagini (ARHITECT) rămân deschise.
+## P0 RĂMASE
+- Imagini exec + hero = clone c01 (ARHITECT).
+- B2 = FAIL (gate rulează acum, dar config gate + moștenire c01) — necesită decizia de mai sus.
 
-C18_GATE_DIAGNOSTIC
+## VERDICT
+**RELEASE = NU.** Patch A aplicat + verificat (gate rulează, C01 neregresat). B2 nu trece încă din motive de config gate + moștenire c01, NU defecte C18. Aștept decizia pe (B-structural vs patch incremental) + nomenclator + imaginile.
+
+C18_GATE_PATCH_A_APLICAT_B2_FAIL
