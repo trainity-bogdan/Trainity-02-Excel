@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_ACTIV
+MANDAT_SPEC_11_SLOT
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -11,78 +11,98 @@ Rol C19 în T5: scoate autorul din ATENȚIE.
 Axa C19, confirmată în CHAT-CONTEXT:
 DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
+## DECIZIE BRAIN
+
+SEED conceptual C19 este acceptat provizoriu:
+
+`C19_SEED_CONCEPTUAL_ACCEPTAT_PROVIZORIU`
+
+Provisoriu doar pentru că C18 este încă neratificat, nu pentru că SEED C19 este slab.
+
+Aprobări BRAIN:
+
+- întrebare centrală: `Cum se ține corect fără ochiul meu?`
+- HERO candidat: `Cum se ține corect fără ochiul meu?`
+- BOMBĂ candidat: `Motorul tău rulează. Dar tot tu verifici că n-a greșit, de fiecare dată.`
+- MANTRA: `Nu o supraveghez. O guvernez prin reguli.`
+- artefact confirmat: `_GUVERNARE`
+- obiect concret: regula vie în workbook, adică validare, prag, semnal, excepție, fail-safe, stare OK / ATENȚIE / OPRIT
+
 ## MANDAT
 
-Verifică empiric starea C18 și contextul T5, apoi propune SEED conceptual C19.
+Pregătește propunerea de SPEC 11-slot C19, fără implementare.
 
-Lucrezi strict ca motor de raportare pentru BRAIN. Nu implementezi artefacte.
+Nu genera artefacte.
+Nu modifica c19/**.
+Nu modifica fișiere sistem.
+Nu genera HTML, Date_MASTER, build scripts sau FILM.
 
-### 1. Verificare empirică obligatorie
+### 1. SPEC 11-slot cerut
 
-Verifică și raportează explicit:
+Propune SPEC 11-slot C19 cu următoarele sloturi:
 
-- dacă există Seed C18
-- dacă există SPEC C18
-- dacă există Blueprint C18
-- dacă există artefacte C18 relevante
-- dacă C18 folosește consecvent CUVÂNTUL LOCKED = MOTOR
-- dacă C18 delimitează clar automatizarea ca lanț de execuție repetitivă cu intervenție umană minimă
-- dacă există context T5 / Doc 14 relevant pentru C19
-- dacă Doc 14 confirmă artefactul C19 ca `_GUVERNARE` sau folosește alt nume
-- dacă există granițe explicite C17 / C18 / C19 / C20
+1. SLUG
+2. INTRIGA
+3. PROBLEMELE
+4. MIZA
+5. MANTRA
+6. WOW
+7. MOTTO
+8. FENOMENE
+9. STEP-TITLES
+10. GREȘEALA
+11. AHA
 
-### 2. Granițe conceptuale obligatorii
+### 2. Granițe obligatorii
 
-Păstrează următoarele delimitări:
+SPEC-ul trebuie să păstreze clar:
 
 - C17 = SISTEMATIZAREA, forma reluabilă, SISTEM, hartă funcțională, pași încă executați de om
 - C18 = AUTOMATIZAREA, MOTOR, lanț de execuție repetitivă cu intervenție umană minimă
 - C19 = GUVERNAREA, CONTROL, reguli / praguri / validări / excepții / semnale / stare a sistemului
-- C20 = DELEGAREA, AUTONOMIE operațională prin ownership, responsabilitate, escaladare și predare controlabilă
+- C20 = DELEGAREA, ownership, responsabilitate, escaladare, predare controlabilă
 
-Graniță critică C18-C19:
+Formula de pază:
 
-- C18 rulează
-- C19 rulează controlat și își semnalează abaterea
-- C18 elimină efortul repetitiv
-- C19 elimină atenția permanentă
-- C18 produce motorul
-- C19 produce controlul motorului
-- dacă doar rulează, este C18
-- dacă verifică, semnalează, blochează sau marchează abaterea, intră în C19
+- C18 = rulează
+- C19 = se ține corect
+- C20 = predă responsabilitatea
 
-### 3. Propunere SEED conceptual C19
+### 3. Interdicții conceptuale în SPEC
 
-După verificare, propune SEED conceptual C19 cu minimum aceste blocuri:
+Evită:
 
-- identitate C19
-- problemă
-- întrebare centrală
-- miză
-- obiect concret
-- rol în T5
-- graniță jos C18
-- graniță sus C20
-- artefact probabil, doar dacă este confirmat empiric
-- riscuri de contaminare
-- criterii de validare
-- posibilă formulă hero
-- posibilă bombă
-- posibilă mantra
+- management
+- responsabil
+- escaladare umană
+- dashboard decorativ
+- monitorizare zilnică
+- QA generic
+- audit clasic
+- `motor` ca identitate C19
+- ownership
+- delegare
+- persoană care verifică
 
-### 4. Interdicții
+### 4. Filmabilitate Excel obligatorie
 
-NU genera HTML.
-NU genera Date_MASTER.
-NU genera build scripts.
-NU genera FILM.
-NU modifica fișiere sistem.
-NU modifica alte construcții.
-NU modifica c19/** decât dacă un mandat ulterior permite explicit implementare.
-NU inventa status.
-NU presupune că C18 este gata dacă nu găsești dovadă empirică.
+SPEC-ul trebuie să poată fi filmat în Excel prin:
 
-### 5. Raport
+- input greșit
+- regulă care îl prinde
+- prag care semnalizează
+- stare care se schimbă
+- lanț care se oprește sau se marchează înainte să ducă eroarea mai departe
+
+### 5. Clarificare dependență C18
+
+Notează explicit dacă SPEC C19:
+
+- depinde de ratificarea finală C18
+- poate fi înghețat paralel cu C18
+- trebuie ajustat după SPEC C18
+
+### 6. Raport
 
 Scrie raportul exclusiv în:
 
@@ -94,15 +114,13 @@ Format raport:
 
 ## STATUS
 
-## VERIFICARE EMPIRICĂ C18
+## SPEC 11-SLOT C19 PROPUS
 
-## VERIFICARE CONTEXT T5 / DOC 14
+## GRANIȚE ȘI GARZI
 
-## GRANIȚE CONFIRMATE
+## FILMABILITATE EXCEL
 
-## LACUNE / NECONFIRMĂRI
-
-## PROPUNERE SEED CONCEPTUAL C19
+## DEPENDENȚĂ C18
 
 ## RISCURI
 
@@ -113,4 +131,4 @@ Format raport:
 Fă commit descriptiv pe main după scrierea raportului.
 
 ## RAPORT
-Aștept raport Claude în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept propunerea SPEC 11-slot C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
