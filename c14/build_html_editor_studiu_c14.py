@@ -97,8 +97,9 @@ def main():
                               'HTML-Studiu-Excel-14-Compunere-Editat.html')
 
     assert base_body.startswith('<body>'), 'body neasteptat'
-    injected = base_body.replace('<body>\n\n', '<body>\n\n' + PANEL, 1)
-    assert PANEL in injected, 'panoul nu s-a injectat'
+    # FAZA 2 remediere UX: fara panel companion; editorul = pagina vie editabila (model matur c01)
+    injected = base_body
+    assert '#editor-companion-head' not in injected, 'model matur: panoul companion nu se injecteaza'
 
     out = ed_head + injected + ed_tail
     import os
@@ -108,7 +109,7 @@ def main():
     import re
     leftover = re.findall(r'C13|trainity_c13|Date_MASTER-C13|Vizualizare', out)
     print('SCRIS:', OUT, '-', len(out.splitlines()), 'linii')
-    print('  panou editor injectat:', '#editor-companion-head' in out)
+    print('  panou companion eliminat (model matur):', '#editor-companion-head' not in out)
     print('  leftover C13:', len(leftover), leftover[:6])
 
 
