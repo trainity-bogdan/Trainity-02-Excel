@@ -119,6 +119,7 @@ SHEET_OUTPUT_CANONIC = {
     '07': 'Vanzari',
     '08': 'Vanzari',  # TBD
     '18': 'Vanzari_Curat',  # C18 AUTOMATIZARE: COPY+MODIFY din c01, output curat = contractul C01
+    '19': 'Vanzari_Curat',  # C19 GUVERNARE: COPY+MODIFY din c01 (chain C18), output curat = contractul C01
 }
 
 # Constructii care folosesc SETUL / CONTRACTUL de date C01 (NU canonicul C02-C08).
@@ -126,7 +127,7 @@ SHEET_OUTPUT_CANONIC = {
 # nomenclatoare 13/6/5, suma ~1.25M. Se valideaza ca C01 (pe contractul EI, FARA
 # comparatie cu Date_MASTER-initial canonic ~8M / 14/7/6). C18 = primul T5 din c01.
 # Config-driven: o constructie noua din c01 se adauga aici (extensibil, fara if-uri).
-CONSTRUCTII_DATASET_C01 = {'01', '18'}
+CONSTRUCTII_DATASET_C01 = {'01', '18', '19'}
 
 # Filtre anti-fals-pozitiv pentru R-V02.15 (cifre business)
 # Daca un numar suspect apare in context CSS, e fals pozitiv
