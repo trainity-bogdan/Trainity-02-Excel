@@ -1,12 +1,17 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_SPEC_CONFIRMED (SPEC 11-slot, ascuțit post-audit adversarial: HERO + GREȘEALA + PAYOFF + notă MOTTO; confirmat ARHITECT)
+C17_SPEC_FROZEN_READY_FOR_BLUEPRINT (SPEC 11-slot înghețat în sistem prin CERERE SYSTEM; pregătit pentru SLUG + Blueprint)
 
 ## SURSA
 Mandat ARHITECT direct în chat. Seed v2 confirmat și înghețat în sistem (Doc 14 STARE DE IMPLEMENTARE + STARE-CURENTA V75 + 00-INDEX; commit 6950303). SPEC 11-slot produs, atacat adversarial, ascuțit (3 sloturi). Fără HTML / Date_MASTER / artefacte finale / fișiere sistem / C18.
 
 Nomenclatura LOCKED V70: C17 SISTEMATIZAREA · CUVÂNT SISTEM · VERB SISTEMATIZEZ · iese din OCAZIE. Axă: RELUABILITATEA / forma reluabilă. Artefact: `_SISTEM` = hartă funcțională nativ-Excel (regula anti-SOP + garda OGLINDĂ active la fiecare slot).
+
+---
+
+## SYSTEM FREEZE (executat, MANDAT_SYSTEM_FREEZE_SPEC_C17)
+SPEC C17 înghețat în sistem (CERERE SYSTEM): `STARE-CURENTA.md` V76 · `14-ARHITECTURA-CONCEPTUALA-T5.md` STARE DE IMPLEMENTARE (C17 = SPEC 11-slot CONFIRMAT + ÎNGHEȚAT) · `00-INDEX.md`. Template MOTTO T5 consemnat ca CANDIDAT (nu LOCKED). Verificări: audit_sync zero regresie; nomenclatura LOCKED V70 neatinsă; zero em-dash; zero atingere c17/** și artefacte; C18-C20 neatinse. **C17 PREGĂTIT PENTRU SLUG + BLUEPRINT.** SPEC complet 11-slot mai jos (referință înghețată).
 
 ---
 
