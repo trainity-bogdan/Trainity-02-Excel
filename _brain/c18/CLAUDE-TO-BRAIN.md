@@ -1,27 +1,29 @@
 # CLAUDE -> BRAIN C18
 
 ## STATUS
-CERERE_SYSTEM_BLOCAJ_B1 (mandat ARHITECT "genereaza tot" primit; generare BLOCATA de dependenta de sistem; opresc executia, astept decizie)
+C18_GENERAT (cele 7 artefacte generate pe axa C18; audit trece tot mai puțin imgclone = imagini c01, așteaptă imagini ARHITECT; gate B2 blocat de stub C01-C17)
 
 ## SURSA
-ARHITECT a dat mandat direct in chat: "genereaza tot" = cele 7 artefacte C18. Pachet conceptual = LOCKED (SEED + SPEC 11-slot + SLUG Automatizare + blueprint 6x3 + _AUTOMATIZARE, confirmat C18_LOCKED). La pasul B1 (pre_generation_check.py 18) generarea e BLOCATA.
+Mandat direct ARHITECT în chat: "genereaza tot". Autorizație punctuală ARHITECT pentru `_system/**` DOAR pentru intrările C18 (freeze SPEC + IDENTITATE_TEHNICA). Generare COPY+MODIFY din `c01/`.
 
-## BLOCAJ B1 - toate dependentele sunt in _system/** (in afara scope-ului CLAUDE C18)
-1. **R-V03.55:** `_system/arhiva/SISTEM_TRAINITY-versiuni.md` linia 2975 = `## SPEC C18 - AUTOMATIZAREA [Status: NEGENERAT]`. Generatorul cere [Status: INGHETAT] cu cele 9 elemente narative (INTRIGA / PROBLEME / MIZA / MANTRA / MOTTO / STEP-TITLES / PROMPTURI / FINAL-LABELS / FENOMENE). SPEC-ul nostru e aprobat in CANALUL BRAIN, dar generatorul citeste REGISTRUL de sistem.
-2. **L142:** `_system/referinte/IDENTITATE-TEHNICA.md` -> sectiunea `## IDENTITATE_TEHNICA C18` LIPSESTE (C01-C16 exista; C17-C20 nu). Necesita ~20 campuri tehnice (cod, treapta_nr, nume_slug, nume_hero_caps_rand1, meta_val_treapta, footer_text, topbar_text, localStorage_studiu, localStorage_video, next_cod=C19, next_nume_title etc.), consistente cu C01-C17.
-3. **L143:** FENOMENE C18 verificate empiric vs `_system/referinte/Date_MASTER-initial.xlsx` (coloane reale).
+## CE S-A FĂCUT
+1. **Deblocaj B1:** SPEC C18 INGHETAT (9 elemente) în `SISTEM_TRAINITY-versiuni.md` + `IDENTITATE_TEHNICA C18` (24 câmpuri) în `referinte/IDENTITATE-TEHNICA.md`. `pre_generation_check 18` = TOATE PASS.
+2. **HTML-Studiu** — integral C18 (identitate, hero/mantra/motto, 18 step-titles + 18 step-actions, zone anti-clonă inv/anomaly/final, scenă, prompturi, payoff, system-map T5).
+3. **HTML-Editor-Studiu** — companion sincronizat (același conținut C18).
+4. **HTML-Video** + **HTML-Editor-Video** — static (exec-phrase/emotion/hero) + JS broadcast (6 stage × hook/next/emotion + 18 step title/instr + 2 prompturi).
+5. **FILM** — antet identitate + corp narativ integral C18 (DESCHIDERE, ROLURI, SCENA 7 capcane falsă-automatizare, 6 etape × 8 câmpuri, FINAL). Predare → C19.
+6. **Date_MASTER-C18** — foaia **`_AUTOMATIZARE`** (declanșator unic, contor atingeri cu formule vii COUNTIF, 9 pași cu STARE MANUAL/ELIMINAT/INTERVENȚIE MINIMĂ, granițe C04/C19). Datele reale păstrate (R-V02.15).
 
-## DE CE E CERERE SYSTEM
-CHAT-CONTEXT C18: `_system/**` = INTERZIS pentru CLAUDE C18. Regula: "nevoie de fisier comun -> Claude NU il modifica -> CERERE SYSTEM + opreste executia pana la decizie." Cele 3 fisiere sunt partajate de TOATE constructiile (C01-C20). B1 e regula blocanta (CLAUDE.md), nu se ignora.
+## VALIDARE
+- **B1** pre_generation_check 18: PASS.
+- **B3** audit_sync: C18 trece toate detectoarele MAI PUȚIN `R-V59.imgclone` (exec-stage = clone c01). **C01 NEPOLUAT** (anti-clonă OK, zero regresie). Zero em-dash peste tot.
+- **B2** gate_v20: NU s-a putut rula — gate-ul din repo e stub cu identități C01-C17 hardcodate; nu cunoaște C18. Neatins (forbidden + e validatorul).
 
-## NOTA SISTEMICA
-Si C17 (acum "in generare", Date_MASTER _SISTEM facut) are in registru SPEC C17 [Status: NEGENERAT] + IDENTITATE_TEHNICA C17 lipsa. Deci freeze-ul in registru e un gap deschis pentru intreg T5 (C17-C20), nu doar C18.
+## RĂMÂNE PENTRU "RELEASE PASS COMPLET" (R-V01.2)
+1. **Imagini** exec-stage (6) + hero — le produce ARHITECT extern; le integrez eu (watermark + base64) → închide `imgclone`.
+2. **B2 gate** — decizie de sistem: adăugare C18 în stub-ul gate_v20 SAU parser de producție (CERERE SYSTEM separată).
+3. **STARE-CURENTA.md** — consolidare versiune (fișier forbidden C18; o face chat-ul SYSTEM/ARHITECT).
 
-## OPTIUNI PENTRU ARHITECT
-**A (recomandat):** autorizezi CLAUDE C18 sa scrie DOAR intrarile C18 in cele 3 fisiere `_system` (inghet SPEC C18 in registru cu cele 9 elemente din pachetul aprobat + IDENTITATE_TEHNICA C18 consistent cu C01-C17 + verificare FENOMENE), apoi rulez B1 -> PASS si generez cele 7 artefacte (COPY+MODIFY din c01/), cu B2 gate v20 + B3 audit_sync dupa. Am pachetul complet aprobat, pot face freeze-ul corect.
-**B:** freeze-ul SPEC + IDENTITATE_TEHNICA C18 se face intr-un chat SYSTEM dedicat; eu astept si apoi rulez doar generarea.
+Nu declar RELEASE până nu-s imaginile + B2. Restul = livrat și verificat pe `main`.
 
-## RECOMANDARE
-A - autorizatie punctuala sa ating `_system/**` exclusiv pentru intrarile C18 (nu ating alte constructii), cu gate + audit dupa. E cel mai rapid drum la "genereaza tot".
-
-CERERE_SYSTEM_BLOCAJ_B1
+C18_GENERAT
