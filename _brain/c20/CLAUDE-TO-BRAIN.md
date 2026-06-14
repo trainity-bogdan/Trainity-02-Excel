@@ -1,12 +1,26 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-C20_VALIDAT_CU_REZERVE_MINORE (audit total adversarial dupa freeze: zero BLOCKER, zero MAJOR de redeschis SPEC; rezerve MINORE + garzi blueprint. Recomand 1 micro-fix INAINTE de SYSTEM: reziduu "ownership" engleza -> "proprietate". Detalii in AUDIT TOTAL mai jos.)
+GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX (audit acceptat de BRAIN; verdict mentinut C20_VALIDAT_CU_REZERVE_MINORE; micro-fixurile aprobate APLICATE in SPEC + CERERE SYSTEM. C20 gata de propagare SYSTEM. SPEC conceptual NEredeschis, sloturi mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse.)
 
 ## SURSA
-Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `AUDIT_TOTAL_C20_DUPA_FREEZE_SPEC` (commit ffc572e) - audit adversarial total cerut inainte de SYSTEM / blueprint. NU am atins SPEC-ul, sloturile, blueprint-ul sau fisiere de sistem; doar am auditat (SPEC recitit verbatim de pe disc) si am scris acest raport. CERERE SYSTEM + SPEC complet raman mai jos ca obiect al auditului. Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
+Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `APROBA_AUDIT_TOTAL_C20_MICRO_FIX` (commit 49eff8b) - BRAIN accepta auditul si APROBA micro-fixurile inainte de SYSTEM. Conform aprobarii, am aplicat micro-fixurile autorizate (F1 ownership -> proprietate; MOTTO marcat candidat in CERERE; CERERE clarificata pe cele 11 sloturi + fisiere de verificat). SPEC conceptual NEredeschis, sloturi mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse. Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
+
+---
+
+## ACCEPTARE AUDIT + MICRO-FIXURI APLICATE (mandat APROBA_AUDIT_TOTAL_C20_MICRO_FIX, commit 49eff8b)
+
+1. **Audit total C20 ACCEPTAT de BRAIN.** Verdict mentinut: **C20_VALIDAT_CU_REZERVE_MINORE** (zero BLOCKER, zero MAJOR de redeschis SPEC).
+2. **Micro-fixuri APROBATE si APLICATE** (in SPEC + CERERE SYSTEM, mai jos):
+   - F1: "ownership implicit" -> "proprietate implicita" (FENOMENE) si "Ownership pe ROL" -> "Proprietatea pe ROL" (GRANITE). Reziduul RO-EN inchis.
+   - F2: MOTTO marcat explicit CANDIDAT treapta T5 in CERERE SYSTEM (NU se propaga ca lock absolut de sistem pana la ratificarea globala T5).
+   - F9: CERERE SYSTEM spune acum explicit ca SYSTEM oglindeste TOATE cele 11 sloturi C20, nu doar cele 13 repere scurte.
+   - F10: CERERE SYSTEM cere SYSTEM sa verifice si `constructii.xlsx` / `_system/00-INDEX` / `06-MAP-CONSTRUCTII-T1-T5`.
+3. **Neatins:** SPEC conceptual NEredeschis, sloturile mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse.
+4. **Garzi blueprint pastrate** (la mandatul de blueprint): test viu cablat real (V1 pe referinte reale, anti-RACI) · escaladare = scoping de proprietate, nu regula C19 · STEP-TITLES remapate pe structura ceruta · exemplu concret + drama FAIL -> AUTONOM.
+5. **STATUS FINAL: GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX.** C20 gata de propagare SYSTEM, apoi blueprint la mandat separat.
 
 ---
 
@@ -125,7 +139,7 @@ SPEC-ul complet, validat si inghetat, ramane mai jos, neschimbat.
 5. SLUG = Excel-20-Delegare.
 6. MIZA HERO = DELEGAREA SISTEMULUI DE LUCRU.
 7. MANTRA = Nu impart sarcini. Deleg sistemul.
-8. MOTTO = Pleci, si munca nu mai e a ta.
+8. MOTTO (CANDIDAT treapta T5 - NU se propaga ca lock absolut de sistem pana la ratificarea globala T5) = Pleci, si munca nu mai e a ta.
 9. AHA = Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
 10. ARTEFACT = _DELEGARE.
 11. Test filmabil central = AUTOR_ACTIV = NU + STATUS FINAL calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
@@ -133,11 +147,12 @@ SPEC-ul complet, validat si inghetat, ramane mai jos, neschimbat.
 13. Blueprint conceptual C20 ramane NEGENERAT pana la mandat separat.
 
 ### Reperele de sistem de actualizat (la latitudinea Chat SYSTEM)
-- `_system/governance/TRAINITY_ARCHITECTURE_BIBLE.md` §T5: bloc `SPEC C20 DELEGAREA - LOCKED v1.0` (oglinda blocului §T4 C15 din V74), cu cele 11 sloturi + artefact `_DELEGARE` + granite vs C18 / C19.
+- `_system/governance/TRAINITY_ARCHITECTURE_BIBLE.md` §T5: bloc `SPEC C20 DELEGAREA - LOCKED v1.0` (oglinda blocului §T4 C15 din V74), cu TOATE cele 11 sloturi C20 COMPLETE (SLUG, INTRIGA, PROBLEMELE, MIZA, MANTRA, WOW, MOTTO-candidat, FENOMENE, STEP-TITLES, GRESEALA, AHA), NU doar cele 13 repere scurte de mai sus, + artefact `_DELEGARE` + granite vs C18 / C19.
 - `_system/14-ARHITECTURA-CONCEPTUALA-T5.md` STARE DE IMPLEMENTARE: C20 din "seed neinceput" -> "SPEC 11-slot INGHETAT v1.0".
 - `_system/NOMENCLATURA-LOCKED-SCARA.md`: descriptor MIZA HERO C20 = "DELEGAREA SISTEMULUI DE LUCRU" (model C01 "STRUCTURAREA TABELELOR"); nomenclatura C20 (DELEGAREA / AUTONOMIE / DELEG) deja LOCKED V70.
 - `STARE-CURENTA.md`: bump versiune cu sumar FREEZE SPEC C20.
 - Mecanismul de stare-freeze citit de `pre_generation_check.py` / `gate_v20.py` (acolo unde C19 a scris freeze SPEC + IDENTITATE_TEHNICA in registrul de sistem, commit df74ccc): marcheaza C20 SPEC inghetat, ca B1 sa treaca la generare.
+- DE VERIFICAT de SYSTEM daca necesita actualizare: `constructii.xlsx` (oglinda machine-readable a nomenclaturii), `_system/00-INDEX`, `_system/06-MAP-CONSTRUCTII-T1-T5.md` (identitate C20).
 
 ### Referinta + precedent
 SPEC-ul 11-slot complet (sursa de oglindit) e mai jos in acest fisier. Precedent deja executat pe acelasi pattern: C19 (commit df74ccc, "freeze SPEC + IDENTITATE_TEHNICA in registrul de sistem - autorizat ARHITECT") si propagarea §T4 C15 din V74.
@@ -199,7 +214,7 @@ Instantiaza template-ul de treapta T5 "Pleci, si munca [...]": C17 "o reia altci
 
 ## 8. FENOMENE
 (starile / capcanele observabile, materialul pentru SCENA + exec-stages)
-- ownership implicit ramas la autor (nescris, dar real);
+- proprietate implicita ramasa la autor (nescrisa, dar reala);
 - rol operational nedefinit;
 - responsabilitate transferata partial;
 - acces insuficient sau excesiv pentru rolul care preia;
@@ -255,7 +270,7 @@ Regula LOCK: tot ce intra in `_DELEGARE` exista ca sa alimenteze testul viu (sta
 - **C20 vs C19:** C19 controleaza DATELE (reguli care prind input gresit); C20 transfera SISTEMUL (proprietatea catre un rol). C19 = autorul ramane titularul regulilor; C20 = preda titularitatea. Test: cine raspunde daca regulile se schimba? C19 = autorul; C20 = rolul/sistemul.
 - **C20 vs C18:** C18 face sistemul sa mearga singur (fara efort); C20 face ca sistemul sa poata fi DETINUT de altcineva. C18 = miscare fara om; C20 = proprietate fara autor.
 - **C20 vs C04:** C04 = actualizarea unui set (Refresh); C20 = predarea proprietatii unui sistem intreg.
-- **C20 vs HR / management / organigrama:** C20 NU desemneaza persoane, NU face fise de post, NU e lectie de management. Ownership pe ROL, demonstrat in workbook, nu in discurs.
+- **C20 vs HR / management / organigrama:** C20 NU desemneaza persoane, NU face fise de post, NU e lectie de management. Proprietatea pe ROL, demonstrata in workbook, nu in discurs.
 - **C20 vs documentare / predare verbala:** explicatia nu e delegare; dovada = testul viu, nu un checklist bifat.
 
 ## TEST DE MANIFESTARE / FILMABILITATE (8-12 min, zero teorie)
