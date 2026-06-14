@@ -1,56 +1,54 @@
 # BRAIN -> CLAUDE C18
 
 ## STATUS
-SPEC_C18_APROBAT_BLUEPRINT_CERUT
+C18_CONCEPTUAL_APROBAT_INCHIDERE_CERUTA
 
 ## CONTEXT
 C18 AUTOMATIZAREA. T5 AUTONOMIE. CUVANT MOTOR. VERB AUTOMATIZEZ.
 
-SPEC 11-slot C18 este aprobat conceptual de BRAIN.
+C18 este aprobat conceptual de BRAIN.
 
-Aprobate final:
-- HERO: Cum fac munca sa mearga mai departe fara mana mea?
-- MIZA HERO: AUTOMATIZAREA MUNCII RECURENTE
-- BOMBA: Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data.
-- GRESEALA: Confunzi am un sistem cu nu mai trebuie sa-l fac eu. Un sistem pe care tot tu il pornesti la fiecare ciclu te-a organizat, nu te-a scos din executie.
-- AHA: Ce repeti manual la fiecare ciclu nu e o sarcina. E un motor care inca merge pe mana ta.
-- MANTRA: Nu o execut. O las sa ruleze.
-- WOW: Un lant de pasi pe care il faceai cu mana la fiecare ciclu. Acum porneste dintr-o singura atingere si se duce pana la capat fara tine.
-- MOTTO: Tu pleci din executie, lantul ramane in miscare.
-- CINE DEVII: Nu mai esti omul care executa munca. Esti omul care o pune in miscare.
-- PAYOFF: O munca pe care o porneai si o duceai manual la fiecare ciclu se executa acum fara mana ta.
-- VERB-SEMNATURA: AUTOMATIZEZ.
+## APROBARI FINALE
 
-Ratificare provizorie T5:
-- C17 = o reia altcineva
-- C18 = tu pleci din executie, lantul ramane in miscare
-- C19 = se tine singura
-- C20 = nu mai e a ta
+- SEED C18 aprobat.
+- SPEC 11-slot C18 aprobat.
+- SLUG final aprobat: Automatizare.
+- CUVANT topbar aprobat: MOTOR.
+- Blueprint conceptual 6 x 3 aprobat ca baza.
+- Artefact distinct aprobat: _AUTOMATIZARE.
+
+Etape blueprint aprobate:
+1. Lantul pe care il faci de fiecare data.
+2. Ce merita scos din mainile tale.
+3. Pasii legati intr-un singur declansator.
+4. Pasul manual care dispare.
+5. Ce ramane mana omului.
+6. Testul mainile jos.
+
+## GARZI PENTRU GENERARE ULTERIOARA
+
+- C18 nu este tutorial de unealta.
+- C18 nu este refresh.
+- C18 nu este buton.
+- C18 nu este autocontrol.
+- C18 nu este ownership.
+- C18 este retragerea omului din executia repetitiva printr-un lant care ramane in miscare.
 
 ## CERERE
 
-Pregateste SLUG + blueprint conceptual C18.
+Pregateste raportul final de inchidere conceptuala C18 pentru ARHITECT.
 
 Include:
-1. SLUG C18, 3 variante.
-2. Blueprint C18, structura 6 etape x 3 pasi.
-3. Pentru fiecare etapa:
-- obiectiv;
-- ce se vede in Excel;
-- ce trebuie sa simta cursantul;
-- risc de contaminare.
-4. Definirea finala a artefactului _AUTOMATIZARE ca piesa distincta in workbook.
-5. Propunere vizuala pentru marcarea pasilor eliminati si a interventiei minime ramase.
-
-## TESTE DE PAZA
-
-- testul mainile jos;
-- anti-C04: elimina pasi, nu doar refresh;
-- anti-C19: ruleaza, dar nu se autocontroleaza;
-- anti-C20: nu desemneaza proprietar.
+- SEED aprobat;
+- SPEC aprobat;
+- SLUG aprobat;
+- blueprint aprobat;
+- artefact _AUTOMATIZARE aprobat;
+- riscuri ramase;
+- ce trebuie dus mai departe catre generare, doar daca ARHITECT cere explicit.
 
 ## LIMITA
 Fara HTML. Fara Date_MASTER. Fara FILM. Fara alte livrabile.
 
 ## RAPORT
-Scrie SLUG + blueprint conceptual in _brain/c18/CLAUDE-TO-BRAIN.md.
+Scrie raportul final de inchidere conceptuala in _brain/c18/CLAUDE-TO-BRAIN.md.
