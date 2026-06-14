@@ -43,7 +43,7 @@ Dacă ești **Claude** (motor) la primul chat → citește în ordine:
 | **11** | `11-ARHITECTURA-CONCEPTUALA-T2.md` | **AUTORITATE conceptuală T2** (axe C05-C08, ce face/NU face, garda T2/T3, prioritate peste istoric pre-V45). Citește înainte de orice C05-C08. | ~6 KB |
 | **12** | `12-ARHITECTURA-CONCEPTUALA-T3.md` | **AUTORITATE conceptuală T3** (lanț C09-C12, verbe-semnătură, granițe, formula T3/T4/T5). Citește înainte de orice C09-C12. | ~6 KB |
 | **13** | `13-ARHITECTURA-CONCEPTUALA-T4.md` | **AUTORITATE conceptuală T4** (lanț C13-C16, pilon „T4 consumă răspunsul T3", granițe, voce, testul 2030). Citește înainte de orice C13-C16. | ~8 KB |
-| **14** | `14-ARHITECTURA-CONCEPTUALA-T5.md` | **AUTORITATE conceptuală T5** (lanț C17-C20, spina OCAZIE/EFORT/ATENȚIE/PROPRIETATE, cele 6 granițe închise, Testul concediului PASS). Citește înainte de orice C17-C20. | ~9 KB |
+| **14** | `14-ARHITECTURA-CONCEPTUALA-T5.md` | **AUTORITATE conceptuală T5** (lanț C17-C20, spina OCAZIE/EFORT/ATENȚIE/PROPRIETATE, cele 6 granițe închise, Testul concediului PASS pe autonomie-rezultat, TEST DE MANIFESTARE EXCEL per construcție; C17 SEED CONFIRMAT v2). Citește înainte de orice C17-C20. | ~9 KB |
 | **15** | `15-PROTOCOL-SYNC-CONSTRUCTII.md` | **PROCEDURĂ multi-chat BRAIN ↔ CLAUDE** pentru construcții noi C13-C20 (pereche `_brain/cXX/BRAIN-TO-CLAUDE.md` + `CLAUDE-TO-BRAIN.md`, regula `sync`, interdicții, template CXX). Citește la deschiderea unui chat de construcție. | ~8 KB |
 
 Plus `COMENZI.yaml` (catalog machine-readable) + `INDEX-CAUTARE.md` (search alphabetic). Familia de autoritate conceptuală: 11 (T2) · 12 (T3) · 13 (T4) · 14 (T5). Procedură multi-chat: 15.

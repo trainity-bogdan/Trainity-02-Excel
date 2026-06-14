@@ -154,4 +154,10 @@ Cele 6 riscuri conceptuale descoperite în rundele de audit sunt închise prin d
 
 ---
 
-Versiune document: freeze SPEC conceptual T5 · oglinda doc 11/12 · nomenclatură LOCKED V70.
+## STARE DE IMPLEMENTARE T5
+- **C17 SISTEMATIZAREA: SEED CONCEPTUAL CONFIRMAT v2 (ARHITECT, 14 iunie 2026).** Identitate, axă (RELUABILITATEA / forma navigabilă), întrebare („Cum reia altcineva munca asta, fără mine?"), AHA și mantra confirmate. Artefact obligatoriu `_SISTEM` = **hartă funcțională nativ-Excel** (named ranges SRC_/INPUT_/CONTROL_/PARAM_/OBJ_, hyperlink-uri interne, formule de oglindire), NU SOP / documentație. Test de manifestare: PASS doar dacă `_SISTEM` se rupe scos din workbook (#REF! / linkuri moarte); FAIL dacă funcționează copiat în Word ca procedură. **Garda OGLINDĂ:** `_SISTEM` oglindește și navighează, nu execută (= C18) și nu judecă praguri (= C19). Granițe C16/C18/C19/C20 ținute. AHA (candidat, lock la S5 SPEC): „O muncă făcută de două ori nu mai e o livrare. E un sistem ascuns în workbook." Mantra: „Nu o fac din nou. O fac sistem." Seed în `_brain/c17/CLAUDE-TO-BRAIN.md`. **PREGĂTIT PENTRU SPEC 11-slot.**
+- **C18 AUTOMATIZARE · C19 GUVERNARE · C20 DELEGARE: nomenclatură LOCKED V70, seed neînceput.** Se autorează la seed-ul fiecăreia, cu artefactul vizibil propriu (`_AUTOMATIZARE` / `_GUVERNARE` / `_DELEGARE`, vezi TEST DE MANIFESTARE EXCEL).
+
+---
+
+Versiune document: freeze SPEC conceptual T5 · oglinda doc 11/12 · nomenclatură LOCKED V70 · STARE DE IMPLEMENTARE: C17 SEED CONFIRMAT v2.
