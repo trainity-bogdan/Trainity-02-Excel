@@ -1,10 +1,10 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SPEC_C20_VALIDAT_FREEZE_FINAL (SPEC 11-slot DELEGAREA validat de BRAIN pentru FREEZE SPEC FINAL; record de freeze la nivel C20. Propagarea in autoritatea de sistem = CERERE SYSTEM separata. Blueprint NEGENERAT - asteapta mandat separat.)
+CERERE_SYSTEM_PROPAGARE_FREEZE_C20_FORMULATA (SPEC C20 inghetat la nivel C20; CERERE SYSTEM scrisa pentru Chat Andrei SYSTEM - propagarea freeze-ului in autoritatea de sistem. Chatul C20 NU atinge fisiere de sistem. Blueprint NEGENERAT.)
 
 ## SURSA
-Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CONFIRMA_FREEZE_SPEC_C20_FINAL` (commit 48149db). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
+Comanda `sync` / `CERERE SYSTEM`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CERERE_SYSTEM_PROPAGARE_FREEZE_C20` (commit a5842c0). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
 
@@ -29,6 +29,40 @@ BRAIN a validat SPEC 11-slot C20 pentru FREEZE SPEC FINAL. Confirm:
 - **URMATOR PAS:** dupa freeze final -> BLUEPRINT conceptual C20, DOAR la mandat separat. Garde inregistrate (vezi sus).
 
 SPEC-ul complet, validat si inghetat, ramane mai jos, neschimbat.
+
+---
+
+## CERERE SYSTEM -> CHAT ANDREI SYSTEM (mandat CERERE_SYSTEM_PROPAGARE_FREEZE_C20, commit a5842c0)
+
+**Adresata:** Chat Andrei SYSTEM. **Subiect:** propagarea FREEZE SPEC C20 DELEGAREA in autoritatea de sistem. Chatul C20 NU modifica fisiere de sistem (interdictie de mandat); formulez cererea si ma opresc.
+
+### Cele 13 repere obligatorii (de oglindit verbatim)
+1. C20 = DELEGAREA.
+2. T5 = AUTONOMIE.
+3. CUVANT LOCKED = AUTONOMIE.
+4. VERB LOCKED = DELEG.
+5. SLUG = Excel-20-Delegare.
+6. MIZA HERO = DELEGAREA SISTEMULUI DE LUCRU.
+7. MANTRA = Nu impart sarcini. Deleg sistemul.
+8. MOTTO = Pleci, si munca nu mai e a ta.
+9. AHA = Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+10. ARTEFACT = _DELEGARE.
+11. Test filmabil central = AUTOR_ACTIV = NU + STATUS FINAL calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+12. Granita C20 = scoate autorul din PROPRIETATE.
+13. Blueprint conceptual C20 ramane NEGENERAT pana la mandat separat.
+
+### Reperele de sistem de actualizat (la latitudinea Chat SYSTEM)
+- `_system/governance/TRAINITY_ARCHITECTURE_BIBLE.md` §T5: bloc `SPEC C20 DELEGAREA - LOCKED v1.0` (oglinda blocului §T4 C15 din V74), cu cele 11 sloturi + artefact `_DELEGARE` + granite vs C18 / C19.
+- `_system/14-ARHITECTURA-CONCEPTUALA-T5.md` STARE DE IMPLEMENTARE: C20 din "seed neinceput" -> "SPEC 11-slot INGHETAT v1.0".
+- `_system/NOMENCLATURA-LOCKED-SCARA.md`: descriptor MIZA HERO C20 = "DELEGAREA SISTEMULUI DE LUCRU" (model C01 "STRUCTURAREA TABELELOR"); nomenclatura C20 (DELEGAREA / AUTONOMIE / DELEG) deja LOCKED V70.
+- `STARE-CURENTA.md`: bump versiune cu sumar FREEZE SPEC C20.
+- Mecanismul de stare-freeze citit de `pre_generation_check.py` / `gate_v20.py` (acolo unde C19 a scris freeze SPEC + IDENTITATE_TEHNICA in registrul de sistem, commit df74ccc): marcheaza C20 SPEC inghetat, ca B1 sa treaca la generare.
+
+### Referinta + precedent
+SPEC-ul 11-slot complet (sursa de oglindit) e mai jos in acest fisier. Precedent deja executat pe acelasi pattern: C19 (commit df74ccc, "freeze SPEC + IDENTITATE_TEHNICA in registrul de sistem - autorizat ARHITECT") si propagarea §T4 C15 din V74.
+
+### STOP
+Conform mandatului ("Nu modifica fisiere de sistem din chatul C20"), ma OPRESC aici. Astept executia in Chat Andrei SYSTEM (sau ridicarea explicita a acestui chat la rol SYSTEM, daca ARHITECT decide asa).
 
 ---
 
