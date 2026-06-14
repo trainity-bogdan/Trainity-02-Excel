@@ -1,23 +1,25 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_FREEZE_SPEC_11_SLOT
+MANDAT_BLUEPRINT_CONCEPTUAL
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
 
 Rol C19 în T5: scoate autorul din ATENȚIE.
 
-Axa C19, confirmată în CHAT-CONTEXT:
+Axa C19:
 DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-SPEC 11-slot C19 este acceptat pentru freeze:
+SPEC 11-slot C19 este înghețat și acceptat:
 
-`C19_SPEC_11_SLOT_ACCEPTAT_PENTRU_FREEZE`
+`C19_SPEC_11_SLOT_FROZEN_ACCEPTAT`
 
-Aprobări BRAIN:
+Nu mai este nevoie de iterație pe SPEC.
+
+Sloturi locked pentru Blueprint:
 
 - SLUG: `guvernare`
 - MIZA HERO: `GUVERNAREA SISTEMULUI PRIN REGULI`
@@ -25,55 +27,54 @@ Aprobări BRAIN:
 - BOMBĂ: `Motorul tău rulează. Dar tot tu verifici că n-a greșit, de fiecare dată.`
 - MANTRA: `Nu o supraveghez. O guvernez prin reguli.`
 - WOW: `Un sistem care mergea doar cât stăteai cu ochii pe el. Acum, pe o intrare greșită, se oprește singur și aprinde semnalul, fără tine.`
-- MOTTO candidat: `Pleci, și munca se ține singură.`
+- MOTTO: `Pleci, și munca se ține singură.`
 - GREȘEALA: `Confunzi «merge» cu «merge corect».`
 - AHA: `Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește.`
 - Artefact confirmat: `_GUVERNARE`
+- STEP 5 locked: `Excepția și oprirea controlată`
+
+MOTTO status:
+`acceptat pentru C19, dar dependent de ratificarea template-ului T5`.
 
 ## MANDAT
 
-Pregătește versiunea de freeze pentru SPEC 11-slot C19, fără implementare.
+Pregătește Blueprint conceptual C19, fără implementare.
 
 Nu genera artefacte.
 Nu modifica c19/**.
 Nu modifica fișiere sistem.
 Nu genera HTML, Date_MASTER, build scripts sau FILM.
 
-### 1. Ajustare obligatorie STEP 5
+### 1. Structură Blueprint cerută
 
-În STEP-TITLES, ajustează etapa 5 ca să nu sugereze escaladare, ownership sau responsabil uman.
+Blueprint-ul trebuie să conțină:
 
-Înlocuiește formularea riscantă:
+- cele 6 etape finale C19
+- 18 pași, câte 3 pași per etapă
+- scopul fiecărei etape
+- obiectul Excel al fiecărei etape
+- ce se vede în film
+- ce NU trebuie să apară ca să nu contaminăm C18 / C20 / T4
+- test de validare pe fiecare etapă
 
-`Exceptia si fail-safe-ul (_GUVERNARE: ce opreste lantul, ce cere atentie umana - granita C20)`
+### 2. Cele 6 etape obligatorii
 
-cu formularea recomandată:
+Păstrează această structură:
 
-`Excepția și oprirea controlată`
+1. `Sistemul care merge doar cât te uiți`
+2. `Ce poate să devieze previzibil`
+3. `Regula care prinde intrarea greșită`
+4. `Pragul și semnalul`
+5. `Excepția și oprirea controlată`
+6. `Testul ochilor închiși`
 
-Descriere obligatorie pentru etapa 5:
+### 3. Arc demonstrativ obligatoriu Excel
 
-`_GUVERNARE marchează excepția, oprește lanțul sau schimbă starea, dar nu desemnează responsabilul.`
+Blueprint-ul trebuie să poată fi filmat în Excel prin arc clar:
 
-### 2. Sloturi de păstrat
+input greșit -> regulă -> prag / stare -> excepție -> oprire controlată -> testul ochilor închiși
 
-Păstrează toate sloturile aprobate anterior:
-
-1. SLUG
-2. INTRIGA
-3. PROBLEMELE
-4. MIZA
-5. MANTRA
-6. WOW
-7. MOTTO
-8. FENOMENE
-9. STEP-TITLES
-10. GREȘEALA
-11. AHA
-
-### 3. Granițe obligatorii
-
-Păstrează explicit distincția:
+### 4. Granițe de păstrat
 
 - C18 = rulează
 - C19 = se ține corect
@@ -93,17 +94,18 @@ C19 nu este:
 - delegare
 - persoană care verifică
 
-### 4. MOTTO
+### 5. Interdicții operaționale
 
-Marchează MOTTO ca:
+Nu crea folder `c19/`.
+Nu crea fișiere HTML.
+Nu crea Excel.
+Nu crea FILM.
+Nu crea build script.
+Nu modifica `_system/**`.
+Nu modifica alte `_brain/**`.
+Nu modifica alte construcții.
 
-`acceptat pentru C19, dar dependent de ratificarea template-ului T5`
-
-Conținutul MOTTO rămâne:
-
-`Pleci, și munca se ține singură.`
-
-### 5. Output cerut
+### 6. Raport
 
 Scrie raportul exclusiv în:
 
@@ -115,15 +117,17 @@ Format raport:
 
 ## STATUS
 
-## SPEC 11-SLOT C19 FREEZE
+## BLUEPRINT CONCEPTUAL C19
 
-## AJUSTARE STEP 5
+## CELE 6 ETAPE
 
-## GRANIȚE CONFIRMATE
+## CEI 18 PAȘI
 
-## MOTTO STATUS
+## ARC DEMONSTRATIV EXCEL
 
-## RISCURI RĂMASE
+## GRANIȚE ȘI GARZI
+
+## RISCURI
 
 ## CERERI CĂTRE BRAIN / SYSTEM
 
@@ -132,4 +136,4 @@ Format raport:
 Fă commit descriptiv pe main după scrierea raportului.
 
 ## RAPORT
-Aștept SPEC 11-slot C19 freeze în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept Blueprint conceptual C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
