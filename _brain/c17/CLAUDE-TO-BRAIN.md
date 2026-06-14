@@ -1,10 +1,10 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_SPEC_READY_FOR_REVIEW (SPEC 11-slot propus pe seedul v2 confirmat; așteaptă review/audit ARHITECT)
+C17_SPEC_CONFIRMED (SPEC 11-slot, ascuțit post-audit adversarial: HERO + GREȘEALA + PAYOFF + notă MOTTO; confirmat ARHITECT)
 
 ## SURSA
-Mandat ARHITECT direct în chat. Seed v2 confirmat și înghețat în sistem (Doc 14 STARE DE IMPLEMENTARE + STARE-CURENTA V75 + 00-INDEX; commit 6950303). Acum: SPEC 11-slot, fără HTML / Date_MASTER / artefacte finale / fișiere sistem / C18.
+Mandat ARHITECT direct în chat. Seed v2 confirmat și înghețat în sistem (Doc 14 STARE DE IMPLEMENTARE + STARE-CURENTA V75 + 00-INDEX; commit 6950303). SPEC 11-slot produs, atacat adversarial, ascuțit (3 sloturi). Fără HTML / Date_MASTER / artefacte finale / fișiere sistem / C18.
 
 Nomenclatura LOCKED V70: C17 SISTEMATIZAREA · CUVÂNT SISTEM · VERB SISTEMATIZEZ · iese din OCAZIE. Axă: RELUABILITATEA / forma reluabilă. Artefact: `_SISTEM` = hartă funcțională nativ-Excel (regula anti-SOP + garda OGLINDĂ active la fiecare slot).
 
@@ -12,17 +12,18 @@ Nomenclatura LOCKED V70: C17 SISTEMATIZAREA · CUVÂNT SISTEM · VERB SISTEMATIZ
 
 ## SPEC 11-SLOT C17 SISTEMATIZAREA
 
-### 1. HERO
-Întrebare-hero: **„Cum reia altcineva munca asta, fără mine?"**
+### 1. HERO (ascuțit post-audit)
+Întrebare-hero: **„Cum transform munca pe care doar eu o știu într-un sistem pe care altcineva îl pornește?"**
 MIZA HERO (hov-object, descriptorul afișat): **„SISTEMATIZAREA MUNCII RELUABILE"** (gerunziu + obiect; instanțiază modelul C01 „STRUCTURAREA TABELELOR").
+(Ascuțire: întrebarea veche „Cum reia altcineva munca asta, fără mine?" era ≈ întrebarea de treaptă T5. Acum conține ancora C17: „sistem" + „pornește".)
 
 ### 2. BOMBĂ
 **„Munca ta merge perfect. Până pleci tu."**
 (Tensiunea OCAZIE: acum NU funcționează fără autor. Întrebarea T5 izbește direct.)
 
-### 3. GREȘEALA
-**„Oamenii refac munca din memorie. Profesioniștii o fac sistem în workbook."**
-(Reluabilitate + Excel-native. „din memorie" vs „sistem în workbook" = author-only vs reluabil. Notă: formula de treaptă „Oamenii/Profesioniștii" e saturată 100%, vezi R7; aici e locul de diversificat dacă ARHITECT cere.)
+### 3. GREȘEALA (ascuțit post-audit, formula „Oamenii/Profesioniștii" ELIMINATĂ)
+**„Nu ai un proces. Ai o memorie personală care ține un Excel în viață."**
+(Rupe formula saturată. Imagine vie Excel-native + OCAZIE: autorul „ține Excelul în viață" = el e gâtuirea. „proces" vs „memorie personală" = sistem reluabil vs author-only.)
 
 ### 4. AHA (lock S5, confirmat)
 **„O muncă făcută de două ori nu mai e o livrare. E un sistem ascuns în workbook."**
@@ -33,20 +34,20 @@ MIZA HERO (hov-object, descriptorul afișat): **„SISTEMATIZAREA MUNCII RELUABI
 
 ### 6. WOW
 **„Un proces care trăia doar în capul tău. Acum o hartă vie în workbook, pe care altcineva o pornește fără tine."**
-(„hartă vie" = formule/linkuri = Excel-native, anti-SOP. „altcineva o pornește" = un OM pornește, nu „se pornește singură" = granița C18 ținută în chiar formularea WOW.)
+(„hartă vie" = formule/linkuri = Excel-native, anti-SOP. „altcineva o pornește" = un OM pornește, nu „se pornește singură" = granița C18 ținută în chiar formularea WOW. Diferențiere de PAYOFF: WOW = momentul vizual instant când harta prinde viață; PAYOFF = consecința durabilă.)
 
 ### 7. MOTTO (slot de treaptă)
-**Template de treaptă T5 PROPUS (cere ratificare, ca „Dintr-o privire" la T4):** **„Pleci, și munca [se retrage autorul, gradat]."**
-Progresia de treaptă: C17 „o reia altcineva" · C18 „se face singură" · C19 „se ține singură" · C20 „nu mai e a ta". (Subiectul marchează granița: C17 = altcineva-OM; C18 = singură-fără-om.)
-**Instanțiere C17:** **„Pleci, și munca o reia altcineva."**
+**TEMPLATE CANDIDAT T5 (NU încă LOCKED pentru toată treapta):** **„Pleci, și munca [...]."**
+Progresia candidată: C17 „o reia altcineva" · C18 „se face singură" · C19 „se ține singură" · C20 „nu mai e a ta". (Subiectul marchează granița: C17 = altcineva-OM; C18 = singură-fără-om.) Statut CANDIDAT (decizie ARHITECT): funcționează foarte bine la C17, dar se RETESTEAZĂ la C18/C19/C20 înainte de îngheț la nivel T5. Notă obligatorie: C17 e intenționat ne-reflexiv („altcineva"), reflexivul „singură" începe la C18.
+**Instanțiere C17 (fixată):** **„Pleci, și munca o reia altcineva."**
 
 ### 8. CINE DEVII
 **„Nu mai ești omul care ține munca. Ești omul care o face sistem."**
 (Rol: din executant indispensabil în autor de sistem reluabil. „o face sistem" = verb-semnătură.)
 
-### 9. PAYOFF
-**„O muncă pe care o făceai de fiecare dată a devenit un sistem pe care altcineva îl pornește fără tine."**
-(before: repetiție manuală author-only -> after: sistem pornit de altcineva. Distinct de payoff-ul C16/T4, care era „raport livrat".)
+### 9. PAYOFF (ascuțit post-audit, diferențiat de WOW)
+**„Acum poți lipsi o săptămână, și munca are cine s-o reia."**
+(Ancorat în Testul concediului din Doc 14: C17 = 1 săptămână, reluabil de altcineva; distinct de C20 = 1 lună, nu mai e a ta. WOW = momentul vizual instant; PAYOFF = consecința durabilă, autorul poate lipsi.)
 
 ### 10. MIZA (director, fără jargon)
 **„Câtă vreme munca depinde de o singură persoană, e un risc ascuns: în concediu, la demisie, la suprasolicitare, se oprește. Sistematizarea o face să continue cu oricine instruit, nu doar cu autorul ei."**
@@ -97,7 +98,7 @@ Anti-contaminare: a automatiza (C18), a guverna (C19), a delega (C20) INTERZISE 
 - R4 -> T4: descrii cum arată raportul. Obiect = procesul.
 - R5 -> C19: praguri/validări/alerte. Garda OGLINDĂ (nu judecă).
 - R6 -> cunoaștere tribală mascată: pas „ajustezi cum știi tu". Testul substitutului.
-- R7 -> saturație „Oamenii/Profesioniștii" (GREȘEALA): de diversificat dacă ARHITECT cere.
+- R7 -> saturație „Oamenii/Profesioniștii": ÎNCHIS la GREȘEALA (înlocuită cu „Nu ai un proces. Ai o memorie personală care ține un Excel în viață.").
 - R8 -> „hartă" ecou C08 CARTOGRAFIERE: folosesc „hartă funcțională a muncii/workbook-ului", NU verbul „a cartografia" ca identitate.
 
 ## TEST ANTI-SOP
@@ -108,9 +109,9 @@ before (munca în cap, „trebuie să mă întrebi pe mine") -> construiești ha
 
 ## VERDICT
 Cele 11 sloturi pe axa RELUABILITATEA, pe verb-semnătură „a sistematiza", ancorate în `_SISTEM` Excel-native, cu garda OGLINDĂ și OCAZIE la fiecare. Zero contaminare C18/C19/C20/T4 (verificat slot cu slot). Probleme/fenomene/step-titles/granițe/riscuri/teste incluse. Respectă constrângerile (nu SOP, nu documentație, nu automatizare/guvernare/delegare, nu reface T4).
-Două puncte care cer decizie ARHITECT la review: (a) ratificarea template-ului de treaptă T5 pentru MOTTO „Pleci, și munca [...]"; (b) dacă diversifică GREȘEALA în afara formulei „Oamenii/Profesioniștii" (R7).
+Ascuțiri post-audit adversarial aplicate (confirmate ARHITECT): HERO injectat cu ancora „sistem"; GREȘEALA înlocuită (formula „Oamenii/Profesioniștii" eliminată); PAYOFF diferențiat de WOW și ancorat în Testul concediului. MOTTO: instanța C17 fixată, template T5 marcat CANDIDAT (se retestează la C18/C19/C20).
 
-**C17_SPEC_READY_FOR_REVIEW**
+**C17_SPEC_CONFIRMED**
 
 ## REFERINȚĂ
-Seed v2 confirmat (definiția completă `_SISTEM` blocuri A-F, audit anti-SOP) = commit 6950303 + Doc 14 STARE DE IMPLEMENTARE. Pasul următor după review: SLUG + blueprint + cele 7 artefacte (generare), separat.
+Seed v2 confirmat (definiția completă `_SISTEM` blocuri A-F, audit anti-SOP) = commit 6950303 + Doc 14 STARE DE IMPLEMENTARE. Pasul următor după îngheț SPEC: SLUG + blueprint + cele 7 artefacte (generare), separat.
