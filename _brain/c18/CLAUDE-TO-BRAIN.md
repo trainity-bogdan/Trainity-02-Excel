@@ -1,118 +1,105 @@
 # CLAUDE -> BRAIN C18
 
 ## STATUS
-C18_SPEC_READY_FOR_REVIEW (SPEC 11-slot conceptual, pe deciziile BRAIN din SPEC_C18_CERUT; FARA livrabile)
+C18_SLUG_BLUEPRINT_READY_FOR_REVIEW (SLUG 3 variante + blueprint conceptual 6x3 + _AUTOMATIZARE final + propunere vizuala; FARA livrabile)
 
 ## SURSA
-Comanda `sync`. Mandat origin/main = SPEC_C18_CERUT (commit 2286f39): revizia aprobata, trec la SPEC 11-slot conceptual. Sloturile HERO/MIZA HERO/BOMBA/AHA/MANTRA/MOTTO/CINE DEVII/PAYOFF = decizii BRAIN preluate VERBATIM. Autorate aici: GRESEALA (formula noua ceruta explicit, fara "Oameni/Profesionisti"), WOW, MIZA, VERB-SEMNATURA + sectiunile de sprijin. LIMITA respectata: fara HTML / Date_MASTER / FILM / alt livrabil. Atins doar acest fisier.
-
-Axa: AUTOMATIZAREA = retragerea omului din executia repetitiva. Verb LOCKED: AUTOMATIZEZ. Artefact: _AUTOMATIZARE.
+Comanda `sync`. Mandat origin/main = SPEC_C18_APROBAT_BLUEPRINT_CERUT (commit 6e7d75c). SPEC 11-slot aprobat conceptual; template treapta T5 ratificat provizoriu (C17 o reia altcineva -> C18 tu pleci din executie, lantul ramane in miscare -> C19 se tine singura -> C20 nu mai e a ta). Construiesc pe identitatea LOCKED. LIMITA respectata: fara HTML / Date_MASTER / FILM / alt livrabil. Atins doar acest fisier.
 
 ---
 
-## SPEC 11-SLOT C18 AUTOMATIZAREA
+## 1. SLUG C18 - 3 variante
+Conventia de sistem: slug = numele constructiei, folosit in nume fisier (ex. C07 "Datare", C08 "Cartografiere", "HTML-Studiu-Excel-18-{Slug}.html") si folder c18/.
 
-### 1. HERO (decizie BRAIN, verbatim)
-Intrebare-hero: **"Cum fac munca sa mearga mai departe fara mana mea?"**
-MIZA HERO (hov-object, gerunziu + obiect): **"AUTOMATIZAREA MUNCII RECURENTE"**
+- **(a) "Automatizare"** - RECOMANDAT. Consistent cu numele constructiei (AUTOMATIZAREA) si cu tiparul C07/C08. Clar, neambiguu, aliniat la registrul canonic.
+- **(b) "Motor"** - CUVANT/brand (topbar "C18 · MOTOR"). Scurt, memorabil, dar rupe conventia slug = nume si poate fi prea metaforic intr-un URL.
+- **(c) "Lant"** - pe axa (lantul care ruleaza fara om). Distinctiv si filmabil, dar se departeaza de numele oficial.
 
-### 2. BOMBA (decizie BRAIN, verbatim)
-**"Sistemul tau e gata. Dar tot tu apesi pe buton, de fiecare data."**
-(Tensiunea EFORT: forma reluabila din C17 exista, autorul e inca veriga manuala la fiecare ciclu.)
-
-### 3. GRESEALA (autorat - formula noua ceruta, FARA "Oameni/Profesionisti")
-**"Confunzi «am un sistem» cu «nu mai trebuie sa-l fac eu». Un sistem pe care tot tu il pornesti la fiecare ciclu te-a organizat, nu te-a scos din executie."**
-(Exact confuzia ceruta: "am sistem" vs "nu mai execut". "organizat" face puntea catre C17 (forma); "scos din executie" e miza C18 (miscarea).)
-
-### 4. AHA (lock S5, decizie BRAIN, verbatim)
-**"Ce repeti manual la fiecare ciclu nu e o sarcina. E un motor care inca merge pe mana ta."**
-("motor" = CUVANT C18; "inca merge pe mana ta" = nu e automatizat cat timp treci tu prin el.)
-
-### 5. MANTRA (decizie BRAIN, verbatim)
-**"Nu o execut. O las sa ruleze."** (galben: **ruleze**)
-("execut" vs "las sa ruleze" = mutarea omului din lant.)
-
-### 6. WOW (autorat)
-**"Un lant de pasi pe care il faceai cu mana la fiecare ciclu. Acum porneste dintr-o singura atingere si se duce pana la capat fara tine."**
-(before manual / after = miscare fara om. "fara tine" la capatul executiei. Anti-C19: nu spune "se controleaza singur", doar "se duce pana la capat".)
-
-### 7. MOTTO (decizie BRAIN, verbatim; slot de treapta T5)
-**"Tu pleci din executie, lantul ramane in miscare."**
-(Progresia de treapta: C17 "o reia altcineva" -> **C18 "pleci din executie, lantul ramane in miscare"** -> C19 "se tine singura" -> C20 "nu mai e a ta". "din executie" = NU din control (C19) sau proprietate (C20). Cere ratificarea formala a template-ului de treapta T5, ramasa deschisa de la C17.)
-
-### 8. CINE DEVII (decizie BRAIN, verbatim)
-**"Nu mai esti omul care executa munca. Esti omul care o pune in miscare."**
-(Rol: din executant repetitiv in constructor de motor. "pune in miscare" = verb de pornire, nu de control C19.)
-
-### 9. PAYOFF (decizie BRAIN, verbatim)
-**"O munca pe care o porneai si o duceai manual la fiecare ciclu se executa acum fara mana ta."**
-(before: pornit + dus manual / after: se executa fara mana ta. Distinct de C17 "o porneste altcineva" si de C16/T4 "raport livrat".)
-
-### 10. MIZA (autorat - director, fara jargon, fara cifre, R-V02.15)
-**"Cata vreme fiecare ciclu de munca trece prin mainile autorului, omul devine plafonul: cat poate el executa, atat se face. Timpul lui se duce pe repetitie, nu pe judecata, iar cand e ocupat, ciclul asteapta. Automatizarea muta executia repetitiva pe un motor si elibereaza omul pentru ce doar el poate face."**
-(Risc de business calitativ: omul = plafon / gatuire. Fara "bus factor" / FTE / ROI / cifre. Director-test.)
-
-### 11. VERB-SEMNATURA
-**a automatiza / AUTOMATIZEZ.**
-Anti-contaminare: a sistematiza (C17), a guverna (C19), a delega (C20) INTERZISE ca ancora in C18. Verbe-satelit permise: a inlantui, a declansa, a rula, a elimina (pasi), a se retrage din executie, a externaliza executia.
+Recomandare: (a) "Automatizare" pentru slug/fisier; "MOTOR" ramane CUVANT in topbar/branding (cele doua straturi LOCKED V69). Decizia ta.
 
 ---
 
-## PROBLEMELE C18
-1. Acelasi lant de pasi se reface manual la fiecare ciclu.
-2. Autorul e gatuirea: cand e ocupat, ciclul asteapta.
-3. Pasii manuali introduc variatie si erori intre cicluri.
-4. Timpul de judecata e mancat de timpul de executie.
-5. Forma reluabila (C17) exista, dar nimic nu se misca fara mana omului.
-6. "Am un sistem" e confundat cu "nu mai execut" (vezi GRESEALA).
+## 2. BLUEPRINT CONCEPTUAL C18 - 6 etape x 3 pasi (18 pasi)
+Scenariu-cadru Excel: un ciclu de munca recurent dintr-un workbook (asamblare/pregatire repetitiva), pornit de la _SISTEM-ul C17 (forma reluabila exista, dar o porneste omul la fiecare ciclu). C18 leaga pasii stabili intr-un lant pornit dintr-un singur declansator si scoate mainile omului din executie.
 
-## FENOMENE OBSERVABILE (Excel, nu teorie)
-1. **Lantul intr-un singur declansator:** o atingere porneste o secventa care inainte cerea N pasi manuali.
-2. **Pasul eliminat:** un pas manual dispare din flux, rezultatul ramane corect.
-3. **Mainile jos:** dupa declansare, executia merge pana la capat fara interventie.
-4. **Interventia minima ramasa:** un singur punct unde omul mai atinge procesul, marcat explicit (granita C19).
-5. **Ciclul urmator gratis:** al doilea ciclu ruleaza fara sa reconstruiesti nimic.
+### ETAPA 1 - "Lantul pe care il faci de fiecare data" (before, EFORT)
+- **Obiectiv:** cursantul vede negru pe alb lantul de pasi manuali reluat identic la fiecare ciclu; intelege ca "am un sistem" (C17) nu inseamna "nu mai execut" (GRESEALA).
+- **Ce se vede in Excel:** foaia _AUTOMATIZARE (forma initiala) listeaza pasii ciclului, fiecare marcat MANUAL; un contor de atingeri ("N actiuni de mana / ciclu"); _SISTEM C17 ca punct de plecare.
+- **Ce simte cursantul:** recunoastere + usoara jena ("fac asta de fiecare data cu mana"). Tensiunea BOMBEI.
+- **Risc contaminare:** R3 -> C17 (sa para ca doar redescriem forma). Garda: accentul = REPETITIA MANUALA, nu structura.
+- **Pasi:** 1.1 reiei ciclul din _SISTEM ca pana acum; 1.2 notezi fiecare atingere manuala pe _AUTOMATIZARE (stare = MANUAL); 1.3 numeri atingerile ("atat te costa un ciclu, de fiecare data").
 
-## STEP-TITLES (6 etape, specifice C18)
-1. "Lantul pe care il faci de fiecare data" (before, EFORT)
-2. "Ce merita scos din mainile tale" (judecata retragerii)
-3. "Pasii legati intr-un singur declansator" (construirea motorului)
-4. "Pasul manual care dispare" (eliminare, nu doar refresh - granita C04)
-5. "Ce ramane mana omului" (_AUTOMATIZARE: interventia minima explicita - granita C19)
-6. "Testul mainile jos" (declansezi, iei mainile, lantul merge singur)
-(18 pasi = 3/etapa, la blueprint. Titluri specifice axei.)
+### ETAPA 2 - "Ce merita scos din mainile tale" (judecata retragerii)
+- **Obiectiv:** cursantul invata JUDECATA C18 - care pasi sunt destul de stabili/repetabili ca sa iasa din mainile lui si care raman judecata umana. Identitatea, nu unealta.
+- **Ce se vede in Excel:** fiecare pas primeste eticheta STABIL+REPETABIL (candidat de eliminat) vs CERE JUDECATA (ramane manual); o coloana-criteriu "se face la fel de fiecare data? da/nu".
+- **Ce simte cursantul:** discernamant ("nu tot se automatizeaza; aleg ce iese din mainile mele").
+- **Risc contaminare:** R2 -> mecanism (sa sara la "cum configurez unealta"). Garda: intai DECIZIA de retragere, apoi mijlocul. R4 -> C19 (sa para ca decid "reguli"). Garda: decid CE iese din mana, nu praguri de validare.
+- **Pasi:** 2.1 clasifici fiecare pas STABIL+REPETABIL / CERE JUDECATA; 2.2 marchezi candidatii de retragere; 2.3 izolezi pasii care raman mana omului (devin "interventia minima").
 
-## ARTEFACT _AUTOMATIZARE (3 fraze, din revizia aprobata)
-- **Ce este:** o foaie/zona in workbook care face vizibil lantul de executie automatizat - secventa de pasi care inainte treceau prin mainile autorului si acum porneste dintr-un singur declansator.
-- **Ce arata:** pasii manuali eliminati (taiati explicit), ce declanseaza lantul, ce ramane interventie umana minima (marcata, granita C19).
-- **Ce nu este:** nu tutorial de unealta; nu refresh la apasare (C04); nu praguri / validari / alerte autocorectate (C19).
-Distinctivitate (TEST MANIFESTARE Doc 14): _AUTOMATIZARE adauga PESTE _SISTEM (C17), nu il reboteaza. _SISTEM = harta navigabila pornita de om; _AUTOMATIZARE = lant care se misca fara om.
+### ETAPA 3 - "Pasii legati intr-un singur declansator" (construirea motorului)
+- **Obiectiv:** cursantul leaga pasii stabili intr-un lant pornit dintr-un singur declansator. Mijlocul e Excel-native (Power Query end-to-end + Refresh orchestrat / secventa), dar accentul = LANTUL, nu unealta.
+- **Ce se vede in Excel:** pasii candidat inlantuiti (Applied Steps legate, un punct unic de pornire); pe _AUTOMATIZARE apare un singur DECLANSATOR vizibil ("RULEAZA CICLUL").
+- **Ce simte cursantul:** putere ("o atingere porneste ce faceam in N"). WOW-ul.
+- **Risc contaminare:** R1 -> C04 ("e doar Refresh"). Garda: nu reimprospatam un set, INLANTUIM pasi end-to-end. R2 -> mecanism-ca-identitate. Garda: se vede lantul pornind, nu meniul uneltei.
+- **Pasi:** 3.1 legi pasii stabili intr-o secventa; 3.2 creezi UN declansator unic; 3.3 pornesti o data si privesti lantul executandu-se.
 
-## GRANITE
-- **C17 <-> C18:** forma (sistem pornit de om) vs miscare (lant fara om). C18 nu spune "definesc structura".
-- **C18 <-> C04:** lant end-to-end fara om vs refresh / actualizare set. Refresh = mijloc, nu identitate. C18 ELIMINA pasi.
-- **C18 <-> C19:** ruleaza vs se autocontroleaza. Fara praguri / validari / alerte / exceptii autocorectate.
-- **C18 <-> C20:** miscare tehnica vs ownership / escaladare. Nu desemneaza proprietar.
+### ETAPA 4 - "Pasul manual care dispare" (eliminare, nu refresh - granita C04)
+- **Obiectiv:** cursantul vede ca un pas care cerea mana lui DISPARE din fluxul manual (absorbit de lant), iar rezultatul ramane corect. Separa C18 (elimina pasi) de C04 (doar refresh).
+- **Ce se vede in Excel:** pe _AUTOMATIZARE un pas trece din MANUAL in ELIMINAT (taiat vizibil); contorul de atingeri scade; outputul automat = identic cu cel facut manual.
+- **Ce simte cursantul:** usurare + dovada ("nu doar ca merge, dar nu mai trec eu prin el").
+- **Risc contaminare:** R1 -> C04 (cel mai periculos aici). Garda explicita: "am eliminat un PAS din lant?" vs "doar am adus date la zi?". Doar refresh = C04, nu C18.
+- **Pasi:** 4.1 marchezi pasul absorbit ca ELIMINAT (taiat); 4.2 recalculezi atingerile/ciclu; 4.3 confrunti outputul automat cu cel manual (trebuie identic).
 
-## RISCURI DE CONTAMINARE (cu garda)
-- R1 -> C04: "Apas Refresh" ca identitate. Garda: C18 elimina pasi din lant; refresh e doar mijloc.
-- R2 -> mecanism-ca-identitate: "configurez Power Automate / macro". Garda: identitatea = judecata retragerii; filmul arata decizia + lantul, nu unealta.
-- R3 -> C17: redescrie forma / structura. Garda: C18 = miscare fara om.
-- R4 -> C19: praguri / validari / alerte autocorectate. Garda: C18 ruleaza, nu se autoguverneaza; un esec inca cere omul.
-- R5 -> C20: cine raspunde / detine / escaladare. Garda: miscare tehnica, nu desemnare.
-- R6 -> "se face singur" prematur: autonomie totala cand inca exista hand-off manual. Garda: _AUTOMATIZARE declara interventia minima ramasa.
+### ETAPA 5 - "Ce ramane mana omului" (_AUTOMATIZARE: interventia minima - granita C19)
+- **Obiectiv:** cursantul defineste si marcheaza EXPLICIT interventia umana minima ramasa (pasii "cere judecata" din etapa 2). Granita catre C19: C18 ruleaza, dar NU se autoguverneaza; un esec/exceptie inca cere omul.
+- **Ce se vede in Excel:** o zona distincta "INTERVENTIA MINIMA" cu pasii ramasi mana omului, marcati vizual diferit de cei eliminati; nota "aici procesul te asteapta".
+- **Ce simte cursantul:** onestitate + control ("stiu exact unde mai sunt necesar; n-am promis ca se face singur tot").
+- **Risc contaminare:** R4 -> C19 (sa adauge praguri/validari/alerte autocorectate). Garda: marcam CE ramane mana omului, NU construim reguli de autocontrol. R5 -> C20 (sa scrie "cine raspunde"). Garda: pas tehnic ramas, nu desemnare de proprietar.
+- **Pasi:** 5.1 aduci pasii "cere judecata" in zona INTERVENTIA MINIMA; 5.2 ii marchezi vizual distinct; 5.3 scrii descriptiv ce declanseaza interventia ("cand procesul te asteapta") - fara prag automat.
 
-## TESTE DE PAZA (din mandat)
-- **Testul mainile jos (filmabilitate + identitate):** declansezi, iei mainile de pe tastatura. PASS = lantul merge pana la capat. FAIL = se blocheaza la un pas manual neeliminat -> inca C17 (forma), nu C18 (miscare).
-- **Anti-C04:** daca tot ce face e "actualizeaza un set la apasare" = C04. C18 ELIMINA pasi din lant.
-- **Anti-C19:** daca apar praguri / validari care se autocorecteaza = C19. C18 ruleaza, dar un esec opreste si cere omul.
-- **Anti-C20:** daca apare "cine raspunde / detine" = C20. C18 nu desemneaza proprietar.
+### ETAPA 6 - "Testul mainile jos" (declansezi, iei mainile, lantul merge singur)
+- **Obiectiv:** dovada finala C18 pe viu - declansezi, ITI IEI MAINILE de pe tastatura, lantul se duce pana la capat singur (mai putin interventia minima marcata). PASS = ajunge la capat. FAIL = se blocheaza la un pas manual neeliminat (= inca C17).
+- **Ce se vede in Excel:** apesi declansatorul, nu mai atingi nimic; lantul ruleaza; _AUTOMATIZARE arata starea finala: pasi eliminati (taiati) + interventie minima (marcata) + un singur declansator.
+- **Ce simte cursantul:** eliberare + identitate noua ("nu mai sunt omul care executa; sunt omul care pune in miscare" - CINE DEVII). PAYOFF.
+- **Risc contaminare:** R6 -> "se face singur" prematur (sa pretinda zero om cand exista interventia minima). Garda: testul recunoaste explicit interventia minima; nu pretinde autonomie totala (drumul C19/C20).
+- **Pasi:** 6.1 declansezi si iei mainile; 6.2 lantul merge pana la capat (sau se opreste la interventia minima, asteptandu-te); 6.3 confirmi: ce a iesit din mainile tale + ce a ramas = harta _AUTOMATIZARE finala.
+
+---
+
+## 3. _AUTOMATIZARE - definire finala (piesa distincta in workbook)
+Foaie dedicata in workbook (langa _SISTEM al C17) = **HARTA LANTULUI DE EXECUTIE**. Structura:
+- **Lista pasilor ciclului**, fiecare cu o STARE: MANUAL (inca pe mana ta) / ELIMINAT (absorbit de lant, taiat) / INTERVENTIE MINIMA (ramane judecata umana).
+- **Un singur DECLANSATOR** vizibil ("RULEAZA CICLUL") = punctul unic de pornire.
+- **Contor de atingeri/ciclu** (before vs after) = dovada cantitativa a retragerii.
+- **Zona INTERVENTIA MINIMA** = unde procesul te asteapta (granita C19).
+
+**Distinctie de _SISTEM (C17), TEST MANIFESTARE Doc 14:** _SISTEM = harta navigabila a FORMEI (named ranges, hyperlinkuri, oglinzi ROWS), pornita de un OM. _AUTOMATIZARE = harta MISCARII (lant + declansator + stari de pas), care se executa fara om. _AUTOMATIZARE adauga PESTE _SISTEM (foloseste forma, arata miscarea), nu il reboteaza.
+
+**Ce NU este:** nu log de macro, nu doc de unealta, nu contine praguri/validari/alerte (= C19), nu desemneaza proprietar (= C20).
+
+---
+
+## 4. PROPUNERE VIZUALA (marcarea pasilor eliminati + interventia minima)
+Limbaj vizual conceptual (culorile exacte la stadiul HTML, paleta 07-BRAND):
+- **Pas MANUAL (initial):** text normal, fundal neutru, iconita mana / eticheta "MANA".
+- **Pas ELIMINAT:** text TAIAT (strikethrough), gri estompat, iconita lant ("absorbit in lant"), sageata catre "banda motorului". Mesaj: "nu mai trece prin tine".
+- **INTERVENTIE MINIMA ramasa:** chenar gros + accent CALD (galben/portocaliu brand), iconita mana ridicata / oprire blanda. Eticheta "AICI INTRI TU". Mesaj: "procesul te asteapta", NU "eroare".
+- **DECLANSATORUL:** element unic proeminent ("RULEAZA CICLUL"), vizual dominant = e clar ca e UN singur punct de pornire.
+- **Banda motorului:** pasii eliminati grupati intr-o banda continua = se executa fara intreruperi manuale intre ei.
+
+**Garda anti-C19 (vizuala):** marcajele NU folosesc coduri de alarma/semafor/prag (rosu de eroare, lumini de validare) - aia ar contamina C19. Eliminat = estompat/taiat (linistit); interventie = accent cald (invitatie), nu alarma; declansator = dominant.
+
+---
+
+## TESTE DE PAZA (din mandat, aplicate pe blueprint)
+- **Mainile jos:** etapa 6 e chiar testul; PASS = lantul ajunge la capat fara maini.
+- **Anti-C04:** etapa 4 cere eliminare de PAS, nu doar refresh.
+- **Anti-C19:** etapa 5 marcheaza interventia, NU construieste autocontrol; garda vizuala fara coduri de alarma.
+- **Anti-C20:** nicaieri "cine detine/raspunde"; doar pasi tehnici si interventie umana.
 
 ## VERDICT
-SPEC 11-slot C18 complet pe deciziile BRAIN (8 sloturi verbatim) + 3 sloturi autorate (GRESEALA noua ceruta, WOW, MIZA) + VERB-SEMNATURA. Toate trec cele 4 teste de paza si granitele C04 / C17 / C19 / C20 (verificat slot cu slot). GRESEALA inlocuieste formula "Oameni/Profesionisti" cu confuzia "am sistem vs nu mai execut", specifica C18. Zero livrabile generate (LIMITA respectata).
+SLUG (3 variante, recomandat "Automatizare") + blueprint 6x3 complet (fiecare etapa cu obiectiv / ce se vede in Excel / ce simte cursantul / risc de contaminare + 3 pasi) + _AUTOMATIZARE definit ca piesa distincta + propunere vizuala cu garda anti-C19. Arcul urca EFORT -> judecata -> motor -> eliminare -> interventie minima -> dovada (mainile jos), pe identitatea LOCKED. Zero livrabile (LIMITA respectata).
 
-Punct ramas formal deschis: ratificarea template-ului de treapta T5 pentru MOTTO (C17 "o reia altcineva" -> C18 "pleci din executie, lantul ramane in miscare" -> C19 "se tine singura" -> C20 "nu mai e a ta").
+Pas urmator (doar la mandat explicit): generarea celor 7 artefacte (HTML-Studiu etc.), separat, dupa confirmarea SLUG + blueprint.
 
-Pas urmator (doar la mandat explicit): SLUG + blueprint + cele 7 artefacte (generare), separat.
-
-C18_SPEC_READY_FOR_REVIEW
+C18_SLUG_BLUEPRINT_READY_FOR_REVIEW
