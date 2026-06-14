@@ -1,19 +1,21 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_GENERATION_IN_PROGRESS (1/6 artefacte: Date_MASTER-C17 cu `_SISTEM` GENERAT + verificat; raman 4 HTML + FILM)
+C17_GENERATED_READY_FOR_AUDIT (6/6 artefacte generate + verificate prin audit_sync B3; B2 gate_v20 pending CERERE SYSTEM identitate)
 
-## GENERATION PROGRESS (MANDAT_GENERARE_CONTROLATA_C17)
+## GENERATION PROGRESS (MANDAT_GENERARE_CONTROLATA_C17 + MANDAT_CONTINUA_GENERARE_C17)
 Mediu pregatit: openpyxl 3.1.5 + python-docx instalate. `pre_generation_check` legacy (cauta `SISTEM_TRAINITY.md`, fisier abandonat la C13-C16) = neaplicabil; fluxul real = scripturi `build_*_c17.py` in `c17/` (ca C13-C16) + gate_v20 (B2) + audit_sync (B3).
 
-- [x] **Date_MASTER-C17.xlsx** (`build_date_master_c17.py`, commit f6c5d86): chain din C16, suma conservata exact 7986019.38 (R-V02.14). Foaia `_SISTEM` = harta functionala nativ-Excel: 15 componente reale prin HYPERLINK + COUNTA, named ranges SRC_VANZARI + PARAM_*, 7 pasi de reluare (cu „candidat C18"), FORMULATEXT(Livrare!B9), START AICI + punct de reluare + test anti-SOP. 49 formule vii; se rup scoase din workbook (#REF!). Garda OGLINDA respectata; zero termeni interzisi (singurul „owner" = negatia „NU ownership").
-- [ ] HTML-Studiu-Excel-17-Sistematizare.html (COPY+MODIFY din c16, narativ C17: 6 etape/18 pasi + 6 anomalii + prompturi + final-labels)
-- [ ] HTML-Editor-Studiu (companion)
-- [ ] HTML-Video + HTML-Editor-Video (base64 inline)
-- [ ] FILM-Excel-17-Sistematizare.docx
-- [ ] gate_v20 (B2) PASS + audit_sync (B3) zero drift, dupa toate artefactele
+- [x] **Date_MASTER-C17.xlsx** (commit f6c5d86): chain din C16, suma conservata exact 7986019.38 (R-V02.14). Foaia `_SISTEM` = harta functionala nativ-Excel: 15 componente reale prin HYPERLINK + COUNTA, named ranges SRC_VANZARI + PARAM_*, 7 pasi de reluare („candidat C18"), FORMULATEXT(Livrare!B9), START AICI + punct de reluare + test anti-SOP. 49 formule vii; se rup scoase din workbook (#REF!).
+- [x] **HTML-Studiu-Excel-17-Sistematizare.html** (commit b92003c): 104K, 6 etape/18 pasi mapate pe `_SISTEM`, 6 anomalii, 2 prompturi, 8 final-labels; sloturi SPEC inghetate; garda OGLINDA + anti-SOP in pagina; zero leftover C16; zero cifre business.
+- [x] **HTML-Editor-Studiu** (commit c569f48): companion model matur, body verbatim din Studiu + shell editor.
+- [x] **HTML-Video** (commit c569f48): broadcast JS-driven, 6 etape/18 pasi + 2 prompturi, exec-stage placeholdere SVG (asset real ulterior, ca C12-C16).
+- [x] **HTML-Editor-Video** (commit c569f48): companion video sincronizat 1:1.
+- [x] **FILM-Excel-17-Sistematizare.docx** (commit c569f48): 177 paragrafe, identitate + 6 slides exec + 6 fenomene + 6 etape HOOK/DEMO/CONTROL/REVEAL.
+- [x] **audit_sync (B3): C17 trece TOATE detectoarele de continut** (identitate, puritate, em-dash, parity, voce). Singurul XX = `R-V39.assets` (imagini exec-stage pending, generate extern ulterior, exact ca C12-C16). ZERO content drift.
+- [ ] **gate_v20 (B2): BLOCAT** = cere identitatea tehnica C17 in `_system/referinte/IDENTITATE-TEHNICA.md` (fisier `_system/`, interzis chatului C17). **CERERE SYSTEM** pentru Chat Andrei SYSTEM: adauga blocul IDENTITATE C17 (slug Sistematizare, cuvant SISTEM, treapta T5), apoi ruleaza `gate_v20 17 c17 c01`.
 
-Foundatia (`_SISTEM`, partea cea mai noua/riscanta) e gata si verificata. Restul = build scripts substantiale, in lucru.
+Verificari interne (build-time + audit): toate 6 artefacte prezente; zero em-dash (HTML + FILM); zero cifre business (R-V02.15); garda OGLINDA (oglinda/leaga/navigheaza, nu executa/judeca/deleaga); anti-SOP (se rupe scoasa din workbook); granitele C18/C19/C20 tinute (automatiz/prag/owner doar in negatii si handoff); 6 etape + 18 pasi + slug + _SISTEM neatinse; nomenclatura LOCKED V70 neatinsa.
 
 ## SURSA
 Mandat BRAIN `MANDAT_REVIZUIRE_BLUEPRINT_C17` (via sync), pe blueprint-ul propus la `MANDAT_SLUG_BLUEPRINT_C17`. Doar `_brain/c17/CLAUDE-TO-BRAIN.md`. Fără sistem / artefacte / folder c17 / HTML / Date_MASTER / build / FILM / C18.
