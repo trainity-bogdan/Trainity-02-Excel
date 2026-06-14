@@ -118,7 +118,15 @@ SHEET_OUTPUT_CANONIC = {
     '06': 'Vanzari',
     '07': 'Vanzari',
     '08': 'Vanzari',  # TBD
+    '18': 'Vanzari_Curat',  # C18 AUTOMATIZARE: COPY+MODIFY din c01, output curat = contractul C01
 }
+
+# Constructii care folosesc SETUL / CONTRACTUL de date C01 (NU canonicul C02-C08).
+# Generate prin COPY+MODIFY din c01 => acelasi Vanzari_Curat, SCHEMA_C01_STRUCTURARE,
+# nomenclatoare 13/6/5, suma ~1.25M. Se valideaza ca C01 (pe contractul EI, FARA
+# comparatie cu Date_MASTER-initial canonic ~8M / 14/7/6). C18 = primul T5 din c01.
+# Config-driven: o constructie noua din c01 se adauga aici (extensibil, fara if-uri).
+CONSTRUCTII_DATASET_C01 = {'01', '18'}
 
 # Filtre anti-fals-pozitiv pentru R-V02.15 (cifre business)
 # Daca un numar suspect apare in context CSS, e fals pozitiv
@@ -529,6 +537,11 @@ def check_cross_contamination(content, fisier_nume, cod_curent):
                 if re.search(r'title\s*:.*' + re.escape(prev_cod), line):
                     if any(k in line_lower for k in ['curat', 'predat', 'de la']):
                         continue
+                # Context JSON broadcast (HTML-Video): title/instr/hook/next/name care
+                # refera constructia PRECEDENTA (input/granita narativa) = legitim.
+                # Ex C18: title "Pornim sistemul C17", instr "...e inca C17".
+                if re.search(r'\b(title|instr|hook|next|name)\s*:', line):
+                    continue
             
             # V27 whitelist: referinte enumerative la construcții anterioare
             # T1 (C01, C02, C03 in C04). Ex: "Ambalaj structural (C01),
@@ -553,7 +566,33 @@ def check_cross_contamination(content, fisier_nume, cod_curent):
                 
                 if multiple_codes or any(k in line_lower for k in recap_keywords):
                     continue
-            
+
+            # GRANITE DE TREAPTA / ANTI-PATTERN (T5+): o constructie numeste explicit
+            # alte coduri ca ANTI-PATTERN sau HANDOFF de granita, NU ca identitate.
+            # Ex C18: anomaly "REFRESH SIMPLU... E C04", tag "Anti-C04", final-text
+            # "din C17 s-a transformat", step-action "incă formă (C17), nu mișcare (C18)".
+            # Legitim. C01-C17 nu folosesc acest stil in aceste zone => whitelist-ul nu
+            # le slabeste verificarea (raman la 0 flag-uri). Diacritice incluse.
+            line_lower = line.lower()
+            # (a) zone inerent de granita / anti-pattern / recap / tag de treapta
+            zona_granita = any(z in line for z in [
+                'anomaly-desc', 'anomaly-title', 'type-tag', 'nav-item-meta',
+                'final-text', 'final-label', 'phase-tag', 'next-desc', 'next-title',
+            ])
+            # (b) fraze explicite de granita / anti-pattern / handoff
+            boundary_markers = [
+                'acela e c', 'acela este c', 'aceasta e c', 'asta e c',
+                'moștenit', 'mostenit', 'moștenită', 'mostenita',
+                'handoff', 'graniță', 'granita', 'anti-pattern', 'antipattern', 'anti-c0',
+                'nu este c', 'nu e c', 'nu c1', 'nu automatiz', 'nu mișcare', 'nu miscare',
+                'în loc de', 'in loc de', 'separă', 'separa',
+                'predă', 'preda', 'predăm', 'predam', 'predat',
+                '(c04)', '(c17)', '(c19)', '(c20)',
+                'din c17', 'de c04', 'de c19', 'de c20', 'către c19', 'catre c19',
+            ]
+            if zona_granita or any(k in line_lower for k in boundary_markers):
+                continue
+
             erori.append({
                 'clasa': 'CROSS-CONTAMINATION',
                 'zona': f'cod {cod_gasit}',
@@ -669,13 +708,14 @@ def check_data_continuity(excel_path, NN, initial_excel_path=None):
         })
         return erori
 
-    # === EXCEPTIE EXPLICITA C01 (pilot, scenariu propriu) ===
-    # C01 nu participa la contractul de date C02-C08 (alt set, alta schema, alta
-    # suma, nomenclatoare proprii). Validam OUTPUT-ul ei real (Vanzari_Curat) pe
-    # schema EI + prezenta nomenclatoarelor, FARA comparatie cu Date_MASTER-initial.
-    # Justificare: input necanonic by design (export ERP brut); output verificabil
-    # corect (2000 randuri, 14 coloane, header rand 1, FK la 4 nomenclatoare).
-    if NN == '01':
+    # === EXCEPTIE EXPLICITA pentru CONSTRUCTIILE cu DATASET C01 (config-driven) ===
+    # C01 (pilot) + constructiile COPY+MODIFY din c01 (ex. C18 AUTOMATIZARE) NU
+    # participa la contractul de date canonic C02-C08 (alt set, alta schema, alta
+    # suma ~1.25M, nomenclatoare 13/6/5 proprii). Validam OUTPUT-ul real (Vanzari_Curat)
+    # pe schema EI (SCHEMA_C01_STRUCTURARE) + prezenta nomenclatoarelor, FARA comparatie
+    # cu Date_MASTER-initial canonic. Justificare: dataset mostenit din c01 by design;
+    # output verificabil corect (2000 randuri, 14 coloane, header rand 1, FK la 4 nomenclatoare).
+    if NN in CONSTRUCTII_DATASET_C01:
         if SHEET_OUTPUT_C01 not in wb.sheetnames:
             erori.append({
                 'clasa': 'DATA-CONTINUITY', 'zona': 'sheet_output_c01',

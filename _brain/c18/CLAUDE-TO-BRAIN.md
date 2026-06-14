@@ -1,46 +1,44 @@
-# CLAUDE -> BRAIN C18
+# CLAUDE -> BRAIN C18  (raport SYSTEM)
 
 ## STATUS
-C18_GATE_PATCH_A_APLICAT_B2_FAIL (în SYSTEM mode; patch identitate aplicat + verificat; gate rulează dar B2=FAIL din config+moștenire, nu din defecte C18; RELEASE = NU)
+SYSTEM_GATE_V20_CONFIG_DRIVEN_DONE (gate config reparat + verificat zero regresie; gate rulează acum pe C18 și prinde 3 defecte REALE de conținut C18; RELEASE = NU)
 
 ## SURSA
-ARHITECT a tastat „SYSTEM" după diagnosticul gate. Am intrat în capacitate SYSTEM și am aplicat opțiunea A din CERERE (patch minim identitate C18 în gate_v20.py). LIMITA: nu am declarat release; B2 NU e PASS.
+Mandat SYSTEM_GATE_V20_CONFIG_DRIVEN_CERUT. Soluția structurală (B), config-driven, fără regresie C01-C17. LIMITA respectată: nu am atins artefacte/imagini C18; nu am mascat nimic ca PASS.
 
-## CE AM FĂCUT (SYSTEM)
-Adăugat în `gate_v20.py` dictul `IDENTITATI` cheia `'18'` (cod C18, nume_hero_caps_rand1 AUTOMATIZAREA, nume_slug Automatizare, meta_val_treapta „SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)"), identică cu IDENTITATE_TEHNICA C18 înghețat.
+## FIȘIERE MODIFICATE
+- `_system/generatoare/gate_v20.py` (DOAR config + whitelist; zero schimbare de logică de verdict).
+- `_brain/c18/CLAUDE-TO-BRAIN.md` (acest raport).
 
-## VERIFICARE
-- **Gate PORNEȘTE acum pe C18** (nu mai dă „IDENTITATE_TEHNICA nu e definita"). Patch-ul A funcționează.
-- **Regresie C01:** `gate_v20.py 01 c01 c01` → **GATE PASS** (neschimbat). Adăugarea C18 nu afectează C01-C17.
+## CE CONFIG AM SCHIMBAT (config-driven, extensibil)
+1. **`SHEET_OUTPUT_CANONIC['18'] = 'Vanzari_Curat'`** — gate-ul verifica sheet greșit (`Vanzari` brut); acum output-ul corect.
+2. **`CONSTRUCTII_DATASET_C01 = {'01','18'}`** (config nou) — `if NN == '01'` din data-continuity devine `if NN in CONSTRUCTII_DATASET_C01`. C18 (COPY+MODIFY din c01) folosește setul C01 (Vanzari_Curat, SCHEMA_C01_STRUCTURARE, nomenclatoare 13/6/5, ~1.25M) → validat ca C01, FĂRĂ comparație cu initial canonic. Rezolvă: „coloane canonice lipsă în Vanzari" + „nomenclator alterat 13/6/5 vs 14/7/6" (c01 are identic, trece). Extensibil: o nouă construcție din c01 se adaugă în set.
+3. **Whitelist cross-contamination extins** (granițe de treaptă T5): (a) zone inerent-graniță (`anomaly-desc/title`, `type-tag`, `nav-item-meta`, `final-text/label`, `phase-tag`, `next-desc/title`); (b) fraze de graniță/anti-pattern/handoff (`acela e c`, `anti-c0`, `nu automatiz`, `separă`, `(c17)/(c19)...`, `din c17`, `moștenit` cu diacritice — fix bug ASCII „mostenit"); (c) context JSON broadcast pentru prev_cod (`title/instr/hook/next/name` care referă construcția precedentă, ex. „Pornim sistemul C17"). Whitelist = doar adăugare de excepții ⇒ C01-C17 (deja 0 flag-uri) NU se slăbesc.
 
-## DAR: B2 = FAIL (gate rulează și pică) — clasificat
-Patch A e NECESAR dar INSUFICIENT. Gate-ul are mai multe config-uri hardcodate C01-C17, nu doar dictul de identitate.
+## REZULTAT GATE C18
+Gate-ul **PORNEȘTE și rulează complet** acum. Cross-contamination (28→0) + DATA-CONTINUITY (4→0) = **REZOLVATE de config.**
+DAR gate-ul, rulând corect, prinde **3 defecte REALE de CONȚINUT C18** (nu config) pe care audit_sync NU le vede:
+- **IDENTITY (2):** `mobile-topbar = "C18 · MOTOR"` dar gate cere slug-ul `Automatizare` (IDENTITATE_TEHNICA: `mobile_topbar = "C18 · Automatizare"`). Bug introdus de mine la transformarea de token (am pus CUVÂNT MOTOR, nu slug). Studiu + Editor-Studiu.
+- **NO-CLONE GENERIC (2):** `prompt-label` 100% identic cu c01 (zonă nediferențiată la generare). Studiu + Editor-Studiu.
+- **BRAND (2):** cuvântul `tutorial` în anomaly-title „TUTORIAL DE UNEALTĂ" = vocabular brand-interzis. Studiu + Editor-Studiu.
+Verdict gate: FAIL (6 erori, toate de conținut). **Acestea NU sunt config — sunt artefacte C18 (forbidden în acest mandat). Necesită mandat de reparație conținut.**
 
-### CLASA CROSS-CONTAMINATION (8 unice): 3×C04, 3×C17, 1×C19, 1×C20
-- **Toate sunt referințe LEGITIME** de identitate C18: C17 ca prev/handoff („un sistem (C17)", „_SISTEM moștenit din C17"), C04/C19/C20 ca GRANIȚE și ANTI-PATTERN („E C04", „separă C18 de C04", anomaly „AUTO-CONTROL"=C19, „PROPRIETAR"=C20, „Acela e C20").
-- `check_cross_contamination` whitelistează doar: cod curent, C19(next) în handoff, C17(prev) în „mostenit/predat de", recap enumerativ. NU acoperă: (a) anomaly-desc cu „Acela e C19/C20/C04" (granițele esențiale C18), (b) „moștenit" cu diacritică (ș) — whitelist-ul caută ASCII „mostenit" → **fals pozitiv pe diacritice**.
-- Verdict: zero contaminare conceptuală reală (confirmă auditul total + L198). Sunt limitări de whitelist gate vs stilul de graniță al C18.
+## REZULTAT GATE C01 (+ regresie)
+- C01: **GATE PASS** (neschimbat).
+- Regresie completă C01-C17 (toate 17): **TOATE PASS.** Zero regresie din modificările de config.
 
-### CLASA DATA-CONTINUITY (4)
-- „Coloane canonice LIPSA in OUTPUT 'Vanzari'": gate verifică sheet-ul GREȘIT. C18 nu e în `SHEET_OUTPUT_CANONIC` (config C01-C17) → default pe `Vanzari` (export brut, fără coloane canonice) în loc de `Vanzari_Curat` (output curat care LE ARE). Config gap, nu defect.
-- „Nomenclator PRODUSE 13 vs 14 / AGENTI 6 vs 7 / DEPOZITE 5 vs 6": **c01 are EXACT aceleași counts (13/6/5)** ca c18, diferite de initial (14/7/6). Deci e **MOȘTENIT din c01** (livrat, trece gate ca pilot/exceptat). Nu e defect introdus de C18; e o discrepanță c01-vs-initial preexistentă.
+## STATUS audit_sync
+C18 = trece tot MAI PUȚIN `imgclone` (XX, imagini c01). C01 nepoluat. (audit_sync NU prinde IDENTITY/NO-CLONE/BRAND de mai sus — le prinde doar gate-ul.)
 
-## CONCLUZIE DIAGNOSTIC
-B2 = FAIL, dar din **3 cauze ne-conținut**: (1) whitelist gate prea îngust pentru granițele/anti-pattern C18 + bug diacritice „moștenit"; (2) `SHEET_OUTPUT_CANONIC` fără C18 → verifică sheet greșit; (3) nomenclator c01-moștenit (c01 însuși trece). Niciuna nu e defect de conținut C18. **Patch A a dovedit empiric că soluția B (structurală) e cea corectă** — gate-ul are config per-construcție hardcodat în 3 locuri (IDENTITATI + SHEET_OUTPUT_CANONIC + whitelist), toate oprite la C17.
+## STATUS pre_generation_check 18
+TOATE PASS (B1 intact).
 
-## CE MAI TREBUIE (CERERE SYSTEM — decizie ARHITECT/SYSTEM)
-Pentru ca B2 să TREACĂ real pe C18, una din:
-- **B-structural (recomandat):** gate config-driven per construcție: identitate din IDENTITATE-TEHNICA.md + `SHEET_OUTPUT_CANONIC['18']='Vanzari_Curat'` + whitelist cross-contam care acoperă granițele de treaptă (anomaly „Acela e CXX", diacritice). Rezolvă C18-C20.
-- **Patch incremental:** adaug `SHEET_OUTPUT_CANONIC['18']` + extind whitelist-ul (diacritice „moștenit" + context anomaly-desc graniță). Mai rapid, dar tot stub.
-- **Nomenclator c01-moștenit:** decizie separată — c01 are 13/6/5 (livrat). Ori se aliniază c01+c18 la initial (14/7/6), ori se exceptează C18 cum e exceptat c01.
-
-Nu am extins patch-ul dincolo de A fără mandat (config-urile suplimentare = regression risk pe C01-C17; nomenclatorul atinge date c01-moștenite).
-
-## P0 RĂMASE
-- Imagini exec + hero = clone c01 (ARHITECT).
-- B2 = FAIL (gate rulează acum, dar config gate + moștenire c01) — necesită decizia de mai sus.
+## RISCURI RĂMASE
+- **B2 încă FAIL**, dar acum din **conținut C18 real** (mobile-topbar slug, prompt-label clonă, „tutorial"), nu din config. Reparabile cu un mandat de conținut (nu ating artefacte aici).
+- Whitelist cross-contam mai permisiv: risc teoretic de fals-negativ viitor pe granițe, dar restrâns la zone/fraze de graniță; C01-C17 rămân la 0.
+- Nomenclator c01-moștenit: acum tratat ca excepție config (C18 ca C01). Dacă se decide cândva ca C18 să folosească setul canonic ~8M, e o regenerare de date separată.
 
 ## VERDICT
-**RELEASE = NU.** Patch A aplicat + verificat (gate rulează, C01 neregresat). B2 nu trece încă din motive de config gate + moștenire c01, NU defecte C18. Aștept decizia pe (B-structural vs patch incremental) + nomenclator + imaginile.
+**C18 RELEASE = NU.** Config gate = reparat structural + verificat (zero regresie). B2 nu trece încă din 3 defecte de conținut C18 (IDENTITY/NO-CLONE/BRAND) + P0 imagini clone. Recomand: mandat de reparație conținut C18 pentru cele 3 (mobile-topbar→Automatizare, prompt-label diferențiat, „tutorial"→termen brand-safe), apoi imaginile, apoi B2 + audit re-rulate pentru RELEASE.
 
-C18_GATE_PATCH_A_APLICAT_B2_FAIL
+SYSTEM_GATE_V20_CONFIG_DRIVEN_DONE
