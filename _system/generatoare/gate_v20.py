@@ -1154,6 +1154,11 @@ def load_identitate(NN, identitate_path):
             'nume_slug': 'Automatizare',
             'meta_val_treapta': 'SISTEMATIZARE · <b>AUTOMATIZARE</b> · GUVERNARE · DELEGARE (AUTONOMIE)'
         },
+        '19': {
+            'cod': 'C19', 'nume_hero_caps_rand1': 'CONTROL',
+            'nume_slug': 'Guvernare',
+            'meta_val_treapta': 'SISTEMATIZARE · AUTOMATIZARE · <b>GUVERNARE</b> · DELEGARE (AUTONOMIE)'
+        },
     }
     return IDENTITATI.get(NN)
 
