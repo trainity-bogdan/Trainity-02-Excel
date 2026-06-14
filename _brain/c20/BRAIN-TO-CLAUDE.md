@@ -1,73 +1,58 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-CERE_SLUG_SPEC_11_SLOT_C20
+APROBA_FREEZE_SPEC_C20
+
+## VERDICT BRAIN
+SPEC 11-slot C20 este aprobat pentru freeze.
 
 ## LOCK C20
 C20 NU depinde de C19.
-
 C20 = DELEGAREA.
 T5 = AUTONOMIE.
 CUVANT LOCKED = AUTONOMIE.
 VERB LOCKED = DELEG.
-
 C20 scoate autorul din PROPRIETATE.
 
-Artefact C20 = _DELEGARE.
-Nu _OWNERSHIP ca nume principal.
-Proprietate operationala ramane concept intern in artefact.
+## SPEC APROBAT
+SLUG: Excel-20-Delegare
+MIZA HERO: DELEGAREA SISTEMULUI DE LUCRU
+INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
+MANTRA: Nu impart sarcini. Deleg sistemul.
+WOW: Apesi scoate autorul, si sistemul nu se rupe: workbook-ul confirma singur ca alt rol il poate continua.
+MOTTO: Pleci, si munca nu mai e a ta.
+AHA: Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+ARTEFACT: _DELEGARE
 
-## DECIZII FORMULARI
-
-MANTRA LOCK:
-Nu impart sarcini. Deleg sistemul.
-
-AHA LOCK:
-Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
-
-MIZA HERO LOCK:
-DELEGAREA SISTEMULUI DE LUCRU
-
-MOTTO CANDIDAT PRINCIPAL:
-Pleci, si munca nu mai e a ta.
-
-TEST FILMABIL CENTRAL:
-AUTOR_ACTIV = NU + status calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+## TEST FILMABIL CENTRAL
+AUTOR_ACTIV = NU + ROL_DELEGAT + verificari OK/FAIL + STATUS FINAL calculat:
+NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
 
 TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
 ## MANDAT DIRECT
-Claude, pregateste urmatorul livrabil:
-SLUG + SPEC 11-slot C20.
+Claude, marcheaza SPEC C20 ca pregatit pentru freeze.
+Scrie confirmarea in _brain/c20/CLAUDE-TO-BRAIN.md.
 
-Scrie rezultatul in _brain/c20/CLAUDE-TO-BRAIN.md.
-
-## SPEC 11-SLOT CERUT
-Include exact:
-1. SLUG
-2. INTRIGA
-3. PROBLEMELE
-4. MIZA
-5. MANTRA
-6. WOW
-7. MOTTO
-8. FENOMENE
-9. STEP-TITLES
-10. GRESEALA
-11. AHA
-
-## CERINTE SPEC
-Pastreaza artefactul _DELEGARE.
-Pastreaza testul viu, nu tabel pasiv.
-Pastreaza rolul, nu persoana nominala.
-Pastreaza diferenta fata de C19: C19 controleaza datele, C20 transfera sistemul.
-Pastreaza diferenta fata de C18: C18 merge singur, C20 poate fi detinut de altcineva.
-
-## INTERDICTII
+Nu genera inca blueprint final daca nu ai cerere explicita.
 Nu genera HTML.
 Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
 Nu modifica artefacte de constructie.
+
+## URMATOR PAS DUPA CONFIRMARE ARHITECT
+FREEZE SPEC C20.
+Apoi BLUEPRINT conceptual C20, numai la mandat separat.
+
+## GARDE PENTRU BLUEPRINT
+Cand primesti mandat de blueprint, apara obligatoriu:
+- _DELEGARE ca artefact viu, nu tabel pasiv;
+- AUTOR_ACTIV = NU ca test central;
+- STATUS FINAL calculat, nu bifat manual;
+- rol, nu persoana;
+- granita fata de C19, C18, HR si documentare verbala.
+
+## INTERDICTII
 Nu face commit-uri in afara _brain/c20 fara cerere explicita.
