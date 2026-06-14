@@ -1,7 +1,7 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SEED_C20_PROPUS
+SEED_C20_PROPUS -> AUDITAT_CU_REZERVE (audit adversarial CLAUDE C20 adaugat la finalul fisierului: 2 MAJOR + 6 MINOR; cerere DECIZIE ARHITECT pe nomenclatura artefact inainte de SPEC)
 
 ## RAPORT
 
@@ -235,3 +235,50 @@ C20 ar trebui sa foloseasca artefactul _OWNERSHIP, nu _DELEGARE, pentru ca terme
 Directia narativa recomandata:
 
 Sistemul nu este autonom cand merge fara efort. Este autonom cand poate fi detinut de altcineva.
+
+---
+
+## AUDIT ADVERSARIAL SEED C20 (sesiune CLAUDE C20, 14 iunie 2026)
+
+Context: la `sync`, mandatul C20 de pe origin/main (`EXECUTA_SEED_C20_ACUM`) era deja implinit (acest fisier = `SEED_C20_PROPUS`, commit 0d8b7cb, produs direct pe main). ARHITECT a cerut sa NU dublez seed-ul, ci sa il atac adversarial inainte de SPEC (ritual propune -> valideaza -> confirma -> ingheata). Lucrez direct pe main (permisiune explicita "commite pe main"). Citit ca reper, doar fisiere permise: Doc 14 (T5), NOMENCLATURA-LOCKED-SCARA (linia C20), mandatul + seed-ul C19 de pe main. Am scris DOAR acest fisier.
+
+### VERDICT
+SEED valid conceptual pe axa PROPRIETATE / transfer de ownership; granita C19|C20 curata. ACCEPTABIL CU REZERVE: 2 finding-uri MAJORE + 6 MINOR de inchis inainte de SPEC. NU e gata de SPEC fara (a) o decizie ARHITECT pe nomenclatura artefact si (b) intarirea manifestarii filmabile a transferului.
+
+### PUNCTE TARI (confirmate empiric)
+- Granita C19|C20 = control vs transfer, identica cu Doc 14 (C19 pastreaza controlul prin reguli; C20 elibereaza controlul / preda titularitatea). PASS.
+- Regula "ownership pe ROL, nu pe persoana" taie corect contaminarea HR / organigrama la nivel de identitate.
+- Sectiunea RISCURI e lucida si auto-constienta (listeaza capcanele: management, HR, predare verbala, checklist pasiv, repetarea C19, delegare = "da-i ceva de facut").
+- Axa dramatica "sistem orfan dupa plecarea autorului" e reala si aproape-filmabila.
+- Structura propusa acopera cele 4 dovezi vizibile cerute de Doc 14 (ownership / rol responsabil / escaladare / zero dependenta author-only).
+
+### MAJOR
+
+**M1 - Manifestarea filmabila in Excel e SLABA (cel mai important de inchis).**
+Doc 14 cere TEST DE MANIFESTARE: artefact vizibil + demo LIVE distinct. C19 avea testul filmabil concret ("bagi o intrare proasta; sistemul o prinde singur"). C20 nu are inca echivalentul. DEMO-ul propus (autorul selecteaza un rol, marcheaza responsabilitati, defineste acces, verifica predarea) e in mare parte COMPLETAREA UNUI TABEL, adica exact ce seed-ul interzice ("nu e documentatie pasiva", "checklist pasiv fara test operational"). Risc: artefactul devine o fisa de post / RACI lipita in Excel.
+Intrebare ne-raspunsa: care e dovada LIVE, filmabila in 8-12 min, ca proprietatea S-A TRANSFERAT (nu doar s-a documentat)? Directie pentru SPEC: un "test de predare" nativ-workbook unde fisierul insusi verifica preluarea - un comutator "scoate autorul" care demonstreaza ca nimic nu se rupe (zero referinta author-only), flag-uri de acces care chiar blocheaza/permit, o celula de stare predare (nepredat/partial/predat/autonom) alimentata de verificari reale, nu bifata manual. Fara asta, C20 cade in capcana anti-SOP de la C17.
+
+**M2 - Tensiune de NOMENCLATURA: `_OWNERSHIP` (engleza) recomandat PESTE `_DELEGARE` (radacina LOCKED).**
+Nomenclatura LOCKED V70: constructie = DELEGAREA, CUVANT = AUTONOMIE, VERB = DELEG. Seed-ul recomanda explicit artefactul `_OWNERSHIP` si RETROGRADEAZA `_DELEGARE` ca "prea managerial". Ironie: DELEGAREA e chiar numele LOCKED al constructiei. Doc 14 permite ambele (`_DELEGARE` sau `_OWNERSHIP`), deci nu e incalcare directa, DAR: (a) a numi artefactul central in engleza si a demota radacina romaneasca LOCKED = drift de brand; (b) mantra "Nu deleg taskuri. Deleg ownership." amesteca verbul LOCKED romanesc (deleg) cu substantiv englez (ownership); (c) HERO foloseste "predai" in loc de verbul LOCKED "delegi".
+Teritoriu LOCKED -> cere DECIZIE ARHITECT inainte de SPEC: ramane `_DELEGARE` (aliniat la verbul DELEG) sau se adopta `_OWNERSHIP` ca exceptie justificata? Recomand `_DELEGARE` ca NUME de artefact (tine verbul-semnatura), cu "ownership / proprietate operationala" ca CONCEPT explicat inauntru, nu ca nume.
+
+### MINOR (de inchis la SPEC)
+- **m1 - MOTTO ignora template-ul de treapta T5 "Pleci, si munca [...]".** Progresia: C17 "o reia altcineva" -> C18 "se face singura" / "ramane in miscare" -> C19 "se tine singura" -> C20 lipseste. Raportul C19 a propus deja inchiderea C20 cu "nu mai e a ta". MOTTO-ul actual ("Un sistem nu este autonom pana...") e o teza, nu motto-ul de treapta. De adaugat instanta C20 (ex. "Pleci, si munca nu mai e a ta.").
+- **m2 - AHA candidat din Doc 14 ("Nu o tin. O predau.", linia 118) nu e referit/integrat.** De preluat la SPEC ca AHA (lock S5), in stilul gramaticii de treapta.
+- **m3 - Schema de sloturi nu e canonica.** Seed-ul foloseste HERO/BOMBA/PROMISIUNE/MECANISM/DEMO (din mandatul C20), dar SPEC-ul 11-slot canonic (vezi mandatul C19) cere SLUG/INTRIGA/PROBLEMELE/MIZA/MANTRA/WOW/MOTTO/FENOMENE/STEP-TITLES/GRESEALA/AHA. Lipsesc SLUG, MIZA (ca slot), GRESEALA, AHA. De remapat la SPEC.
+- **m4 - Proximitate RACI / fisa de post.** MECANISM (rol/backup/responsabilitate/acces/escaladare) e structural aproape de o matrice RACI. Granita e afirmata, dar nu aparata prin "ce o face VIE in workbook" vs un tabel static. Se inchide odata cu M1.
+- **m5 - Lipseste testul de distinctivitate vs `_GUVERNARE` (C19).** Doc 14 cere ca artefactul C20 sa fie VIZIBIL DISTINCT de cel C19. De verificat empiric la SPEC ca artefactul C20 nu se confunda cu _GUVERNARE (C19 = reguli care prind abateri; C20 = transferul proprietatii).
+- **m6 - Drift de verb in HERO.** "Cum predai sistemul..." foloseste "a preda" in loc de verbul LOCKED "a delega". De ancorat "delegi" in hero (cum C17 ancoreaza "sistematiza", C19 "guverna").
+
+### RECOMANDARE
+Seed solid ca baza, dar NU il trimite la SPEC inca. Doua porti inainte de SPEC:
+1. DECIZIE ARHITECT pe M2 (nomenclatura artefact: `_DELEGARE` vs `_OWNERSHIP`).
+2. O runda de intarire pe M1 (manifestarea filmabila a transferului, nu documentarea lui).
+Dupa inchiderea M1+M2: remapezi pe 11-slot canonic (m3), cu MOTTO de treapta (m1), AHA Doc 14 (m2), hero pe verbul DELEG (m6). Atunci C20 e gata de SLUG + SPEC 11-slot.
+
+### CERERI CATRE BRAIN / ARHITECT
+- DECIZIE: artefact `_DELEGARE` (recomandat) sau `_OWNERSHIP`?
+- DECIZIE: confirmi MOTTO de treapta C20 ("Pleci, si munca nu mai e a ta.") si AHA "Nu o tin. O predau."?
+- Dupa decizii: emit SLUG + SPEC 11-slot C20, sau mai vrei o runda de seed?
+
+**STATUS AUDIT: SEED_C20_AUDITAT_CU_REZERVE (2 MAJOR + 6 MINOR; decizie ARHITECT ceruta pe nomenclatura).**
