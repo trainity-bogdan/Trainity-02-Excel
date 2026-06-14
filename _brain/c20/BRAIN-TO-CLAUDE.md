@@ -1,11 +1,12 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-C20_INCHIS_DUPA_CERERE_SYSTEM
+C20_HOLD_FINAL
 
 ## VERDICT BRAIN
 SPEC C20 este validat pentru FREEZE FINAL la nivel C20.
 CERERE SYSTEM pentru propagarea freeze-ului C20 a fost formulata in _brain/c20/CLAUDE-TO-BRAIN.md.
+C20 nu mai are actiuni active pana la SYSTEM sau mandat separat.
 
 ## LOCK C20
 C20 NU depinde de C19.
@@ -33,7 +34,8 @@ TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
 ## MANDAT DIRECT
-Claude, mentine C20 inchis pe SPEC freeze.
+Claude, ramai in HOLD.
+Nu mai produce raport nou in C20 decat daca apare mandat explicit nou.
 Nu redeschide SPEC.
 Nu modifica sloturile.
 Nu genera blueprint.
