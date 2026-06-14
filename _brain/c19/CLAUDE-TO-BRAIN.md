@@ -1,65 +1,89 @@
 # CLAUDE -> BRAIN C19
 
 ## STATUS
-C19_GENERARE_SLICE_4_FILM_ASSETS (FILM + assets generate; CELE 7 ARTEFACTE EXISTA; audit_sync C19 ZERO DRIFT; gate_v20 BLOCAT la dict SYSTEM; imagini DRAFT placeholder -> NU release complet)
+C19_DRAFT_COMPLET_GATE_AND_IMAGES_BLOCKED (audit complet read-only; conceptual + tehnic PASS curat; blocat pe gate_v20 (data-continuity SYSTEM-config + cross-contamination content) si pe imagini DRAFT; NU release ready)
 
-SURSA: mandat `MANDAT_SLICE_4_FILM_ASSETS` (origin/main 3488ea2). Build-scripturi in `c19/`. Verificat independent (eu) peste self-verify-ul generatorului.
+SURSA: mandat `MANDAT_AUDIT_COMPLET_C19` (origin/main af1d567). Audit + raportare, FARA modificari de artefacte. Atins doar acest fisier.
 
 ---
 
-## SLICE 4 ARTEFACTE GENERATE
-- **`c19/FILM-Excel-19-Guvernare.docx`** (194 paragrafe, ~42 KB) - GENERAT + verificat.
-- **`c19/assets/`** - 7 JPG: `hero-poster-excel-19-guvernare.jpg` + `exec-stage-1..6.jpg`. Toate 1500x1000 (3:2), 88-115 KB.
-- Build-scripturi: `c19/build_film_c19.py`, `c19/build_assets_c19.py`.
+## ARTEFACTE AUDITATE
+| # | Artefact | Stare |
+|---|---|---|
+| 1 | HTML-Studiu-Excel-19-Guvernare.html (102KB) | EXISTA · valid · DRAFT (imagini placeholder) |
+| 2 | HTML-Editor-Studiu-...-Guvernare.html (112KB) | EXISTA · valid · body == Studiu |
+| 3 | HTML-Video-...-Guvernare.html (98KB) | EXISTA · valid · DRAFT |
+| 4 | HTML-Editor-Video-...-Guvernare.html (109KB) | EXISTA · valid · body+STAGES == Video |
+| 5 | Date_MASTER-C19.xlsx (325KB) | EXISTA · valid · `_GUVERNARE` complet |
+| 6 | FILM-Excel-19-Guvernare.docx (41KB, 194 par.) | EXISTA · valid |
+| 7 | assets/ (7 JPG) | EXISTA · DRAFT placeholder (1500x1000, hash != c01) |
+Cele 7 artefacte canonice EXISTA.
 
-**CELE 7 ARTEFACTE CANONICE EXISTA ACUM:** HTML-Studiu, HTML-Editor-Studiu, HTML-Video, HTML-Editor-Video, Date_MASTER-C19.xlsx, FILM, assets.
+## AUDIT CONCEPTUAL
+Identitate locked, verificata verbatim (NFC) in Studiu + Video + FILM = **9/9 PASS**: MIZA HERO `GUVERNAREA SISTEMULUI PRIN REGULI`, HERO, BOMBA, MANTRA, WOW, MOTTO, GRESEALA, AHA, STEP5 `Excepția și oprirea controlată`. CUVANT CONTROL, verb GUVERNEZ, rol T5 (iese din ATENTIE), axa "dai sistemului reguli care il tin corect fara supraveghere" = respectate. **PASS.**
 
-## FILM
-Structura HOOK->DEMO->CONTROL->REVEAL pe 6 etape (pattern c17), axa CONTROL. Verificat: 8/8 sloturi locked verbatim, 6/6 etape verbatim, arc complet (input gresit -> regula -> prag/stare -> exceptie -> oprire controlata -> testul ochilor inchisi), `_GUVERNARE` prezent, demonstratia (STATUS=OPRIT intentionat, fail-safe blocheaza) explicata. Garda: E4 semnal care schimba starea, E5 oprire automata fara responsabil. R-V02.15 respectat (fara cifre business).
+## AUDIT GRANITE / CONTAMINARE
+- Contaminare de IDENTITATE: **ZERO** in toate fisierele (`_AUTOMATIZARE`/`AUTOMATIZEZ`/`SISTEMATIZEZ`/`_SISTEM`-artefact/`dashboard`/`monitoriz`/`ownership`/`delega` = 0). C19 NU adopta identitatea C18/C20/T4/C04. **PASS conceptual.**
+- "responsabil": Studiu 2 / Video 1 / FILM 2 - toate in context de NEGATIE / granita C20 ("nu desemneaza responsabilul", "RESPONSABILUL DEGHIZAT" = capcana, granita C20). Legitim, nu contaminare. [INFO]
+- "motor" = callback la livrarea C18 (BOMBA + REALITATE), nu identitate C19. Legitim.
+- Formula de paza C18 ruleaza / C19 se tine corect / C20 preda = prezenta.
+- NOTA: gate_v20 (CLASA CROSS-CONTAMINATION) marcheaza 6 referinte de granita C18/C04/C20 in contexte ne-whitelisted (vezi PROBLEME). Sunt referinte de granita cerute de SPEC, nu identitate furata; remediere = rephrase (precedent C17).
 
-## ASSETS / IMAGINI
-**DRAFT_IMAGINI_FALLBACK.** Cele 7 JPG sunt placeholdere DRAFT generate cu PIL (fundal navy gradient, text auriu, axa CONTROL: hero `GUVERNAREA SISTEMULUI PRIN REGULI` + REALITATE/DEVIATII/REGULA/PRAG-SEMNAL/OPRIRE/TEST), fiecare cu marcaj vizibil "placeholder DRAFT". Verificat: 7/7 valide, 1500x1000 (3:2), hash DIFERIT de c01 (clone=False pe toate). **NU sunt imagini finale** - se inlocuiesc cu Banana/Gemini cand le produce ARHITECT.
+## AUDIT BLUEPRINT / 6 ETAPE / ARC
+Cele 6 etape verbatim prezente in Studiu + Video + FILM = **6/6 PASS**: Sistemul care merge doar cat te uiti / Ce poate sa devieze previzibil / Regula care prinde intrarea gresita / Pragul si semnalul / Excepția și oprirea controlată / Testul ochilor inchisi.
+Arc prezent (input gresit -> regula -> prag/stare -> exceptie -> oprire controlata -> testul ochilor inchisi) = **PASS**.
+Etapa 4 = semnal care schimba STAREA (anti-dashboard), Etapa 5 = oprire automata fail-safe (fara interventie umana / responsabil) = **PASS**.
 
-## VALIDARI SLICE 4 (rulate)
-- Existenta FILM C19: **PASS** (docx valid, 194 paragrafe).
-- Existenta assets C19: **PASS** (7 JPG).
-- Identitate C19 locked in FILM: **PASS** (8/8 verbatim).
-- Cele 6 etape in FILM: **PASS** (6/6) + arc **PASS**.
-- E4 semnal care schimba starea / E5 oprire automata: **PASS** ("responsabil"/"escalad" apar doar negate la granita C20; "motor" = callback C18).
-- Zero em-dash / en-dash in FILM + text assets: **PASS** (0/0).
-- Fara leftover C17/C18: **PASS**.
-- Fallback imagini: **DRAFT** (placeholdere; NU declar hash PASS ca finale).
+## AUDIT DATE_MASTER / _GUVERNARE
+- `_GUVERNARE` EXISTA, distinct de `_AUTOMATIZARE` (absent in lineage) = **PASS**.
+- `STATUS_SISTEM` OK/ATENTIE/OPRIT = PASS · Data Validation la sursa (3 reguli) = PASS · praguri vii (`LIMIT_CANT_MIN/MAX`, `LIMIT_VAL_MIN`, `LIMIT_TOL`) = PASS · lista EXCEPTII = PASS · FAIL-SAFE (`OUTPUT_GUVERNAT` legat de STATUS=OPRIT) = PASS.
+- `STATUS=OPRIT` INTENTIONAT (prinde 2 randuri imposibile plantate in datele C18) = confirmat.
+- **R-V02.14**: SUMA valoare_neta = 1.247.893,50 = C18 = **PASS** (conservata).
 
-## VALIDARI FINALE (cele 7 artefacte exista)
-- **`audit_sync.py`: C19 ZERO DRIFT** - toate coloanele OK (R-V03.*, V57.parity, filmname, V39.assets, imgclone). Driftul global (7 celule) e PRE-EXISTENT si al ALTOR constructii: C12-C17 `V39.assets` XX (assets negenerate) + C18 `imgclone` XX (imagini clone c01). C19 nu adauga drift.
-- **`gate_v20.py 19`: BLOCAT / NU_RULAT** - `load_identitate` foloseste un dict hardcoded `IDENTITATI` in `gate_v20.py` care se opreste la C17; **C18 si C19 lipsesc** din el -> "IDENTITATE_TEHNICA pentru C19 nu e definita". `gate_v20.py` = fisier SYSTEM, INTERZIS chatului C19. Deblocare = CERERE SYSTEM (precedent C17: commit 7162e0c "identitate tehnica C17 deblocheaza gate_v20 B2"). NOTA: am adaugat IDENTITATE_TEHNICA C19 in `referinte/IDENTITATE-TEHNICA.md` (freeze), dar gate_v20 NU citeste .md-ul in acest repo, ci dict-ul hardcoded.
-- **R-V02.14 suma conservata**: **PASS** (Date_MASTER-C19 = 1.247.893,50 = C18).
-- **`_GUVERNARE` distinct de `_AUTOMATIZARE`**: **PASS**.
-- **STATUS OK/ATENTIE/OPRIT + Data Validation + fail-safe**: **PASS** (in Date_MASTER + reflectate in HTML/FILM).
-- **imgclone (hash != c01)**: tehnic OK (placeholdere ≠ c01), DAR imaginile sunt DRAFT placeholder -> NU declar PASS de release.
+## AUDIT TEHNIC HTML / FILM
+- em-dash / en-dash: **0** in toate 5 (Studiu, Editor-Studiu, Video, Editor-Video, FILM). PASS.
+- leftover C17 / C18 / C01 nelegitim: **0** peste tot. PASS.
+- localStorage: `trainity_c19_*` corect, fara contaminare. PASS.
+- title: Studiu `C19 · Guvernare · Trainity`, Video `C19 · GUVERNARE · BROADCAST`. topbar C19. PASS.
+- NEXT -> C20 Delegarea prezent (Studiu + Video). PASS.
+- Editor-Studiu body == Studiu body: **True**. Editor-Video body == Video body: **True**. PASS.
+- R-V02.15 cifre business in HTML/FILM: **ZERO** (FILM fara numere lungi; HTML fara suma/valori business). PASS.
 
-## STATUS RELEASE
-**NU release complet (DRAFT).** Toate cele 7 artefacte exista si trec validarile de continut/identitate/conservare, DAR: (a) imaginile sunt placeholdere DRAFT (nu finale), (b) gate_v20 nu poate rula complet pana C19 nu e in dict-ul gate_v20.py (SYSTEM). Release complet dupa: imagini finale GUVERNARE + deblocare gate_v20 + gate PASS.
+## AUDIT IMAGINI / ASSETS
+- 7 imagini in `c19/assets/`: hero-poster-excel-19-guvernare.jpg + exec-stage-1..6.jpg. EXISTA.
+- Toate 1500x1000 (raport 3:2), 88-115 KB, valide PIL, **hash != c01** (clone=False pe toate 7).
+- Status: **DRAFT placeholder** (`DRAFT_IMAGINI_FALLBACK`), marcaj vizibil "placeholder DRAFT". NU sunt finale.
+- NU declar hash PASS de release; NU declar release complet.
 
-## RISCURI RAMASE
-1. **gate_v20 blocat** la dict SYSTEM (C18+C19 lipsesc) -> CERERE SYSTEM.
-2. **Imagini DRAFT** -> release blocat pana la cele 7 imagini finale GUVERNARE (ARHITECT).
-3. STATUS=OPRIT in demonstratie = intentionat.
-4. Branch de sesiune divergent; commit pe main aliniat.
+## VALIDARI RULATE
+- `audit_sync.py`: **C19 = ZERO DRIFT** (toate coloanele OK, inclusiv V39.assets + imgclone). Driftul global (7 celule) = pre-existent, alte constructii (C12-C17 assets, C18 imgclone).
+- `gate_v20.py 19 c19/ c01/`: **RULEAZA** (dict IDENTITATI deblocat), verdict = **GATE FAIL, 10 erori** (6 CROSS-CONTAMINATION + 4 DATA-CONTINUITY). exit 1.
+- Verificari proprii read-only (identitate, blueprint, _GUVERNARE, tehnic, assets): vezi mai sus.
 
-## CERERI CATRE BRAIN / SYSTEM
+## VALIDARI NERULATE / BLOCAJE
+- `gate_v20.py 19` ruleaza dar PICA pe 2 clase (vezi PROBLEME). Partea DATA-CONTINUITY = config SYSTEM (C19 lipseste din `SHEET_OUTPUT_CANONIC` + `CONSTRUCTII_DATASET_C01`; C18 a fost adaugat de SYSTEM in 5ec4b3b). Marcat `GATE_SYSTEM_BLOCKED` pentru aceasta parte. NU am atins gate_v20.py (interzis in acest mandat de audit).
 
-CERERE SYSTEM
-Constructie: C19 (si C18, acelasi blocaj)
-Fisier comun cerut: `_system/generatoare/gate_v20.py` (dict `IDENTITATI` din `load_identitate`).
-Motiv: gate_v20 B2 nu poate rula pe C19 (si C18): dict-ul hardcoded se opreste la C17. "IDENTITATE_TEHNICA pentru C19 nu e definita."
-Impact: adauga intrarile '18' si '19' in dict (cod, nume_hero_caps_rand1, nume_slug, meta_val_treapta), ca la C17 (commit 7162e0c). NU atinge alta logica.
-Propunere C19: `'19': {'cod':'C19','nume_hero_caps_rand1':'CONTROL','nume_slug':'Guvernare','meta_val_treapta':'SISTEMATIZARE · AUTOMATIZARE · <b>GUVERNARE</b> · DELEGARE (AUTONOMIE)'}`. Valorile exacte sunt in `referinte/IDENTITATE-TEHNICA.md` (IDENTITATE_TEHNICA C19).
+## LISTA PROBLEME CU SEVERITATE
+1. **[BLOCKER · SYSTEM]** gate_v20 DATA-CONTINUITY (4): C19 lipseste din `SHEET_OUTPUT_CANONIC` (asteptat `'19':'Vanzari_Curat'`) si din `CONSTRUCTII_DATASET_C01` (asteptat `+'19'`). Gate cade pe default `Vanzari` (export brut) + compara cu canonicul ~8M in loc de contractul C01. **Remediere = SYSTEM**, oglinda exacta a C18 (commit 5ec4b3b). NU apartine chatului C19.
+2. **[MAJOR · CONTENT C19]** gate_v20 CROSS-CONTAMINATION (6): referinte de granita C18 (callback "Motorul ruleaza (C18)"), C04/C18/C20 (carduri-capcana) in contexte ne-whitelisted. Remediere = rephrase HTML (precedent C17 "fix gate cross-contamination"). Necesita mandat C19 de continut (acum suntem in audit, nu reparatie).
+3. **[BLOCKER · ARHITECT]** imagini DRAFT placeholder (7/7, hash != c01, dar nu finale). Release blocat pana la cele 7 imagini finale GUVERNARE.
+4. **[INFO]** "responsabil" in FILM/HTML = context negatie/granita C20, legitim (nu contaminare).
+0 BLOCKER conceptual; 0 BLOCKER tehnic in artefacte (em-dash/leftover/identitate/sum/editor-parity = curat).
 
-- **Catre ARHITECT:** cele 7 imagini finale GUVERNARE (hero + 6 exec-stage). Le procesez (watermark scos, integrare in assets + base64 inline Video/Editor-Video, hash != c01) cand sosesc.
-- La deblocarea gate_v20 + imagini finale: rulez gate_v20 PASS + audit_sync + declar release complet.
+## VERDICT FINAL AUDIT
+**`C19_DRAFT_COMPLET_GATE_AND_IMAGES_BLOCKED`**
+C19 e DRAFT complet si solid conceptual + tehnic (cele 7 artefacte exista, identitate/blueprint/_GUVERNARE/sume/tehnic = PASS, audit_sync zero drift). NU e release ready din 3 motive, NICIUNUL defect de fond al artefactelor C19:
+- gate_v20 DATA-CONTINUITY = config SYSTEM lipsa pentru C19 (BLOCKER, SYSTEM-owned);
+- gate_v20 CROSS-CONTAMINATION = rephrase de granita in HTML (MAJOR, mandat C19 de continut);
+- imagini DRAFT (BLOCKER, ARHITECT).
+
+## CERERI CATRE BRAIN / SYSTEM / ARHITECT
+- **SYSTEM:** adauga C19 in `gate_v20.py`: `SHEET_OUTPUT_CANONIC['19']='Vanzari_Curat'` + `CONSTRUCTII_DATASET_C01 += '19'` (oglinda 5ec4b3b pentru C18). Inchide DATA-CONTINUITY.
+- **BRAIN:** dupa deblocarea SYSTEM, emite `MANDAT_GATE_RETEST` (rulez gate_v20 19 + audit_sync) si/sau un mandat de continut pentru rephrase cross-contamination (ca C17).
+- **ARHITECT:** cele 7 imagini finale GUVERNARE -> `MANDAT_IMAGINI_FINALE` (inlocuiesc placeholderele, hash != c01, reverific).
+- C19 ramane pe STOP la modificari de artefacte pana la `MANDAT_GATE_RETEST` / `MANDAT_IMAGINI_FINALE`.
 
 ## COMMIT
-Commit pe `main`: `feat(c19): Slice 4 - FILM + assets DRAFT (cele 7 artefacte exista; audit_sync C19 zero drift; gate_v20 = CERERE SYSTEM)`. SHA in git log.
+Commit pe `main`: `docs(c19): AUDIT COMPLET C19 - DRAFT complet, gate+images blocked (conceptual/tehnic PASS)`. SHA in git log.
 
-**C19_GENERARE_SLICE_4_FILM_ASSETS**
+**C19_DRAFT_COMPLET_GATE_AND_IMAGES_BLOCKED**
