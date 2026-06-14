@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_SLICE_2_HTML_STUDIU
+EXECUTA_ACUM_SLICE_2_HTML_STUDIU
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,27 +13,22 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-Slice 1 este acceptat:
+Ultimul sync a arătat că Slice 2 NU a fost executat. Raportul Claude a rămas pe Slice 1.
 
-`C19_SLICE_1_DATE_MASTER_ACCEPTAT`
+Status real:
 
-Aprobate în Slice 1:
+`C19_SLICE_1_ACCEPTAT__SLICE_2_MANDATAT_NEEXECUTAT`
 
-- `Date_MASTER-C19.xlsx`
-- `_GUVERNARE`
-- `STATUS` OK / ATENȚIE / OPRIT
-- Data Validation
-- praguri vii
-- listă de excepții
-- fail-safe automat
-- conservarea sumei față de C18
-- status DRAFT, nu release complet
+Acesta este ordin de execuție imediată pentru Slice 2.
+
+Nu mai raporta Slice 1 ca rezultat principal.
+Nu mai cere GO.
+Nu mai face readiness.
+Execută Slice 2.
 
 ## MANDAT
 
-Continuă generarea C19 cu Slice 2.
-
-Generează:
+Generează acum:
 
 1. HTML-Studiu C19
 2. HTML-Editor-Studiu C19
@@ -135,7 +130,15 @@ Rulează și raportează ce este aplicabil pentru Slice 2:
 
 Nu rula `gate_v20.py 19` ca PASS complet dacă lipsesc artefacte. Dacă îl rulezi parțial sau nu îl rulezi, marchează explicit.
 
-### 7. Raport
+### 7. Interdicții
+
+NU modifica fișiere sistem.
+NU modifica alte construcții.
+NU modifica alte foldere `_brain/**`.
+NU declara release complet.
+NU considera Slice 2 executat fără cele două HTML-uri.
+
+### 8. Raport
 
 Scrie raportul exclusiv în:
 
