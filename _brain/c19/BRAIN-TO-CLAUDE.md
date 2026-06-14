@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-EXECUTA_ACUM_SLICE_2_HTML_STUDIU
+MANDAT_SLICE_3_HTML_VIDEO
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,42 +13,43 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-Ultimul sync a arătat că Slice 2 NU a fost executat. Raportul Claude a rămas pe Slice 1.
+Slice 2 este acceptat:
 
-Status real:
+`C19_SLICE_2_HTML_STUDIU_ACCEPTAT`
 
-`C19_SLICE_1_ACCEPTAT__SLICE_2_MANDATAT_NEEXECUTAT`
+C19 are acum:
 
-Acesta este ordin de execuție imediată pentru Slice 2.
+- Slice 1 Date_MASTER acceptat
+- Slice 2 HTML-Studiu + HTML-Editor-Studiu acceptat
 
-Nu mai raporta Slice 1 ca rezultat principal.
-Nu mai cere GO.
-Nu mai face readiness.
-Execută Slice 2.
+Status release rămâne:
+
+`DRAFT_NOT_RELEASE_COMPLETE`
 
 ## MANDAT
 
-Generează acum:
+Continuă generarea C19 cu Slice 3.
 
-1. HTML-Studiu C19
-2. HTML-Editor-Studiu C19
+Generează:
+
+1. HTML-Video C19
+2. HTML-Editor-Video C19
 
 Nu genera încă:
 
-- HTML-Video
-- HTML-Editor-Video
-- FILM
+- FILM final
 - release complet
 
 ### 1. Sursă de adevăr
 
-Folosește `c19/Date_MASTER-C19.xlsx` ca sursă de adevăr pentru demonstrația C19.
+Folosește `c19/Date_MASTER-C19.xlsx` și HTML-Studiu C19 ca surse de adevăr.
 
-Trebuie explicat clar în HTML că:
+Video trebuie să explice clar:
 
 - `STATUS=OPRIT` este intenționat în demonstrație
 - `_GUVERNARE` prinde anomaliile pe care C18 le-ar fi lăsat să curgă tacit
 - C19 nu repară motorul, ci îl ține corect prin reguli
+- `_GUVERNARE` blochează rezultatul corupt prin fail-safe
 
 ### 2. Identitate locked
 
@@ -65,9 +66,9 @@ Păstrează locked:
 - AHA: `Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește.`
 - STEP 5: `Excepția și oprirea controlată`
 
-### 3. Blueprint obligatoriu în HTML-Studiu
+### 3. Blueprint obligatoriu în Video
 
-HTML-Studiu trebuie să reflecte cele 6 etape:
+HTML-Video trebuie să reflecte cele 6 etape:
 
 1. `Sistemul care merge doar cât te uiți`
 2. `Ce poate să devieze previzibil`
@@ -76,13 +77,13 @@ HTML-Studiu trebuie să reflecte cele 6 etape:
 5. `Excepția și oprirea controlată`
 6. `Testul ochilor închiși`
 
-Arcul obligatoriu:
+Arcul video obligatoriu:
 
 input greșit -> regulă -> prag / stare -> excepție -> oprire controlată -> testul ochilor închiși
 
 ### 4. Gărzi conceptuale obligatorii
 
-Păstrează în HTML:
+Păstrează în Video:
 
 - C18 = rulează
 - C19 = se ține corect
@@ -115,18 +116,20 @@ Obligație:
 - NU declara release complet
 - NU declara hash imagini PASS dacă imaginile sunt fallback / clone / placeholder
 
-### 6. Validări Slice 2
+### 6. Validări Slice 3
 
-Rulează și raportează ce este aplicabil pentru Slice 2:
+Rulează și raportează ce este aplicabil pentru Slice 3:
 
-- existență HTML-Studiu C19
-- existență HTML-Editor-Studiu C19
-- identitate C19 locked prezentă în HTML
+- existență HTML-Video C19
+- existență HTML-Editor-Video C19
+- identitate C19 locked prezentă în Video
 - cele 6 etape prezente
+- arcul video prezent
 - Etapa 4 = semnal care schimbă starea, nu dashboard
 - Etapa 5 = oprire automată, nu intervenție umană
-- zero em dash / en dash în HTML
-- verificare imagini / fallback status
+- zero em dash / en dash în Video
+- verificare fallback imagini
+- editor video fără leftover C17/C18
 
 Nu rula `gate_v20.py 19` ca PASS complet dacă lipsesc artefacte. Dacă îl rulezi parțial sau nu îl rulezi, marchează explicit.
 
@@ -136,7 +139,7 @@ NU modifica fișiere sistem.
 NU modifica alte construcții.
 NU modifica alte foldere `_brain/**`.
 NU declara release complet.
-NU considera Slice 2 executat fără cele două HTML-uri.
+NU considera Slice 3 executat fără cele două HTML-uri video.
 
 ### 8. Raport
 
@@ -150,17 +153,17 @@ Format raport:
 
 ## STATUS
 
-## SLICE 2 ARTEFACTE GENERATE
+## SLICE 3 ARTEFACTE GENERATE
 
-## SURSA HTML
+## SURSA VIDEO
 
-## IDENTITATE C19 ÎN HTML
+## IDENTITATE C19 ÎN VIDEO
 
 ## DATE_MASTER FOLOSIT
 
 ## STATUS IMAGINI
 
-## VALIDĂRI SLICE 2
+## VALIDĂRI SLICE 3
 
 ## VALIDĂRI NERULATE / PROBLEME
 
@@ -172,7 +175,7 @@ Format raport:
 
 ## COMMIT
 
-Fă commit descriptiv pe main după Slice 2.
+Fă commit descriptiv pe main după Slice 3.
 
 ## RAPORT
-Aștept raport Slice 2 C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept raport Slice 3 C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
