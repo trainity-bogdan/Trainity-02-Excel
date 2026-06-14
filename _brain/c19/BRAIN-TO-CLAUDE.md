@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C19
 
 ## STATUS
-MANDAT_SPEC_11_SLOT
+MANDAT_FREEZE_SPEC_11_SLOT
 
 ## CONTEXT
 C19 GUVERNAREA. T5 AUTONOMIE. CUVÂNT LOCKED = CONTROL. VERB LOCKED = GUVERNEZ.
@@ -13,33 +13,51 @@ DAI SISTEMULUI REGULI CARE ÎL ȚIN CORECT FĂRĂ SUPRAVEGHERE.
 
 ## DECIZIE BRAIN
 
-SEED conceptual C19 este acceptat provizoriu:
+SPEC 11-slot C19 este acceptat pentru freeze:
 
-`C19_SEED_CONCEPTUAL_ACCEPTAT_PROVIZORIU`
-
-Provisoriu doar pentru că C18 este încă neratificat, nu pentru că SEED C19 este slab.
+`C19_SPEC_11_SLOT_ACCEPTAT_PENTRU_FREEZE`
 
 Aprobări BRAIN:
 
-- întrebare centrală: `Cum se ține corect fără ochiul meu?`
-- HERO candidat: `Cum se ține corect fără ochiul meu?`
-- BOMBĂ candidat: `Motorul tău rulează. Dar tot tu verifici că n-a greșit, de fiecare dată.`
+- SLUG: `guvernare`
+- MIZA HERO: `GUVERNAREA SISTEMULUI PRIN REGULI`
+- HERO: `Cum se ține corect fără ochiul meu?`
+- BOMBĂ: `Motorul tău rulează. Dar tot tu verifici că n-a greșit, de fiecare dată.`
 - MANTRA: `Nu o supraveghez. O guvernez prin reguli.`
-- artefact confirmat: `_GUVERNARE`
-- obiect concret: regula vie în workbook, adică validare, prag, semnal, excepție, fail-safe, stare OK / ATENȚIE / OPRIT
+- WOW: `Un sistem care mergea doar cât stăteai cu ochii pe el. Acum, pe o intrare greșită, se oprește singur și aprinde semnalul, fără tine.`
+- MOTTO candidat: `Pleci, și munca se ține singură.`
+- GREȘEALA: `Confunzi «merge» cu «merge corect».`
+- AHA: `Un sistem în care ai încredere nu e cel pe care îl urmărești. E cel care se prinde singur când greșește.`
+- Artefact confirmat: `_GUVERNARE`
 
 ## MANDAT
 
-Pregătește propunerea de SPEC 11-slot C19, fără implementare.
+Pregătește versiunea de freeze pentru SPEC 11-slot C19, fără implementare.
 
 Nu genera artefacte.
 Nu modifica c19/**.
 Nu modifica fișiere sistem.
 Nu genera HTML, Date_MASTER, build scripts sau FILM.
 
-### 1. SPEC 11-slot cerut
+### 1. Ajustare obligatorie STEP 5
 
-Propune SPEC 11-slot C19 cu următoarele sloturi:
+În STEP-TITLES, ajustează etapa 5 ca să nu sugereze escaladare, ownership sau responsabil uman.
+
+Înlocuiește formularea riscantă:
+
+`Exceptia si fail-safe-ul (_GUVERNARE: ce opreste lantul, ce cere atentie umana - granita C20)`
+
+cu formularea recomandată:
+
+`Excepția și oprirea controlată`
+
+Descriere obligatorie pentru etapa 5:
+
+`_GUVERNARE marchează excepția, oprește lanțul sau schimbă starea, dar nu desemnează responsabilul.`
+
+### 2. Sloturi de păstrat
+
+Păstrează toate sloturile aprobate anterior:
 
 1. SLUG
 2. INTRIGA
@@ -53,24 +71,15 @@ Propune SPEC 11-slot C19 cu următoarele sloturi:
 10. GREȘEALA
 11. AHA
 
-### 2. Granițe obligatorii
+### 3. Granițe obligatorii
 
-SPEC-ul trebuie să păstreze clar:
-
-- C17 = SISTEMATIZAREA, forma reluabilă, SISTEM, hartă funcțională, pași încă executați de om
-- C18 = AUTOMATIZAREA, MOTOR, lanț de execuție repetitivă cu intervenție umană minimă
-- C19 = GUVERNAREA, CONTROL, reguli / praguri / validări / excepții / semnale / stare a sistemului
-- C20 = DELEGAREA, ownership, responsabilitate, escaladare, predare controlabilă
-
-Formula de pază:
+Păstrează explicit distincția:
 
 - C18 = rulează
 - C19 = se ține corect
 - C20 = predă responsabilitatea
 
-### 3. Interdicții conceptuale în SPEC
-
-Evită:
+C19 nu este:
 
 - management
 - responsabil
@@ -84,25 +93,17 @@ Evită:
 - delegare
 - persoană care verifică
 
-### 4. Filmabilitate Excel obligatorie
+### 4. MOTTO
 
-SPEC-ul trebuie să poată fi filmat în Excel prin:
+Marchează MOTTO ca:
 
-- input greșit
-- regulă care îl prinde
-- prag care semnalizează
-- stare care se schimbă
-- lanț care se oprește sau se marchează înainte să ducă eroarea mai departe
+`acceptat pentru C19, dar dependent de ratificarea template-ului T5`
 
-### 5. Clarificare dependență C18
+Conținutul MOTTO rămâne:
 
-Notează explicit dacă SPEC C19:
+`Pleci, și munca se ține singură.`
 
-- depinde de ratificarea finală C18
-- poate fi înghețat paralel cu C18
-- trebuie ajustat după SPEC C18
-
-### 6. Raport
+### 5. Output cerut
 
 Scrie raportul exclusiv în:
 
@@ -114,15 +115,15 @@ Format raport:
 
 ## STATUS
 
-## SPEC 11-SLOT C19 PROPUS
+## SPEC 11-SLOT C19 FREEZE
 
-## GRANIȚE ȘI GARZI
+## AJUSTARE STEP 5
 
-## FILMABILITATE EXCEL
+## GRANIȚE CONFIRMATE
 
-## DEPENDENȚĂ C18
+## MOTTO STATUS
 
-## RISCURI
+## RISCURI RĂMASE
 
 ## CERERI CĂTRE BRAIN / SYSTEM
 
@@ -131,4 +132,4 @@ Format raport:
 Fă commit descriptiv pe main după scrierea raportului.
 
 ## RAPORT
-Aștept propunerea SPEC 11-slot C19 în _brain/c19/CLAUDE-TO-BRAIN.md.
+Aștept SPEC 11-slot C19 freeze în _brain/c19/CLAUDE-TO-BRAIN.md.
