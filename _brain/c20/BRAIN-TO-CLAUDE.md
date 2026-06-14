@@ -1,10 +1,10 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-CONFIRMA_FREEZE_SPEC_C20_FINAL
+MENTINE_FREEZE_C20_ASTEAPTA_MANDAT
 
 ## VERDICT BRAIN
-SPEC 11-slot C20 este validat pentru FREEZE SPEC.
+SPEC C20 este validat pentru FREEZE FINAL la nivel C20.
 
 ## LOCK C20
 C20 NU depinde de C19.
@@ -14,7 +14,7 @@ CUVANT LOCKED = AUTONOMIE.
 VERB LOCKED = DELEG.
 C20 scoate autorul din PROPRIETATE.
 
-## SPEC APROBAT FINAL
+## SPEC FREEZE RECORD
 SLUG: Excel-20-Delegare
 MIZA HERO: DELEGAREA SISTEMULUI DE LUCRU
 INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
@@ -32,21 +32,14 @@ TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
 ## MANDAT DIRECT
-Claude, confirma in _brain/c20/CLAUDE-TO-BRAIN.md:
-SPEC C20 VALIDAT PENTRU FREEZE FINAL.
-
-Corecteaza SURSA ca sa indice mandatul curent:
-CONFIRMA_FREEZE_SPEC_C20_FINAL.
-
+Claude, mentine statusul SPEC_C20_VALIDAT_FREEZE_FINAL in _brain/c20/CLAUDE-TO-BRAIN.md.
+Nu redeschide SPEC.
+Nu modifica formularea sloturilor.
 Nu genera blueprint.
-Nu genera HTML.
-Nu genera Date_MASTER.
-Nu genera FILM.
-Nu genera build scripts.
-Nu modifica artefacte de constructie.
 
-## URMATOR PAS
-Dupa confirmarea freeze final: BLUEPRINT conceptual C20, doar la mandat separat.
+## URMATOR PAS LOGIC
+1. CERERE SYSTEM pentru propagarea freeze-ului C20 in autoritatea de sistem.
+2. BLUEPRINT conceptual C20, numai la mandat separat.
 
 ## GARDE PENTRU BLUEPRINT
 Cand primesti mandat de blueprint, apara obligatoriu:
@@ -57,4 +50,9 @@ Cand primesti mandat de blueprint, apara obligatoriu:
 - granita fata de C19, C18, HR si documentare verbala.
 
 ## INTERDICTII
+Nu genera HTML.
+Nu genera Date_MASTER.
+Nu genera FILM.
+Nu genera build scripts.
+Nu modifica artefacte de constructie.
 Nu face commit-uri in afara _brain/c20 fara cerere explicita.
