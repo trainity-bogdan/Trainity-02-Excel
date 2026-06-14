@@ -453,6 +453,40 @@ pana cand IDENTITATE_TEHNICA aici este completata pentru fiecare.
 - nota_hero: BRAIN-CONFIRMED 08.06.2026. nume_hero_caps (MIZĂ HERO descriptor "DECIZIA GATA") confirmat de BRAIN C16: exprimă C16 ca LIVRARE, susține axa raport decision-ready, nu confundă cu C15 (sinteză) / C14 (layout) / C17 (sistematizare), nu sună logistic, compatibil cu "raportul care decide". Nu mai e provizoriu.
 - nota_treapta: C16 = ultima din T4 RAPORTARE; next (C17 SISTEMATIZAREA) = prima din T5 AUTONOMIE, de aici next_label TREAPTA 5.
 
+## IDENTITATE_TEHNICA C17 · SISTEMATIZAREA
+
+- cod: C17
+- treapta_nr: 5
+- treapta_nume: AUTONOMIE
+- treapta_pozitie: 1 din 4 (Sistematizare, Automatizare, Guvernare, Delegare)
+- nume_hero_caps_rand1: SISTEM
+- nume_hero_caps_rand2: RELUABIL
+- nume_hero_caps: SISTEM RELUABIL
+- hov_object: SISTEMATIZAREA MUNCII RELUABILE
+- nume_title_case: Sistematizarea
+- nume_slug: Sistematizare
+- cuvant_locked: SISTEM
+- verb_locked: SISTEMATIZEZ
+- rol_t5: scoate autorul din OCAZIE
+- artefact_central: _SISTEM (harta functionala nativ-Excel, anti-SOP, garda OGLINDA)
+- input_filename: Date_MASTER-C16-Livrare.xlsx
+- output_filename: Date_MASTER-C17-Sistematizare.xlsx
+- meta_val_treapta: <b>SISTEMATIZARE</b> · AUTOMATIZARE · GUVERNARE · DELEGARE (AUTONOMIE)
+- next_cod: C18
+- next_nume_title: Automatizarea
+- next_label: TREAPTA 5 · CONSTRUCȚIA URMĂTOARE
+- footer_text: TRAINITY · C17 SISTEMATIZARE · munca devine un sistem reluabil fără autor
+- topbar_text: Sistemul 02 - Excel · C17 · Sistematizare
+- mobile_topbar: C17 · SISTEM
+- nav_brand_label: PACK 02 EXCEL · C17
+- nav_brand_title: SISTEMATIZAREA MUNCII RELUABILE
+- title_studiu: C17 · Sistematizare · Trainity
+- title_video: C17 · SISTEMATIZARE · BROADCAST
+- localStorage_studiu: trainity_c17_study_v1
+- localStorage_video: trainity_c17_video_v1
+- nota_hero: C17 SISTEMATIZAREA deschide T5 AUTONOMIE. hov-object = MIZĂ HERO "SISTEMATIZAREA MUNCII RELUABILE"; nume_hero_caps_rand1 = SISTEM (cuvânt LOCKED, în topbar "C17 · SISTEM"). Garda OGLINDĂ: _SISTEM oglindește/navighează, nu execută (C18), nu judecă prag (C19), nu mută ownership (C20).
+- nota_treapta: C17 = prima din T5 AUTONOMIE; deschide treapta; artefact central _SISTEM (hartă reluabilă); rol = scoate autorul din OCAZIE; next (C18 AUTOMATIZAREA).
+
 ## IDENTITATE_TEHNICA C18 · AUTOMATIZAREA
 
 - cod: C18
