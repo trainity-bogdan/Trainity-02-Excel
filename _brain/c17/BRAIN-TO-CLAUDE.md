@@ -1,11 +1,12 @@
 # BRAIN -> CLAUDE C17
 
 ## STATUS
-MANDAT_SYSTEM_FREEZE_SPEC_C17
+MANDAT_SLUG_BLUEPRINT_C17
 
 ## CONTEXT
-C17 SPEC 11-slot este confirmat in _brain/c17/CLAUDE-TO-BRAIN.md.
-Status verificat: C17_SPEC_CONFIRMED.
+C17 SPEC 11-slot este inghetat in sistem.
+Status curent verificat in _brain/c17/CLAUDE-TO-BRAIN.md:
+C17_SPEC_FROZEN_READY_FOR_BLUEPRINT.
 
 C17:
 - SISTEMATIZAREA
@@ -18,86 +19,97 @@ C17:
 - _SISTEM = harta functionala nativ-Excel, legata de workbook, nu SOP, nu documentatie
 - garda OGLINDA: oglindeste, leaga si navigheaza, nu executa, nu judeca, nu deleaga
 
-SPEC 11-slot confirmat:
-
-1. HERO:
-"Cum transform munca pe care doar eu o stiu intr-un sistem pe care altcineva il porneste?"
-
-MIZA HERO:
-"SISTEMATIZAREA MUNCII RELUABILE"
-
-2. BOMBA:
-"Munca ta merge perfect. Pana pleci tu."
-
-3. GRESEALA:
-"Nu ai un proces. Ai o memorie personala care tine un Excel in viata."
-
-4. AHA:
-"O munca facuta de doua ori nu mai e o livrare. E un sistem ascuns in workbook."
-
-5. MANTRA:
-"Nu o fac din nou. O fac sistem."
-
-6. WOW:
-"Un proces care traia doar in capul tau. Acum o harta vie in workbook, pe care altcineva o porneste fara tine."
-
-7. MOTTO C17:
-"Pleci, si munca o reia altcineva."
-
-Nota:
-Template-ul T5 "Pleci, si munca [...]" ramane TEMPLATE CANDIDAT T5, NU LOCKED pentru toata treapta. Se retesteaza la C18-C20.
-
-8. CINE DEVII:
-"Nu mai esti omul care tine munca. Esti omul care o face sistem."
-
-9. PAYOFF:
-"Acum poti lipsi o saptamana, si munca are cine s-o reia."
-
-10. MIZA:
-"Cata vreme munca depinde de o singura persoana, e un risc ascuns: in concediu, la demisie, la suprasolicitare, se opreste. Sistematizarea o face sa continue cu oricine instruit, nu doar cu autorul ei."
-
-11. VERB-SEMNATURA:
-a sistematiza / SISTEMATIZEZ
+SPEC inghetat:
+- HERO: "Cum transform munca pe care doar eu o stiu intr-un sistem pe care altcineva il porneste?"
+- MIZA HERO: "SISTEMATIZAREA MUNCII RELUABILE"
+- BOMBA: "Munca ta merge perfect. Pana pleci tu."
+- GRESEALA: "Nu ai un proces. Ai o memorie personala care tine un Excel in viata."
+- AHA: "O munca facuta de doua ori nu mai e o livrare. E un sistem ascuns in workbook."
+- MANTRA: "Nu o fac din nou. O fac sistem."
+- WOW: "Un proces care traia doar in capul tau. Acum o harta vie in workbook, pe care altcineva o porneste fara tine."
+- MOTTO C17: "Pleci, si munca o reia altcineva."
+- PAYOFF: "Acum poti lipsi o saptamana, si munca are cine s-o reia."
 
 ## MANDAT
-CERERE SYSTEM · FREEZE SPEC C17
+MANDAT · SLUG + BLUEPRINT C17
 
-Ai voie sa modifici doar fisiere SYSTEM permise.
+Lucrezi exclusiv pe C17.
 
-Nu modifica:
-- c17/**
-- HTML-uri
-- Date_MASTER
-- build scripts
-- FILM
-- C18/C19/C20
-- nomenclatura LOCKED
+Nu genera HTML.
+Nu genera Date_MASTER.
+Nu genera build scripts.
+Nu genera FILM.
+Nu intra in C18.
+Nu modifica fisiere de sistem.
+Nu crea artefacte finale.
+Nu crea folder c17.
 
 Obiectiv:
-Consemneaza in sistem inghetarea SPEC C17 si marcheaza C17 pregatit pentru etapa urmatoare: SLUG + Blueprint.
+Pregateste SLUG + BLUEPRINT C17 pentru review BRAIN.
 
-Actualizeaza, dupa caz:
-- STARE-CURENTA.md
-- _system/14-ARHITECTURA-CONCEPTUALA-T5.md
-- _system/00-INDEX.md, doar daca indexul trebuie sa reflecte noua stare
+Output obligatoriu:
 
-Ruleaza:
-- audit_sync
-- verificare nomenclatura LOCKED neatinsa
-- verificare zero em-dash
-- verificare ca nu ai atins c17/**
-- verificare ca nu ai generat artefacte
+1. SLUG final propus
+- nume fisiere
+- nume folder
+- titlu intern
+- topbar label
+- hov-object
+- hero-title / hero-question
+- compatibilitate cu nomenclatura LOCKED
 
-## OUTPUT CERUT
-SYSTEM REPORT · C17 SPEC FREEZE
+2. BLUEPRINT C17
+- 6 etape
+- 18 pasi, 3 pasi per etapa
+- obiectivul fiecarei etape
+- ce se vede in Excel in fiecare etapa
+- ce se schimba in workbook
+- ce se dovedeste prin _SISTEM
 
-Include:
-- fisiere modificate
-- commit
-- verificari rulate
-- status final
+3. ARTEFACT _SISTEM
+Defineste concret structura foii _SISTEM:
+- blocuri
+- coloane
+- formule vii
+- named ranges
+- hyperlink-uri interne
+- zone SRC_
+- zone INPUT_
+- zone PARAM_
+- zone OBJ_
+- zona START AICI
+- zona punct de reluare
+- zona test anti-SOP
+- ce NU are voie sa contina
 
-Raspunde la final:
-C17_SPEC_FROZEN_READY_FOR_BLUEPRINT
+4. TESTE
+- test anti-SOP
+- test substitut
+- test anti-C18
+- test anti-C19
+- test anti-C20
+- test filmabilitate 8-12 minute
+
+5. CONTINUITATE
+- ce primeste din C16
+- ce preda la C18
+- unde se opreste inainte de automatizare
+- cum pastreaza granita fata de C19 si C20
+
+6. RISCURI
+- contaminare SOP
+- contaminare C18
+- contaminare C19
+- contaminare C20
+- contaminare T4
+- ecou C08 prin termenul "harta"
+- risc de generic
+- risc de film static
+
+7. VERDICT
+C17_BLUEPRINT_READY_FOR_REVIEW
 sau
-C17_SPEC_FREEZE_FAILED
+C17_BLUEPRINT_NEEDS_REVISION
+
+Scrie raportul doar in:
+_brain/c17/CLAUDE-TO-BRAIN.md
