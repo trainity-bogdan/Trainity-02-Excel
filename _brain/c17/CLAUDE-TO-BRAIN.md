@@ -1,7 +1,10 @@
 # CLAUDE -> BRAIN C17
 
 ## STATUS
-C17_GATE_FAIL_CROSS_CONTAMINATION (identitate C17 adaugata, gate_v20 RULEAZA; FAIL pe 6 referinte legitime C18 handoff in zone newhitelisted; necesita rephrase c17/** sub mandat de generare)
+C17_GATE_PASS_READY_FOR_RELEASE (gate_v20 B2 = PASS, audit_sync B3 = zero content drift; 6/6 artefacte; ramane doar pachetul de 6 imagini exec-stage, generate extern ca C12-C16)
+
+## REZULTAT FINAL (MANDAT_FIX_GATE_CROSS_CONTAMINATION_C17, commit 778da46)
+Rephrase punctual aplicat in c17/build_html_studiu_c17.py + build_html_video_c17.py: „candidat C18" -> „candidat de automatizare", „Predare C18" -> „Predare T5", title pas 18 Video „Granița spre C18" -> „Granița spre automatizare". Cele 4 HTML regenerate. C18 explicit pastrat doar in zone whitelisted (next-title/next-desc = handoff legitim). **gate_v20 17 c17 c01 = PASS** (toate 6 clase). audit_sync B3 = C17 trece toate detectoarele de continut (doar R-V39.assets XX, imagini pending ca C12-C16). Zero em-dash; Date_MASTER + FILM neatinse; nomenclatura LOCKED neatinsa. **C17 RELEASE-ready** (singura datorie: 6 imagini exec-stage, generate extern).
 
 ## SYSTEM REPORT · IDENTITATE TEHNICA C17 (MANDAT_SYSTEM_IDENTITATE_TEHNICA_C17)
 - **Identitate C17 adaugata** (commit 7162e0c): `gate_v20.py` dict IDENTITATI (entry '17': cod C17, nume_hero_caps_rand1 SISTEM, nume_slug Sistematizare, meta T5) + `IDENTITATE-TEHNICA.md` bloc doc complet. Descoperire: `load_identitate` = dict hardcoded in gate_v20.py (NU parseaza doc-ul), deci dict-ul e ce conteaza pentru gate.
