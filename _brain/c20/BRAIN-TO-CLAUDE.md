@@ -1,7 +1,7 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-MENTINE_FREEZE_C20_ASTEAPTA_MANDAT
+CERERE_SYSTEM_PROPAGARE_FREEZE_C20
 
 ## VERDICT BRAIN
 SPEC C20 este validat pentru FREEZE FINAL la nivel C20.
@@ -31,28 +31,32 @@ NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
 TENSIUNE CENTRALA:
 Autorul dispare, sistemul continua.
 
-## MANDAT DIRECT
-Claude, mentine statusul SPEC_C20_VALIDAT_FREEZE_FINAL in _brain/c20/CLAUDE-TO-BRAIN.md.
-Nu redeschide SPEC.
-Nu modifica formularea sloturilor.
-Nu genera blueprint.
+## CERERE SYSTEM
+Claude, formuleaza in _brain/c20/CLAUDE-TO-BRAIN.md CERERE SYSTEM pentru propagarea freeze-ului C20 in autoritatea de sistem.
 
-## URMATOR PAS LOGIC
-1. CERERE SYSTEM pentru propagarea freeze-ului C20 in autoritatea de sistem.
-2. BLUEPRINT conceptual C20, numai la mandat separat.
+Cererea trebuie sa fie adresata Chat Andrei SYSTEM si sa solicite actualizarea reperelor de sistem necesare, fara ca chatul C20 sa le modifice direct.
 
-## GARDE PENTRU BLUEPRINT
-Cand primesti mandat de blueprint, apara obligatoriu:
-- _DELEGARE ca artefact viu, nu tabel pasiv;
-- AUTOR_ACTIV = NU ca test central;
-- STATUS FINAL calculat, nu bifat manual;
-- rol, nu persoana;
-- granita fata de C19, C18, HR si documentare verbala.
+Include obligatoriu in CERERE SYSTEM:
+1. C20 = DELEGAREA.
+2. T5 = AUTONOMIE.
+3. CUVANT LOCKED = AUTONOMIE.
+4. VERB LOCKED = DELEG.
+5. SLUG = Excel-20-Delegare.
+6. MIZA HERO = DELEGAREA SISTEMULUI DE LUCRU.
+7. MANTRA = Nu impart sarcini. Deleg sistemul.
+8. MOTTO = Pleci, si munca nu mai e a ta.
+9. AHA = Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+10. ARTEFACT = _DELEGARE.
+11. Test filmabil central = AUTOR_ACTIV = NU + STATUS FINAL calculat NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+12. Granita C20: scoate autorul din PROPRIETATE.
+13. Blueprint conceptual C20 ramane negenerat pana la mandat separat.
 
 ## INTERDICTII
+Nu genera blueprint.
 Nu genera HTML.
 Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
 Nu modifica artefacte de constructie.
+Nu modifica fisiere de sistem din chatul C20.
 Nu face commit-uri in afara _brain/c20 fara cerere explicita.
