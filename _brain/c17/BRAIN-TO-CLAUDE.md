@@ -1,71 +1,77 @@
 # BRAIN -> CLAUDE C17
 
 ## STATUS
-MANDAT_SYSTEM_IDENTITATE_TEHNICA_C17
+MANDAT_FIX_GATE_CROSS_CONTAMINATION_C17
 
 ## CONTEXT
-C17 a fost generat complet si este pregatit pentru audit, dar gate_v20 B2 este blocat de lipsa identitatii tehnice C17 in fisier SYSTEM.
+C17 este generat complet, identitatea tehnica C17 a fost adaugata, iar gate_v20 ruleaza.
 Status curent verificat in _brain/c17/CLAUDE-TO-BRAIN.md:
-C17_GENERATED_READY_FOR_AUDIT.
+C17_GATE_FAIL_CROSS_CONTAMINATION.
 
-Raport Claude:
-- 6/6 artefacte C17 generate.
-- Date_MASTER-C17.xlsx generat si verificat.
-- _SISTEM generat si verificat.
-- 4 HTML generate.
-- FILM-Excel-17-Sistematizare.docx generat.
-- audit_sync B3 trece detectoarele de continut.
-- gate_v20 B2 este blocat deoarece lipseste identitatea tehnica C17 in _system/referinte/IDENTITATE-TEHNICA.md.
+Problema raportata:
+- gate_v20 pica pe 6 referinte legitime C18 in zone ne-whitelisted.
+- Problema nu este conceptuala, ci de formulare tehnica in artefactele C17.
+- Fixul cerut este punctual in c17/**.
+
+Referinte raportate de Claude:
+1. ba-val: "eticheta candidat C18"
+2. stage-tags: "Predare C18"
+3. Video JSON title: "Granita spre C18..."
 
 ## MANDAT
-CERERE SYSTEM · ADAUGA IDENTITATE TEHNICA C17
+Aplica fixul punctual pentru gate_v20 cross-contamination.
 
-Ai voie sa modifici doar fisiere SYSTEM permise.
+Ai voie sa lucrezi doar in:
+- c17/**
 
 Nu modifica:
-- c17/**
+- _system/**
+- STARE-CURENTA.md
+- CLAUDE.md
+- README.md
+- index.html
+- gate_v20.py
+- audit_sync.py
+- COMENZI.yaml
 - c18/**
 - c19/**
 - c20/**
-- HTML-uri
-- Date_MASTER
-- FILM
-- build scripts
 - nomenclatura LOCKED
 
-Obiectiv:
-Adauga blocul de identitate tehnica C17 in:
-_system/referinte/IDENTITATE-TEHNICA.md
+Fix obligatoriu:
 
-Date identitate C17:
-- constructie: C17
-- identitate: SISTEMATIZAREA
-- slug: Sistematizare
-- cuvant LOCKED: SISTEM
-- verb LOCKED: SISTEMATIZEZ
-- treapta: T5
-- treapta nume: AUTONOMIE
-- rol T5: scoate autorul din OCAZIE
-- artefact central: _SISTEM
+1. In c17/build_html_studiu_c17.py:
+- "candidat C18" -> "candidat de automatizare"
+- "Predare C18" -> "Predare T5" sau "Handoff"
 
-Dupa modificare ruleaza:
-- gate_v20 17 c17 c01
-- audit_sync daca este aplicabil
-- verificare nomenclatura LOCKED neatinsa
-- verificare zero em-dash
-- verificare ca nu ai modificat c17/**
+2. In c17/build_html_video_c17.py:
+- titlul pasului 18 fara "C18"
+- recomandat: "Granita spre automatizare"
+
+3. Pastreaza referintele C18 doar in zone whitelisted, unde sunt necesare pentru handoff.
+
+Dupa fix:
+- regenereaza cele 4 HTML-uri;
+- ruleaza gate_v20 17 c17 c01;
+- ruleaza audit_sync;
+- verifica zero em-dash;
+- verifica nomenclatura LOCKED neatinsa;
+- verifica fara drift de continut;
+- verifica granite C18/C19/C20;
+- verifica ca Date_MASTER si FILM nu au fost modificate decat daca este strict necesar.
 
 ## OUTPUT CERUT
-SYSTEM REPORT · IDENTITATE TEHNICA C17
+CLAUDE -> BRAIN
 
 Include:
-- fisiere modificate
-- commit
-- verificari rulate
-- status gate_v20
-- status final
+- fisiere modificate;
+- commit;
+- rezultat gate_v20;
+- rezultat audit_sync;
+- riscuri ramase;
+- status final.
 
 Raspunde la final:
-C17_READY_FOR_FINAL_AUDIT
+C17_GATE_PASS_READY_FOR_RELEASE
 sau
-C17_SYSTEM_IDENTITY_FAILED
+C17_GATE_FIX_FAILED
