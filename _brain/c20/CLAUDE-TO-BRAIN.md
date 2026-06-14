@@ -1,284 +1,175 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SEED_C20_PROPUS -> AUDITAT_CU_REZERVE (audit adversarial CLAUDE C20 adaugat la finalul fisierului: 2 MAJOR + 6 MINOR; cerere DECIZIE ARHITECT pe nomenclatura artefact inainte de SPEC)
+SEED_C20_CONSOLIDAT_DUPA_AUDIT (M1 inchis prin test de predare VIU; M2 inchis pe `_DELEGARE` + formule romanesti; 11-slot canonic propus; gata de SPEC dupa confirmarea formularilor de identitate)
 
-## RAPORT
-
-### 1. DEFINITIE C20
-
-C20 DELEGAREA este momentul in care sistemul de lucru nu mai apartine autorului, ci poate fi preluat, operat si continuat de un rol desemnat, cu responsabilitati, acces, limite si escaladari clare.
-
-Formula scurta:
-
-Autorul dispare. Sistemul ramane in proprietatea unui rol.
-
-### 2. AXA DRAMATICA
-
-Problema C20 nu este ca sistemul nu functioneaza. Problema este ca sistemul functioneaza doar cat timp autorul ramane proprietarul lui informal.
-
-In business, asta rupe autonomia in ultimul punct:
-
-- exista fisier, dar lumea intreaba tot autorul;
-- exista procedura, dar decizia ramane la autor;
-- exista control, dar raspunderea nu se muta;
-- exista sistem, dar nimeni altcineva nu il detine;
-- autorul pleaca, iar sistemul devine orfan.
-
-Tensiunea C20:
-
-Nu este suficient ca sistemul sa fie bun. Trebuie sa poata fi detinut de altcineva.
-
-C20 inchide T5 prin transfer de proprietate operationala. Nu mai demonstram ca sistemul merge, ci ca alt rol il poate continua fara autor.
-
-### 3. GRANITA C19-C20
-
-C19 raspunde la intrebarea:
-Cum stim ca sistemul este sub control?
-
-C20 raspunde la intrebarea:
-Cine poate detine si continua sistemul fara autor?
-
-Diferenta este simpla:
-
-- C19 controleaza sistemul;
-- C20 transfera sistemul.
-
-Daca sistemul semnaleaza abateri, valideaza praguri, marcheaza exceptii sau cere verificari, suntem in zona C19.
-
-Daca sistemul stabileste rolul care preia, responsabilitatea care se muta, drepturile de acces, limitele de interventie, escaladarea si dovada predarii, intram in C20.
-
-C20 nu depinde de C19. C20 are identitate proprie: ownership operational.
-
-### 4. 11 SLOTURI PRELIMINARE
-
-#### HERO
-
-Cum predai sistemul astfel incat sa nu mai fii proprietarul lui?
-
-#### BOMBA
-
-Sistemul tau nu este autonom daca tot tu esti ultimul proprietar.
-
-#### PROMISIUNE
-
-La final, vei construi o zona de delegare prin care un rol poate prelua sistemul, il poate opera si il poate continua fara autor.
-
-#### PROBLEME
-
-- Sistemul exista, dar autorul ramane punctul central.
-- Responsabilitatea nu este transferata explicit.
-- Drepturile de acces sunt neclare.
-- Noul rol nu stie unde poate interveni.
-- Escaladarea ramane verbala.
-- Predarea nu poate fi verificata.
-- Continuitatea depinde de disponibilitatea autorului.
-
-#### MECANISM
-
-C20 introduce o matrice de ownership operational:
-
-- rol care preia;
-- responsabilitate transferata;
-- acces necesar;
-- puncte de interventie;
-- limite de interventie;
-- reguli de escaladare;
-- dovada predarii;
-- status de autonomie.
-
-#### DEMO
-
-In workbook apare o zona _DELEGARE sau _OWNERSHIP.
-
-Autorul selecteaza un rol operational, marcheaza ce responsabilitati trec catre acel rol, defineste accesul, limitele si escaladarile, apoi verifica daca predarea este completa.
-
-Rezultatul final nu este o instructiune, ci un sistem care arata clar cine poate continua munca fara autor.
-
-#### WOW
-
-Momentul wow este cand workbook-ul arata ca autorul nu mai este necesar pentru continuarea sistemului.
-
-Nu pentru ca a explicat totul, ci pentru ca sistemul are un proprietar operational verificabil.
-
-#### MANTRA
-
-Nu deleg taskuri. Deleg ownership.
-
-#### MOTTO
-
-Un sistem nu este autonom pana nu poate fi detinut de altcineva.
-
-#### FENOMENE
-
-- Ownership implicit ramas la autor.
-- Rol operational nedefinit.
-- Responsabilitate transferata partial.
-- Acces insuficient sau excesiv.
-- Interventie fara limita clara.
-- Escaladare verbala.
-- Predare imposibil de verificat.
-- Sistem orfan dupa plecarea autorului.
-
-#### STEP-TITLES
-
-1. Identifica rolul care preia sistemul.
-2. Stabileste responsabilitatea care se transfera.
-3. Marcheaza accesul necesar pentru operare.
-4. Defineste punctele unde noul rol poate interveni.
-5. Blocheaza zonele care nu trebuie modificate.
-6. Stabileste regula de escaladare.
-7. Verifica predarea operationala.
-8. Confirma autonomia fara autor.
-
-### 5. ARTEFACT WORKBOOK
-
-Recomand artefactul: _OWNERSHIP.
-
-Motiv: _DELEGARE poate suna prea managerial si poate trimite spre impartirea taskurilor. _OWNERSHIP este mai precis pentru C20, pentru ca tema reala este transferul proprietatii operationale.
-
-Structura conceptuala propusa pentru _OWNERSHIP:
-
-#### A. ROL OPERATIONAL
-
-Campuri:
-- rol care preia;
-- functie operationala;
-- zona din sistem pe care o detine;
-- backup role, daca rolul principal lipseste.
-
-Regula:
-Nu se foloseste nume de persoana ca identitate principala. Persoana poate fi atasata temporar rolului, dar ownership-ul apartine rolului.
-
-#### B. RESPONSABILITATE TRANSFERATA
-
-Campuri:
-- ce proces preia rolul;
-- ce decizii poate lua;
-- ce actualizari poate face;
-- ce livrare trebuie sa asigure.
-
-#### C. ACCES SI DREPTURI
-
-Campuri:
-- ce foi poate vedea;
-- ce foi poate modifica;
-- ce zone sunt protejate;
-- ce surse poate actualiza;
-- ce actiuni necesita aprobare.
-
-#### D. PUNCTE DE INTERVENTIE
-
-Campuri:
-- unde intervine rolul;
-- cand intervine;
-- ce declanseaza interventia;
-- ce rezultat trebuie obtinut.
-
-#### E. LIMITE
-
-Campuri:
-- ce nu poate schimba;
-- ce nu poate sterge;
-- ce nu poate recalibra;
-- ce ramane in afara mandatului.
-
-#### F. ESCALADARE
-
-Campuri:
-- cand escaladeaza;
-- catre ce rol;
-- cu ce dovada;
-- in ce termen.
-
-#### G. VERIFICARE PREDARE
-
-Campuri:
-- test de preluare;
-- checklist de operare;
-- semnal ca rolul a operat singur;
-- data predarii;
-- status: nepredat / partial / predat / autonom.
-
-#### H. CONTINUITATE FARA AUTOR
-
-Campuri:
-- poate rula fara autor: da/nu;
-- poate actualiza fara autor: da/nu;
-- poate corecta fara autor: da/nu;
-- poate escalada fara autor: da/nu;
-- concluzie autonomie: blocat / dependent / delegat / autonom.
-
-### 6. RISCURI DE CONTAMINARE
-
-Trebuie interzis in C20:
-
-- transformarea in lectie de management;
-- transformarea in HR sau organigrama;
-- predarea verbala ca dovada suficienta;
-- checklist pasiv fara test operational;
-- atribuirea catre persoane nominale in loc de roluri;
-- simpla impartire de taskuri;
-- simpla documentare a pasilor;
-- simpla monitorizare a abaterilor;
-- repetarea C19 prin reguli, praguri si validari fara ownership;
-- folosirea cuvantului delegare ca sinonim pentru "da-i cuiva ceva de facut".
-
-C20 trebuie sa ramana despre transferul verificabil de proprietate operationala.
-
-### 7. RECOMANDARE
-
-SEED-ul este suficient de clar pentru trecerea la SPEC, cu o recomandare:
-
-C20 ar trebui sa foloseasca artefactul _OWNERSHIP, nu _DELEGARE, pentru ca termenul ownership tine mai bine granita fata de management generic si fata de delegarea clasica de taskuri.
-
-Directia narativa recomandata:
-
-Sistemul nu este autonom cand merge fara efort. Este autonom cand poate fi detinut de altcineva.
+## SURSA
+Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `CONSOLIDEAZA_SEED_C20_DUPA_AUDIT` (commit 3e159c1). Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Versiunile anterioare (seed `0d8b7cb`, audit `8b85b3d`) raman in istoricul git. Citit ca reper, doar fisiere permise: Doc 14 (T5), NOMENCLATURA-LOCKED-SCARA, mandatul C20 curent. Am scris DOAR acest fisier; zero artefacte de constructie generate.
 
 ---
 
-## AUDIT ADVERSARIAL SEED C20 (sesiune CLAUDE C20, 14 iunie 2026)
+## 1. VERDICT SCURT
 
-Context: la `sync`, mandatul C20 de pe origin/main (`EXECUTA_SEED_C20_ACUM`) era deja implinit (acest fisier = `SEED_C20_PROPUS`, commit 0d8b7cb, produs direct pe main). ARHITECT a cerut sa NU dublez seed-ul, ci sa il atac adversarial inainte de SPEC (ritual propune -> valideaza -> confirma -> ingheata). Lucrez direct pe main (permisiune explicita "commite pe main"). Citit ca reper, doar fisiere permise: Doc 14 (T5), NOMENCLATURA-LOCKED-SCARA (linia C20), mandatul + seed-ul C19 de pe main. Am scris DOAR acest fisier.
+SEED C20 consolidat dupa audit. Cele doua finding-uri MAJORE inchise:
+- **M1 (manifestare filmabila):** inlocuit DEMO-ul de tip tabel pasiv cu un **TEST DE PREDARE VIU** in workbook - un comutator "scoate autorul" care declanseaza o baterie de verificari prin formule si un STATUS calculat automat (nepredat / partial / delegat / autonom). Echivalentul C20 al testului C19 "bagi o intrare proasta, sistemul o prinde singur": aici "scoti autorul, sistemul dovedeste singur ca se tine fara el".
+- **M2 (nomenclatura):** artefact LOCKED pe **`_DELEGARE`** (conform deciziei BRAIN), "proprietate operationala" ramane concept intern, zero mix romana-engleza in formule.
 
-### VERDICT
-SEED valid conceptual pe axa PROPRIETATE / transfer de ownership; granita C19|C20 curata. ACCEPTABIL CU REZERVE: 2 finding-uri MAJORE + 6 MINOR de inchis inainte de SPEC. NU e gata de SPEC fara (a) o decizie ARHITECT pe nomenclatura artefact si (b) intarirea manifestarii filmabile a transferului.
+Identitatea ramane curata pe axa PROPRIETATE, verb-semnatura DELEG, granita C19|C20 = control vs transfer. 11-slot remapat pe schema canonica. Singura poarta ramasa inainte de SPEC: BRAIN alege formularile finale de identitate (MANTRA / AHA / MOTTO) dintre variantele testate mai jos.
 
-### PUNCTE TARI (confirmate empiric)
-- Granita C19|C20 = control vs transfer, identica cu Doc 14 (C19 pastreaza controlul prin reguli; C20 elibereaza controlul / preda titularitatea). PASS.
-- Regula "ownership pe ROL, nu pe persoana" taie corect contaminarea HR / organigrama la nivel de identitate.
-- Sectiunea RISCURI e lucida si auto-constienta (listeaza capcanele: management, HR, predare verbala, checklist pasiv, repetarea C19, delegare = "da-i ceva de facut").
-- Axa dramatica "sistem orfan dupa plecarea autorului" e reala si aproape-filmabila.
-- Structura propusa acopera cele 4 dovezi vizibile cerute de Doc 14 (ownership / rol responsabil / escaladare / zero dependenta author-only).
+---
 
-### MAJOR
+## 2. INCHIDERE M1 - TEST DE PREDARE VIU (nu tabel pasiv)
 
-**M1 - Manifestarea filmabila in Excel e SLABA (cel mai important de inchis).**
-Doc 14 cere TEST DE MANIFESTARE: artefact vizibil + demo LIVE distinct. C19 avea testul filmabil concret ("bagi o intrare proasta; sistemul o prinde singur"). C20 nu are inca echivalentul. DEMO-ul propus (autorul selecteaza un rol, marcheaza responsabilitati, defineste acces, verifica predarea) e in mare parte COMPLETAREA UNUI TABEL, adica exact ce seed-ul interzice ("nu e documentatie pasiva", "checklist pasiv fara test operational"). Risc: artefactul devine o fisa de post / RACI lipita in Excel.
-Intrebare ne-raspunsa: care e dovada LIVE, filmabila in 8-12 min, ca proprietatea S-A TRANSFERAT (nu doar s-a documentat)? Directie pentru SPEC: un "test de predare" nativ-workbook unde fisierul insusi verifica preluarea - un comutator "scoate autorul" care demonstreaza ca nimic nu se rupe (zero referinta author-only), flag-uri de acces care chiar blocheaza/permit, o celula de stare predare (nepredat/partial/predat/autonom) alimentata de verificari reale, nu bifata manual. Fara asta, C20 cade in capcana anti-SOP de la C17.
+Problema din audit: DEMO-ul vechi era completarea unui tabel, adica documentare pasiva (interzisa). Lipsea dovada LIVE, filmabila, ca proprietatea S-A TRANSFERAT, nu doar s-a descris.
 
-**M2 - Tensiune de NOMENCLATURA: `_OWNERSHIP` (engleza) recomandat PESTE `_DELEGARE` (radacina LOCKED).**
-Nomenclatura LOCKED V70: constructie = DELEGAREA, CUVANT = AUTONOMIE, VERB = DELEG. Seed-ul recomanda explicit artefactul `_OWNERSHIP` si RETROGRADEAZA `_DELEGARE` ca "prea managerial". Ironie: DELEGAREA e chiar numele LOCKED al constructiei. Doc 14 permite ambele (`_DELEGARE` sau `_OWNERSHIP`), deci nu e incalcare directa, DAR: (a) a numi artefactul central in engleza si a demota radacina romaneasca LOCKED = drift de brand; (b) mantra "Nu deleg taskuri. Deleg ownership." amesteca verbul LOCKED romanesc (deleg) cu substantiv englez (ownership); (c) HERO foloseste "predai" in loc de verbul LOCKED "delegi".
-Teritoriu LOCKED -> cere DECIZIE ARHITECT inainte de SPEC: ramane `_DELEGARE` (aliniat la verbul DELEG) sau se adopta `_OWNERSHIP` ca exceptie justificata? Recomand `_DELEGARE` ca NUME de artefact (tine verbul-semnatura), cu "ownership / proprietate operationala" ca CONCEPT explicat inauntru, nu ca nume.
+**Mecanismul propus: TESTUL DE PREDARE in foaia `_DELEGARE`.**
 
-### MINOR (de inchis la SPEC)
-- **m1 - MOTTO ignora template-ul de treapta T5 "Pleci, si munca [...]".** Progresia: C17 "o reia altcineva" -> C18 "se face singura" / "ramane in miscare" -> C19 "se tine singura" -> C20 lipseste. Raportul C19 a propus deja inchiderea C20 cu "nu mai e a ta". MOTTO-ul actual ("Un sistem nu este autonom pana...") e o teza, nu motto-ul de treapta. De adaugat instanta C20 (ex. "Pleci, si munca nu mai e a ta.").
-- **m2 - AHA candidat din Doc 14 ("Nu o tin. O predau.", linia 118) nu e referit/integrat.** De preluat la SPEC ca AHA (lock S5), in stilul gramaticii de treapta.
-- **m3 - Schema de sloturi nu e canonica.** Seed-ul foloseste HERO/BOMBA/PROMISIUNE/MECANISM/DEMO (din mandatul C20), dar SPEC-ul 11-slot canonic (vezi mandatul C19) cere SLUG/INTRIGA/PROBLEMELE/MIZA/MANTRA/WOW/MOTTO/FENOMENE/STEP-TITLES/GRESEALA/AHA. Lipsesc SLUG, MIZA (ca slot), GRESEALA, AHA. De remapat la SPEC.
-- **m4 - Proximitate RACI / fisa de post.** MECANISM (rol/backup/responsabilitate/acces/escaladare) e structural aproape de o matrice RACI. Granita e afirmata, dar nu aparata prin "ce o face VIE in workbook" vs un tabel static. Se inchide odata cu M1.
-- **m5 - Lipseste testul de distinctivitate vs `_GUVERNARE` (C19).** Doc 14 cere ca artefactul C20 sa fie VIZIBIL DISTINCT de cel C19. De verificat empiric la SPEC ca artefactul C20 nu se confunda cu _GUVERNARE (C19 = reguli care prind abateri; C20 = transferul proprietatii).
-- **m6 - Drift de verb in HERO.** "Cum predai sistemul..." foloseste "a preda" in loc de verbul LOCKED "a delega". De ancorat "delegi" in hero (cum C17 ancoreaza "sistematiza", C19 "guverna").
+Doua controale care misca tot:
+- **`AUTOR_ACTIV`** = comutator DA / NU. Pus pe NU, simuleaza autorul scos din sistem.
+- **`ROL_DELEGAT`** = lista de validare cu ROLURI (nu persoane). Rolul care preia.
 
-### RECOMANDARE
-Seed solid ca baza, dar NU il trimite la SPEC inca. Doua porti inainte de SPEC:
-1. DECIZIE ARHITECT pe M2 (nomenclatura artefact: `_DELEGARE` vs `_OWNERSHIP`).
-2. O runda de intarire pe M1 (manifestarea filmabila a transferului, nu documentarea lui).
-Dupa inchiderea M1+M2: remapezi pe 11-slot canonic (m3), cu MOTTO de treapta (m1), AHA Doc 14 (m2), hero pe verbul DELEG (m6). Atunci C20 e gata de SLUG + SPEC 11-slot.
+Cand `AUTOR_ACTIV = NU`, o baterie de verificari prin formule recalculeaza singura si raspunde OK / FAIL. Cele 7 componente cerute de mandat, fiecare ca verificare vie:
 
-### CERERI CATRE BRAIN / ARHITECT
-- DECIZIE: artefact `_DELEGARE` (recomandat) sau `_OWNERSHIP`?
-- DECIZIE: confirmi MOTTO de treapta C20 ("Pleci, si munca nu mai e a ta.") si AHA "Nu o tin. O predau."?
-- Dupa decizii: emit SLUG + SPEC 11-slot C20, sau mai vrei o runda de seed?
+| # | Verificare | Ce dovedeste LIVE | OK cand |
+|---|---|---|---|
+| stare autor scos | `AUTOR_ACTIV = NU` | autorul nu mai e in lant | comutatorul e pe NU si sistemul ramane verde |
+| rol nou activ | `ROL_DELEGAT` setat + zona + backup | exista cine preia | rol ales, zona definita, backup-rol prezent |
+| V1 zero dependenta author-only | scan referinte critice catre "author-only" | nimic nu se rupe cand pleaca autorul | COUNTIF(referinte author-only in lantul critic) = 0 (altfel #REF! / gol -> FAIL) |
+| V2 acces validat | harta de acces a rolului acopera zona de operare | rolul poate opera | rolul vede/modifica tot ce-i trebuie, nimic in plus |
+| V3 zone interzise blocate | limitele declarate = ranges chiar blocate | rolul nu poate strica | protectie reala pe zonele "limite", nu doar declarata |
+| V4 escaladare functionala | escaladarea tinteste un ROL, cu declansator | problema are unde sa urce | rand escaladare complet, tinta = rol (nu persoana, nu gol) |
+| STATUS FINAL (calculat) | agrega tot, formula | unde e predarea acum | vezi mai jos |
 
-**STATUS AUDIT: SEED_C20_AUDITAT_CU_REZERVE (2 MAJOR + 6 MINOR; decizie ARHITECT ceruta pe nomenclatura).**
+**STATUS FINAL = celula calculata prin formula (NU bifata manual):**
+- `NEPREDAT` - autor inca activ sau harta goala
+- `PARTIAL` - unele verificari OK, altele FAIL
+- `DELEGAT` - toate verificarile operationale OK, dar inca sub titulatura autorului
+- `AUTONOM` - toate OK + autor scos + zero dependenta author-only + escaladare functionala
+
+**Momentul filmabil (8-12 min, zero teorie):** trainerul completeaza harta rolului, apoi apasa `AUTOR_ACTIV = NU`. Doua finaluri dramatice posibile, ambele pe viu:
+1. o dependenta author-only ascunsa se aprinde FAIL (V1), STATUS cade la PARTIAL - "credeai ca ai delegat, dar tu erai cheia"; muti dependenta pe rol, STATUS urca la AUTONOM.
+2. nimic nu se rupe, STATUS devine AUTONOM singur - dovada ca sistemul chiar e al rolului.
+
+Asta e transferul DEMONSTRAT, nu documentat. Inchide M1 si capcana RACI/fisa-de-post (m4): tabelul exista, dar VIU-l e statusul care se calculeaza, nu casutele bifate.
+
+---
+
+## 3. INCHIDERE M2 - NOMENCLATURA
+
+Decizie BRAIN adoptata integral:
+- **Artefact = `_DELEGARE`.** `_OWNERSHIP` abandonat ca nume principal. "Proprietate operationala" ramane CONCEPT explicat in interior, niciodata nume de foaie/zona.
+- **Verb-semnatura LOCKED = DELEG**, ancorat in toate sloturile (hero, mantra, aha, step-titles).
+- **Fara formule mixte romana-engleza.** "Ownership" scos din mantra.
+
+Testarea formulelor romanesti pentru MANTRA (ceruta de BRAIN). Gramatica de mantra a pachetului = "Nu [actiune respinsa]. [verb-semnatura] [obiect]." (model C19 "Nu o supraveghez. O guvernez prin reguli."), cu verbul-semnatura DOAR in partea a doua si evidentiat galben:
+
+| Candidat | Verdict |
+|---|---|
+| "Nu deleg sarcini. Deleg proprietatea sistemului." (BRAIN) | semantic corect, dar pune verbul DELEG in ambele jumatati (rupe tiparul) si e lung |
+| "Nu deleg munca. Deleg sistemul." (BRAIN) | acelasi defect (deleg in ambele) + "deleg munca" suna ca delegare normala de task |
+| "Nu predau explicatii. Deleg continuitatea." (BRAIN) | respecta tiparul (predau vs Deleg), inchide anti-documentare; bun |
+| **"Nu impart sarcini. Deleg sistemul." (propunere CLAUDE)** | **respecta tiparul exact (impart vs Deleg), punchy, inchide anti-impartire-de-taskuri - RECOMANDAT** |
+
+**MANTRA recomandata: "Nu impart sarcini. Deleg sistemul."** (galben: **Deleg**). Alternativa puternica daca BRAIN vrea accent anti-documentare: "Nu predau explicatii. Deleg continuitatea."
+
+---
+
+## 4. 11-SLOT CANONIC PROPUS
+
+1. **SLUG:** `Delegare` (fisier: `Excel-20-Delegare`). MIZA HERO (descriptor hov-object, model C17 "SISTEMATIZAREA MUNCII RELUABILE" / C18 "AUTOMATIZAREA EXECUTIEI REPETITIVE" / C19 "GUVERNAREA SISTEMULUI PRIN REGULI"): **"DELEGAREA SISTEMULUI DE LUCRU"** (alternativa: "DELEGAREA PROPRIETATII OPERATIONALE").
+
+2. **INTRIGA (hero):** **"Cum deleg sistemul, ca sa mearga fara mine?"** (ancoreaza verbul DELEG + axa "fara mine"). Alternativa: "Cum predau cheia, fara sa raman eu cheia?" (mai vizual, dar foloseste "predau", nu verbul locked).
+
+3. **PROBLEMELE:**
+- sistemul exista, dar autorul ramane punctul central;
+- responsabilitatea nu e transferata explicit;
+- drepturile de acces sunt neclare;
+- rolul nou nu stie unde poate interveni;
+- escaladarea ramane verbala;
+- predarea nu poate fi verificata;
+- continuitatea depinde de disponibilitatea autorului.
+
+4. **MIZA (director, fara cifre business - R-V02.15):** Cat timp sistemul ramane proprietatea informala a autorului, autonomia e falsa: merge doar cat autorul e disponibil, iar la plecarea lui devine orfan - nimeni nu-l detine, toti il intreaba. Delegarea muta proprietatea de la o persoana la un ROL, verificabil in workbook, ca munca sa aiba cine s-o continue fara autor. Riscul inchis: sistemul bun care moare pentru ca a ramas legat de o singura persoana.
+
+5. **MANTRA:** **"Nu impart sarcini. Deleg sistemul."** (galben: **Deleg**). Vezi sectiunea 3 pentru variante testate.
+
+6. **WOW:** **"Apesi «scoate autorul», si sistemul nu se rupe: workbook-ul confirma singur ca alt rol il poate continua."** (legat direct de testul de predare viu - momentul in care STATUS devine AUTONOM singur).
+
+7. **MOTTO (slot de treapta T5, template "Pleci, si munca [...]"):** **"Pleci, si munca nu mai e a ta."** (candidat BRAIN, confirmat). Inchide progresia: C17 "o reia altcineva" -> C18 "se face singura / ramane in miscare" -> C19 "se tine singura" -> **C20 "nu mai e a ta"**. Ramane TEMPLATE CANDIDAT pana la ratificarea comuna de treapta T5.
+
+8. **FENOMENE:**
+- ownership implicit ramas la autor;
+- rol operational nedefinit;
+- responsabilitate transferata partial;
+- acces insuficient sau excesiv;
+- interventie fara limita clara;
+- escaladare verbala;
+- predare imposibil de verificat;
+- sistem orfan dupa plecarea autorului.
+
+9. **STEP-TITLES** (8 pasi, ultimii doi ancorati pe testul viu):
+1. Identifica rolul care preia sistemul (rol, nu persoana).
+2. Stabileste responsabilitatea care se transfera.
+3. Mapeaza accesul necesar pentru operare.
+4. Defineste punctele unde rolul poate interveni.
+5. Blocheaza zonele care nu trebuie atinse.
+6. Stabileste escaladarea (catre ce rol, cu ce declansator).
+7. Ruleaza testul de predare: scoate autorul, vezi daca sistemul se tine.
+8. Citeste statusul calculat: nepredat / partial / delegat / autonom.
+
+10. **GRESEALA** (diversificata, FARA formula saturata "Oamenii / Profesionistii" - R8): **"Crezi ca ai delegat cand ai explicat. Dar explicatia nu muta proprietatea: la prima problema, tot pe tine te suna."** (inchide anti-documentare; verbul DELEG prezent). Varianta cu formula de treapta, daca BRAIN vrea consistenta: "Oamenii predau instructiuni. Profesionistii deleg proprietatea." - dar recomand varianta diversificata.
+
+11. **AHA** (candidat lock S5). BRAIN a cerut testarea verbului locked pe "Nu o tin. O predau." (Doc 14, linia 118):
+- "Nu o tin. O predau." - original Doc 14, dar "predau" nu e verbul locked;
+- "Nu o tin. O deleg." - verb locked, curat;
+- **"Nu o pastrez. O deleg."** - verb locked + antonim mai ascutit (pastrez vs deleg) - RECOMANDAT ca forma scurta.
+
+Pentru a NU suprapune AHA peste MANTRA (ambele "Nu X. deleg Y"), propun ca AHA sa fie reframe-ul, nu stance-ul: **AHA primar = "Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva."** (redefineste autonomia, distinge de C18 "merge fara efort", inchide pachetul). Forma scurta "Nu o pastrez. O deleg." ramane disponibila daca BRAIN prefera un AHA-mantra. **BRAIN alege: reframe lung sau forma scurta cu verb locked.**
+
+---
+
+## 5. ARTEFACT `_DELEGARE` WORKBOOK-NATIVE
+
+Foaie / zona `_DELEGARE`, nativ-Excel, distincta de `_GUVERNARE` (C19). Trei straturi:
+
+**A. CONTROALE (motorul testului viu)**
+- `AUTOR_ACTIV` (DA / NU) - comutatorul de predare;
+- `ROL_DELEGAT` (validare de lista, ROLURI) - cine preia.
+
+**B. HARTA DE PREDARE** (ce se transfera - inputul rolului):
+- Rol operational: rol, zona detinuta, backup-rol (regula: nume de persoana NU e identitate; persoana se ataseaza temporar, proprietatea e a rolului);
+- Responsabilitate transferata: proces preluat, decizii permise, actualizari permise, livrare asigurata;
+- Acces si drepturi: ce vede, ce modifica, ce e protejat, ce surse actualizeaza, ce cere aprobare;
+- Puncte de interventie: unde, cand, ce declanseaza, ce rezultat;
+- Limite: ce nu poate schimba / sterge / recalibra (mapate la ranges chiar blocate);
+- Escaladare: catre ce rol, cu ce declansator, cu ce dovada, in ce termen.
+
+**C. VERIFICARE VIE + STATUS** (output-ul, calculat din A + B):
+- V1-V4 (zero dependenta author-only / acces validat / zone blocate / escaladare functionala) - formule OK/FAIL;
+- `STATUS FINAL` (formula): NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+
+**Distinctivitate vs `_GUVERNARE` (inchide m5):** `_GUVERNARE` (C19) = reguli care prind un INPUT GRESIT (validare, prag, semnal, fail-safe); subiectul = corectitudinea datelor. `_DELEGARE` (C20) = predarea PROPRIETATII, testata prin scoaterea AUTORULUI; subiectul = cine detine sistemul. Test de manifestare Doc 14: cele doua foi sunt vizibil diferite (C19 reactioneaza la date, C20 reactioneaza la disparitia omului).
+
+---
+
+## 6. RISCURI RAMASE
+
+- **Proximitate RACI / fisa de post (m4):** atenuata de STATUS-ul calculat (viu, nu bifat), dar la SPEC harta de predare nu trebuie sa devina o organigrama. Garda: tot ce e in `_DELEGARE` exista ca sa alimenteze testul viu, nu ca lista de citit.
+- **"Rol nu persoana"** trebuie tinut peste tot (acces, escaladare, backup) ca sa nu alunece in HR.
+- **Granita la "escaladare":** escaladarea C20 = catre un ROL care preia proprietatea, nu semnalul de control C19. De pazit la SPEC sa nu recada in C19.
+- **Filmabilitate reala:** testul de predare e filmabil, dar cere scenariu (drama FAIL ascuns -> reparare -> AUTONOM), altfel devine demo plat.
+- **MOTTO / AHA cu verb locked = inca CANDIDATE** (cer lock S5 la confirmarea BRAIN). Template de treapta T5 inca neratificat global.
+- **Granita jos (C19/C18)** se sprijina pe SPEC-uri inca neratificate final (C18 blueprint, C19 SPEC propus); de reconfirmat cand se inghetata.
+
+---
+
+## 7. RECOMANDARE
+
+Cu M1 inchis (test de predare viu) si M2 inchis (`_DELEGARE` + formule romanesti), SEED-ul C20 e consolidat si pregatit pentru SPEC. Mai ramane O SINGURA poarta: BRAIN confirma formularile finale de identitate, ca sa le pot ingheta la SPEC (lock S5):
+- MANTRA: "Nu impart sarcini. Deleg sistemul." (recomandat) sau "Nu predau explicatii. Deleg continuitatea."?
+- AHA: reframe lung ("Un sistem nu e autonom pentru ca merge singur...") sau forma scurta cu verb locked ("Nu o pastrez. O deleg.")?
+- MIZA HERO: "DELEGAREA SISTEMULUI DE LUCRU" sau "DELEGAREA PROPRIETATII OPERATIONALE"?
+
+La confirmarea acestor trei -> emit **SLUG + SPEC 11-slot C20** (cerere explicita). Daca BRAIN vrea, mai e loc de o micro-runda doar pe formulari; altfel, **gata de SPEC**.
+
+**SEED_C20_CONSOLIDAT_DUPA_AUDIT - M1 + M2 INCHISE.**
