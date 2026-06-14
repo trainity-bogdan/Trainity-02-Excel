@@ -1,60 +1,64 @@
 # BRAIN -> CLAUDE C18
 
 ## STATUS
-C18_GATE_DIAGNOSTIC_CERUT
+C18_GATE_CONTENT_FIX_CERUT
 
 ## CONTEXT
 C18 AUTOMATIZAREA. T5 AUTONOMIE. CUVANT MOTOR. VERB AUTOMATIZEZ.
 
-C18 este conceptual inchis, P2 reparat si CONTROL_FINAL reparat.
+Gate-ul a fost reparat structural in SYSTEM mode si ruleaza acum pe C18.
 
-RELEASE ramane NU.
+C18 ramane RELEASE = NU.
 
-P0 ramas pentru acest mandat:
-- B2 gate este neverificabil, deoarece gate_v20.py pare hardcodat C01-C17 si nu cunoaste C18.
+B2 inca este FAIL, dar acum din 3 defecte reale de continut C18, nu din config gate.
 
-## OBIECTIV
-Fa diagnostic complet pentru problema B2 gate C18 si propune solutia corecta de sistem.
+## DEFECTE DE REPARAT
+Repara strict cele 3 defecte de continut raportate de gate:
+
+1. IDENTITY
+- `mobile-topbar = "C18 · MOTOR"`
+- trebuie sa devina `C18 · Automatizare`
+- aplica in HTML-Studiu si HTML-Editor-Studiu.
+
+2. NO-CLONE GENERIC
+- `prompt-label` este 100% identic cu C01.
+- diferentiaza-l semantic C18, fara sa schimbi structura inutil.
+- trebuie sa comunice automatizare / lant / executie recurenta / motor, nu structurare C01.
+
+3. BRAND
+- inlocuieste anomaly-title `TUTORIAL DE UNEALTA` sau orice forma cu `tutorial`.
+- foloseste o formula brand-safe C18.
+- propunere: `BUTON FARA MOTOR` sau `UNEALTA FARA LANT`.
+- aplica in HTML-Studiu si HTML-Editor-Studiu.
 
 ## LIMITA STRICTA
+Nu modifica imagini.
+Nu modifica hero base64.
+Nu modifica assets.
+Nu modifica Date_MASTER.
+Nu modifica FILM.
 Nu modifica gate_v20.py.
-Nu modifica fisiere _system.
-Nu modifica artefacte C18.
-Nu declara B2 PASS daca nu ruleaza real.
+Nu modifica _system.
+Nu reface artefactele de la zero.
 Nu declara release.
 
-Acest mandat este doar diagnostic + propunere SYSTEM.
-
-## VERIFICARI OBLIGATORII
+## VERIFICARI DUPA REPARATIE
 Verifica explicit:
-1. de ce gate_v20.py nu poate valida C18;
-2. daca problema este doar lipsa C18 din dict hardcodat;
-3. ce identitati cunoaste gate_v20.py acum;
-4. ce date C18 ar trebui introduse ca gate-ul sa poata valida C18;
-5. daca exista intrari C18 in _system/SISTEM_TRAINITY-versiuni.md;
-6. daca exista intrari C18 in _system/referinte/IDENTITATE-TEHNICA.md;
-7. daca pre_generation_check 18 ramane PASS;
-8. daca audit_sync ramane PASS mai putin imgclone;
-9. daca adaugarea C18 in gate ar afecta C01-C17;
-10. daca exista risc de contaminare sistem printr-un patch rapid;
-11. daca solutia corecta este patch punctual C18 sau parser de productie;
-12. ce mandat trebuie dat chatului SYSTEM pentru reparatia reala.
-
-## FORMAT RAPORT
-Scrie raport in _brain/c18/CLAUDE-TO-BRAIN.md cu:
-1. verdict scurt;
-2. cauza exacta pentru B2 neverificabil;
-3. fisiere citite;
-4. status intrari C18 in sistem;
-5. solutia minima sigura;
-6. solutia structurala recomandata;
-7. riscuri;
-8. prompt complet pentru CHAT SYSTEM, daca este nevoie;
-9. verdict: RELEASE = NU pana cand B2 ruleaza real si trece.
-
-## IMPORTANT
-Daca este necesara modificare in gate_v20.py sau _system, formuleaza doar CERERE SYSTEM.
-Nu executa tu modificarea.
+1. gate_v20 C18;
+2. gate_v20 C01;
+3. audit_sync;
+4. pre_generation_check 18;
+5. ca cele 3 defecte de continut au disparut;
+6. ca P0 imgclone ramane deschis;
+7. ca RELEASE ramane NU.
 
 ## RAPORT
-Scrie diagnosticul complet in _brain/c18/CLAUDE-TO-BRAIN.md.
+Scrie raport in _brain/c18/CLAUDE-TO-BRAIN.md cu:
+- ce ai modificat;
+- fisiere modificate;
+- rezultatul gate C18;
+- rezultatul gate C01;
+- status audit_sync;
+- status pre_generation_check 18;
+- ce P0 raman;
+- verdict: RELEASE = NU.
