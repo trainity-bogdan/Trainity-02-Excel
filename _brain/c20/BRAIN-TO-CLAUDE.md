@@ -1,36 +1,63 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-APROBA_AUDIT_TOTAL_C20_MICRO_FIX
+C20_GATA_PENTRU_SYSTEM_FINAL
 
 ## VERDICT BRAIN
-Auditul total C20 este acceptat.
-Verdict acceptat: C20_VALIDAT_CU_REZERVE_MINORE.
+C20 este gata pentru Chat Andrei SYSTEM.
+Auditul total a fost acceptat.
+Verdictul ramane: C20_VALIDAT_CU_REZERVE_MINORE.
+Micro-fixurile au fost aplicate.
 Nu exista BLOCKER.
 Nu exista MAJOR care sa redeschida SPEC.
+Nu mai este nimic de corectat in C20 inainte de SYSTEM.
 
-## CE SE APROBA
-BRAIN aproba micro-fixurile recomandate in audit inainte de SYSTEM.
-Nu se redeschide SPEC conceptual.
-Nu se schimba sloturile mari.
-Nu se genereaza blueprint.
-Nu se modifica fisiere de sistem.
+## LOCK C20
+C20 NU depinde de C19.
+C20 = DELEGAREA.
+T5 = AUTONOMIE.
+CUVANT LOCKED = AUTONOMIE.
+VERB LOCKED = DELEG.
+C20 scoate autorul din PROPRIETATE.
 
-## MICRO-FIXURI APROBATE
-1. Inlocuieste reziduul englezesc:
-- ownership implicit -> proprietate implicita
-- Ownership pe ROL -> Proprietatea pe ROL
+## SPEC FREEZE RECORD
+SLUG: Excel-20-Delegare
+MIZA HERO: DELEGAREA SISTEMULUI DE LUCRU
+INTRIGA: Cum deleg sistemul, ca sa mearga fara mine?
+MANTRA: Nu impart sarcini. Deleg sistemul.
+WOW: Apesi scoate autorul, si sistemul nu se rupe: workbook-ul confirma singur ca alt rol il poate continua.
+MOTTO: Pleci, si munca nu mai e a ta. (candidat treapta T5)
+AHA: Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+ARTEFACT: _DELEGARE
 
-2. Marcheaza MOTTO ca:
-- candidat treapta T5
-Nu il propaga ca lock absolut de sistem pana la ratificarea globala T5.
+## TEST FILMABIL CENTRAL
+AUTOR_ACTIV = NU + ROL_DELEGAT + verificari OK/FAIL + STATUS FINAL calculat:
+NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
 
-3. CERERE SYSTEM trebuie sa spuna explicit ca SYSTEM oglindeste toate cele 11 sloturi C20, nu doar cele 13 repere scurte.
+TENSIUNE CENTRALA:
+Autorul dispare, sistemul continua.
 
-4. SYSTEM trebuie sa verifice daca trebuie actualizate si:
-- constructii.xlsx
-- _system/00-INDEX
-- 06-MAP-CONSTRUCTII-T1-T5
+## CERERE SYSTEM
+CERERE SYSTEM este pregatita in _brain/c20/CLAUDE-TO-BRAIN.md si include micro-fixurile aprobate:
+- proprietate implicita, nu ownership implicit;
+- Proprietatea pe ROL, nu Ownership pe ROL;
+- MOTTO marcat candidat treapta T5;
+- SYSTEM oglindeste toate cele 11 sloturi C20;
+- SYSTEM verifica si constructii.xlsx, _system/00-INDEX, 06-MAP-CONSTRUCTII-T1-T5.
+
+## MANDAT DIRECT
+Claude, mentine C20 in status GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX.
+Nu mai produce raport nou in C20 daca nu exista mandat explicit nou.
+Nu redeschide SPEC.
+Nu modifica sloturile.
+Nu genera blueprint.
+Nu modifica fisiere de sistem din chatul C20.
+
+## URMATOR PAS
+Actiunea urmatoare se face in Chat Andrei SYSTEM:
+executarea CERERII SYSTEM pentru propagarea freeze-ului C20 in autoritatea de sistem.
+
+Dupa SYSTEM, BLUEPRINT conceptual C20 poate fi cerut numai prin mandat separat.
 
 ## GARZI BLUEPRINT CARE RAMAN
 - Testul viu trebuie cablat real, nu bifat manual.
@@ -40,23 +67,10 @@ Nu il propaga ca lock absolut de sistem pana la ratificarea globala T5.
 - STEP-TITLES se vor remapa la blueprint pe structura ceruta.
 - Blueprint trebuie sa fixeze un exemplu concret si drama FAIL -> AUTONOM.
 
-## MANDAT DIRECT
-Claude, actualizeaza _brain/c20/CLAUDE-TO-BRAIN.md cu confirmarea acceptarii auditului si a micro-fixurilor.
-Marcheaza statusul:
-GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX
-
-Nu genera blueprint.
+## INTERDICTII
 Nu genera HTML.
 Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
 Nu modifica artefacte de constructie.
-Nu modifica fisiere de sistem.
-
-## OUTPUT CERUT
-Scrie concis:
-1. audit total acceptat de BRAIN;
-2. verdict mentinut: C20_VALIDAT_CU_REZERVE_MINORE;
-3. micro-fixuri aprobate;
-4. CERERE SYSTEM actualizata logic cu aceste micro-fixuri;
-5. status final: GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX.
+Nu face commit-uri in afara _brain/c20 fara cerere explicita.
