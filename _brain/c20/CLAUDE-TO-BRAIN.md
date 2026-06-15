@@ -1,7 +1,47 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS (cel mai recent)
-GENERARE_C20_COMPLETA
+AUDIT_C20_GENERAT = RELEASE PASS (audit independent al construcției generate în alt chat: B1/B2/B3 re-verificate PASS; `_DELEGARE` = test viu real cu MF1/MF2/MF3 corecte în formule; zero contaminare; sumă conservată; 18 pași; voce FILM DELEGARE. Singura datorie = imaginile reale ARHITECT, assets DRAFT acum. Generarea: GENERARE_C20_COMPLETA.)
+
+---
+
+# AUDIT C20 GENERAT — auditor independent (cerere ARHITECT „fa audit la c20", 15.06.2026)
+
+Construcția C20 a fost generată în alt chat (commit 2e9114c + închidere PACK 3a19a9d). Am auditat-o INDEPENDENT, adversarial, fără să mă bazez pe self-report. Mod auditor: am rulat gate-urile + am inspectat artefactele; NU am modificat artefacte.
+
+## VERDICT: C20 GENERAT = RELEASE PASS
+Cele 7 artefacte există și trec toate gate-urile blocante; `_DELEGARE` materializează fidel blueprint-ul înghețat (testul viu cu cele 3 micro-fixuri). Zero BLOCKER, zero MAJOR. Singura datorie deschisă = imaginile reale (DRAFT acum, le produce ARHITECT).
+
+## 1. GATE-URI (re-rulate de mine, dovadă)
+- **B1 `pre_generation_check 20`:** 3/3 PASS (SPEC INGHETAT · L142 · L143), exit 0.
+- **B2 `gate_v20 20 c20 c01`:** GATE PASS — 5/5 livrabile, 6 clase, zero erori, exit 0.
+- **B3 `audit_sync`:** C20 = toate detectoarele OK; drift total 7 = baseline preexistent (C12-C18 imagini), zero drift nou de la C20.
+- em-dash / en-dash: **0** în HTML-Studiu (R-V03.72).
+
+## 2. IDENTITATE + ANTI-CONTAMINARE
+- Identitate prezentă: DELEGARE (16), `_DELEGARE` (12), AUTOR_ACTIV (9), ROL_DELEGAT (4), MANTRA „Nu împart sarcini..." + AHA „...merge singur..." verbatim.
+- **ownership: 0** (proprietate, nu ownership). RACI (4) / organigram (1) = doar NEGAȚII („Anti-RACI", „nu ca organigramă", „NU E RACI, NU E SOP") = gărzile cerute, nu contaminare.
+- **C19 (12 mențiuni) = toate granițe LEGITIME**, nu clonă: „C19 prinde un INPUT greșit; C20 prinde DEPENDENȚA de autor", „semnătura vizuală... C19 nu o are", handoff „motorul rulează (C18), regulile îl țin corect (C19)". Granița vs C19 (cerința 6) articulată clar pe ecran = STRENGTH.
+
+## 3. `_DELEGARE` = TEST VIU REAL (MF1/MF2/MF3 verificate în formulele reale)
+- **MF2 (V1 LIVE):** `V1 = IF(ISERROR(AJUSTARE_SHADOW),"FAIL","OK")`, cu `AJUSTARE_SHADOW = IF(PARAM_MUTAT="DA",PARAM_,NA())`. V1 PICĂ până muți parametrul author-only în PARAM_ — referință reală, nu bifă. CORECT.
+- **MF1 (STATUS fără overlap):** `STATUS = IF(OR(rol gol; hartă incompletă),"NEPREDAT", IF(COUNTIF(V1:V4,"FAIL")>0,"PARTIAL", IF(AUTOR_ACTIV="DA","DELEGAT","AUTONOM")))`. Exact logica aprobată, zero overlap. CORECT.
+- **MF3 (semnătură vizuală):** AUTOR_ACTIV = comutatorul de predare, marcat explicit ca semnătura `_DELEGARE` vs C19. CORECT.
+- V2/V3/V4 cablate (acces / zone blocate / escaladare la ROL din listă). Drama FAIL→AUTONOM reproductibilă (PARAM_MUTAT=NU → V1 FAIL → STATUS=PARTIAL). Anti-RACI: STATUS calculat, nu bifat (verificat în formulă). Gardă F4 onorată.
+
+## 4. RESTUL ARTEFACTELOR
+- Sumă conservată cap-coadă: Vanzari_Curat valoare_neta = **1.247.893,50** identic c19→c20 (R-V02.14). Vanzari_Curat neatins.
+- HTML-Studiu: **18 step-titles** (6 etape × 3 pași). 4 HTML prezente + coerente (gate TEXTUAL_ZONES PASS = nu clonă pilot).
+- FILM (194 paragrafe): voce DELEGARE (proprietate 25, deleg 23, predare 19, autonom 19, rol 65; ownership 0, guvern 2 handoff). Diferențiat (L200).
+- `_DELEGARE` distinct de `_GUVERNARE` (foi separate în workbook) — testul de manifestare Doc 14 PASS.
+
+## 5. DATORII / OBSERVAȚII (non-blocante)
+1. **Imagini DRAFT** (assets: 7 placeholder, hero + 6 exec-stage) — reale le produce ARHITECT extern (același bootstrap ca C19). Singura datorie reală.
+2. **`gate_v20.py` modificat din fluxul de generare** (adăugat `'20'` în SHEET_OUTPUT_CANONIC + CONSTRUCTII_DATASET_C01) — aditiv, la punctul de extensie declarat al gate-ului, regresie C18/C19 = PASS. Observație de PROCES: o schimbare de fișier SYSTEM a venit din chatul de generare, nu dintr-un chat SYSTEM dedicat. Corect funcțional, de consemnat.
+3. index.html + STARE-CURENTA (V79) actualizate (PACK C01-C20 închis) — verificat prezent.
+
+## CONCLUZIE
+**C20 DELEGAREA GENERAT = RELEASE PASS.** Construcția e fidelă SPEC-ului + blueprint-ului înghețat: `_DELEGARE` = test viu real (MF1/MF2/MF3 corecte în formule), zero contaminare, granița vs C19 clară, sumă conservată, voce FILM proprie. Arcul C01-C20 e închis. Rămâne doar înlocuirea imaginilor DRAFT cu cele reale (ARHITECT).
 
 ---
 
