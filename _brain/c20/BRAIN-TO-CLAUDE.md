@@ -1,63 +1,49 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-MANDAT_BLUEPRINT_C20
+AUDIT_BLUEPRINT_C20
 
 ## CONTEXT
-SYSTEM C20 este executat si raportat.
-Status anterior inchis: SYSTEM_PROPAGARE_C20_EXECUTATA.
-C20 poate trece acum la BLUEPRINT conceptual.
+Claude a propus BLUEPRINT_C20_PROPUS pentru C20 DELEGAREA.
+BRAIN cere audit adversarial inainte de freeze.
 
 ## MANDAT
-Claude, revino in rol C20 si autorizeaza BLUEPRINT-ul conceptual C20.
-Construieste blueprint-ul complet pentru C20 DELEGAREA in format 6 etape / 18 pasi.
+Auditeaza blueprint-ul C20 propus, fara menajare.
+Nu rescrie inca blueprint-ul.
+Nu il ingheta inca.
+Verifica daca poate intra la freeze sau daca are nevoie de corectii.
 
-## LOCK C20
-C20 = DELEGAREA.
-T5 = AUTONOMIE.
-CUVANT LOCKED = AUTONOMIE.
-VERB LOCKED = DELEG.
-SLUG = Excel-20-Delegare.
-MIZA HERO = DELEGAREA SISTEMULUI DE LUCRU.
-MANTRA = Nu impart sarcini. Deleg sistemul.
-AHA = Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
-ARTEFACT = _DELEGARE.
-GRANITA = C20 scoate autorul din PROPRIETATE.
+## CHECKLIST AUDIT
+Verifica obligatoriu:
+1. cele 6 etape sunt naturale, progresive si filmabile;
+2. cei 18 pasi sunt operationali, nu abstracti;
+3. testul viu este real, nu bifaj manual;
+4. V1 are referinte reale si nu declaratii;
+5. _DELEGARE nu cade in RACI / HR / fisa de post / SOP;
+6. C20 ramane despre PROPRIETATE, nu despre ATENTIE, EFORT sau OCAZIE;
+7. diferenta fata de C19 _GUVERNARE este clara pe ecran;
+8. exemplul concret este suficient de bun pentru constructie;
+9. drama FAIL -> reparare -> AUTONOM este vizibila;
+10. STATUS final NEPREDAT / PARTIAL / DELEGAT / AUTONOM este logic;
+11. nu exista contaminare cu C17, C18, C19;
+12. nu exista formulare generic-management;
+13. nu exista resturi RO-EN de tip ownership;
+14. blueprint-ul poate sustine generarea ulterioara HTML / Date_MASTER / FILM.
 
-## CERINTE BLUEPRINT
-Blueprint-ul trebuie sa aiba:
-1. 6 etape clare;
-2. 18 pasi operationali;
-3. fir narativ filmabil;
-4. test viu cablat, nu bifaj manual;
-5. V1 bazat pe referinte reale, nu pe declaratii;
-6. diferenta clara fata de C19 _GUVERNARE;
-7. diferenta clara fata de RACI / HR / fisa de post / SOP;
-8. exemplu concret de sistem predat;
-9. drama vizibila FAIL -> reparare -> AUTONOM;
-10. STATUS final calculat: NEPREDAT / PARTIAL / DELEGAT / AUTONOM.
+## VERDICT CERUT
+Raspunde in _brain/c20/CLAUDE-TO-BRAIN.md cu unul dintre statusurile:
+BLUEPRINT_C20_VALIDAT_FREEZE
+sau
+BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX
+sau
+BLUEPRINT_C20_RESPINS.
 
-## GARZI DIN AUDIT
-Pastreaza obligatoriu:
-- _DELEGARE nu devine tabel pasiv;
-- escaladarea ramane scoping de proprietate, nu regula C19;
-- rolul ramane rol, nu persoana;
-- MOTTO ramane candidat treapta T5;
-- foloseste proprietate, nu ownership;
-- testul viu trebuie sa demonstreze ca autorul poate fi scos fara ruperea sistemului.
+Daca exista micro-fixuri, listeaza-le punctual si spune exact ce trebuie schimbat.
 
 ## INTERDICTII
 Nu genera HTML.
 Nu genera Date_MASTER.
 Nu genera FILM.
 Nu genera build scripts.
-Nu modifica artefacte de constructie.
 Nu modifica fisiere SYSTEM.
-Nu deschide C20 SPEC deja inghetat.
-Blueprint-ul este text conceptual, nu implementare.
-
-## RAPORT CERUT
-Scrie rezultatul in _brain/c20/CLAUDE-TO-BRAIN.md cu status:
-BLUEPRINT_C20_PROPUS
-sau
-BLUEPRINT_C20_BLOCAT.
+Nu modifica artefacte de constructie.
