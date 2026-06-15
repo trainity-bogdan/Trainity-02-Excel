@@ -1,7 +1,38 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS (cel mai recent)
-AUDIT_C20_GENERAT = RELEASE PASS (audit independent al construcției generate în alt chat: B1/B2/B3 re-verificate PASS; `_DELEGARE` = test viu real cu MF1/MF2/MF3 corecte în formule; zero contaminare; sumă conservată; 18 pași; voce FILM DELEGARE. Singura datorie = imaginile reale ARHITECT, assets DRAFT acum. Generarea: GENERARE_C20_COMPLETA.)
+VERIFICARE_TOTALA_C20 = RELEASE PASS COMPLET (audit exhaustiv pe TOATE artefactele: gate-uri PASS, cele 4 HTML + FILM + Date_MASTER + companion + assets verificate; zero contaminare/em-dash/ownership/cifre-business; sloturi LOCKED verbatim; 18 pași = blueprint; `_DELEGARE` test viu real; regresie C18/C19 PASS. Singura datorie = imaginile reale ARHITECT, assets DRAFT acum.)
+
+---
+
+# VERIFICARE TOTALĂ C20 (cerere ARHITECT „verificare totală", 15.06.2026) — addendum la AUDIT
+
+Audit exhaustiv pe TOATE artefactele (nivel monstruos), mod auditor (zero modificări). Toate confirmă RELEASE PASS COMPLET.
+
+## CROSS-FILE (4 HTML + FILM)
+- **em-dash / en-dash = 0** pe toate 5 artefactele (R-V03.72). **ownership = 0** pe toate 5 (proprietate consecvent).
+- **R-V02.15: zero cifre business** în HTML-Studiu / HTML-Video / FILM (nicio sumă; cifrele trăiesc doar în Excel).
+
+## HTML-Studiu (deep)
+- **Cele 5 sloturi LOCKED verbatim:** MANTRA „Nu împart sarcini. Deleg sistemul." · AHA „...merge singur. E autonom când îl poate deține altcineva." · MOTTO „Pleci, și munca nu mai e a ta." · MIZA HERO „DELEGAREA SISTEMULUI DE LUCRU" · HERO „Cum deleg sistemul, ca să meargă fără mine?".
+- **18 step-titles = blueprint-ul exact**, C20-specifice (drama V1 FAIL→repari PARAM_→AUTONOM la pașii 13-16; granița C19 la 15; pachet închis la 18).
+- **2 prompturi C20** cu gărzile corecte: anti-HR („nu desemna nicio persoană"), anti-C19 („nu scrie reguli de prag"), anti-overreach („nu prelua proprietatea, nu decide business"); „Eu decid / Eu mut".
+- IDENTITATE aplicată: title „C20 · Delegare · Trainity", topbar „C20 · Delegare", localStorage `trainity_c20_study_v1`.
+
+## COMPANION + VIDEO + FILM
+- Editor-Studiu = paritate body cu Studiu (18 = 18 step-titles). Editor-Video importă modulul video. HTML-Video = 18 stages + exec-slides.
+- FILM (194 paragrafe): 6 etape (HOOK→DEMO→CONTROL), **boilerplate generic L200 = 0**, voce DELEGARE (proprietate 25, predare 19, rol 53, autonom 19).
+
+## Date_MASTER (11 foi)
+- `_DELEGARE` 59×3 (102 etichete unice) **distinct de `_GUVERNARE`** (overlap doar 6) — testul de manifestare Doc 14 PASS. `_DELEGARE` formule: V1 ISERROR-live (MF2), STATUS fără overlap (MF1), AUTOR_ACTIV semnătură (MF3).
+- Vanzari_Curat 2001×14 (schema contract C01), sumă **1.247.893,50** conservată c19→c20 (R-V02.14).
+
+## ASSETS + REGRESIE
+- 7 assets (hero + 6 exec-stage) = JPEG valide 1500×1000, **md5 ≠ c19 (non-clonă)**; DRAFT placeholder, reale de la ARHITECT.
+- **Regresie gate C18 + C19 = GATE PASS** (adăugarea `'20'` în gate_v20 nu a regresat nimic).
+
+## VERDICT FINAL: C20 DELEGAREA = RELEASE PASS COMPLET
+Toate axele verificate. Singura datorie deschisă = înlocuirea imaginilor DRAFT cu cele reale (ARHITECT). Notă de proces (neblocantă): `gate_v20.py` a fost extins cu `'20'` din chatul de generare (aditiv, regresie-clean). Arcul C01-C20 e închis complet.
 
 ---
 
