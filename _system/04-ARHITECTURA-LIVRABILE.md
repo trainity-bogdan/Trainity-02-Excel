@@ -44,7 +44,7 @@ cNN/
     └── exec-stage-6.jpg
 ```
 
-**Schema veche (pre-V39):** existau `cNN/canonic/` (înghețat) + `cNN/editat/` (evolutiv) cu meta marker `trainity-snapshot`. Eliminată — versionarea o face git (commit + branch + tag v{N}) conform regulilor G1-G5 din CLAUDE.md.
+**Schema veche (pre-V39):** existau `cNN/canonic/` (înghețat) + `cNN/editat/` (evolutiv) cu meta marker `trainity-snapshot`. Eliminată. Versionarea o face git (commit descriptiv pe `main` + STARE-CURENTA, FĂRĂ tag-uri) conform regulilor G1-G5 din CLAUDE.md.
 
 **Avantaje versiune unică:**
 - O singură copie pe disk (50% storage)

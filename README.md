@@ -6,16 +6,17 @@ Sistem de construcții educaționale Excel augmentate cu AI · Bogdan Târlă ·
 
 ## Status la zi
 
-**Versiune sistem:** V69 (iunie 2026 · nomenclatură SCARA C01-C20 LOCKED)
-**Construcții existente în repo:** C01-C12 (din 20 planificate)
+**Versiune sistem:** V79 (iunie 2026 · nomenclatură SCARA C01-C20 LOCKED · PACK C01-C20 COMPLET)
+**Construcții existente în repo:** C01-C20 (toate 20 generate: 4 HTML + Date_MASTER + FILM fiecare)
 
-**Maturitate pe trepte:**
-- **T1 SCANARE (C01-C04):** livrabile.
-- **T2 CUNOAȘTERE (C05-C08):** livrabile.
-- **T3 ANALIZĂ (C09-C12):** corecte conceptual și în date; finisaj vizual în curs.
-  - C09 RELAȚII aproape final.
-  - C10 MĂSURI, C11 COMPARAȚII, C12 INTERPRETARE complete conceptual; imaginile reale
-    rămân dependență ARHITECT (până atunci, unde lipsesc, placeholder neutru marcat temporar).
+**Maturitate pe trepte (structură + date + FILM = complet pe toate 20):**
+- **T1 SCANARE (C01-C04):** livrabile, imagini reale.
+- **T2 CUNOAȘTERE (C05-C08):** livrabile, imagini reale.
+- **T3 ANALIZĂ (C09-C12):** livrabile structural; C09 imagini reale; C10-C12 hero real, video placeholder.
+- **T4 RAPORTARE (C13-C16):** complete structural; imagini placeholder (folder `assets/` + foto reale = dependență ARHITECT).
+- **T5 AUTONOMIE (C17-C20):** complete structural; dataset propriu C01 (by design, înregistrat în gate `CONSTRUCTII_DATASET_C01`); imagini draft placeholder pending ARHITECT.
+
+**Finisaj de imagine reală pe C10-C20 = dependență ARHITECT** (pipeline extern de imagini); structura, datele și FILM sunt complete.
 
 **Lanțul T3 (locked):** model -> măsură -> clasament -> explicație
 (C09 a lega · C10 a defini · C11 a compara · C12 a explica).
@@ -48,14 +49,14 @@ Sursă unică de adevăr: `_system/NOMENCLATURA-LOCKED-SCARA.md` (oglindit în `
 | C10 | MĂSURĂ | DEFINIREA MĂSURILOR | MĂSOR |
 | C11 | CLASAMENT | CONSTRUIREA CLASAMENTELOR | COMPAR |
 | C12 | CAUZĂ | INTERPRETAREA REZULTATELOR | INTERPRETEZ |
-| C13 | VIZUAL | VIZUALIZAREA REZULTATELOR | VIZUALIZEZ |
-| C14 | DASHBOARD | COMPUNEREA DASHBOARD-ULUI | COMPUN |
-| C15 | MESAJ | SINTETIZAREA MESAJULUI | SINTETIZEZ |
-| C16 | DECIZIE | LIVRAREA RAPORTULUI | LIVREZ |
-| C17 | CLOUD | DISTRIBUIREA ÎN CLOUD | DISTRIBUI |
-| C18 | SINCRONIZARE | SINCRONIZAREA CU DATELE | SINCRONIZEZ |
-| C19 | CONTROL | MONITORIZAREA SERVICIULUI | MONITORIZEZ |
-| C20 | AUTONOMIE | DELEGAREA CĂTRE SISTEM | DELEG |
+| C13 | VIZUAL | FORMA ADEVĂRATĂ | VIZUALIZEZ |
+| C14 | COMPOZIȚIE | ORDINEA PRIVIRII | COMPUN |
+| C15 | SINTEZĂ | MESAJUL ESENȚIAL | SINTETIZEZ |
+| C16 | LIVRARE | DECIZIA GATA | LIVREZ |
+| C17 | SISTEM | SISTEMATIZAREA MUNCII RELUABILE | SISTEMATIZEZ |
+| C18 | MOTOR | AUTOMATIZAREA MUNCII RECURENTE | AUTOMATIZEZ |
+| C19 | CONTROL | GUVERNAREA SISTEMULUI PRIN REGULI | GUVERNEZ |
+| C20 | AUTONOMIE | DELEGAREA SISTEMULUI DE LUCRU | DELEG |
 
 ---
 
@@ -83,24 +84,24 @@ Trainity-02-Excel/
 ├── README.md
 ├── CLAUDE.md                         boot rapid pentru motor (Claude)
 ├── STARE-CURENTA.md                  single source of truth status
-├── index.html                        panou preview live C01-C12
+├── index.html                        panou preview live C01-C20
 │
-├── c01/ ... c12/                     CONSTRUCȚII (o singură versiune fiecare)
+├── c01/ ... c20/                     CONSTRUCȚII (o singură versiune fiecare)
 │   ├── HTML × 4 (Studiu, Editor-Studiu, Video, Editor-Video)
 │   ├── Date_MASTER-CNN.xlsx
 │   ├── FILM-Excel-NN-{slug}.docx
 │   └── assets/                       hero + cele 6 imagini exec-stage ALE construcției
 │
 ├── _system/                          SISTEMUL
-│   ├── 00-INDEX.md ... 12-ARHITECTURA-CONCEPTUALA-T3.md
+│   ├── 00-INDEX.md ... 14-ARHITECTURA-CONCEPTUALA-T5.md
 │   ├── COMENZI.yaml, INDEX-CAUTARE.md
 │   ├── generatoare/                  validatoare + scripturi Python
 │   ├── governance/                   Bible, change protocol, release gate
 │   └── referinte/                    Date_MASTER-initial, snippets, scheme
 │
 └── _brain/                           protocol BRAIN <-> CLAUDE + audituri
-    ├── audit/                        rapoarte audit (apocalipsă V1, V2)
-    └── cNN/                          mandate + context per construcție T3
+    ├── audit/                        rapoarte audit (apocalipsă V1/V2, atomic, locked-naming)
+    └── cNN/                          mandate + context per construcție (C09-C20)
 ```
 
 ---
