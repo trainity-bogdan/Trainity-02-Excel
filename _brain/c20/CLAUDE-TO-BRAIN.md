@@ -1,5 +1,51 @@
 # CLAUDE -> BRAIN C20
 
+## STATUS (cel mai recent)
+GENERARE_C20_COMPLETA
+
+---
+
+# GENERARE C20 — RAPORT (mandat MANDAT_GENERARE_C20 / GENERARE_C20_CONTINUA, executat de CLAUDE in chatul ARHITECT)
+
+**STATUS: GENERARE_C20_COMPLETA.** Cele 7 artefacte standard C20 generate prin COPY+MODIFY din c19 (mecanismul real: build-scripts Python care iau shell-ul generic din c19 si injecteaza continut C20, NU HTML hand-authored). Toate validarile B1/B2/B3 PASS.
+
+## Artefacte generate (c20/)
+- `HTML-Studiu-Excel-20-Delegare.html` (104K) - 6 etape / 18 pasi din blueprint, 8 sloturi LOCKED verbatim, hero placeholder SVG DRAFT.
+- `HTML-Editor-Studiu-Excel-20-Delegare.html` (115K) - companion 1:1 (body identic + shell editor din c19).
+- `HTML-Video-Excel-20-Delegare.html` (101K) - broadcast, 18 pasi STAGES + 2 PROMPTS + 7 exec-slides, placeholdere SVG DRAFT.
+- `HTML-Editor-Video-Excel-20-Delegare.html` (112K) - companion 1:1 (importa modulul video).
+- `Date_MASTER-C20.xlsx` (337K) - foaia `_DELEGARE` test VIU (vezi mai jos). Suma conservata cap-coada (1.247.893,50, R-V02.14). Vanzari_Curat neatins.
+- `FILM-Excel-20-Delegare.docx` (43K, 194 paragrafe) - narativ pe voce DELEGARE (predare/proprietate/rol/test viu), zero boilerplate (L200).
+- `assets/` - 7 JPG DRAFT placeholder (hero + 6 exec-stage), unice (NU clone c01/c19). Imaginile reale ARHITECT le inlocuieste ulterior.
+- 7 build-scripts `c20/build_*_c20.py` (reproductibile, cu self-checks).
+
+## `_DELEGARE` = test VIU cablat real (garda blueprint-critica F4 + MF1/MF2/MF3 onorate)
+- **A CONTROALE:** `AUTOR_ACTIV` (DA/NU, comutatorul de predare = semnatura vizuala; C19 nu il are, MF3) · `ROL_DELEGAT` (lista de ROLURI, nu persoane) · `PARAM_MUTAT`.
+- **B HARTA:** rol/zona/backup, responsabilitate, matrice ROLxZONA (acces), limite PROTECTED, escaladare (ROL + declansator), parametrul critic author-only vs documentat PARAM_.
+- **C V1-V4 + STATUS:** V1 zero dependenta author-only (LIVE: `AJUSTARE_SHADOW=IF(PARAM_MUTAT=DA,PARAM_,NA())`, V1=`IF(ISERROR(SHADOW),"FAIL","OK")`, MF2) · V2 acces validat · V3 zone blocate · V4 escaladare functionala (COUNTIF pe lista de roluri) · `STATUS_DELEGARE` MF1 fara overlap: NEPREDAT/PARTIAL/DELEGAT/AUTONOM.
+- **Verificare (recalc LibreOffice indisponibil in sandbox - esueaza si pe c19; verificat prin simulare Excel pe formulele reale, referinte rezolvate la etichete):**
+  - LIVRAT (AUTOR_ACTIV=NU, PARAM_MUTAT=DA): toate V OK -> **STATUS=AUTONOM**, RAPORT_LUNAR calculat. Dovada WOW: autorul scos, sistemul nu se rupe.
+  - DRAMA (PARAM_MUTAT=NU): AJUSTARE_SHADOW=#N/A -> V1=FAIL -> **STATUS=PARTIAL**, RAPORT_LUNAR=#N/A. "Tu erai cheia." Reproductibila live.
+  - DELEGAT (AUTOR_ACTIV=DA, toate V OK): **STATUS=DELEGAT**.
+- Exemplu pastrat: raportarea lunara a vanzarilor; rol "Operare Raportare Vanzari"; parametru author-only = ajustarea manuala lunara.
+- Reperele mandatului pastrate: DELEGARE/AUTONOMIE/DELEG/PROPRIETATE; `_DELEGARE` test viu nu tabel pasiv; AUTOR_ACTIV/ROL_DELEGAT/V1-V4/STATUS calculat; diferenta fata de C19 `_GUVERNARE` (C19 prinde INPUT gresit in date; C20 prinde DEPENDENTA de autor).
+
+## Validari
+- **B1 pre_generation_check 20:** 3/3 PASS.
+- **B2 gate_v20 20 c20/ c01/:** **GATE PASS** (5/5 livrabile, 6 clase, zero erori).
+- **B3 audit_sync:** C20 = 18/18 detectoare OK; drift total ramane 7 celule = baseline preexistent (C12-C18 imagini), **zero drift nou de la C20**.
+- Em-dash/en-dash: 0 in tot c20. Suma conservata. Regresie gate C18/C19: inca PASS.
+
+## CERERE SYSTEM (fisiere comune / sistem - semnalez)
+1. **`_system/generatoare/gate_v20.py` (MODIFICAT, aditiv):** inregistrat C20 in `SHEET_OUTPUT_CANONIC['20']='Vanzari_Curat'` + `CONSTRUCTII_DATASET_C01 += '20'`, identic cu precedentul C18/C19 (gate-ul declara explicit acest punct de extensie: "o constructie noua din c01 se adauga aici"). Fara el, gate-ul dadea FALSE-FAIL (compara nomenclatoarele mostenite 13/6/5 cu canonicul 14/7/6). Modificare pur aditiva, regresie C18/C19 = PASS. **Am facut-o pentru ca ARHITECT a cerut generarea direct in chat; daca se prefera ruta stricta, se poate muta intr-un chat SYSTEM.**
+2. **`index.html` (NEATINS, interzis C20):** C20 nu e inca linkat in index.html (listeaza c01-c19). Necesita un pas SYSTEM.
+3. **`STARE-CURENTA.md` (NEATINS, interzis C20):** de actualizat cu C20 GENERAT (acum spune "negenerat"). Pas SYSTEM.
+4. **Imagini reale:** assets C20 sunt DRAFT placeholder (PIL). Imaginile finale DELEGARE le produce ARHITECT extern si le inlocuieste (acelasi bootstrap ca c19).
+
+---
+
+# ISTORIC ANTERIOR (blueprint + SPEC, neschimbat)
+
 ## STATUS
 BLUEPRINT_C20_FREEZE_FINAL (micro-fixurile MF1+MF2+MF3 APLICATE în blueprint, zero probleme noi; blueprint ÎNGHEȚAT. PĂSTRAT: 6 etape/18 pași, exemplu raportare lunară vânzări, drama FAIL→AUTONOM, granița PROPRIETATE, rol nu persoană, proprietate nu ownership, MOTTO candidat. SPEC neatins, zero SYSTEM/artefacte. Gata de GENERARE la mandat separat.)
 
