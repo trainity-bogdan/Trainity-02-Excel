@@ -1,12 +1,78 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-SYSTEM_PROPAGARE_C20_EXECUTATA (mandat EXECUTA_ACUM_SYSTEM_C20 ÎMPLINIT; propagarea freeze SPEC C20 e live pe main, commit baab6c5, verificată: pre_generation_check 20 = 3/3 PASS, gate '20' OK. Raport SYSTEM complet în _brain/system/CLAUDE-TO-BRAIN.md.)
+BLUEPRINT_C20_PROPUS (6 etape / 18 pași, test viu cablat pe referințe reale, exemplu concret, dramă FAIL→AUTONOM, STATUS calculat; toate cele 10 cerințe + 6 gărzi respectate. TEXT CONCEPTUAL, zero implementare; SPEC înghețat NEatins. Propagarea SYSTEM rămâne EXECUTATA, baab6c5.)
 
 ## SURSA
-Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `APROBA_AUDIT_TOTAL_C20_MICRO_FIX` (commit 49eff8b) - BRAIN accepta auditul si APROBA micro-fixurile inainte de SYSTEM. Conform aprobarii, am aplicat micro-fixurile autorizate (F1 ownership -> proprietate; MOTTO marcat candidat in CERERE; CERERE clarificata pe cele 11 sloturi + fisiere de verificat). SPEC conceptual NEredeschis, sloturi mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse. Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
+Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `MANDAT_BLUEPRINT_C20` (commit d822658) - BRAIN cere BLUEPRINT-ul conceptual C20 (6 etape / 18 pași) după propagarea SYSTEM executată. Revin în rol CLAUDE C20. Lucrez direct pe main. Blueprint = TEXT CONCEPTUAL, NU implementare: zero HTML / Date_MASTER / FILM / build / fișiere SYSTEM; SPEC înghețat NEatins (nu îl redeschid). Istoric C20: SPEC freeze → audit total (`C20_VALIDAT_CU_REZERVE_MINORE`) → micro-fixuri → propagare SYSTEM (`SYSTEM_PROPAGARE_C20_EXECUTATA`, baab6c5) → acum BLUEPRINT.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
+
+---
+
+# BLUEPRINT CONCEPTUAL C20 DELEGAREA (mandat MANDAT_BLUEPRINT_C20, commit d822658)
+
+Format: 6 etape / 18 pași. TEXT CONCEPTUAL (NU implementare; zero HTML/Date_MASTER/FILM/build/SYSTEM). Inima = testul de predare VIU în `_DELEGARE`. SPEC înghețat NEatins.
+
+## EXEMPLU CONCRET (sistemul predat) — cerința 8
+Sistemul construit cap-coadă în T5 pe datele de vânzări: workbook-ul de **raportare lunară a vânzărilor**, care deja se sistematizează (C17 `_SISTEM`), rulează fără efort (C18 `_AUTOMATIZARE`) și se păzește singur (C19 `_GUVERNARE`). C20 predă PROPRIETATEA acestui sistem unui ROL operațional (ex. „Operare Raportare Vânzări"), nu unei persoane. Tot blueprint-ul folosește acest exemplu.
+
+## TEST VIU (cablat real — cerințe 4, 5, 10 + gardă F4)
+Controale: `AUTOR_ACTIV` (DA/NU, Data Validation) · `ROL_DELEGAT` (listă de ROLURI). Verificări prin formule, NU bifaj:
+- **V1 zero dependență author-only** (referințe REALE, nu declarații): inputurile sistemului (din inventarul C17 `_SISTEM`) au un flag `AUTHOR_ONLY`. Când `AUTOR_ACTIV=NU`, o formulă critică ce citește un input `AUTHOR_ONLY=DA` din zona personală a autorului întoarce gol/#REF!. V1 = `COUNTIFS(input critic; AUTHOR_ONLY=DA; încă citit din zona autorului) = 0`. Cât timp un input critic atârnă de autor, V1=FAIL pe viu.
+- **V2 acces validat**: matrice ROL×ZONĂ (vede/modifică). V2 = rolul are acces la toată zona de operare ȘI zero acces la zonele protejate.
+- **V3 zone interzise blocate**: „limitele" declarate = ranges cu `PROTECTED=DA` real. V3 = fiecare limită are protecție reală.
+- **V4 escaladare funcțională**: rândul de escaladare e complet și țintește un ROL (nu persoană, nu gol) cu declanșator. V4 = `ESCALADARE_ROL` ∈ listă roluri ȘI `DECLANSATOR` ≠ gol.
+- **STATUS FINAL** (formulă): `NEPREDAT` (autor activ sau hartă goală) → `PARȚIAL` (unele V FAIL) → `DELEGAT` (toate V OK, dar sub titulatura autorului) → `AUTONOM` (toate V OK + `AUTOR_ACTIV=NU` + V1 zero dependență).
+
+## 6 ETAPE / 18 PAȘI (fir narativ filmabil — cerințe 1, 2, 3, 9)
+
+### ETAPA 1 · REALITATE (Sistemul merge, dar e încă al tău)
+1. Sistemul rulează singur (C18) și se păzește singur (C19), dar la orice problemă tot pe tine te sună: ești proprietarul informal.
+2. „Merge fără efort" (C18) nu înseamnă „are alt proprietar"; autonomia e falsă cât timp depinde de disponibilitatea ta.
+3. Deschizi `_DELEGARE` cu `AUTOR_ACTIV=DA`: STATUS=NEPREDAT. Testul concediului: dacă pleci o lună, sistemul rămâne orfan?
+
+### ETAPA 2 · INVESTIGAȚIE (Ce te face indispensabil)
+4. Inventariezi din `_SISTEM` (C17) ce inputuri atârnă de tine: parametri ținuți în cap, foi personale, decizii nescrise. Le marchezi `AUTHOR_ONLY=DA`.
+5. **Promptul 1 (AI)**: ceri Copilot să listeze, din inventarul de inputuri, care depind de o singură persoană (author-only) și care au sursă documentată accesibilă unui rol. AI propune, omul decide. NU desemnează persoană (C20≠HR), NU scrie reguli de prag (C19).
+6. Definești ROLUL care preia (`ROL_DELEGAT`), cu zonă deținută și backup-rol. Gardă: rol, nu persoană — persoana se atașează temporar.
+
+### ETAPA 3 · TRANSFORMARE (Harta de predare ca input al testului)
+7. Responsabilitate transferată: ce proces preia rolul, ce decizii poate lua, ce livrare asigură (din lanțul lunar de raportare).
+8. Acces și drepturi: matrice ROL×ZONĂ (vede/modifică/protejat) — alimentează V2; limitele (ce nu atinge) marcate `PROTECTED=DA` — alimentează V3.
+9. Escaladare: către ce ROL urcă o problemă peste mandat, cu ce declanșator — alimentează V4. Gardă: scoping de proprietate, NU semnal de control C19.
+
+### ETAPA 4 · VERIFICARE (Testul de predare: scoți autorul)
+10. Apeși `AUTOR_ACTIV=NU`: simulezi autorul scos. Sistemul recalculează singur; V1-V4 + STATUS se reașază pe viu (test viu, nu bifaj).
+11. **Promptul 2 (AI)**: ceri Copilot să verifice, cu autorul scos, dacă vreun input critic încă atârnă de zona autorului (V1) și să arate exact care. AI evidențiază, omul mută. NU preia proprietatea, NU decide business.
+12. Testul anti-RACI (gardă): dacă STATUS ar fi bifat manual, e tabel pasiv = greșit; aici STATUS e calculat din V1-V4, se mișcă singur când schimbi harta.
+
+### ETAPA 5 · STABILIZARE (Drama: dependența ascunsă → repararea) — cerința 9
+13. Cu `AUTOR_ACTIV=NU`, V1 aprinde **FAIL**: un parametru pe care doar tu îl știai (ex. o ajustare manuală lunară) lasă o formulă critică goală. STATUS cade la PARȚIAL. „Credeai că ai delegat. Tu erai cheia."
+14. **Repari**: muți parametrul din zona ta personală în blocul documentat `PARAM_` (din `_SISTEM`), accesibil rolului. Formula citește acum sursa accesibilă: V1 trece OK, fără să fi rescris logica.
+15. Re-rulezi cu autorul tot scos: nimic nu se mai rupe. Gardă vs C19: C19 prinde un INPUT greșit; C20 prinde DEPENDENȚA de autor — alt subiect, altă foaie.
+
+### ETAPA 6 · CONFIRMARE (STATUS AUTONOM + predarea reală)
+16. Cu autorul scos, acces validat, zone blocate, escaladare către rol și zero dependență author-only: STATUS devine **AUTONOM** singur. WOW: workbook-ul confirmă că alt rol îl poate continua.
+17. Devii cel care PREDĂ proprietatea, nu cel care explică: dovada e în fișier (testul viu), nu un discurs. Gardă anti-documentare/SOP.
+18. Poți lipsi o lună: rolul operează, escaladează, continuă. C20 închide PACK-ul C01-C20, nu mai e treaptă următoare. MOTTO: „Pleci, și munca nu mai e a ta." (candidat treaptă T5).
+
+## FINAL-LABELS (8)
+- Delegi proprietatea, nu sarcini.
+- „Merge fără mine" (C18) ≠ „nu mai e a mea" (C20).
+- Testul de predare: scoți autorul, STATUS se reașază singur.
+- Dependența author-only ascunsă = tu ești cheia; mut-o pe rol.
+- Rol, nu persoană: proprietatea pe rol, atașezi om temporar.
+- Escaladarea urcă la un ROL, nu la un semnal (C19).
+- STATUS calculat, nu bifat: dacă e tabel pasiv, nu e delegare.
+- Explicația nu e delegare; dovada e în workbook.
+
+## GRANIȚE (cerințele 6 + 7)
+- **vs C19 `_GUVERNARE`** (cerința 6): C19 reacționează la DATE greșite (reguli/praguri); C20 reacționează la DISPARIȚIA omului (predare/proprietate). Foi distincte, subiecte distincte.
+- **vs RACI / HR / fișă de post / SOP** (cerința 7): nu organigramă, nu listă de citit; harta de predare există DOAR ca să alimenteze testul viu. Dacă devine tabel de citit = greșit.
+
+## VERDICT BLUEPRINT
+**BLUEPRINT_C20_PROPUS.** Cele 10 cerințe acoperite (6 etape · 18 pași · fir filmabil · test viu cablat · V1 referințe reale · vs C19 · vs RACI/HR/SOP · exemplu concret · dramă FAIL→AUTONOM · STATUS calculat) + cele 6 gărzi (anti-tabel-pasiv · escaladare scoping · rol nu persoană · MOTTO candidat · proprietate nu ownership · testul scoaterii autorului fără rupere). Zero implementare; SPEC neatins. La confirmarea BRAIN → freeze blueprint, apoi GENERARE (mandat separat; necesită openpyxl pentru Date_MASTER + cele 7 imagini ARHITECT).
 
 ---
 
