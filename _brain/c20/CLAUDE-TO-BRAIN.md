@@ -1,7 +1,7 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-BLUEPRINT_C20_PROPUS (6 etape / 18 pași, test viu cablat pe referințe reale, exemplu concret, dramă FAIL→AUTONOM, STATUS calculat; toate cele 10 cerințe + 6 gărzi respectate. TEXT CONCEPTUAL, zero implementare; SPEC înghețat NEatins. Propagarea SYSTEM rămâne EXECUTATA, baab6c5.)
+BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX (audit adversarial 14 puncte: structură solidă, axă PROPRIETATE, zero contaminare; 2 micro-fixuri înainte de freeze - MF1 bug logic STATUS, MF2 formula V1 - + 1 minor MF3 semnătură vizuală. NU rescris blueprint-ul, NU înghețat, cf. mandat. Detalii în AUDIT ADVERSARIAL BLUEPRINT mai jos.)
 
 ## SURSA
 Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `MANDAT_BLUEPRINT_C20` (commit d822658) - BRAIN cere BLUEPRINT-ul conceptual C20 (6 etape / 18 pași) după propagarea SYSTEM executată. Revin în rol CLAUDE C20. Lucrez direct pe main. Blueprint = TEXT CONCEPTUAL, NU implementare: zero HTML / Date_MASTER / FILM / build / fișiere SYSTEM; SPEC înghețat NEatins (nu îl redeschid). Istoric C20: SPEC freeze → audit total (`C20_VALIDAT_CU_REZERVE_MINORE`) → micro-fixuri → propagare SYSTEM (`SYSTEM_PROPAGARE_C20_EXECUTATA`, baab6c5) → acum BLUEPRINT.
@@ -73,6 +73,39 @@ Controale: `AUTOR_ACTIV` (DA/NU, Data Validation) · `ROL_DELEGAT` (listă de RO
 
 ## VERDICT BLUEPRINT
 **BLUEPRINT_C20_PROPUS.** Cele 10 cerințe acoperite (6 etape · 18 pași · fir filmabil · test viu cablat · V1 referințe reale · vs C19 · vs RACI/HR/SOP · exemplu concret · dramă FAIL→AUTONOM · STATUS calculat) + cele 6 gărzi (anti-tabel-pasiv · escaladare scoping · rol nu persoană · MOTTO candidat · proprietate nu ownership · testul scoaterii autorului fără rupere). Zero implementare; SPEC neatins. La confirmarea BRAIN → freeze blueprint, apoi GENERARE (mandat separat; necesită openpyxl pentru Date_MASTER + cele 7 imagini ARHITECT).
+
+---
+
+# AUDIT ADVERSARIAL BLUEPRINT C20 (mandat AUDIT_BLUEPRINT_C20, commit fff97f4)
+
+Audit fără menajare, înainte de freeze. NU am rescris blueprint-ul, NU l-am înghețat (cf. mandat). Reper: blueprint-ul de mai sus, SPEC înghețat, blueprint C19 (skeleton). Zero fișiere SYSTEM/construcție atinse.
+
+## VERDICT: BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX
+Structură bună, filmabilă, pe axa PROPRIETATE, fără contaminare. NU RESPINS. NU freeze direct: MF1 (logic STATUS) e un bug real. 2 micro-fixuri + 1 minor de închis, apoi freeze.
+
+## CELE 14 CHECKURI
+1. **6 etape naturale/progresive/filmabile:** PASS. (Observație: arcul REALITATE→...→CONFIRMARE = skeleton T5 partajat cu C19; distinctivitatea e în subtitluri + conținut, care SUNT C20.)
+2. **18 pași operaționali:** PASS (pașii 1-2 ușor narativi = scene-setting; restul operaționali).
+3. **Test viu real, nu bifaj:** PASS (STATUS calculat din V1-V4; pas 12 = test anti-RACI explicit).
+4. **V1 referințe reale:** PASS pe PRINCIPIU (flag AUTHOR_ONLY + #REF! la scoaterea autorului, nu declarație). **MF2:** formula exactă V1 trebuie pinned la generare ca să fie genuin live.
+5. **_DELEGARE nu RACI/HR/fișă/SOP:** PASS, condiționat de check 4 (testul viu chiar live).
+6. **PROPRIETATE, nu ATENȚIE/EFORT/OCAZIE:** PASS.
+7. **Diferență vs C19 pe ecran:** PASS conceptual. **MF3 (minor):** diferențiatorul VIZUAL = comutatorul `AUTOR_ACTIV` (absent la C19); de marcat explicit ca semnătura vizuală a `_DELEGARE`.
+8. **Exemplu concret suficient:** PASS (raportare lunară vânzări + rol Operare + param author-only „ajustare manuală lunară").
+9. **Dramă FAIL→reparare→AUTONOM vizibilă:** PASS (tare, etapa 5).
+10. **STATUS final logic:** **MF1 (cel mai important) - bug logic.** Overlap: NEPREDAT „autor activ" se suprapune cu DELEGAT „toate V OK sub titulatura autorului" (ambele = autor prezent). Redefiniție curată: NEPREDAT = hartă incompletă (rol nedefinit); PARȚIAL = hartă completă + unele V FAIL; DELEGAT = toate V OK + AUTOR_ACTIV=DA; AUTONOM = toate V OK + AUTOR_ACTIV=NU.
+11. **Contaminare C17/C18/C19:** PASS (referințele `_SISTEM`/`PARAM_` C17, motor C18, `_GUVERNARE` C19 = handoff legitim al sistemului predat; identitatea C20 = testul `_DELEGARE`, distinctă).
+12. **Generic-management:** PASS (rol/responsabilitate/escaladare framed ca ownership cu test viu, nu organigramă; gardă activă).
+13. **Reziduuri RO-EN ownership:** PASS (zero în corp; o singură mențiune = meta-garda „proprietate nu ownership").
+14. **Susține generarea HTML/Date_MASTER/FILM:** PASS (18 step-titles→HTML, 2 prompturi, 8 final-labels, structură `_DELEGARE`→Date_MASTER, arc→FILM), cu nota MF2 (formulele V1/STATUS se pin la generare).
+
+## MICRO-FIXURI (de aplicat DUPĂ aprobarea BRAIN; acum doar listate)
+- **MF1 (check 10, logic):** redefinește state-machine-ul STATUS ca să elimini overlapul NEPREDAT/DELEGAT (vezi redefiniția la check 10).
+- **MF2 (check 4+14, precizie):** pin la generare formula exactă V1 + STATUS. Specificație: `AUTOR_ACTIV=NU` → IF golește celulele autorului marcate `AUTHOR_ONLY=DA` → formulele critice dependente întorc eroare → `V1 = SUMPRODUCT(--ISERROR(lanț_critic)) = 0`. STATUS = IF imbricat pe hartă-completă + V1-V4 + AUTOR_ACTIV.
+- **MF3 (check 7, minor):** marchează `AUTOR_ACTIV` ca semnătura vizuală care distinge `_DELEGARE` de `_GUVERNARE` pe ecran (C19 nu are comutator de scoatere a autorului).
+
+## CONCLUZIE
+**BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX.** La aprobarea BRAIN → aplic MF1+MF2+MF3 → freeze blueprint → generare (mandat separat).
 
 ---
 
