@@ -176,7 +176,7 @@ BODY = r'''<body>
     <div class="stage-number">02</div>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 2 · Ce te face indispensabil</div>
-      <h2 class="stage-name">INVESTIGAȚIE</h2>
+      <h2 class="stage-name">DEPENDENȚĂ</h2>
       <div class="stage-tags"><span class="phase-tag">AI</span><span class="type-tag">Copilot · Promptul 1</span></div>
     </div>
   </header>
@@ -264,7 +264,7 @@ BODY = r'''<body>
     <div class="stage-number">03</div>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 3 · Harta de predare ca input al testului</div>
-      <h2 class="stage-name">TRANSFORMARE</h2>
+      <h2 class="stage-name">HARTA</h2>
       <div class="stage-tags"><span class="phase-tag">HARTĂ · ACCES</span><span class="type-tag">Input pentru testul viu</span></div>
     </div>
   </header>
@@ -337,7 +337,7 @@ BODY = r'''<body>
     <div class="stage-number">04</div>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 4 · Testul de predare: scoți autorul</div>
-      <h2 class="stage-name">VERIFICARE</h2>
+      <h2 class="stage-name">TESTUL</h2>
       <div class="stage-tags"><span class="phase-tag">TEST VIU</span><span class="type-tag">Anti-RACI</span></div>
     </div>
   </header>
@@ -411,7 +411,7 @@ BODY = r'''<body>
     <div class="stage-number">05</div>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 5 · Dependența ascunsă, apoi repararea</div>
-      <h2 class="stage-name">STABILIZARE</h2>
+      <h2 class="stage-name">REPARARE</h2>
       <div class="stage-tags"><span class="phase-tag">DRAMĂ · V1 FAIL</span><span class="type-tag">Mut pe rol</span></div>
     </div>
   </header>
@@ -481,7 +481,7 @@ BODY = r'''<body>
     <div class="stage-number">06</div>
     <div class="stage-meta">
       <div class="stage-label">ETAPA 6 · STATUS AUTONOM și predarea reală</div>
-      <h2 class="stage-name">CONFIRMARE</h2>
+      <h2 class="stage-name">AUTONOM</h2>
       <div class="stage-tags"><span class="phase-tag">PAYOFF</span><span class="type-tag">Pack complet</span></div>
     </div>
   </header>
@@ -585,11 +585,11 @@ BODY = r'''<body>
 
       <div class="nav-section-label">6 ETAPE</div>
       <div class="nav-items"><a class="nav-item" data-nav-stage="1" href="#stage-1" onclick="navigateStage(1,event)"><span class="nav-item-num">1</span><span class="nav-item-text"><span class="nav-item-name">REALITATE</span><span class="nav-item-meta">3 pași · Manual</span></span></a>
-<a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">INVESTIGAȚIE</span><span class="nav-item-meta">3 pași · Copilot</span></span></a>
-<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">TRANSFORMARE</span><span class="nav-item-meta">3 pași · Hartă</span></span></a>
-<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">VERIFICARE</span><span class="nav-item-meta">3 pași · Test viu</span></span></a>
-<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">STABILIZARE</span><span class="nav-item-meta">3 pași · Dramă</span></span></a>
-<a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">CONFIRMARE</span><span class="nav-item-meta">3 pași · Payoff</span></span></a></div>
+<a class="nav-item" data-nav-stage="2" href="#stage-2" onclick="navigateStage(2,event)"><span class="nav-item-num">2</span><span class="nav-item-text"><span class="nav-item-name">DEPENDENȚĂ</span><span class="nav-item-meta">3 pași · Copilot</span></span></a>
+<a class="nav-item" data-nav-stage="3" href="#stage-3" onclick="navigateStage(3,event)"><span class="nav-item-num">3</span><span class="nav-item-text"><span class="nav-item-name">HARTA</span><span class="nav-item-meta">3 pași · Hartă</span></span></a>
+<a class="nav-item" data-nav-stage="4" href="#stage-4" onclick="navigateStage(4,event)"><span class="nav-item-num">4</span><span class="nav-item-text"><span class="nav-item-name">TESTUL</span><span class="nav-item-meta">3 pași · Test viu</span></span></a>
+<a class="nav-item" data-nav-stage="5" href="#stage-5" onclick="navigateStage(5,event)"><span class="nav-item-num">5</span><span class="nav-item-text"><span class="nav-item-name">REPARARE</span><span class="nav-item-meta">3 pași · Dramă</span></span></a>
+<a class="nav-item" data-nav-stage="6" href="#stage-6" onclick="navigateStage(6,event)"><span class="nav-item-num">6</span><span class="nav-item-text"><span class="nav-item-name">AUTONOM</span><span class="nav-item-meta">3 pași · Payoff</span></span></a></div>
 
       <div class="nav-section-label">8 VERIFICĂRI FINALE</div>
       <div class="nav-finals">
