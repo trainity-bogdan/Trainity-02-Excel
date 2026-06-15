@@ -1,7 +1,7 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX (audit adversarial 14 puncte: structură solidă, axă PROPRIETATE, zero contaminare; 2 micro-fixuri înainte de freeze - MF1 bug logic STATUS, MF2 formula V1 - + 1 minor MF3 semnătură vizuală. NU rescris blueprint-ul, NU înghețat, cf. mandat. Detalii în AUDIT ADVERSARIAL BLUEPRINT mai jos.)
+BLUEPRINT_C20_FREEZE_FINAL (micro-fixurile MF1+MF2+MF3 APLICATE în blueprint, zero probleme noi; blueprint ÎNGHEȚAT. PĂSTRAT: 6 etape/18 pași, exemplu raportare lunară vânzări, drama FAIL→AUTONOM, granița PROPRIETATE, rol nu persoană, proprietate nu ownership, MOTTO candidat. SPEC neatins, zero SYSTEM/artefacte. Gata de GENERARE la mandat separat.)
 
 ## SURSA
 Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `MANDAT_BLUEPRINT_C20` (commit d822658) - BRAIN cere BLUEPRINT-ul conceptual C20 (6 etape / 18 pași) după propagarea SYSTEM executată. Revin în rol CLAUDE C20. Lucrez direct pe main. Blueprint = TEXT CONCEPTUAL, NU implementare: zero HTML / Date_MASTER / FILM / build / fișiere SYSTEM; SPEC înghețat NEatins (nu îl redeschid). Istoric C20: SPEC freeze → audit total (`C20_VALIDAT_CU_REZERVE_MINORE`) → micro-fixuri → propagare SYSTEM (`SYSTEM_PROPAGARE_C20_EXECUTATA`, baab6c5) → acum BLUEPRINT.
@@ -18,12 +18,12 @@ Format: 6 etape / 18 pași. TEXT CONCEPTUAL (NU implementare; zero HTML/Date_MAS
 Sistemul construit cap-coadă în T5 pe datele de vânzări: workbook-ul de **raportare lunară a vânzărilor**, care deja se sistematizează (C17 `_SISTEM`), rulează fără efort (C18 `_AUTOMATIZARE`) și se păzește singur (C19 `_GUVERNARE`). C20 predă PROPRIETATEA acestui sistem unui ROL operațional (ex. „Operare Raportare Vânzări"), nu unei persoane. Tot blueprint-ul folosește acest exemplu.
 
 ## TEST VIU (cablat real — cerințe 4, 5, 10 + gardă F4)
-Controale: `AUTOR_ACTIV` (DA/NU, Data Validation) · `ROL_DELEGAT` (listă de ROLURI). Verificări prin formule, NU bifaj:
-- **V1 zero dependență author-only** (referințe REALE, nu declarații): inputurile sistemului (din inventarul C17 `_SISTEM`) au un flag `AUTHOR_ONLY`. Când `AUTOR_ACTIV=NU`, o formulă critică ce citește un input `AUTHOR_ONLY=DA` din zona personală a autorului întoarce gol/#REF!. V1 = `COUNTIFS(input critic; AUTHOR_ONLY=DA; încă citit din zona autorului) = 0`. Cât timp un input critic atârnă de autor, V1=FAIL pe viu.
+Controale: `AUTOR_ACTIV` (DA/NU, Data Validation) — **MF3: semnătura vizuală a foii `_DELEGARE` și diferențiatorul față de C19 `_GUVERNARE`** (C19 nu are comutator de scoatere a autorului) · `ROL_DELEGAT` (listă de ROLURI). Verificări prin formule, NU bifaj:
+- **V1 zero dependență author-only** (MF2 — LIVE pe referințe REALE, nu declarativă): inputurile sistemului (din inventarul C17 `_SISTEM`) au un flag `AUTHOR_ONLY`. Mecanism: `AUTOR_ACTIV=NU` golește celulele autorului marcate `AUTHOR_ONLY=DA`; orice formulă critică ce le citește întoarce eroare/gol. **V1 PICĂ** cât timp un input critic rămâne `AUTHOR_ONLY` sau citit din zona autorului; **V1 TRECE DOAR** când TOATE inputurile critice sunt mutate în surse accesibile rolului. Formă: `V1 = SUMPRODUCT(--ISERROR(lanț_critic)) = 0` (la generare se pin pe celulele reale).
 - **V2 acces validat**: matrice ROL×ZONĂ (vede/modifică). V2 = rolul are acces la toată zona de operare ȘI zero acces la zonele protejate.
 - **V3 zone interzise blocate**: „limitele" declarate = ranges cu `PROTECTED=DA` real. V3 = fiecare limită are protecție reală.
 - **V4 escaladare funcțională**: rândul de escaladare e complet și țintește un ROL (nu persoană, nu gol) cu declanșator. V4 = `ESCALADARE_ROL` ∈ listă roluri ȘI `DECLANSATOR` ≠ gol.
-- **STATUS FINAL** (formulă): `NEPREDAT` (autor activ sau hartă goală) → `PARȚIAL` (unele V FAIL) → `DELEGAT` (toate V OK, dar sub titulatura autorului) → `AUTONOM` (toate V OK + `AUTOR_ACTIV=NU` + V1 zero dependență).
+- **STATUS FINAL** (formulă, MF1 — fără overlap): `NEPREDAT` (hartă incompletă sau `ROL_DELEGAT` nedefinit) → `PARȚIAL` (hartă completă, dar cel puțin o verificare V1-V4 = FAIL) → `DELEGAT` (toate V1-V4 OK + `AUTOR_ACTIV=DA`) → `AUTONOM` (toate V1-V4 OK + `AUTOR_ACTIV=NU`).
 
 ## 6 ETAPE / 18 PAȘI (fir narativ filmabil — cerințe 1, 2, 3, 9)
 
@@ -104,8 +104,13 @@ Structură bună, filmabilă, pe axa PROPRIETATE, fără contaminare. NU RESPINS
 - **MF2 (check 4+14, precizie):** pin la generare formula exactă V1 + STATUS. Specificație: `AUTOR_ACTIV=NU` → IF golește celulele autorului marcate `AUTHOR_ONLY=DA` → formulele critice dependente întorc eroare → `V1 = SUMPRODUCT(--ISERROR(lanț_critic)) = 0`. STATUS = IF imbricat pe hartă-completă + V1-V4 + AUTOR_ACTIV.
 - **MF3 (check 7, minor):** marchează `AUTOR_ACTIV` ca semnătura vizuală care distinge `_DELEGARE` de `_GUVERNARE` pe ecran (C19 nu are comutator de scoatere a autorului).
 
-## CONCLUZIE
-**BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX.** La aprobarea BRAIN → aplic MF1+MF2+MF3 → freeze blueprint → generare (mandat separat).
+## CONCLUZIE → MICRO-FIXURI APLICATE + FREEZE FINAL (mandat APLICA_MICRO_FIX_BLUEPRINT_C20, commit 109c9cb)
+**BLUEPRINT_C20_FREEZE_FINAL.** MF1+MF2+MF3 APLICATE în blueprint (secțiunea TEST VIU), zero probleme noi. Ce s-a schimbat:
+- **MF1 (STATUS):** redefinit fără overlap — `NEPREDAT` (hartă incompletă / rol nedefinit) · `PARȚIAL` (hartă completă + ≥1 V FAIL) · `DELEGAT` (toate V OK + AUTOR_ACTIV=DA) · `AUTONOM` (toate V OK + AUTOR_ACTIV=NU).
+- **MF2 (V1):** făcut LIVE explicit — V1 PICĂ cât timp un input critic rămâne `AUTHOR_ONLY` / citit din zona autorului la AUTOR_ACTIV=NU; TRECE DOAR când toate inputurile critice sunt mutate în surse accesibile rolului (`SUMPRODUCT(--ISERROR(lanț_critic))=0`).
+- **MF3 (semnătură vizuală):** `AUTOR_ACTIV` marcat ca semnătura vizuală a `_DELEGARE` + diferențiatorul față de C19 `_GUVERNARE`.
+
+PĂSTRAT integral (cf. mandat): 6 etape / 18 pași · exemplul raportării lunare a vânzărilor · drama FAIL→reparare→AUTONOM · granița C20 = PROPRIETATE · rol, nu persoană · proprietate, nu ownership · MOTTO candidat treaptă T5. SPEC înghețat NEatins; zero SYSTEM/artefacte. **Blueprint C20 ÎNGHEȚAT, gata de GENERARE (mandat separat; necesită openpyxl + cele 7 imagini ARHITECT).**
 
 ---
 
