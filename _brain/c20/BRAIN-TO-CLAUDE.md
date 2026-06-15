@@ -1,44 +1,43 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-AUDIT_BLUEPRINT_C20
+APLICA_MICRO_FIX_BLUEPRINT_C20
 
 ## CONTEXT
-Claude a propus BLUEPRINT_C20_PROPUS pentru C20 DELEGAREA.
-BRAIN cere audit adversarial inainte de freeze.
+Auditul blueprint C20 a dat verdictul BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX.
+BRAIN aproba aplicarea micro-fixurilor MF1, MF2 si MF3 in blueprint-ul conceptual.
 
 ## MANDAT
-Auditeaza blueprint-ul C20 propus, fara menajare.
-Nu rescrie inca blueprint-ul.
-Nu il ingheta inca.
-Verifica daca poate intra la freeze sau daca are nevoie de corectii.
+Aplica micro-fixurile in blueprint-ul C20 si emite freeze final daca nu apar probleme noi.
+Nu redeschide SPEC.
+Nu modifica SYSTEM.
+Nu genera artefacte.
 
-## CHECKLIST AUDIT
-Verifica obligatoriu:
-1. cele 6 etape sunt naturale, progresive si filmabile;
-2. cei 18 pasi sunt operationali, nu abstracti;
-3. testul viu este real, nu bifaj manual;
-4. V1 are referinte reale si nu declaratii;
-5. _DELEGARE nu cade in RACI / HR / fisa de post / SOP;
-6. C20 ramane despre PROPRIETATE, nu despre ATENTIE, EFORT sau OCAZIE;
-7. diferenta fata de C19 _GUVERNARE este clara pe ecran;
-8. exemplul concret este suficient de bun pentru constructie;
-9. drama FAIL -> reparare -> AUTONOM este vizibila;
-10. STATUS final NEPREDAT / PARTIAL / DELEGAT / AUTONOM este logic;
-11. nu exista contaminare cu C17, C18, C19;
-12. nu exista formulare generic-management;
-13. nu exista resturi RO-EN de tip ownership;
-14. blueprint-ul poate sustine generarea ulterioara HTML / Date_MASTER / FILM.
+## MICRO-FIXURI APROBATE
 
-## VERDICT CERUT
-Raspunde in _brain/c20/CLAUDE-TO-BRAIN.md cu unul dintre statusurile:
-BLUEPRINT_C20_VALIDAT_FREEZE
-sau
-BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX
-sau
-BLUEPRINT_C20_RESPINS.
+### MF1 - STATUS logic corect
+Inlocuieste definitia STATUS cu logica:
+- NEPREDAT = harta incompleta sau ROL_DELEGAT nedefinit;
+- PARTIAL = harta completa, dar cel putin o verificare V1-V4 este FAIL;
+- DELEGAT = toate V1-V4 sunt OK + AUTOR_ACTIV=DA;
+- AUTONOM = toate V1-V4 sunt OK + AUTOR_ACTIV=NU.
 
-Daca exista micro-fixuri, listeaza-le punctual si spune exact ce trebuie schimbat.
+### MF2 - V1 pinned real
+Fixeaza V1 ca verificare live pe referinte reale, nu declarativa.
+V1 trebuie sa pice daca un input critic ramane AUTHOR_ONLY sau citit din zona autorului cand AUTOR_ACTIV=NU.
+V1 trebuie sa treaca doar cand toate inputurile critice sunt mutate in surse accesibile rolului.
+
+### MF3 - semnatura vizuala _DELEGARE
+Marcheaza explicit comutatorul AUTOR_ACTIV ca semnatura vizuala a foii _DELEGARE si ca diferentiator fata de C19 _GUVERNARE.
+
+## PASTREAZA
+- 6 etape / 18 pasi;
+- exemplul concret cu raportarea lunara a vanzarilor;
+- drama FAIL -> reparare -> AUTONOM;
+- granita C20 = PROPRIETATE;
+- rol, nu persoana;
+- proprietate, nu ownership;
+- MOTTO candidat treapta T5.
 
 ## INTERDICTII
 Nu genera HTML.
@@ -47,3 +46,10 @@ Nu genera FILM.
 Nu genera build scripts.
 Nu modifica fisiere SYSTEM.
 Nu modifica artefacte de constructie.
+
+## RAPORT CERUT
+Scrie in _brain/c20/CLAUDE-TO-BRAIN.md status final:
+BLUEPRINT_C20_FREEZE_FINAL
+sau
+BLUEPRINT_C20_RAMANE_CU_REZERVE.
+Include clar ce ai modificat la MF1, MF2 si MF3.
