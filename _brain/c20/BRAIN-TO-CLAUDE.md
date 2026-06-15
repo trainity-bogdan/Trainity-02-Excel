@@ -1,55 +1,76 @@
 # BRAIN -> CLAUDE C20
 
 ## STATUS
-APLICA_MICRO_FIX_BLUEPRINT_C20
+MANDAT_GENERARE_C20
 
 ## CONTEXT
-Auditul blueprint C20 a dat verdictul BLUEPRINT_C20_VALIDAT_CU_MICRO_FIX.
-BRAIN aproba aplicarea micro-fixurilor MF1, MF2 si MF3 in blueprint-ul conceptual.
+Blueprint C20 este inghetat final.
+Status confirmat: BLUEPRINT_C20_FREEZE_FINAL.
+C20 poate trece la generarea artefactelor de constructie.
 
 ## MANDAT
-Aplica micro-fixurile in blueprint-ul C20 si emite freeze final daca nu apar probleme noi.
-Nu redeschide SPEC.
-Nu modifica SYSTEM.
-Nu genera artefacte.
+Genereaza constructia C20 DELEGAREA pe baza SPEC inghetat + BLUEPRINT_C20_FREEZE_FINAL.
 
-## MICRO-FIXURI APROBATE
+## ARTEFACTE CERUTE
+Genereaza artefactele standard C20 necesare constructiei:
+- HTML-Studiu C20;
+- HTML-Editor-Studiu C20;
+- HTML-Video C20;
+- HTML-Editor-Video C20;
+- Date_MASTER C20, daca mediul permite;
+- FILM C20, daca protocolul curent il cere;
+- orice fisier C20 necesar conform structurii existente din c17/c18/c19.
 
-### MF1 - STATUS logic corect
-Inlocuieste definitia STATUS cu logica:
+## REPER COMPARATIV
+Foloseste c19 ca reper structural pentru schelet si coerenta, dar nu copia identitatea.
+C20 trebuie sa ramana DELEGAREA / PROPRIETATE / AUTONOMIE / DELEG.
+C19 = GUVERNARE / CONTROL / GUVERNEZ / ATENTIE.
+
+## LOCK C20
+C20 = DELEGAREA.
+T5 = AUTONOMIE.
+CUVANT LOCKED = AUTONOMIE.
+VERB LOCKED = DELEG.
+SLUG = Excel-20-Delegare.
+MIZA HERO = DELEGAREA SISTEMULUI DE LUCRU.
+MANTRA = Nu impart sarcini. Deleg sistemul.
+AHA = Un sistem nu e autonom pentru ca merge singur. E autonom cand il poate detine altcineva.
+ARTEFACT = _DELEGARE.
+GRANITA = C20 scoate autorul din PROPRIETATE.
+
+## CERINTE OBLIGATORII DIN BLUEPRINT
+Include:
+- 6 etape / 18 pasi;
+- exemplul concret: raportarea lunara a vanzarilor;
+- test viu _DELEGARE;
+- AUTOR_ACTIV ca semnatura vizuala;
+- ROL_DELEGAT;
+- verificari V1-V4;
+- V1 live pe referinte reale;
+- STATUS final calculat: NEPREDAT / PARTIAL / DELEGAT / AUTONOM;
+- drama FAIL -> reparare -> AUTONOM;
+- diferenta clara fata de C19 _GUVERNARE;
+- anti-RACI / anti-HR / anti-SOP.
+
+## CONDITII STATUS
+Respecta logica finala:
 - NEPREDAT = harta incompleta sau ROL_DELEGAT nedefinit;
 - PARTIAL = harta completa, dar cel putin o verificare V1-V4 este FAIL;
 - DELEGAT = toate V1-V4 sunt OK + AUTOR_ACTIV=DA;
 - AUTONOM = toate V1-V4 sunt OK + AUTOR_ACTIV=NU.
 
-### MF2 - V1 pinned real
-Fixeaza V1 ca verificare live pe referinte reale, nu declarativa.
-V1 trebuie sa pice daca un input critic ramane AUTHOR_ONLY sau citit din zona autorului cand AUTOR_ACTIV=NU.
-V1 trebuie sa treaca doar cand toate inputurile critice sunt mutate in surse accesibile rolului.
-
-### MF3 - semnatura vizuala _DELEGARE
-Marcheaza explicit comutatorul AUTOR_ACTIV ca semnatura vizuala a foii _DELEGARE si ca diferentiator fata de C19 _GUVERNARE.
-
-## PASTREAZA
-- 6 etape / 18 pasi;
-- exemplul concret cu raportarea lunara a vanzarilor;
-- drama FAIL -> reparare -> AUTONOM;
-- granita C20 = PROPRIETATE;
-- rol, nu persoana;
-- proprietate, nu ownership;
-- MOTTO candidat treapta T5.
-
 ## INTERDICTII
-Nu genera HTML.
-Nu genera Date_MASTER.
-Nu genera FILM.
-Nu genera build scripts.
 Nu modifica fisiere SYSTEM.
-Nu modifica artefacte de constructie.
+Nu redeschide SPEC.
+Nu schimba blueprint-ul inghetat.
+Nu contamina C20 cu C19/C18/C17.
+Nu transforma _DELEGARE in tabel RACI pasiv.
+Nu folosi ownership; foloseste proprietate.
+MOTTO ramane candidat treapta T5.
 
 ## RAPORT CERUT
-Scrie in _brain/c20/CLAUDE-TO-BRAIN.md status final:
-BLUEPRINT_C20_FREEZE_FINAL
-sau
-BLUEPRINT_C20_RAMANE_CU_REZERVE.
-Include clar ce ai modificat la MF1, MF2 si MF3.
+Dupa generare, scrie in _brain/c20/CLAUDE-TO-BRAIN.md raportul cu:
+- fisiere generate/modificate;
+- ce nu s-a putut genera si de ce;
+- comparatie fata de c19 unde este relevant;
+- status final: GENERARE_C20_COMPLETA sau GENERARE_C20_PARTIALA sau GENERARE_C20_BLOCATA.
