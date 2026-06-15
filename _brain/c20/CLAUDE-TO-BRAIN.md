@@ -1,12 +1,28 @@
 # CLAUDE -> BRAIN C20
 
 ## STATUS
-GATA_PENTRU_SYSTEM_DUPA_MICRO_FIX (audit acceptat de BRAIN; verdict mentinut C20_VALIDAT_CU_REZERVE_MINORE; micro-fixurile aprobate APLICATE in SPEC + CERERE SYSTEM. C20 gata de propagare SYSTEM. SPEC conceptual NEredeschis, sloturi mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse.)
+SYSTEM_PROPAGARE_C20_EXECUTATA (mandat EXECUTA_ACUM_SYSTEM_C20 ÎMPLINIT; propagarea freeze SPEC C20 e live pe main, commit baab6c5, verificată: pre_generation_check 20 = 3/3 PASS, gate '20' OK. Raport SYSTEM complet în _brain/system/CLAUDE-TO-BRAIN.md.)
 
 ## SURSA
 Comanda `sync`. Mandat activ pe origin/main: `_brain/c20/BRAIN-TO-CLAUDE.md` = `APROBA_AUDIT_TOTAL_C20_MICRO_FIX` (commit 49eff8b) - BRAIN accepta auditul si APROBA micro-fixurile inainte de SYSTEM. Conform aprobarii, am aplicat micro-fixurile autorizate (F1 ownership -> proprietate; MOTTO marcat candidat in CERERE; CERERE clarificata pe cele 11 sloturi + fisiere de verificat). SPEC conceptual NEredeschis, sloturi mari NEschimbate, blueprint NEGENERAT, fisiere de sistem NEatinse. Lucrez direct pe main (permisiune ARHITECT "commite pe main"). Citit ca reper, doar fisiere permise: mandatul C20 (LOCK-uri formulari), seed-ul consolidat (versiune anterioara, in istoric ea60d09), Doc 14, NOMENCLATURA-LOCKED-SCARA. Am scris DOAR acest fisier; zero artefacte de constructie. Respect interdictiile: niciun HTML / Date_MASTER / FILM / build script.
 
 LOCK-uri primite de la BRAIN, preluate VERBATIM (nedeschise): MANTRA, AHA, MIZA HERO. MOTTO = candidat principal. Test filmabil central + tensiune centrala = preluate ca nucleu.
+
+---
+
+## CONFIRMARE PROPAGARE SYSTEM EXECUTATA (mandat EXECUTA_ACUM_SYSTEM_C20, commit 09a24eb)
+
+Propagarea SYSTEM a freeze-ului SPEC C20 e **EXECUTATĂ și live pe main** (commit `baab6c5`, executat ca Chat Andrei SYSTEM la re-desemnarea explicită ARHITECT; rezistă peste refactorul gate C19 `32fc942`). Mandatul `EXECUTA_ACUM_SYSTEM_C20` e ÎMPLINIT (idempotent, nu se re-execută).
+
+**Dovadă rulată (re-verificat acum):**
+- `pre_generation_check.py 20` = 3/3 PASS (CHECK 1 B1 SPEC INGHETAT · CHECK 2 L142 IDENTITATE POPULATA · CHECK 3 L143 ALINIAT), exit 0.
+- `gate_v20.load_identitate('20')` = dict returnat → B2 rulează.
+
+**Fișiere de sistem modificate (6):** `SISTEM_TRAINITY-versiuni.md` (SPEC C20 `[INGHETAT]` + 11 sloturi, B1) · `IDENTITATE-TEHNICA.md` (IDENTITATE_TEHNICA C20, L142) · `gate_v20.py` (dict `'20'`, B2) · Doc 14 (STARE: C20 SPEC ÎNGHEȚAT) · Bible §T5 (bloc `SPEC C20 LOCKED v1.0`) · STARE-CURENTA (V78). **Verificate nemodificate:** NOMENCLATURA (C20 LOCKED V70), 00-INDEX, 06-MAP, constructii.xlsx.
+
+**Reguli respectate:** „proprietate" (nu „ownership"); MOTTO marcat CANDIDAT treaptă T5 (nu lock global); toate cele 11 sloturi oglindite. Raport SYSTEM complet (6 secțiuni): `_brain/system/CLAUDE-TO-BRAIN.md`.
+
+**STATUS: SYSTEM_PROPAGARE_C20_EXECUTATA.** Următorul pas C20 = BLUEPRINT (6 etape/18 pași), la mandat separat (interdicție de generare în mandatul curent respectată: zero blueprint/HTML/Date_MASTER/FILM/build).
 
 ---
 
